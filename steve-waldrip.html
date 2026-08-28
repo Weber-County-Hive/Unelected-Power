@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Steve Waldrip — Unelected Power — The Weber County Hive</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F3ECE0;
+    --paper-dim:#E9E0D0;
+    --void:#181210;
+    --void-2:#241A17;
+    --maroon:#6E1F2B;
+    --maroon-dim:#8C3B44;
+    --ink:#211714;
+    --ink-soft:#4A3B35;
+    --line:#C9BBA4;
+    --gold:#B4863C;
+    --max:820px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Source Sans 3',sans-serif;
+    font-size:17px;
+    line-height:1.62;
+  }
+  ::selection{background:var(--maroon);color:var(--paper);}
+  a{color:var(--maroon);}
+  a:hover{color:var(--maroon-dim);}
+  h1,h2,h3{font-family:'Fraunces',serif;font-weight:600;color:var(--ink);margin:0;}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px;}
+  .mono{font-family:'IBM Plex Mono',monospace;}
+
+  .topbar{
+    background:var(--void);
+    color:var(--paper-dim);
+    padding:12px 24px;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:8px;
+  }
+  .topbar a{color:var(--paper-dim);text-decoration:none;opacity:.8;}
+  .topbar a:hover{opacity:1;color:#fff;}
+
+  header.masthead{
+    padding:64px 24px 40px;
+    border-bottom:3px solid var(--void);
+  }
+  .eyebrow{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:13px;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--maroon);
+    margin-bottom:18px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .eyebrow::before{content:"";width:28px;height:2px;background:var(--maroon);display:inline-block;}
+  h1.title{
+    font-size:clamp(32px,5.4vw,54px);
+    line-height:1.06;
+    letter-spacing:-0.01em;
+    max-width:760px;
+  }
+  h1.title em{font-style:italic;color:var(--maroon);}
+  .dek{
+    font-size:19px;
+    color:var(--ink-soft);
+    max-width:640px;
+    margin-top:20px;
+    line-height:1.5;
+  }
+  .byline{
+    margin-top:28px;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12.5px;
+    color:var(--ink-soft);
+    letter-spacing:.04em;
+  }
+
+  .glossary{
+    background:var(--paper-dim);
+    border-bottom:1px solid var(--line);
+    padding:0;
+  }
+  .glossary .wrap{padding:0;}
+  table.glossary-table{
+    width:100%;
+    border-collapse:collapse;
+    font-size:14.5px;
+  }
+  table.glossary-table td{
+    padding:16px 24px;
+    vertical-align:top;
+    border-right:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+    width:20%;
+  }
+  table.glossary-table tr:last-child td{border-bottom:none;}
+  table.glossary-table td:last-child{border-right:none;}
+  .g-term{
+    font-family:'IBM Plex Mono',monospace;
+    font-weight:600;
+    font-size:12px;
+    letter-spacing:.04em;
+    text-transform:uppercase;
+    color:var(--maroon);
+    display:block;
+    margin-bottom:6px;
+  }
+  .g-def{color:var(--ink-soft);font-size:14px;line-height:1.4;}
+
+  @media(max-width:820px){
+    table.glossary-table, table.glossary-table tbody, table.glossary-table tr, table.glossary-table td{
+      display:block; width:100%;
+    }
+    table.glossary-table td{border-right:none;}
+  }
+
+  nav.jump{
+    position:sticky; top:0; z-index:50;
+    background:rgba(243,236,224,.94);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+    overflow-x:auto;
+    white-space:nowrap;
+  }
+  nav.jump .wrap{padding:10px 24px;display:flex;gap:22px;}
+  nav.jump button{
+    background:none;border:none;cursor:pointer;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;letter-spacing:.05em;text-transform:uppercase;
+    color:var(--ink-soft);
+    padding:4px 0;
+    border-bottom:2px solid transparent;
+    white-space:nowrap;
+  }
+  nav.jump button:hover{color:var(--maroon);border-bottom-color:var(--maroon);}
+
+  .movement{
+    display:flex; align-items:center; gap:18px;
+    margin:0; padding:56px 24px 0;
+    max-width:var(--max); margin-left:auto; margin-right:auto;
+  }
+  .movement .num{
+    font-family:'Fraunces',serif;
+    font-style:italic;
+    font-weight:500;
+    font-size:15px;
+    color:var(--maroon);
+    white-space:nowrap;
+  }
+  .movement .rule{flex:1;height:1px;background:var(--line);}
+  .movement .label{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11.5px;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    white-space:nowrap;
+  }
+
+  section.section{padding:22px 24px 8px;max-width:var(--max);margin:0 auto;}
+  section.section h2{
+    font-size:clamp(24px,3.6vw,32px);
+    line-height:1.15;
+    margin-bottom:18px;
+    max-width:640px;
+  }
+  section.section p{margin:0 0 18px;color:var(--ink);}
+  section.section p.lead{font-size:18px;color:var(--ink-soft);}
+
+  .void-panel{
+    background:var(--void);
+    color:var(--paper);
+    border-radius:2px;
+    padding:32px 28px;
+    margin:28px 0;
+  }
+  .void-panel .void-label{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11px;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--gold);
+    margin-bottom:14px;
+  }
+  .void-stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+    gap:24px;
+  }
+  .void-stat .num{
+    font-family:'Fraunces',serif;
+    font-weight:600;
+    font-size:clamp(22px,4vw,32px);
+    line-height:1.1;
+    color:#fff;
+  }
+  .void-stat .cap{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;
+    color:#C9BBAE;
+    margin-top:6px;
+    line-height:1.35;
+  }
+  .void-quote{
+    font-family:'Fraunces',serif;
+    font-style:italic;
+    font-weight:500;
+    font-size:clamp(19px,2.6vw,24px);
+    line-height:1.45;
+    color:#fff;
+    max-width:680px;
+  }
+  .void-quote .cite{
+    display:block;
+    font-family:'IBM Plex Mono',monospace;
+    font-style:normal;
+    font-size:12.5px;
+    color:var(--gold);
+    margin-top:14px;
+    letter-spacing:.02em;
+  }
+
+  .doc-card{
+    border:1px solid var(--line);
+    background:#fff;
+    border-left:4px solid var(--maroon);
+    padding:22px 24px;
+    margin:22px 0;
+    border-radius:1px;
+  }
+  .doc-card .doc-tag{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:10.5px;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:var(--maroon);
+    margin-bottom:10px;
+  }
+  .doc-card blockquote{
+    margin:0;
+    font-family:'Fraunces',serif;
+    font-style:italic;
+    font-size:17.5px;
+    line-height:1.5;
+    color:var(--ink);
+  }
+  .doc-card .doc-source{
+    margin-top:12px;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;
+    color:var(--ink-soft);
+  }
+
+  .tl{list-style:none;margin:22px 0;padding:0;border-left:2px solid var(--line);}
+  .tl li{position:relative;padding:0 0 22px 24px;}
+  .tl li::before{
+    content:"";position:absolute;left:-6px;top:5px;
+    width:10px;height:10px;border-radius:50%;
+    background:var(--paper);border:2px solid var(--maroon);
+  }
+  .tl .date{font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--maroon);font-weight:600;display:block;margin-bottom:3px;}
+  .tl .desc{color:var(--ink-soft);font-size:15px;}
+
+  .def-inline{
+    background:var(--paper-dim);
+    border:1px solid var(--line);
+    padding:16px 20px;
+    margin:20px 0;
+    font-size:14.5px;
+    color:var(--ink-soft);
+  }
+  .def-inline strong{color:var(--ink);font-family:'IBM Plex Mono',monospace;font-size:13px;text-transform:uppercase;letter-spacing:.03em;}
+
+  .sources{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;
+    color:var(--ink-soft);
+    border-top:1px solid var(--line);
+    padding-top:14px;
+    margin:8px 0 40px;
+    line-height:1.6;
+  }
+  .sources strong{color:var(--maroon);text-transform:uppercase;letter-spacing:.05em;font-size:11px;}
+
+  footer.site-footer{
+    margin-top:60px;
+    background:var(--void);
+    color:var(--paper-dim);
+    padding:40px 24px 50px;
+  }
+  footer.site-footer .wrap{display:flex;flex-direction:column;gap:14px;}
+  footer.site-footer h3{color:#fff;font-size:20px;}
+  footer.site-footer p{color:#B8A899;font-size:14px;max-width:520px;line-height:1.6;margin:0;}
+  footer.site-footer .links{display:flex;gap:22px;flex-wrap:wrap;margin-top:8px;}
+  footer.site-footer a{color:var(--gold);text-decoration:none;font-family:'IBM Plex Mono',monospace;font-size:12.5px;letter-spacing:.03em;}
+  footer.site-footer a:hover{color:#fff;}
+
+  @media(max-width:600px){
+    .void-panel{padding:24px 18px;}
+    section.section{padding:18px 18px 8px;}
+    header.masthead{padding:48px 18px 32px;}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <span>The Weber County Hive · Unelected Power</span>
+  <a href="index.html">← All profiles</a>
+</div>
+
+<header class="masthead">
+  <div class="eyebrow">Unelected Power · Governor's Office</div>
+  <h1 class="title">Two Terms Elected. Then <em>Appointed</em> — No Vote Required.</h1>
+  <p class="dek">Steve Waldrip served two terms in the Utah House before Gov. Spencer Cox appointed him Senior Advisor for Housing Strategy and Innovation in December 2023. In July 2026, a new law made him state housing coordinator and put him in charge of Utah's entire Division of Housing and Community Development — a codified title, not just an advisor role, and one no voter confirmed. Seven weeks later, he used that authority to tell a city council that a county's funding was "at risk, meaning none" — a power the statutes governing that funding don't appear to give him.</p>
+  <div class="byline">THE WEBER COUNTY HIVE · webercountyhive.substack.com</div>
+</header>
+
+<div class="glossary">
+  <div class="wrap">
+    <table class="glossary-table">
+      <tr>
+        <td><span class="g-term">Appointed</span><span class="g-def">Waldrip's titles — Senior Advisor for Housing Strategy and state housing coordinator — are gubernatorial/statutory appointments, not elected offices. No public vote placed him in either role.</span></td>
+        <td><span class="g-term">HB68 (2026)</span><span class="g-def">Created the Division of Housing and Community Development, named Waldrip state housing coordinator to lead it, and — in the same bill — repealed the Commission on Housing Affordability he'd previously sat on.</span></td>
+        <td><span class="g-term">B&amp;C Funds</span><span class="g-def">Class B/C road funds — a statutory, formula-based share of Utah's Transportation Fund distributed to counties and municipalities under Utah Code §72-2-107/108.</span></td>
+        <td><span class="g-term">SB 258</span><span class="g-def">2024 law creating the "preliminary municipality" pilot program — the subject of the Wasatch/Summit County opposition that preceded Waldrip's remarks.</span></td>
+        <td><span class="g-term">PID</span><span class="g-def">Public Infrastructure District — a financing tool Waldrip defended on the record at the same meeting where he delivered the funding remarks below.</span></td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<nav class="jump">
+  <div class="wrap">
+    <button data-scroll-to="m1">I · The Appointment</button>
+    <button data-scroll-to="m2">II · The Bill</button>
+    <button data-scroll-to="m3">III · The Message</button>
+    <button data-scroll-to="m4">IV · The Statute</button>
+    <button data-scroll-to="m5">V · The Defense</button>
+    <button data-scroll-to="m6">VI · The Fund</button>
+  </div>
+</nav>
+
+<!-- ============ MOVEMENT I ============ -->
+<div class="movement" id="m1">
+  <span class="num">I.</span><span class="rule"></span><span class="label">The Appointment</span>
+</div>
+<section class="section">
+  <h2>From two elected terms to a title voters never confirmed</h2>
+  <p class="lead">Waldrip's official biography, filed with Heber City ahead of his August 2026 appearance there, lays out the path: BYU undergraduate degree in English, a law degree from the University of Utah, a Master's in Taxation from the University of Washington, a brief legal career, then a long run at the Boyer Company as project manager on the Business Depot Ogden redevelopment — credited there with helping bring in $500 million in private investment and roughly 4,000 jobs.</p>
+  <p>Somewhere in that career he also served two terms in the Utah House of Representatives — an elected office. Then, in December 2023, Gov. Spencer Cox appointed him Senior Advisor for Housing Strategy and Innovation. The title carries direct influence over the state's housing policy and, per his own remarks covered below, over how the Governor's office applies pressure to local governments — without ever appearing on a ballot for that specific role.</p>
+
+  <p>His authority grew again on July 1, 2026. H.B. 68, passed that year's legislative session, created the Division of Housing and Community Development inside the Governor's Office of Economic Opportunity and named Waldrip its head — with a new, codified title: state housing coordinator. He now oversees Utah's entire statewide housing strategy and the programs and funds tied to it, on top of his existing advisor role. That authority was already in place seven weeks before the funding remarks covered in Movement III.</p>
+
+  <div class="void-panel">
+    <div class="void-label">Waldrip's current appointed authority</div>
+    <div class="void-stats">
+      <div class="void-stat"><div class="num">Dec. 2023</div><div class="cap">Senior Advisor for Housing Strategy and Innovation, Gov. Cox's office</div></div>
+      <div class="void-stat"><div class="num">July 2026</div><div class="cap">State housing coordinator, head of the Division of Housing and Community Development (HB68)</div></div>
+      <div class="void-stat"><div class="num">Board</div><div class="cap">Utah Housing Corporation</div></div>
+      <div class="void-stat"><div class="num">Board</div><div class="cap">United Way of Northern Utah</div></div>
+    </div>
+  </div>
+
+  <div class="def-inline"><strong>Worth noting</strong> — the same bill that expanded his authority also repealed the Utah Commission on Housing Affordability, a board he'd previously sat on. As a legislator, Waldrip had chief-sponsored a 2022 bill extending that commission's life; four years later, with him now running the division that absorbs many of its functions, the commission itself was eliminated.</div>
+
+  <div class="def-inline"><strong>Also worth noting</strong> — appointment to advisory and board roles by a sitting governor is legal and common practice in Utah. What follows is the documented record of what Waldrip has done with the authority those appointments carry.</div>
+
+  <div class="sources"><strong>Sources</strong><br>Heber City Council staff report, Aug. 18, 2026 meeting (Tony Kohler, Community Development Dept.) — official Waldrip biography and board listing. H.B. 68 (2026), Utah State Legislature (le.utah.gov) — bill text and effective-date sections. Governor's Office press release, July 1, 2026, "Utah launches Division of Housing and Community Development to accelerate homebuilding." H.B. 36 2nd Substitute (2022), Utah State Legislature.</div>
+</section>
+
+<!-- ============ MOVEMENT II ============ -->
+<div class="movement" id="m2">
+  <span class="num">II.</span><span class="rule"></span><span class="label">The Bill</span>
+</div>
+<section class="section">
+  <h2>He testified for the law his office later leaned on</h2>
+  <p class="lead">Roughly eighteen months before his public clash with Wasatch and Summit counties, Waldrip personally spoke in favor of HB37 (2nd Substitute) at the Feb. 27, 2025 Senate Government Operations &amp; Political Subdivisions committee hearing — the bill that amended §10-2a-201.5, the incorporation-qualifications statute the "preliminary municipality" program (SB 258) runs on.</p>
+  <p>Also speaking in favor at that hearing: Alissa Dailey of the Utah Association of Realtors. Rep. Dunnigan presented the bill with help from Cameron Diehl, Executive Director of the Utah League of Cities and Towns.</p>
+
+  <table class="mono" style="width:100%;border-collapse:collapse;margin:24px 0;font-size:14.5px;">
+    <tr><th style="text-align:left;padding:8px 10px;border-bottom:2px solid var(--void);text-transform:uppercase;letter-spacing:.08em;font-size:11px;color:var(--ink-soft);">Motion</th><th style="text-align:left;padding:8px 10px;border-bottom:2px solid var(--void);text-transform:uppercase;letter-spacing:.08em;font-size:11px;color:var(--ink-soft);">Result</th></tr>
+    <tr><td style="padding:10px;border-bottom:1px solid var(--line);">Substitute 1st Sub with 2nd Sub HB37</td><td style="padding:10px;border-bottom:1px solid var(--line);font-weight:600;">5-0-2</td></tr>
+    <tr><td style="padding:10px;border-bottom:1px solid var(--line);">Pass 2nd Sub HB37 out favorably</td><td style="padding:10px;border-bottom:1px solid var(--line);font-weight:600;">4-0-3</td></tr>
+  </table>
+
+  <p>Sen. Evan Vickers voted yes on the first motion but is not listed among the four "yes" votes on the second — a discrepancy the committee minutes don't clearly explain as an abstention, still unconfirmed against the raw legislative record.</p>
+  <div class="sources"><strong>Sources</strong><br>Senate Government Operations &amp; Political Subdivisions Committee minutes, Feb. 27, 2025, Utah State Legislature (le.utah.gov).</div>
+</section>
+
+<!-- ============ MOVEMENT III ============ -->
+<div class="movement" id="m3">
+  <span class="num">III.</span><span class="rule"></span><span class="label">The Message</span>
+</div>
+<section class="section">
+  <h2>A message for two counties, delivered to a third</h2>
+  <p class="lead">On Aug. 18, 2026, Waldrip appeared before the Heber City Council for what was officially billed as session three of a ten-part "Affordable Housing 101" series — an item titled "State Housing Plans &amp; Legislation." He used part of that appearance to deliver a different message, aimed at Wasatch and Summit counties' opposition to SB 258.</p>
+
+  <div class="doc-card">
+    <div class="doc-tag">Waldrip to Heber City Council, per the Park Record</div>
+    <blockquote>"So my message back from our good governor, who cares deeply about these issues is: Your funding as a county is now at risk, meaning none. Anything within my power, I will stop."</blockquote>
+    <div class="doc-source">Clara Hatcher, Park Record, Aug. 21, 2026, "Adviser invokes governor in threatening to cut state funding from Wasatch County over development decisions."</div>
+  </div>
+
+  <p>Per Shauna's own review of the official Heber City CivicClerk meeting recording — her notes, not a verified transcript — Waldrip said the message was prompted by a public post from the counties, that the Governor had asked him to deliver it, and that Heber City Council was not the intended audience but would get the message "to those that it is meant for." He named Class B and C road funding specifically as suspended, and framed the counties' opposition to SB 258 as having "declared war" on the state over growth issues.</p>
+
+  <div class="tl">
+    <li><span class="date">FEB. 27, 2025</span><span class="desc">Waldrip testifies in favor of HB37, amending the incorporation-qualifications statute SB 258 runs on.</span></li>
+    <li><span class="date">2024–2026</span><span class="desc">Wasatch and Summit counties organize opposition to SB 258's "preliminary municipality" program; Wasatch County denies a SITLA-linked development agreement.</span></li>
+    <li><span class="date">AUG. 18, 2026</span><span class="desc">Waldrip tells Heber City Council the counties' funding is "at risk, meaning none," naming B&amp;C road funds as suspended.</span></li>
+    <li><span class="date">AUG. 21, 2026</span><span class="desc">Park Record publishes the remarks; Wasatch County Manager Mike Grabau calls it "a one-sided conversation" and says the county was not aware of "any public discourse that conveys the county is defying state law."</span></li>
+  </div>
+
+  <p>Heber City Councilor Yvonne Barney pushed back on the record, saying the underlying SITLA friction was about a specific developer, not defiance of the state, and that "if our governor is trying to use the tactics of threats to our community, that doesn't go over well, either."</p>
+  <div class="sources"><strong>Sources</strong><br>Park Record, Aug. 21, 2026. Heber City Council staff report and agenda, Aug. 18, 2026. Shauna's own review of the official Heber City CivicClerk meeting recording (hebercityut.portal.civicclerk.com/event/535/overview).</div>
+</section>
+
+<!-- ============ MOVEMENT IV ============ -->
+<div class="movement" id="m4">
+  <span class="num">IV.</span><span class="rule"></span><span class="label">The Statute</span>
+</div>
+<section class="section">
+  <h2>What the law actually says about withholding B&amp;C funds</h2>
+  <p class="lead">Class B and C road funds are a statutory share of Utah's Transportation Fund, apportioned by formula — not by discretion. Under Utah Code §72-2-107, 30% of qualifying state highway-user tax and fee revenue is appropriated annually for B&amp;C roads. Each county's share is set under §72-2-108: half based on eligible weighted road mileage, half on population.</p>
+
+  <div class="void-panel">
+    <div class="void-label">What the withholding rule (Utah Admin. Code R926-3) actually authorizes</div>
+    <div class="void-quote">UDOT — not the Governor's office — may withhold future allocations, but only for program-compliance failures tied to the money's use: spending on unauthorized purposes, failing required audits, inaccurate mileage reporting, denying UDOT access to financial records, or improperly closing a qualifying road.
+      <span class="cite">— Utah Admin. Code R926-3</span>
+    </div>
+  </div>
+
+  <p>Nothing in §72-2-107, §72-2-108, or R926-3 identifies rejecting a development agreement, criticizing state housing policy, or joining another county in opposing a law's repeal as a compliance failure that would trigger withholding. Neither Cox's office nor Waldrip publicly identified such a compliance violation when the funding remarks were made. Withholding authority under the rule belongs to UDOT, not to a governor's senior advisor.</p>
+  <p>The Governor's office does hold genuine discretion elsewhere — future budget recommendations, discretionary GOEO grants, Community Impact Board loans, and project prioritization are not bound by the same statutory formula B&amp;C funds are. As of this writing, no GOEO grant, CIB application, or budget line tied to Wasatch or Summit counties has been documented as actually withheld.</p>
+  <div class="sources"><strong>Sources</strong><br>Utah Code §72-2-107, §72-2-108. Utah Admin. Code R926-3. Collaborator legal-research memo, Aug. 2026 (not independently verified line-by-line by Shauna).</div>
+</section>
+
+<!-- ============ MOVEMENT V ============ -->
+<div class="movement" id="m5">
+  <span class="num">V.</span><span class="rule"></span><span class="label">The Defense</span>
+</div>
+<section class="section">
+  <h2>Before the message, a defense of PIDs</h2>
+  <p class="lead">Per Shauna's own listening notes on the recording, Waldrip's funding remarks came directly after his official housing presentation — during which he defended Public Infrastructure Districts (PIDs) as a financing tool, arguing there are only two paths to building housing, "cost before or cost after," and that disclosures around PIDs need to be better.</p>
+  <p>The sequence, per those notes: affordable-housing presentation → defense of PIDs → an explicit request to relay a message → the funding remarks referencing the counties' post, the Governor's instruction, and the "not the direct target" framing. It places the state's senior housing adviser on record defending the same financing model documented elsewhere in this newsroom's reporting on rising Ogden Valley property tax and PID burdens, in the same appearance where he delivered the funding threat above.</p>
+  <div class="sources"><strong>Sources</strong><br>Shauna's own review of the official Heber City CivicClerk meeting recording, Aug. 18, 2026.</div>
+</section>
+
+<!-- ============ MOVEMENT VI ============ -->
+<div class="movement" id="m6">
+  <span class="num">VI.</span><span class="rule"></span><span class="label">The Fund</span>
+</div>
+<section class="section">
+  <h2>The homeownership fund he founded, and the entity that grew from it</h2>
+  <p class="lead">In 2021, while a sitting Utah House member, Waldrip helped create Rocky Mountain Homes Fund (RMHF) — a nonprofit program offering working professionals a no-down-payment, equity-sharing path to homeownership. Intermountain Healthcare was an early partner. His stated ambition at the time was to grow the fund from roughly $2 million to as much as $50 million and expand it statewide.</p>
+
+  <p>A related for-profit entity, Rocky Mountain Homes Fund III, L3C, later registered a securities offering with the SEC — up to $500 million, with a $10 million minimum from any outside investor. Its most recent public filing, from May 2024, shows $32,238,500 sold to two investors.</p>
+
+  <div class="doc-card">
+    <div class="doc-tag">SEC Form D/A, filed May 8, 2024</div>
+    <blockquote>The only related person listed on the filing is Dan Waldrip — named as Director and Manager of Carried 3, LLC, the fund's managing member. He personally signed the filing.</blockquote>
+    <div class="doc-source">SEC EDGAR, Rocky Mountain Homes Fund III, L3C, Form D/A (accession 000197681424000001).</div>
+  </div>
+
+  <p>Steve Waldrip does not appear anywhere on that filing — consistent with his own statement, reported by Building Salt Lake in January 2024, that he resigned from his RMHF positions after accepting the governor's appointment the month before. Whether he was named on the fund's original 2023 filing, before that resignation, hasn't been checked. Any family or business relationship between Dan Waldrip and Steve Waldrip is not established in the record reviewed for this piece.</p>
+  <div class="sources"><strong>Sources</strong><br>Herald Journal (hjnews.com), Nov. 2021. Intermountain Healthcare announcement, Aug. 2021. SEC EDGAR, Rocky Mountain Homes Fund III, L3C, Form D/A, filed 5/8/2024. Building Salt Lake, Jan. 2024.</div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <h3>The Weber County Hive · Unelected Power</h3>
+    <p>Profiles of Utah officials who hold appointed positions — how they got there, what authority the role carries, and how they've used it. Built exclusively from primary documents.</p>
+    <div class="links">
+      <a href="index.html">All profiles</a>
+      <a href="https://webercountyhive.substack.com/" target="_blank" rel="noopener">webercountyhive.substack.com ↗</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.querySelectorAll('[data-scroll-to]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var target = document.getElementById(btn.getAttribute('data-scroll-to'));
+      if(target){ target.scrollIntoView({behavior:'smooth', block:'start'}); }
+    });
+  });
+</script>
+
+</body>
+</html>
