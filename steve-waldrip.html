@@ -454,6 +454,8 @@
     margin-top:16px;
     line-height:1.5;
   }
+  .svg-chart{width:100%;height:auto;display:block;}
+  .svg-chart text{font-family:'IBM Plex Mono',monospace;}
 
   @media(max-width:520px){
     .chain-step{flex-direction:column;gap:6px;}
@@ -518,7 +520,7 @@
 
 <div class="topbar">
   <span>The Weber County Hive · Unelected Power</span>
-  <a href="index.html">← All profiles</a>
+  <a href="https://weber-county-hive.github.io/-weber-county-hive-index/">← Weber County Hive</a>
 </div>
 
 <header class="masthead">
@@ -783,106 +785,166 @@
   <p class="lead">Per the Weber County Hive's own listening notes on the recording, Waldrip's funding remarks came directly after his official housing presentation — during which he defended Public Infrastructure Districts (PIDs) as a financing tool, arguing there are only two paths to building housing, "cost before or cost after," and that disclosures around PIDs need to be better.</p>
   <p>The sequence, per those notes: affordable-housing presentation → defense of PIDs → an explicit request to relay a message → the funding remarks referencing the counties' post, the Governor's instruction, and the "not the direct target" framing. It places the state's senior housing adviser on record defending the same financing model documented elsewhere in this newsroom's reporting on rising Ogden Valley property tax and PID burdens, in the same appearance where he delivered the funding threat above.</p>
 
-  <p>What Waldrip was defending has real, documented stakes. In August 2025, an unfinished luxury golf resort in Coalville called Wohali declared Chapter 11 bankruptcy. Its PID had issued nearly $35 million in debt, and the bankrupt developer needed a court-approved loan just to keep paying the district. State Auditor Tina Cannon's office directed Coalville to start listing the PID's outstanding debt on the city's own financial reports — which alarmed local governments statewide about what they might be on the hook for if their own PIDs went the same way. Statewide, roughly 221 PIDs have been formed since 2019, 71 of them carrying actual bond debt. The Auditor's office told the Weber County Hive the statewide total had reached $5,267,000,000 in issued PID bonds as of Aug. 7, 2026 — up from roughly $4 billion that same fall and $3.8 billion at the end of 2025, a trajectory that keeps climbing faster than the disclosures meant to track it.</p>
+  <div class="tabset">
+    <div class="tab-buttons">
+      <button class="tab-btn active" onclick="switchTab(event,'m5-t1')">The Stakes</button>
+      <button class="tab-btn" onclick="switchTab(event,'m5-t2')">The Math</button>
+      <button class="tab-btn" onclick="switchTab(event,'m5-t3')">Who Finishes It</button>
+      <button class="tab-btn" onclick="switchTab(event,'m5-t4')">Auditor's Warning</button>
+      <button class="tab-btn" onclick="switchTab(event,'m5-t5')">No Voice, No Risk</button>
+      <button class="tab-btn" onclick="switchTab(event,'m5-t6')">Afford. For Whom?</button>
+    </div>
 
-  <p>There is no math anywhere in this record. Not from a developer, not from bond counsel, not from the state, not from Waldrip. In everything reviewed for this piece — auditor reports, legislative hearings, industry pitches, news coverage — nobody advancing the "PIDs make housing more affordable" claim has published an actual side-by-side comparison: what a buyer pays over the life of a mortgage for a PID home, versus what a buyer pays for an equivalent non-PID home. The "cost after" pitch names a mechanism — a developer can defer infrastructure cost instead of paying it upfront — but a deferred cost still has to be paid, by someone, with interest, and no one making the affordability claim has shown the arithmetic proving it comes out lower for the buyer once that repayment is added in. The one case in this record where anyone actually ran the numbers end to end is the Utah City/120 &amp; 220 Bend lease already covered above, and it ran the other way: a $1,289 affordability cap became $1,814 once PID charges and fees were added. What's confirmed, and only what's confirmed: a PID lowers the developer's upfront cost. That's a real, documented mechanism. Whether it lowers anyone else's cost isn't documented at all — not proven false, either — because nobody with the numbers has published them.</p>
+    <div id="m5-t1" class="tab-panel active">
+      <p>What Waldrip was defending has real, documented stakes. In August 2025, an unfinished luxury golf resort in Coalville called Wohali declared Chapter 11 bankruptcy. Its PID had issued nearly $35 million in debt, and the bankrupt developer needed a court-approved loan just to keep paying the district. State Auditor Tina Cannon's office directed Coalville to start listing the PID's outstanding debt on the city's own financial reports — which alarmed local governments statewide about what they might be on the hook for if their own PIDs went the same way. Statewide, roughly 221 PIDs have been formed since 2019, 71 of them carrying actual bond debt. The Auditor's office told the Weber County Hive the statewide total had reached $5,267,000,000 in issued PID bonds as of Aug. 7, 2026 — up from roughly $4 billion that same fall and $3.8 billion at the end of 2025, a trajectory that keeps climbing faster than the disclosures meant to track it.</p>
+      <div class="void-panel">
+        <div class="void-label">What "affordable" actually pays for</div>
+        <div class="void-quote">"Affordable housing" is the name attached to a tool whose only documented beneficiary, in every case reviewed here, is the developer. Not the homeowner who inherits the debt. Not the bondholder who carries it. Not the city that fronts money when it fails. A PID gets a project fast-tracked through financing without the public vote a city or county bond would require, funded with low-interest, tax-exempt bonds ordinarily reserved for governments — while the homeowner is the one whose name is on the assessment for up to 40 years.
+          <span class="cite">— what the record actually shows, not what the name implies</span>
+        </div>
+      </div>
+    </div>
 
-  <p>Run the arithmetic nobody else has published, using the figures already documented above, and the size of the gap becomes obvious. Take a $500,000 home — taxable value $275,000 after Utah's 45% residential exemption. At the statutory maximum PID rate of 15 mills, that's $4,125 a year added to the tax bill, on top of ordinary property tax. Hold that for the assessment's full term — up to 40 years, per the State Auditor's own testimony — and the flat total, with no appreciation factored in at all, is $165,000. Real developments typically see taxable value rise over the life of the bond, which would push the actual total higher, not lower. For a PID lot to break even against that, the discount at closing would have to run into the hundreds of thousands of dollars — or the developer would have to give the lot away outright. No pitch reviewed for this piece claims a discount anywhere near that size.</p>
+    <div id="m5-t2" class="tab-panel">
+      <p>There is no math anywhere in this record. Not from a developer, not from bond counsel, not from the state, not from Waldrip. In everything reviewed for this piece — auditor reports, legislative hearings, industry pitches, news coverage — nobody advancing the "PIDs make housing more affordable" claim has published an actual side-by-side comparison: what a buyer pays over the life of a mortgage for a PID home, versus what a buyer pays for an equivalent non-PID home. The "cost after" pitch names a mechanism — a developer can defer infrastructure cost instead of paying it upfront — but a deferred cost still has to be paid, by someone, with interest, and no one making the affordability claim has shown the arithmetic proving it comes out lower for the buyer once that repayment is added in. The one case in this record where anyone actually ran the numbers end to end is the Utah City/120 &amp; 220 Bend lease already covered above, and it ran the other way: a $1,289 affordability cap became $1,814 once PID charges and fees were added. What's confirmed, and only what's confirmed: a PID lowers the developer's upfront cost. That's a real, documented mechanism. Whether it lowers anyone else's cost isn't documented at all — not proven false, either — because nobody with the numbers has published them.</p>
 
-  <div class="void-panel">
-    <div class="void-label">What "affordable" actually pays for</div>
-    <div class="void-quote">"Affordable housing" is the name attached to a tool whose only documented beneficiary, in every case reviewed here, is the developer. Not the homeowner who inherits the debt. Not the bondholder who carries it. Not the city that fronts money when it fails. A PID gets a project fast-tracked through financing without the public vote a city or county bond would require, funded with low-interest, tax-exempt bonds ordinarily reserved for governments — while the homeowner is the one whose name is on the assessment for up to 40 years.
-      <span class="cite">— what the record actually shows, not what the name implies</span>
+      <p>Run the arithmetic nobody else has published, using the figures already documented above, and the size of the gap becomes obvious. Take a $500,000 home — taxable value $275,000 after Utah's 45% residential exemption. At the statutory maximum PID rate of 15 mills, that's $4,125 a year added to the tax bill, on top of ordinary property tax. Hold that for the assessment's full term — up to 40 years, per the State Auditor's own testimony — and the flat total, with no appreciation factored in at all, is $165,000. That's the conservative number: it doesn't include rising property values, refinanced or refunded bonds, or any collection beyond the original term. For a PID lot to break even against that, the discount at closing would have to run into the hundreds of thousands of dollars — or the developer would have to give the lot away outright. No pitch reviewed for this piece claims a discount anywhere near that size.</p>
+
+      <div class="diagram-panel">
+        <div class="diagram-tag">Cumulative PID charge on a $500,000 home, at the statutory max rate — flat, no appreciation</div>
+        <svg class="svg-chart" viewBox="0 0 700 320" xmlns="http://www.w3.org/2000/svg">
+          <line x1="70" y1="20" x2="70" y2="260" stroke="#C9BBA4" stroke-width="1"/>
+          <line x1="70" y1="260" x2="670" y2="260" stroke="#C9BBA4" stroke-width="1"/>
+          <line x1="70" y1="200" x2="670" y2="200" stroke="#C9BBA4" stroke-width="1" stroke-dasharray="3,4"/>
+          <line x1="70" y1="140" x2="670" y2="140" stroke="#C9BBA4" stroke-width="1" stroke-dasharray="3,4"/>
+          <line x1="70" y1="80" x2="670" y2="80" stroke="#C9BBA4" stroke-width="1" stroke-dasharray="3,4"/>
+          <text x="60" y="264" font-size="11" fill="#4A3B35" text-anchor="end">$0</text>
+          <text x="60" y="204" font-size="11" fill="#4A3B35" text-anchor="end">$41K</text>
+          <text x="60" y="144" font-size="11" fill="#4A3B35" text-anchor="end">$82K</text>
+          <text x="60" y="84" font-size="11" fill="#4A3B35" text-anchor="end">$124K</text>
+          <polyline points="70,260 220,200 370,140 520,80 670,20" fill="none" stroke="#6E1F2B" stroke-width="3"/>
+          <polygon points="70,260 220,200 370,140 520,80 670,20 670,260" fill="#6E1F2B" fill-opacity="0.08"/>
+          <circle cx="70" cy="260" r="4" fill="#6E1F2B"/>
+          <circle cx="220" cy="200" r="4" fill="#6E1F2B"/>
+          <circle cx="370" cy="140" r="4" fill="#6E1F2B"/>
+          <circle cx="520" cy="80" r="4" fill="#6E1F2B"/>
+          <circle cx="670" cy="20" r="5" fill="#6E1F2B"/>
+          <text x="70" y="282" font-size="11" fill="#4A3B35" text-anchor="middle">Yr 0</text>
+          <text x="220" y="282" font-size="11" fill="#4A3B35" text-anchor="middle">Yr 10</text>
+          <text x="370" y="282" font-size="11" fill="#4A3B35" text-anchor="middle">Yr 20</text>
+          <text x="520" y="282" font-size="11" fill="#4A3B35" text-anchor="middle">Yr 30</text>
+          <text x="670" y="14" font-size="13" font-weight="600" fill="#6E1F2B" text-anchor="end">Yr 40: $165,000</text>
+        </svg>
+        <div class="diagram-caption">$4,125/year added to the tax bill (15 mills on a $275,000 taxable value), held flat for the full 40-year assessment term — the same figures documented in the paragraph above.</div>
+      </div>
+
+      <div class="diagram-panel">
+        <div class="diagram-tag">What a buyer would need to break even, vs. the largest discount claimed anywhere in this record</div>
+        <svg class="svg-chart" viewBox="0 0 700 200" xmlns="http://www.w3.org/2000/svg">
+          <text x="20" y="38" font-size="13" fill="#211714" font-weight="600">Break-even discount needed</text>
+          <rect x="20" y="48" width="660" height="34" fill="#181210"/>
+          <text x="640" y="70" font-size="14" font-weight="600" fill="#B4863C" text-anchor="end">$165,000</text>
+          <text x="20" y="118" font-size="13" fill="#211714" font-weight="600">Largest discount claimed (The Highlands, developer's own pitch)</text>
+          <rect x="20" y="128" width="160" height="34" fill="#6E1F2B" fill-opacity="0.85"/>
+          <text x="150" y="150" font-size="14" font-weight="600" fill="#fff" text-anchor="end">$40,000</text>
+        </svg>
+        <div class="diagram-caption">$125,000 short of break-even, using the single largest PID discount figure found anywhere in the reporting for this piece — and that figure is the developer's own claim, not an independently verified number.</div>
+      </div>
+
+      <p>And even a discount that large would only cover the first buyer. A PID assessment runs with the property, not with any individual owner — every subsequent buyer inherits whatever's left of that $165,000 obligation, whether or not they got a discount for it. For "cost after" to mean genuine savings, the price would have to stay discounted at every resale, deep enough each time to compensate the next buyer for the PID debt still attached to the property. Nothing reviewed here shows that happening. If a PID home instead resells at the same price as a comparable non-PID home nearby — which is what an open market does by default — the second buyer gets no discount at all and still inherits the assessment. "Cost after" describes who pays the infrastructure bill and when. It doesn't describe how much the total comes to, and without a discount documented to survive resale after resale, the buyer ends up paying the market price for the home and the PID charge on top of it.</p>
+    </div>
+
+    <div id="m5-t3" class="tab-panel">
+      <p>Wohali also answers a question the "bondholders absorb the risk" framing leaves out: when a PID-backed project stalls, who actually finishes it, and who pays in the meantime? For about a year, the answer was messy. One lot owner, already in contract, found himself with a home that "lacks utilities," caught in what he called the bankruptcy's "morass." Coalville's own mayor had to press the bankrupt developer to keep building a sewer pump station mid-bankruptcy — not out of generosity, but because the city's own capacity was bottlenecked on it: "If we can't handle their sewage, they can't build anything." A contractor owed $680,000 for sewer work sued both the developer and the city, since Coalville owns the line the PID financed. And Wohali itself had to front the city money for an unrelated reservoir repair, to be repaid from tax revenue a bankrupt resort might never generate.</p>
+
+      <p>The resolution came about a year later, and it came from a new owner, not the city or the state: the investment fund EB5AN bought Wohali at an April 2026 bankruptcy auction, then paid off the contractor's $680,000 claim and Coalville's $94,000 in outstanding fees to get the project moving again. As of that August 2026 settlement, it still wasn't clear whether any homes in the development had actually been built. The debt got paid, eventually — just not by anyone the "no city liability" framing promised would be shielded, and not on any timeline the people already living or invested there could count on.</p>
+
+      <div class="diagram-panel">
+        <div class="diagram-tag">Who paid what, in order — Wohali's bankruptcy year</div>
+        <div class="chain">
+
+          <div class="chain-step">
+            <div class="chain-num">1</div>
+            <div class="chain-body">
+              <div class="chain-who">Developer (Wohali)</div>
+              <div class="chain-what">Defaults on loans, stops paying employees, files Chapter 11 — Aug. 2025. Its PID owes bondholders roughly $35M; separately, it owes a contractor $680,000 and Coalville $94,000 in fees.</div>
+            </div>
+          </div>
+
+          <div class="chain-arrow">↓</div>
+
+          <div class="chain-step">
+            <div class="chain-num">2</div>
+            <div class="chain-body">
+              <div class="chain-who">Left holding the gap</div>
+              <div class="chain-what">A lot owner is stuck with a home that "lacks utilities." Contractor Suncore, unpaid $680,000, sues both the developer <em>and</em> the city — Coalville owns the sewer line the PID financed. Coalville itself has already fronted money for a reservoir repair, to be repaid from tax revenue a bankrupt resort may never generate.</div>
+            </div>
+          </div>
+
+          <div class="chain-arrow">↓</div>
+
+          <div class="chain-step">
+            <div class="chain-num">3</div>
+            <div class="chain-body">
+              <div class="chain-who">Bankruptcy court steps in</div>
+              <div class="chain-what">Approves a $4M+ loan from Wohali's existing creditors — not city or state money — specifically so safety-critical sewer work keeps moving. Coalville's mayor presses the developer to finish it: "If we can't handle their sewage, they can't build anything."</div>
+            </div>
+          </div>
+
+          <div class="chain-arrow">↓</div>
+
+          <div class="chain-step highlight">
+            <div class="chain-num">4</div>
+            <div class="chain-body">
+              <div class="chain-who">New owner buys in — April 2026</div>
+              <div class="chain-what">Investment fund EB5AN buys Wohali at bankruptcy auction. In settlements finalized that August — a full year after the filing — EB5AN pays Suncore's $680,000 and Coalville's $94,000, not the original developer, the city, or the state.</div>
+            </div>
+          </div>
+
+          <div class="chain-arrow">↓</div>
+
+          <div class="chain-step">
+            <div class="chain-num">5</div>
+            <div class="chain-body">
+              <div class="chain-who">Where it stands</div>
+              <div class="chain-what">Development resumes under the new owner. As of that August 2026 settlement, it still wasn't clear whether any homes in the project had actually been built.</div>
+            </div>
+          </div>
+
+        </div>
+        <div class="diagram-caption">Not shown: the PID's bondholders, owed the underlying ~$35M — a separate claim, senior to everything above. Sourced to KPCW and Park Record reporting, Aug. 2025–Aug. 2026; see full source list below.</div>
+      </div>
+    </div>
+
+    <div id="m5-t4" class="tab-panel">
+      <p>Cannon's concern isn't just about one bankruptcy — it's about what the structure lets developers claim to be. In an Aug. 19, 2026 legislative hearing, she put it plainly:</p>
+      <div class="doc-card">
+        <div class="doc-tag">Utah State Auditor Tina Cannon, Political Subdivisions Interim Committee, Aug. 19, 2026</div>
+        <blockquote>"One of the things that we have found through our discussions on these over the last two years, it is a universal factor: Everyone wants to wield the power of government while claiming the privacy and independence of a private corporation."</blockquote>
+        <div class="doc-source">KPCW (Connor Thomas), Aug. 25, 2026.</div>
+      </div>
+      <p>Cannon told legislators the U.S. Securities and Exchange Commission has taken notice too — the SEC is sending representatives to the Utah Capitol this October to give a national policy address on developer-issued government bonds. Her read on the federal concern: "I think that's their concern, is what used to be financed in the private market is now being funded with municipal bonding... Is that appropriate?" Bond attorneys disagree with her framing. Randy Larsen of Gilmore Bell called the structure "the beauty of the tool" — leveraging capital markets to get developers financing terms "a local bank never could or should" — and argued Wohali's bankruptcy proved the system working exactly as designed: "There is no debt to Coalville City. There's no debt to Summit County. No one is looking to them for repayment. The only source of collateral is the development itself."</p>
+    </div>
+
+    <div id="m5-t5" class="tab-panel">
+      <div class="doc-card">
+        <div class="doc-tag">Jen Brown, Director, Utah Citizens for the Constitution</div>
+        <blockquote>"When PIDs are being created, they are developing land from scratch, there are no existing homeowners. And so, who makes up the PID board? Well, it's whoever the developer designates. So it could be him, his wife and maybe one of his employees could be the full PID board."</blockquote>
+        <div class="doc-source">Eric Peterson, Utah Investigative Journalism Project/KSL.com, April 28, 2026.</div>
+      </div>
+      <p>That's the mechanism behind the "no voice" complaint: a PID's formation legally requires 100% consent of landowners and registered voters within its boundaries — a requirement Sen. Dan McCay, the 2019 law's sponsor, cited as proof the process is consensual. But at formation there typically are no residents yet, only the developer. Brown calls the result "taxation without representation": the people who eventually move in and pay off the district's bonds for decades were never the ones who voted to create it.</p>
+      <p>If a PID fails, the city and state are shielded by design — HB507 (2026) wrote into law that infrastructure a PID builds and hands back to a city counts as zero financial benefit to that city, specifically so the debt doesn't attach to municipal books. UIPA's own materials describe the same isolation from the other direction: "If property values don't grow as expected, the bondholders, not the local community, absorb the risk." That leaves two groups holding it instead: the investors who bought the district's bonds, and the homeowners already living inside its boundary, whose assessment is a lien on their individual parcel — it doesn't go away if the rest of the project stalls or the developer walks. Brown's sharper version of the complaint is about who's shielded on the other end: developers historically bore the full upfront risk because they kept the full upside if a project succeeded. PIDs, she argues, let them keep that same upside while handing the downside to someone else.</p>
+      <div class="doc-card">
+        <div class="doc-tag">Jen Brown, Director, Utah Citizens for the Constitution</div>
+        <blockquote>Developers "had to pay those upfront costs and on those upfront risks because they have the potential to make a tremendous amount of money, and that's what the free market was." Now, she says, developers and their lobbyists are "saying, 'Let's move the risk, but all the profits stay the same to us.'"</blockquote>
+        <div class="doc-source">Eric Peterson, Utah Investigative Journalism Project/KSL.com, April 28, 2026.</div>
+      </div>
+    </div>
+
+    <div id="m5-t6" class="tab-panel">
+      <p>Which raises the question Waldrip's own "cost before or cost after" framing invites: more affordable for whom? The pitch is that a PID lowers a home's sticker price, because the developer doesn't have to build the cost of roads and pipes into it upfront — that's the "cost after" half of his framing. But that lower price is the claim, not a demonstrated fact: nothing in this record shows a PID lot or home actually selling for less than a comparable non-PID lot in the same market. No developer, no bond counsel, no state agency has published that comparison either. What is documented is that "after" isn't free. The statutory cap on a PID's ad valorem rate is 15 mills; a home taxed at that rate can pay roughly double the property tax of an identical home outside the district — using Herriman's own comparison when it debated adopting PIDs, .015 versus the city's standard .014059 rate. One Utah County lease example already documented in a separate piece from this newsroom: a unit advertised as complying with a $1,289-per-month affordability cap actually cost $1,814 once the PID assessment and bundled fees were added — the affordability calculation had counted the advertised rent, not what a resident actually paid. In Heber City's own PID debate this June, over a different development called The Highlands, the developer's own pitch was that the PID would cut $40,000 off each home's base price — again, the developer's claim, not an independently verified number. Mayor Heidi Franco's response captured the same tension directly: "Even the discount that they get up front is not going to last through their mortgage."</p>
     </div>
   </div>
-
-  <p>Wohali also answers a question the "bondholders absorb the risk" framing leaves out: when a PID-backed project stalls, who actually finishes it, and who pays in the meantime? For about a year, the answer was messy. One lot owner, already in contract, found himself with a home that "lacks utilities," caught in what he called the bankruptcy's "morass." Coalville's own mayor had to press the bankrupt developer to keep building a sewer pump station mid-bankruptcy — not out of generosity, but because the city's own capacity was bottlenecked on it: "If we can't handle their sewage, they can't build anything." A contractor owed $680,000 for sewer work sued both the developer and the city, since Coalville owns the line the PID financed. And Wohali itself had to front the city money for an unrelated reservoir repair, to be repaid from tax revenue a bankrupt resort might never generate.</p>
-
-  <p>The resolution came about a year later, and it came from a new owner, not the city or the state: the investment fund EB5AN bought Wohali at an April 2026 bankruptcy auction, then paid off the contractor's $680,000 claim and Coalville's $94,000 in outstanding fees to get the project moving again. As of that August 2026 settlement, it still wasn't clear whether any homes in the development had actually been built. The debt got paid, eventually — just not by anyone the "no city liability" framing promised would be shielded, and not on any timeline the people already living or invested there could count on.</p>
-
-  <div class="diagram-panel">
-    <div class="diagram-tag">Who paid what, in order — Wohali's bankruptcy year</div>
-    <div class="chain">
-
-      <div class="chain-step">
-        <div class="chain-num">1</div>
-        <div class="chain-body">
-          <div class="chain-who">Developer (Wohali)</div>
-          <div class="chain-what">Defaults on loans, stops paying employees, files Chapter 11 — Aug. 2025. Its PID owes bondholders roughly $35M; separately, it owes a contractor $680,000 and Coalville $94,000 in fees.</div>
-        </div>
-      </div>
-
-      <div class="chain-arrow">↓</div>
-
-      <div class="chain-step">
-        <div class="chain-num">2</div>
-        <div class="chain-body">
-          <div class="chain-who">Left holding the gap</div>
-          <div class="chain-what">A lot owner is stuck with a home that "lacks utilities." Contractor Suncore, unpaid $680,000, sues both the developer <em>and</em> the city — Coalville owns the sewer line the PID financed. Coalville itself has already fronted money for a reservoir repair, to be repaid from tax revenue a bankrupt resort may never generate.</div>
-        </div>
-      </div>
-
-      <div class="chain-arrow">↓</div>
-
-      <div class="chain-step">
-        <div class="chain-num">3</div>
-        <div class="chain-body">
-          <div class="chain-who">Bankruptcy court steps in</div>
-          <div class="chain-what">Approves a $4M+ loan from Wohali's existing creditors — not city or state money — specifically so safety-critical sewer work keeps moving. Coalville's mayor presses the developer to finish it: "If we can't handle their sewage, they can't build anything."</div>
-        </div>
-      </div>
-
-      <div class="chain-arrow">↓</div>
-
-      <div class="chain-step highlight">
-        <div class="chain-num">4</div>
-        <div class="chain-body">
-          <div class="chain-who">New owner buys in — April 2026</div>
-          <div class="chain-what">Investment fund EB5AN buys Wohali at bankruptcy auction. In settlements finalized that August — a full year after the filing — EB5AN pays Suncore's $680,000 and Coalville's $94,000, not the original developer, the city, or the state.</div>
-        </div>
-      </div>
-
-      <div class="chain-arrow">↓</div>
-
-      <div class="chain-step">
-        <div class="chain-num">5</div>
-        <div class="chain-body">
-          <div class="chain-who">Where it stands</div>
-          <div class="chain-what">Development resumes under the new owner. As of that August 2026 settlement, it still wasn't clear whether any homes in the project had actually been built.</div>
-        </div>
-      </div>
-
-    </div>
-    <div class="diagram-caption">Not shown: the PID's bondholders, owed the underlying ~$35M — a separate claim, senior to everything above. Sourced to KPCW and Park Record reporting, Aug. 2025–Aug. 2026; see full source list below.</div>
-  </div>
-
-  <p>Cannon's concern isn't just about one bankruptcy — it's about what the structure lets developers claim to be. In an Aug. 19, 2026 legislative hearing, she put it plainly:</p>
-
-  <div class="doc-card">
-    <div class="doc-tag">Utah State Auditor Tina Cannon, Political Subdivisions Interim Committee, Aug. 19, 2026</div>
-    <blockquote>"One of the things that we have found through our discussions on these over the last two years, it is a universal factor: Everyone wants to wield the power of government while claiming the privacy and independence of a private corporation."</blockquote>
-    <div class="doc-source">KPCW (Connor Thomas), Aug. 25, 2026.</div>
-  </div>
-
-  <p>Cannon told legislators the U.S. Securities and Exchange Commission has taken notice too — the SEC is sending representatives to the Utah Capitol this October to give a national policy address on developer-issued government bonds. Her read on the federal concern: "I think that's their concern, is what used to be financed in the private market is now being funded with municipal bonding... Is that appropriate?" Bond attorneys disagree with her framing. Randy Larsen of Gilmore Bell called the structure "the beauty of the tool" — leveraging capital markets to get developers financing terms "a local bank never could or should" — and argued Wohali's bankruptcy proved the system working exactly as designed: "There is no debt to Coalville City. There's no debt to Summit County. No one is looking to them for repayment. The only source of collateral is the development itself."</p>
-
-  <div class="doc-card">
-    <div class="doc-tag">Jen Brown, Director, Utah Citizens for the Constitution</div>
-    <blockquote>"When PIDs are being created, they are developing land from scratch, there are no existing homeowners. And so, who makes up the PID board? Well, it's whoever the developer designates. So it could be him, his wife and maybe one of his employees could be the full PID board."</blockquote>
-    <div class="doc-source">Eric Peterson, Utah Investigative Journalism Project/KSL.com, April 28, 2026.</div>
-  </div>
-
-  <p>That's the mechanism behind the "no voice" complaint: a PID's formation legally requires 100% consent of landowners and registered voters within its boundaries — a requirement Sen. Dan McCay, the 2019 law's sponsor, cited as proof the process is consensual. But at formation there typically are no residents yet, only the developer. Brown calls the result "taxation without representation": the people who eventually move in and pay off the district's bonds for decades were never the ones who voted to create it.</p>
-
-  <p>If a PID fails, the city and state are shielded by design — HB507 (2026) wrote into law that infrastructure a PID builds and hands back to a city counts as zero financial benefit to that city, specifically so the debt doesn't attach to municipal books. UIPA's own materials describe the same isolation from the other direction: "If property values don't grow as expected, the bondholders, not the local community, absorb the risk." That leaves two groups holding it instead: the investors who bought the district's bonds, and the homeowners already living inside its boundary, whose assessment is a lien on their individual parcel — it doesn't go away if the rest of the project stalls or the developer walks. Brown's sharper version of the complaint is about who's shielded on the other end: developers historically bore the full upfront risk because they kept the full upside if a project succeeded. PIDs, she argues, let them keep that same upside while handing the downside to someone else.</p>
-
-  <div class="doc-card">
-    <div class="doc-tag">Jen Brown, Director, Utah Citizens for the Constitution</div>
-    <blockquote>Developers "had to pay those upfront costs and on those upfront risks because they have the potential to make a tremendous amount of money, and that's what the free market was." Now, she says, developers and their lobbyists are "saying, 'Let's move the risk, but all the profits stay the same to us.'"</blockquote>
-    <div class="doc-source">Eric Peterson, Utah Investigative Journalism Project/KSL.com, April 28, 2026.</div>
-  </div>
-
-  <p>Which raises the question Waldrip's own "cost before or cost after" framing invites: more affordable for whom? The pitch is that a PID lowers a home's sticker price, because the developer doesn't have to build the cost of roads and pipes into it upfront — that's the "cost after" half of his framing. But that lower price is the claim, not a demonstrated fact: nothing in this record shows a PID lot or home actually selling for less than a comparable non-PID lot in the same market. No developer, no bond counsel, no state agency has published that comparison either. What is documented is that "after" isn't free. The statutory cap on a PID's ad valorem rate is 15 mills; a home taxed at that rate can pay roughly double the property tax of an identical home outside the district — using Herriman's own comparison when it debated adopting PIDs, .015 versus the city's standard .014059 rate. One Utah County lease example already documented in a separate piece from this newsroom: a unit advertised as complying with a $1,289-per-month affordability cap actually cost $1,814 once the PID assessment and bundled fees were added — the affordability calculation had counted the advertised rent, not what a resident actually paid. In Heber City's own PID debate this June, over a different development called The Highlands, the developer's own pitch was that the PID would cut $40,000 off each home's base price — again, the developer's claim, not an independently verified number. Mayor Heidi Franco's response captured the same tension directly: "Even the discount that they get up front is not going to last through their mortgage."</p>
 </section>
 
 <!-- ============ MOVEMENT VI ============ -->
@@ -974,7 +1036,7 @@
     Utah State Auditor testimony, Political Subdivisions/Rules Review committee hearing, Jan. 15, 2026 (via Citizen Portal) — PID assessment costs "recovered via an additional property tax line for up to 40 years." Utah Code §59-2-103 — 45% residential property tax exemption on taxable value.
   </div>
   </details>
-  <p style="margin-top:20px;"><a href="index.html" class="mono" style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.05em;text-transform:uppercase;">← Back to all profiles</a></p>
+  <p style="margin-top:20px;"><a href="https://weber-county-hive.github.io/-weber-county-hive-index/" class="mono" style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.05em;text-transform:uppercase;">← Back to Weber County Hive</a></p>
 </section>
 
 <footer class="site-footer">
@@ -982,7 +1044,7 @@
     <h3>The Weber County Hive · Unelected Power</h3>
     <p>Profiles of Utah officials who hold appointed positions — how they got there, what authority the role carries, and how they've used it. Built exclusively from primary documents.</p>
     <div class="links">
-      <a href="index.html">All profiles</a>
+      <a href="https://weber-county-hive.github.io/-weber-county-hive-index/">Weber County Hive — all coverage</a>
       <a href="https://webercountyhive.substack.com/" target="_blank" rel="noopener">webercountyhive.substack.com ↗</a>
     </div>
   </div>
