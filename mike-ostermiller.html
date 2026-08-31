@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mike Ostermiller | Unelected Power | The Weber County Hive</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+:root{
+  --paper:#f7f1e6; --paper-2:#efe6d3; --ink:#2a1f14; --ink-soft:#63594a;
+  --maroon:#5c1a1a; --maroon-2:#7a2424;
+  --gold:#a9762c; --gold-bg:#f0e0c0;
+  --line:#ddccaa;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--paper);color:var(--ink);font-family:'Source Sans 3',sans-serif;line-height:1.65;font-size:16px;}
+.wrap{max-width:860px;margin:0 auto;padding:0 24px;}
+a{color:var(--maroon-2);}
+h1,h2,h3{font-family:'Playfair Display',serif;color:var(--ink);}
+
+.topbar{background:var(--ink);color:var(--gold-bg);padding:10px 0;font-family:'IBM Plex Mono',monospace;font-size:12px;}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;}
+.topbar a{color:var(--gold-bg);text-decoration:none;opacity:.85;}
+.topbar a:hover{opacity:1;text-decoration:underline;}
+
+header.masthead{background:linear-gradient(135deg,var(--maroon),var(--maroon-2));color:#f4e9d8;padding:40px 0 32px;border-bottom:5px solid var(--gold);}
+header.masthead .wrap{}
+.kicker{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-bg);margin-bottom:10px;}
+h1.title{font-size:clamp(30px,5vw,46px);color:#fff;line-height:1.15;font-weight:700;}
+.byline{margin-top:8px;font-family:'IBM Plex Mono',monospace;font-size:13px;color:#e3cfa8;}
+.dek{margin-top:14px;font-size:17px;color:#e9d9ba;max-width:680px;}
+.roles-strip{margin-top:20px;display:flex;flex-wrap:wrap;gap:8px;}
+.role-pill{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.03em;background:rgba(255,255,255,.12);border:1px solid rgba(240,224,192,.4);color:#f4e9d8;padding:4px 11px;border-radius:14px;}
+
+.section{padding:36px 0;border-bottom:1px solid var(--line);}
+.section h2{font-size:26px;margin-bottom:14px;}
+.section .lead{font-size:17px;color:var(--ink-soft);margin-bottom:16px;}
+.section p{margin:0 0 14px;}
+
+.stat-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:18px 0;}
+.stat{background:var(--paper-2);border:1px solid var(--line);border-top:3px solid var(--gold);padding:16px 18px;}
+.stat .num{font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:var(--gold);line-height:1.15;}
+.stat .label{margin-top:6px;font-size:12.5px;color:var(--ink-soft);text-transform:uppercase;letter-spacing:.03em;}
+
+table.roster{width:100%;border-collapse:collapse;margin:16px 0;font-size:14.5px;}
+table.roster th{background:var(--maroon);color:#f4e9d8;text-align:left;padding:9px 12px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.04em;text-transform:uppercase;}
+table.roster td{padding:9px 12px;border-bottom:1px solid var(--line);}
+table.roster tr:nth-child(even) td{background:var(--paper-2);}
+
+.chain{background:#fff;border:1px solid var(--line);padding:22px 24px;margin:16px 0;}
+.chain-step{display:flex;gap:16px;padding:11px 0;border-bottom:1px dashed var(--line);}
+.chain-step:last-child{border-bottom:none;}
+.chain-step .yr{font-family:'IBM Plex Mono',monospace;color:var(--gold);font-size:13px;font-weight:600;flex-shrink:0;width:60px;text-align:right;}
+.chain-step .txt strong{color:var(--maroon-2);}
+
+.callout{background:var(--paper-2);border-left:4px solid var(--gold);padding:16px 20px;margin:16px 0;font-size:15px;}
+.callout strong{color:var(--maroon-2);}
+.flag{background:#fff;border:1px dashed var(--ink-soft);padding:13px 18px;margin:14px 0;font-size:14px;color:var(--ink-soft);}
+.flag .tag{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px;}
+
+.full-sources{border:1px solid var(--line);background:#fff;margin:26px 0 0;}
+.full-sources summary{cursor:pointer;list-style:none;padding:15px 22px;background:var(--paper-2);font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.05em;text-transform:uppercase;color:var(--maroon-2);}
+.full-sources summary::-webkit-details-marker{display:none;}
+.full-sources-body{padding:18px 24px 24px;font-size:13.5px;}
+.full-sources-body h4{font-family:'Playfair Display',serif;font-size:14px;margin:16px 0 6px;padding-top:10px;border-top:1px solid var(--line);}
+.full-sources-body p{margin:0;color:var(--ink-soft);}
+
+footer{padding:28px 0 48px;color:var(--ink-soft);font-size:13.5px;}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span>UNELECTED POWER · CASE FILE 02</span>
+    <a href="https://weber-county-hive.github.io/-weber-county-hive-index/">← Master Index</a>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="kicker">Unelected Power · Case File 02</div>
+    <h1 class="title">Mike Ostermiller</h1>
+    <div class="byline">Never elected to anything. Has sat on a state development authority's board since 2008.</div>
+    <p class="dek">CEO of a century-old realtors' association, partner at a government-affairs law firm he co-founded, a registered lobbyist for 14 years running, and a voting member of the Military Installation Development Authority — the state board approving billion-dollar development projects — for 18 years. None of it required a single vote.</p>
+    <div class="roles-strip">
+      <span class="role-pill">MIDA Board · since 2008</span>
+      <span class="role-pill">CEO, Northern Wasatch Assoc. of Realtors</span>
+      <span class="role-pill">Partner, Kyler Kohler Ostermiller & Sorensen</span>
+      <span class="role-pill">Lobbyist since 2012</span>
+      <span class="role-pill">Housing Affordability Commission</span>
+    </div>
+  </div>
+</header>
+
+<section class="section">
+  <h2>The short version</h2>
+  <div class="stat-row">
+    <div class="stat"><div class="num">18 yrs</div><div class="label">On MIDA's board, never elected to the seat</div></div>
+    <div class="stat"><div class="num">6</div><div class="label">Simultaneous MIDA-family board/PID seats</div></div>
+    <div class="stat"><div class="num">14 yrs</div><div class="label">Continuous Utah lobbyist registration</div></div>
+    <div class="stat"><div class="num">90+</div><div class="label">Lobbying clients since 2012</div></div>
+  </div>
+  <p>Mike Ostermiller has never run for office. His power runs through appointment, not election: a seat on the Military Installation Development Authority's board since its founding year, a registered lobbying practice built around his own law firm, and the CEO chair of a real estate trade association that has quietly outlasted a century of elected board presidents who cycle through annually. He is currently a paid consultant to the exact authority he sits on the board of.</p>
+</section>
+
+<section class="section">
+  <h2>The MIDA seat — appointed, not elected, and unusually defined</h2>
+  <p class="lead">MIDA's board has seven voting seats. Six are explicitly tied to holding some other office — a mayor, a county commissioner, a state agency post. Ostermiller's isn't.</p>
+  <table class="roster">
+    <tr><th>Seat</th><th>Qualification</th><th>Current holder</th></tr>
+    <tr><td>15014</td><td>(3) Senate Appointment</td><td>Stuart Adams</td></tr>
+    <tr><td>15015</td><td><strong>"Partner" — no statutory subsection</strong></td><td><strong>Mike Ostermiller</strong></td></tr>
+    <tr><td>15016</td><td>(b) County Council</td><td>Erik Rowland</td></tr>
+    <tr><td>15017</td><td>(b) County Commissioner from Weber</td><td>Gage Froerer</td></tr>
+    <tr><td>15018</td><td>(c) State Agency involved with military issues</td><td>Gary Harter</td></tr>
+    <tr><td>15019</td><td>(b) Mayor of Clearfield City</td><td>Mark Shepherd</td></tr>
+    <tr><td>15020</td><td>(a) Supporting military efforts in state</td><td>Jerry Stevenson</td></tr>
+  </table>
+  <p>Every other seat cites a specific statutory clause tied to an official role. Ostermiller's qualification is listed simply as "Partner" — no lettered or numbered subsection at all. MIDA's own board page states plainly: "Mike has served on MIDA's Board since 2008, and he currently serves as the Board's representative to MIDA staff."</p>
+  <div class="callout"><strong>On his own MIDA disclosure form, in his own words, Ostermiller describes his role as "paid consultant / board representative with staff."</strong> Not a volunteer appointee — a paid one, on the board that decides which development projects the state approves.</div>
+</section>
+
+<section class="section">
+  <h2>The Hideout annexation bill</h2>
+  <p class="lead">Before MIDA, Ostermiller was already at the center of one of Utah's most notorious land-use controversies.</p>
+  <div class="chain">
+    <div class="chain-step"><span class="yr">2020</span><span class="txt">H.B. 359, introduced as routine "Municipal Annexation Revisions." Summit County later alleged Ostermiller was heavily involved in adding language allowing a municipality to annex distant land <strong>without a petition or county consent</strong> — as long as the private property owner agreed in writing.</span></div>
+    <div class="chain-step"><span class="yr">1st Sub</span><span class="txt">The cross-county, no-consent language was not in the bill as introduced — it first appears in the 1st Substitute. Developer attorney Bruce Baird said Ostermiller brought the language to Sen. Kirk Cullimore "with an eye toward the Hideout annexation, among others."</span></div>
+    <div class="chain-step"><span class="yr">Fallout</span><span class="txt">Ostermiller told press he was accountable for misrepresenting the bill's contents to its own sponsors, Cullimore and Rep. Calvin Musselman. Developers tied to the underlying Hideout project included Nate Brockbank and Josh Romney, son of Sen. Mitt Romney.</span></div>
+    <div class="chain-step"><span class="yr">2024</span><span class="txt">The Utah Supreme Court ruled in <em>Hideout v. Summit County</em> that Summit County lacked standing to challenge the annexation. It proceeded.</span></div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>A lobbying practice built to last</h2>
+  <p>Ostermiller has been a registered Utah lobbyist continuously since December 2012 — 14 years. Three of his clients have never lapsed in that entire span: the Utah Association of Realtors, the Northern Wasatch Association of Realtors, and the Utah Property Rights Coalition. His current registration lists six active clients, five of them real estate or property-rights organizations described with identical boilerplate language — "legislative advocacy and consulting" — that says almost nothing about what he actually lobbies for.</p>
+  <table class="roster">
+    <tr><th>Client</th><th>Active since</th><th>Industry</th></tr>
+    <tr><td>Northern Wasatch Association of Realtors</td><td>2012</td><td>Real Estate</td></tr>
+    <tr><td>Utah Association of REALTORS</td><td>2012</td><td>Real Estate</td></tr>
+    <tr><td>Utah Property Rights Coalition</td><td>2012</td><td>Property Rights</td></tr>
+    <tr><td>Saunders Outdoor Advertising</td><td>2013</td><td>Advertising</td></tr>
+    <tr><td>Young Automotive Group</td><td>2022</td><td>—</td></tr>
+    <tr><td>Renaissance Learning</td><td>2025</td><td>Educational Software</td></tr>
+  </table>
+  <p>Over the full 14 years, more than 90 clients have passed through his registration — Airbnb, Apple, Uber, JUUL Labs, Pfizer, and, for two years in the mid-2010s, <strong>Blue Castle Holdings</strong>, the nuclear small-modular-reactor developer behind an early proposal near Green River. He was also a registered lobbyist for the Utah Inland Port Authority itself, MIDA's sister land-use agency, for most of 2022.</p>
+  <div class="flag">
+    <div class="tag">Independent, decade-old confirmation</div>
+    A Feb. 12, 2012 Deseret News guest column by veteran political columnists Frank Pignanelli and LaVarr Webb named the Utah Realtors Association as having "the largest PAC in the state" and wrote plainly: "Under the leadership of Chris Kyler and Michael Ostermiller, the Realtors often prevail." This wasn't a new observation in 2026 — it was already common knowledge among Utah political insiders 14 years ago.
+  </div>
+</section>
+
+<section class="section">
+  <h2>The chair that never turns over</h2>
+  <p>Ostermiller is CEO of the Northern Wasatch Association of Realtors — a title he has held continuously since well before his lobbyist registration began in 2012, while the association's elected President position rotates through a new person almost every year. Elected officer seats there — President, Vice President, Treasurer — genuinely change hands annually through a standard succession ladder. The CEO seat does not. It's a hired staff position, appointed by the board and reviewed annually by whichever President happens to be serving that year — not voted on by the membership at all.</p>
+  <p>His 2022 reported compensation for that role: $195,000, plus $51,720 in other compensation — $246,720 total, the largest line item on the association's own tax filing.</p>
+</section>
+
+<section class="section">
+  <h2>Where the roads keep crossing</h2>
+  <p>Ostermiller's own law firm — Kyler, Kohler, Ostermiller & Sorensen — pairs him with Chris Kyler, CEO of the Utah Association of Realtors, who registers lobbying clients on a nearly identical schedule under the same firm. Both men were named as co-defendants, alongside Northern Wasatch Association of Realtors itself, in a 2013 lawsuit dismissed on procedural grounds before reaching the merits.</p>
+  <p>More recently: Utah's corporate registry shows Ostermiller as director, treasurer, registered agent, and incorporator of the Nilson Foundation Inc., a nonprofit formed in July 2026 with Jed Nilson — CEO of Nilson Homes, a major Weber County developer — as its President. The two are also co-directors of a separate Ogden nonprofit, The Healing Collective Utah Inc. (Ostermiller: Director and Treasurer; Jed Nilson: President; Nilson's wife Heather: Secretary), formed the year before. Both entities' stated purposes are generic 501(c)(3) boilerplate that says nothing about what either organization actually does.</p>
+</section>
+
+<section class="section">
+  <h2>The firm itself, and a discrepancy that isn't resolved</h2>
+  <p class="lead">Utah's own corporate registry, current as of a May 2026 renewal, lists Ostermiller as an active partner at KKOS. His own sworn disclosure form, signed weeks later, says otherwise.</p>
+  <p>The firm — full name Kyler Kohler Ostermiller & Sorensen, LLP — is registered not in Sandy, South Ogden, or Kaysville, where its partners actually do their work, but at an address in Cedar City, over 250 miles south, using a commercial registered-agent service. Alongside its "KKOS Lawyers" trade name, the same registration lists two others: The Entrepreneur's Law Firm, and Cedar Injury Law — a personal-injury practice name with no apparent connection to the government-affairs and lobbying work described everywhere else in this record.</p>
+  <table class="roster">
+    <tr><th>Partner</th><th>Status per Utah's registry</th></tr>
+    <tr><td>Chris Kyler</td><td>Active</td></tr>
+    <tr><td>Mark Kohler</td><td>Active</td></tr>
+    <tr><td>Mathew Sorensen</td><td>Active</td></tr>
+    <tr><td>Mike Ostermiller</td><td>Active</td></tr>
+  </table>
+  <div class="callout"><strong>Two sworn records disagree.</strong> Utah's Division of Corporations, current as of a May 5, 2026 renewal, lists Ostermiller as an active KKOS partner. His own MIDA conflict-of-interest disclosure, signed January 5, 2026, lists KKOS only under "Previous Employer(s)" — not current. Both are official records. They say different things.</div>
+</section>
+
+<section class="section" style="border-bottom:none;">
+  <details class="full-sources">
+    <summary>Full sources</summary>
+    <div class="full-sources-body">
+      <h4>MIDA</h4>
+      <p>MIDA's own board page (midaut.org/board-members). Utah boards/commissions registry, seat structure. Ostermiller's own MIDA conflict-of-interest disclosure form.</p>
+      <h4>Hideout annexation</h4>
+      <p>H.B. 359 (2020) bill-compare text, 1st Substitute vs. introduced version. Contemporaneous KSL and Deseret News coverage. <em>Hideout v. Summit County</em>, 2024 UT 16.</p>
+      <h4>Lobbying history</h4>
+      <p>disclosures.utah.gov / lobbyist.utah.gov, full registration history 2012-2026 and current filing detail. Deseret News, Frank Pignanelli & LaVarr Webb, "The powerhouses who influence the legislative process," Feb. 12, 2012.</p>
+      <h4>NWAOR</h4>
+      <p>NWAOR's Form 990 filings (ProPublica Nonprofit Explorer). NWAOR's own bylaws and Policy and Procedures Manual.</p>
+      <h4>Nilson entities</h4>
+      <p>Utah Division of Corporations — The Healing Collective Utah Inc. and Nilson Foundation Inc., officer and Articles of Incorporation records.</p>
+      <h4>KKOS</h4>
+      <p>Utah Division of Corporations, Entity #7372792-0170 — current partner list, registered address, trade names, May 2026 renewal. Ostermiller's own MIDA disclosure form, signed Jan. 5, 2026.</p>
+      <h4>Open questions</h4>
+      <p>Whether Mark Kohler, listed as an active KKOS partner, is the nationally known tax attorney and media personality Mark J. Kohler — not yet independently confirmed. The purpose and scope of KKOS's "The Entrepreneur's Law Firm" and "Cedar Injury Law" trade names. His current status at Affordable Land Lease Homes Incorporated, where the registry shows an inactive presidency ending 2010 despite present-tense bios describing ongoing board involvement. Whether he was present and voted at MIDA's April 2026 approval of the Stratos data center project — reported elsewhere, not yet independently confirmed against the primary meeting record.</p>
+    </div>
+  </details>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>THE WEBER COUNTY HIVE · UNELECTED POWER</div>
+    <div class="sub">Independent accountability journalism. Public records only. We report; you decide.</div>
+  </div>
+</footer>
+
+</body>
+</html>
