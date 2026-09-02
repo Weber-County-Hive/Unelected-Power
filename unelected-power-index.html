@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unelected Power — The Weber County Hive</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F3ECE0;
+    --paper-dim:#E9E0D0;
+    --void:#181210;
+    --void-2:#241A17;
+    --maroon:#6E1F2B;
+    --maroon-dim:#8C3B44;
+    --ink:#211714;
+    --ink-soft:#4A3B35;
+    --line:#C9BBA4;
+    --gold:#B4863C;
+    --max:900px;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Source Sans 3',sans-serif;
+    font-size:17px;
+    line-height:1.62;
+  }
+  ::selection{background:var(--maroon);color:var(--paper);}
+  a{color:var(--maroon);}
+  a:hover{color:var(--maroon-dim);}
+  h1,h2,h3{font-family:'Fraunces',serif;font-weight:600;color:var(--ink);margin:0;}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px;}
+  .mono{font-family:'IBM Plex Mono',monospace;}
+
+  .topbar{
+    background:var(--void);
+    color:var(--paper-dim);
+    padding:12px 24px;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:8px;
+  }
+  .topbar a{color:var(--paper-dim);text-decoration:none;opacity:.8;}
+  .topbar a:hover{opacity:1;color:#fff;}
+
+  header.masthead{
+    padding:72px 24px 48px;
+    border-bottom:3px solid var(--void);
+    max-width:var(--max);
+    margin:0 auto;
+  }
+  .eyebrow{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:13px;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--maroon);
+    margin-bottom:18px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .eyebrow::before{content:"";width:28px;height:2px;background:var(--maroon);display:inline-block;}
+  h1.title{
+    font-size:clamp(34px,5.8vw,58px);
+    line-height:1.06;
+    letter-spacing:-0.01em;
+    max-width:760px;
+  }
+  h1.title em{font-style:italic;color:var(--maroon);}
+  .dek{
+    font-size:19px;
+    color:var(--ink-soft);
+    max-width:680px;
+    margin-top:20px;
+    line-height:1.5;
+  }
+
+  .roster{
+    max-width:var(--max);
+    margin:0 auto;
+    padding:56px 24px 80px;
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
+    gap:24px;
+  }
+  .card{
+    background:#fff;
+    border:1px solid var(--line);
+    border-left:4px solid var(--maroon);
+    padding:26px 26px 24px;
+    display:flex;
+    flex-direction:column;
+    text-decoration:none;
+    color:var(--ink);
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .card:hover{
+    transform:translateY(-2px);
+    box-shadow:0 8px 24px rgba(24,18,16,.10);
+  }
+  .card .role-tag{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11px;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:var(--maroon);
+    margin-bottom:10px;
+  }
+  .card h2{
+    font-size:23px;
+    line-height:1.15;
+    margin-bottom:10px;
+    color:var(--ink);
+  }
+  .card p.summary{
+    font-size:14.5px;
+    color:var(--ink-soft);
+    line-height:1.5;
+    margin:0 0 16px;
+    flex-grow:1;
+  }
+  .card .read{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;
+    letter-spacing:.05em;
+    text-transform:uppercase;
+    color:var(--maroon);
+  }
+  .card .tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:6px;
+    margin-top:14px;
+  }
+  .card .tag{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:10.5px;
+    background:var(--paper-dim);
+    border:1px solid var(--line);
+    padding:3px 8px;
+    color:var(--ink-soft);
+  }
+
+  .placeholder-card{
+    border:1px dashed var(--line);
+    background:transparent;
+    padding:26px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:var(--ink-soft);
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12.5px;
+    letter-spacing:.03em;
+    min-height:160px;
+  }
+
+  footer.site-footer{
+    background:var(--void);
+    color:var(--paper-dim);
+    padding:40px 24px 50px;
+  }
+  footer.site-footer .wrap{display:flex;flex-direction:column;gap:14px;}
+  footer.site-footer h3{color:#fff;font-size:20px;}
+  footer.site-footer p{color:#B8A899;font-size:14px;max-width:560px;line-height:1.6;margin:0;}
+  footer.site-footer .links{display:flex;gap:22px;flex-wrap:wrap;margin-top:8px;}
+  footer.site-footer a{color:var(--gold);text-decoration:none;font-family:'IBM Plex Mono',monospace;font-size:12.5px;letter-spacing:.03em;}
+  footer.site-footer a:hover{color:#fff;}
+
+  @media(max-width:600px){
+    header.masthead{padding:48px 18px 32px;}
+    .roster{padding:40px 18px 60px;}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <span>The Weber County Hive · Unelected Power</span>
+  <a href="https://webercountyhive.substack.com/" target="_blank" rel="noopener">webercountyhive.substack.com ↗</a>
+</div>
+
+<header class="masthead">
+  <div class="eyebrow">Appointed Officials</div>
+  <h1 class="title">Unelected <em>Power</em></h1>
+  <p class="dek">Utah government runs on more than the officials voters put on the ballot. This series tracks people who hold appointed positions — who appointed them, when, and, where it applies, how they got there from an elected seat. One profile per person, built exclusively from primary documents.</p>
+</header>
+
+<div class="roster">
+
+  <a class="card" href="steve-waldrip.html">
+    <div class="role-tag">Governor's Office · State Housing Coordinator</div>
+    <h2>Steve Waldrip</h2>
+    <p class="summary">Two terms in the Utah House, then appointed Gov. Cox's Senior Advisor for Housing Strategy in Dec. 2023 — no vote required. A 2026 law made him state housing coordinator over a new division, and repealed the housing-affordability board he used to sit on.</p>
+    <div class="tags">
+      <span class="tag">Governor's Office</span>
+      <span class="tag">Division of Housing and Community Development</span>
+      <span class="tag">Utah Housing Corporation</span>
+      <span class="tag">B&amp;C Road Funds</span>
+    </div>
+    <div class="read">Read profile →</div>
+  </a>
+
+  <a class="card" href="mike-ostermiller.html">
+    <div class="role-tag">MIDA Board · CEO, Northern Wasatch Realtors</div>
+    <h2>Mike Ostermiller</h2>
+    <p class="summary">Never elected to anything. A seat on the Military Installation Development Authority's board since its 2008 founding year, a lobbying practice running 14 years straight, and a role in the 2020 Hideout annexation bill — all without ever appearing on a ballot.</p>
+    <div class="tags">
+      <span class="tag">MIDA</span>
+      <span class="tag">Northern Wasatch Assoc. of Realtors</span>
+      <span class="tag">KKOS Lawyers</span>
+      <span class="tag">Hideout Annexation</span>
+    </div>
+    <div class="read">Read profile →</div>
+  </a>
+
+  <a class="card" href="chris-kyler.html">
+    <div class="role-tag">CEO, Utah Association of Realtors</div>
+    <h2>Chris Kyler</h2>
+    <p class="summary">Runs the statewide Realtors' association — and, through the same firm as Ostermiller, is also that association's own registered lobbyist, plus roughly 30 other paying clients including a state land agency. Never elected to anything.</p>
+    <div class="tags">
+      <span class="tag">Utah Association of Realtors</span>
+      <span class="tag">KKOS Lawyers</span>
+      <span class="tag">SITLA</span>
+    </div>
+    <div class="read">Read profile →</div>
+  </a>
+
+  <a class="card" href="dallin-koecher.html">
+    <div class="role-tag">Wasatch Open Lands Board · Exec. Director, Heber Valley Chamber/CVB</div>
+    <h2>Dallin Koecher</h2>
+    <p class="summary">Runs Heber Valley's tourism and economic development office and sits on the county board that recommends how open-space bond money gets spent. His own disclosure form lists one entity. The record shows at least four more, plus a board seat not documented anywhere else.</p>
+    <div class="tags">
+      <span class="tag">Wasatch Open Lands Board</span>
+      <span class="tag">CAMS</span>
+      <span class="tag">Disclosure Gap</span>
+    </div>
+    <div class="read">Read profile →</div>
+  </a>
+
+  <div class="placeholder-card">More appointed-official profiles coming</div>
+
+</div>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <h3>The Weber County Hive · Unelected Power</h3>
+    <p>An accountability journalism series covering Utah officials who hold appointed rather than elected positions — how they got the appointment, what authority it carries, and how they've used it. Built exclusively from primary documents.</p>
+    <div class="links">
+      <a href="https://webercountyhive.substack.com/" target="_blank" rel="noopener">webercountyhive.substack.com ↗</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
