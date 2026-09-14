@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jefferson Moss | Unelected Power | The Weber County Hive</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+:root{
+  --paper:#f7f1e6; --paper-2:#efe6d3; --ink:#2a1f14; --ink-soft:#63594a;
+  --maroon:#5c1a1a; --maroon-2:#7a2424;
+  --gold:#a9762c; --gold-bg:#f0e0c0;
+  --line:#ddccaa;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--paper);color:var(--ink);font-family:'Source Sans 3',sans-serif;line-height:1.65;font-size:16px;}
+.wrap{max-width:860px;margin:0 auto;padding:0 24px;}
+a{color:var(--maroon-2);}
+h1,h2,h3{font-family:'Playfair Display',serif;color:var(--ink);}
+
+.topbar{background:var(--ink);color:var(--gold-bg);padding:10px 0;font-family:'IBM Plex Mono',monospace;font-size:12px;}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;}
+.topbar a{color:var(--gold-bg);text-decoration:none;opacity:.85;}
+.topbar a:hover{opacity:1;text-decoration:underline;}
+
+header.masthead{background:linear-gradient(135deg,var(--maroon),var(--maroon-2));color:#f4e9d8;padding:40px 0 32px;border-bottom:5px solid var(--gold);}
+header.masthead .wrap{max-width:860px;margin:0 auto;padding:0 24px;}
+.kicker{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-bg);opacity:.8;margin-bottom:14px;}
+h1.title{font-size:42px;line-height:1.1;margin-bottom:14px;color:#fbf3e3;}
+h1.title em{font-style:italic;color:var(--gold-bg);}
+p.dek{font-size:18px;color:#e9d9bb;max-width:640px;}
+.rc-row{margin-top:18px;display:flex;flex-wrap:wrap;gap:8px;}
+.rc-tag{display:inline-block;background:var(--gold-bg);border:1px solid var(--gold);color:var(--maroon);font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.03em;text-transform:uppercase;padding:4px 11px;border-radius:4px;text-decoration:none;}
+.rc-tag:hover{background:var(--gold);color:#fff;}
+
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin:36px 0;}
+.stat{background:var(--paper-2);padding:20px;text-align:center;}
+.stat .num{font-family:'Playfair Display',serif;font-size:26px;color:var(--maroon);font-weight:700;}
+.stat .label{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.05em;color:var(--ink-soft);margin-top:6px;text-transform:uppercase;}
+
+section{padding:8px 0 36px;}
+section h2{font-size:26px;border-bottom:2px solid var(--gold);padding-bottom:10px;margin-bottom:16px;}
+section p{margin-bottom:14px;}
+section ul{margin:0 0 14px 20px;}
+section li{margin-bottom:8px;}
+.callout{background:var(--paper-2);border-left:4px solid var(--maroon);padding:16px 20px;margin:18px 0;font-size:15px;}
+.callout strong{color:var(--maroon);}
+table.data{width:100%;border-collapse:collapse;margin:16px 0;font-size:14.5px;}
+table.data th{text-align:left;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-soft);border-bottom:2px solid var(--ink);padding:6px 10px 8px;}
+table.data td{padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top;}
+table.data tr:nth-child(even){background:var(--paper-2);}
+
+details.open-q{background:var(--paper-2);border:1px solid var(--line);margin-bottom:10px;padding:14px 18px;}
+details.open-q summary{font-family:'IBM Plex Mono',monospace;font-size:13.5px;cursor:pointer;color:var(--maroon);}
+details.open-q p{margin-top:10px;margin-bottom:0;font-size:14.5px;}
+
+.tag-row{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 4px;}
+.tag{font-family:'IBM Plex Mono',monospace;font-size:11px;background:var(--gold-bg);border:1px solid var(--gold);color:var(--ink);padding:3px 9px;}
+
+footer{background:var(--ink);color:var(--paper-2);padding:36px 0 46px;margin-top:20px;}
+footer .sub{color:#a99a85;font-size:13px;margin-top:6px;}
+
+@media(max-width:600px){
+  header.masthead{padding:32px 0 26px;}
+  h1.title{font-size:30px;}
+  .stats{grid-template-columns:1fr;}
+}
+.diagram-block{background:var(--paper-2);border:1px solid var(--line);padding:18px;margin:18px 0;overflow-x:auto;text-align:center;}
+.diagram-block .mermaid{display:inline-block;}
+.diagram-block svg{max-width:100% !important;min-width:min(480px,100%);height:auto !important;}
+.diagram-block.wide svg{min-width:100%;}
+.diagram-caption{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-soft);margin-top:10px;text-align:center;}
+
+.flow-chart{display:flex;flex-direction:column;align-items:center;gap:0;margin:18px 0 4px;}
+.flow-box{background:var(--paper-2);border:1px solid var(--maroon);border-radius:6px;padding:16px 22px;text-align:center;font-size:16px;line-height:1.45;max-width:340px;}
+.flow-box.now{background:var(--gold-bg);border:2px solid var(--gold);}
+.flow-box.small{max-width:220px;font-size:15px;padding:14px 16px;}
+.flow-arrow{font-size:22px;color:var(--gold);line-height:1;margin:6px 0;letter-spacing:.15em;}
+.flow-row{display:flex;flex-wrap:wrap;justify-content:center;gap:18px;width:100%;}
+@media(max-width:600px){
+  .flow-row{flex-direction:column;align-items:center;}
+}
+
+.tile-intro{font-size:13.5px;color:var(--ink-soft);margin-bottom:14px;}
+.tile-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:16px 0 8px;}
+.tile{background:none;perspective:1200px;height:180px;}
+.tile-inner{position:relative;width:100%;height:100%;transition:transform .5s cubic-bezier(.4,.2,.2,1);transform-style:preserve-3d;cursor:pointer;}
+.tile.flipped .tile-inner{transform:rotateY(180deg);}
+.tile-face{position:absolute;inset:0;backface-visibility:hidden;border-radius:8px;padding:16px;display:flex;flex-direction:column;justify-content:center;}
+.tile-front{background:linear-gradient(135deg,var(--maroon),var(--maroon-2));color:#f4e9d8;text-align:center;border:2px solid var(--gold);}
+.tile-front .name{font-family:'Playfair Display',serif;font-size:17px;font-weight:700;margin-bottom:6px;}
+.tile-front .role{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.03em;color:var(--gold-bg);line-height:1.5;}
+.tile-front .hint{margin-top:12px;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:#d8b98a;}
+.tile-back{background:var(--paper-2);border:2px solid var(--maroon);transform:rotateY(180deg);font-size:12.5px;color:var(--ink);line-height:1.5;}
+.tile-back .connect-label{font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--maroon);margin-bottom:6px;display:block;}
+@media(max-width:700px){ .tile-grid{grid-template-columns:repeat(2,1fr);} }
+@media(max-width:480px){ .tile-grid{grid-template-columns:1fr;} .tile{height:auto;min-height:160px;} }
+
+.giving-chart{display:flex;align-items:center;gap:22px;margin:18px 0 4px;flex-wrap:wrap;}
+.giving-source{background:var(--gold-bg);border:2px solid var(--gold);border-radius:6px;padding:20px 18px;text-align:center;font-size:16px;font-weight:600;max-width:180px;flex-shrink:0;}
+.giving-targets{display:flex;flex-direction:column;gap:14px;flex:1;min-width:260px;}
+.giving-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
+.giving-amount{font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--maroon);min-width:150px;text-align:right;flex-shrink:0;}
+.giving-arrow{color:var(--gold);font-size:18px;flex-shrink:0;}
+.giving-recipient{background:var(--paper-2);border:1px solid var(--maroon);border-radius:6px;padding:12px 16px;font-size:15px;flex:1;}
+.giving-recipient .sub{display:block;font-size:12.5px;color:var(--ink-soft);margin-top:3px;}
+@media(max-width:600px){
+  .giving-chart{flex-direction:column;}
+  .giving-amount{text-align:left;min-width:auto;}
+}
+</style>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>
+  mermaid.initialize({
+    startOnLoad: true,
+    theme: 'base',
+    securityLevel: 'loose',
+    flowchart: { htmlLabels: true, useMaxWidth: true, padding: 18 },
+    themeVariables: {
+      primaryColor: '#efe6d3',
+      primaryTextColor: '#2a1f14',
+      primaryBorderColor: '#5c1a1a',
+      lineColor: '#a9762c',
+      secondaryColor: '#f0e0c0',
+      secondaryTextColor: '#2a1f14',
+      tertiaryColor: '#f7f1e6',
+      fontFamily: 'Verdana, Arial, sans-serif',
+      fontSize: '19px'
+    }
+  });
+</script>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span>The Weber County Hive · Unelected Power</span>
+    <a href="https://weber-county-hive.github.io/-weber-county-hive-index/">Index ↗</a>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="kicker">Case File · Elected, Then Appointed</div>
+    <h1 class="title">Jefferson <em>Moss</em></h1>
+    <p class="dek">Resigned as Utah House Majority Leader to become the state's top economic development official — a position that also carries a board seat overseeing a facility he directs, and a seat on the board of a $40 million fund he founded.</p>
+    <div class="rc-row">
+      <a class="rc-tag" href="ryan-starks.html">Cross-reference: Ryan Starks →</a>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="stats">
+    <div class="stat"><div class="num">8 yrs</div><div class="label">in the Utah House before resigning</div></div>
+    <div class="stat"><div class="num">$239,376</div><div class="label">raised across five House campaigns, 2016-2024</div></div>
+    <div class="stat"><div class="num">4</div><div class="label">documented board votes touching his own facility</div></div>
+  </div>
+
+  <section>
+    <h2>From the House to the Governor's office</h2>
+    <p>Jefferson Rex Moss represented Utah House District 2 from 2017 to 2023 (succeeding David Lifferth, succeeded by Mike Petersen) and District 51 from 2023 to his resignation in May 2025 (succeeding Jeff Stenquist, succeeded by Leah Hansen), becoming House Majority Leader in 2023, succeeding Mike Schultz (who became Speaker) and later succeeded by Casey Snider. A graduate of Orem High School, he holds a BA in political science (2002) and an MBA with an emphasis in entrepreneurship and finance (2009), both from Brigham Young University, and a financial planning certificate from New York University. He resigned to accept Gov. Spencer Cox's appointment as Executive Director — his official gubernatorial cabinet bio uses the title "Commissioner" — of the Governor's Office of Economic Opportunity (GOEO), beginning June 2, 2025, a position that required no vote. He succeeded Ryan Starks in that role, and subsequently succeeded Starks on two other seats: the Military Installation Development Authority's non-voting board seat, and the Inland Port Authority's Incentives Subcommittee.</p>
+    <p>Moss holds or has held a long list of other board seats and affiliations. Tap a tile for details.</p>
+    <div class="tile-grid">
+      <div class="tile"><div class="tile-inner">
+        <div class="tile-face tile-front"><div class="name">Utah State Board of Regents</div><div class="role">Board Member<br>While a legislator</div><div class="hint">Tap to flip</div></div>
+        <div class="tile-face tile-back"><span class="connect-label">Detail</span>Statewide higher-education governing board.</div>
+      </div></div>
+      <div class="tile"><div class="tile-inner">
+        <div class="tile-face tile-front"><div class="name">Hale Centre Theatre</div><div class="role">Board Member</div><div class="hint">Tap to flip</div></div>
+        <div class="tile-face tile-back"><span class="connect-label">Detail</span>Held while serving as a legislator, per his own biography.</div>
+      </div></div>
+      <div class="tile"><div class="tile-inner">
+        <div class="tile-face tile-front"><div class="name">American Indian Services</div><div class="role">Board Member</div><div class="hint">Tap to flip</div></div>
+        <div class="tile-face tile-back"><span class="connect-label">Detail</span>Held while serving as a legislator, per his own biography.</div>
+      </div></div>
+      <div class="tile"><div class="tile-inner">
+        <div class="tile-face tile-front"><div class="name">STEM Action Center</div><div class="role">Board Member</div><div class="hint">Tap to flip</div></div>
+        <div class="tile-face tile-back"><span class="connect-label">Detail</span>State STEM-education board, held while serving as a legislator.</div>
+      </div></div>
+      <div class="tile"><div class="tile-inner">
+        <div class="tile-face tile-front"><div class="name">ConnectShare</div><div class="role">Board Member</div><div class="hint">Tap to flip</div></div>
+        <div class="tile-face tile-back"><span class="connect-label">Detail</span>Held while serving as a legislator, per his own biography.</div>
+      </div></div>
+      <div class="tile"><div class="tile-inner">
+        <div class="tile-face tile-front"><div class="name">UT House GOP Election<br>Committee PAC</div><div class="role">Director since 2019<br>(OpenCorporates)</div><div class="hint">Tap to flip</div></div>
+        <div class="tile-face tile-back"><span class="connect-label">Detail</span>Current Division of Corporations registry lists Osborne, Palmer, and Shultz instead — his directorship appears to have lapsed.</div>
+      </div></div>
+      <div class="tile"><div class="tile-inner">
+        <div class="tile-face tile-front"><div class="name">Brighton A Day Foundation</div><div class="role">Director, 2016-2023</div><div class="hint">Tap to flip</div></div>
+        <div class="tile-face tile-back"><span class="connect-label">Detail</span>Nonprofit registered at his home address. Went inactive in 2023.</div>
+      </div></div>
+      <div class="tile"><div class="tile-inner">
+        <div class="tile-face tile-front"><div class="name">Utah State Board<br>of Education</div><div class="role">Former Member</div><div class="hint">Tap to flip</div></div>
+        <div class="tile-face tile-back"><span class="connect-label">Detail</span>Held before his GOEO appointment.</div>
+      </div></div>
+      <div class="tile"><div class="tile-inner">
+        <div class="tile-face tile-front"><div class="name">Saratoga Springs Council<br>&amp; Planning Commission</div><div class="role">Former Member</div><div class="hint">Tap to flip</div></div>
+        <div class="tile-face tile-back"><span class="connect-label">Detail</span>His earliest public office, before the state Legislature.</div>
+      </div></div>
+      <div class="tile"><div class="tile-inner">
+        <div class="tile-face tile-front"><div class="name">Pro-Human AI<br>Task Force</div><div class="role">Co-Chair, since Feb. 2026</div><div class="hint">Tap to flip</div></div>
+        <div class="tile-face tile-back"><span class="connect-label">Detail</span>Follows several AI and data-privacy bills he sponsored as a legislator, all signed in 2025.</div>
+      </div></div>
+      <div class="tile"><div class="tile-inner">
+        <div class="tile-face tile-front"><div class="name">BioHive</div><div class="role">Board Member</div><div class="hint">Tap to flip</div></div>
+        <div class="tile-face tile-back"><span class="connect-label">Detail</span>Life-sciences trade nonprofit. Shared board seat with <a href="ryan-starks.html">Ryan Starks</a>, his GOEO predecessor. Guest on its podcast, HiveCast.</div>
+      </div></div>
+      <div class="tile"><div class="tile-inner">
+        <div class="tile-face tile-front"><div class="name">Northern Utah<br>Economic Alliance</div><div class="role">Advisory Roster</div><div class="hint">Tap to flip</div></div>
+        <div class="tile-face tile-back"><span class="connect-label">Detail</span>Shared with Ryan Starks, Gage Froerer, Sen. Stuart Adams, and Starks' brother Aaron Starks of 47G.</div>
+      </div></div>
+      <div class="tile"><div class="tile-inner">
+        <div class="tile-face tile-front"><div class="name">Hudder Investments /<br>476 Ventures, LLC</div><div class="role">Agent/Member<br>2005-2008 / 2011-2016</div><div class="hint">Tap to flip</div></div>
+        <div class="tile-face tile-back"><span class="connect-label">Detail</span>Two earlier, now-inactive Saratoga Springs investment entities, predating his political career.</div>
+      </div></div>
+      <div class="tile"><div class="tile-inner">
+        <div class="tile-face tile-front"><div class="name">MIDA</div><div class="role">Non-Voting Board Member<br>Since Nov. 2025</div><div class="hint">Tap to flip</div></div>
+        <div class="tile-face tile-back"><span class="connect-label">Detail</span>Succeeded <a href="ryan-starks.html">Ryan Starks</a> via Resolution 2025-17. His own 2026 MIDA disclosure form is analyzed on the Hive's published "Below The Line" piece.</div>
+      </div></div>
+      <div class="tile"><div class="tile-inner">
+        <div class="tile-face tile-front"><div class="name">UVU Foundation</div><div class="role">COO / Associate VP<br>Institutional Advancement</div><div class="hint">Tap to flip</div></div>
+        <div class="tile-face tile-back"><span class="connect-label">Detail</span>UVU's own Jan-March 2021 endowment report lists Moss as COO of the UVU Foundation and AVP of Institutional Advancement — held concurrently with his HD-2 legislative seat (2017-2023). Explains the "UVU Endowment" line on his MIDA disclosure form.</div>
+      </div></div>
+    </div>
+    <div class="diagram-block wide">
+      <pre class="mermaid">
+graph LR
+    classDef center fill:#f0e0c0,stroke:#a9762c,stroke-width:2px,color:#2a1f14;
+    classDef shared fill:#efe6d3,stroke:#5c1a1a,stroke-width:1px,color:#2a1f14;
+    JM["Jefferson Moss<br/>GOEO"]:::center --- BH["BioHive<br/>board"]:::shared
+    RS["Ryan Starks<br/>EDCUtah"]:::center --- BH
+    JM --- NU["Northern Utah<br/>Economic Alliance<br/>advisory roster"]:::shared
+    RS --- NU
+      </pre>
+      <div class="diagram-caption">Two boards shared with his GOEO predecessor</div>
+    </div>
+    <div class="flow-chart">
+      <div class="flow-box past">Saratoga Springs Council &amp; Planning Commission</div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-box past">Utah House, District 2 (2017-2023), then District 51 (2023-2025)<br>Majority Leader, Nov. 2023 – May 2025</div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-box now">GOEO Executive Director<br>June 2025 – present</div>
+      <div class="flow-arrow">↙&nbsp;&nbsp;&nbsp;&nbsp;↓&nbsp;&nbsp;&nbsp;&nbsp;↘</div>
+      <div class="flow-row">
+        <div class="flow-box now small">Nucleus Institute<br>CEO / Board Member</div>
+        <div class="flow-box now small">Point of the Mountain<br>Board Member</div>
+        <div class="flow-box now small">Pro-Human AI Task Force<br>Co-Chair, Feb. 2026</div>
+      </div>
+    </div>
+    <div class="diagram-caption">Elected office through current, concurrent roles</div>
+    <div class="callout">Moss succeeded <a href="ryan-starks.html">Ryan Starks</a> in three separate positions when Starks left GOEO in May 2025: the GOEO Executive Director role itself, MIDA's non-voting board seat, and the Inland Port Authority's Incentives Subcommittee. Full detail on that succession is in Starks' own case file.</div>
+  </section>
+
+  <section>
+    <h2>The Nucleus Institute and the Utah Innovation Fund</h2>
+    <p>Moss is listed by the Nucleus Institute as the founder of the Utah Innovation Fund, a state venture fund. In 2025, H.B. 530 restructured the fund's predecessor entity into the Nucleus Institute, naming the institute the fund's sole member and manager. Moss now leads the institute that manages the fund he founded.</p>
+    <p>H.B. 530 also exempted both the institute and the fund from Utah's Open and Public Meetings Act and Government Records Access and Management Act (GRAMA), and removed a prior requirement that board members annually disclose private equity interests to the institute. The law requires the institute to publish an annual public report by October 1 each year, listing every business that received capital and the amount, and to undergo an annual audit delivered to the state auditor and state treasurer by September 1.</p>
+    <div class="callout">Utah Code 53B-37-203(2) states the institute's executive director "shall serve as the chair of the institute board." Nucleus's own site titles Moss differently in different places — "Executive Director | Board Member" on his individual bio page, "Chief Executive Officer" on the team roster page. Both list Val Peterson as board chair and Moss only as a board member, not chair. Whether the institute is operating consistently with the statute has not been confirmed.</div>
+    <table class="data">
+      <tr><th>Board of Directors</th><th>Role</th></tr>
+      <tr><td>Rep. Val Peterson (R-Orem, HD 56; HD 59, 2011-2023)</td><td>Board Chair; also UVU VP of Administration &amp; Strategic Relations</td></tr>
+      <tr><td>Jefferson Moss</td><td>Board Member (also CEO / Executive Director, per Nucleus's own site)</td></tr>
+      <tr><td>Sen. Kirk Cullimore (R, SD 19; SD 9, 2019-2023), Senate Majority Leader since Jan. 2025</td><td>Board Member</td></tr>
+      <tr><td>Aaron Skonnard</td><td>Board Member</td></tr>
+      <tr><td>Cydni Tetro</td><td>Board Member</td></tr>
+      <tr><td>Troy D'Ambrosio</td><td>Board Member</td></tr>
+      <tr><td>Vic Hockett</td><td>Board Member</td></tr>
+    </table>
+    <p class="tile-intro">Tap a tile to see how each board member connects.</p>
+    <div class="tile-grid">
+      <div class="tile"><div class="tile-inner">
+        <div class="tile-face tile-front"><div class="name">Val Peterson</div><div class="role">Board Chair<br>Rep., HD 56, since 2011</div><div class="hint">Tap to flip</div></div>
+        <div class="tile-face tile-back"><span class="connect-label">Connection</span>Also UVU's VP of Administration &amp; Strategic Relations. A sitting legislator chairs the board of the entity the Legislature restructured. Moss himself previously worked at UVU too, as COO of the UVU Foundation (below).</div>
+      </div></div>
+      <div class="tile"><div class="tile-inner">
+        <div class="tile-face tile-front"><div class="name">Jefferson Moss</div><div class="role">Board Member / CEO /<br>Executive Director</div><div class="hint">Tap to flip</div></div>
+        <div class="tile-face tile-back"><span class="connect-label">Connection</span>Also GOEO Executive Director and Nucleus Fund Managing Director — four titles across the institute's own pages.</div>
+      </div></div>
+      <div class="tile"><div class="tile-inner">
+        <div class="tile-face tile-front"><div class="name">Kirk Cullimore</div><div class="role">Board Member<br>Sen., SD 19, since 2019<br>Senate Majority Leader</div><div class="hint">Tap to flip</div></div>
+        <div class="tile-face tile-back"><span class="connect-label">Connection</span>Floor-sponsored H.B. 530 in the Senate — the bill that created this exact board. Now sits on it.</div>
+      </div></div>
+      <div class="tile"><div class="tile-inner">
+        <div class="tile-face tile-front"><div class="name">Aaron Skonnard</div><div class="role">Board Member<br>Pluralsight Co-Founder</div><div class="hint">Tap to flip</div></div>
+        <div class="tile-face tile-back"><span class="connect-label">Connection</span>Tied to the Silicon Slopes Commons donor network — a funding source that has separately contributed to Moss's own campaign committee.</div>
+      </div></div>
+      <div class="tile"><div class="tile-inner">
+        <div class="tile-face tile-front"><div class="name">Vic Hockett</div><div class="role">Board Member<br>Talent Ready Utah</div><div class="hint">Tap to flip</div></div>
+        <div class="tile-face tile-back"><span class="connect-label">Connection</span>His seat matches the position Utah Code 53B-37-201(2)(b) reserves for the Talent Ready Utah Program director.</div>
+      </div></div>
+      <div class="tile"><div class="tile-inner">
+        <div class="tile-face tile-front"><div class="name">Cydni Tetro /<br>Troy D'Ambrosio</div><div class="role">Board Members</div><div class="hint">Tap to flip</div></div>
+        <div class="tile-face tile-back"><span class="connect-label">Connection</span>No documented connection beyond board membership found so far.</div>
+      </div></div>
+    </div>
+    <div class="callout"><strong>State Sen. Kirk Cullimore was the Senate floor sponsor of H.B. 530</strong> — the bill that restructured the institute, placed the Utah Innovation Fund under its management, and added the GRAMA and open-meetings exemption described above. He now sits on the board of the entity that bill created.</div>
+    <p>Utah Code 53B-37-201(2)(b) reserves a board seat for the director of the Talent Ready Utah Program. Vic Hockett's board seat is consistent with that statutory requirement. Aaron Skonnard, a Pluralsight co-founder, has separately been identified as a director of the nonprofit behind Silicon Slopes Commons, a funding source in the same donor network that has contributed to Moss's own campaign committee (Utah Tech Leads, below).</p>
+    <p>Utah Code 53B-37-202(3) directs the institute to coordinate with GOEO on regulatory-innovation discussions. Nucleus's own partners page lists GOEO and the Utah System of Higher Education among its institutional partners — the two organizations Moss simultaneously leads or has led, alongside Silicon Slopes Utah, the STEM Action Center (where Moss also holds a board seat), World Trade Center Utah, and others.</p>
+    <div class="callout">H.B. 373 (2026), the Higher Education Innovation Act, created a $50 million one-time appropriation for a competitive research grant program across Utah's eight public universities. The Utah Board of Higher Education administers the program; Nucleus Institute is named in the legislation as its partner in that process, according to Nucleus's own "State of Innovation 2026" report.</div>
+    <p>The Nucleus Fund's own team page lists Moss as "Managing Director," alongside co-Managing Director Angela Smith and Director of Fund Operations Kristin Wihera — a fourth distinct title for Moss across Nucleus's various pages, in addition to Executive Director, CEO, and Board Member. H.B. 530 created a five-member Investment Committee, separate from the institute's board, to oversee individual fund investments. Its current members are Tara Rosander, Gary Williams, Adam Robertson, Mark Paul, and Tom Ngo.</p>
+    <div class="callout"><strong>Moss served on the House Retirement and Independent Entities Committee</strong> in the 2017 session and again in 2019-2020, according to his legislative committee record. H.B. 530 removed the predecessor entity's reporting requirement to that same committee, replacing it with a report to the Executive Appropriations Committee instead.</div>
+    <div class="diagram-block wide">
+      <pre class="mermaid">
+graph TD
+    classDef past fill:#efe6d3,stroke:#5c1a1a,stroke-width:1px,color:#2a1f14;
+    classDef now fill:#f0e0c0,stroke:#a9762c,stroke-width:2px,color:#2a1f14;
+    A["2017 &amp; 2019-2020<br/>Moss serves on House<br/>Retirement &amp; Independent<br/>Entities Committee"]:::past --> B["2025<br/>H.B. 530 removes the<br/>predecessor entity's reporting<br/>requirement to that committee"]:::past
+    B --> C["2025 - present<br/>Moss leads the Nucleus Institute,<br/>the entity no longer<br/>reporting to that committee"]:::now
+      </pre>
+      <div class="diagram-caption">Same committee, two roles, eight years apart</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Point of the Mountain State Land Authority board votes</h2>
+    <p>Moss has served as a board member of the Point of the Mountain State Land Authority since mid-2025. Board minutes record the following votes involving Convergence Hall, a facility operated by the Nucleus Institute:</p>
+    <table class="data">
+      <tr><th>Date</th><th>Vote</th></tr>
+      <tr><td>Feb. 11, 2026</td><td>Board unanimously approved a lot line adjustment expanding Convergence Hall's footprint, requested by the Nucleus Institute. Minutes list Moss present; no recusal is recorded.</td></tr>
+      <tr><td>Mar. 12, 2026</td><td>Moss seconded a motion approving non-leasehold infrastructure areas for the broader development.</td></tr>
+      <tr><td>Apr. 8, 2026</td><td>Board approved an amendment removing the Convergence Hall parcel from Phase 1. Minutes list Moss as absent.</td></tr>
+      <tr><td>May 13, 2026</td><td>Board voted unanimously to delegate design-decision authority over "technical implementation details" to the executive director. Board member Jenny Wilson is recorded expressing concern about the scope of the delegation before the vote passed.</td></tr>
+    </table>
+    <div class="diagram-block wide">
+      <pre class="mermaid">
+graph TD
+    classDef ev fill:#efe6d3,stroke:#5c1a1a,stroke-width:1px,color:#2a1f14;
+    classDef absent fill:#f0e0c0,stroke:#a9762c,stroke-width:2px,color:#2a1f14;
+    A["Feb. 11, 2026<br/>Lot line adjustment approved<br/>Moss present, no recusal recorded"]:::ev --> B["Mar. 12, 2026<br/>Moss seconds infrastructure motion"]:::ev
+    B --> C["Apr. 8, 2026<br/>Convergence Hall removed from Phase 1<br/>Moss listed absent"]:::absent
+    C --> D["May 13, 2026<br/>Design authority delegated to ED<br/>Wilson raises concern; motion passes"]:::ev
+      </pre>
+      <div class="diagram-caption">Four board actions, Feb.-May 2026</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Campaign giving to a fellow board member</h2>
+    <p>Jordan Teuscher, who co-chairs the Point of the Mountain State Land Authority board alongside Moss, has received $6,750 from Moss's campaign committee since 2018 (no payments found before 2020): $250 direct on Aug. 26, 2020; $250 direct on Dec. 13, 2021; $500 direct on Aug. 8, 2022 and $250 direct on Sept. 18, 2022; $1,000 to Conservative Millennials PAC (an entity Teuscher's own campaign committee also funds) in 2023 and a second $1,000 to the same PAC in Aug. 2024; $2,500 direct in September 2024; and $1,000 direct on Jan. 14, 2026 — about four weeks before the Feb. 11, 2026 board vote on Convergence Hall's footprint.</p>
+    <p>Moss's committee has also given Douglas Fiefia $771.15 across two payments — $250 on Dec. 18, 2023 and $521.15 on April 30, 2024. Fiefia chief-sponsored HB 286 (AI Transparency) and HB 438 (a companion chatbot-safety bill), both directly relevant to Moss's current role co-chairing the Pro-Human AI Task Force.</p>
+    <p>Anthony Loubet has received more payments from Moss's campaign committee than any other recipient — ten, across 2018-2026 (no payments found before 2020), totaling $4,250. Rep. Candice Pierucci, whose campaign committee is registered under the name "Pierucci, Darlene," has received nine payments across the same 2018-2026 window, also totaling $4,250.</p>
+    <div class="giving-chart">
+      <div class="giving-source">Jefferson Moss<br>campaign committee</div>
+      <div class="giving-targets">
+        <div class="giving-row">
+          <div class="giving-amount">$250, Aug. 26, 2020</div>
+          <div class="giving-arrow">→</div>
+          <div class="giving-recipient">Jordan Teuscher<span class="sub">Point Authority Co-Chair</span></div>
+        </div>
+        <div class="giving-row">
+          <div class="giving-amount">$250, Dec. 13, 2021</div>
+          <div class="giving-arrow">→</div>
+          <div class="giving-recipient">Jordan Teuscher<span class="sub">Point Authority Co-Chair</span></div>
+        </div>
+        <div class="giving-row">
+          <div class="giving-amount">$500, Aug. 8, 2022</div>
+          <div class="giving-arrow">→</div>
+          <div class="giving-recipient">Jordan Teuscher<span class="sub">Point Authority Co-Chair</span></div>
+        </div>
+        <div class="giving-row">
+          <div class="giving-amount">$250, Sept. 18, 2022</div>
+          <div class="giving-arrow">→</div>
+          <div class="giving-recipient">Jordan Teuscher<span class="sub">Point Authority Co-Chair</span></div>
+        </div>
+        <div class="giving-row">
+          <div class="giving-amount">$1,000, 2023</div>
+          <div class="giving-arrow">→</div>
+          <div class="giving-recipient">Conservative Millennials PAC<span class="sub">Funded by Teuscher's own committee</span></div>
+        </div>
+        <div class="giving-row">
+          <div class="giving-amount">$1,000, Aug. 18, 2024</div>
+          <div class="giving-arrow">→</div>
+          <div class="giving-recipient">Conservative Millennials PAC<span class="sub">Funded by Teuscher's own committee</span></div>
+        </div>
+        <div class="giving-row">
+          <div class="giving-amount">$2,500, Sept. 2024</div>
+          <div class="giving-arrow">→</div>
+          <div class="giving-recipient">Jordan Teuscher<span class="sub">Point Authority Co-Chair</span></div>
+        </div>
+        <div class="giving-row">
+          <div class="giving-amount">$1,000, Jan. 14, 2026</div>
+          <div class="giving-arrow">→</div>
+          <div class="giving-recipient">Jordan Teuscher<span class="sub">Point Authority Co-Chair</span></div>
+        </div>
+        <div class="giving-row">
+          <div class="giving-amount">$4,250, 9 payments, 2018-2026</div>
+          <div class="giving-arrow">→</div>
+          <div class="giving-recipient">Candice Pierucci<span class="sub">Filed as "Pierucci, Darlene"</span></div>
+        </div>
+        <div class="giving-row">
+          <div class="giving-amount">$4,250, 10 payments, 2018-2026</div>
+          <div class="giving-arrow">→</div>
+          <div class="giving-recipient">Anthony Loubet<span class="sub">Most frequent recipient by count</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="diagram-caption">Moss's campaign giving, by recipient</div>
+    <div class="stats">
+      <div class="stat"><div class="num">$6,750</div><div class="label">to Teuscher / his PAC, 2020-2026</div></div>
+      <div class="stat"><div class="num">$4,250</div><div class="label">to Pierucci, 2020-2026</div></div>
+      <div class="stat"><div class="num">$4,250</div><div class="label">to Loubet, 2020-2026</div></div>
+    </div>
+    <p style="text-align:center;font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--ink-soft);">Combined total to these three recipients: <strong style="color:var(--maroon);">$15,250</strong></p>
+  </section>
+
+  <section>
+    <h2>Open questions</h2>
+    <details class="open-q">
+      <summary>When did Moss's UVU Foundation role start and end, and was it disclosed as a legislator?</summary>
+      <p>A UVU Foundation report from Jan-March 2021 lists Moss as COO of the UVU Foundation and Associate VP of Institutional Advancement — a paid staff role held concurrently with his HD-2 legislative seat. The exact start and end dates of this role, and whether it appeared on any legislative financial disclosure he filed at the time, have not been confirmed.</p>
+    </details>
+    <details class="open-q">
+      <summary>Has the Nucleus Institute published its statutorily required annual report and audit?</summary>
+      <p>H.B. 530 requires an annual public report by Oct. 1 naming every business that received fund capital and the amount of each investment, plus an annual audit delivered to the state auditor and treasurer by Sept. 1. Nucleus's own "State of Innovation 2026" report, presented at an April 30 conference, names the Nucleus Fund's 19 portfolio companies and states an aggregate $4.9 million deployed since 2023, but does not list the amount of each individual investment as the statute requires. Whether the Oct. 1 statutory report or the Sept. 1 audit have been separately filed has not been confirmed.</p>
+    </details>
+    <details class="open-q">
+      <summary>Who was formally appointed "executive director" under the statute?</summary>
+      <p>Utah Code 53B-37-203(1) has the commissioner of higher education appoint the institute's executive director, who under 53B-37-203(2) must chair the board. Nucleus's own site lists Val Peterson, not Moss, as board chair, while also calling Moss "Chief Executive Officer" and, elsewhere, "Executive Director." Whether the institute is operating consistently with the statute has not been independently confirmed.</p>
+    </details>
+    <details class="open-q">
+      <summary>Why redirect the annual report to a different committee rather than simply drop it?</summary>
+      <p>H.B. 530 removed the predecessor entity's reporting requirement to the House Retirement and Independent Entities Committee — the committee Moss himself served on in 2017 and 2019-2020, and the committee that generally reviews independent entities — and added a report to the Executive Appropriations Committee instead. Sen. Kirk Cullimore, the bill's Senate floor sponsor and now a Nucleus Institute board member, sits on Executive Appropriations. Why the report was redirected rather than simply discontinued, and whether the change was requested by the bill's sponsors or added elsewhere in the drafting process, has not been confirmed.</p>
+    </details>
+    <details class="open-q">
+      <summary>Are the PAC's two filings the same organization?</summary>
+      <p>The Utah House Republican Election Committee PAC has a campaign-finance registration (officers by leadership title, 1123 E Fairfield Road) and a separate Division of Corporations nonprofit registration (directors Osborne/Palmer/Shultz, Kyle Palmer's Layton address). Whether these are two filings for one organization or two distinct entities sharing a name has not been confirmed.</p>
+    </details>
+  </section>
+
+  <section>
+    <h2>Sources</h2>
+    <details class="open-q">
+      <summary>View all sources</summary>
+      <ul>
+        <li><a href="https://utahnewsdispatch.com/2025/05/09/utah-house-majority-leader-resigns-to-take-economic-development-leadership-appointment/">Utah News Dispatch, "Utah House majority leader resigns to take economic development leadership appointment," May 9, 2025</a></li>
+        <li><a href="https://governor.utah.gov/press/gov-cox-appoints-jefferson-moss-as-new-executive-director-of-governors-office-of-economic-opportunity/">Governor's Office press release, "Gov. Cox appoints Jefferson Moss as new executive director of GOEO," May 9, 2025</a></li>
+        <li><a href="https://www.nucleusutah.org/jefferson-moss">Nucleus Institute biography page (nucleusutah.org)</a></li>
+        <li>Nucleus Institute "Our Team" and "Our Board of Directors" page (nucleusutah.org)</li>
+        <li>Nucleus Institute "Partners" page (nucleusutah.org)</li>
+        <li>Nucleus Institute, "State of Innovation 2026" report, presented April 30, 2026</li>
+        <li>Nucleus Fund "Our Team" page (nucleusfundutah.com)</li>
+        <li>H.B. 530 (2025), enrolled text, introduced text, 1st Substitute, and House Committee Amendment (le.utah.gov)</li>
+        <li>Point of the Mountain State Land Authority board meeting minutes, Feb. 11, Mar. 12, Apr. 8, and May 13, 2026</li>
+        <li><a href="https://disclosures.utah.gov/">Jefferson Moss campaign finance filings, 2022-2026 (disclosures.utah.gov)</a></li>
+        <li><a href="https://disclosures.utah.gov/">Candice Pierucci campaign committee filings (disclosures.utah.gov)</a></li>
+        <li><a href="https://www.utah.gov/pmn/files/1352397.pdf">MIDA Resolution 2025-17, Nov. 17, 2025 board meeting</a></li>
+        <li>"Below The Line," weber-hive-committee-mida-disclosures.html (committees repo) — analyzes Moss's own 2026 MIDA disclosure form</li>
+        <li>UVU Foundation Endowment Report, January-March 2021</li>
+        <li>GOEO/Commerce press release naming Moss co-chair of the Pro-Human AI Task Force, Feb. 25, 2026</li>
+        <li>Cross-reference: <a class="rc-tag" href="ryan-starks.html">Ryan Starks →</a>, this repo</li>
+        <li>BioHive "Our Amazing Board" and "HiveCast" episode pages (biohive.com)</li>
+        <li>Ballotpedia and Wikipedia, "Val Peterson (Utah politician)" and "Kirk Cullimore Jr."</li>
+        <li>Northern Utah Economic Alliance "About Us" page (nuea.org)</li>
+        <li>Utah Division of Corporations officer records, via OpenCorporates</li>
+        <li>Utah House Republican Election Committee PAC, Statement of Organization (disclosures.utah.gov)</li>
+        <li>Utah House Republican Election Committee PAC, Division of Corporations entity record (businessregistration.utah.gov)</li>
+        <li>Wikipedia, "Jefferson Moss" (dates of House service and Majority Leader tenure)</li>
+        <li>Ballotpedia, "Jefferson Moss" (election history, committee assignments, sponsored legislation, campaign finance totals)</li>
+      </ul>
+    </details>
+  </section>
+
+</div>
+
+<footer>
+  <div class="wrap">
+    <div>THE WEBER COUNTY HIVE · UNELECTED POWER</div>
+    <div class="sub">Independent accountability journalism. Public records only. We report; you decide.</div>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('.tile').forEach(function(tile){
+  tile.addEventListener('click', function(){ tile.classList.toggle('flipped'); });
+});
+</script>
+</body>
+</html>
