@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ryan Starks | Unelected Power | The Weber County Hive</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+:root{
+  --paper:#f7f1e6; --paper-2:#efe6d3; --ink:#2a1f14; --ink-soft:#63594a;
+  --maroon:#5c1a1a; --maroon-2:#7a2424;
+  --gold:#a9762c; --gold-bg:#f0e0c0;
+  --line:#ddccaa;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--paper);color:var(--ink);font-family:'Source Sans 3',sans-serif;line-height:1.65;font-size:16px;}
+.wrap{max-width:860px;margin:0 auto;padding:0 24px;}
+a{color:var(--maroon-2);}
+h1,h2,h3{font-family:'Playfair Display',serif;color:var(--ink);}
+
+.topbar{background:var(--ink);color:var(--gold-bg);padding:10px 0;font-family:'IBM Plex Mono',monospace;font-size:12px;}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;}
+.topbar a{color:var(--gold-bg);text-decoration:none;opacity:.85;}
+.topbar a:hover{opacity:1;text-decoration:underline;}
+
+header.masthead{background:linear-gradient(135deg,var(--maroon),var(--maroon-2));color:#f4e9d8;padding:40px 0 32px;border-bottom:5px solid var(--gold);}
+header.masthead .wrap{max-width:860px;margin:0 auto;padding:0 24px;}
+.kicker{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-bg);opacity:.8;margin-bottom:14px;}
+h1.title{font-size:42px;line-height:1.1;margin-bottom:14px;color:#fbf3e3;}
+h1.title em{font-style:italic;color:var(--gold-bg);}
+p.dek{font-size:18px;color:#e9d9bb;max-width:640px;}
+
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin:36px 0;}
+.stat{background:var(--paper-2);padding:20px;text-align:center;}
+.stat .num{font-family:'Playfair Display',serif;font-size:26px;color:var(--maroon);font-weight:700;}
+.stat .label{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.05em;color:var(--ink-soft);margin-top:6px;text-transform:uppercase;}
+
+section{padding:8px 0 36px;}
+section h2{font-size:26px;border-bottom:2px solid var(--gold);padding-bottom:10px;margin-bottom:16px;}
+section p{margin-bottom:14px;}
+section ul{margin:0 0 14px 20px;}
+section li{margin-bottom:8px;}
+.callout{background:var(--paper-2);border-left:4px solid var(--maroon);padding:16px 20px;margin:18px 0;font-size:15px;}
+.callout strong{color:var(--maroon);}
+table.data{width:100%;border-collapse:collapse;margin:16px 0;font-size:14.5px;}
+table.data th{text-align:left;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-soft);border-bottom:2px solid var(--ink);padding:6px 10px 8px;}
+table.data td{padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top;}
+table.data tr:nth-child(even){background:var(--paper-2);}
+
+details.open-q{background:var(--paper-2);border:1px solid var(--line);margin-bottom:10px;padding:14px 18px;}
+details.open-q summary{font-family:'IBM Plex Mono',monospace;font-size:13.5px;cursor:pointer;color:var(--maroon);}
+details.open-q p{margin-top:10px;margin-bottom:0;font-size:14.5px;}
+
+.tag-row{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 4px;}
+.tag{font-family:'IBM Plex Mono',monospace;font-size:11px;background:var(--gold-bg);border:1px solid var(--gold);color:var(--ink);padding:3px 9px;}
+
+footer{background:var(--ink);color:var(--paper-2);padding:36px 0 46px;margin-top:20px;}
+footer .sub{color:#a99a85;font-size:13px;margin-top:6px;}
+
+@media(max-width:600px){
+  header.masthead{padding:32px 0 26px;}
+  h1.title{font-size:30px;}
+  .stats{grid-template-columns:1fr;}
+}
+.diagram-block{background:var(--paper-2);border:1px solid var(--line);padding:18px;margin:18px 0;overflow-x:auto;text-align:center;}
+.diagram-block .mermaid{display:inline-block;}
+.diagram-block svg{max-width:100% !important;min-width:min(480px,100%);height:auto !important;}
+.diagram-block.wide svg{min-width:100%;}
+.diagram-caption{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-soft);margin-top:10px;text-align:center;}
+</style>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>
+  mermaid.initialize({
+    startOnLoad: true,
+    theme: 'base',
+    securityLevel: 'loose',
+    flowchart: { htmlLabels: true, useMaxWidth: true, padding: 18 },
+    themeVariables: {
+      primaryColor: '#efe6d3',
+      primaryTextColor: '#2a1f14',
+      primaryBorderColor: '#5c1a1a',
+      lineColor: '#a9762c',
+      secondaryColor: '#f0e0c0',
+      secondaryTextColor: '#2a1f14',
+      tertiaryColor: '#f7f1e6',
+      fontFamily: 'Verdana, Arial, sans-serif',
+      fontSize: '19px'
+    }
+  });
+</script>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span>The Weber County Hive · Unelected Power</span>
+    <a href="https://weber-county-hive.github.io/-weber-county-hive-index/">Index ↗</a>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="kicker">Case File · Never Elected</div>
+    <h1 class="title">Ryan <em>Starks</em></h1>
+    <p class="dek">Ran the state's economic development office, then moved to lead its private-sector counterpart under the same Chamber that received a $3.2 million grant he approved three days before announcing the move.</p>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="stats">
+    <div class="stat"><div class="num">$3.2M</div><div class="label">grant approved, days before departure</div></div>
+    <div class="stat"><div class="num">3 days</div><div class="label">between approval &amp; departure announcement</div></div>
+    <div class="stat"><div class="num">9 yrs</div><div class="label">in Utah state government, never elected</div></div>
+  </div>
+
+  <section>
+    <h2>Public sector to private sector, without a vote</h2>
+    <p>Ryan Starks spent nine years in Utah state government — every step of it an appointment or a hire, never a ballot. He rose from managing director of growth and innovation to executive director of the Governor's Office of Economic Opportunity (GOEO), appointed by Gov. Spencer Cox in January 2023. In May 2025 he moved to the private sector, becoming Executive Director — later President &amp; Executive Director — of the Economic Development Corporation of Utah (EDCUtah), the nonprofit that operates as part of the Salt Lake Chamber and serves as the state's primary private business-recruitment organization.</p>
+    <p>The two organizations aren't separate worlds. GOEO used to contract with EDCUtah to manage corporate recruitment on the state's behalf; while he ran GOEO, Starks chose not to renew that contract, calling the experiment a "mixed bag." Now on the EDCUtah side, he has said publicly he wants to re-enter that same government contract.</p>
+  </section>
+
+  <section>
+    <h2>The path from Heber City to the Capitol</h2>
+    <p>Starks grew up in Ogden Valley, the middle child of five brothers, and served an LDS mission in Quito, Ecuador before studying business and Spanish at Weber State University, where he was student body president. An early internship at the old Governor's Office of Economic Development led to graduate work in public administration and economic development, then a stint at the Governor's Office of Management and Budget — before landing in Heber City as executive director of the Heber Valley Chamber of Commerce and Wasatch County's tourism and economic development office (Nov. 2011 - Nov. 4, 2019, eight years), and founding director of the Wasatch Center for Advanced Professional Studies (CAPS).</p>
+    <p>During his eight years in Heber Valley, Starks also served on a full slate of local boards: the <strong>Wasatch Open Lands Board (WOLB)</strong>, the Heber City <strong>Community Alliance for Main Street (CAMS)</strong>, the Midway Business Alliance, the Soldier Hollow Advisory Board, the Wasatch Community Foundation, the Heber Valley Railroad Board, and the state-level Utah Office of Tourism and State Parks and Recreation boards. He also worked with Heber City leaders to create a new industrial business park near the Heber City airport.</p>
+    <div class="callout">Starks' own WOLB and CAMS seats predate two other Unelected Power case files built on those same boards: <a href="dallin-koecher.html">Dallin Koecher</a> (Wasatch Open Lands Board, Heber Valley Chamber/CVB executive director) and <a href="matt-brower.html">Matt Brower</a> (Heber City Manager, CAMS self-dealing contract). All three men held seats on the same two local bodies at different points across roughly the last 15 years.</div>
+    <p>In 2019, the state recruited him to run its rural economic development programs. He became GOEO's managing director of operations, later growth and innovation, then its executive director in Jan. 2023, then EDCUtah's Executive Director starting May 19, 2025.</p>
+    <div class="diagram-block">
+      <pre class="mermaid">
+graph TD
+    classDef stop fill:#efe6d3,stroke:#5c1a1a,stroke-width:1px,color:#2a1f14;
+    classDef now fill:#f0e0c0,stroke:#a9762c,stroke-width:2px,color:#2a1f14;
+    A["Weber State · Ecuador mission · GAO<br/>Gov's Office of Planning &amp; Budget"]:::stop --> B["Heber Valley Chamber / Wasatch County<br/>Nov. 2011 - Nov. 2019"]:::stop
+    B --> C["GOED / GOEO Managing Director<br/>2019-2023"]:::stop
+    C --> D["GOEO Executive Director<br/>Jan. 2023 - May 2025"]:::stop
+    D --> E["EDCUtah President &amp; Executive Director<br/>May 2025 - present"]:::now
+      </pre>
+      <div class="diagram-caption">Career path, early roles through present</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Appointed boards</h2>
+    <table class="data">
+      <tr><th>Board / seat</th><th>Status</th></tr>
+      <tr><td>Military Installation Development Authority (MIDA)</td><td>Non-voting member, Sept. 2022 - Nov. 2025. Thanked for service and succeeded by Jefferson Moss via Resolution 2025-17, Nov. 17, 2025 board meeting</td></tr>
+      <tr><td>Utah Inland Port Authority</td><td>Vice Chair while at GOEO, 2024-2025. Succeeded on the board's Incentives Subcommittee by Jefferson Moss</td></tr>
+      <tr><td>Utah Board of Tourism Development</td><td>Member representing Juab/Summit/Wasatch counties, 2016-2020</td></tr>
+      <tr><td>Utah Board of State Parks and Recreation</td><td>Member (dates unconfirmed)</td></tr>
+    </table>
+    <div class="diagram-block">
+      <pre class="mermaid">
+graph LR
+    classDef past fill:#efe6d3,stroke:#5c1a1a,stroke-width:1px,color:#2a1f14;
+    classDef center fill:#f0e0c0,stroke:#a9762c,stroke-width:2px,color:#2a1f14;
+    RS["Ryan Starks"]:::center --> MIDA["MIDA<br/>2022-2025"]:::past
+    RS --> IPA["Inland Port Authority<br/>Vice Chair, 2024-2025"]:::past
+    RS --> TB["Tourism Board<br/>2016-2020"]:::past
+    RS --> PB["State Parks Board<br/>dates unconfirmed"]:::past
+      </pre>
+      <div class="diagram-caption">All four board seats are now past</div>
+    </div>
+    <div class="callout">Jefferson Moss — who became GOEO's Executive Director after Starks left and canceled the Utah Rising grant in July 2025 — has now succeeded Starks in three separate seats: GOEO's top job, the Inland Port Authority's Incentives Subcommittee, and MIDA's non-voting board seat.</div>
+  </section>
+
+  <section>
+    <h2>The Utah Rising grant</h2>
+    <p>On April 29, 2025, Starks and the Industrial Assistance Account (IAA) Committee approved a 10-year, $3.2 million taxpayer grant for "Utah Rising: A Free Enterprise Vision for Utah's Economy" — an initiative of the Salt Lake Chamber Foundation, the nonprofit arm of EDCUtah's own parent organization. Starks personally waived statutory requirements for the grant, an authority available only if the recipient is a "targeted industry" or a "quasi-public corporation." The Chamber Foundation, a 501(c)(3), does not clearly fit either category. Starks also sat on the Utah Rising steering committee himself while approving its funding.</p>
+    <div class="diagram-block">
+      <pre class="mermaid">
+graph TD
+    classDef ev fill:#efe6d3,stroke:#5c1a1a,stroke-width:1px,color:#2a1f14;
+    classDef last fill:#f0e0c0,stroke:#a9762c,stroke-width:2px,color:#2a1f14;
+    A["Apr. 29, 2025<br/>IAA grant approved, $3.2M/10-yr"]:::ev --> B["May 2, 2025<br/>Starks announces GOEO departure"]:::ev
+    B --> C["May 6, 2025<br/>Grant contract signed"]:::ev
+    C --> D["May 7, 2025<br/>EDCUtah announces Starks as new ED"]:::ev
+    D --> E["Jul. 8, 2025<br/>Grant canceled, cites conflict of interest"]:::last
+      </pre>
+      <div class="diagram-caption">Five events, ten weeks</div>
+    </div>
+    <table class="data">
+      <tr><th>Date</th><th>Event</th></tr>
+      <tr><td>Apr. 29, 2025</td><td>IAA grant approved</td></tr>
+      <tr><td>May 2, 2025</td><td>Starks announces his GOEO departure</td></tr>
+      <tr><td>May 6, 2025</td><td>Grant contract signed</td></tr>
+      <tr><td>May 7, 2025</td><td>EDCUtah announces Starks as new Executive Director</td></tr>
+      <tr><td>Jul. 8, 2025</td><td>New GOEO leadership cancels the grant, citing conflict of interest</td></tr>
+    </table>
+    <div class="callout">GOEO would not say whether Starks disclosed the conflict or recused himself before approving the grant — only that the decision was legally his alone to make. The grant was never funded. Reporting: Bryan Schott, Utah Political Watch, Sept. 3, 2025 (updated Dec. 2, 2025).</div>
+  </section>
+
+  <section>
+    <h2>Family network</h2>
+    <p>Starks' brother <strong>Steve Starks</strong> is CEO of the Larry H. Miller Company and was named by Gov. Cox as vice chair of the organizing committee for the 2034 Utah Olympic and Paralympic Games. Another brother, <strong>Aaron Starks</strong>, is president &amp; CEO of Utah Aerospace &amp; Defense (47G) — the same industry association Ryan Starks signed a memorandum of understanding with, alongside Beta Technologies, while serving as GOEO executive director in Jan. 2025.</p>
+    <div class="diagram-block">
+      <pre class="mermaid">
+graph TD
+    classDef fam fill:#efe6d3,stroke:#5c1a1a,stroke-width:1px,color:#2a1f14;
+    classDef center fill:#f0e0c0,stroke:#a9762c,stroke-width:2px,color:#2a1f14;
+    RS["Ryan Starks<br/>EDCUtah"]:::center -->|brother| SS["Steve Starks<br/>CEO, Larry H. Miller Co.<br/>VC, 2034 Olympics Committee"]:::fam
+    RS -->|brother| AS["Aaron Starks<br/>President &amp; CEO, 47G"]:::fam
+    RS -. "MOU, Jan. 2025" .-> AS
+      </pre>
+      <div class="diagram-caption">Two brothers, two Utah economic-development-adjacent roles</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Open questions</h2>
+    <details class="open-q">
+      <summary>Is RGX Strategies, LLC still active?</summary>
+      <p>Starks formed RGX Strategies, LLC on May 19, 2025 — the same day he started at EDCUtah — naming himself as both agent and governing person at his South Jordan home address. He has said publicly the LLC was meant to be his own consulting business before the EDCUtah offer came through. The entity still shows as active in Utah's corporate registry, but no client work, filings, or activity tied to it has been found since May 2025. An open status doesn't require ongoing use — Utah LLCs don't auto-dissolve — so this remains unconfirmed either way.</p>
+    </details>
+    <details class="open-q">
+      <summary>Did EDCUtah's board know about the Utah Rising grant when it hired him?</summary>
+      <p>The grant was approved Apr. 29, 2025; EDCUtah announced his hire May 7, 2025. Whether EDCUtah's board was aware of the pending or approved grant, or of any conflict, at the time of the hiring decision has not been confirmed from any source found so far.</p>
+    </details>
+    <details class="open-q">
+      <summary>When did his title change to "President &amp; Executive Director"?</summary>
+      <p>Press coverage and EDCUtah's own May 2025 announcement describe the role as "Executive Director." His LinkedIn profile now lists "President &amp; Executive Director." The date and reason for the title change (e.g., a board vote) hasn't been confirmed.</p>
+    </details>
+    <details class="open-q">
+      <summary>Does EDCUtah's own 990 disclose a conflict-of-interest policy covering Starks?</summary>
+      <p>EDCUtah's Form 990 governance section (Part VI) and Schedule O would be the place any conflict disclosure involving Starks and RGX or Utah Rising would appear. The filing covering his hire (fiscal year ending June 2025, filed May 2026) hasn't yet been reviewed in full.</p>
+    </details>
+  </section>
+
+  <section>
+    <h2>Sources</h2>
+    <details class="open-q">
+      <summary>View all sources</summary>
+      <ul>
+        <li>Bryan Schott, "Last act: Utah economic chief approved $3.2M grant for future employer's parent organization," Utah Political Watch, Sept. 3, 2025 (updated Dec. 2, 2025)</li>
+        <li>Brigham Tomco, "The face of Utah's economic growth," Deseret News, June 18, 2025</li>
+        <li>EDCUtah, "EDCUtah Announces Ryan Starks as New Executive Director," May 2025</li>
+        <li>Ryan Starks Announces Departure from Heber Valley Chamber, Heber Valley Radio, Oct. 4, 2019 (by Rachel Kahler)</li>
+        <li>Governor's Office press release, Jan. 12, 2023 (GOEO Executive Director appointment)</li>
+        <li>business.utah.gov departure announcement, May 2, 2025</li>
+        <li>Utah Inland Port Authority board announcements and 2025 draft meeting minutes</li>
+        <li>MIDA Resolution 2025-17, Nov. 17, 2025 board meeting (Jefferson Moss succession)</li>
+        <li>MIDA team page (midaut.org)</li>
+        <li>Utah Senate confirmation records, May 2020 (Board of Tourism Development)</li>
+        <li>Economic Development Corp of Utah and Economic Development Corp of Utah Foundation, Form 990 filings (ProPublica Nonprofit Explorer)</li>
+        <li>Utah Division of Corporations — RGX Strategies, LLC and EDCUtah Foundation entity records (OpenCorporates)</li>
+        <li>EDCUtah news releases: Karman Space and Defense (Project Raider, Apr. 9, 2026), Trigg Minerals/ATAA (Project Lucy, May 14, 2026)</li>
+        <li>47G corporate registry (OpenCorporates) and 47g.org board/team pages</li>
+        <li>Ryan Starks, LinkedIn profile and posts</li>
+      </ul>
+    </details>
+  </section>
+
+</div>
+
+<footer>
+  <div class="wrap">
+    <div>THE WEBER COUNTY HIVE · UNELECTED POWER</div>
+    <div class="sub">Independent accountability journalism. Public records only. We report; you decide.</div>
+  </div>
+</footer>
+
+</body>
+</html>
