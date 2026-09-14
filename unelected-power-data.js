@@ -56,6 +56,33 @@ const UNELECTED_POWER_PROFILES = [
     tags: ["CAMS", "State Auditor Complaint", "Contract Renewal", "Self-Dealing Clause"],
     dateAdded: "2026-09-02",
     dateUpdated: "2026-09-03"
+  },
+  {
+    slug: "ryan-starks",
+    name: "Ryan Starks",
+    roleTag: "President & Exec. Director, EDCUtah · Former GOEO Director",
+    summary: "Ran the state's economic development office, then moved to lead its private-sector counterpart — under the same Chamber that received a $3.2 million taxpayer grant he approved three days before announcing the move. Shares two boards (BioHive, Northern Utah Economic Alliance) with his GOEO successor, Jefferson Moss.",
+    tags: ["EDCUtah", "GOEO", "Salt Lake Chamber", "Utah Rising Grant", "MIDA", "BioHive", "RGX Strategies"],
+    dateAdded: "2026-09-14",
+    dateUpdated: "2026-09-14"
+  },
+  {
+    slug: "chris-roybal",
+    name: "Chris Roybal",
+    roleTag: "President, Northern Utah Economic Alliance",
+    summary: "Manages a political action committee registered at his own home address. Since 2022 that committee has taken in tens of thousands of dollars from developers with business interests in Weber County and paid $10,000 of it to a sitting county commissioner.",
+    tags: ["Northern Utah Economic Alliance", "Utah Forward PAC", "Gage Froerer", "West Weber"],
+    dateAdded: "2026-09-14",
+    dateUpdated: "2026-09-14"
+  },
+  {
+    slug: "jefferson-moss",
+    name: "Jefferson Moss",
+    roleTag: "Executive Director, GOEO · Former House Majority Leader",
+    summary: "Resigned as Utah House Majority Leader to take an appointed state economic development post — one that comes with a board seat overseeing a facility he directs, and leadership of a fund he founded that a 2025 law exempted from public-records law. Its board chair is a sitting state representative and UVU vice president; Moss himself once served as UVU Foundation COO.",
+    tags: ["GOEO", "Nucleus Institute", "Point of the Mountain", "HB 530", "BioHive", "UVU Foundation", "MIDA"],
+    dateAdded: "2026-09-14",
+    dateUpdated: "2026-09-14"
   }
 ];
 

@@ -160,7 +160,7 @@
   .card .meta-row{
     display:flex;
     justify-content:space-between;
-    align-items:center;
+    align-items:flex-end;
     margin-top:auto;
   }
   .card .read{
@@ -170,11 +170,23 @@
     text-transform:uppercase;
     color:var(--maroon);
   }
+  .card .dates{
+    text-align:right;
+  }
+  .card .published{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:10.5px;
+    color:var(--ink-soft);
+    opacity:.75;
+    display:block;
+  }
   .card .updated{
     font-family:'IBM Plex Mono',monospace;
     font-size:10.5px;
     color:var(--ink-soft);
     opacity:.75;
+    display:block;
+    margin-top:2px;
   }
   .card .tags{
     display:flex;
@@ -277,7 +289,15 @@
   function formatDate(iso) {
     if (!iso) return '';
     const d = new Date(iso + 'T00:00:00');
-    return d.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+    return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+  }
+
+  function datesHTML(p) {
+    const published = `<span class="published">Published ${formatDate(p.dateAdded)}</span>`;
+    const updated = (p.dateUpdated && p.dateUpdated !== p.dateAdded)
+      ? `<span class="updated">Updated ${formatDate(p.dateUpdated)}</span>`
+      : '';
+    return `<div class="dates">${published}${updated}</div>`;
   }
 
   function cardHTML(p) {
@@ -290,7 +310,7 @@
         <div class="tags">${tags}</div>
         <div class="meta-row">
           <div class="read">Read profile →</div>
-          <div class="updated">Updated ${formatDate(p.dateUpdated)}</div>
+          ${datesHTML(p)}
         </div>
       </a>`;
   }
