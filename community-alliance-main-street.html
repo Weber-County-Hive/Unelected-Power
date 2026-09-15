@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Nonprofit That Runs Downtown — Community Alliance for Main Street | Unelected Power</title>
+<meta name="description" content="CAMS runs Heber City's downtown under a sole-source city contract negotiated by a board member who is also the City Manager. A look at what the money buys, who's accountable for it, and what isn't.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --paper:#F3ECE0;
+    --maroon:#6E1F2B;
+    --maroon-deep:#4E1420;
+    --void:#181210;
+    --gold:#A8873A;
+    --ink:#231A17;
+    --ink-soft:#5C4F49;
+    --rule:#D9CDBD;
+    --card:#FBF7EF;
+    --help:#3D6B4C;
+    --help-bg:#E4EEE6;
+    --harm:#8A2E2E;
+    --harm-bg:#F3E1DF;
+    --mixed:#8A6A1E;
+    --mixed-bg:#F3E9D3;
+    --max:760px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Source Sans 3',sans-serif;
+    font-size:1.05rem;
+    line-height:1.62;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4{
+    font-family:'Playfair Display',serif;
+    color:var(--maroon-deep);
+    line-height:1.22;
+    margin:0 0 0.5em;
+  }
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px;}
+  a{color:var(--maroon);}
+  a:hover{color:var(--maroon-deep);}
+
+  header.masthead{
+    background:var(--maroon-deep);
+    color:var(--paper);
+    padding:52px 0 40px;
+  }
+  header.masthead .wrap{max-width:var(--max);margin:0 auto;padding:0 24px;}
+  header.masthead p.kicker{
+    font-family:'Source Sans 3',sans-serif;
+    font-size:0.82rem;
+    letter-spacing:0.08em;
+    color:var(--gold);
+    margin:0 0 14px;
+    font-weight:600;
+  }
+  header.masthead h1{
+    color:var(--paper);
+    font-size:2.35rem;
+    font-weight:700;
+    margin-bottom:14px;
+  }
+  header.masthead p.dek{
+    color:#E7D9C6;
+    font-size:1.12rem;
+    max-width:640px;
+    margin:0 0 18px;
+  }
+  header.masthead p.byline{
+    color:#B79E82;
+    font-size:0.88rem;
+    margin:0;
+  }
+
+  nav.crumbs{
+    background:var(--card);
+    border-bottom:1px solid var(--rule);
+    padding:12px 0;
+    font-size:0.88rem;
+  }
+  nav.crumbs .wrap{display:flex;flex-wrap:wrap;gap:6px 18px;}
+  nav.crumbs a{text-decoration:none;border-bottom:1px solid var(--rule);}
+
+  section{padding:44px 0;}
+  section + section{border-top:1px solid var(--rule);}
+  section h2{font-size:1.55rem;margin-bottom:0.6em;}
+  section h3{font-size:1.18rem;margin-top:1.4em;margin-bottom:0.5em;color:var(--maroon);}
+  p{margin:0 0 1em;max-width:var(--max);}
+  ul,ol{margin:0 0 1.2em;padding-left:1.3em;}
+  li{margin-bottom:0.55em;max-width:var(--max);}
+  strong{color:var(--ink);}
+
+  .lead{font-size:1.12rem;color:var(--ink-soft);}
+
+  .callout{
+    background:var(--card);
+    border-left:4px solid var(--gold);
+    padding:16px 20px;
+    margin:1.2em 0;
+    font-size:0.98rem;
+  }
+  .callout p:last-child{margin-bottom:0;}
+
+  /* Deliverables list */
+  .buy-list{list-style:none;padding:0;margin:0 0 1.4em;}
+  .buy-list li{
+    padding:10px 0 10px 22px;
+    border-bottom:1px solid var(--rule);
+    position:relative;
+  }
+  .buy-list li::before{
+    content:"—";
+    position:absolute;left:0;top:10px;
+    color:var(--gold);
+  }
+  .buy-list li:last-child{border-bottom:none;}
+
+  /* Cost/benefit ledger */
+  .ledger{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:16px;
+    margin:1.4em 0;
+  }
+  .ledger .col{
+    background:var(--card);
+    border:1px solid var(--rule);
+    padding:18px 20px;
+  }
+  .ledger .col h4{
+    font-family:'Playfair Display',serif;
+    font-size:1.05rem;
+    margin:0 0 10px;
+    color:var(--maroon-deep);
+  }
+  .ledger .col ul{margin:0;padding-left:1.1em;}
+  .ledger .col li{margin-bottom:0.4em;font-size:0.96rem;}
+  @media (max-width:640px){.ledger{grid-template-columns:1fr;}}
+
+  /* Timeline / entity history */
+  .timeline{border-left:3px solid var(--rule);margin-left:6px;padding-left:24px;}
+  .tl-item{position:relative;margin-bottom:22px;}
+  .tl-item::before{
+    content:"";position:absolute;left:-31px;top:5px;
+    width:12px;height:12px;border-radius:50%;
+    background:var(--paper);border:3px solid var(--maroon);
+  }
+  .tl-item .date{font-weight:700;color:var(--maroon-deep);display:block;margin-bottom:2px;}
+
+  /* Board flip cards */
+  .board-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(210px,1fr));
+    gap:14px;
+    margin:1.4em 0;
+  }
+  .flip-card{
+    perspective:1000px;
+    height:190px;
+  }
+  .flip-inner{
+    position:relative;width:100%;height:100%;
+    transition:transform 0.5s;
+    transform-style:preserve-3d;
+  }
+  .flip-card:hover .flip-inner,
+  .flip-card:focus-within .flip-inner{transform:rotateY(180deg);}
+  .flip-front,.flip-back{
+    position:absolute;inset:0;
+    backface-visibility:hidden;
+    border:1px solid var(--rule);
+    padding:16px;
+    display:flex;flex-direction:column;justify-content:center;
+  }
+  .flip-front{background:var(--card);}
+  .flip-front .role{font-size:0.82rem;color:var(--gold);font-weight:600;margin-bottom:6px;}
+  .flip-front .name{font-family:'Playfair Display',serif;font-size:1.15rem;color:var(--maroon-deep);margin:0;}
+  .flip-back{
+    background:var(--maroon-deep);color:var(--paper);
+    transform:rotateY(180deg);
+    font-size:0.86rem;
+    overflow-y:auto;
+  }
+  .flip-back a{color:var(--gold);}
+  button.flip-btn{
+    background:none;border:none;padding:0;margin-top:8px;
+    font-size:0.8rem;color:var(--maroon);text-decoration:underline;cursor:pointer;
+  }
+
+  /* Claim / discrepancy table */
+  table.dim-table{
+    width:100%;border-collapse:collapse;margin:1.2em 0;font-size:0.94rem;
+  }
+  table.dim-table th{
+    text-align:left;background:var(--maroon-deep);color:var(--paper);
+    padding:9px 12px;font-weight:600;font-size:0.85rem;
+  }
+  table.dim-table td{
+    padding:10px 12px;border-bottom:1px solid var(--rule);vertical-align:top;
+  }
+  table.dim-table tr:last-child td{border-bottom:none;}
+  td.numcell{font-weight:700;text-align:center;white-space:nowrap;}
+  td.numcell.neg{color:var(--harm);}
+  td.numcell.pos{color:var(--help);}
+
+  /* Scorecard */
+  .scorecard{
+    background:var(--card);border:1px solid var(--rule);
+    padding:22px 22px 8px;margin:1.4em 0;
+  }
+  .scorecard h3{margin-top:0;}
+  .net-line{
+    font-size:1.05rem;font-weight:700;color:var(--harm);
+    margin:-6px 0 14px;
+  }
+  .scope-note{
+    font-size:0.88rem;color:var(--ink-soft);font-style:italic;margin-top:14px;
+  }
+
+  /* Questions */
+  .qlist{counter-reset:q;list-style:none;padding:0;}
+  .qlist li{
+    counter-increment:q;position:relative;padding-left:34px;margin-bottom:16px;
+  }
+  .qlist li::before{
+    content:counter(q);
+    position:absolute;left:0;top:0;
+    width:24px;height:24px;border-radius:50%;
+    background:var(--maroon);color:var(--paper);
+    font-size:0.82rem;font-weight:700;
+    display:flex;align-items:center;justify-content:center;
+  }
+
+  /* Sources */
+  details.sources{
+    background:var(--card);border:1px solid var(--rule);padding:16px 20px;margin-top:1.2em;
+  }
+  details.sources summary{
+    cursor:pointer;font-weight:600;color:var(--maroon-deep);font-family:'Playfair Display',serif;
+  }
+  details.sources ol{margin-top:12px;font-size:0.9rem;padding-left:1.4em;}
+  details.sources li{margin-bottom:0.5em;}
+
+  footer{padding:40px 0 60px;font-size:0.88rem;color:var(--ink-soft);}
+  footer a{margin-right:18px;}
+
+  @media (max-width:640px){
+    header.masthead h1{font-size:1.75rem;}
+    .board-grid{grid-template-columns:1fr 1fr;}
+  }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <p class="kicker">Unelected Power — The Weber County Hive</p>
+    <h1>The Nonprofit That Runs Downtown</h1>
+    <p class="dek">Community Alliance for Main Street (CAMS) runs Heber City's downtown revitalization work under a sole-source contract negotiated, approved, and signed for the City by a man who also sits on CAMS's own board. What the arrangement is supposed to buy, who actually pays for it, and what still isn't accounted for.</p>
+    <p class="byline">The Weber County Hive</p>
+  </div>
+</header>
+
+<nav class="crumbs">
+  <div class="wrap">
+    <a href="https://weber-county-hive.github.io/-weber-county-hive-index/">Master index</a>
+    <a href="index.html">Unelected Power index</a>
+    <a href="matt-brower.html">Matt Brower — the board seat that never came up</a>
+    <a href="dallin-koecher.html">Dallin Koecher — one line, four boards short</a>
+  </div>
+</nav>
+
+<section id="what-it-is">
+  <div class="wrap">
+    <h2>What CAMS is, and why that part is normal</h2>
+    <p class="lead">Cities partnering with an independent nonprofit to run downtown revitalization work is a well-established, nationwide model — not, by itself, a red flag.</p>
+    <p>Utah's own state Main Street Program, run through the State Historic Preservation Office, follows the same national framework used in over 1,200 communities across 40 states: a professionally managed downtown organization, "whether that entity is housed with a city or county, or is a stand-alone nonprofit," typically sustained by modest local government support alongside sponsorships and grants. CAMS holds Tier 2 accreditation in that statewide network.</p>
+    <p>So the basic shape of this arrangement — a city funds a nonprofit that handles beautification, downtown events, and business support — is ordinary. What follows is not a case against that model. It's an account of how this particular version of it was built and run.</p>
+    <p>CAMS's own materials answer the natural follow-up question directly: if local government already exists, why does a Main Street need its own nonprofit at all? Its stated answer is that city government manages a broad range of responsibilities and can lack a group focused specifically on a niche like a single downtown corridor. CAMS describes itself as filling that gap — not replicating the City's work, but complementing it, acting as a dedicated "specialist team" for Main Street's specific needs.</p>
+  </div>
+</section>
+
+<section id="what-it-buys">
+  <div class="wrap">
+    <h2>What the money is supposed to buy</h2>
+    <p>Pulled directly from CAMS's own website and public materials — its stated deliverables, in its own words:</p>
+    <ul class="buy-list">
+      <li><strong>Beautification</strong> — flowers, hanging baskets, benches, and bike racks along Main Street; the "Flower Pot Project," 34 oversized planters</li>
+      <li><strong>Heber City Historic Tour</strong> — CAMS describes itself as instrumental in launching this tour of 37 historic homes and buildings with informational plaques</li>
+      <li><strong>A public water feature at City Hall</strong> — proposed by a private donor in 2018, developed with Wasatch CAPS students, completed as a CAMS/City partnership, opened June 2024</li>
+      <li><strong>TAP grant-funded programming</strong> — Art in Public Spaces, Lights on Festival Street, Music on Main</li>
+      <li><strong>Recurring events</strong> — Old Fashioned Christmas, Halloween Fest, and a new 2026 Cinco de Mayo event</li>
+      <li><strong>Heber Market on Main (HMOM)</strong> — the one revenue line CAMS splits 50/50 with the City rather than keeping in full</li>
+      <li><strong>Food-truck coordination at Main Street Park</strong>, including a proposed EV-charging project to replace gas generators at events there</li>
+      <li><strong>A full-time staff position</strong> — CAMS's own May 2026 profile says it "recently secured funding for a full-time position." That position is Executive Director Rachel Kahler — a former Heber City Council Member herself, in a role the City's contract appears to fund directly</li>
+    </ul>
+    <div class="callout">
+      <p>CAMS's own website lists Kahler under a page header reading "Here are just a few of the individuals who volunteer at CAMS," alongside three actual unpaid board members. Her Executive Director role is CAMS's one paid, City-funded position — describing it as volunteer service alongside genuine volunteers is a factual mismatch worth noting plainly, not a claim about anyone's intent.</p>
+    </div>
+    <div class="callout">
+      <p>Separately, CAMS's own January 2024 blog post names "Policy Influence" — engaging directly with local policymakers — as one of its four core activities. That claim predates CAMS's 501(c)(3) conversion by roughly two years, and sits in tension with the federal political-activity restrictions that came with it. See "A nonprofit that describes its own advocacy," below.</p>
+    </div>
+  </div>
+</section>
+
+<section id="ledger">
+  <div class="wrap">
+    <h2>Who actually pays for it</h2>
+    <p>CAMS's own materials state it does not collect membership dues from Main Street businesses. The actual cost structure runs through the City's general tax base instead:</p>
+    <div class="ledger">
+      <div class="col">
+        <h4>What the City covers</h4>
+        <ul>
+          <li>$39,900/year direct payment, rising annually with CPI, paid quarterly in advance</li>
+          <li>Police services at CAMS events</li>
+          <li>Insurance</li>
+          <li>Marketing access (Ignition Creative)</li>
+          <li>Sound system contracts</li>
+          <li>Storage space in the old HL&amp;P administration building</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4>What CAMS keeps</h4>
+        <ul>
+          <li>100% of event-sponsorship revenue, with one exception</li>
+          <li>Heber Market on Main sponsorships: split 50/50 with the City</li>
+          <li>Any additional TAP grant funding it pursues on top of the contract</li>
+        </ul>
+      </div>
+    </div>
+    <p>Set against the deliverables list above — planters, murals, seasonal events, a modest annual calendar — the City funds nearly all of CAMS's cost of doing business while CAMS retains the revenue those same taxpayer-funded events generate. The City's own fiscal justification for the HMOM split says as much directly: staff wrote that the arrangement "should provide the City with a net increase in revenue as only a fraction of the weekly sponsorship[s] were sold in previous years" — meaning the City had been leaving that money on the table itself before handing the relationship to CAMS.</p>
+  </div>
+</section>
+
+<section id="two-entities">
+  <div class="wrap">
+    <h2>Two entities, not one</h2>
+    <p>CAMS's own history page describes a continuous, 22-year organization. The state's own corporate filings tell a different story.</p>
+    <div class="timeline">
+      <div class="tl-item"><span class="date">~2004</span>CAMS organizes informally, founded by Tom Stone and Jeff Bradshaw following $15,000 in post-Olympics community grants — this is the basis for the "twenty-second year" language on CAMS's own site.</div>
+      <div class="tl-item"><span class="date">June 2, 2005</span>The first corporate entity, <em>Community Alliance for Main Street</em>, is formally filed with the state.</div>
+      <div class="tl-item"><span class="date">October 4, 2006</span>That entity is administratively dissolved by the state for non-compliance — roughly 16 months after filing.</div>
+      <div class="tl-item"><span class="date">2006–2019</span>No CAMS corporate entity exists at all — a 13-year gap.</div>
+      <div class="tl-item"><span class="date">June 3, 2019</span>A wholly new entity, <em>Community Alliance for Main Street, Inc.</em>, is filed — the entity that holds today's City contract.</div>
+      <div class="tl-item"><span class="date">Nov. 22, 2024 (effective) / Sept. 3, 2025 (determination)</span>The current entity is recognized by the IRS as a 501(c)(3), after — per its own history page — operating for years as a 501(c)(6) business league.</div>
+      <div class="tl-item"><span class="date">Currently</span>The active entity is listed <strong>Active, but Delinquent</strong> with the Utah Division of Corporations — missed its June 30, 2026 renewal deadline, updated to delinquent status July 14, 2026, after its last clean renewal on June 13, 2025.</div>
+    </div>
+    <p>Counted from the actual legal filings — not the informal founding story — the entity that signed the City's current contract is seven years old, not twenty-two, and its predecessor spent more of its existence dissolved than active.</p>
+    <div class="callout">
+      <p>On that same state filing, every director's address of record is a personal or business address — except one. Matt Brower's listed director address is 75 N Main St, Heber City: <strong>Heber City's own City Hall.</strong> The City Manager's board seat at an independent nonprofit is registered, on the state's own record, at the government building itself.</p>
+    </div>
+  </div>
+</section>
+
+<section id="board">
+  <div class="wrap">
+    <h2>The board</h2>
+    <p>Three independently-sourced records of who sits on CAMS's board — and none of them agree:</p>
+    <table class="dim-table">
+      <thead><tr><th>Source</th><th>Directors listed</th></tr></thead>
+      <tbody>
+        <tr><td>Utah Division of Corporations (state filing, updated 9/19/2024)</td><td>Koecher, Bradshaw, Brower, Stone, Ferguson — 5</td></tr>
+        <tr><td>Heber City's own Jan./April 2026 staff reports</td><td>Stone, Brower, Koecher, Bradshaw, Fritzsche, Berg, Rowland, Ferguson — 8</td></tr>
+        <tr><td>CAMS's own public "About" page (published 4/22/2026)</td><td>Stone, Koecher, Rosendahl, Bradshaw, Rowland, Berg — 6, plus Kahler as staff</td></tr>
+      </tbody>
+    </table>
+    <p>The state's own official record — the legally operative account of who actually directs this corporation — is missing three of the eight people everyone else treats as sitting board members: Ryan Fritzsche, Kelsey Berg, and Erik Rowland. Utah law (§16-6a-1607) requires nonprofits to file an annual report naming current directors, but the only consequence for missing or outdated filings is the same delinquency/dissolution mechanism already documented on this page — the law doesn't require this filing to match what a city reports or what the organization's own website says, so a three-way mismatch like this one isn't something the statute is built to catch. That makes this a real caveat, not a reason to set the discrepancy aside: state nonprofit filings only update when a renewal is filed, so this could reflect an administrative lag rather than proof those three were never properly added. Per Heber City's own staff reports, current voting members are: Tom Stone (Chair), Matt Brower, Dallin Koecher, Jeff Bradshaw (Treasurer), Ryan Fritzsche, Kelsey Berg, Erik Rowland, and Nicole Ferguson. Executive Director Rachel Kahler is staff, not a board member.</p>
+    <div class="board-grid">
+      <div class="flip-card" tabindex="0">
+        <div class="flip-inner">
+          <div class="flip-front"><p class="role">City Manager</p><p class="name">Matt Brower</p></div>
+          <div class="flip-back"><p>Board member since 2019. Sole city signatory on the CAMS contract; authored the staff report recommending it; approved it as a CAMS board member a week before the City Council vote. <a href="matt-brower.html">Full profile →</a></p></div>
+        </div>
+      </div>
+      <div class="flip-card" tabindex="0">
+        <div class="flip-inner">
+          <div class="flip-front"><p class="role">Heber Valley Chamber/CVB Exec. Director</p><p class="name">Dallin Koecher</p></div>
+          <div class="flip-back"><p>Also on the Wasatch Open Lands Board; his posted WOLB disclosure lists only his Chamber role, omitting CAMS. <a href="dallin-koecher.html">Full profile →</a></p></div>
+        </div>
+      </div>
+      <div class="flip-card" tabindex="0">
+        <div class="flip-inner">
+          <div class="flip-front"><p class="role">Chair / President</p><p class="name">Tom Stone</p></div>
+          <div class="flip-back"><p>Heber resident since 1986; co-founded CAMS with Bradshaw. Disqualified from a 2024 school board race over a late disclosure; that suit was dismissed against him.</p></div>
+        </div>
+      </div>
+      <div class="flip-card" tabindex="0">
+        <div class="flip-inner">
+          <div class="flip-front"><p class="role">Treasurer</p><p class="name">Jeff Bradshaw</p></div>
+          <div class="flip-back"><p>Co-founded CAMS with Stone; registered agent on its original, later-dissolved 2005 entity. A practicing CPA and partner at his own firm, Bradshaw Smith &amp; Co, since 1974. CAMS's federal tax filing is filed under his name, from his firm's own office.</p></div>
+        </div>
+      </div>
+      <div class="flip-card" tabindex="0">
+        <div class="flip-inner">
+          <div class="flip-front"><p class="role">Board Member</p><p class="name">Ryan Fritzsche</p></div>
+          <div class="flip-back"><p>Owner of a Heber City payment-processing company (MSS Pay). Runs a business address on the same Main Street corridor as CAMS's own PSA notice address.</p></div>
+        </div>
+      </div>
+      <div class="flip-card" tabindex="0">
+        <div class="flip-inner">
+          <div class="flip-front"><p class="role">Board Member</p><p class="name">Kelsey Berg</p></div>
+          <div class="flip-back"><p>Government Relations lead for the Utah 2034 Olympic Organizing Committee; previously VP of Government Relations at the Larry H. Miller Company.</p></div>
+        </div>
+      </div>
+      <div class="flip-card" tabindex="0">
+        <div class="flip-inner">
+          <div class="flip-front"><p class="role">Wasatch Co. Council, Seat C</p><p class="name">Erik Rowland</p></div>
+          <div class="flip-back"><p>Filed a blanket "no conflict of interest" county disclosure covering eight documented positions and entities, CAMS among them.</p></div>
+        </div>
+      </div>
+      <div class="flip-card" tabindex="0">
+        <div class="flip-inner">
+          <div class="flip-front"><p class="role">Board Member</p><p class="name">Nicole Ferguson</p></div>
+          <div class="flip-back"><p>Main Street furniture-store owner; has publicly described Main Street as effectively unwalkable — the exact problem CAMS's own mission targets.</p></div>
+        </div>
+      </div>
+      <div class="flip-card" tabindex="0">
+        <div class="flip-inner">
+          <div class="flip-front"><p class="role">Executive Director (staff)</p><p class="name">Rachel Kahler</p></div>
+          <div class="flip-back"><p>Former Heber City Council Member. Her Utah nonprofit filing status shows "Delinquent"; her 2026 county disclosure has an unresolved gap.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contract">
+  <div class="wrap">
+    <h2>The contract</h2>
+    <p>The City's Professional Services Agreement with CAMS runs Jan. 1, 2026 through Dec. 31, 2028, auto-renewing annually, awarded through <strong>sole-source procurement</strong> rather than competitive bidding. The staff report's stated justification: CAMS's history, its downtown relationships, and the cost/time of transitioning to a new vendor.</p>
+    <p>The agreement was re-noticed as sole-source with 10 days' legal notice after a complaint to the Utah State Auditor. Out of what staff called "an abundance of caution," the City solicited comparison quotes from two Park City-based nonprofits — both of which indicated the work would cost significantly more than CAMS's $39,900.</p>
+    <div class="callout">
+      <p>The signed agreement recites that the City "caused this Agreement to be signed by its mayor and attested by its city recorder." The actual signature block contains only one line — Matt Brower, City Manager. No Mayor's signature, no Recorder attestation. The same person negotiated the deal, approved it as a CAMS board member, authored the staff report recommending it, and is its sole named city signatory.</p>
+    </div>
+    <p>CAMS's own bylaws separately require formal Board approval of any "self-dealing transaction." Whether the City contract was ever reviewed under that provision is not established in any document obtained so far.</p>
+  </div>
+</section>
+
+<section id="money">
+  <div class="wrap">
+    <h2>The money that doesn't add up</h2>
+    <p>Three CAMS-originated documents describe the same 2024 fiscal year with three different totals:</p>
+    <table class="dim-table">
+      <thead><tr><th>Source</th><th>2024 figure</th></tr></thead>
+      <tbody>
+        <tr><td>Form 990-EZ, Line L ("gross receipts")</td><td>$193,966</td></tr>
+        <tr><td>Schedule A, Part III ("public support")</td><td>$191,115</td></tr>
+        <tr><td>CAMS's own internal balance sheet (total income)</td><td>~$387,933</td></tr>
+      </tbody>
+    </table>
+    <p>The first two are close enough to plausibly reconcile through ordinary accounting differences. The third is not — it's roughly double either federal figure, on the same year, from CAMS's own books.</p>
+    <svg viewBox="0 0 640 300" style="width:100%;max-width:640px;margin:1.4em 0;font-family:'Source Sans 3',sans-serif;" role="img" aria-label="Bar chart comparing three different reported 2024 revenue totals for CAMS">
+      <line x1="60" y1="20" x2="60" y2="240" stroke="#D9CDBD" stroke-width="1"/>
+      <line x1="60" y1="240" x2="600" y2="240" stroke="#D9CDBD" stroke-width="1"/>
+      <!-- bar 1: 990-EZ 193,966 -->
+      <rect x="110" y="129" width="110" height="111" fill="#A8873A"/>
+      <text x="165" y="118" text-anchor="middle" font-size="15" font-weight="700" fill="#231A17">$193,966</text>
+      <text x="165" y="258" text-anchor="middle" font-size="12" fill="#5C4F49">Form 990-EZ</text>
+      <text x="165" y="272" text-anchor="middle" font-size="12" fill="#5C4F49">Line L</text>
+      <!-- bar 2: Schedule A 191,115 -->
+      <rect x="270" y="130" width="110" height="110" fill="#A8873A"/>
+      <text x="325" y="119" text-anchor="middle" font-size="15" font-weight="700" fill="#231A17">$191,115</text>
+      <text x="325" y="258" text-anchor="middle" font-size="12" fill="#5C4F49">Schedule A</text>
+      <text x="325" y="272" text-anchor="middle" font-size="12" fill="#5C4F49">Part III</text>
+      <!-- bar 3: balance sheet 387,933, roughly double -->
+      <rect x="430" y="20" width="110" height="220" fill="#6E1F2B"/>
+      <text x="485" y="9" text-anchor="middle" font-size="15" font-weight="700" fill="#231A17"> </text>
+      <text x="485" y="14" text-anchor="middle" font-size="15" font-weight="700" fill="#231A17">$387,933</text>
+      <text x="485" y="258" text-anchor="middle" font-size="12" fill="#5C4F49">CAMS's own</text>
+      <text x="485" y="272" text-anchor="middle" font-size="12" fill="#5C4F49">balance sheet</text>
+      <text x="60" y="14" font-size="12" fill="#5C4F49">2024 revenue reported</text>
+    </svg>
+    <div class="callout">
+      <p>CAMS's Form 990-EZ is filed "% Jeffery M. Bradshaw," using the address and phone number of Bradshaw Smith &amp; Co — Bradshaw's own private CPA practice, not a CAMS office. He's held the Treasurer role since co-founding the organization. That means CAMS's federal financial reporting runs through one board member's own accounting firm, which makes the three-figure discrepancy above a narrower, more answerable question than it might otherwise be: the person best positioned to reconcile it is already on the board.</p>
+    </div>
+    <p>Separately, 2024 spending was dominated almost entirely by a single line: <strong>$347,465.54 for "Main Street Beautification,"</strong> about 90% of that year's budget, with no itemization available anywhere public and no board minutes on file for the year it occurred. The following year, that same line fell roughly 99%, while total income fell roughly 73% — a pattern that reads as a single large, unexplained project rather than routine year-to-year spending.</p>
+  </div>
+</section>
+
+<section id="advocacy">
+  <div class="wrap">
+    <h2>A nonprofit that describes its own advocacy</h2>
+    <p>CAMS's January 2024 blog post, "CAMS Advocacy Initiatives," states plainly: "Advocacy is at the core of our mission... engag[ing] in dialogues with local policymakers to influence decisions impacting Main Street." That post predates CAMS's 501(c)(3) conversion, which took effect Nov. 22, 2024 — meaning it describes CAMS's own self-understanding as an advocacy organization from before, not after, its current tax status began.</p>
+    <div class="callout">
+      <p><strong>The rule CAMS is required to follow right now, as of Nov. 22, 2024, is the 501(c)(3) standard — not the looser rules that applied to the 501(c)(6) classification it says it held before.</strong> Specifically: lobbying cannot be a "substantial part" of its activities (the IRS has never set an exact percentage, but a 1955 court case treated roughly 5% of an organization's time and effort as the outer edge of "insubstantial"), and it is absolutely barred from supporting or opposing any candidate or political party, in any form. A 501(c)(6) business league — what CAMS says it operated as for most of its earlier history — was never subject to either of those restrictions in the same way. Violating them can cost an organization its tax-exempt status outright.</p>
+    </div>
+    <p>So the plain answer to "are they allowed to do politics": no campaign involvement of any kind, ever, under their current status — and only a small, non-dominant amount of legislative lobbying. What isn't established by anything in hand is whether CAMS's "Policy Influence" activity continued, unchanged, after Nov. 22, 2024 took effect. The Jan. 2024 post shows what CAMS considered its own mission before the conversion; it doesn't show what it's actually done since.</p>
+  </div>
+</section>
+
+<section id="scorecard">
+  <div class="wrap">
+    <h2>Scoring the structure</h2>
+    <p class="lead">This scorecard measures oversight and accountability — whether the public can see, question, and check this arrangement. It does not measure whether the flowers get planted or the events happen. Nothing in the record reviewed here suggests CAMS's actual programming has failed; the deliverables list above is real. What follows is a separate question: is anyone positioned to catch it if something goes wrong?</p>
+    <div class="scorecard">
+      <h3>Community Alliance for Main Street — governance scorecard</h3>
+      <p class="net-line">Net score: −14 of a possible +21 — verdict: structurally compromised</p>
+      <table class="dim-table">
+        <thead><tr><th>Dimension</th><th>Net</th><th>Why</th></tr></thead>
+        <tbody>
+          <tr><td>Transparency</td><td class="numcell neg">&minus;3</td><td>Three unreconciled revenue totals for the same year; no public board minutes despite a bylaws requirement; a $347,465.54 expense with no itemization anywhere public.</td></tr>
+          <tr><td>Conflicts of interest</td><td class="numcell neg">&minus;3</td><td>One person — the City Manager — sits on both sides of the transaction: board member, contract negotiator, staff-report author, and sole city signatory.</td></tr>
+          <tr><td>Appointment accountability</td><td class="numcell neg">&minus;2</td><td>CAMS's own public board list conflicts with the City's staff report from one day earlier, with three names dropped and one added, unexplained.</td></tr>
+          <tr><td>Public participation</td><td class="numcell neg">&minus;2</td><td>No evidence of public comment or posted agendas at CAMS's own board level; the only public input on record happened at City Council, not at CAMS.</td></tr>
+          <tr><td>Structural independence</td><td class="numcell neg">&minus;2</td><td>The City provides police, insurance, marketing, and storage, negotiates through a sitting board member, and CAMS's Executive Director is a former City Council Member.</td></tr>
+          <tr><td>Compliance / enforcement</td><td class="numcell neg">&minus;3</td><td>The active entity is currently delinquent with the state while holding an active public contract, with no evidence of any consequence.</td></tr>
+          <tr><td>Mandate specificity</td><td class="numcell pos">&plus;1</td><td>Bylaws and contract both define CAMS's scope, services, and payment terms in specific, checkable language.</td></tr>
+        </tbody>
+      </table>
+      <p class="scope-note">Scored against the same seven-dimension rubric used for the Prosecutor Conduct Commission and other appointed Utah bodies. Design and outcome are graded separately in this project's methodology — a structure can be run this way and still produce acceptable results, or the reverse. This score addresses the structure only.</p>
+    </div>
+  </div>
+</section>
+
+<section id="questions">
+  <div class="wrap">
+    <h2>Open questions</h2>
+    <ol class="qlist">
+      <li>Is CAMS currently in good standing with the Utah Division of Corporations — and if not, how long has it been delinquent, and does the City check that before contracting with a vendor?</li>
+      <li>What specifically did the $347,465.54 "Main Street Beautification" line fund in 2024, and why did that spending fall roughly 99% the following year?</li>
+      <li>Which of CAMS's three different 2024 revenue figures is accurate, and why don't its own documents agree with each other?</li>
+      <li>Was the Heber City contract ever formally reviewed and approved as a "self-dealing transaction" under CAMS's own bylaws, given a sitting City Manager sat on both sides of it?</li>
+      <li>Why does the signed contract's recital describe a Mayor's signature and Recorder attestation that don't appear anywhere on the actual signature page?</li>
+      <li>CAMS's current public board list doesn't match the board named in the City's own staff report one day earlier — has the board actually changed, when, and why wasn't that reported?</li>
+      <li>If CAMS operated as a 501(c)(6) for years before 2024, as its own history page claims, where are its federal tax filings from that period?</li>
+      <li>Council Member Sid Ostergaard voted yes on both the original CAMS agreement and its later ratification — has the unverified public claim that he separately benefited from a contract the City Manager awarded ever been confirmed or resolved either way?</li>
+    </ol>
+  </div>
+</section>
+
+<section id="fix-list">
+  <div class="wrap">
+    <h2>What it would take to run like other Main Street programs</h2>
+    <p class="lead">None of this requires CAMS to stop existing or the City to stop funding downtown work. Most Main Street organizations nationally operate with the following as baseline practice — the gap here is between that baseline and what's currently documented, not between CAMS and some impossible standard.</p>
+    <ol class="qlist">
+      <li><strong>Resolve and maintain state corporate standing.</strong> A vendor holding an active public contract should not be delinquent with the state at the same time — this is a compliance step, not a judgment call.</li>
+      <li><strong>Separate city staff roles from nonprofit board seats.</strong> A City Manager or other city employee negotiating, approving, and signing a contract with an organization they also govern is the single largest structural gap here. Most Main Street models keep the city's role advisory or funding-only, without a dual seat.</li>
+      <li><strong>Competitive procurement for a recurring contract.</strong> Sole-source renewal, year after year, without competitive bidding, is the exception nationally, not the rule, for an ongoing public contract of this size.</li>
+      <li><strong>One reconciled set of books.</strong> CAMS's own documents currently show three different totals for the same fiscal year. A single, itemized, internally consistent financial statement — with large line items like the 2024 Beautification expense actually itemized — is standard nonprofit practice, not an unusual ask.</li>
+      <li><strong>Board minutes posted on the schedule CAMS's own bylaws already require.</strong> The 45-business-day requirement exists on paper; it isn't being met in practice.</li>
+      <li><strong>Financial administration independent of a board member's own firm,</strong> or, at minimum, clear disclosure of the arrangement. A Treasurer's private accounting practice handling the nonprofit's federal filing isn't unheard of for a small organization, but it should be a disclosed, board-acknowledged arrangement rather than something a reader has to piece together from a phone number.</li>
+      <li><strong>Accurate public labeling of paid staff versus volunteers.</strong> A City-funded Executive Director position should not appear under a "volunteer" header.</li>
+      <li><strong>One board roster that matches across the state filing, the City's records, and CAMS's own website.</strong> Right now there are three different lists.</li>
+    </ol>
+  </div>
+</section>
+
+<section id="oversight">
+  <div class="wrap">
+    <h2>Who's actually supposed to catch this</h2>
+    <p class="lead">Every gap on this page has a body that's nominally responsible for catching it. Laid out plainly, most of those checks turn out to be reactive, self-reported, or triggered only by someone filing a complaint — not routine verification.</p>
+    <table class="dim-table">
+      <thead><tr><th>What needs checking</th><th>Who's nominally responsible</th><th>Grade</th><th>What that means in practice</th></tr></thead>
+      <tbody>
+        <tr><td>Corporate good standing</td><td>Utah Division of Corporations</td><td class="numcell neg">D</td><td>Enforcement is automatic and slow — a missed renewal shows as "Delinquent" and eventually triggers administrative dissolution if never fixed, the same as CAMS's own 2005 entity. No one there reviews governance, finances, or contracts; it's a renewal-fee system, not an oversight body.</td></tr>
+        <tr><td>Whether CAMS's books match what it reports</td><td>No one, at this size</td><td class="numcell neg">F</td><td>Utah imposes no independent-audit requirement for nonprofits at any revenue level — state law (§16-6a-1607, §13-22-15) only requires filing a copy of the same federal return already sent to the IRS. CAMS's 990-EZ, filed under its own Treasurer's name from his own accounting firm, is not independently verified by anyone before or after filing.</td></tr>
+        <tr><td>Federal 501(c)(3) compliance</td><td>IRS</td><td class="numcell neg">D</td><td>Oversight exists but is complaint- or audit-driven; the IRS does not routinely monitor a small nonprofit's day-to-day spending or verify individual expense lines like the 2024 Beautification total.</td></tr>
+        <tr><td>Charitable solicitation registration</td><td>Utah Division of Consumer Protection</td><td class="numcell neg">D</td><td>Required under §13-22-6 for nonprofits soliciting public donations — not yet confirmed whether CAMS is registered; a separate, checkable open item.</td></tr>
+        <tr><td>Sole-source procurement compliance</td><td>Heber City itself</td><td class="numcell neg">F</td><td>The City both grants and reviews its own procurement exception. The only outside check that occurred here was a complaint filed with the Utah State Auditor — reactive, not routine.</td></tr>
+        <tr><td>The City Manager's outside board seats</td><td>Heber City Council</td><td class="numcell neg">F</td><td>The Council hires, sets contract terms for, and can terminate the City Manager for cause — but the same Council approved the sole-source CAMS contract 5-0 the same night its own minutes recorded "no conflicts disclosed." No state body independently reviews a city manager's outside nonprofit roles.</td></tr>
+        <tr><td>CAMS's own self-dealing transactions</td><td>CAMS's own Board</td><td class="numcell neg">F</td><td>The bylaws require the Board to approve any self-dealing transaction — but the Board approving a deal that benefits one of its own members is self-review, not independent review, and whether this provision was ever formally invoked here is unconfirmed.</td></tr>
+      </tbody>
+    </table>
+    <p class="net-line">Overall oversight grade: D&minus;</p>
+    <p>Not a flat F, because the pieces of a real oversight system technically exist on paper — a corporate registry, an IRS enforcement power, a Council with hire/fire authority, bylaws with a self-dealing clause. The grade is this low because every one of them is either reactive (waits for a complaint), automatic-but-toothless (a renewal deadline), or the same party reviewing itself. Nothing in this structure catches a problem before it becomes public — every finding on this page came from an outside person reading the documents, not from any of these mechanisms working as designed.</p>
+  </div>
+</section>
+
+<details class="sources">
+  <summary>Full source list</summary>
+  <ol>
+    <li>CAMS official history and "About" pages, hebercity-cams.org</li>
+    <li>CAMS "volunteer" profile page (Stone, Kahler, Ferguson, Bradshaw), hebercity-cams.org</li>
+    <li>CAMS Form 990-EZ, FY2024, ProPublica Nonprofit Explorer, filed under Jeffery M. Bradshaw</li>
+    <li>CAMS Schedule A (Form 990), FY2024, IRS e-file submission dated Nov. 17, 2025</li>
+    <li>Utah Division of Corporations business entity search, "Community Alliance for Main Street" and "Community Alliance for Main Street, Inc." — entity #11326836-0140, including officer/director and status detail</li>
+    <li>Heber City Council staff reports and minutes, Jan. 6 and Jan. 20, 2026; April 21, 2026 ("Ratification of CAMS Agreement")</li>
+    <li>Heber City Professional Services Agreement with CAMS, effective Jan. 1, 2026</li>
+    <li>CAMS bylaws, signed July 26, 2023</li>
+    <li>CAMS internal financial statements / balance sheet, 2024–2025, Grand Valley Bank</li>
+    <li>CAMS blog: "CAMS Advocacy Initiatives," Jan. 24, 2024; other 2024 posts by "Rachel" (Kahler)</li>
+    <li>Heber Valley Chamber of Commerce, "Business of the Month" profile, May 2026</li>
+    <li>Bradshaw Smith &amp; Co CPA's, "About Our Team" page, bradshawsmithcpa.com</li>
+    <li>Park Record profile of Rachel Kahler (New Year's resolutions piece)</li>
+    <li>May 7, 2024 Heber City TAP grant applicant packet</li>
+    <li>Utah Code §16-6a-1607 and §13-22-15 (nonprofit annual reporting requirement); §13-22-6 (charitable solicitation registration); National Council of Nonprofits, state audit requirement survey</li>
+    <li>Congressional Research Service, "Tax-Exempt Organizations Under Internal Revenue Code Section 501(c): Political Activity Restrictions" (26 U.S.C. §501(c)(3) lobbying and campaign-activity rules)</li>
+    <li>Utah Code §16-6a-1607 (nonprofit annual report requirement, current directors/officers) and §16-6a-1608</li>
+  </ol>
+</details>
+
+<footer>
+  <div class="wrap">
+    <a href="https://weber-county-hive.github.io/-weber-county-hive-index/">Master index</a>
+    <a href="index.html">Unelected Power</a>
+    <a href="matt-brower.html">Matt Brower</a>
+    <a href="dallin-koecher.html">Dallin Koecher</a>
+    <p style="margin-top:16px;">The Weber County Hive — independent accountability journalism, Weber County, Utah.</p>
+  </div>
+</footer>
+
+</body>
+</html>
