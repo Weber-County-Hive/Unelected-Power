@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chris Roybal | Unelected Power | The Weber County Hive</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+:root{
+  --paper:#f7f1e6; --paper-2:#efe6d3; --ink:#2a1f14; --ink-soft:#63594a;
+  --maroon:#5c1a1a; --maroon-2:#7a2424;
+  --gold:#a9762c; --gold-bg:#f0e0c0;
+  --line:#ddccaa;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--paper);color:var(--ink);font-family:'Source Sans 3',sans-serif;line-height:1.65;font-size:16px;}
+.wrap{max-width:860px;margin:0 auto;padding:0 24px;}
+a{color:var(--maroon-2);}
+h1,h2,h3{font-family:'Playfair Display',serif;color:var(--ink);}
+
+.topbar{background:var(--ink);color:var(--gold-bg);padding:10px 0;font-family:'IBM Plex Mono',monospace;font-size:12px;}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;}
+.topbar a{color:var(--gold-bg);text-decoration:none;opacity:.85;}
+.topbar a:hover{opacity:1;text-decoration:underline;}
+
+header.masthead{background:linear-gradient(135deg,var(--maroon),var(--maroon-2));color:#f4e9d8;padding:40px 0 32px;border-bottom:5px solid var(--gold);}
+header.masthead .wrap{max-width:860px;margin:0 auto;padding:0 24px;}
+.kicker{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-bg);opacity:.8;margin-bottom:14px;}
+h1.title{font-size:42px;line-height:1.1;margin-bottom:14px;color:#fbf3e3;}
+h1.title em{font-style:italic;color:var(--gold-bg);}
+p.dek{font-size:18px;color:#e9d9bb;max-width:640px;}
+.rc-row{margin-top:18px;display:flex;flex-wrap:wrap;gap:8px;}
+.rc-tag{display:inline-block;background:var(--gold-bg);border:1px solid var(--gold);color:var(--maroon);font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.03em;text-transform:uppercase;padding:4px 11px;border-radius:4px;text-decoration:none;}
+.rc-tag:hover{background:var(--gold);color:#fff;}
+.pub-date{margin-top:10px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.03em;color:#d8b98a;}
+
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin:36px 0;}
+.stat{background:var(--paper-2);padding:20px;text-align:center;}
+.stat .num{font-family:'Playfair Display',serif;font-size:26px;color:var(--maroon);font-weight:700;}
+.stat .label{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.05em;color:var(--ink-soft);margin-top:6px;text-transform:uppercase;}
+
+section{padding:8px 0 36px;}
+section h2{font-size:26px;border-bottom:2px solid var(--gold);padding-bottom:10px;margin-bottom:16px;}
+section p{margin-bottom:14px;}
+section ul{margin:0 0 14px 20px;}
+section li{margin-bottom:8px;}
+.callout{background:var(--paper-2);border-left:4px solid var(--maroon);padding:16px 20px;margin:18px 0;font-size:15px;}
+.callout strong{color:var(--maroon);}
+table.data{width:100%;border-collapse:collapse;margin:16px 0;font-size:14.5px;}
+table.data th{text-align:left;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-soft);border-bottom:2px solid var(--ink);padding:6px 10px 8px;}
+table.data td{padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top;}
+table.data tr:nth-child(even){background:var(--paper-2);}
+
+details.open-q{background:var(--paper-2);border:1px solid var(--line);margin-bottom:10px;padding:14px 18px;}
+details.open-q summary{font-family:'IBM Plex Mono',monospace;font-size:13.5px;cursor:pointer;color:var(--maroon);}
+details.open-q p{margin-top:10px;margin-bottom:0;font-size:14.5px;}
+
+.tag-row{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 4px;}
+.tag{font-family:'IBM Plex Mono',monospace;font-size:11px;background:var(--gold-bg);border:1px solid var(--gold);color:var(--ink);padding:3px 9px;}
+
+footer{background:var(--ink);color:var(--paper-2);padding:36px 0 46px;margin-top:20px;}
+footer .sub{color:#a99a85;font-size:13px;margin-top:6px;}
+
+@media(max-width:600px){
+  header.masthead{padding:32px 0 26px;}
+  h1.title{font-size:30px;}
+  .stats{grid-template-columns:1fr;}
+}
+
+.diagram-block{background:var(--paper-2);border:1px solid var(--line);padding:18px;margin:18px 0;overflow-x:auto;text-align:center;}
+.diagram-block .mermaid{display:inline-block;}
+.diagram-block svg{max-width:100% !important;min-width:min(480px,100%);height:auto !important;}
+.diagram-block.wide svg{min-width:100%;}
+.diagram-caption{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-soft);margin-top:10px;text-align:center;}
+
+.flow-chart{display:flex;flex-direction:column;align-items:center;gap:0;margin:18px 0 4px;}
+.flow-box{background:var(--paper-2);border:1px solid var(--maroon);border-radius:6px;padding:16px 22px;text-align:center;font-size:16px;line-height:1.45;max-width:340px;}
+.flow-box.now{background:var(--gold-bg);border:2px solid var(--gold);}
+.flow-box.small{max-width:220px;font-size:15px;padding:14px 16px;}
+.flow-arrow{font-size:22px;color:var(--gold);line-height:1;margin:6px 0;letter-spacing:.15em;}
+.flow-row{display:flex;flex-wrap:wrap;justify-content:center;gap:18px;width:100%;}
+@media(max-width:600px){ .flow-row{flex-direction:column;align-items:center;} }
+
+.tile-intro{font-size:13.5px;color:var(--ink-soft);margin-bottom:14px;}
+.tile-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:16px 0 8px;}
+.tile{background:none;perspective:1200px;height:180px;}
+.tile-inner{position:relative;width:100%;height:100%;transition:transform .5s cubic-bezier(.4,.2,.2,1);transform-style:preserve-3d;cursor:pointer;}
+.tile.flipped .tile-inner{transform:rotateY(180deg);}
+.tile-face{position:absolute;inset:0;backface-visibility:hidden;border-radius:8px;padding:16px;display:flex;flex-direction:column;justify-content:center;}
+.tile-front{background:linear-gradient(135deg,var(--maroon),var(--maroon-2));color:#f4e9d8;text-align:center;border:2px solid var(--gold);}
+.tile-front .name{font-family:'Playfair Display',serif;font-size:17px;font-weight:700;margin-bottom:6px;}
+.tile-front .role{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.03em;color:var(--gold-bg);line-height:1.5;}
+.tile-front .hint{margin-top:12px;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:#d8b98a;}
+.tile-back{background:var(--paper-2);border:2px solid var(--maroon);transform:rotateY(180deg);font-size:12.5px;color:var(--ink);line-height:1.5;}
+.tile-back .connect-label{font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--maroon);margin-bottom:6px;display:block;}
+@media(max-width:700px){ .tile-grid{grid-template-columns:repeat(2,1fr);} }
+@media(max-width:480px){ .tile-grid{grid-template-columns:1fr;} .tile{height:auto;min-height:160px;} }
+
+.giving-chart{display:flex;align-items:center;gap:22px;margin:18px 0 4px;flex-wrap:wrap;}
+.giving-source{background:var(--gold-bg);border:2px solid var(--gold);border-radius:6px;padding:20px 18px;text-align:center;font-size:16px;font-weight:600;max-width:180px;flex-shrink:0;}
+.giving-targets{display:flex;flex-direction:column;gap:14px;flex:1;min-width:260px;}
+.giving-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
+.giving-amount{font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--maroon);min-width:150px;text-align:right;flex-shrink:0;}
+.giving-arrow{color:var(--gold);font-size:18px;flex-shrink:0;}
+.giving-recipient{background:var(--paper-2);border:1px solid var(--maroon);border-radius:6px;padding:12px 16px;font-size:15px;flex:1;}
+.giving-recipient .sub{display:block;font-size:12.5px;color:var(--ink-soft);margin-top:3px;}
+@media(max-width:600px){ .giving-chart{flex-direction:column;} .giving-amount{text-align:left;min-width:auto;} }
+</style>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>
+  mermaid.initialize({
+    startOnLoad: true,
+    theme: 'base',
+    securityLevel: 'loose',
+    flowchart: { htmlLabels: true, useMaxWidth: true, padding: 18 },
+    themeVariables: {
+      primaryColor: '#efe6d3',
+      primaryTextColor: '#2a1f14',
+      primaryBorderColor: '#5c1a1a',
+      lineColor: '#a9762c',
+      secondaryColor: '#f0e0c0',
+      secondaryTextColor: '#2a1f14',
+      tertiaryColor: '#f7f1e6',
+      fontFamily: 'Verdana, Arial, sans-serif',
+      fontSize: '19px'
+    }
+  });
+</script>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span>The Weber County Hive · Unelected Power</span>
+    <a href="https://weber-county-hive.github.io/-weber-county-hive-index/">Index ↗</a>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="kicker">Case File · Never Elected</div>
+    <h1 class="title">Chris <em>Roybal</em></h1>
+    <p class="dek">President of the Northern Utah Economic Alliance and a member of a political action committee that has paid a sitting Weber County Commissioner $10,000 since 2022 — a PAC whose registered agent and manager are two other named individuals, not Roybal.</p>
+    <div class="rc-row">
+      <a class="rc-tag" href="ryan-starks.html">Cross-reference: Ryan Starks →</a>
+    </div>
+    <div class="pub-date">Published Sept. 14, 2026</div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="stats">
+    <div class="stat"><div class="num">$92,268</div><div class="label">total spent by Utah Forward PAC, 2022-2026</div></div>
+    <div class="stat"><div class="num">$111,250</div><div class="label">total raised, 2022-2025</div></div>
+    <div class="stat"><div class="num">0</div><div class="label">elected offices held by Roybal</div></div>
+  </div>
+
+  <section>
+    <h2>President of an economic alliance, manager of a PAC</h2>
+    <p>Chris Roybal is president of the Northern Utah Economic Alliance (NUEA), a role he has held since July 2019. His own LinkedIn profile describes 25 years of experience in economic development, consulting, and executive management, but his listed work history shows an intervening decade outside that field. His own "About" summary separately states he served as CEO of the Economic Development Corporation of Utah (EDCUtah) — the same organization <a href="ryan-starks.html">Ryan Starks</a> now leads — though that role doesn't appear as a separately dated entry in his listed work history.</p>
+    <div class="flow-chart">
+      <div class="flow-box small">Senior Economic Advisor<br>Gov. Jon Huntsman Jr.<br>2005-2007</div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-box small">President &amp; COO<br>Northwest Research Corp.<br>2007-2014</div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-box small">President<br>Northwest Sales<br>2015-2017</div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-box small">Independent Advisor<br>2018-2019</div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-box now small">President, NUEA<br>July 2019 - present</div>
+    </div>
+    <div class="diagram-caption">Roughly a decade outside economic development, between two Huntsman-adjacent-era roles</div>
+    <p>NUEA is itself an incorporated Utah entity (formed July 16, 2020), and Roybal holds three roles on its own state filing: agent, director, and officer. He is separately listed as a member of Utah Forward PAC, LLC (formed Aug. 15, 2022), a political action committee — one member among others, not its controlling officer. Roybal and his wife, Cindy Roybal, are also listed among the PAC's own 2022 donors, at $1,000. He is also president of the Wasatch Avian Education Society, a bird-education nonprofit unrelated to his economic-development work.</p>
+    <p class="tile-intro">Who actually controls Utah Forward PAC — tap a tile.</p>
+    <div class="tile-grid">
+      <div class="tile"><div class="tile-inner">
+        <div class="tile-face tile-front"><div class="name">Katrina Gibson</div><div class="role">Registered Agent</div><div class="hint">Tap to flip</div></div>
+        <div class="tile-face tile-back"><span class="connect-label">Detail</span>5454 W 1150 S, Ogden. Married to Kerry Gibson, a registered Utah lobbyist.</div>
+      </div></div>
+      <div class="tile"><div class="tile-inner">
+        <div class="tile-face tile-front"><div class="name">Laura Warburton</div><div class="role">Manager</div><div class="hint">Tap to flip</div></div>
+        <div class="tile-face tile-back"><span class="connect-label">Detail</span>7328 E 1450 N, Huntsville. Also Director/CFO of Keep Our Valley Free — a group the PAC itself paid $4,927.20.</div>
+      </div></div>
+      <div class="tile"><div class="tile-inner">
+        <div class="tile-face tile-front"><div class="name">Chris Roybal</div><div class="role">Member</div><div class="hint">Tap to flip</div></div>
+        <div class="tile-face tile-back"><span class="connect-label">Detail</span>1267 W 1875 N, Farmington. President of NUEA; also a $1,000 personal donor to the PAC in 2022.</div>
+      </div></div>
+    </div>
+    <div class="diagram-caption">The PAC's own principal address: 4700 W 12th St, Ogden — distinct from any one member's own address</div>
+    <div class="flow-chart">
+      <div class="flow-box now small">Kerry Gibson<br>Registered Lobbyist</div>
+      <div class="flow-arrow">↓ married to</div>
+      <div class="flow-box now small">Katrina Gibson<br>PAC Registered Agent</div>
+    </div>
+    <div class="flow-row" style="margin-top:14px;">
+      <div class="flow-box small">Steven Gibson<br>Received $1,000 from PAC<br><em>relative, per prior research</em></div>
+      <div class="flow-box small">Rep. Ryan Wilcox<br>Received $3,000 from PAC<br><em>nephew, per prior research</em></div>
+    </div>
+    <div class="diagram-caption">The Gibson family network around the PAC</div>
+    <p>Katrina Gibson is married to Kerry Gibson, a registered Utah lobbyist.</p>
+  </section>
+
+  <section>
+    <h2>Utah Forward PAC's donors, 2022-2025</h2>
+    <details class="open-q" open>
+      <summary>Utah Forward PAC's own raw transaction export shows 22 contributions — click to collapse</summary>
+      <table class="data">
+        <tr><th>Date</th><th>Donor</th><th>Amount</th><th>Note</th></tr>
+      <tr><td>4/17/2022</td><td>Atlee Wampler</td><td>$5,000</td><td>Miami, FL</td></tr>
+      <tr><td>4/17/2022</td><td>Joe Buchanan</td><td>$5,000</td><td>Miami, FL</td></tr>
+      <tr><td>4/19/2022</td><td>John Lewis</td><td>$5,000</td><td>Eden, UT — the Eden Crossing developer, separate case file</td></tr>
+      <tr><td>4/19/2022</td><td>Shane Dunleavy</td><td>$5,000</td><td>Personal, separate from Rincon Financial below</td></tr>
+      <tr><td>4/19/2022</td><td>Rincon Financial</td><td>$10,000</td><td>Shane Dunleavy's corporate vehicle</td></tr>
+      <tr><td>5/3/2022</td><td>R&amp;O Construction</td><td>$5,000</td><td></td></tr>
+      <tr><td>5/3/2022</td><td>Utah Credit Union Political Action Committee</td><td>$5,000</td><td></td></tr>
+      <tr><td>5/3/2022</td><td>Kier Girls LLC</td><td>$2,500</td><td></td></tr>
+      <tr><td>5/3/2022</td><td>The Kier Corporation</td><td>$2,500</td><td></td></tr>
+      <tr><td>5/5/2022</td><td>Building Construction Partners LLC</td><td>$10,000</td><td>See open questions</td></tr>
+      <tr><td>5/18/2022</td><td>Nilson &amp; Company, Inc. (Nilson Homes)</td><td>$20,000</td><td></td></tr>
+      <tr><td>5/18/2022</td><td>Chris &amp; Cindy Roybal</td><td>$1,000</td><td></td></tr>
+      <tr><td>5/18/2022</td><td>Michael Falk</td><td>$5,000</td><td></td></tr>
+      <tr><td>5/27/2022</td><td>CRS Engineers</td><td>$500</td><td></td></tr>
+      <tr><td>5/27/2022</td><td>Blue Review LLC</td><td>$750</td><td></td></tr>
+      <tr><td>5/27/2022</td><td>Magleby Development</td><td>$1,000</td><td></td></tr>
+      <tr><td>6/3/2022</td><td>Adams Leadership PAC (Sen. Stuart Adams)</td><td>$10,000</td><td></td></tr>
+      <tr><td>6/13/2022</td><td>Steve &amp; Polly Petersen</td><td>$2,000</td><td></td></tr>
+      <tr><td>6/13/2022</td><td>Stack Management</td><td>$2,000</td><td></td></tr>
+      <tr><td>3/11/2024</td><td>EVO Utah</td><td>$1,000</td><td>Eden, UT</td></tr>
+      <tr><td>10/21/2025</td><td>Carson Jones</td><td>$1,000</td><td>Pleasant View, UT</td></tr>
+      <tr><td>11/22/2025</td><td>Speaker Mike &amp; Melissa Schultz</td><td>$12,000</td><td>Hooper, UT — largest single donor identified</td></tr>
+      <tr style="font-weight:700;background:var(--gold-bg);"><td colspan="2">Total</td><td>$111,250</td><td></td></tr>
+      </table>
+    </details>
+    <div class="callout">Utah House Speaker Mike Schultz and his wife Melissa are the PAC's largest identified donor, at $12,000 on Nov. 22, 2025.</div>
+  </section>
+
+  <section>
+    <h2>Utah Forward PAC's spending, 2022-2026</h2>
+    <details class="open-q" open>
+      <summary>Utah Forward PAC's own raw transaction export shows 31 political/vendor payments — click to collapse</summary>
+      <table class="data">
+        <tr><th>Date</th><th>Recipient</th><th>Amount</th><th>Note</th></tr>
+      <tr><td>5/13/2022</td><td>Ricky Hatch (campaign)</td><td>$500</td><td>Weber County Clerk/Auditor. Second payment below — $1,500 total</td></tr>
+      <tr><td>5/24/2022</td><td>Jason Kyle</td><td>$500</td><td>HD-8 candidate — separate case file</td></tr>
+      <tr><td>6/7/2022</td><td>Kimberly Cozzens</td><td>$500</td><td></td></tr>
+      <tr><td>6/10/2022</td><td>Kera Birkeland</td><td>$1,000</td><td>Also received a personal donation from Jefferson Moss</td></tr>
+      <tr><td>6/10/2022</td><td>Melanie Mortensen</td><td>$1,000</td><td></td></tr>
+      <tr><td>6/10/2022</td><td>Sharon Bolos</td><td>$3,415</td><td>Second payment below — $5,915 total</td></tr>
+      <tr><td>6/13/2022</td><td>Jill Koford</td><td>$500</td><td>SD5 candidate — separate case file</td></tr>
+      <tr><td>6/14/2022</td><td>Jerry Stevenson</td><td>$1,000</td><td>MIDA Vice Chair — see "Below The Line" (committees repo)</td></tr>
+      <tr><td>6/16/2022</td><td>Brian McKenzie (campaign)</td><td>$1,500</td><td></td></tr>
+      <tr><td>6/24/2022</td><td>Curtis Koch (campaign)</td><td>$1,500</td><td></td></tr>
+      <tr><td>7/11/2022</td><td>Gage Froerer (campaign)</td><td>$5,000</td><td>Second payment below — $10,000 total</td></tr>
+      <tr><td>7/14/2022</td><td>Bob Stevenson</td><td>$5,000</td><td>Davis County Co-Chair on NUEA's own Advisory Board</td></tr>
+      <tr><td>7/19/2022</td><td>Utah Association of Realtors</td><td>$4,000.40</td><td>Chris Kyler's organization — separate case file</td></tr>
+      <tr><td>7/20/2022</td><td>Arena</td><td>$17,798</td><td>Largest single payment found — see open questions</td></tr>
+      <tr><td>7/21/2022</td><td>Republican Women Lead</td><td>$2,000</td><td></td></tr>
+      <tr><td>8/24/2022</td><td>Weber County Republican Party</td><td>$500</td><td></td></tr>
+      <tr><td>8/26/2022</td><td>Weber County Fair</td><td>$5,000</td><td>Donation</td></tr>
+      <tr><td>3/8/2023</td><td>Committee to Elect Ben Nadolski</td><td>$5,000</td><td>Ogden's Mayor</td></tr>
+      <tr><td>5/4/2023</td><td>Gage Froerer (campaign)</td><td>$5,000</td><td>Completes the $10,000 total</td></tr>
+      <tr><td>12/29/2023</td><td>Keep Our Valley Free</td><td>$2,500</td><td>The group that opposed Ogden Valley's incorporation as a city — second payment below</td></tr>
+      <tr><td>1/9/2024</td><td>Keep Our Valley Free</td><td>$2,427.20</td><td>Listed at the same address as the PAC's own registered agent, Katrina Gibson — $4,927.20 total</td></tr>
+      <tr><td>3/11/2024</td><td>Campaign to Elect Ricky Hatch</td><td>$1,000</td><td>Completes the $1,500 total</td></tr>
+      <tr><td>5/15/2025</td><td>Tiarra Auxier for Utah</td><td>$1,000</td><td>HB 55 sponsor — separate case file</td></tr>
+      <tr><td>7/18/2025</td><td>Politix</td><td>$1,158.30</td><td>Second payment below — $7,158.30 total</td></tr>
+      <tr><td>7/29/2025</td><td>Steven Gibson</td><td>$1,000</td><td></td></tr>
+      <tr><td>11/1/2025</td><td>Phil Swanson (campaign)</td><td>$1,000</td><td></td></tr>
+      <tr><td>12/11/2025</td><td>In The Field</td><td>$6,000</td><td>Vendor payment</td></tr>
+      <tr><td>12/18/2025</td><td>Politix</td><td>$6,000</td><td>Completes the $7,158.30 total</td></tr>
+      <tr><td>1/21/2026</td><td>Ryan Wilcox (campaign)</td><td>$3,000</td><td></td></tr>
+      <tr><td>2/17/2026</td><td>Sharon Bolos (campaign)</td><td>$2,500</td><td>Completes the $5,915 total</td></tr>
+      <tr><td>3/16/2026</td><td>Joseph Kerry (campaign)</td><td>$500</td><td>2026 candidate — candidates2026 repo</td></tr>
+      <tr style="font-weight:700;background:var(--gold-bg);"><td colspan="2">Total (payments shown)</td><td>$88,798.90</td><td></td></tr>
+      </table>
+    </details>
+    <p style="font-size:13.5px;color:var(--ink-soft);">The remaining difference from the PAC's $92,268 total spending (above) is routine administrative expenses — bank fees, annual corporate renewal fees, and a small number of non-political vendor payments (signage, supplies) not itemized in this table.</p>
+    <div class="callout"><strong>Utah Forward PAC gave $4,927.20 to Keep Our Valley Free</strong> — the organized opposition to Ogden Valley's 2024 incorporation vote, which commissioned a competing Utah Foundation feasibility study warning the new city could face funding shortfalls. Keep Our Valley Free's own PIC registration lists Laura Warburton as Director and CFO/Treasurer, at 7328 E 1450 N, Huntsville — the same address and the same person listed as Utah Forward PAC's own Manager. Bruce Warburton, likely her husband, is listed as a second officer at the same address.</div>
+    <div class="giving-chart">
+      <div class="giving-source">Laura Warburton</div>
+      <div class="giving-targets">
+        <div class="giving-row">
+          <div class="giving-amount">Manager</div>
+          <div class="giving-arrow">→</div>
+          <div class="giving-recipient">Utah Forward PAC</div>
+        </div>
+        <div class="giving-row">
+          <div class="giving-amount">Director / CFO</div>
+          <div class="giving-arrow">→</div>
+          <div class="giving-recipient">Keep Our Valley Free<span class="sub">Received $4,927.20 from the PAC above</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="diagram-caption">Same person, both sides of the payment</div>
+    <div class="callout"><strong>Politix received $7,158.30 across two 2025 payments</strong> — the largest confirmed vendor relationship in the PAC's spending. Kerry Gibson, husband of the PAC's registered agent Katrina Gibson, has separately been identified as connected to a company by this name; that ownership connection has not been independently confirmed in this file.</div>
+  </section>
+
+  <section>
+    <p>Roybal is separately listed as the Northern Utah Economic Alliance's point of contact on the industry-partner directory of 47G, the state's aerospace and defense trade association.</p>
+  </section>
+
+  <section>
+    <h2>Payments to Commissioner Froerer</h2>
+    <p>Utah Forward PAC paid Weber County Commissioner Gage Froerer $5,000 on 7/11/2022 and $5,000 on 5/4/2023, both listed with the purpose "Political Support" — $10,000 total. Froerer separately serves as Weber County's Co-Chair on NUEA's Advisory Board, the organization Roybal leads.</p>
+    <p>Froerer also holds a gubernatorial appointment to the Military Installation Development Authority (MIDA) board, drawn from among Weber County's sitting commissioners. MIDA's confirmed Weber County project, the Falcon Hill Aerospace Research Park at Hill Air Force Base, is separate from the West Weber Inland Port project area referenced below.</p>
+  </section>
+
+  <section>
+    <h2>Donor context: West Weber</h2>
+    <p>Several of Utah Forward PAC's donors have documented business interests in the West Weber area, where infrastructure financing (including a sewer lift station, a $5 million UIPA loan, and a public infrastructure district bond) has been approved by Weber County in recent years. Nilson &amp; Company operates active residential developments in Weber County, including Orchards at JDC Ranch and The Grove at JDC Ranch in Plain City. Rincon Financial is a corporate vehicle for developer Shane Dunleavy. R&amp;O Construction separately paid Froerer $1,000 directly in 2018, in addition to its $5,000 to Utah Forward PAC in 2022.</p>
+    <div class="callout">Northern Wasatch Association of Realtors (NWAR) — a separate organization from NUEA — paid Froerer $5,000 four times between 2018 and 2022, for $20,000 total. NWAR's CEO throughout that period, Mike Ostermiller, has served on MIDA's board since 2008.</div>
+    <p>Roybal has also served as a public proponent of the West Weber development itself, appearing alongside Froerer and Weber County Economic Development Director Stephanie Sage Russell to promote it — including as a potential Utah Inland Port Authority satellite site. Russell herself previously worked at NUEA before joining the county.</p>
+  </section>
+
+  <section>
+    <h2>Open questions</h2>
+    <details class="open-q">
+      <summary>What is Building Construction Partners LLC's interest in West Weber?</summary>
+      <p>Building Construction Partners LLC gave Utah Forward PAC $10,000 in 2022. The entity (formed 2013, registered in Lehi, Utah County) does not have a named project or established presence in Weber County identified so far.</p>
+    </details>
+    <details class="open-q">
+      <summary>How did Commissioner Froerer vote on the specific West Weber milestones?</summary>
+      <p>This file documents the financial relationship between Utah Forward PAC and Froerer. Froerer's individual recorded votes on West Weber's 2023-2024 milestones (the original project proposal, a later expansion resolution, and UIPA adoption) have not yet been confirmed against meeting minutes.</p>
+    </details>
+    <details class="open-q">
+      <summary>Are there other members or owners of Utah Forward PAC LLC besides Roybal?</summary>
+      <p>Utah Forward PAC, LLC's registered agent is Katrina Gibson and its manager is Laura Warburton — Roybal is a member, not the entity's controlling officer.</p>
+    </details>
+    <details class="open-q">
+      <summary>Did Warburton disclose her dual role managing both the giving PAC and the receiving committee?</summary>
+      <p>Laura Warburton is Utah Forward PAC's own Manager and, per Keep Our Valley Free's PIC registration, also that committee's Director and CFO/Treasurer — both at her home address. Whether this dual role was disclosed anywhere at the time of the $4,927.20 in payments, or required to be, has not been confirmed.</p>
+    </details>
+    <details class="open-q">
+      <summary>What is "Arena," and why did it receive the PAC's single largest payment?</summary>
+      <p>Utah Forward PAC paid $17,798 to an entity or vendor called "Arena" on July 20, 2022, listed with the purpose "Political Support" — the largest single payment in the PAC's confirmed spending. A vendor by a similar name has separately appeared in research on another Weber County campaign's vendor payments. Whether these are the same "Arena," and what services were provided for this amount, has not been confirmed.</p>
+    </details>
+    <details class="open-q">
+      <summary>When did Roybal serve as EDCUtah's CEO, and can it be independently confirmed?</summary>
+      <p>Roybal's own LinkedIn "About" summary states he served as CEO of EDCUtah, but this role does not appear as a separately dated entry in his listed work history there, which otherwise runs continuously from 2005 to the present across other positions. Independent confirmation (e.g., from EDCUtah's own historical materials or contemporaneous news coverage) has not been found.</p>
+    </details>
+  </section>
+
+  <section>
+    <h2>Sources</h2>
+    <details class="open-q">
+      <summary>View all sources</summary>
+      <ul>
+        <li>Utah Forward PAC full raw transaction export (DEX), 2022-2026, disclosures.utah.gov</li>
+        <li>Gage Froerer campaign finance filings, 2018 and 2022-2023 (disclosures.utah.gov)</li>
+        <li>Northern Utah Economic Alliance Advisory Board listing</li>
+        <li>47g.org industry partner directory</li>
+        <li>Utah Division of Corporations — Building Construction Partners LLC and Utah Forward PAC LLC entity records</li>
+        <li>OpenCorporates — Chris Roybal officer records (Northern Utah Economic Alliance, Utah Forward PAC LLC, Wasatch Avian Education Society)</li>
+        <li>"Registered Lobbyist and Political Action Committee Fund Overlapping Races," The Weber County Hive (Substack)</li>
+        <li>Weber County Commission records on West Weber Inland Port infrastructure financing</li>
+        <li>"Growth in Utah: Ogden Valley, Spring Lake incorporation proposals go to voters in November," Deseret News, Aug. 24, 2024</li>
+        <li>keepourvalleyfree.com</li>
+        <li>Keep Our Valley Free PIC registration filing (Lt. Governor's Office)</li>
+        <li>Chris Roybal LinkedIn profile</li>
+        <li>Cross-reference: <a class="rc-tag" href="ryan-starks.html">Ryan Starks →</a>, this repo</li>
+      </ul>
+    </details>
+  </section>
+
+</div>
+
+<footer>
+  <div class="wrap">
+    <div>THE WEBER COUNTY HIVE · UNELECTED POWER</div>
+    <div class="sub">Independent accountability journalism. Public records only. We report; you decide.</div>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('.tile').forEach(function(tile){
+  tile.addEventListener('click', function(){ tile.classList.toggle('flipped'); });
+});
+</script>
+</body>
+</html>
