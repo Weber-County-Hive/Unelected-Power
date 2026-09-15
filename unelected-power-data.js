@@ -83,6 +83,15 @@ const UNELECTED_POWER_PROFILES = [
     tags: ["GOEO", "Nucleus Institute", "Point of the Mountain", "HB 530", "BioHive", "UVU Foundation", "MIDA"],
     dateAdded: "2026-09-14",
     dateUpdated: "2026-09-14"
+  },
+  {
+    slug: "community-alliance-main-street",
+    name: "Community Alliance for Main Street (CAMS)",
+    roleTag: "Organization · Sole-Source City Contract",
+    summary: "Runs Heber City's downtown programming under a sole-source contract negotiated, approved, and signed for the City by a board member who is also the City Manager. Three different documents give three different revenue totals for the same year, and the state's own filing lists a different board than the City or CAMS itself does.",
+    tags: ["CAMS", "Matt Brower", "Sole-Source Contract", "Board Overlap", "Financial Discrepancy"],
+    dateAdded: "2026-09-14",
+    dateUpdated: "2026-09-14"
   }
 ];
 
