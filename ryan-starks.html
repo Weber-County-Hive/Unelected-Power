@@ -69,8 +69,26 @@ footer .sub{color:#a99a85;font-size:13px;margin-top:6px;}
 .diagram-block{background:var(--paper-2);border:1px solid var(--line);padding:18px;margin:18px 0;overflow-x:auto;text-align:center;}
 .diagram-block .mermaid{display:inline-block;}
 .diagram-block svg{max-width:100% !important;min-width:min(480px,100%);height:auto !important;}
+.diagram-block.wide{
+  width:calc(100vw - 24px);
+  max-width:1100px;
+  position:relative;
+  left:50%;
+  transform:translateX(-50%);
+  padding:28px;
+}
 .diagram-block.wide svg{min-width:100%;}
 .diagram-caption{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-soft);margin-top:10px;text-align:center;}
+
+.ask-list{list-style:none;margin:0;padding:0;}
+.ask-list li{
+  background:var(--paper-2);
+  border-left:4px solid var(--gold);
+  padding:14px 18px;
+  margin-bottom:10px;
+  font-size:14.5px;
+}
+.ask-list li strong{color:var(--maroon);}
 </style>
 <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
 <script>
@@ -106,11 +124,12 @@ footer .sub{color:#a99a85;font-size:13px;margin-top:6px;}
   <div class="wrap">
     <div class="kicker">Case File · Never Elected</div>
     <h1 class="title">Ryan <em>Starks</em></h1>
-    <p class="dek">Ran the state's economic development office, then moved to lead its private-sector counterpart under the same Chamber that received a $3.2 million grant he approved three days before announcing the move.</p>
+    <p class="dek">Ran the state's economic development office, then moved to lead its private-sector counterpart under the same Chamber that received a $3.2 million grant he approved three days before announcing the move. A 2026 state audit later found the office's oversight problems ran wider than that one deal.</p>
     <div class="rc-row">
       <a class="rc-tag" href="jefferson-moss.html">Cross-reference: Jefferson Moss →</a>
+      <a class="rc-tag" href="https://weber-county-hive.github.io/audits/weber-hive-goed-audit-2026-18.html">Cross-reference: The 2026 GOED Audit →</a>
     </div>
-    <div class="pub-date">Published Sept. 14, 2026</div>
+    <div class="pub-date">Published Sept. 14, 2026 · Updated Sept. 16, 2026</div>
   </div>
 </header>
 
@@ -133,6 +152,37 @@ footer .sub{color:#a99a85;font-size:13px;margin-top:6px;}
     <h2>The path from Heber City to the Capitol</h2>
     <p>Starks grew up in Ogden Valley, the middle child of five brothers, and served an LDS mission in Quito, Ecuador before studying business and Spanish at Weber State University, where he was student body president. An early internship at the old Governor's Office of Economic Development led to graduate work in public administration and economic development, then a stint at the Governor's Office of Management and Budget — before landing in Heber City as executive director of the Heber Valley Chamber of Commerce and Wasatch County's tourism and economic development office (Nov. 2011 - Nov. 4, 2019, eight years). Starks and Tom Stone, chairman of the Wasatch Center for Advanced Professional Studies (CAPS) board, brought that program to Wasatch High School together; Starks served as its first managing director.</p>
     <p>During his eight years in Heber Valley, Starks also served on a full slate of local boards: the <strong>Wasatch Open Lands Board (WOLB)</strong>, the Heber City <strong>Community Alliance for Main Street (CAMS)</strong>, the Midway Business Alliance, the Soldier Hollow Advisory Board, the Wasatch Community Foundation, the Heber Valley Railroad Board, and the state-level Utah Office of Tourism and State Parks and Recreation boards. He also worked with Heber City leaders to create a new industrial business park near the Heber City airport.</p>
+    <div class="diagram-block wide">
+      <pre class="mermaid">
+%%{init: {'flowchart': {'useMaxWidth': false, 'nodeSpacing': 40, 'rankSpacing': 60}, 'themeVariables': {'fontSize': '26px'}}}%%
+graph TD
+    classDef local fill:#efe6d3,stroke:#5c1a1a,stroke-width:1px,color:#2a1f14;
+    classDef state fill:#f0e0c0,stroke:#a9762c,stroke-width:2px,color:#2a1f14;
+    classDef center fill:#f0e0c0,stroke:#a9762c,stroke-width:2px,color:#2a1f14;
+    classDef proj fill:#efe6d3,stroke:#7a2424,stroke-width:1px,color:#2a1f14;
+
+    RS["Ryan Starks<br/>Heber Valley Chamber / Wasatch County<br/>2011-2019"]:::center
+
+    subgraph Local["Local boards"]
+        WOLB["Wasatch Open Lands Board"]:::local
+        CAMS["Community Alliance<br/>for Main Street (CAMS)"]:::local
+        MBA["Midway Business Alliance"]:::local
+        SH["Soldier Hollow Advisory Board"]:::local
+        WCF["Wasatch Community Foundation"]:::local
+        HVR["Heber Valley Railroad Board"]:::local
+    end
+
+    subgraph State["State-level boards"]
+        TB["Utah Office of Tourism Board"]:::state
+        PRB["State Parks &amp; Recreation Board"]:::state
+    end
+
+    RS --> Local
+    RS --> State
+    RS -.->|helped create| IBP["Industrial business park<br/>near Heber City airport"]:::proj
+      </pre>
+      <div class="diagram-caption">Eight years, nine seats and one project, Heber Valley era</div>
+    </div>
     <div class="callout">Starks' own WOLB and CAMS seats predate two other Unelected Power case files built on those same boards: <a href="dallin-koecher.html">Dallin Koecher</a> (Wasatch Open Lands Board, Heber Valley Chamber/CVB executive director) and <a href="matt-brower.html">Matt Brower</a> (Heber City Manager, CAMS self-dealing contract). All three men held seats on the same two local bodies at different points across roughly the last 15 years.</div>
     <p>In 2019, the state recruited him to run its rural economic development programs. He became GOEO's managing director of operations, later growth and innovation, then its executive director in Jan. 2023, then EDCUtah's Executive Director starting May 19, 2025.</p>
     <div class="diagram-block">
@@ -196,7 +246,32 @@ graph TD
       <tr><td>May 7, 2025</td><td>EDCUtah announces Starks as new Executive Director</td></tr>
       <tr><td>Jul. 8, 2025</td><td>New GOEO leadership cancels the grant, citing conflict of interest</td></tr>
     </table>
-    <div class="callout">GOEO would not say whether Starks disclosed the conflict or recused himself before approving the grant — only that the decision was legally his alone to make. The grant was never funded. Reporting: Bryan Schott, Utah Political Watch, Sept. 3, 2025 (updated Dec. 2, 2025).</div>
+    <div class="callout">GOEO would not say whether Starks disclosed the conflict or recused himself before approving the grant — only that the decision was legally his alone to make. The grant was never funded. Reporting: Bryan Schott, Utah Political Watch, Sept. 3, 2025 (updated Dec. 2, 2025). <strong>A 2026 state audit later confirmed the cancellation independently — see below.</strong></div>
+  </section>
+
+  <section>
+    <h2>The 2026 audit: a wider pattern</h2>
+    <p>More than a year after Starks left GOEO, the Office of the Legislative Auditor General reviewed how the office managed the broader category of funding the Utah Rising grant belonged to — and found the problem wasn't limited to that one deal. Report No. 2026-18, published Sept. 15, 2026, found GOED could not consistently document how nearly $249 million in pass-through and Industrial Assistance Account (IAA) funds was used between fiscal years 2023 and 2025 — a window covering nearly all of Starks' tenure as executive director. The audit attributes the failure to "past GOED leadership" as an institutional finding; it does not name Starks individually.</p>
+    <table class="data">
+      <tr><th>Figure</th><th>What it covers</th></tr>
+      <tr><td>$249M</td><td>Total pass-through + IAA funds GOED could not consistently document, FY2023-25</td></tr>
+      <tr><td>$164M</td><td>Pass-through grants administered over that period</td></tr>
+      <tr><td>$85M</td><td>Industrial Assistance Account funds administered over that period</td></tr>
+    </table>
+    <p>One case from within that window, cited in the audit: in January 2024, the GOEO board approved a $2 million, non-matching IAA grant to the Utah Beef Producers for a meat processing facility. GOEO disbursed the full amount upfront. The business began operating without a full permit, engaged in improper dumping, and closed less than 20 months later. The office's own file on the grant held a single report — an expenditure list submitted after the facility had already shut down. The audit states GOEO learned of the closure from outside sources, not its own monitoring. The state has since recovered roughly 11% of the original award.</p>
+    <p>The audit also tracked how many IAA grantees had documented annual or final reports on file, by fiscal year: 30% in FY2023, 33% in FY2024 — both years within Starks' tenure — falling to zero percent in FY2025, the year he departed and new leadership began.</p>
+    <div class="callout">The same audit independently confirms one piece of the Utah Rising story above: it credits new GOEO leadership with terminating the Salt Lake Chamber Foundation contract "due to contract timing concerns" — corroborating Utah Political Watch's reporting from a second, separate government source. The audit also credits that new leadership, in place since May 2025, with hiring a chief compliance officer and beginning to correct the practices described here.</div>
+  </section>
+
+  <section>
+    <h2>What this would trigger in corporate America</h2>
+    <p>None of what follows is a claim that Starks broke a specific law — he has not been charged with anything. It's a comparison of governance mechanisms: what these same fact patterns would typically set in motion at a publicly traded company, versus what actually happened here.</p>
+    <table class="data">
+      <tr><th>What happened</th><th>What it would typically trigger in corporate America</th></tr>
+      <tr><td>Approved a $3.2M grant to an organization tied to his next employer, three days before announcing the move</td><td>Mandatory advance disclosure to the audit committee as a related-party transaction (SEC Reg. S-K Item 404); discovery after the fact typically means termination for cause and forfeiture of severance</td></tr>
+      <tr><td>A $2M grant disbursed in full upfront, with the state learning of the recipient's closure only from outside sources</td><td>An auditor finding of inadequate lending/grant controls, and usually the end of the responsible officer's job</td></tr>
+    </table>
+    <div class="callout">Corporate executives who approve related-party deals or release funds with no monitoring face personal certification requirements, mandatory clawback, and a regulator that can bar them from serving as an officer or director again. None of that exists for a state office. Here, the grant was simply canceled by the next administration — no clawback, no bar, no public accounting from Starks himself.</div>
   </section>
 
   <section>
@@ -254,6 +329,23 @@ graph TD
       <summary>What was Aaron Starks' 2020 candidacy?</summary>
       <p>Campaign finance records show a $200 payment from Ryan Starks on May 9, 2020 to a committee registered as "Starks, Aaron" — likely his brother, per the address. No campaign or office tied to this committee has been identified yet.</p>
     </details>
+    <details class="open-q">
+      <summary>Does the audit's "past leadership" finding cover Starks' entire tenure, or only part of it?</summary>
+      <p>The audit's review window is fiscal years 2023 through 2025. Starks served as executive director from January 2023 to May 2025. The two overlap almost completely, but the audit doesn't break its findings down by month or attribute specific dollar figures to specific directors — so it isn't possible to say from the report alone how much of the $249 million occurred strictly on his watch versus the brief overlap with Jefferson Moss's arrival.</p>
+    </details>
+  </section>
+
+  <section>
+    <h2>Questions worth asking</h2>
+    <ul class="ask-list">
+      <li><strong>Ask Heber City or the county:</strong> is the industrial business park credited to Starks in 2019 the same Commerce Park parcel later sold via Invitation to Negotiate in January 2024?</li>
+      <li><strong>Ask Starks:</strong> is RGX Strategies, LLC still an active consulting business, and does he remain personally involved in client work while running EDCUtah?</li>
+      <li><strong>Ask EDCUtah's board:</strong> were they aware of the Utah Rising grant, pending or approved, when they hired Starks on May 7, 2025?</li>
+      <li><strong>Ask EDCUtah:</strong> when and why did Starks' title change from "Executive Director" to "President &amp; Executive Director"?</li>
+      <li><strong>Ask EDCUtah:</strong> does its Form 990 or internal conflict-of-interest policy address Starks' relationship to RGX Strategies or the Utah Rising grant?</li>
+      <li><strong>Ask Starks or campaign finance officials:</strong> what was the "Starks, Aaron" committee that received a $200 payment from Ryan Starks in May 2020?</li>
+      <li><strong>Ask the Legislative Auditor General's office:</strong> can the $249 million figure in Report 2026-18 be broken down by fiscal year or by which executive director was in office when each award was made?</li>
+    </ul>
   </section>
 
   <section>
@@ -266,6 +358,7 @@ graph TD
         <li>Northern Utah Economic Alliance "About Us" page (nuea.org)</li>
         <li>"Wasatch High School student professional development program celebrates 10 years," Park Record, May 2026</li>
         <li>Bryan Schott, "Last act: Utah economic chief approved $3.2M grant for future employer's parent organization," Utah Political Watch, Sept. 3, 2025 (updated Dec. 2, 2025)</li>
+        <li>Office of the Legislative Auditor General, Report No. 2026-18, "A Systemic Performance Audit of the Governor's Office of Economic Development: A Review of Oversight and Outcomes," Sept. 15, 2026</li>
         <li>Brigham Tomco, "The face of Utah's economic growth," Deseret News, June 18, 2025</li>
         <li>EDCUtah, "EDCUtah Announces Ryan Starks as New Executive Director," May 2025</li>
         <li>Ryan Starks Announces Departure from Heber Valley Chamber, Heber Valley Radio, Oct. 4, 2019 (by Rachel Kahler)</li>
