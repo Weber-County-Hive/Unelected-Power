@@ -61,10 +61,10 @@ const UNELECTED_POWER_PROFILES = [
     slug: "ryan-starks",
     name: "Ryan Starks",
     roleTag: "President & Exec. Director, EDCUtah · Former GOEO Director",
-    summary: "Ran the state's economic development office, then moved to lead its private-sector counterpart — under the same Chamber that received a $3.2 million taxpayer grant he approved three days before announcing the move. Shares two boards (BioHive, Northern Utah Economic Alliance) with his GOEO successor, Jefferson Moss.",
-    tags: ["EDCUtah", "GOEO", "Salt Lake Chamber", "Utah Rising Grant", "MIDA", "BioHive", "RGX Strategies"],
+    summary: "Ran the state's economic development office, then moved to lead its private-sector counterpart — under the same Chamber that received a $3.2 million taxpayer grant he approved three days before announcing the move. A 2026 state audit later found the office's oversight problems ran wider than that one grant, across nearly his entire tenure. Shares two boards (BioHive, Northern Utah Economic Alliance) with his GOEO successor, Jefferson Moss.",
+    tags: ["EDCUtah", "GOEO", "Salt Lake Chamber", "Utah Rising Grant", "MIDA", "BioHive", "RGX Strategies", "OLAG 2026-18"],
     dateAdded: "2026-09-14",
-    dateUpdated: "2026-09-14"
+    dateUpdated: "2026-09-16"
   },
   {
     slug: "chris-roybal",
@@ -101,6 +101,15 @@ const UNELECTED_POWER_PROFILES = [
     tags: ["CAMS", "Matt Brower", "Sole-Source Contract", "Board Overlap", "Financial Discrepancy"],
     dateAdded: "2026-09-14",
     dateUpdated: "2026-09-14"
+  },
+  {
+    slug: "dan-hemmert",
+    name: "Dan Hemmert",
+    roleTag: "Executive Director, MIDA · Former State Senator",
+    summary: "Resigned from the state Senate to run the same economic development office Ryan Starks would later lead, then spent three years as a private lobbyist for developers — including Dakota Pacific Real Estate and MIDA itself — before becoming MIDA's own Executive Director. He terminated most of that client list in January 2026, keeping only clients with direct MIDA jurisdiction.",
+    tags: ["MIDA", "GOEO", "Election Hive", "Lincoln Hill PAC", "LH Capital", "Regulatory Sandbox", "Dakota Pacific"],
+    dateAdded: "2026-09-16",
+    dateUpdated: "2026-09-16"
   }
 ];
 
