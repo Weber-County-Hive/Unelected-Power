@@ -76,6 +76,15 @@ const UNELECTED_POWER_PROFILES = [
     dateUpdated: "2026-09-14"
   },
   {
+    slug: "laura-warburton",
+    name: "Laura Warburton",
+    roleTag: "Manager, Utah Forward PAC · Director, Keep Our Valley Free",
+    summary: "Managed a developer-funded PAC, directed the committee that opposed Ogden Valley City's incorporation, and sat on the very Planning Commission that reviewed the same developers' projects — including one where the PAC's own vendor is co-owned by its CFO's household.",
+    tags: ["Utah Forward PAC", "Keep Our Valley Free", "Ogden Valley Planning Commission", "Eden Crossing", "Politix LLC"],
+    dateAdded: "2026-09-16",
+    dateUpdated: "2026-09-16"
+  },
+  {
     slug: "jefferson-moss",
     name: "Jefferson Moss",
     roleTag: "Executive Director, GOEO · Former House Majority Leader",
