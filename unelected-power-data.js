@@ -110,6 +110,15 @@ const UNELECTED_POWER_PROFILES = [
     tags: ["MIDA", "GOEO", "Election Hive", "Lincoln Hill PAC", "LH Capital", "Regulatory Sandbox", "Dakota Pacific"],
     dateAdded: "2026-09-16",
     dateUpdated: "2026-09-16"
+  },
+  {
+    slug: "utah-rising",
+    name: "Utah Rising",
+    roleTag: "Organization · Chamber-Led Economic Initiative",
+    summary: "A $3.2 million taxpayer grant went to this business-led initiative — whose own governing committees include the state office that approved the grant, and a company run by the approving director's brother.",
+    tags: ["Utah Rising", "GOEO", "Salt Lake Chamber", "Larry H. Miller Company", "Steve Starks", "Ryan Starks"],
+    dateAdded: "2026-09-16",
+    dateUpdated: "2026-09-16"
   }
 ];
 

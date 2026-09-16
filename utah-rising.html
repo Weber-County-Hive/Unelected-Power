@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Utah Rising | Unelected Power | The Weber County Hive</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+:root{
+  --paper:#f7f1e6; --paper-2:#efe6d3; --ink:#2a1f14; --ink-soft:#63594a;
+  --maroon:#5c1a1a; --maroon-2:#7a2424;
+  --gold:#a9762c; --gold-bg:#f0e0c0;
+  --line:#ddccaa;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--paper);color:var(--ink);font-family:'Source Sans 3',sans-serif;line-height:1.65;font-size:16px;}
+.wrap{max-width:860px;margin:0 auto;padding:0 24px;}
+a{color:var(--maroon-2);}
+h1,h2,h3{font-family:'Playfair Display',serif;color:var(--ink);}
+
+.topbar{background:var(--ink);color:var(--gold-bg);padding:10px 0;font-family:'IBM Plex Mono',monospace;font-size:12px;}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;}
+.topbar a{color:var(--gold-bg);text-decoration:none;opacity:.85;}
+.topbar a:hover{opacity:1;text-decoration:underline;}
+
+header.masthead{background:linear-gradient(135deg,var(--maroon),var(--maroon-2));color:#f4e9d8;padding:40px 0 32px;border-bottom:5px solid var(--gold);}
+header.masthead .wrap{max-width:860px;margin:0 auto;padding:0 24px;}
+.kicker{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-bg);opacity:.8;margin-bottom:14px;}
+h1.title{font-size:42px;line-height:1.1;margin-bottom:14px;color:#fbf3e3;}
+h1.title em{font-style:italic;color:var(--gold-bg);}
+p.dek{font-size:18px;color:#e9d9bb;max-width:640px;}
+.rc-row{margin-top:18px;display:flex;flex-wrap:wrap;gap:8px;}
+.pub-date{margin-top:10px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.03em;color:#d8b98a;}
+.rc-tag{display:inline-block;background:var(--gold-bg);border:1px solid var(--gold);color:var(--maroon);font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.03em;text-transform:uppercase;padding:4px 11px;border-radius:4px;text-decoration:none;}
+.rc-tag:hover{background:var(--gold);color:#fff;}
+
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin:36px 0;}
+.stat{background:var(--paper-2);padding:20px;text-align:center;}
+.stat .num{font-family:'Playfair Display',serif;font-size:26px;color:var(--maroon);font-weight:700;}
+.stat .label{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.05em;color:var(--ink-soft);margin-top:6px;text-transform:uppercase;}
+
+section{padding:8px 0 36px;}
+section h2{font-size:26px;border-bottom:2px solid var(--gold);padding-bottom:10px;margin-bottom:16px;}
+section p{margin-bottom:14px;}
+section ul{margin:0 0 14px 20px;}
+section li{margin-bottom:8px;}
+.callout{background:var(--paper-2);border-left:4px solid var(--maroon);padding:16px 20px;margin:18px 0;font-size:15px;}
+.callout strong{color:var(--maroon);}
+table.data{width:100%;border-collapse:collapse;margin:16px 0;font-size:14.5px;}
+table.data th{text-align:left;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-soft);border-bottom:2px solid var(--ink);padding:6px 10px 8px;}
+table.data td{padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top;}
+table.data tr:nth-child(even){background:var(--paper-2);}
+table.data td.linked{color:var(--maroon);font-weight:600;}
+
+details.open-q{background:var(--paper-2);border:1px solid var(--line);margin-bottom:10px;padding:14px 18px;}
+details.open-q summary{font-family:'IBM Plex Mono',monospace;font-size:13.5px;cursor:pointer;color:var(--maroon);}
+details.open-q p{margin-top:10px;margin-bottom:0;font-size:14.5px;}
+
+.tag-row{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 4px;}
+.tag{font-family:'IBM Plex Mono',monospace;font-size:11px;background:var(--gold-bg);border:1px solid var(--gold);color:var(--ink);padding:3px 9px;}
+
+.ask-list{list-style:none;margin:0;padding:0;}
+.ask-list li{background:var(--paper-2);border-left:4px solid var(--gold);padding:14px 18px;margin-bottom:10px;font-size:14.5px;}
+.ask-list li strong{color:var(--maroon);}
+
+footer{background:var(--ink);color:var(--paper-2);padding:36px 0 46px;margin-top:20px;}
+footer .sub{color:#a99a85;font-size:13px;margin-top:6px;}
+
+@media(max-width:600px){
+  header.masthead{padding:32px 0 26px;}
+  h1.title{font-size:30px;}
+  .stats{grid-template-columns:1fr;}
+}
+.diagram-block{background:var(--paper-2);border:1px solid var(--line);padding:18px;margin:18px 0;overflow-x:auto;text-align:center;}
+.diagram-block .mermaid{display:inline-block;}
+.diagram-block svg{max-width:100% !important;min-width:min(480px,100%);height:auto !important;}
+.diagram-block.wide{width:calc(100vw - 24px);max-width:1100px;position:relative;left:50%;transform:translateX(-50%);padding:28px;}
+.diagram-block.wide svg{min-width:100%;}
+.diagram-caption{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-soft);margin-top:10px;text-align:center;}
+</style>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>
+  mermaid.initialize({
+    startOnLoad: true,
+    theme: 'base',
+    securityLevel: 'loose',
+    flowchart: { htmlLabels: true, useMaxWidth: true, padding: 18 },
+    themeVariables: {
+      primaryColor: '#efe6d3',
+      primaryTextColor: '#2a1f14',
+      primaryBorderColor: '#5c1a1a',
+      lineColor: '#a9762c',
+      secondaryColor: '#f0e0c0',
+      secondaryTextColor: '#2a1f14',
+      tertiaryColor: '#f7f1e6',
+      fontFamily: 'Verdana, Arial, sans-serif',
+      fontSize: '19px'
+    }
+  });
+</script>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span>The Weber County Hive · Unelected Power</span>
+    <a href="https://weber-county-hive.github.io/-weber-county-hive-index/">Index ↗</a>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="kicker">Case File · Organization</div>
+    <h1 class="title">Utah <em>Rising</em></h1>
+    <p class="dek">A $3.2 million taxpayer grant went to a business-led economic initiative whose own committees include the state office that approved the grant — and a company run by the approving director's brother.</p>
+    <div class="rc-row">
+      <a class="rc-tag" href="ryan-starks.html">Cross-reference: Ryan Starks →</a>
+      <a class="rc-tag" href="dan-hemmert.html">Cross-reference: Dan Hemmert →</a>
+    </div>
+    <div class="pub-date">Published Sep 16, 2026 &middot; Updated Sep 16, 2026</div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="stats">
+    <div class="stat"><div class="num">$3.2M</div><div class="label">taxpayer grant to this initiative</div></div>
+    <div class="stat"><div class="num">2</div><div class="label">committees GOEO itself sits on</div></div>
+    <div class="stat"><div class="num">26+22</div><div class="label">steering + technical committee members</div></div>
+  </div>
+
+  <section>
+    <h2>What Utah Rising is</h2>
+    <p>Utah Rising: A Free Enterprise Vision for Utah's Economy is a business-led, statewide economic strategy jointly presented by the Utah Chamber and Salt Lake Chamber, chaired by Salt Lake Chamber President &amp; CEO Derek Miller. Per its own materials, it sets goals across six focus areas — workforce and education, housing, transportation, livability, business environment, and natural resources — each paired with a named "signature project," including a $1 billion investment in mental health-professional training and doubling FrontRunner rail service along the Wasatch Front.</p>
+    <p>On April 29, 2025, then-GOEO Executive Director Ryan Starks and the state's Industrial Assistance Account Committee approved a 10-year, $3.2 million taxpayer grant to the Salt Lake Chamber Foundation for Utah Rising — three days before Starks announced he was leaving GOEO to lead EDCUtah, an organization under the same Chamber's umbrella. The grant was later canceled by Starks' successor over conflict-of-interest concerns. Full detail on that sequence is on <a href="ryan-starks.html">Ryan Starks' own case file</a>.</p>
+  </section>
+
+  <section>
+    <h2>The family connection</h2>
+    <p>Utah Rising's Steering Committee includes <strong>The Larry H. Miller Company</strong>. Its CEO is <strong>Steve Starks</strong> — Ryan Starks' brother. The same grant Ryan Starks personally approved went to an initiative whose governing Steering Committee includes a company run by his own sibling, alongside GOEO, his own office at the time.</p>
+    <div class="diagram-block wide">
+      <pre class="mermaid">
+%%{init: {'flowchart': {'useMaxWidth': false, 'nodeSpacing': 50, 'rankSpacing': 80}, 'themeVariables': {'fontSize': '24px'}}}%%
+graph LR
+    classDef center fill:#f0e0c0,stroke:#a9762c,stroke-width:2px,color:#2a1f14;
+    classDef org fill:#efe6d3,stroke:#5c1a1a,stroke-width:1px,color:#2a1f14;
+    RS["Ryan Starks<br/>GOEO Executive Director<br/>approved the $3.2M grant"]:::center -->|"grant, 4/29/2025"| UR["Utah Rising"]:::org
+    GOEO["Governor's Office of<br/>Economic Opportunity"]:::org -->|"Steering + Technical<br/>Committee member"| UR
+    LHM["The Larry H. Miller Company<br/>CEO: Steve Starks"]:::org -->|"Steering Committee member"| UR
+    RS -.->|brother| SS["Steve Starks"]:::org
+    SS -.->|CEO of| LHM
+      </pre>
+      <div class="diagram-caption">The approving director, his own office, and his brother's company, all in the same initiative</div>
+    </div>
+    <div class="callout">Steve Starks was separately named by Gov. Cox as vice chair of the organizing committee for the 2034 Utah Olympic and Paralympic Games — already documented on Ryan Starks' own page. This is the first documented connection between the two brothers and a specific taxpayer-funded grant.</div>
+  </section>
+
+  <section>
+    <h2>Steering Committee</h2>
+    <p>Utah Rising's own published roster. Rows marked with a cross-reference link to existing reporting elsewhere in this project.</p>
+    <table class="data">
+      <tr><th>Member</th><th>Note</th></tr>
+      <tr><td>Salt Lake Chamber</td><td>Utah Rising's lead sponsor; parent organization of EDCUtah, which Ryan Starks now leads</td></tr>
+      <tr><td>Governor's Office of Economic Opportunity</td><td class="linked">The same office that approved the $3.2M grant — see <a href="ryan-starks.html">Ryan Starks</a></td></tr>
+      <tr><td>The Larry H. Miller Company</td><td class="linked">CEO Steve Starks — Ryan Starks' brother; see above</td></tr>
+      <tr><td>Clyde Companies, Inc.</td><td class="linked">Full political-giving and land-ownership network already documented in this project</td></tr>
+      <tr><td>Ivory Homes</td><td class="linked">Full 2018-2026 campaign-donation history already documented in this project</td></tr>
+      <tr><td>Zions Bank</td><td class="linked">Also on the Technical Committee; PID financial-advisor conflicts already documented in this project</td></tr>
+      <tr><td>The Church of Jesus Christ of Latter-Day Saints Foundation</td><td>Not yet cross-referenced against other project research</td></tr>
+      <tr><td>Deseret Management Corporation</td><td>The Church's for-profit business arm; not yet cross-referenced</td></tr>
+      <tr><td>AT&amp;T</td><td>Also on the Technical Committee; a Utah executive is quoted on Utah Rising's own materials</td></tr>
+      <tr><td>CBRE</td><td>Also on the Technical Committee</td></tr>
+      <tr><td>Colliers International</td><td>Also on the Technical Committee</td></tr>
+      <tr><td>Dorsey &amp; Whitney LLP</td><td>Law firm</td></tr>
+      <tr><td>Enbridge</td><td>Also on the Technical Committee</td></tr>
+      <tr><td>Gardner Group</td><td>Kem C. Gardner's real estate/development company</td></tr>
+      <tr><td>Intermountain Health</td><td>—</td></tr>
+      <tr><td>Kem C. Gardner Policy Institute at the University of Utah</td><td>Also on the Technical Committee; Director Natalie Gochnour quoted on Utah Rising's own materials</td></tr>
+      <tr><td>Mountain America Credit Union</td><td>—</td></tr>
+      <tr><td>Penna Powers</td><td>Also on the Technical Committee; PR/communications firm</td></tr>
+      <tr><td>Rocky Mountain Power</td><td>Also on the Technical Committee; already appears in this project's utility rate-case research</td></tr>
+      <tr><td>The Boyer Company</td><td>Real estate developer</td></tr>
+      <tr><td>The Cynosure Group</td><td>—</td></tr>
+      <tr><td>University of Utah</td><td>—</td></tr>
+      <tr><td>UMB Bank</td><td>—</td></tr>
+      <tr><td>Utah Jazz</td><td>Owned by The Larry H. Miller Company</td></tr>
+      <tr><td>WCF Insurance</td><td>—</td></tr>
+      <tr><td>Wells Fargo</td><td>—</td></tr>
+      <tr><td>WSP</td><td>Also on the Technical Committee; engineering/infrastructure firm</td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>Technical Committee</h2>
+    <table class="data">
+      <tr><th>Member</th><th>Note</th></tr>
+      <tr><td>Governor's Office of Economic Opportunity</td><td class="linked">Same office, second committee — see above</td></tr>
+      <tr><td>Economic Development Corporation of Utah (EDCUtah)</td><td class="linked">The organization Ryan Starks moved to lead 8 days after this grant was approved</td></tr>
+      <tr><td>Governor's Housing Coordinator</td><td class="linked">Steve Waldrip, who has his own Unelected Power case file in this project</td></tr>
+      <tr><td>Utah Inland Port Authority</td><td class="linked">Already extensively documented in this project</td></tr>
+      <tr><td>BioHive</td><td class="linked">The board Ryan Starks and Jefferson Moss both sit on</td></tr>
+      <tr><td>World Trade Center Utah</td><td>Possibly, but not confirmed, the same organization as the "Utah World Trade Center Corporation" board seat found on Dan Hemmert's officer history — unresolved naming question</td></tr>
+      <tr><td>Zions Bank</td><td class="linked">Also on the Steering Committee — see above</td></tr>
+      <tr><td>AT&amp;T / Big-D Construction / CBRE / Colliers International / Enbridge / Penna Powers / Rocky Mountain Power / WSP</td><td>Also on the Steering Committee — see above</td></tr>
+      <tr><td>Governor's Office of Planning and Budget</td><td>Ryan Starks' own former employer, earlier in his career</td></tr>
+      <tr><td>Kem C. Gardner Policy Institute at the University of Utah</td><td>Also on the Steering Committee — see above</td></tr>
+      <tr><td>Envision Utah</td><td class="linked">Full leadership-network file already exists in this project</td></tr>
+      <tr><td>Wasatch Front Regional Council / Wasatch Front Economic Development District</td><td class="linked">Board/funding-source file already exists in this project</td></tr>
+      <tr><td>Cedar City Chamber of Commerce</td><td>Also serves on the separate Local &amp; Regional Chambers Committee</td></tr>
+      <tr><td>Utah Association of Counties / Utah League of Cities and Towns / Utah Department of Transportation / Utah Transit Authority / Utah State Board of Education / Utah System of Higher Education / Utah Promise</td><td>State/quasi-governmental bodies; no specific prior research tying them to this thread</td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>Local &amp; Regional Chambers of Commerce Committee</h2>
+    <p>A third, smaller committee: Box Elder, Cedar City, Kanab Area, Washington Area, Carbon County, Moab, and Vernal Area Chambers of Commerce.</p>
+  </section>
+
+  <section>
+    <h2>Open questions</h2>
+    <details class="open-q">
+      <summary>Did anyone flag GOEO's own committee membership as a conflict before the $3.2M grant was approved?</summary>
+      <p>Not established from any source found so far. The office funding the initiative and formally participating in its governance is a structural fact; whether it was raised internally as a concern before the April 2025 grant vote is unknown.</p>
+    </details>
+    <details class="open-q">
+      <summary>Is "World Trade Center Utah" the same organization as "Utah World Trade Center Corporation"?</summary>
+      <p>Not confirmed. This project has encountered similar naming variances with other entities before (e.g., LMSA-related naming questions elsewhere in this research); the two names here are similar but not identical, and no direct confirmation has been found either way.</p>
+    </details>
+    <details class="open-q">
+      <summary>What is Utah Rising's current status, following the grant's cancellation?</summary>
+      <p>Not established. Whether the initiative continues to operate, whether it received funding from other sources, and whether its Steering/Technical Committee membership has changed since April 2025 are all unconfirmed.</p>
+    </details>
+  </section>
+
+  <section>
+    <h2>Questions worth asking</h2>
+    <ul class="ask-list">
+      <li><strong>Ask GOEO/GOED:</strong> why did the office sit on Utah Rising's governing committees while also approving and administering a taxpayer grant to it?</li>
+      <li><strong>Ask the Salt Lake Chamber:</strong> did Steve Starks' role as Larry H. Miller Company CEO, or his brother's role approving the grant, come up in any internal discussion of the Steering Committee's makeup?</li>
+      <li><strong>Ask the Utah Chamber/Salt Lake Chamber:</strong> is Utah Rising still active, and has its committee membership changed since the grant was canceled in July 2025?</li>
+      <li><strong>Ask World Trade Center Utah and Utah World Trade Center Corporation:</strong> are these the same organization?</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Sources</h2>
+    <details class="open-q">
+      <summary>View all sources</summary>
+      <ul>
+        <li>Utah Chamber / Salt Lake Chamber, "Utah Rising: A Free Enterprise Vision for Utah's Economy" (official initiative page, including Vision, Mission, focus-area goals, and signature projects)</li>
+        <li>Utah Chamber / Salt Lake Chamber, Utah Rising Steering Committee, Technical Committee, and Local &amp; Regional Chambers of Commerce Committee rosters (official initiative page)</li>
+        <li>Bryan Schott, "Last act: Utah economic chief approved $3.2M grant for future employer's parent organization," Utah Political Watch, Sept. 3, 2025 (updated Dec. 2, 2025)</li>
+        <li>Office of the Legislative Auditor General, Report No. 2026-18, "A Systemic Performance Audit of the Governor's Office of Economic Development," Sept. 15, 2026 (independent confirmation of the grant's termination)</li>
+        <li>Cross-references: <a href="ryan-starks.html">Ryan Starks</a> case file (this project), <a href="dan-hemmert.html">Dan Hemmert</a> case file (this project)</li>
+      </ul>
+    </details>
+  </section>
+
+</div>
+
+<footer>
+  <div class="wrap">
+    <div>THE WEBER COUNTY HIVE · UNELECTED POWER</div>
+    <div class="sub">Independent accountability journalism. Public records only. We report; you decide.</div>
+  </div>
+</footer>
+
+</body>
+</html>
