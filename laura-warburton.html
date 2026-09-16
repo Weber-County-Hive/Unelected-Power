@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Laura Warburton | Unelected Power | The Weber County Hive</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+:root{
+  --paper:#f7f1e6; --paper-2:#efe6d3; --ink:#2a1f14; --ink-soft:#63594a;
+  --maroon:#5c1a1a; --maroon-2:#7a2424;
+  --gold:#a9762c; --gold-bg:#f0e0c0;
+  --line:#ddccaa;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--paper);color:var(--ink);font-family:'Source Sans 3',sans-serif;line-height:1.65;font-size:16px;}
+.wrap{max-width:860px;margin:0 auto;padding:0 24px;}
+a{color:var(--maroon-2);}
+h1,h2,h3{font-family:'Playfair Display',serif;color:var(--ink);}
+
+.topbar{background:var(--ink);color:var(--gold-bg);padding:10px 0;font-family:'IBM Plex Mono',monospace;font-size:12px;}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;}
+.topbar a{color:var(--gold-bg);text-decoration:none;opacity:.85;}
+.topbar a:hover{opacity:1;text-decoration:underline;}
+
+header.masthead{background:linear-gradient(135deg,var(--maroon),var(--maroon-2));color:#f4e9d8;padding:40px 0 32px;border-bottom:5px solid var(--gold);}
+header.masthead .wrap{max-width:860px;margin:0 auto;padding:0 24px;}
+.kicker{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-bg);opacity:.8;margin-bottom:14px;}
+h1.title{font-size:42px;line-height:1.1;margin-bottom:14px;color:#fbf3e3;}
+h1.title em{font-style:italic;color:var(--gold-bg);}
+p.dek{font-size:18px;color:#e9d9bb;max-width:640px;}
+.rc-row{margin-top:18px;display:flex;flex-wrap:wrap;gap:8px;}
+.pub-date{margin-top:10px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.03em;color:#d8b98a;}
+.rc-tag{display:inline-block;background:var(--gold-bg);border:1px solid var(--gold);color:var(--maroon);font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.03em;text-transform:uppercase;padding:4px 11px;border-radius:4px;text-decoration:none;}
+.rc-tag:hover{background:var(--gold);color:#fff;}
+
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin:36px 0;}
+.stat{background:var(--paper-2);padding:20px;text-align:center;}
+.stat .num{font-family:'Playfair Display',serif;font-size:26px;color:var(--maroon);font-weight:700;}
+.stat .label{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.05em;color:var(--ink-soft);margin-top:6px;text-transform:uppercase;}
+
+section{padding:8px 0 36px;}
+section h2{font-size:26px;border-bottom:2px solid var(--gold);padding-bottom:10px;margin-bottom:16px;}
+section p{margin-bottom:14px;}
+section ul{margin:0 0 14px 20px;}
+section li{margin-bottom:8px;}
+.callout{background:var(--paper-2);border-left:4px solid var(--maroon);padding:16px 20px;margin:18px 0;font-size:15px;}
+.callout strong{color:var(--maroon);}
+table.data{width:100%;border-collapse:collapse;margin:16px 0;font-size:14.5px;}
+table.data th{text-align:left;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-soft);border-bottom:2px solid var(--ink);padding:6px 10px 8px;}
+table.data td{padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top;}
+table.data tr:nth-child(even){background:var(--paper-2);}
+
+details.open-q{background:var(--paper-2);border:1px solid var(--line);margin-bottom:10px;padding:14px 18px;}
+details.open-q summary{font-family:'IBM Plex Mono',monospace;font-size:13.5px;cursor:pointer;color:var(--maroon);}
+details.open-q p{margin-top:10px;margin-bottom:0;font-size:14.5px;}
+
+.tag-row{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 4px;}
+.tag{font-family:'IBM Plex Mono',monospace;font-size:11px;background:var(--gold-bg);border:1px solid var(--gold);color:var(--ink);padding:3px 9px;}
+
+footer{background:var(--ink);color:var(--paper-2);padding:36px 0 46px;margin-top:20px;}
+footer .sub{color:#a99a85;font-size:13px;margin-top:6px;}
+
+@media(max-width:600px){
+  header.masthead{padding:32px 0 26px;}
+  h1.title{font-size:30px;}
+  .stats{grid-template-columns:1fr;}
+}
+.diagram-block{background:var(--paper-2);border:1px solid var(--line);padding:24px 18px;margin:18px 0;overflow-x:auto;text-align:center;}
+.diagram-block .mermaid{display:inline-block;width:100%;}
+.diagram-block svg{width:100% !important;min-width:700px;height:auto !important;}
+.diagram-block.wide svg{min-width:800px;}
+.diagram-caption{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-soft);margin-top:10px;text-align:center;}
+
+.tile-intro{font-size:13.5px;color:var(--ink-soft);margin-bottom:14px;}
+.tile-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:16px 0 8px;}
+.tile{background:none;perspective:1200px;height:205px;}
+.tile-inner{position:relative;width:100%;height:100%;transition:transform .5s cubic-bezier(.4,.2,.2,1);transform-style:preserve-3d;cursor:pointer;}
+.tile.flipped .tile-inner{transform:rotateY(180deg);}
+.tile-face{position:absolute;inset:0;backface-visibility:hidden;border-radius:8px;padding:16px;display:flex;flex-direction:column;justify-content:center;overflow-y:auto;}
+.tile-front{background:linear-gradient(135deg,var(--maroon),var(--maroon-2));color:#f4e9d8;text-align:center;border:2px solid var(--gold);}
+.tile-front .name{font-family:'Playfair Display',serif;font-size:17px;font-weight:700;margin-bottom:6px;}
+.tile-front .role{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.03em;color:var(--gold-bg);line-height:1.5;}
+.tile-front .hint{margin-top:12px;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:#d8b98a;}
+.tile-front .stance{display:inline-block;margin-top:8px;font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.05em;text-transform:uppercase;padding:3px 9px;border-radius:9px;}
+.stance-against{background:#f0d7d7;color:#7a2727;border:1px solid #d69a9a;}
+.stance-funded{background:var(--gold-bg);color:var(--maroon);border:1px solid var(--gold);}
+.tile-back{background:var(--paper-2);border:2px solid var(--maroon);transform:rotateY(180deg);font-size:12.5px;color:var(--ink);line-height:1.5;text-align:left;}
+.tile-back .connect-label{font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--maroon);margin-bottom:6px;display:block;}
+.tile-back ul{margin:0;padding-left:16px;}
+.tile-back li{margin-bottom:4px;}
+@media(max-width:700px){ .tile-grid{grid-template-columns:repeat(2,1fr);} }
+@media(max-width:480px){ .tile-grid{grid-template-columns:1fr;} .tile{height:auto;min-height:170px;} }
+
+.giving-chart{display:flex;align-items:center;gap:22px;margin:18px 0 4px;flex-wrap:wrap;}
+.giving-source{background:var(--gold-bg);border:2px solid var(--gold);border-radius:6px;padding:20px 18px;text-align:center;font-size:16px;font-weight:600;max-width:180px;flex-shrink:0;}
+.giving-targets{display:flex;flex-direction:column;gap:14px;flex:1;min-width:260px;}
+.giving-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
+.giving-amount{font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--maroon);min-width:150px;text-align:right;flex-shrink:0;}
+.giving-arrow{color:var(--gold);font-size:18px;flex-shrink:0;}
+.giving-recipient{background:var(--paper-2);border:1px solid var(--maroon);border-radius:6px;padding:12px 16px;font-size:15px;flex:1;}
+.giving-recipient .sub{display:block;font-size:12.5px;color:var(--ink-soft);margin-top:3px;}
+@media(max-width:600px){
+  .giving-chart{flex-direction:column;}
+  .giving-amount{text-align:left;min-width:auto;}
+}
+.status-tag{display:inline-block;font-size:11px;font-family:'IBM Plex Mono',monospace;padding:2px 9px;border-radius:10px;margin-left:6px;}
+.status-confirmed{background:#e4ecd9;color:#3d5a2c;border:1px solid #a9c491;}
+.status-narrow{background:var(--gold-bg);color:var(--maroon);border:1px solid var(--gold);}
+.status-contradicted{background:#f0d7d7;color:#7a2727;border:1px solid #d69a9a;}
+</style>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>
+  mermaid.initialize({
+    startOnLoad: true,
+    theme: 'base',
+    securityLevel: 'loose',
+    flowchart: { htmlLabels: true, useMaxWidth: true, padding: 18 },
+    themeVariables: {
+      primaryColor: '#efe6d3',
+      primaryTextColor: '#2a1f14',
+      primaryBorderColor: '#5c1a1a',
+      lineColor: '#a9762c',
+      secondaryColor: '#f0e0c0',
+      secondaryTextColor: '#2a1f14',
+      tertiaryColor: '#f7f1e6',
+      fontFamily: 'Verdana, Arial, sans-serif',
+      fontSize: '19px'
+    }
+  });
+</script>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span>The Weber County Hive · Unelected Power</span>
+    <a href="https://weber-county-hive.github.io/-weber-county-hive-index/">Index ↗</a>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="kicker">Case File · PAC Manager, Committee Director, Planning Commissioner</div>
+    <h1 class="title">Laura <em>Warburton</em></h1>
+    <p class="dek">Managed a political action committee, directed a political issues committee, and sat on the very Planning Commission that reviewed the same developers' projects — three roles, one overlapping network, and public statements that only partly match the record.</p>
+    <div class="pub-date">Published Sept. 16, 2026</div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="stats">
+    <div class="stat"><div class="num">3</div><div class="label">overlapping roles across one developer network</div></div>
+    <div class="stat"><div class="num">$20,000</div><div class="label">from Lewis, Dunleavy &amp; Rincon Financial into Utah Forward PAC, one week in April 2022</div></div>
+    <div class="stat"><div class="num">$7,158</div><div class="label">paid by the PAC to its own managers' company, Politix LLC</div></div>
+  </div>
+
+  <section>
+    <h2>Three roles, one network</h2>
+    <p>Laura Warburton has never held elected office. Her influence over Ogden Valley's development and incorporation politics ran instead through three positions — one she managed, one she directed, and one she was appointed to. Each intersects with the same small circle of developers and officials.</p>
+    <p>She is best known publicly as the founder of Live Hannah's Hope and as a vocal opponent of Ogden Valley City's 2024 incorporation. Less visible: she managed Utah Forward PAC, a committee that has received developer contributions and directed them to county campaigns since 2022; she directed Keep Our Valley Free (KOVF), the incorporation-opposition committee whose own filings show vendor payments re-attributed to her name after the fact; and, from June 2025 to January 2026, she sat on the Planning Commission that reviewed the same developers' projects.</p>
+    <p class="tile-intro">Tap a tile to see who each person is and how they connect.</p>
+    <div class="tile-grid">
+
+      <div class="tile"><div class="tile-inner">
+        <div class="tile-face tile-front"><div class="name">Gage Froerer</div><div class="role">Weber County Commissioner<br>Former State Rep · MIDA Board</div><div class="hint">Tap to flip</div></div>
+        <div class="tile-face tile-back"><span class="connect-label">Connection</span>
+          <ul>
+            <li>Utah House, 2007-2018</li>
+            <li>Weber County Commission Chair</li>
+            <li>MIDA board member since 2019</li>
+            <li>Voted 2-1 to approve Eden Crossing, 2023, overriding a 5-2 denial</li>
+            <li>Utah Forward PAC gave his campaign $10,000, 2022-23</li>
+          </ul>
+        </div>
+      </div></div>
+
+      <div class="tile"><div class="tile-inner">
+        <div class="tile-face tile-front"><div class="name">Katrina Gibson</div><div class="role">UFP Registered Agent / CFO<br>Registered Lobbyist</div><span class="stance stance-funded">PAC Funded Anti-Incorp.</span><div class="hint">Tap to flip</div></div>
+        <div class="tile-face tile-back"><span class="connect-label">Connection</span>
+          <ul>
+            <li>Signed Ben Nadolski's 2023 mayoral disclosure as "Secretary of Committee"</li>
+            <li>Registered Agent / CFO of Utah Forward PAC</li>
+            <li>Own lobbyist license canceled 6 days after filing to run, Jan. 2026</li>
+            <li>Co-owns Politix LLC — the PAC's own $7,158 polling vendor</li>
+            <li>Married to Kerry Gibson</li>
+          </ul>
+        </div>
+      </div></div>
+
+      <div class="tile"><div class="tile-inner">
+        <div class="tile-face tile-front"><div class="name">Kerry Gibson</div><div class="role">Registered Lobbyist<br>Former State Rep, County Comm.<br>&amp; State Ag Commissioner</div><div class="hint">Tap to flip</div></div>
+        <div class="tile-face tile-back"><span class="connect-label">Connection</span>
+          <ul>
+            <li>Utah House 2005-10; Weber Co. Commissioner 2011-18 (resigned)</li>
+            <li>Resignation tied to a DNR post delayed by a probe (no charges)</li>
+            <li>UDAF Commissioner 2019-20; lost 2020 congressional primary</li>
+            <li>Probe became a Supreme Court records case (McKitrick v. Gibson, 2021)</li>
+            <li>Lobbies for Wolf Creek Management (Lewis) and Ogden City</li>
+            <li>Co-owns Politix LLC and Xalisco; married to Katrina</li>
+          </ul>
+        </div>
+      </div></div>
+
+      <div class="tile"><div class="tile-inner">
+        <div class="tile-face tile-front"><div class="name">Laura Warburton</div><div class="role">This file's subject</div><span class="stance stance-against">Anti-Incorporation</span><div class="hint">Tap to flip</div></div>
+        <div class="tile-face tile-back"><span class="connect-label">Connection</span>
+          <ul>
+            <li><strong>Managed</strong> Utah Forward PAC</li>
+            <li><strong>Directed</strong> Keep Our Valley Free</li>
+            <li>OVPC Commissioner, June 2025 - Jan. 26, 2026 (resigned)</li>
+            <li>Voted on the same developers' projects her committees took money from</li>
+          </ul>
+        </div>
+      </div></div>
+
+      <div class="tile"><div class="tile-inner">
+        <div class="tile-face tile-front"><div class="name">John Lewis</div><div class="role">Developer</div><span class="stance stance-funded">Funded Anti-Incorp. Side</span><div class="hint">Tap to flip</div></div>
+        <div class="tile-face tile-back"><span class="connect-label">Connection</span>
+          <ul>
+            <li>Developer: Eden Crossing, Wolf Creek Resort, Cobabe Ranch</li>
+            <li>Former OVPC Chair, 2020-2022</li>
+            <li>Funded both Utah Forward PAC and Keep Our Valley Free</li>
+          </ul>
+        </div>
+      </div></div>
+
+      <div class="tile"><div class="tile-inner">
+        <div class="tile-face tile-front"><div class="name">Shane Dunleavy</div><div class="role">Developer</div><span class="stance stance-against">Anti-Incorp. (skeptic)</span><div class="hint">Tap to flip</div></div>
+        <div class="tile-face tile-back"><span class="connect-label">Connection</span>
+          <ul>
+            <li>Co-owner, Wolf Creek Resort Holdings (with Lewis)</li>
+            <li>Runs EVO Utah / Legacy Mountain Estates</li>
+            <li>Rincon Financial, LLC — his other giving entity</li>
+            <li>Gave UFP $5,000 in 2022, same week as Lewis</li>
+          </ul>
+        </div>
+      </div></div>
+
+      <div class="tile"><div class="tile-inner">
+        <div class="tile-face tile-front"><div class="name">Sharon Bolos</div><div class="role">Weber County Commissioner<br>Seat B</div><div class="hint">Tap to flip</div></div>
+        <div class="tile-face tile-back"><span class="connect-label">Connection</span>
+          <ul>
+            <li>Brother Bryan Arrington is VP of Construction, Nilson Homes — a $20,000 UFP donor</li>
+            <li>Received $3,415 (2022) + $2,500 (2026) from Utah Forward PAC</li>
+            <li>Received $10,000 personally from Froerer</li>
+            <li>Received $100 personally from Warburton (4/17/26)</li>
+          </ul>
+        </div>
+      </div></div>
+
+    </div>
+
+    <div class="diagram-block wide">
+      <pre class="mermaid">
+graph TD
+    classDef center fill:#f0e0c0,stroke:#a9762c,stroke-width:2px,color:#2a1f14;
+    classDef shared fill:#efe6d3,stroke:#5c1a1a,stroke-width:1px,color:#2a1f14;
+    Froerer["Gage Froerer<br/>Weber Co. Commissioner"]:::shared
+    Warburton["Laura Warburton<br/>OVPC · KOVF · UFP"]:::center
+    KGibson["Katrina Gibson<br/>UFP Registered Agent/CFO"]:::shared
+    KerryGibson["Kerry Gibson<br/>Registered Lobbyist"]:::shared
+    Lewis["John Lewis<br/>Developer"]:::shared
+    Dunleavy["Shane Dunleavy<br/>Developer"]:::shared
+    UFP(["Utah Forward PAC"]):::center
+    KOVF(["Keep Our Valley Free"]):::shared
+    EdenCrossing[/"Eden Crossing"/]:::shared
+    Bolos["Sharon Bolos<br/>Weber Co. Commissioner"]:::shared
+
+    Warburton -->|managed| UFP
+    KGibson -->|registered agent / CFO of| UFP
+    KerryGibson ---|married to| KGibson
+    Lewis -->|"$5,000 (4/19/22)"| UFP
+    Dunleavy -->|"$5,000 (4/19/22)"| UFP
+    UFP -->|"$10,000 to campaign"| Froerer
+    UFP -->|"$5,915 combined"| Bolos
+    Froerer -->|"$10,000 personally"| Bolos
+    Warburton -->|directed| KOVF
+    UFP -->|"$2,427.20 (1/9/24)"| KOVF
+    Lewis -->|"$5,912.70 + $769.60 direct-pay"| KOVF
+    Lewis -->|developer of| EdenCrossing
+    Froerer -->|"voted to approve, 2023"| EdenCrossing
+    Warburton -->|"voted to approve, 2025"| EdenCrossing
+      </pre>
+      <div class="diagram-caption">Documented financial and voting connections, 2022-2025</div>
+    </div>
+
+    <div class="diagram-block wide">
+      <pre class="mermaid">
+graph LR
+    classDef center fill:#f0e0c0,stroke:#a9762c,stroke-width:2px,color:#2a1f14;
+    classDef shared fill:#efe6d3,stroke:#5c1a1a,stroke-width:1px,color:#2a1f14;
+    Froerer["Froerer"]:::shared -->|took $10,000 from| UFP(("Utah Forward PAC")):::center
+    UFP -->|managed by| Warburton["Warburton"]:::center
+    UFP -->|registered agent| Gibson["K. Gibson"]:::shared
+    Gibson -->|married to| KerryG["Kerry Gibson"]:::shared
+    UFP -->|took $5,000 from| Lewis["Lewis"]:::shared
+    UFP -->|took $5,000 from| Dunleavy["Dunleavy"]:::shared
+    Lewis -->|co-developer with| Dunleavy
+    Warburton -->|voted on his project| Lewis
+    Froerer -->|voted to approve| Lewis
+      </pre>
+      <div class="diagram-caption">The same six people, redrawn to show the closed loop</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Timeline</h2>
+    <table class="data">
+      <tr><th>Date</th><th>Event</th></tr>
+      <tr><td>2020 - early 2022</td><td>John Lewis chairs the county-era Ogden Valley Planning Commission.</td></tr>
+      <tr><td>Apr. 17-19, 2022</td><td>Utah Forward PAC's founding donor cluster: Atlee Wampler $5,000, Lewis $5,000, Dunleavy $5,000, Rincon Financial (Dunleavy-linked) $10,000.</td></tr>
+      <tr><td>May 3, 2022</td><td>Bonnie Kier-Herrick's family entities give $2,500 each to Utah Forward PAC.</td></tr>
+      <tr><td>Jul. 11, 2022</td><td>Utah Forward PAC gives Gage Froerer's campaign $5,000.</td></tr>
+      <tr><td>Mid-2022</td><td>Lewis's Planning Commission chairmanship ends; Trevor Shuman is chair by August.</td></tr>
+      <tr><td>May 4, 2023</td><td>Utah Forward PAC gives Froerer's campaign a second $5,000 — $10,000 total.</td></tr>
+      <tr><td>Nov. 14 - Dec. 5, 2023</td><td>The Planning Commission recommends denying Eden Crossing's rezone, 5-2. The Weber County Commission — chaired by Froerer — approves it, 2-1.</td></tr>
+      <tr><td>Jan. - Nov. 2024</td><td>KOVF operates. Warburton directs it; funding includes Wolf Creek Resort (Lewis-controlled) and Lewis personally. Two vendor payments are later re-attributed to Warburton's name by amendment.</td></tr>
+      <tr><td>Mar. 11, 2024</td><td>Dunleavy's EVO Utah entity gives Utah Forward PAC $1,000 — added to the record retroactively, three months later.</td></tr>
+      <tr><td>Nov. 5, 2024</td><td>Ogden Valley City incorporation passes, 2,927-1,597.</td></tr>
+      <tr><td>Nov. 9, 2024</td><td>KOVF dissolves. Warburton signs the closing filing as the committee's authorized representative.</td></tr>
+      <tr><td>Jun. 24, 2025</td><td>Warburton is appointed to the new city's Planning Commission. On the record that night, she states she has never been to dinner with Lewis and his wife and hasn't taken money from them personally.</td></tr>
+      <tr><td>Sept. 21, 2025</td><td>KSL co-quotes Warburton and Dunleavy on the same incorporation-transition concern.</td></tr>
+      <tr><td>Sept. 23, 2025</td><td>Warburton seconds and votes aye, 6-1, on Eden Crossing's expansion — Lewis presents in person.</td></tr>
+      <tr><td>Jan. 8, 2026</td><td>Katrina Gibson files to run for Weber County Commission Seat A. Her own COI form is later found to omit entities including Politix LLC; a property transfers to Bennet LLC the same day.</td></tr>
+      <tr><td>Jan. 14, 2026</td><td>Katrina Gibson's own lobbyist registration is canceled — six days after filing to run.</td></tr>
+      <tr><td>Jan. 26, 2026</td><td>Warburton resigns from the Ogden Valley Planning Commission.</td></tr>
+      <tr><td>Sept. 2026</td><td>Warburton posts publicly denying business dealings with Lewis, describing her Planning Commission service with him as ordinary disagreement, and stating she had no idea who Dunleavy was before incorporation.</td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>A closed loop, twice over</h2>
+    <div class="callout">
+      <strong>Politix LLC — Utah Forward PAC's own vendor.</strong> The PAC's own filings show two payments to Politix — $1,158.30 (7/18/2025) and $6,000 (12/18/2025), for "polling &amp; consultation on Weber County municipal elections," $7,158.30 total. Politix LLC is co-owned by Katrina and Kerry Gibson — the same Katrina Gibson who is the PAC's own Registered Agent and CFO. The committee paid money to a company its own officer's household owns, for services rendered to that same committee.
+    </div>
+    <div class="callout">
+      <strong>Ben Nadolski's 2023 mayoral campaign.</strong> Utah Forward PAC gave Nadolski's campaign $5,000. Katrina Gibson — the PAC's own CFO — also signed that campaign's finance disclosure as "Secretary of Committee." The campaign paid Xalisco, co-owned by Kerry Gibson, $3,187.50. After winning, Nadolski hired Kerry Gibson as Ogden City's registered lobbyist (Jan. 2024).
+    </div>
+    <div class="giving-chart">
+      <div class="giving-source">Utah Forward PAC</div>
+      <div class="giving-targets">
+        <div class="giving-row">
+          <div class="giving-amount">$10,000, 2022-23</div>
+          <div class="giving-arrow">→</div>
+          <div class="giving-recipient">Gage Froerer<span class="sub">Weber Co. Commissioner</span></div>
+        </div>
+        <div class="giving-row">
+          <div class="giving-amount">$5,000, 2023</div>
+          <div class="giving-arrow">→</div>
+          <div class="giving-recipient">Ben Nadolski<span class="sub">Ogden mayoral campaign</span></div>
+        </div>
+        <div class="giving-row">
+          <div class="giving-amount">$7,158.30, 2025</div>
+          <div class="giving-arrow">→</div>
+          <div class="giving-recipient">Politix LLC<span class="sub">Co-owned by the PAC's own CFO and her husband</span></div>
+        </div>
+        <div class="giving-row">
+          <div class="giving-amount">$5,915 combined, 2022 &amp; 2026</div>
+          <div class="giving-arrow">→</div>
+          <div class="giving-recipient">Sharon Bolos<span class="sub">Weber Co. Commissioner, Seat B</span></div>
+        </div>
+        <div class="giving-row">
+          <div class="giving-amount">$2,427.20, 2024</div>
+          <div class="giving-arrow">→</div>
+          <div class="giving-recipient">Keep Our Valley Free<span class="sub">Warburton's own committee</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="diagram-caption">Utah Forward PAC's outbound giving, selected recipients</div>
+
+    <h3 style="margin-top:30px;font-size:19px;">Who funded Utah Forward PAC</h3>
+    <div class="giving-chart">
+      <div class="giving-source">Utah Forward PAC</div>
+      <div class="giving-targets">
+        <div class="giving-row">
+          <div class="giving-amount">$20,000, 5/18/22</div>
+          <div class="giving-arrow">←</div>
+          <div class="giving-recipient">Nilson &amp; Company Inc<span class="sub">Largest single donor in the PAC's history</span></div>
+        </div>
+        <div class="giving-row">
+          <div class="giving-amount">$12,000, 11/22/25</div>
+          <div class="giving-arrow">←</div>
+          <div class="giving-recipient">Mike &amp; Melissa Shultz<span class="sub">Hooper, UT</span></div>
+        </div>
+        <div class="giving-row">
+          <div class="giving-amount">$10,000, 4/19/22</div>
+          <div class="giving-arrow">←</div>
+          <div class="giving-recipient">Rincon Financial<span class="sub">Dunleavy-linked entity</span></div>
+        </div>
+        <div class="giving-row">
+          <div class="giving-amount">$10,000, 5/5/22</div>
+          <div class="giving-arrow">←</div>
+          <div class="giving-recipient">Building Construction Partners LLC</div>
+        </div>
+        <div class="giving-row">
+          <div class="giving-amount">$10,000, 6/3/22</div>
+          <div class="giving-arrow">←</div>
+          <div class="giving-recipient">Adams Leadership PAC<span class="sub">Sen. Stuart Adams's own PAC</span></div>
+        </div>
+        <div class="giving-row">
+          <div class="giving-amount">$5,000, 4/19/22</div>
+          <div class="giving-arrow">←</div>
+          <div class="giving-recipient">John Lewis<span class="sub">Personal contribution</span></div>
+        </div>
+        <div class="giving-row">
+          <div class="giving-amount">$5,000, 4/19/22</div>
+          <div class="giving-arrow">←</div>
+          <div class="giving-recipient">Shane Dunleavy<span class="sub">Personal contribution</span></div>
+        </div>
+        <div class="giving-row">
+          <div class="giving-amount">$5,000, 4/17/22</div>
+          <div class="giving-arrow">←</div>
+          <div class="giving-recipient">Atlee Wampler<span class="sub">Mayor Janet Wampler's father</span></div>
+        </div>
+        <div class="giving-row">
+          <div class="giving-amount">$5,000 combined, 5/3/22</div>
+          <div class="giving-arrow">←</div>
+          <div class="giving-recipient">The Kier Corporation + Kier Girls LLC<span class="sub">Both trace to Bonnie Kier-Herrick, Nordic Valley Land Associates</span></div>
+        </div>
+        <div class="giving-row">
+          <div class="giving-amount">$1,000, 3/11/24</div>
+          <div class="giving-arrow">←</div>
+          <div class="giving-recipient">EVO Utah<span class="sub">Dunleavy's entity; added retroactively 3 months later</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="diagram-caption">Utah Forward PAC's inbound funding, selected donors</div>
+  </section>
+
+  <section>
+    <h2>Public statements vs. the record</h2>
+    <p>In September 2026, Warburton posted publicly addressing questions about her relationship to this network. Measured against the documented record above:</p>
+    <table class="data">
+      <tr><th style="width:34%">Claim</th><th>Status</th></tr>
+      <tr>
+        <td>"I do not, and never have, had any business dealings with John Lewis or any of his business entities."</td>
+        <td>Technically accurate as worded — no contract or commercial relationship is documented. Narrower than it reads: two committees she ran took Lewis-network money.<span class="status-tag status-narrow">narrow</span></td>
+      </tr>
+      <tr>
+        <td>"Before incorporation, I had no idea who Shane Dunleavy was."</td>
+        <td>Unverifiable as a personal-knowledge claim. Utah Forward PAC took Dunleavy's $5,000 personal contribution over two years before incorporation.<span class="status-tag status-narrow">strained</span></td>
+      </tr>
+      <tr>
+        <td>"John and I also served on the Planning Commission at the same time."</td>
+        <td>Contradicted by the meeting record reviewed: Lewis's tenure ended roughly three years before Warburton's 2025 appointment.<span class="status-tag status-contradicted">contradicted</span></td>
+      </tr>
+      <tr>
+        <td>"I own no land in the Valley other than the five acres where I live."</td>
+        <td>Confirmed via Weber County Assessor records — one Warburton-linked parcel, held in trust, matching this description.<span class="status-tag status-confirmed">confirmed</span></td>
+      </tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>Open questions</h2>
+    <details class="open-q">
+      <summary>What was Warburton's "prior professional representation of Lewis family"?</summary>
+      <p>Flagged in earlier research as an unconfirmed lead — details not yet established. Worth following up before this is stated as fact anywhere.</p>
+    </details>
+    <details class="open-q">
+      <summary>Which Weber County municipal races did the Dec. 2025 polling target?</summary>
+      <p>Utah Forward PAC spent $12,000 in Dec. 2025 (In The Field + Politix LLC) on "polling &amp; consultation on Weber County municipal elections." Which specific races this covered has not been confirmed.</p>
+    </details>
+    <details class="open-q">
+      <summary>What were the four deleted contributions in Utah Forward PAC's 2025 reports?</summary>
+      <p>Four contribution entries were deleted from the 2025 Sept. 30th and Year End reports with no field-level amendment detail in the DEX export, unlike KOVF's fully-documented deletions. The only unresolved gap across an otherwise fully reconciled 2022-2026 financial history.</p>
+    </details>
+    <details class="open-q">
+      <summary>Who is "Joe Buchanan"?</summary>
+      <p>Gave Utah Forward PAC $5,000 on 4/17/2022 from a Miami, FL address, the same day as Atlee Wampler's identical contribution. Never identified.</p>
+    </details>
+  </section>
+
+  <section>
+    <h2>Sources</h2>
+    <details class="open-q">
+      <summary>View all sources</summary>
+      <ul>
+        <li>Keep Our Valley Free (KOVF) campaign finance reports, Convention through Year End, 2024 (disclosures.utah.gov)</li>
+        <li>Utah Forward PAC campaign finance reports, 2022 Primary through 2026 Primary (disclosures.utah.gov)</li>
+        <li>Ogden Valley Planning Commission approved meeting minutes, 2022, 4/29/25, 6/24/25, 9/23/25, 12/2/25 (webercountyutah.gov)</li>
+        <li>KSL.com, "This is not fear-mongering...," Tim Vandenack, Sept. 21, 2025</li>
+        <li>KSL.com, "Nasty and dirty," Nov. 1, 2025</li>
+        <li>Utah Division of Corporations entity records: The Kier Corporation, Kier Girls LLC, Kier Development LLC, Kier Dynasty LLC, Kier Construction Corporation, Wampler Family WCRH LLC</li>
+        <li>Weber County Assessor parcel records (Warburton)</li>
+        <li>Utah Investigative Journalism Project, "Former Weber County Commissioner Kerry Gibson loses battle to keep investigations private," Cathy McKitrick</li>
+        <li>Ben Nadolski 2023 mayoral campaign finance disclosure (disclosures.utah.gov)</li>
+        <li>Laura M. Warburton, public Facebook post, Ogden Valley Citizens Public Group, Sept. 2026</li>
+      </ul>
+    </details>
+  </section>
+
+</div>
+
+<footer>
+  <div class="wrap">
+    <div>THE WEBER COUNTY HIVE · UNELECTED POWER</div>
+    <div class="sub">Independent accountability journalism. Public records only. We report; you decide.</div>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('.tile').forEach(function(tile){
+  tile.addEventListener('click', function(){ tile.classList.toggle('flipped'); });
+});
+</script>
+</body>
+</html>
