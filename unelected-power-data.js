@@ -119,6 +119,15 @@ const UNELECTED_POWER_PROFILES = [
     tags: ["Utah Rising", "GOEO", "Salt Lake Chamber", "Larry H. Miller Company", "Steve Starks", "Ryan Starks"],
     dateAdded: "2026-09-16",
     dateUpdated: "2026-09-16"
+  },
+  {
+    slug: "ogden-ice-unelected-enforcement",
+    name: "The Ogden Officer & The ICE Agent",
+    roleTag: "Ogden PD Patrol Officer · Federal ICE Agent",
+    summary: "An Ogden officer stood by while a federal ICE agent detained a driver on Aug. 25, 2026 — and OPD's own account of what happened before the cameras rolled doesn't fully square with what's actually on the tape. Neither man was elected to anything, and neither answers to a single Ogden voter.",
+    tags: ["Ogden PD", "ICE", "287(g)", "Immigration Enforcement"],
+    dateAdded: "2026-09-17",
+    dateUpdated: "2026-09-17"
   }
 ];
 
