@@ -128,6 +128,15 @@ const UNELECTED_POWER_PROFILES = [
     tags: ["Ogden PD", "ICE", "287(g)", "Immigration Enforcement"],
     dateAdded: "2026-09-17",
     dateUpdated: "2026-09-17"
+  },
+  {
+    slug: "jed-stevenson",
+    name: "Jed Stevenson",
+    roleTag: "President, Academica West · Founder, One West Construction",
+    summary: "Never elected, never appointed to public office. Builds Utah's charter schools through one company and manages their finances through another — the two together took at least $6.9 million from charter schools in a single year. His father held a state Senate seat for sixteen years; his business partner is the senator that seat replaced.",
+    tags: ["Academica West", "One West Construction", "Career Path High", "Sheldon Killpack", "Jerry Stevenson", "Bridge Elementary"],
+    dateAdded: "2026-09-22",
+    dateUpdated: "2026-09-22"
   }
 ];
 
