@@ -62,9 +62,9 @@ const UNELECTED_POWER_PROFILES = [
     name: "Ryan Starks",
     roleTag: "President & Exec. Director, EDCUtah · Former GOEO Director",
     summary: "Ran the state's economic development office, then moved to lead its private-sector counterpart — under the same Chamber that received a $3.2 million taxpayer grant he approved three days before announcing the move. A 2026 state audit later found the office's oversight problems ran wider than that one grant, across nearly his entire tenure. Shares two boards (BioHive, Northern Utah Economic Alliance) with his GOEO successor, Jefferson Moss.",
-    tags: ["EDCUtah", "GOEO", "Salt Lake Chamber", "Utah Rising Grant", "MIDA", "BioHive", "RGX Strategies", "OLAG 2026-18"],
+    tags: ["EDCUtah", "GOEO", "Salt Lake Chamber", "Utah Rising Grant", "MIDA", "BioHive", "RGX Strategies", "OLAG 2026-18", "Northern Utah Economic Alliance", "Bob Stevenson", "EDCUtah Foundation"],
     dateAdded: "2026-09-14",
-    dateUpdated: "2026-09-16"
+    dateUpdated: "2026-09-22"
   },
   {
     slug: "chris-roybal",
@@ -134,7 +134,7 @@ const UNELECTED_POWER_PROFILES = [
     name: "Jed Stevenson",
     roleTag: "President, Academica West · Founder, One West Construction",
     summary: "Never elected, never appointed to public office. Builds Utah's charter schools through one company and manages their finances through another — the two together took at least $6.9 million from charter schools in a single year. His father held a state Senate seat for sixteen years; his business partner is the senator that seat replaced.",
-    tags: ["Academica West", "One West Construction", "Career Path High", "Sheldon Killpack", "Jerry Stevenson", "Bridge Elementary"],
+    tags: ["Academica West", "One West Construction", "Career Path High", "Sheldon Killpack", "Jerry Stevenson", "Bridge Elementary", "Shed Tremonton LLC"],
     dateAdded: "2026-09-22",
     dateUpdated: "2026-09-22"
   }
