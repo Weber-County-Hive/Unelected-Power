@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jed Stevenson | Unelected Power</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+--paper:#f4f0e6;
+--paper-card:#fbf9f3;
+--ink:#2a261e;
+--ink-soft:#5c5647;
+--ink-faint:#8b8470;
+--rust:#c0572e;
+--amber:#d9a441;
+--burgundy:#5c1a2b;
+--burgundy-deep:#3d0f1c;
+--line:#ddd6c4;
+--line-strong:#c7bda3;
+--red:#a5301e;
+--green:#3f6b3b;
+--serif:'Source Serif 4', Georgia, serif;
+--display:'Playfair Display', Georgia, serif;
+--mono:'IBM Plex Mono', 'Courier New', monospace;
+}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);line-height:1.65;font-size:17px;}
+a{color:var(--rust);text-decoration:none;}
+a:hover{text-decoration:underline;}
+.header-band{background:var(--burgundy-deep);background-image:linear-gradient(160deg, var(--burgundy) 0%, var(--burgundy-deep) 100%);padding:22px 0;}
+.header-inner{max-width:880px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;}
+.hd-kicker{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#d9b8bf;}
+.hd-title{font-family:var(--display);font-size:20px;font-weight:700;color:#f4e9dd;}
+.hd-index{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#e8d9c8;border:1px solid rgba(244,233,221,.35);border-radius:3px;padding:6px 12px;white-space:nowrap;}
+.hd-index:hover{background:rgba(244,233,221,.1);text-decoration:none;}
+.wrap{max-width:880px;margin:0 auto;padding:40px 24px 80px;}
+.never{display:inline-block;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--burgundy);background:#f3e2e6;border:1px solid #d9a4b0;border-radius:20px;padding:5px 14px;margin-bottom:16px;}
+.case-title{font-family:var(--display);font-size:38px;font-weight:900;line-height:1.12;margin:0 0 8px;color:var(--burgundy-deep);}
+.case-role{font-family:var(--mono);font-size:13.5px;color:var(--ink-soft);margin-bottom:18px;}
+.case-dek{font-size:18px;color:var(--ink-soft);max-width:680px;border-bottom:2px solid var(--line-strong);padding-bottom:30px;margin-bottom:30px;}
+.stat-row{display:flex;gap:28px;flex-wrap:wrap;margin:0 0 34px;}
+.stat{flex:1 1 150px;}
+.stat-num{font-family:var(--display);font-size:26px;font-weight:900;color:var(--amber);line-height:1.15;}
+.stat-label{font-family:var(--mono);font-size:11px;letter-spacing:.05em;color:var(--ink-faint);text-transform:uppercase;margin-top:4px;}
+h2.sect{font-family:var(--display);font-size:23px;font-weight:700;color:var(--burgundy-deep);margin:42px 0 6px;border-top:1px solid var(--line);padding-top:26px;}
+h3.sub-head{font-family:var(--mono);font-size:12.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-soft);margin:20px 0 8px;}
+p{margin:0 0 16px;}
+.record-card{background:var(--paper-card);border:1px solid var(--line-strong);border-radius:4px;padding:18px 22px;margin:16px 0;}
+.rc-title{font-family:var(--mono);font-size:11.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--burgundy);margin-bottom:8px;font-weight:600;}
+.rc-title.hist{color:var(--ink-faint);}
+table.led{width:100%;border-collapse:collapse;margin:12px 0 20px;font-size:14.5px;}
+table.led th{font-family:var(--mono);font-size:10.5px;text-transform:uppercase;letter-spacing:.05em;text-align:left;color:var(--ink-faint);border-bottom:2px solid var(--line-strong);padding:6px 10px 8px 0;}
+table.led td{padding:7px 10px 7px 0;border-bottom:1px solid var(--line);vertical-align:top;}
+table.led tr:last-child td{border-bottom:none;}
+.tag{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.05em;text-transform:uppercase;border-radius:10px;padding:2px 9px;margin-left:6px;}
+.tag.confirmed{background:#e4ede2;color:var(--green);border:1px solid #b9d0b4;}
+.tag.unconfirmed{background:#fbf3e6;color:#8a6a1f;border:1px solid var(--amber);}
+.flow{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:18px 0;font-family:var(--mono);font-size:13px;}
+.flow-node{background:var(--paper-card);border:1px solid var(--line-strong);border-radius:4px;padding:10px 14px;color:var(--ink);}
+.flow-node.hub{background:var(--burgundy-deep);color:#f4e9dd;border-color:var(--burgundy-deep);}
+.flow-arrow{color:var(--ink-faint);font-size:16px;}
+.open-q{background:#fbf3e6;border:1px dashed var(--amber);border-radius:4px;padding:14px 18px;font-size:15px;color:var(--ink-soft);margin:12px 0;}
+.quote{border-left:3px solid var(--rust);padding:4px 0 4px 16px;margin:16px 0;font-style:italic;color:var(--ink-soft);}
+.sources{font-size:14px;color:var(--ink-soft);}
+.sources li{margin-bottom:6px;}
+footer{margin-top:50px;padding-top:20px;border-top:1px solid var(--line);font-family:var(--mono);font-size:11.5px;color:var(--ink-faint);}
+</style>
+</head>
+<body>
+<div class="header-band">
+  <div class="header-inner">
+    <div>
+      <div class="hd-kicker">The Weber County Hive &middot; Unelected Power</div>
+      <div class="hd-title">Case File</div>
+    </div>
+    <a class="hd-index" href="https://weber-county-hive.github.io/-weber-county-hive-index/">Index &#8599;</a>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="never">Never elected &middot; never appointed to public office</div>
+  <h1 class="case-title">Jed Stevenson</h1>
+  <div class="case-role">Founder, One West Construction (2005) &middot; President, Academica West</div>
+  <p class="case-dek">Jed Stevenson has never run for office and holds no government appointment. He doesn't need one. Through one construction company and one management firm, he builds the buildings, runs the finances, and has sat on the governing boards of a meaningful share of northern Utah's charter schools — while his father held a state Senate seat for sixteen years, and his business partner is the senator his father replaced.</p>
+
+  <div class="stat-row">
+    <div class="stat"><div class="stat-num">$6.9M+</div><div class="stat-label">Academica West + Eminent Technical, one year</div></div>
+    <div class="stat"><div class="stat-num">17</div><div class="stat-label">charter schools managed (2015)</div></div>
+    <div class="stat"><div class="stat-num">30+</div><div class="stat-label">charter school projects built, One West</div></div>
+    <div class="stat"><div class="stat-num">2005</div><div class="stat-label">One West Construction founded</div></div>
+  </div>
+
+  <h2 class="sect">Two companies, one name behind both</h2>
+  <p><b>One West Construction LLC</b> (entity #6035468-0160, Utah Division of Corporations) was formed November 1, 2005 and is based at 290 N. Flint St., Kaysville. Its state filing lists two Managers: Jed Stevenson and Sheldon Killpack. One West's own published client list shows more than 30 charter-school construction projects across Utah and Idaho since 2006, including several inside the Layton/South Weber area this outlet already tracks — HighMark Charter School (South Weber), North Davis Preparatory Academy and Leadership Learning Academy (Layton), Jefferson Academy (Kaysville) — plus two rounds of construction on Academica West's own Kaysville office (2008, 2014).</p>
+
+  <p><b>Academica West</b> is the charter-management company Jed Stevenson leads as president, with Sheldon Killpack as vice president. Per a 2016 Salt Lake Tribune investigation, Academica West and its sister company Eminent Technical Solutions functioned as the outsourced IT, HR, bookkeeping, and facilities departments for 17 Utah charter schools, billing a per-student fee (was $400 for a school's first 500 students, $350 after) that took in at least $6.9 million from charter schools in a single year. Academica West's own revenue climbed from roughly $3 million (2013-14) to $4.7 million in 2015.</p>
+
+  <div class="record-card">
+    <div class="rc-title">On the record</div>
+    <div class="quote">"The company's president, Jed Stevenson, is the son of Layton Republican Sen. Jerry Stevenson. The company's vice president is Sheldon Killpack, who resigned as majority leader of the Utah Senate in 2010."</div>
+    <p style="margin:0;font-size:14px;color:var(--ink-faint);">&mdash; Benjamin Wood, "Utah charter schools move millions of public dollars to the coffers of a few private companies," The Salt Lake Tribune, May 27, 2016</p>
+  </div>
+
+  <h2 class="sect">The family and business seat that came before him</h2>
+  <div class="flow">
+    <div class="flow-node">Sheldon Killpack<br><span style="color:var(--ink-faint);font-size:11px;">Senate Majority Leader</span></div>
+    <div class="flow-arrow">&rarr;</div>
+    <div class="flow-node hub">resigns 2010<br><span style="font-size:11px;">after DUI</span></div>
+    <div class="flow-arrow">&rarr;</div>
+    <div class="flow-node">Jerry Stevenson<br><span style="color:var(--ink-faint);font-size:11px;">appointed to fill SD-6</span></div>
+  </div>
+  <p>Sheldon Killpack — Jed Stevenson's business partner at both Academica West and One West Construction, and his co-owner in Bluffdale School Development LLC (Utah entity #5854029-0160, alongside Fernando J. Zulueta) — is the same state senator whose 2010 resignation created the Davis County Senate District 6 vacancy that Jerry Stevenson, Jed's father, was appointed to fill. Jerry Stevenson held SD-6 for sixteen years and is retiring this cycle; his own Senate seat is going to Tamara "Tami" Tran, whom he personally funded ($500, 6/22/26) on the same day Jed D. Stevenson gave Tran's campaign $4,000. Jerry Stevenson also personally gave $1,000 to Bob Stevenson's HD16 campaign (6/11/26) — Bob Stevenson vacated his own Davis County Commission seat to run for the House seat covering Layton/South Weber. A family relationship between Jerry and Bob Stevenson remains unconfirmed. Full seat-by-seat turnover map: <a href="https://claude.ai/artifact/RXtYXTDPTWyzKiGpogidzA">The Layton Shuffle</a>. Bob Stevenson's own full campaign-finance case file: <a href="https://weber-county-hive.github.io/candidates2026/hd16-stevenson-treasure.html">Case 19, Candidates 2026</a>.</p>
+
+  <h2 class="sect">Where the governance access has reached</h2>
+
+  <div class="record-card">
+    <div class="rc-title hist">Career Path High &middot; historical, not current <span class="tag confirmed">confirmed, 2014-2023</span></div>
+    <p style="margin:0;">Career Path High's own 2022 board roster shows Jerry Stevenson served as <b>Board President</b> from 9/12/14 through 6/30/23, and Clint Morris served as <b>Financial Coordinator</b> (through 10/31/23) — a role with Audit Committee duties alongside the Board Chair. The same roster lists "Academica West" itself as a member of the Board Accreditation Standards Committee, directly inside governance rather than as an outside contractor. Board meetings were held at 290 N. Flint St., Kaysville — One West Construction's address. Career Path High's current board page (checked 9/22/26) lists neither Jerry Stevenson nor anyone matching that history, and the school's listed address has since changed to 550 E 300 S, Kaysville. These ties were real, and were officer-level, but ended in 2023.</p>
+  </div>
+
+  <div class="record-card">
+    <div class="rc-title">Bridge Elementary, Roy &middot; bank signing authority <span class="tag confirmed">confirmed</span></div>
+    <p style="margin:0;">Board minutes from September 19, 2023 show Bridge Elementary's board considered adding both Jed Stevenson and Sheldon Killpack as signers on the school's operating bank accounts — beyond petty cash, direct access to the school's day-to-day funds. The motion was tabled, not adopted.</p>
+  </div>
+
+  <div class="record-card">
+    <div class="rc-title hist">Bluffdale School Development LLC <span class="tag unconfirmed">open lead</span></div>
+    <p style="margin:0;">Utah business entity #5854029-0160. Members: Jed Stevenson, Sheldon Killpack, and Fernando J. Zulueta (a name tied to Academica's national charter-management network outside Utah). Which specific Bluffdale-area charter school this entity was formed to develop has not yet been identified.</p>
+  </div>
+
+  <h2 class="sect">Open questions</h2>
+  <div class="open-q">Which specific charter school in Bluffdale was Bluffdale School Development LLC formed to build or hold real estate for?</div>
+  <div class="open-q">Is "Kate Stevenson," a current Career Path High office secretary, related to Jed, Jerry, or Bob Stevenson? Shared surname only so far — flagged, not asserted.</div>
+  <div class="open-q">Is Bob Stevenson (HD16 candidate) related to Jerry Stevenson? Still unconfirmed on either side.</div>
+  <div class="open-q">What was the $42,750 CMV PAC gift to Bob Stevenson for — roughly 7-8 times that PAC's standard package? (Tracked separately in Case 19, Candidates 2026.)</div>
+
+  <h2 class="sect">Sources</h2>
+  <ul class="sources">
+    <li>Benjamin Wood, "Analysis: Utah charter schools move millions of public dollars to the coffers of a few private companies," The Salt Lake Tribune, May 27, 2016</li>
+    <li>Utah Division of Corporations, entity records #6035468-0160 (One West Construction LLC) and #5854029-0160 (Bluffdale School Development LLC)</li>
+    <li>One West Construction, "Our Clients" and "Our Process" pages (1westconstruction.com)</li>
+    <li>Career Path High board of directors PMN meeting minutes, 6/21/2021 and 10/2022 (utah.gov/pmn)</li>
+    <li>Career Path High current "Our Team" and "Board of Directors" pages (careerpathhigh.org / utahcph.org), checked 9/22/26</li>
+    <li>Bridge Elementary board of directors meeting minutes, 9/19/2023</li>
+    <li>Utah Statewide Financial Disclosures (disclosures.utah.gov) — Jerry Stevenson, Bob Stevenson, and Tamara Tran campaign finance filings</li>
+    <li>LinkedIn: Jed Stevenson (One West Construction); One West Construction company page</li>
+  </ul>
+
+  <footer>Built from public filings, corporate registration records, board minutes, and this outlet's own case files (Candidates 2026 repo) &middot; The Weber County Hive</footer>
+</div>
+</body>
+</html>
