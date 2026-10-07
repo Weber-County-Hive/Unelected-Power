@@ -124,8 +124,8 @@ const UNELECTED_POWER_PROFILES = [
     slug: "edcutah",
     name: "EDCUtah",
     roleTag: "Organization · Private Business Recruiter, Public Investors",
-    summary: "A private 501(c)(6) inside the Salt Lake Chamber that recruits companies and certifies 14 large development sites. The state, the Inland Port Authority and at least five cities and counties are among its top investors, and several of its mega sites sit where data centers, CRAs and state tax credits are already in the record.",
-    tags: ["EDCUtah", "Site Ready Utah", "Data Centers", "UIPA", "Ryan Starks", "Chris Roybal", "GO Utah"],
+    summary: "A private 501(c)(6) inside the Salt Lake Chamber that recruits companies and certifies 14 large development sites. The state, the Inland Port Authority and cities and counties pay in, nine public officials sit on its voting board, including Weber County Commissioner Gage Froerer, and several of its mega sites sit where data centers, CRAs and state tax credits are already in the record.",
+    tags: ["EDCUtah", "Site Ready Utah", "Data Centers", "UIPA", "Ryan Starks", "Chris Roybal", "Jon Hawkins", "Val Hale", "Gage Froerer", "Ben Nadolski", "GO Utah"],
     dateAdded: "2026-10-07",
     dateUpdated: "2026-10-07"
   },

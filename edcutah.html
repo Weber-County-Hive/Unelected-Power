@@ -101,28 +101,24 @@ details.gl summary{font-weight:700;cursor:pointer;color:var(--maroon);font-size:
 details.gl p{margin:8px 0 0;font-size:15px;}
 .verified{font-family:'IBM Plex Mono',monospace;font-size:11px;padding:2px 7px;border:1px solid;margin-left:6px;white-space:nowrap;}
 .v-yes{color:#1d6b3a;border-color:#1d6b3a;} .v-near{color:#8a5a00;border-color:#8a5a00;}
+
+.flow{background:var(--paper-2);border:1px solid var(--line);padding:22px 18px;margin:18px 0;}
+.flow-row{display:grid;grid-template-columns:1fr;gap:14px;max-width:560px;margin:0 auto;}
+.flow-row.two{grid-template-columns:repeat(2,minmax(0,1fr));max-width:820px;}
+.flow-row.three{grid-template-columns:repeat(3,minmax(0,1fr));max-width:860px;}
+.fbox{background:#fff;border:3px solid var(--ink);border-radius:8px;padding:16px 18px;font-size:18px;line-height:1.45;text-align:center;}
+.fbox .fh{font-family:'Playfair Display',serif;font-weight:700;font-size:22px;margin-bottom:6px;color:var(--ink);}
+.fbox.pub{border-color:#1f3a68;} .fbox.pub .fh{color:#1f3a68;}
+.fbox.co{border-color:var(--gold);} .fbox.co .fh{color:#7a5410;}
+.fbox.edc{background:var(--ink);color:#fbf3e3;border-color:var(--ink);font-size:19px;} .fbox.edc .fh{color:var(--gold-bg);font-size:28px;}
+.fbox.near{border-style:dashed;}
+.arrow{text-align:center;font-size:30px;color:var(--gold);margin:10px 0;line-height:1.2;}
+.arrow span{display:block;font-family:'Source Sans 3',sans-serif;font-size:16px;font-weight:700;color:var(--ink-soft);}
+.side-link{text-align:center;font-size:18px;background:#fff;border:2px solid var(--line);border-radius:8px;max-width:560px;margin:12px auto 0;padding:10px 14px;}
+@media(max-width:700px){.flow-row.two,.flow-row.three{grid-template-columns:1fr;}}
 </style>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
-<script>
-  mermaid.initialize({
-    startOnLoad: true,
-    theme: 'base',
-    securityLevel: 'loose',
-    flowchart: { htmlLabels: true, useMaxWidth: true, padding: 18 },
-    themeVariables: {
-      primaryColor: '#efe6d3',
-      primaryTextColor: '#2a1f14',
-      primaryBorderColor: '#5c1a1a',
-      lineColor: '#a9762c',
-      secondaryColor: '#f0e0c0',
-      secondaryTextColor: '#2a1f14',
-      tertiaryColor: '#f7f1e6',
-      fontFamily: 'Verdana, Arial, sans-serif',
-      fontSize: '19px'
-    }
-  });
-</script>
+
 </head>
 <body>
 
@@ -143,6 +139,7 @@ details.gl p{margin:8px 0 0;font-size:15px;}
       <a class="rc-tag" href="chris-roybal.html">Cross-reference: Chris Roybal →</a>
       <a class="rc-tag" href="utah-rising.html">Cross-reference: Utah Rising →</a>
       <a class="rc-tag" href="jefferson-moss.html">Cross-reference: Jefferson Moss →</a>
+      <a class="rc-tag" href="https://weber-county-hive.github.io/Transparency/utah-amendments-2026.html#tax-tools">Cross-reference: Tax tools the Legislature created →</a>
     </div>
     <div class="pub-date">Published Oct 7, 2026 &middot; Updated Oct 7, 2026</div>
   </div>
@@ -152,15 +149,16 @@ details.gl p{margin:8px 0 0;font-size:15px;}
 
   <div class="stats">
     <div class="stat"><div class="num">14</div><div class="label">sites EDCUtah certifies and markets</div></div>
-    <div class="stat"><div class="num">7</div><div class="label">public bodies in its top investor tiers</div></div>
-    <div class="stat"><div class="num">$250K</div><div class="label">state money requested for 2027</div></div>
+    <div class="stat"><div class="num">9</div><div class="label">public officials on its voting board</div></div>
+    <div class="stat"><div class="num">$17B</div><div class="label">Creekstone: EDCUtah's largest 2025-26 "win"</div></div>
   </div>
 
-  <div class="tipnote"><b>How this file started:</b> a reader sent a tip on Oct. 7, 2026, with links to EDCUtah's data center profile, its Site Ready Utah program and its investor list. The reader's name is not published. Everything below was checked against the documents linked in Sources; anything not yet confirmed is labeled.</div>
+  <div class="tipnote"><b>How this file started:</b> a reader sent a tip on Oct. 7, 2026, with links to EDCUtah's data center profile, its Site Ready Utah program and its investor list. The reader's name is not published. Everything below was checked against the documents linked in Sources; anything not yet confirmed is labeled. <a href="https://weber-county-hive.github.io/-weber-county-hive-index/tips.html">See all tips we checked, or send one →</a></div>
 
   <section>
     <h2>What EDCUtah is</h2>
     <p>The Economic Development Corporation of Utah (EDCUtah) was founded in 1987. It describes itself as "a private, non-profit organization" and a "catalyst for quality job growth and increased capital investment in the state." It is registered with the IRS as a 501(c)(6) business league (EIN 74-2502619) and reported about $1.5 million in revenue for the fiscal year ending June 2024. It merged into the Salt Lake Chamber in July 2024; the Chamber's president, Derek Miller, is listed as its principal officer.</p>
+    <p>In its own words, EDCUtah is <i>"Utah's only statewide economic development organization supported by both public and private sector organizations,"</i> specializing in "corporate recruitment, economic research, community strategy, and site selector marketing." Its 2024-2025 annual report calls it "Utah's premier nonprofit public-private partnership."</p>
     <p>Its president and executive director since May 2025 is <a href="ryan-starks.html">Ryan Starks</a>, the former executive director of the Governor's Office of Economic Opportunity (GO Utah). A separate entity, the EDCUtah Foundation, lists Starks as a director since Feb. 24, 2021.</p>
     <p><b>Its ties to the state, on paper:</b></p>
     <ul>
@@ -201,21 +199,107 @@ details.gl p{margin:8px 0 0;font-size:15px;}
   </section>
 
   <section>
-    <h2>Who runs it</h2>
-    <p>EDCUtah's Sept. 21, 2023 announcement named its board officers. Its current board page returned an error on Oct. 7, 2026.</p>
+    <h2>Who runs it: the current board</h2>
+    <p>EDCUtah's board page (read Oct. 7, 2026) lists 3 officers, 21 board members and 6 ex officio members. Public officials are shown in blue.</p>
+    <div class="chart">
+      <h3>Who sits on the board</h3>
+      <p class="sub">Officers and voting board members (24 seats). Blue = elected official or public agency head. Gold = company.</p>
+      <div class="bars">
+        <div class="bar-row"><div class="lbl">Officers and board members</div><div class="bar-track"><div class="b-pub" style="width:37.5%">9 public</div><div class="b-priv" style="width:62.5%">15 companies</div></div></div>
+        <div class="bar-row"><div class="lbl">Ex officio members</div><div class="bar-track"><div class="b-pub" style="width:83.3%">5 public</div><div class="b-priv" style="width:16.7%;min-width:60px;">1</div></div></div>
+      </div>
+      <div class="legend"><span class="lp">Public official or agency</span><span class="lv">Company or other</span></div>
+      <p class="src">Source: EDCUtah, Board page, edcutah.org/about/board, read Oct. 7, 2026.</p>
+    </div>
     <table class="data">
+      <thead><tr><th>Seat</th><th>Name</th><th>Organization</th><th>Also in the Hive record</th></tr></thead>
+      <tbody>
+        <tr><td>Chair</td><td>Jason Hill</td><td>Rio Tinto</td><td>Rio Tinto: Catalyst investor</td></tr>
+        <tr><td>Private-sector vice chair</td><td>Matt Hirst</td><td>Horrocks Engineers</td><td>Horrocks: Champion investor</td></tr>
+        <tr><td>Public-sector vice chair</td><td class="linked">Mayor Ben Nadolski</td><td>Ogden City</td><td>Ogden: Champion investor; Ogden-Hinckley Airport is a Site Ready site</td></tr>
+        <tr><td>Board</td><td class="linked">Commissioner Gage Froerer</td><td>Weber County</td><td>Weber County is a Builder investor; EDCUtah markets the West Weber Mega Site in Weber County; Froerer co-chairs NUEA's advisory board and championed the West Weber inland port</td></tr>
+        <tr><td>Board</td><td class="linked">Commissioner Bob Stevenson</td><td>Davis County</td><td>Catalyst investor; EDCUtah's 2025-26 Public Sector Leadership award; HD-16 candidate</td></tr>
+        <tr><td>Board</td><td class="linked">Jefferson Moss</td><td>Governor's Office of Economic Development</td><td><a href="jefferson-moss.html">Case file</a>; signed the 2026 partnership agreement</td></tr>
+        <tr><td>Board</td><td class="linked">Ben Hart</td><td>Utah Inland Port Authority</td><td>UIPA: Catalyst investor; West Weber and Tooele project areas</td></tr>
+        <tr><td>Board</td><td class="linked">Mayor Erin Mendenhall</td><td>Salt Lake City</td><td>Visionary investor</td></tr>
+        <tr><td>Board</td><td class="linked">Mayor Jenny Wilson</td><td>Salt Lake County</td><td>Champion investor</td></tr>
+        <tr><td>Board</td><td class="linked">Mayor Monica Zoltanski</td><td>Sandy City</td><td>Builder investor</td></tr>
+        <tr><td>Board</td><td class="linked">Mayor Dirk Burton</td><td>West Jordan</td><td>Catalyst investor</td></tr>
+        <tr><td>Board</td><td>Brett Christensen · Kyle Biederwolf · Brie Davis · Heidi Bredenholler-Prasad · Christy Alter · Brad Holmes · Cory Montgomery · Matthew Winklestine · Richard Garlish · Dan Richards · Rod Nease · Reed Laws · Tom Morgan</td><td>America First · Comcast · Delta · Enbridge · Goldman Sachs · Larry H. Miller · Nucor · Quanta · Rocky Mountain Power · SelectHealth · Sunbelt Rentals · Your Employment Solutions · Zions Bank</td><td>Each company is an EDCUtah investor</td></tr>
+        <tr><td>Ex officio</td><td class="linked">Gov. Spencer Cox</td><td>State of Utah</td><td>—</td></tr>
+        <tr><td>Ex officio</td><td class="linked">Sen. Chris Wilson</td><td>Utah State Senate</td><td>—</td></tr>
+        <tr><td>Ex officio</td><td class="linked">Rep. Ariel DeFay</td><td>Utah House</td><td>—</td></tr>
+        <tr><td>Ex officio</td><td class="linked">Jenney Rees</td><td>State Director, Office of Sen. John Curtis</td><td>—</td></tr>
+        <tr><td>Ex officio</td><td class="linked">Geoffrey Thomas Landward</td><td>Utah System of Higher Education</td><td>—</td></tr>
+        <tr><td>Ex officio</td><td>Stephanie Frohman</td><td>Janet Quinney Lawson Institute for Land, Water and Air</td><td>—</td></tr>
+      </tbody>
+    </table>
+    <div class="callout"><strong>Every company on the board is also a paying investor.</strong> All 15 company seats (including the chair, Rio Tinto, and vice chair, Horrocks) match names on EDCUtah's investor tiers, and the other nine voting seats belong to public officials whose cities, counties or agencies are also investors.</div>
+    <h3 style="font-size:21px;margin-top:20px;">What the state business record says</h3>
+    <p>Utah's Division of Corporations record for the Economic Development Corporation of Utah (entity #975308-0140, domestic nonprofit, formed Aug. 17, 1987, active, last renewed July 14, 2026) lists: Thomas Morgan, Chairman of the Board; Judd Cook, Matt Hirst and Ryan Starks, Directors; Derek Miller, President; Heidi Walker, Secretary (updated April 21, 2025); registered agent Jill Kirsling. The state record still names Morgan as chairman (updated Oct. 1, 2025), while EDCUtah's own board page now lists Jason Hill.</p>
+    <details class="open-q"><summary>Earlier officers (from EDCUtah announcements, 2023 and 2024)</summary>
+      <p>Sept. 21, 2023: chair Judd Cook (Dominion Energy); vice chairs Tom Morgan (Zions) and Utah County Commissioner Brandon Gordon; secretary Gary Hoogeveen (Rocky Mountain Power). Oct. 30, 2024: chair Tom Morgan; vice chairs Jason Hill (Rio Tinto) and Mayor Dirk Burton (West Jordan); treasurer Dan Richards (SelectHealth); secretary Judd Cook (Enbridge Gas).</p>
+      <table class="data">
       <thead><tr><th>Name</th><th>Role at EDCUtah</th><th>Day job</th><th>Also in the Hive record</th></tr></thead>
       <tbody>
         <tr><td>Judd Cook</td><td>Board chair (2023)</td><td>Dominion Energy, VP and general manager, western gas distribution</td><td>Dominion/Enbridge: EDCUtah investor; gas to UIPA West Weber</td></tr>
         <tr><td>Tom Morgan</td><td>Private-sector vice chair (2023); listed as chairman in state business records</td><td>Zions Bank</td><td>Zions: EDCUtah investor; <a href="https://weber-county-hive.github.io/PIDS-Utah/">seven roles in PID deals</a></td></tr>
         <tr><td>Brandon Gordon</td><td>Public-sector vice chair (2023)</td><td>Utah County Commissioner</td><td>—</td></tr>
         <tr><td>Gary Hoogeveen</td><td>Board secretary (2023)</td><td>Rocky Mountain Power</td><td>Rocky Mountain Power: EDCUtah investor; Utah Taxpayers Association PAC donor</td></tr>
-        <tr><td>Bob Stevenson</td><td>Board of Trustees <span class="verified v-yes">county record, 2024</span></td><td>Davis County Commissioner; 2026 HD-16 candidate</td><td>Davis County: EDCUtah Catalyst investor; <a href="https://weber-county-hive.github.io/candidates2026/">candidates2026</a></td></tr>
+        <tr><td>Bob Stevenson</td><td>Board of Trustees <span class="verified v-yes">current board page</span></td><td>Davis County Commissioner; 2026 HD-16 candidate</td><td>Davis County: EDCUtah Catalyst investor; <a href="https://weber-county-hive.github.io/candidates2026/">candidates2026</a></td></tr>
         <tr><td>Ryan Starks</td><td>President &amp; Executive Director; director in state business records</td><td>—</td><td><a href="ryan-starks.html">Case file</a></td></tr>
         <tr><td>Derek Miller</td><td>Principal officer (IRS); president in state business records</td><td>Salt Lake Chamber President &amp; CEO</td><td><a href="utah-rising.html">Utah Rising</a></td></tr>
       </tbody>
     </table>
-    <p style="font-size:14px;color:var(--ink-soft);">Bob Stevenson: Davis County's 2024 Commission Assignments (dated Jan. 3, 2024) list him on "Economic Development Corp of Utah / Board of Trustees." The state business registry also lists him as a trustee without dates. His 2025 and 2026 assignments were not checked.</p>
+    </details>
+    <p style="font-size:14px;color:var(--ink-soft);">Bob Stevenson's seat is confirmed on the current board page and in Davis County's 2024 Commission Assignments (dated Jan. 3, 2024).</p>
+  </section>
+
+  <section>
+    <h2>Who works there: two former state officials on staff</h2>
+    <p>EDCUtah's "Our Team" page (read Oct. 7, 2026) lists 17 staff. Two of them held state roles that connect to EDCUtah's work:</p>
+    <div class="callout"><strong>Rep. Jon Hawkins (R), "Strategic Advisor, Utah Olympic Readiness."</strong> EDCUtah announced him on May 1, 2026. Hawkins is a sitting member of the Utah House (District 55, term ends Jan. 1, 2027) and is on the 2026 ballot for re-election. EDCUtah's announcement does not mention his House seat; it lists the Utah Sports Commission, Olympic Legacy Foundation and USA Climbing Foundation boards and says he chairs the Legislature's Olympic Coordinating Committee. In the House, he was the floor sponsor of S.B. 272 (2024), which allowed Salt Lake City's 0.5% sales tax for the Delta Center district, and he is a director of Central Utah GOP House PAC. EDCUtah asked the Legislature for $250,000 in January 2026, four months before his appointment. Whether the advisor role is paid is not stated on EDCUtah's site.</div>
+    <div class="callout"><strong>Val Hale, "Strategic Advisor, Community Growth."</strong> Former executive director of the Governor's Office of Economic Development, the state office that now partners with EDCUtah. EDCUtah announced him as a consultant on June 20, 2023. His quote then: "They are fantastic partners and contributed greatly to our success."</div>
+    <p>Also on staff: Ryan Starks (listed as Executive Director), CFO Jill Kirsling, Deputy Director Erin Farr, Director of Research Michael Stachitus, and Greg Bisping, Vice President of Partner Relations, who is the contact for Site Ready Utah.</p>
+    <p><b>For balance:</b> Utah's legislators are part-time and most hold outside jobs. Holding one is allowed; state law requires legislators to disclose outside employment on their conflict-of-interest forms.</p>
+  </section>
+
+  <section>
+    <h2>What it reports doing</h2>
+    <p>EDCUtah's annual reports list the companies it counts as "project wins." The figures are the companies' own multiyear commitments.</p>
+    <table class="data">
+      <thead><tr><th>Fiscal year</th><th>New projects</th><th>Wins</th><th>Jobs (new + retained)</th><th>Capital investment</th></tr></thead>
+      <tbody>
+        <tr><td>2024-2025</td><td>86</td><td>20</td><td>3,213 (headline)</td><td>$1.3 billion</td></tr>
+        <tr><td>2025-2026</td><td>79</td><td>12</td><td>8,519 (6,909 new, 1,610 retained)</td><td>$20.2 billion</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:14px;color:var(--ink-soft);">The 2024-2025 report's own numbers don't match: the headline says 3,213 jobs, while its text says the 20 companies "committed to create 3,360 new jobs and retain 120 existing jobs" (3,480).</p>
+    <div class="chart">
+      <h3>FY 2025-2026: one win is most of the total</h3>
+      <p class="sub">Capital investment of EDCUtah's 12 project wins, as listed in its annual report.</p>
+      <div class="bars">
+        <div class="bar-row"><div class="lbl">Creekstone Energy ("Project Flute"), Millard County data center campus</div><div class="bar-track"><div class="b-ut" style="width:84.2%">$17 billion · 84%</div></div></div>
+        <div class="bar-row"><div class="lbl">Western Governors University ("Project Talon"), Salt Lake City</div><div class="bar-track"><div class="b-nat" style="width:12.4%;min-width:110px;">$2.5 billion</div></div></div>
+        <div class="bar-row"><div class="lbl">The other 10 wins combined</div><div class="bar-track"><div class="b-pub" style="width:3.4%;min-width:110px;">≈ $0.7 billion</div></div></div>
+      </div>
+      <p class="src">Source: EDCUtah, FY 2025-2026 Annual Report. Not every win lists a capital figure, so the "other 10" bar is the remainder of the $20.2 billion total.</p>
+    </div>
+    <div class="callout"><strong>Creekstone is EDCUtah's own win.</strong> The report lists Creekstone Energy, "$17 billion capex" and 106 jobs in Millard County, as one of its 12 wins. That is the same company that received the state's only data center tax credit (up to $172.19 million over 20 years) and whose gas engines are installed by Quanta Services, an EDCUtah Catalyst investor.</div>
+    <p><b>Other wins tied to the Hive record:</b> Nucor ($200 million, 200 jobs, Brigham City) in 2024-2025 (Nucor is a Catalyst investor and a Utah Taxpayers Association PAC donor); Karman Space &amp; Defense (500 jobs, West Valley City) in 2025-2026; Auria (17 jobs, Weber County).</p>
+    <h3 style="font-size:21px;margin-top:20px;">Who EDCUtah gave awards to</h3>
+    <table class="data">
+      <thead><tr><th>Year</th><th>Award</th><th>Recipient</th><th>Also</th></tr></thead>
+      <tbody>
+        <tr><td>2025-2026</td><td>Public Sector Leadership</td><td>Commissioner Bob Stevenson, Davis County</td><td class="linked">EDCUtah trustee (2024 county record); Davis County is a Catalyst investor</td></tr>
+        <tr><td>2025-2026</td><td>Private Sector Leadership</td><td>Christina Alter, Goldman Sachs</td><td class="linked">Goldman Sachs is a Champion investor</td></tr>
+        <tr><td>2025-2026</td><td>Institutional Cornerstone</td><td>Rocky Mountain Power</td><td class="linked">Champion investor; holds the board secretary seat</td></tr>
+        <tr><td>2024-2025</td><td>Public Sector Leadership</td><td>Paul Larsen (Brigham City)</td><td>Credited with landing Nucor</td></tr>
+        <tr><td>2024-2025</td><td>Private Sector Leadership</td><td>Brad Simons, Questar / Dominion / Enbridge</td><td class="linked">Enbridge is a Visionary investor</td></tr>
+        <tr><td>2024-2025</td><td>Institutional Cornerstone</td><td>Delta Air Lines</td><td class="linked">Champion investor</td></tr>
+      </tbody>
+    </table>
+    <p><b>For balance:</b> the reports say the awards come from nominations by "members, stakeholders, and the public." The reports do not give EDCUtah's own budget or how much of it is public money.</p>
   </section>
 
   <section>
@@ -253,7 +337,7 @@ details.gl p{margin:8px 0 0;font-size:15px;}
       <thead><tr><th>Site</th><th>Type</th><th>Acres</th><th>Already in the Hive record nearby</th></tr></thead>
       <tbody>
         <tr data-t="mega link"><td><b>West Weber County Mega Site</b><br><span style="font-size:13px">"7 miles west of the I-15 Ogden 12th Street interchange"; rail "requires investment for track and spur"</span></td><td>Mega, Stage 2</td><td>891</td><td>Same corridor as UIPA's West Weber project area (PCC Land, PCC PID, up to 40 years of tax differential); UIPA's 2024 report lists data centers among its prospects. <span class="verified v-near">same area</span></td></tr>
-        <tr data-t="mega link"><td><b>Millard County Mega Site</b></td><td>Mega, Stage 1</td><td>22,000</td><td>Same county as Creekstone's Delta Gigasite (listed at more than 10 GW), the only data center with a state REDTIF credit: up to $172.19 million over 20 years. <span class="verified v-near">same county</span></td></tr>
+        <tr data-t="mega link"><td><b>Millard County Mega Site</b></td><td>Mega, Stage 1</td><td>22,000</td><td>Same county as Creekstone's Delta Gigasite (listed at more than 10 GW), the only data center with a state REDTIF credit: up to $172.19 million over 20 years. EDCUtah lists Creekstone as its own FY 2025-26 win. <span class="verified v-near">same county</span></td></tr>
         <tr data-t="mega link"><td><b>Pole Canyon Mega Site</b></td><td>Mega, Stage 1</td><td>467</td><td>Same name as Eagle Mountain's Pole Canyon CRA (the <a href="https://weber-county-hive.github.io/Transparency/tyson-eagle-mountain-closure.html">Tyson case</a>) and Tract's proposed 1.7 GW Pole Canyon Technology Tract. <span class="verified v-near">same area</span></td></tr>
         <tr data-t="mega link"><td><b>Eagle Mountain Mega Site</b></td><td>Mega, Stage 2</td><td>290 left</td><td>Same city as the Sweetwater CRAs for Meta and QTS (Sweetwater #4: $778.5 million in increment). <span class="verified v-near">same city</span></td></tr>
         <tr data-t="mega link"><td><b>Carbon Highway 10 Mega Site</b></td><td>Mega, Stage 1</td><td>691.64</td><td>Same county as the Valar Atomics lease near Wellington and the Altigen gas pipeline item. Highway 10 runs south of Price; no record ties these sites together. <span class="verified v-near">same county</span></td></tr>
@@ -279,18 +363,26 @@ details.gl p{margin:8px 0 0;font-size:15px;}
 
   <section>
     <h2>How it connects</h2>
-    <div class="diagram-block wide">
-      <div class="mermaid">
-flowchart TD
-  PUB["Public money<br>State / GOED · UIPA<br>Salt Lake City &amp; County<br>Davis · Weber · Utah counties<br>Ogden · West Jordan"] --> EDC
-  CO["Companies<br>Rocky Mountain Power · Enbridge<br>Zions Bank · Quanta · Nucor<br>Larry H. Miller Co."] --> EDC
-  EDC["EDCUtah<br>inside the Salt Lake Chamber<br>President: Ryan Starks"]
-  GO["GO Utah<br>(state office)"] <-->|"agreement<br>March 27, 2026"| EDC
-  EDC --> SRU["Site Ready Utah<br>14 sites"]
-  EDC --> PROF["Data center<br>sales brochure"]
-  SRU --> WW["West Weber Mega Site<br>same corridor as<br>UIPA West Weber"]
-  SRU --> MIL["Millard Mega Site<br>same county as<br>Creekstone, $172M credit"]
-  SRU --> EM["Pole Canyon &amp; Eagle Mountain<br>same area as<br>Pole Canyon &amp; Sweetwater CRAs"]
+    <div class="flow">
+      <div class="flow-row two">
+        <div class="fbox pub"><div class="fh">Public money</div>State of Utah / GOED · Utah Inland Port Authority · Salt Lake City and County · Davis, Weber and Utah counties · Ogden · West Jordan</div>
+        <div class="fbox co"><div class="fh">Companies</div>Rocky Mountain Power · Enbridge · Zions Bank · Quanta Services · Nucor · Larry H. Miller Co.</div>
+      </div>
+      <div class="arrow">▼ <span>pay in as investors</span></div>
+      <div class="flow-row">
+        <div class="fbox edc"><div class="fh">EDCUtah</div>Inside the Salt Lake Chamber · Executive Director: Ryan Starks<br><span style="font-size:16px;">Board includes Weber County Commissioner Gage Froerer, Ogden Mayor Ben Nadolski, GOED's Jefferson Moss and UIPA's Ben Hart</span></div>
+      </div>
+      <div class="side-link">◀▶ <b>GO Utah (state office)</b>: partnership agreement signed March 27, 2026</div>
+      <div class="arrow">▼ <span>runs and publishes</span></div>
+      <div class="flow-row two">
+        <div class="fbox"><div class="fh">Site Ready Utah</div>14 certified and mega sites</div>
+        <div class="fbox"><div class="fh">Data center sales brochure</div>"lower costs for labor, construction, land…"</div>
+      </div>
+      <div class="arrow">▼ <span>sites sit in the same areas as</span></div>
+      <div class="flow-row three">
+        <div class="fbox near"><div class="fh">West Weber Mega Site</div>Same corridor as UIPA's West Weber project area</div>
+        <div class="fbox near"><div class="fh">Millard County Mega Site</div>Same county as Creekstone, EDCUtah's own $17B "win" with up to $172M in state tax credits</div>
+        <div class="fbox near"><div class="fh">Pole Canyon &amp; Eagle Mountain</div>Same area as the Pole Canyon and Sweetwater CRAs</div>
       </div>
       <div class="diagram-caption">Money and roles from the records cited below. "Same area" links are by location only.</div>
     </div>
@@ -303,6 +395,11 @@ flowchart TD
       <li><b><a href="chris-roybal.html">Chris Roybal</a></b>: former EDCUtah CEO; now president of the Northern Utah Economic Alliance, which promotes the West Weber area; donor to and manager of Utah Forward PAC.</li>
       <li><b><a href="jefferson-moss.html">Jefferson Moss</a></b>: GO Utah director; signed the 2026 agreement with EDCUtah; announced Creekstone's credit.</li>
       <li><b>Steve Starks</b>: CEO of Larry H. Miller Company, an EDCUtah Champion investor; Ryan Starks' brother (<a href="utah-rising.html">Utah Rising</a>).</li>
+      <li><b>Commissioner Gage Froerer</b> (Weber County): EDCUtah board member; Weber County is an investor and home to the West Weber Mega Site EDCUtah markets.</li>
+      <li><b>Mayor Ben Nadolski</b> (Ogden): EDCUtah public-sector vice chair; Ogden is a Champion investor.</li>
+      <li><b>Ben Hart</b> (Utah Inland Port Authority): EDCUtah board member; UIPA is a Catalyst investor.</li>
+      <li><b>Rep. Jon Hawkins</b>: sitting House member (HD-55, on the 2026 ballot) and EDCUtah's Strategic Advisor for Olympic readiness since May 2026; floor sponsor of S.B. 272 (2024).</li>
+      <li><b>Val Hale</b>: former GOED executive director; EDCUtah Strategic Advisor, Community Growth.</li>
       <li><b>Bob Stevenson</b>: Davis County commissioner on EDCUtah's Board of Trustees (2024 county record); Davis County is a Catalyst investor.</li>
     </ul>
   </section>
@@ -319,8 +416,9 @@ flowchart TD
     <h2>Open questions</h2>
     <details class="open-q"><summary>How much does each public body pay EDCUtah?</summary><p>The investor page shows tiers, not dollar amounts.</p></details>
     <details class="open-q"><summary>Was the $250,000 request funded?</summary><p>The request is on file (Jan. 30, 2026). Whether it was in the final budget is not yet confirmed.</p></details>
-    <details class="open-q"><summary>Is Bob Stevenson still on the Board of Trustees?</summary><p>Confirmed for 2024 by Davis County's own assignment list. 2025 and 2026 not checked.</p></details>
+    <details class="open-q"><summary>Bob Stevenson's board seat</summary><p>Confirmed: listed on EDCUtah's current board page and in Davis County's 2024 assignments.</p></details>
     <details class="open-q"><summary>Are any Site Ready sites the same land as the projects listed?</summary><p>Matched by location only. Parcel numbers for each site would settle it.</p></details>
+    <details class="open-q"><summary>Is Rep. Hawkins' advisor role paid, and is it on his disclosure form?</summary><p>EDCUtah's site does not say. Legislators list outside employment on their conflict-of-interest forms, which are posted publicly.</p></details>
     <details class="open-q"><summary>Who owns the West Weber Mega Site?</summary><p>The site page does not name an owner.</p></details>
   </section>
 
@@ -328,9 +426,11 @@ flowchart TD
     <h2>Questions worth asking</h2>
     <ul class="ask-list">
       <li><strong>Weber County Commission and Ogden City Council:</strong> How much do you pay EDCUtah each year, and from which fund?</li>
+      <li><strong>Weber County Commission:</strong> Commissioner Froerer sits on EDCUtah's board while EDCUtah markets the West Weber Mega Site. Is that seat listed on his disclosure form, and does he vote on county items involving EDCUtah or that site?</li>
       <li><strong>Davis County Commission:</strong> What does Davis County pay as a Catalyst investor, and does a commissioner still sit on EDCUtah's board?</li>
       <li><strong>Utah Inland Port Authority board:</strong> How much does UIPA pay EDCUtah, and does EDCUtah market sites inside UIPA project areas?</li>
       <li><strong>Your state legislators:</strong> Was the $250,000 for EDCUtah funded, and what reporting comes with it?</li>
+      <li><strong>Rep. Jon Hawkins and the House Ethics Committee:</strong> Is the EDCUtah advisor role paid, and does it appear on his conflict-of-interest disclosure?</li>
       <li><strong>EDCUtah and GO Utah:</strong> Which Site Ready sites have been shown to data center companies?</li>
     </ul>
   </section>
@@ -343,8 +443,18 @@ flowchart TD
         <li><a href="https://cdn.prod.website-files.com/609d688e79816d8657b2c108/68af838f66ee4da5392edb9e_Utah%20Data%20Centers%20Profile%20-%20FY%2023-24.pdf">EDCUtah, "Data Centers in Utah: EDCUtah Industry Profile 23-24"</a> (PDF; read through a text pull)</li>
         <li><a href="https://www.edcutah.org/business/research">EDCUtah, Economic Research page</a> (list of industry profiles)</li>
         <li><a href="https://www.edcutah.org/support/our-investors">EDCUtah, Our Investors</a>, read Oct. 7, 2026</li>
+        <li><a href="https://www.edcutah.org/about/board">EDCUtah, Board page</a>, read Oct. 7, 2026</li>
+        <li><a href="https://www.edcutah.org/recent-news/tom-morgan-board-chair">EDCUtah, Tom Morgan board chair announcement, Oct. 30, 2024</a></li>
+        <li>Utah Division of Corporations, Economic Development Corporation of Utah, entity #975308-0140 (pasted capture, Oct. 7, 2026)</li>
         <li><a href="https://www.edcutah.org/recent-news/edcutah-announces-judd-cook-as-new-board-chair">EDCUtah, "EDCUtah announces Judd Cook as new board chair," Sept. 21, 2023</a></li>
         <li><a href="https://www.sitereadyutah.org/">Site Ready Utah</a>; <a href="https://www.sitereadyutah.org/whats-available">What's Available</a>; <a href="https://www.sitereadyutah.org/certified-sites/weber-county">West Weber County Mega Site</a></li>
+        <li>EDCUtah, "About / Our Team" page (pasted capture, Oct. 7, 2026)</li>
+        <li><a href="https://www.edcutah.org/annual-reports/2024-2025-annual-report">EDCUtah, FY 2024-2025 Annual Report</a> (pasted capture, Oct. 7, 2026)</li>
+        <li><a href="https://www.edcutah.org/annual-reports/2025-2026-annual-report">EDCUtah, FY 2025-2026 Annual Report</a> (read by web fetch, Oct. 7, 2026)</li>
+        <li><a href="https://www.edcutah.org/recent-news/edcutah-welcomes-jon-hawkins-as-strategic-advisor">EDCUtah, "EDCUtah welcomes Jon Hawkins as strategic advisor," May 1, 2026</a></li>
+        <li><a href="https://edcutah.org/recent-news/edcutah-welcomes-val-hale">EDCUtah, "EDCUtah welcomes Val Hale," June 20, 2023</a></li>
+        <li><a href="https://ballotpedia.org/Jon_Hawkins">Ballotpedia, Jon Hawkins</a> (HD-55, term ends Jan. 1, 2027); <a href="https://www.ksl.com/article/51428770/heres-whos-running-for-the-utah-legislature-in-2026">KSL, "Here's who's running for the Utah Legislature in 2026"</a></li>
+        <li><a href="https://le.utah.gov/~2024/bills/static/SB0272.html">S.B. 272 (2024), Capital City Revitalization Zone</a>, floor sponsor Rep. Jon Hawkins</li>
         <li><a href="https://search.findcra.com/nonprofit/economic-development-corp-of-utah/">Nonprofit profile, Economic Development Corp of Utah, EIN 74-2502619</a> (IRS filing data)</li>
         <li><a href="https://le.utah.gov/interim/2026/pdf/00001183.pdf">Request for Appropriation, EDCUtah partnership, Jan. 30, 2026</a></li>
         <li><a href="https://www.utahbusiness.com/press-releases/2026/03/27/governor-office-economic-opportunity-economic-development-corporation-utah-mou/">Utah Business, GO Utah–EDCUtah MOU, March 27, 2026</a></li>
