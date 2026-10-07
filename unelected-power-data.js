@@ -121,6 +121,15 @@ const UNELECTED_POWER_PROFILES = [
     dateUpdated: "2026-09-16"
   },
   {
+    slug: "edcutah",
+    name: "EDCUtah",
+    roleTag: "Organization · Private Business Recruiter, Public Investors",
+    summary: "A private 501(c)(6) inside the Salt Lake Chamber that recruits companies and certifies 14 large development sites. The state, the Inland Port Authority and at least five cities and counties are among its top investors, and several of its mega sites sit where data centers, CRAs and state tax credits are already in the record.",
+    tags: ["EDCUtah", "Site Ready Utah", "Data Centers", "UIPA", "Ryan Starks", "Chris Roybal", "GO Utah"],
+    dateAdded: "2026-10-07",
+    dateUpdated: "2026-10-07"
+  },
+  {
     slug: "ogden-ice-unelected-enforcement",
     name: "The Ogden Officer & The ICE Agent",
     roleTag: "Ogden PD Patrol Officer · Federal ICE Agent",

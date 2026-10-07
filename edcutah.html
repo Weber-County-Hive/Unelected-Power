@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EDCUtah | Unelected Power | The Weber County Hive</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+:root{
+  --paper:#f7f1e6; --paper-2:#efe6d3; --ink:#2a1f14; --ink-soft:#63594a;
+  --maroon:#5c1a1a; --maroon-2:#7a2424;
+  --gold:#a9762c; --gold-bg:#f0e0c0;
+  --line:#ddccaa;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--paper);color:var(--ink);font-family:'Source Sans 3',sans-serif;line-height:1.65;font-size:16px;}
+.wrap{max-width:860px;margin:0 auto;padding:0 24px;}
+a{color:var(--maroon-2);}
+h1,h2,h3{font-family:'Playfair Display',serif;color:var(--ink);}
+
+.topbar{background:var(--ink);color:var(--gold-bg);padding:10px 0;font-family:'IBM Plex Mono',monospace;font-size:12px;}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;}
+.topbar a{color:var(--gold-bg);text-decoration:none;opacity:.85;}
+.topbar a:hover{opacity:1;text-decoration:underline;}
+
+header.masthead{background:linear-gradient(135deg,var(--maroon),var(--maroon-2));color:#f4e9d8;padding:40px 0 32px;border-bottom:5px solid var(--gold);}
+header.masthead .wrap{max-width:860px;margin:0 auto;padding:0 24px;}
+.kicker{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-bg);opacity:.8;margin-bottom:14px;}
+h1.title{font-size:42px;line-height:1.1;margin-bottom:14px;color:#fbf3e3;}
+h1.title em{font-style:italic;color:var(--gold-bg);}
+p.dek{font-size:18px;color:#e9d9bb;max-width:640px;}
+.rc-row{margin-top:18px;display:flex;flex-wrap:wrap;gap:8px;}
+.pub-date{margin-top:10px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.03em;color:#d8b98a;}
+.rc-tag{display:inline-block;background:var(--gold-bg);border:1px solid var(--gold);color:var(--maroon);font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.03em;text-transform:uppercase;padding:4px 11px;border-radius:4px;text-decoration:none;}
+.rc-tag:hover{background:var(--gold);color:#fff;}
+
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin:36px 0;}
+.stat{background:var(--paper-2);padding:20px;text-align:center;}
+.stat .num{font-family:'Playfair Display',serif;font-size:26px;color:var(--maroon);font-weight:700;}
+.stat .label{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.05em;color:var(--ink-soft);margin-top:6px;text-transform:uppercase;}
+
+section{padding:8px 0 36px;}
+section h2{font-size:26px;border-bottom:2px solid var(--gold);padding-bottom:10px;margin-bottom:16px;}
+section p{margin-bottom:14px;}
+section ul{margin:0 0 14px 20px;}
+section li{margin-bottom:8px;}
+.callout{background:var(--paper-2);border-left:4px solid var(--maroon);padding:16px 20px;margin:18px 0;font-size:15px;}
+.callout strong{color:var(--maroon);}
+table.data{width:100%;border-collapse:collapse;margin:16px 0;font-size:14.5px;}
+table.data th{text-align:left;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-soft);border-bottom:2px solid var(--ink);padding:6px 10px 8px;}
+table.data td{padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top;}
+table.data tr:nth-child(even){background:var(--paper-2);}
+table.data td.linked{color:var(--maroon);font-weight:600;}
+
+details.open-q{background:var(--paper-2);border:1px solid var(--line);margin-bottom:10px;padding:14px 18px;}
+details.open-q summary{font-family:'IBM Plex Mono',monospace;font-size:13.5px;cursor:pointer;color:var(--maroon);}
+details.open-q p{margin-top:10px;margin-bottom:0;font-size:14.5px;}
+
+.tag-row{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 4px;}
+.tag{font-family:'IBM Plex Mono',monospace;font-size:11px;background:var(--gold-bg);border:1px solid var(--gold);color:var(--ink);padding:3px 9px;}
+
+.ask-list{list-style:none;margin:0;padding:0;}
+.ask-list li{background:var(--paper-2);border-left:4px solid var(--gold);padding:14px 18px;margin-bottom:10px;font-size:14.5px;}
+.ask-list li strong{color:var(--maroon);}
+
+footer{background:var(--ink);color:var(--paper-2);padding:36px 0 46px;margin-top:20px;}
+footer .sub{color:#a99a85;font-size:13px;margin-top:6px;}
+
+@media(max-width:600px){
+  header.masthead{padding:32px 0 26px;}
+  h1.title{font-size:30px;}
+  .stats{grid-template-columns:1fr;}
+}
+.diagram-block{background:var(--paper-2);border:1px solid var(--line);padding:18px;margin:18px 0;overflow-x:auto;text-align:center;}
+.diagram-block .mermaid{display:inline-block;}
+.diagram-block svg{max-width:100% !important;min-width:min(480px,100%);height:auto !important;}
+.diagram-block.wide{width:calc(100vw - 24px);max-width:1100px;position:relative;left:50%;transform:translateX(-50%);padding:28px;}
+.diagram-block.wide svg{min-width:100%;}
+.diagram-caption{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-soft);margin-top:10px;text-align:center;}
+
+.bars{display:flex;flex-direction:column;gap:14px;margin:14px 0;}
+.bar-row .lbl{font-size:17px;font-weight:700;margin-bottom:4px;line-height:1.3;}
+.bar-track{display:flex;height:40px;background:#fff;border:1px solid var(--line);}
+.bar-track div{display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:16px;white-space:nowrap;overflow:hidden;}
+.b-pub{background:#1f3a68;} .b-priv{background:var(--gold);} .b-ut{background:var(--maroon);} .b-nat{background:#8a8172;}
+.legend{display:flex;gap:18px;flex-wrap:wrap;font-size:15px;margin-top:6px;}
+.legend span::before{content:"";display:inline-block;width:16px;height:16px;margin-right:6px;vertical-align:-3px;}
+.legend .lp::before{background:#1f3a68;} .legend .lv::before{background:var(--gold);}
+.legend .lu::before{background:var(--maroon);} .legend .ln::before{background:#8a8172;}
+.chart{background:#fff;border:1px solid var(--line);padding:18px 20px;margin:18px 0;}
+.chart h3{font-size:21px;margin-bottom:6px;}
+.chart .sub{font-size:15px;color:var(--ink-soft);margin-bottom:8px;}
+.chart .src{font-size:13px;color:var(--ink-soft);font-style:italic;margin-top:10px;}
+#map{height:460px;border:1px solid var(--line);margin:14px 0;}
+.tipnote{background:#fff;border:2px dashed var(--gold);padding:14px 18px;margin:18px 0;font-size:15px;}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0;}
+.filters button{font:inherit;font-size:15px;font-weight:600;border:2px solid var(--maroon);background:#fff;color:var(--maroon);padding:7px 14px;border-radius:999px;cursor:pointer;min-height:44px;}
+.filters button[aria-pressed="true"]{background:var(--maroon);color:#fff;}
+details.gl{border:1px solid var(--line);background:#fff;margin-bottom:8px;padding:12px 16px;}
+details.gl summary{font-weight:700;cursor:pointer;color:var(--maroon);font-size:16px;}
+details.gl p{margin:8px 0 0;font-size:15px;}
+.verified{font-family:'IBM Plex Mono',monospace;font-size:11px;padding:2px 7px;border:1px solid;margin-left:6px;white-space:nowrap;}
+.v-yes{color:#1d6b3a;border-color:#1d6b3a;} .v-near{color:#8a5a00;border-color:#8a5a00;}
+</style>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>
+  mermaid.initialize({
+    startOnLoad: true,
+    theme: 'base',
+    securityLevel: 'loose',
+    flowchart: { htmlLabels: true, useMaxWidth: true, padding: 18 },
+    themeVariables: {
+      primaryColor: '#efe6d3',
+      primaryTextColor: '#2a1f14',
+      primaryBorderColor: '#5c1a1a',
+      lineColor: '#a9762c',
+      secondaryColor: '#f0e0c0',
+      secondaryTextColor: '#2a1f14',
+      tertiaryColor: '#f7f1e6',
+      fontFamily: 'Verdana, Arial, sans-serif',
+      fontSize: '19px'
+    }
+  });
+</script>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span>The Weber County Hive · Unelected Power</span>
+    <a href="https://weber-county-hive.github.io/-weber-county-hive-index/">Index ↗</a>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="kicker">Case File · Organization</div>
+    <h1 class="title">EDCUtah: <em>who pays it, and what it markets</em></h1>
+    <p class="dek">A private business group inside the Salt Lake Chamber recruits companies to Utah and certifies large sites for development. Cities, counties, a state authority and the state itself are among its investors. Several of the sites it markets sit where data centers, tax increment zones and state tax credits are already in the record.</p>
+    <div class="rc-row">
+      <a class="rc-tag" href="ryan-starks.html">Cross-reference: Ryan Starks →</a>
+      <a class="rc-tag" href="chris-roybal.html">Cross-reference: Chris Roybal →</a>
+      <a class="rc-tag" href="utah-rising.html">Cross-reference: Utah Rising →</a>
+      <a class="rc-tag" href="jefferson-moss.html">Cross-reference: Jefferson Moss →</a>
+    </div>
+    <div class="pub-date">Published Oct 7, 2026 &middot; Updated Oct 7, 2026</div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="stats">
+    <div class="stat"><div class="num">14</div><div class="label">sites EDCUtah certifies and markets</div></div>
+    <div class="stat"><div class="num">7</div><div class="label">public bodies in its top investor tiers</div></div>
+    <div class="stat"><div class="num">$250K</div><div class="label">state money requested for 2027</div></div>
+  </div>
+
+  <div class="tipnote"><b>How this file started:</b> a reader sent a tip on Oct. 7, 2026, with links to EDCUtah's data center profile, its Site Ready Utah program and its investor list. The reader's name is not published. Everything below was checked against the documents linked in Sources; anything not yet confirmed is labeled.</div>
+
+  <section>
+    <h2>What EDCUtah is</h2>
+    <p>The Economic Development Corporation of Utah (EDCUtah) was founded in 1987. It describes itself as "a private, non-profit organization" and a "catalyst for quality job growth and increased capital investment in the state." It is registered with the IRS as a 501(c)(6) business league (EIN 74-2502619) and reported about $1.5 million in revenue for the fiscal year ending June 2024. It merged into the Salt Lake Chamber in July 2024; the Chamber's president, Derek Miller, is listed as its principal officer.</p>
+    <p>Its president and executive director since May 2025 is <a href="ryan-starks.html">Ryan Starks</a>, the former executive director of the Governor's Office of Economic Opportunity (GO Utah). A separate entity, the EDCUtah Foundation, lists Starks as a director since Feb. 24, 2021.</p>
+    <p><b>Its ties to the state, on paper:</b></p>
+    <ul>
+      <li><b>March 27, 2026:</b> GO Utah and EDCUtah signed a memorandum of understanding. GO Utah "leads strategy and positioning"; EDCUtah handles corporate recruitment, research and marketing to site selectors. GO Utah's director, Jefferson Moss, and Starks are both quoted.</li>
+      <li><b>Jan. 30, 2026:</b> a Request for Appropriation asked the Legislature for <b>$250,000</b> in one-time money for 2027, passed through to EDCUtah as a "Private Not for Profit," "supported by $2.2 million of private investment from Utah businesses." Whether it was funded is not yet confirmed.</li>
+      <li>EDCUtah sits on the Technical Committee of <a href="utah-rising.html">Utah Rising</a>, the Chamber initiative that received, then lost, a $3.2 million state grant Starks approved before leaving GO Utah.</li>
+    </ul>
+    <details class="gl"><summary>What is a 501(c)(6)?</summary><p>A tax-exempt business league or chamber of commerce. Unlike a 501(c)(3) charity, gifts to it are generally not tax-deductible as donations, and it may lobby. It files a public Form 990, but its donor names are not public.</p></details>
+  </section>
+
+  <section>
+    <h2>Who pays in: the investor tiers</h2>
+    <p>EDCUtah's own investor page lists its supporters by tier. Public bodies, paid with tax money, appear in every top tier.</p>
+    <div class="chart">
+      <h3>Public bodies vs. companies in the top four tiers</h3>
+      <p class="sub">Each block is one named investor. Blue = a government or public authority. Gold = a company or private group.</p>
+      <div class="bars">
+        <div class="bar-row"><div class="lbl">State of Utah Partner</div><div class="bar-track"><div class="b-pub" style="width:10%">1</div></div></div>
+        <div class="bar-row"><div class="lbl">Visionary</div><div class="bar-track"><div class="b-pub" style="width:20%">2</div><div class="b-priv" style="width:20%">2</div></div></div>
+        <div class="bar-row"><div class="lbl">Catalyst</div><div class="bar-track"><div class="b-pub" style="width:30%">3</div><div class="b-priv" style="width:50%">5</div></div></div>
+        <div class="bar-row"><div class="lbl">Champion</div><div class="bar-track"><div class="b-pub" style="width:20%">2</div><div class="b-priv" style="width:80%">8</div></div></div>
+      </div>
+      <div class="legend"><span class="lp">Public body</span><span class="lv">Company or private group</span></div>
+      <p class="src">Source: EDCUtah, "Our Investors" page, read Oct. 7, 2026. GOED appears in two tiers and is counted in each.</p>
+    </div>
+    <table class="data">
+      <thead><tr><th>Tier</th><th>Public bodies</th><th>Companies and groups</th></tr></thead>
+      <tbody>
+        <tr><td>State of Utah Partner</td><td class="linked">State of Utah (GOED)</td><td>—</td></tr>
+        <tr><td>Visionary</td><td class="linked">GOED; Salt Lake City</td><td>America First; Enbridge Gas</td></tr>
+        <tr><td>Catalyst</td><td class="linked">Davis County; Utah Inland Port Authority; West Jordan</td><td>Nucor; Quanta Services; Rio Tinto; SelectHealth; Zions Bank</td></tr>
+        <tr><td>Champion</td><td class="linked">Ogden City; Salt Lake County</td><td>Comcast; Delta Air Lines; Goldman Sachs; Horrocks Engineers; Larry H. Miller Company; Rocky Mountain Power; Sunbelt Rentals; Your Employment Solutions</td></tr>
+        <tr><td>Builder (40+)</td><td class="linked">includes Weber County, Utah County, Sandy, Utah City</td><td>includes ARCO, Bank of America, Big D, Boyer Company</td></tr>
+        <tr><td>Public Connector</td><td class="linked">30+ Utah cities and counties</td><td>—</td></tr>
+      </tbody>
+    </table>
+    <div class="callout"><strong>Worth knowing:</strong> the Utah Inland Port Authority, a state authority with its own tax increment, is a Catalyst investor in the group that markets the West Weber Mega Site, which sits on the same corridor as UIPA's own West Weber project area (see the site table below). The amount UIPA pays is not on the investor page.</div>
+  </section>
+
+  <section>
+    <h2>Who runs it</h2>
+    <p>EDCUtah's Sept. 21, 2023 announcement named its board officers. Its current board page returned an error on Oct. 7, 2026.</p>
+    <table class="data">
+      <thead><tr><th>Name</th><th>Role at EDCUtah</th><th>Day job</th><th>Also in the Hive record</th></tr></thead>
+      <tbody>
+        <tr><td>Judd Cook</td><td>Board chair (2023)</td><td>Dominion Energy, VP and general manager, western gas distribution</td><td>Dominion/Enbridge: EDCUtah investor; gas to UIPA West Weber</td></tr>
+        <tr><td>Tom Morgan</td><td>Private-sector vice chair (2023); listed as chairman in state business records</td><td>Zions Bank</td><td>Zions: EDCUtah investor; <a href="https://weber-county-hive.github.io/PIDS-Utah/">seven roles in PID deals</a></td></tr>
+        <tr><td>Brandon Gordon</td><td>Public-sector vice chair (2023)</td><td>Utah County Commissioner</td><td>—</td></tr>
+        <tr><td>Gary Hoogeveen</td><td>Board secretary (2023)</td><td>Rocky Mountain Power</td><td>Rocky Mountain Power: EDCUtah investor; Utah Taxpayers Association PAC donor</td></tr>
+        <tr><td>Bob Stevenson</td><td>Board of Trustees <span class="verified v-yes">county record, 2024</span></td><td>Davis County Commissioner; 2026 HD-16 candidate</td><td>Davis County: EDCUtah Catalyst investor; <a href="https://weber-county-hive.github.io/candidates2026/">candidates2026</a></td></tr>
+        <tr><td>Ryan Starks</td><td>President &amp; Executive Director; director in state business records</td><td>—</td><td><a href="ryan-starks.html">Case file</a></td></tr>
+        <tr><td>Derek Miller</td><td>Principal officer (IRS); president in state business records</td><td>Salt Lake Chamber President &amp; CEO</td><td><a href="utah-rising.html">Utah Rising</a></td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:14px;color:var(--ink-soft);">Bob Stevenson: Davis County's 2024 Commission Assignments (dated Jan. 3, 2024) list him on "Economic Development Corp of Utah / Board of Trustees." The state business registry also lists him as a trustee without dates. His 2025 and 2026 assignments were not checked.</p>
+  </section>
+
+  <section>
+    <h2>What it markets: the data center profile</h2>
+    <p>EDCUtah publishes about 14 industry profiles. One is <i>"Data Centers in Utah: EDCUtah Industry Profile 23-24."</i> It is a sales brochure, not a government plan. In its own words:</p>
+    <ul>
+      <li>"Utah offers lower costs for labor, construction, land, permits, and other vital operation and development costs."</li>
+      <li>"Utah enjoys some of the cheapest electricity and natural gas rates in the nation." (It lists 5.64¢ per kWh in Utah vs. 6.35¢ nationally.)</li>
+      <li>"Utah has some of the lowest water utility rates in the nation, with a water price index score of 46 (USA = 100)."</li>
+    </ul>
+    <div class="chart">
+      <h3>The brochure's own wage table</h3>
+      <p class="sub">Yearly pay, Utah vs. the national figure, as printed. Source line: "Bureau of Labor Statistics, May 2019."</p>
+      <div class="bars">
+        <div class="bar-row"><div class="lbl">Computer &amp; information systems managers</div><div class="bar-track"><div class="b-ut" style="width:66.7%">$97,610</div></div><div class="bar-track" style="margin-top:4px"><div class="b-nat" style="width:87.9%">$128,750</div></div></div>
+        <div class="bar-row"><div class="lbl">Computer systems analysts</div><div class="bar-track"><div class="b-ut" style="width:68.5%">$100,286</div></div><div class="bar-track" style="margin-top:4px"><div class="b-nat" style="width:100%">$146,400</div></div></div>
+        <div class="bar-row"><div class="lbl">Information security analysts</div><div class="bar-track"><div class="b-ut" style="width:51.1%">$74,800</div></div><div class="bar-track" style="margin-top:4px"><div class="b-nat" style="width:61.9%">$90,600</div></div></div>
+        <div class="bar-row"><div class="lbl">Database administrators &amp; architects</div><div class="bar-track"><div class="b-ut" style="width:57%">$83,500</div></div><div class="bar-track" style="margin-top:4px"><div class="b-nat" style="width:68.1%">$99,700</div></div></div>
+      </div>
+      <div class="legend"><span class="lu">Utah</span><span class="ln">National</span></div>
+      <p class="src">Source: EDCUtah Data Centers profile, FY 23-24. Read through a text pull of the PDF; quotes and figures should be matched to the rendered page before reuse. The 2023-24 brochure uses 2019 wage data.</p>
+    </div>
+    <p>For balance: the same brochure points to Utah's tech job growth ("19% job growth over the last five years, nearly double the national rate") and its post-performance incentives, which pay out only after a company performs.</p>
+  </section>
+
+  <section>
+    <h2>Site Ready Utah: the 14 sites</h2>
+    <p>Site Ready Utah is EDCUtah's program. It certifies sites of 100 to 400 acres ("Certified") and markets sites over 400 acres ("Mega," Stage 1 or Stage 2, with outside engineering review). The site pages reviewed do not use the words "data center." The right-hand column shows what the Hive record already has nearby; "same area" means the land has not been matched parcel by parcel.</p>
+    <div class="filters" role="group" aria-label="Filter sites">
+      <button type="button" data-f="all" aria-pressed="true">All 14</button>
+      <button type="button" data-f="link" aria-pressed="false">Near a project in the record</button>
+      <button type="button" data-f="mega" aria-pressed="false">Mega sites</button>
+    </div>
+    <table class="data" id="sites">
+      <thead><tr><th>Site</th><th>Type</th><th>Acres</th><th>Already in the Hive record nearby</th></tr></thead>
+      <tbody>
+        <tr data-t="mega link"><td><b>West Weber County Mega Site</b><br><span style="font-size:13px">"7 miles west of the I-15 Ogden 12th Street interchange"; rail "requires investment for track and spur"</span></td><td>Mega, Stage 2</td><td>891</td><td>Same corridor as UIPA's West Weber project area (PCC Land, PCC PID, up to 40 years of tax differential); UIPA's 2024 report lists data centers among its prospects. <span class="verified v-near">same area</span></td></tr>
+        <tr data-t="mega link"><td><b>Millard County Mega Site</b></td><td>Mega, Stage 1</td><td>22,000</td><td>Same county as Creekstone's Delta Gigasite (listed at more than 10 GW), the only data center with a state REDTIF credit: up to $172.19 million over 20 years. <span class="verified v-near">same county</span></td></tr>
+        <tr data-t="mega link"><td><b>Pole Canyon Mega Site</b></td><td>Mega, Stage 1</td><td>467</td><td>Same name as Eagle Mountain's Pole Canyon CRA (the <a href="https://weber-county-hive.github.io/Transparency/tyson-eagle-mountain-closure.html">Tyson case</a>) and Tract's proposed 1.7 GW Pole Canyon Technology Tract. <span class="verified v-near">same area</span></td></tr>
+        <tr data-t="mega link"><td><b>Eagle Mountain Mega Site</b></td><td>Mega, Stage 2</td><td>290 left</td><td>Same city as the Sweetwater CRAs for Meta and QTS (Sweetwater #4: $778.5 million in increment). <span class="verified v-near">same city</span></td></tr>
+        <tr data-t="mega link"><td><b>Carbon Highway 10 Mega Site</b></td><td>Mega, Stage 1</td><td>691.64</td><td>Same county as the Valar Atomics lease near Wellington and the Altigen gas pipeline item. Highway 10 runs south of Price; no record ties these sites together. <span class="verified v-near">same county</span></td></tr>
+        <tr data-t="link"><td><b>Tooele Business Park</b></td><td>Certified</td><td>304.74</td><td>Same county as UIPA's Tooele Valley project area (500 MW data center plan; 75% of new property tax). <span class="verified v-near">same county</span></td></tr>
+        <tr data-t="link"><td><b>Ogden-Hinckley Airport Certified Site</b></td><td>Certified</td><td>~100</td><td>Ogden City is an EDCUtah Champion investor.</td></tr>
+        <tr data-t="mega"><td><b>Salt Lake City Global Logistics Center</b></td><td>Mega, Stage 2</td><td>610</td><td>—</td></tr>
+        <tr data-t="mega"><td><b>Lakeview Business Park Mega Site</b></td><td>Mega, Stage 1</td><td>900</td><td>—</td></tr>
+        <tr data-t="mega"><td><b>Washington City Mega Site</b></td><td>Mega, Stage 1</td><td>568.59</td><td>—</td></tr>
+        <tr data-t="mega"><td><b>Commerce Crossroads Logistics Park</b> (Iron Springs)</td><td>Mega, Stage 1</td><td>419</td><td>—</td></tr>
+        <tr data-t=""><td><b>Fillmore Certified Site</b></td><td>Certified</td><td>174</td><td>—</td></tr>
+        <tr data-t=""><td><b>Brigham City Industrial Park</b></td><td>Certified</td><td>320</td><td>—</td></tr>
+        <tr data-t=""><td><b>Salina Industrial Park</b></td><td>Certified</td><td>375</td><td>—</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:14px;color:var(--ink-soft);">Source: sitereadyutah.org, "What's Available" and the West Weber County site page, read Oct. 7, 2026.</p>
+  </section>
+
+  <section>
+    <h2>Map: where the sites are</h2>
+    <div id="map" role="region" aria-label="Map of Site Ready Utah sites"></div>
+    <p style="font-size:14px;color:var(--ink-soft);">Pins are approximate, placed at the city or described location, not the parcel. Gold pins: sites near a project already in the Hive record. Lakeview Business Park is not pinned because its location was not given.</p>
+  </section>
+
+  <section>
+    <h2>How it connects</h2>
+    <div class="diagram-block wide">
+      <div class="mermaid">
+flowchart TD
+  PUB["Public money<br>State / GOED · UIPA<br>Salt Lake City &amp; County<br>Davis · Weber · Utah counties<br>Ogden · West Jordan"] --> EDC
+  CO["Companies<br>Rocky Mountain Power · Enbridge<br>Zions Bank · Quanta · Nucor<br>Larry H. Miller Co."] --> EDC
+  EDC["EDCUtah<br>inside the Salt Lake Chamber<br>President: Ryan Starks"]
+  GO["GO Utah<br>(state office)"] <-->|"agreement<br>March 27, 2026"| EDC
+  EDC --> SRU["Site Ready Utah<br>14 sites"]
+  EDC --> PROF["Data center<br>sales brochure"]
+  SRU --> WW["West Weber Mega Site<br>same corridor as<br>UIPA West Weber"]
+  SRU --> MIL["Millard Mega Site<br>same county as<br>Creekstone, $172M credit"]
+  SRU --> EM["Pole Canyon &amp; Eagle Mountain<br>same area as<br>Pole Canyon &amp; Sweetwater CRAs"]
+      </div>
+      <div class="diagram-caption">Money and roles from the records cited below. "Same area" links are by location only.</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>People connected to the record</h2>
+    <ul>
+      <li><b><a href="ryan-starks.html">Ryan Starks</a></b>: EDCUtah president; former GO Utah director who approved the Utah Rising grant; former Inland Port vice chair; non-voting MIDA member.</li>
+      <li><b><a href="chris-roybal.html">Chris Roybal</a></b>: former EDCUtah CEO; now president of the Northern Utah Economic Alliance, which promotes the West Weber area; donor to and manager of Utah Forward PAC.</li>
+      <li><b><a href="jefferson-moss.html">Jefferson Moss</a></b>: GO Utah director; signed the 2026 agreement with EDCUtah; announced Creekstone's credit.</li>
+      <li><b>Steve Starks</b>: CEO of Larry H. Miller Company, an EDCUtah Champion investor; Ryan Starks' brother (<a href="utah-rising.html">Utah Rising</a>).</li>
+      <li><b>Bob Stevenson</b>: Davis County commissioner on EDCUtah's Board of Trustees (2024 county record); Davis County is a Catalyst investor.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Words to know</h2>
+    <details class="gl"><summary>Certified site vs. Mega site</summary><p>Site Ready Utah's two labels. Certified sites are 100 to 400 acres, inspected by EDCUtah and outside engineers. Mega sites are over 400 acres; Stage 2 adds more engineering review and extra marketing.</p></details>
+    <details class="gl"><summary>EDTIF / REDTIF</summary><p>State tax credits paid after a company meets its jobs and investment targets: up to 30% of new state tax revenue (EDTIF), or up to 50% in rural areas (REDTIF).</p></details>
+    <details class="gl"><summary>CRA / tax increment</summary><p>A city or county freezes an area's tax value and sends the new property tax from growth to the project for a set number of years instead of to schools, the county and other taxing entities.</p></details>
+    <details class="gl"><summary>Site selector</summary><p>A consultant hired by a company to choose where to build. EDCUtah markets Utah sites to them.</p></details>
+  </section>
+
+  <section>
+    <h2>Open questions</h2>
+    <details class="open-q"><summary>How much does each public body pay EDCUtah?</summary><p>The investor page shows tiers, not dollar amounts.</p></details>
+    <details class="open-q"><summary>Was the $250,000 request funded?</summary><p>The request is on file (Jan. 30, 2026). Whether it was in the final budget is not yet confirmed.</p></details>
+    <details class="open-q"><summary>Is Bob Stevenson still on the Board of Trustees?</summary><p>Confirmed for 2024 by Davis County's own assignment list. 2025 and 2026 not checked.</p></details>
+    <details class="open-q"><summary>Are any Site Ready sites the same land as the projects listed?</summary><p>Matched by location only. Parcel numbers for each site would settle it.</p></details>
+    <details class="open-q"><summary>Who owns the West Weber Mega Site?</summary><p>The site page does not name an owner.</p></details>
+  </section>
+
+  <section>
+    <h2>Questions worth asking</h2>
+    <ul class="ask-list">
+      <li><strong>Weber County Commission and Ogden City Council:</strong> How much do you pay EDCUtah each year, and from which fund?</li>
+      <li><strong>Davis County Commission:</strong> What does Davis County pay as a Catalyst investor, and does a commissioner still sit on EDCUtah's board?</li>
+      <li><strong>Utah Inland Port Authority board:</strong> How much does UIPA pay EDCUtah, and does EDCUtah market sites inside UIPA project areas?</li>
+      <li><strong>Your state legislators:</strong> Was the $250,000 for EDCUtah funded, and what reporting comes with it?</li>
+      <li><strong>EDCUtah and GO Utah:</strong> Which Site Ready sites have been shown to data center companies?</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Sources</h2>
+    <details class="open-q">
+      <summary>View all sources</summary>
+      <ul>
+        <li><a href="https://cdn.prod.website-files.com/609d688e79816d8657b2c108/68af838f66ee4da5392edb9e_Utah%20Data%20Centers%20Profile%20-%20FY%2023-24.pdf">EDCUtah, "Data Centers in Utah: EDCUtah Industry Profile 23-24"</a> (PDF; read through a text pull)</li>
+        <li><a href="https://www.edcutah.org/business/research">EDCUtah, Economic Research page</a> (list of industry profiles)</li>
+        <li><a href="https://www.edcutah.org/support/our-investors">EDCUtah, Our Investors</a>, read Oct. 7, 2026</li>
+        <li><a href="https://www.edcutah.org/recent-news/edcutah-announces-judd-cook-as-new-board-chair">EDCUtah, "EDCUtah announces Judd Cook as new board chair," Sept. 21, 2023</a></li>
+        <li><a href="https://www.sitereadyutah.org/">Site Ready Utah</a>; <a href="https://www.sitereadyutah.org/whats-available">What's Available</a>; <a href="https://www.sitereadyutah.org/certified-sites/weber-county">West Weber County Mega Site</a></li>
+        <li><a href="https://search.findcra.com/nonprofit/economic-development-corp-of-utah/">Nonprofit profile, Economic Development Corp of Utah, EIN 74-2502619</a> (IRS filing data)</li>
+        <li><a href="https://le.utah.gov/interim/2026/pdf/00001183.pdf">Request for Appropriation, EDCUtah partnership, Jan. 30, 2026</a></li>
+        <li><a href="https://www.utahbusiness.com/press-releases/2026/03/27/governor-office-economic-opportunity-economic-development-corporation-utah-mou/">Utah Business, GO Utah–EDCUtah MOU, March 27, 2026</a></li>
+        <li><a href="https://www.daviscountyutah.gov/docs/librariesprovider24/commission-assignments/dc-commissioners-portfolio.pdf">Davis County, 2024 Commission Assignments (Jan. 3, 2024)</a></li>
+        <li>Utah Division of Corporations / OpenCorporates, Economic Development Corporation of Utah (#975308-0140) officer list; EDCUtah Foundation (#12182719-0140)</li>
+        <li>Governor's Office of Economic Development, "Data Center Initiatives," EDWS Interim Committee, Aug. 19, 2026 (<a href="https://le.utah.gov/interim/2026/pdf/00003149.pdf">le.utah.gov</a>), slide 9 (Creekstone)</li>
+        <li>UIPA, West Weber Annual Report 2024 (data centers among prospects; Enbridge gas expansion)</li>
+        <li>Utah County Report 700 and Eagle Mountain RDA records (Sweetwater and Pole Canyon CRAs), as cited in the <a href="https://weber-county-hive.github.io/Transparency/tyson-eagle-mountain-closure.html">Tyson case file</a></li>
+        <li>Salt Lake Tribune, "Utah data center map," Sept. 25, 2026 (Tract, Creekstone, Valar, UIPA Tooele entries)</li>
+        <li>Cross-references: <a href="ryan-starks.html">Ryan Starks</a>, <a href="chris-roybal.html">Chris Roybal</a>, <a href="jefferson-moss.html">Jefferson Moss</a>, <a href="utah-rising.html">Utah Rising</a></li>
+      </ul>
+    </details>
+  </section>
+
+</div>
+
+<footer>
+  <div class="wrap">
+    <div>THE WEBER COUNTY HIVE · UNELECTED POWER</div>
+    <div class="sub">Independent accountability journalism. Public records only. We report; you decide.</div>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+(function(){
+  if(!window.L) return;
+  var map=L.map('map').setView([39.6,-111.9],6);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:18,attribution:'&copy; OpenStreetMap'}).addTo(map);
+  var sites=[
+    ['West Weber County Mega Site (891 ac)',41.255,-112.12,1,'Same corridor as UIPA West Weber project area'],
+    ['Ogden-Hinckley Airport Certified Site (~100 ac)',41.196,-112.012,1,'Ogden City is an EDCUtah investor'],
+    ['Brigham City Industrial Park (320 ac)',41.51,-112.02,0,''],
+    ['Salt Lake City Global Logistics Center (610 ac)',40.78,-112.06,0,''],
+    ['Tooele Business Park (304.74 ac)',40.53,-112.30,1,'Same county as UIPA Tooele Valley project area'],
+    ['Eagle Mountain Mega Site (290 ac left)',40.31,-112.01,1,'Same city as Sweetwater CRAs (Meta, QTS)'],
+    ['Pole Canyon Mega Site (467 ac)',40.34,-112.09,1,'Same area as Pole Canyon CRA (Tyson) and Tract Pole Canyon'],
+    ['Millard County Mega Site (22,000 ac)',39.35,-112.58,1,'Same county as Creekstone Delta Gigasite'],
+    ['Fillmore Certified Site (174 ac)',38.97,-112.32,0,''],
+    ['Salina Industrial Park (375 ac)',38.96,-111.86,0,''],
+    ['Carbon Highway 10 Mega Site (691.64 ac)',39.50,-110.85,1,'Same county as Valar Atomics lease near Wellington'],
+    ['Commerce Crossroads Logistics Park, Iron Springs (419 ac)',37.70,-113.20,0,''],
+    ['Washington City Mega Site (568.59 ac)',37.13,-113.51,0,'']
+  ];
+  sites.forEach(function(s){
+    L.circleMarker([s[1],s[2]],{radius:10,color:s[3]?'#a9762c':'#1f3a68',fillColor:s[3]?'#a9762c':'#1f3a68',fillOpacity:.85,weight:2})
+     .addTo(map).bindPopup('<b>'+s[0]+'</b>'+(s[4]?'<br>'+s[4]:'')+'<br><i>Approximate location</i>');
+  });
+})();
+(function(){
+  var btns=[].slice.call(document.querySelectorAll('.filters button'));
+  var rows=[].slice.call(document.querySelectorAll('#sites tbody tr'));
+  btns.forEach(function(b){b.addEventListener('click',function(){
+    var f=b.getAttribute('data-f');
+    btns.forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false');});
+    rows.forEach(function(r){r.style.display=(f==='all'||(' '+r.getAttribute('data-t')+' ').indexOf(' '+f+' ')!==-1)?'':'none';});
+  });});
+})();
+</script>
+</body>
+</html>
