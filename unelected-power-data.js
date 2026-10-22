@@ -13,6 +13,15 @@
 
 const UNELECTED_POWER_PROFILES = [
   {
+    slug: "uipa-hearing-fact-check",
+    name: "The Inland Port at the Legislature",
+    roleTag: "Organization · Utah Inland Port Authority · Hearing Check",
+    summary: "UIPA's leaders told a legislative committee on Oct. 21, 2026 that UIPA has no zoning power, creates no new taxes and has given no incentives to data centers. Each claim is checked against UIPA's own plans, releases and loan letters, including two figures that don't match its own releases and an estimate of what its 75% share could total over 40 years.",
+    tags: ["UIPA", "Ben Hart", "Data Centers", "Tax Differential", "AIB Loans", "West Weber", "Tooele Valley", "Golden Spike"],
+    dateAdded: "2026-10-21",
+    dateUpdated: "2026-10-21"
+  },
+  {
     slug: "steve-waldrip",
     name: "Steve Waldrip",
     roleTag: "Governor's Office · State Housing Coordinator",
