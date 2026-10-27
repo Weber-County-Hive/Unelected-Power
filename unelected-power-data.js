@@ -130,7 +130,7 @@ const UNELECTED_POWER_PROFILES = [
     callNumber: "UP 200.01",
     name: "Chris Roybal",
     roleTag: "President, Northern Utah Economic Alliance",
-    summary: "Manages a political action committee registered at his own home address. Since 2022 that committee has taken in tens of thousands of dollars from developers with business interests in Weber County and paid $10,000 of it to a sitting county commissioner.",
+    summary: "President of the Northern Utah Economic Alliance and a listed member of Utah Forward PAC, LLC. Since 2022 the PAC has taken in money from developers with business interests in Weber County and paid $10,000 to a sitting county commissioner.",
     tags: ["Northern Utah Economic Alliance", "Utah Forward PAC", "Gage Froerer", "West Weber"],
     dateAdded: "2026-09-14",
     dateUpdated: "2026-10-27"
