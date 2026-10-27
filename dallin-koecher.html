@@ -9,16 +9,16 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --paper:#F3ECE0;
-    --paper-dim:#E9E0D0;
-    --void:#181210;
-    --void-2:#241A17;
-    --maroon:#6E1F2B;
-    --maroon-dim:#8C3B44;
-    --ink:#211714;
-    --ink-soft:#4A3B35;
-    --line:#C9BBA4;
-    --gold:#B4863C;
+    --paper:#ffffff;
+    --paper-dim:#eef2f7;
+    --void:#1c2a40;
+    --void-2:#2c3e5c;
+    --maroon:#2c3e5c;
+    --maroon-dim:#3a5078;
+    --ink:#1e2430;
+    --ink-soft:#4a5466;
+    --line:#c9d3e1;
+    --gold:#9a521f;
     --max:760px;
   }
   *{box-sizing:border-box;}
@@ -57,7 +57,7 @@
 
   header.masthead{
     padding:56px 24px 40px;
-    border-bottom:3px solid var(--void);
+    border-bottom:3px solid var(--gold);
     max-width:900px;
     margin:0 auto;
   }
@@ -72,7 +72,7 @@
     align-items:center;
     gap:10px;
   }
-  .eyebrow::before{content:"";width:28px;height:2px;background:var(--maroon);display:inline-block;}
+  .eyebrow::before{content:"";width:28px;height:2px;background:var(--gold);display:inline-block;}
   h1.title{
     font-size:clamp(32px,5.4vw,50px);
     line-height:1.08;
@@ -126,6 +126,7 @@
     padding:22px 24px;
     margin:20px 0;
   }
+  .pub-date{margin-top:14px;font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--gold);}
   .record-card h3{font-size:1.1rem;margin:0 0 10px;}
 
   table.claim-table{
@@ -162,9 +163,9 @@
   .flip-card.is-flipped .flip-card-inner{transform:rotateY(180deg);}
   .flip-card-face{position:absolute;width:100%;height:100%;backface-visibility:hidden;border:1px solid var(--line);padding:18px;display:flex;flex-direction:column;justify-content:center;}
   .flip-card-front{background:var(--void);color:var(--paper-dim);text-align:center;}
-  .flip-card-front .num{font-family:'Fraunces',serif;font-weight:700;font-size:1.9rem;color:var(--gold);line-height:1;margin-bottom:10px;}
+  .flip-card-front .num{font-family:'Fraunces',serif;font-weight:700;font-size:1.9rem;color:#f3c9a6;line-height:1;margin-bottom:10px;}
   .flip-card-front .name{font-family:'Fraunces',serif;font-size:1rem;font-weight:600;line-height:1.25;}
-  .flip-card-front .tap-hint{font-family:'IBM Plex Mono',monospace;font-size:0.63rem;color:var(--maroon-dim);margin-top:12px;text-transform:uppercase;letter-spacing:.05em;}
+  .flip-card-front .tap-hint{font-family:'IBM Plex Mono',monospace;font-size:0.63rem;color:#b9c6da;margin-top:12px;text-transform:uppercase;letter-spacing:.05em;}
   .flip-card-back{background:#fff;transform:rotateY(180deg);}
   .flip-card-back .role{font-family:'IBM Plex Mono',monospace;font-size:0.7rem;color:var(--maroon);text-transform:uppercase;letter-spacing:.04em;margin-bottom:8px;}
   .flip-card-back .detail{font-size:0.85rem;color:var(--ink-soft);line-height:1.4;}
@@ -187,7 +188,7 @@
   }
   footer.site-footer .wrap{display:flex;flex-direction:column;gap:14px;}
   footer.site-footer h3{color:#fff;font-size:20px;}
-  footer.site-footer p{color:#B8A899;font-size:14px;max-width:560px;line-height:1.6;margin:0;}
+  footer.site-footer p{color:#b9c6da;font-size:14px;max-width:560px;line-height:1.6;margin:0;}
   footer.site-footer .links{display:flex;gap:22px;flex-wrap:wrap;margin-top:8px;}
   footer.site-footer a{color:var(--gold);text-decoration:none;font-family:'IBM Plex Mono',monospace;font-size:12.5px;letter-spacing:.03em;}
   footer.site-footer a:hover{color:#fff;}
@@ -196,24 +197,64 @@
     header.masthead{padding:40px 18px 28px;}
     main{padding:36px 18px 60px;}
   }
+
+/* ===== Unelected Power standard (slate blue & copper) — header, footer, Where/Who, call number ===== */
+.up-top{background:#1c2a40;color:#b9c6da;font:600 13px 'IBM Plex Mono',monospace;letter-spacing:.06em;text-transform:uppercase}
+.up-top .in{max-width:900px;margin:0 auto;padding:10px 20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.up-top a{color:#e6ecf5;text-decoration:none}
+.up-ww{max-width:900px;margin:26px auto 6px;padding:0 20px}
+.up-where{border:3px solid #2c3e5c;border-radius:10px;overflow:hidden;background:#fff}
+.up-where-h{background:#2c3e5c;color:#fff;padding:12px 18px}
+.up-lbl{font:600 12.5px 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#f3c9a6}
+.up-where-h .pl{font-size:21px;font-weight:700;margin-top:2px}
+.up-who{margin:14px 16px 16px;border:2px solid #9a521f;border-radius:8px}
+.up-who-h{background:#f8ece2;color:#9a521f;padding:6px 12px;font:600 12.5px 'IBM Plex Mono',monospace;letter-spacing:.14em;border-bottom:2px solid #9a521f}
+.up-who ul{list-style:none;margin:0;padding:6px 12px}
+.up-who li{padding:6px 0;border-bottom:1px solid #e3e8ef;font-size:17px;margin:0}
+.up-who li:last-child{border-bottom:none}
+.up-who li b{color:#2c3e5c}
+.up-connect ul{list-style:none;margin:0;padding:0}
+.up-connect li{border:1px solid #c9d3e1;border-left:5px solid #9a521f;background:#fff;padding:10px 14px;margin:0 0 10px;font-size:17px}
+.up-connect li a{font-weight:700;color:#2c3e5c}
+.up-connect li span{display:block;color:#4a5466;font-size:15.5px;margin-top:2px}
+.up-sources details{border:1px solid #c9d3e1;background:#eef2f7;padding:12px 16px}
+.up-sources summary{cursor:pointer;font:600 15px 'IBM Plex Mono',monospace;color:#2c3e5c}
+.up-sources li{margin:8px 0;font-size:16px}
+.up-foot{background:#1c2a40;color:#b9c6da;margin-top:30px;padding:28px 0 36px;font-size:16px}
+.up-foot .in{max-width:900px;margin:0 auto;padding:0 20px}
+.up-foot a{color:#f3c9a6}
+#up-shelf{border:2px dashed #b9c6da;border-radius:10px;padding:16px 18px;margin-bottom:20px;color:#e6ecf5}
+.up-cn-big{font:600 17px 'IBM Plex Mono',monospace;margin-bottom:12px}
+.up-cn-big b{color:#f3c9a6}
+.up-nav{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+.up-nav-btn{flex:1;min-width:220px;background:#2c3e5c;border:1px solid #4a6185;border-radius:8px;padding:12px 14px;color:#fff;text-decoration:none;font-size:16px}
+.up-nav-btn:last-child{text-align:right}
+.up-nav-btn b{color:#f3c9a6;font-family:'IBM Plex Mono',monospace}
+.up-nav-btn.up-off{opacity:.5}
+.up-list summary{cursor:pointer;font:600 15px 'IBM Plex Mono',monospace;color:#f3c9a6;margin-bottom:6px}
+.up-list ol{list-style:none;margin:8px 0 0;padding:0}
+.up-list li{margin:0;padding:5px 0;border-bottom:1px solid #2f4466}
+.up-list li a{color:#e6ecf5;text-decoration:none}
+.up-list li.up-shelf-head{color:#f3c9a6;font:600 13px 'IBM Plex Mono',monospace;letter-spacing:.1em;padding-top:12px;border-bottom:none}
+.up-list li.up-here a{color:#fff;font-weight:700}
+.up-cn{font-family:'IBM Plex Mono',monospace;color:#f3c9a6;margin-right:6px}
+.up-search{font-size:15px;margin-top:12px}
+.up-sub{font-size:14.5px;margin-top:8px;color:#b9c6da}
 </style>
 </head>
 <body>
 
-<div class="topbar">
-  <div class="wrap">
-    <span>The Weber County Hive · Unelected Power</span>
-    <a href="index.html">← All profiles</a>
-  </div>
-</div>
+<div class="up-top"><div class="in"><span>Utah Hive Politics · Unelected Power</span><span><a href="index.html">← All Unelected Power pages</a> &nbsp;·&nbsp; <a href="https://weber-county-hive.github.io/-weber-county-hive-index/">Hive library ↗</a></span></div></div>
 
 <header class="masthead">
-  <div class="eyebrow">Wasatch Open Lands Board · Executive Director, Heber Valley Chamber/CVB</div>
+  <div class="eyebrow">Wasatch Open Lands Board · Executive Director, Heber Valley Chamber/CVB · UP 400.02</div>
   <h1 class="title">One Line, <em>Four Boards</em> Short</h1>
   <p class="dek">Dallin Koecher runs Heber Valley's tourism and economic development office and sits on the county
     board that recommends how open-space bond money gets spent. His own disclosure form for that board lists one
     thing. The public record shows at least four more.</p>
+  <div class="pub-date">Posted Sept. 2, 2026 · Updated Oct. 27, 2026</div>
 </header>
+<div class="up-ww"><div class="up-where"><div class="up-where-h"><div class="up-lbl">WHERE</div><div class="pl">475 N. Main Street, Heber City · Heber City · Wasatch County</div></div><div class="up-who"><div class="up-who-h">WHO</div><ul><li><b>Dallin Koecher</b> — Executive Director, Heber Valley Chamber, Tourism, and Economic Development (Heber Valley CVB) since March 2020; Wasatch Open Lands Board member</li><li><b>Wasatch Open Lands Board (WOLB)</b> — county board that reviews conservation easement applications and recommends how Open Space bond money is spent</li><li><b>Heber Valley Chamber/CVB</b> — the office Koecher runs; its Executive Board is chaired by Mark Nelson</li><li><b>Community Alliance for Main Street (CAMS)</b> — Heber City nonprofit with a $39,900/year events contract with Heber City; Koecher is a director</li><li><b>Heber Valley Music · Wasatch County Arts Council · Red White &amp; Blue Festival Inc.</b> — entities where state or OpenCorporates records list Koecher as a director</li><li><b>Heber City Board of Adjustments</b> — Koecher served 2019–2021, per Heber City payroll records</li><li><b>Matt Brower</b> — Heber City Manager; CAMS director; subject of a state auditor complaint over that seat</li><li><b>Rachel Kahler</b> — CAMS's paid Executive Director; 2026 Wasatch County Council candidate; Red White &amp; Blue Festival board</li><li><b>Mark Nelson</b> — Wasatch County Councilman; chairs the Chamber/CVB's Executive Board</li></ul></div></div></div>
 
 <main>
 
@@ -356,38 +397,33 @@
   </section>
 
   <section class="block">
+    <h2 class="section-title">Open question</h2>
+    <p><strong>Unresolved:</strong> public payroll records list Koecher's employer as "Wasatch County." It is not settled whether the Heber Valley Chamber/CVB is a Wasatch County department or an independent nonprofit. This page does not answer that question.</p>
+  </section>
+
+  <section class="up-connect"><h2>Connecting stories</h2><ul><li><a href="community-alliance-main-street.html">Community Alliance for Main Street (UP 400.01)</a><span>The Heber City nonprofit where Koecher is a director — the seat missing from his WOLB form.</span></li><li><a href="matt-brower.html">Matt Brower (UP 400.03)</a><span>Heber City Manager and fellow CAMS director, inside the same cluster of boards.</span></li><li><a href="ryan-starks.html">Ryan Starks (UP 100.08)</a><span>Ran the Heber Valley Chamber before EDCUtah and sat on the Wasatch Open Lands Board and CAMS, per his case file.</span></li></ul></section>
+
+  <section class="block up-sources" id="sources">
     <h2 class="section-title">Sources</h2>
-    <details class="sources-collapse">
-      <summary>9 sources — tap to expand</summary>
-      <div class="record-card">
-        <p style="margin:0 0 10px;">Dallin Koecher's Wasatch Open Lands Board Conflict of Interest Disclosure
-          Form (signed Feb. 4, 2026)</p>
-        <p style="margin:0 0 10px;">Wasatch County's Open Lands Board (WOLB) page, wasatchcounty.gov</p>
-        <p style="margin:0 0 10px;">Utah Code 17-70-505 through -507</p>
-        <p style="margin:0 0 10px;">Utah Division of Corporations filings — Community Alliance for Main Street
-          Inc., Heber Valley Music, Wasatch County Arts Council, Red White and Blue Festival Inc.</p>
-        <p style="margin:0 0 10px;">OpenCorporates officer records for the above entities</p>
-        <p style="margin:0 0 10px;">Heber City and Wasatch County public payroll records</p>
-        <p style="margin:0 0 10px;">Dallin Koecher's LinkedIn profile</p>
-        <p style="margin:0 0 10px;">Heber Valley Chamber/CVB staff directory, gohebervalley.com</p>
-        <p style="margin:0;">CAMS's own April 2026 board announcement</p>
-      </div>
+    <details>
+      <summary>Sources — click to open (with links)</summary>
+      <ul>
+        <li>Dallin Koecher's Wasatch Open Lands Board Conflict of Interest Disclosure Form (signed Feb. 4, 2026)</li>
+        <li><a href="https://www.wasatchcounty.gov">Wasatch County's Open Lands Board (WOLB) page, wasatchcounty.gov</a></li>
+        <li>Utah Code 17-70-505 through -507</li>
+        <li><a href="https://businessregistration.utah.gov/EntitySearch/OnlineEntitySearch">Utah Division of Corporations filings — Community Alliance for Main Street Inc., Heber Valley Music, Wasatch County Arts Council, Red White and Blue Festival Inc.</a></li>
+        <li><a href="https://opencorporates.com/">OpenCorporates officer records for the above entities</a></li>
+        <li><a href="https://transparent.utah.gov/">Heber City and Wasatch County public payroll records</a></li>
+        <li>Dallin Koecher's LinkedIn profile</li>
+        <li><a href="https://www.gohebervalley.com">Heber Valley Chamber/CVB staff directory, gohebervalley.com</a></li>
+        <li>CAMS's own April 2026 board announcement</li>
+      </ul>
     </details>
   </section>
 
 </main>
 
-<footer class="site-footer">
-  <div class="wrap">
-    <h3>The Weber County Hive · Unelected Power</h3>
-    <p>An accountability journalism series covering Utah officials who hold appointed rather than elected
-      positions — how they got the appointment, what authority it carries, and how they've used it. Built
-      exclusively from primary documents.</p>
-    <div class="links">
-      <a href="https://webercountyhive.substack.com/" target="_blank" rel="noopener">webercountyhive.substack.com ↗</a>
-    </div>
-  </div>
-</footer>
+<footer class="up-foot"><div class="in"><div id="up-shelf"></div><div><b>Utah Hive Politics · Unelected Power</b>, from the publisher of The Weber County Hive.</div><div class="up-sub">Public records only. We report public records. You decide. <a href="https://webercountyhive.substack.com/">webercountyhive.substack.com</a></div><div class="up-sub">An accountability journalism series covering Utah officials who hold appointed rather than elected positions — how they got the appointment, what authority it carries, and how they've used it. Built exclusively from primary documents.</div></div></footer><script src="unelected-power-data.js?v=4"></script><script src="up-shelf.js?v=1"></script>
 
 <script data-goatcounter="https://weberhive.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>

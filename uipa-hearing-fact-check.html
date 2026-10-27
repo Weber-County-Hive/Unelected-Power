@@ -27,16 +27,6 @@
   body{margin:0;background:var(--page);color:var(--ink);font-family:"Newsreader",Georgia,"Iowan Old Style",serif;line-height:1.55;}
   a{color:var(--copper);}
 
-  .hb-bar{background:#0d0b0a;border-bottom:1px solid #3a2f1c;padding:10px 20px;}
-  .hb-bar a{display:flex;align-items:center;gap:12px;max-width:1100px;margin:0 auto;text-decoration:none;}
-  .hb-bar img{width:52px;height:52px;border-radius:4px;display:block;flex:none;}
-  .hb-name{font-family:'Cinzel','Trajan Pro',Georgia,serif;color:#d4af37;font-size:16px;letter-spacing:.14em;text-transform:uppercase;line-height:1.2;display:block;}
-  .hb-sub{font-family:Georgia,serif;font-style:italic;color:#b8956a;font-size:12.5px;letter-spacing:.02em;display:block;margin-top:2px;}
-  .hb-foot{background:#0d0b0a;color:#b8956a;text-align:center;padding:26px 20px 30px;font-family:Georgia,serif;}
-  .hb-foot img{width:52px;height:52px;display:block;margin:0 auto 10px;}
-  .hb-foot .hb-name{font-size:14px;}
-  .hb-foot .hb-tag{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#8a7650;margin-top:8px;display:block;}
-  @media(max-width:600px){.hb-bar{padding:8px 16px}.hb-bar img{width:38px;height:38px}.hb-name{font-size:13px}.hb-sub{font-size:11.5px}}
 
   .topband{background:var(--slate-deep);color:var(--on-slate);padding:10px 24px;font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace;font-size:.72rem;letter-spacing:.06em;display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;}
   .topband a{color:var(--on-slate);text-decoration:none;border-bottom:1px solid rgba(230,236,245,.4);}
@@ -86,7 +76,7 @@
   .note{background:var(--box);border:1px dashed var(--rule);padding:14px 18px;font-size:.96rem;color:var(--ink-soft);margin:0 0 20px}
   .callout{background:var(--box);border-left:4px solid var(--slate);padding:16px 20px;margin:18px 0;font-size:.98rem;}
   .callout strong{color:var(--slate-deep);}
-  .estimate{background:#fff8e6;border:2px solid var(--part);padding:14px 18px;margin:16px 0;font-size:.98rem;}
+  .estimate{background:#f8ece2;border:2px solid var(--part);padding:14px 18px;margin:16px 0;font-size:.98rem;}
   .estimate b{color:var(--part);}
 
   table.money{width:100%;border-collapse:collapse;background:#fff;font-size:.95rem;margin-bottom:10px}
@@ -183,20 +173,61 @@
     .case-title{font-size:1.8rem}
     .topband{padding:10px 16px}
   }
+
+/* ===== Unelected Power standard (slate blue & copper) — header, footer, Where/Who, call number ===== */
+.up-top{background:#1c2a40;color:#b9c6da;font:600 13px 'IBM Plex Mono',monospace;letter-spacing:.06em;text-transform:uppercase}
+.up-top .in{max-width:900px;margin:0 auto;padding:10px 20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.up-top a{color:#e6ecf5;text-decoration:none}
+.up-ww{max-width:900px;margin:26px auto 6px;padding:0 20px}
+.up-where{border:3px solid #2c3e5c;border-radius:10px;overflow:hidden;background:#fff}
+.up-where-h{background:#2c3e5c;color:#fff;padding:12px 18px}
+.up-lbl{font:600 12.5px 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#f3c9a6}
+.up-where-h .pl{font-size:21px;font-weight:700;margin-top:2px}
+.up-who{margin:14px 16px 16px;border:2px solid #9a521f;border-radius:8px}
+.up-who-h{background:#f8ece2;color:#9a521f;padding:6px 12px;font:600 12.5px 'IBM Plex Mono',monospace;letter-spacing:.14em;border-bottom:2px solid #9a521f}
+.up-who ul{list-style:none;margin:0;padding:6px 12px}
+.up-who li{padding:6px 0;border-bottom:1px solid #e3e8ef;font-size:17px;margin:0}
+.up-who li:last-child{border-bottom:none}
+.up-who li b{color:#2c3e5c}
+.up-connect ul{list-style:none;margin:0;padding:0}
+.up-connect li{border:1px solid #c9d3e1;border-left:5px solid #9a521f;background:#fff;padding:10px 14px;margin:0 0 10px;font-size:17px}
+.up-connect li a{font-weight:700;color:#2c3e5c}
+.up-connect li span{display:block;color:#4a5466;font-size:15.5px;margin-top:2px}
+.up-sources details{border:1px solid #c9d3e1;background:#eef2f7;padding:12px 16px}
+.up-sources summary{cursor:pointer;font:600 15px 'IBM Plex Mono',monospace;color:#2c3e5c}
+.up-sources li{margin:8px 0;font-size:16px}
+.up-foot{background:#1c2a40;color:#b9c6da;margin-top:30px;padding:28px 0 36px;font-size:16px}
+.up-foot .in{max-width:900px;margin:0 auto;padding:0 20px}
+.up-foot a{color:#f3c9a6}
+#up-shelf{border:2px dashed #b9c6da;border-radius:10px;padding:16px 18px;margin-bottom:20px;color:#e6ecf5}
+.up-cn-big{font:600 17px 'IBM Plex Mono',monospace;margin-bottom:12px}
+.up-cn-big b{color:#f3c9a6}
+.up-nav{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+.up-nav-btn{flex:1;min-width:220px;background:#2c3e5c;border:1px solid #4a6185;border-radius:8px;padding:12px 14px;color:#fff;text-decoration:none;font-size:16px}
+.up-nav-btn:last-child{text-align:right}
+.up-nav-btn b{color:#f3c9a6;font-family:'IBM Plex Mono',monospace}
+.up-nav-btn.up-off{opacity:.5}
+.up-list summary{cursor:pointer;font:600 15px 'IBM Plex Mono',monospace;color:#f3c9a6;margin-bottom:6px}
+.up-list ol{list-style:none;margin:8px 0 0;padding:0}
+.up-list li{margin:0;padding:5px 0;border-bottom:1px solid #2f4466}
+.up-list li a{color:#e6ecf5;text-decoration:none}
+.up-list li.up-shelf-head{color:#f3c9a6;font:600 13px 'IBM Plex Mono',monospace;letter-spacing:.1em;padding-top:12px;border-bottom:none}
+.up-list li.up-here a{color:#fff;font-weight:700}
+.up-cn{font-family:'IBM Plex Mono',monospace;color:#f3c9a6;margin-right:6px}
+.up-search{font-size:15px;margin-top:12px}
+.up-sub{font-size:14.5px;margin-top:8px;color:#b9c6da}
+  .up-connect h2,.up-sources h2{font-size:1.5rem;margin:0 0 18px;border-bottom:2px solid var(--slate);padding-bottom:10px;color:var(--slate-deep);}
+  .up-sources ul{max-width:none;padding-left:20px;color:var(--ink-soft);}
+  .up-connect ul,.up-who ul{max-width:none;}
 </style>
 <link rel="icon" type="image/png" href="hive-bee.png">
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 </head>
 <body>
-<div class="hb-bar"><a href="https://webercountyhive.substack.com/" target="_blank" rel="noopener"><img src="uhp-badge.png" alt="Utah Hive Politics logo"><span><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span></span></a></div>
-<div class="topband">
-  <span>THE WEBER COUNTY HIVE — UNELECTED POWER</span>
-  <span><a href="index.html">← All Unelected Power files</a> &nbsp; <a href="https://weber-county-hive.github.io/-weber-county-hive-index/">Hive index ↗</a></span>
-</div>
+<div class="up-top"><div class="in"><span>Utah Hive Politics · Unelected Power</span><span><a href="index.html">← All Unelected Power pages</a> &nbsp;·&nbsp; <a href="https://weber-county-hive.github.io/-weber-county-hive-index/">Hive library ↗</a></span></div></div>
 <header class="case-header">
   <div class="case-wrap">
-    <p class="case-eyebrow">CASE FILE · ORGANIZATION · HEARING CHECK · OCT. 21, 2026</p>
+    <p class="case-eyebrow">CASE FILE · ORGANIZATION · HEARING CHECK · OCT. 21, 2026 · UP 100.04</p>
     <h1 class="case-title">The Inland Port told legislators its side. <em>Here's what the records say.</em></h1>
     <p class="case-sub">On Oct. 21, 2026, leaders of the Utah Inland Port Authority (UIPA), a state authority run by an appointed board, presented to a legislative committee and answered a member's questions. The Hive recorded it. Each claim below is checked against UIPA's own plans, press releases, loan letters and audits.</p>
     <div class="meta-row">
@@ -204,9 +235,10 @@
       <span class="meta-pill">Presented: Executive Director Ben Hart · CFO Ariane Gibson</span>
       <span class="meta-pill">Board: appointed, not elected</span>
     </div>
-    <p class="pub-date">Posted Oct. 21, 2026 &middot; Updated Oct. 21, 2026</p>
+    <p class="pub-date">Posted Oct. 21, 2026 &middot; Updated Oct. 27, 2026</p>
   </div>
 </header>
+<div class="up-ww"><div class="up-where"><div class="up-where-h"><div class="up-lbl">WHERE</div><div class="pl">Statewide (16 project areas) · Northwest Quadrant (Salt Lake City) · West Weber (Weber County) · Golden Spike (Box Elder County) · Tooele Valley · Castle Country (Green River)</div></div><div class="up-who"><div class="up-who-h">WHO</div><ul><li><b>Utah Inland Port Authority (UIPA)</b> — State authority run by an appointed board; keeps 75% of new property tax growth in its 16 project areas</li><li><b>Ben Hart</b> — UIPA Executive Director; gave most of the presentation and answers; sits on EDCUtah's board</li><li><b>Ariane Gibson</b> — UIPA Chief Financial Officer; presented and signs UIPA's loan letters to the Legislature</li><li><b>Economic Development and Workforce Services Interim Committee</b> — The legislative committee UIPA presented to on Oct. 21, 2026 (confirmed by the committee's official video and captions)</li><li><b>Rep. David Shallenberger</b> — The House member who asked the questions (confirmed by the official video and captions)</li><li><b>Rep. Larson</b> — Asked whether the West Weber wastewater facility could serve a data center</li><li><b>Rep. Fiefia</b> — Pointed out a copy-paste error on UIPA's one-pager</li><li><b>Sen. Jerry Stevenson</b> — UIPA board member; made the board motion for the $5 million PCC Land loan</li><li><b>Sen. Kirk Cullimore</b> — Voted no on the PCC Land loan, then moved to reconsider it</li><li><b>Abby Osborne</b> — UIPA board chair</li><li><b>Chuck Akerlow</b> — Zenith developer, Tooele Valley data center campus</li><li><b>Ryan Starks</b> — Former UIPA vice chair; now runs EDCUtah, where UIPA is a paying investor</li></ul></div></div></div>
 <main>
 <div class="hs-plain">New to this? <a class="hs-btn" href="uipa-hearing-fact-check-plain.html">Read it in plain words</a> About 500 words, with two pictures.</div>
 
@@ -247,7 +279,7 @@
   <div class="figure-cell"><span class="num">2</span><span class="cap">figures said to legislators that don't match UIPA's own releases</span></div>
 </div>
 
-<div class="note"><b>How this file started:</b> The Hive recorded the Oct. 21, 2026 hearing in person. UIPA Executive Director Ben Hart and Chief Financial Officer Ariane Gibson presented remotely; Hart said he was speaking from Dublin, Ireland. The committee's name and the questioning legislator's name are not clearly said on the recording, so neither is given here. Quotes come from a machine transcript of the recording, with the minute mark; garbled words are not quoted. Everything else was checked against the records linked in Sources, and anything not yet confirmed is labeled.</div>
+<div class="note"><b>How this file started:</b> The Hive recorded the Oct. 21, 2026 hearing in person. UIPA Executive Director Ben Hart and Chief Financial Officer Ariane Gibson presented remotely; Hart said he was speaking from Dublin, Ireland. The committee's name and the questioning legislator's name are not clearly said on the Hive's recording. The committee's official video and captions confirm it was the Legislature's Economic Development and Workforce Services Interim Committee, meeting Oct. 21, 2026, and that the questioner was Rep. David Shallenberger. Quotes come from a machine transcript of the recording, with the minute mark; garbled words are not quoted. Everything else was checked against the records linked in Sources, and anything not yet confirmed is labeled.</div>
 
 <section><h2 class="section-head" id="start">Start here: what UIPA is</h2>
 <p class="lede">The Legislature created the Utah Inland Port Authority in 2018. It is run by a board that is appointed, not elected.</p>
@@ -413,6 +445,7 @@
   <div class="who">Ben Hart · Recording 7, about 5:04</div>
   <span class="v ok">Matches the record</span>
   <p>His own statement, and it fits the Zenith loan above. He also said "infrastructure can be a benefit." UIPA's loans ran at 3.04%–3.47%. The average 30-year home mortgage was 6.76%–7.08% in September 2026, about twice as high.</p>
+  <p><b>Also at the hearing:</b> Rep. Larson asked whether the West Weber wastewater facility could serve a data center. Hart said "potentially" and called it a "gray area."</p>
 </div>
 
 <div class="claim ok" data-v="ok">
@@ -492,7 +525,7 @@
   <div class="said">UIPA partnered with Delta on a new air cargo facility.</div>
   <div class="who">Ben Hart · Recording 7, about 0:21</div>
   <span class="v part">True, with context left out</span>
-  <p><b>Left out:</b> UIPA lent Delta <b>$18 million</b> for the facility (KSL, Nov. 3, 2025). The share of Utah air cargo that arrives by truck came out of the recording as both "82%" and "92%," and the Hive could not confirm either, so it is not used here.</p>
+  <p><b>Left out:</b> UIPA lent Delta <b>$18 million</b> for the facility (KSL, Nov. 3, 2025). The share of Utah air cargo said at the hearing to arrive by truck is <b>92%</b>, per the committee's official captions. (The Hive's own transcript of its recording had shown both "82%" and "92%.")</p>
 </div>
 
 <div class="claim ok" data-v="ok">
@@ -607,7 +640,9 @@
 <ul>
   <li><b>Ben Hart</b>: UIPA Executive Director; gave most of the presentation and answers. Also sits on <a href="edcutah.html">EDCUtah's</a> board.</li>
   <li><b>Ariane Gibson</b>: UIPA Chief Financial Officer; presented and signs UIPA's loan letters to the Legislature.</li>
-  <li><b>The questioning legislator</b>: a House member whose name is not clearly heard on the recording; not named here until confirmed.</li>
+  <li><b>Rep. David Shallenberger</b>: the House member who asked the questions. His name is not clearly heard on the Hive's recording; the committee's official video and captions confirm it.</li>
+  <li><b>Rep. Larson</b>: asked whether the West Weber wastewater facility could serve a data center; Hart said "potentially" and called it a "gray area."</li>
+  <li><b>Rep. Fiefia</b>: pointed out a copy-paste error on UIPA's one-pager.</li>
   <li><b><a href="https://weber-county-hive.github.io/utah-senators/jerry-stevenson.html">Sen. Jerry Stevenson</a></b>: UIPA board member; made the board motion for the PCC Land loan and chaired Executive Appropriations when it first failed.</li>
   <li><b><a href="https://weber-county-hive.github.io/utah-senators/kirk-cullimore.html">Sen. Kirk Cullimore</a></b>: voted no on the PCC Land loan, then moved to reconsider it.</li>
   <li><b>Abby Osborne</b>: UIPA board chair.</li>
@@ -626,7 +661,7 @@
 </section>
 
 <section id="open"><h2 class="section-head">Open questions</h2>
-<details class="gl"><summary>Which committee was this, and who asked the questions?</summary><p>Neither is clearly said on the recording. The committee's agenda and minutes for Oct. 21, 2026 would settle it.</p></details>
+<details class="gl"><summary>Which committee was this, and who asked the questions? (Answered Oct. 27, 2026)</summary><p>Neither is clearly said on the recording. The committee's agenda and minutes for Oct. 21, 2026 would settle it.</p><p><b>Answered:</b> the committee's official video and captions confirm it was the Economic Development and Workforce Services Interim Committee on Oct. 21, 2026, and the questioner was Rep. David Shallenberger.</p></details>
 <details class="gl"><summary>Were the FY2025 and FY2026 audits clean?</summary><p>UIPA said so. The reports have not been read yet.</p></details>
 <details class="gl"><summary>Was the Clean Ports grant restored?</summary><p>UIPA's last post found says it was paused (Feb. 21, 2025).</p></details>
 <details class="gl"><summary>Where are the 5% administrative and 3% wetland dollars spent?</summary><p>The plans set the amounts but not where they're spent.</p></details>
@@ -645,7 +680,8 @@
 </section>
 
 <section><h2 class="section-head" id="updates">Updates since this was posted</h2>
-<ul class="tl"><li><b>Oct. 21, 2026</b>This page posted. An online search the same night found no news coverage of this hearing yet.</li></ul>
+<ul class="tl"><li><b>Oct. 21, 2026</b>This page posted. An online search the same night found no news coverage of this hearing yet.</li>
+<li><b>Oct. 27, 2026</b>Checked against the committee's official video and captions: the committee was the Economic Development and Workforce Services Interim Committee, and the questioner was Rep. David Shallenberger. The air cargo figure is 92%, per the captions. Added: Rep. Larson asked whether the West Weber wastewater facility could serve a data center (Hart: "potentially," a "gray area"), and Rep. Fiefia pointed out a copy-paste error on UIPA's one-pager.</li></ul>
 <p class="hs-updates">New updates will be added here with their dates. Earlier entries are not changed.</p>
 </section>
 
@@ -687,8 +723,10 @@
 <p class="hs-updates">Posted Oct. 21, 2026. Built from the Hive's own recording of the hearing, machine-transcribed, and checked claim by claim against UIPA's plans, releases and loan letters. The 40-year figures are the Hive's estimate and are labeled that way.</p>
 </section>
 
-<section id="sources"><details class="sources-block"><summary>Sources</summary><ol>
+<section class="up-connect"><h2>Connecting stories</h2><ul><li><a href="uipa-hearing-fact-check-plain.html">The Inland Port hearing, in plain words (UP 100.05)</a><span>The short, plain-language companion to this page.</span></li><li><a href="edcutah.html">EDCUtah (UP 100.03)</a><span>Ben Hart sits on its board; UIPA is a paying investor.</span></li><li><a href="ryan-starks.html">Ryan Starks (UP 100.08)</a><span>Former UIPA vice chair; now runs EDCUtah.</span></li><li><a href="chris-roybal.html">Chris Roybal (UP 200.01)</a><span>Northern Utah Economic Alliance president; his file covers UIPA's West Weber project area adoption.</span></li><li><a href="layton-shuffle.html">The Layton Shuffle (UP 300.02)</a><span>Sen. Jerry Stevenson, who moved the PCC Land loan at UIPA's board, is one of the seats in that diagram.</span></li></ul></section>
+<section id="sources" class="up-sources"><h2>Sources</h2><details class="sources-block"><summary>Sources — click to open (with links)</summary><ul>
 <li>The Weber County Hive, recordings of the Oct. 21, 2026 legislative committee hearing (Recordings 5–8), machine-transcribed</li>
+<li>Utah State Legislature, Economic Development and Workforce Services Interim Committee, Oct. 21, 2026, official video and captions (committee name, questioner, 92% air cargo figure, Larson and Fiefia exchanges)</li>
 <li><a href="https://www.ksl.com/article/news/utah/counties/salt-lake/utah-supreme-court-sides-with-inland-port-says-zoning-doesnt-violate-state-law/50432022" target="_blank" rel="noopener">KSL, "Utah Supreme Court sides with inland port" (June 29, 2022)</a></li>
 <li><a href="https://www.ulct.utah.gov/wp-content/uploads/2024/06/ULCT-Inland-Port-Special-Session-Letter-compressed.pdf" target="_blank" rel="noopener">Utah League of Cities and Towns, letter on the 2018 inland port special session</a></li>
 <li><a href="https://inlandportauthority.utah.gov/all-news/strengthening-utahs-economy-while-protecting-utahs-natural-resources/" target="_blank" rel="noopener">UIPA, "UIPA's Position on Data Centers" (June 25, 2026)</a></li>
@@ -711,23 +749,18 @@
 <li><a href="https://le.utah.gov/interim/2026/pdf/00001737.pdf" target="_blank" rel="noopener">UIPA loan letters to the Executive Appropriations Committee (Feb. 9, 2026)</a> (read through a text pull)</li>
 <li><a href="https://inlandportauthority.utah.gov/?p=8152" target="_blank" rel="noopener">UIPA, Fairfield water loan (Jan. 13, 2026)</a></li>
 <li><a href="https://webercountyutah.gov/news/post.php?id=283" target="_blank" rel="noopener">Weber County, western Weber wastewater milestone (Apr. 28, 2026)</a></li>
-<li>West Weber Project Area Plan and Amendment #1, Appendix D budget summary (inlandportauthority.utah.gov)</li>
-<li>Golden Spike Project Area Plan and amendments, Appendix D budget (inlandportauthority.utah.gov)</li>
+<li><a href="https://inlandportauthority.utah.gov/">West Weber Project Area Plan and Amendment #1, Appendix D budget summary (inlandportauthority.utah.gov)</a></li>
+<li><a href="https://inlandportauthority.utah.gov/">Golden Spike Project Area Plan and amendments, Appendix D budget (inlandportauthority.utah.gov)</a></li>
 <li>Tooele Valley Project Area Plan, Amendments #1 and #2; UIPA 2024 Annual Report; UIPA, "Who Qualifies for AIB Loans" (all in the <a href="https://webercountyhive-coder.github.io/UIPA/uipa-tooele-zenith.html">Tooele Valley case file</a>)</li>
 <li>UIPA board minutes (June 26, 2025) and Executive Appropriations Committee minutes (Sept. 15, 2025), PCC Land loan (in the <a href="https://weber-county-hive.github.io/utah-senators/jerry-stevenson.html">Jerry Stevenson profile</a>)</li>
-<li>S.B. 225 (2026), all substitutes, and H.B. 507 (2026), le.utah.gov</li>
+<li><a href="https://le.utah.gov/~2026/bills/static/SB0225.html">S.B. 225 (2026), all substitutes</a>, and <a href="https://le.utah.gov/~2026/bills/static/HB0507.html">H.B. 507 (2026)</a>, le.utah.gov</li>
 <li>UIPA, "Legislative Updates Following 2026 Session" (Mar. 28, 2026)</li>
-</ol>
+</ul>
 <p style="font-family:Arial,sans-serif;font-size:.8rem;margin:8px 0 4px">Added Oct. 21, 2026, for the updates section:</p>
-<ol><li>Online news search for coverage of the Oct. 21, 2026 hearing, Oct. 21, 2026: none found.</li></ol>
+<ul><li>Online news search for coverage of the Oct. 21, 2026 hearing, Oct. 21, 2026: none found.</li></ul>
 </details></section>
 </main>
-<footer>
-  THE WEBER COUNTY HIVE · INDEPENDENT · ACCOUNTABILITY · JOURNALISM<br>
-  Unelected Power. Public records only. We report; you decide.<br>
-  <a href="https://webercountyhive.substack.com">webercountyhive.substack.com</a>
-</footer>
-<div class="hb-foot"><img src="hive-bee.png" alt=""><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span><span class="hb-tag">Independent · Accountability · Journalism</span></div>
+<footer class="up-foot"><div class="in"><div id="up-shelf"></div><div><b>Utah Hive Politics · Unelected Power</b>, from the publisher of The Weber County Hive.</div><div class="up-sub">Public records only. We report public records. You decide. <a href="https://webercountyhive.substack.com/">webercountyhive.substack.com</a></div></div></footer><script src="unelected-power-data.js?v=4"></script><script src="up-shelf.js?v=1"></script>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>

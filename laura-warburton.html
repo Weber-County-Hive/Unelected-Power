@@ -7,10 +7,10 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
 :root{
-  --paper:#f7f1e6; --paper-2:#efe6d3; --ink:#2a1f14; --ink-soft:#63594a;
-  --maroon:#5c1a1a; --maroon-2:#7a2424;
-  --gold:#a9762c; --gold-bg:#f0e0c0;
-  --line:#ddccaa;
+  --paper:#ffffff; --paper-2:#eef2f7; --ink:#1e2430; --ink-soft:#4a5466;
+  --maroon:#2c3e5c; --maroon-2:#3a5078;
+  --gold:#9a521f; --gold-bg:#f8ece2;
+  --line:#c9d3e1;
 }
 *{box-sizing:border-box;margin:0;padding:0;}
 body{background:var(--paper);color:var(--ink);font-family:'Source Sans 3',sans-serif;line-height:1.65;font-size:16px;}
@@ -23,14 +23,14 @@ h1,h2,h3{font-family:'Playfair Display',serif;color:var(--ink);}
 .topbar a{color:var(--gold-bg);text-decoration:none;opacity:.85;}
 .topbar a:hover{opacity:1;text-decoration:underline;}
 
-header.masthead{background:linear-gradient(135deg,var(--maroon),var(--maroon-2));color:#f4e9d8;padding:40px 0 32px;border-bottom:5px solid var(--gold);}
+header.masthead{background:linear-gradient(135deg,var(--maroon),var(--maroon-2));color:#ffffff;padding:40px 0 32px;border-bottom:5px solid var(--gold);}
 header.masthead .wrap{max-width:860px;margin:0 auto;padding:0 24px;}
 .kicker{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-bg);opacity:.8;margin-bottom:14px;}
-h1.title{font-size:42px;line-height:1.1;margin-bottom:14px;color:#fbf3e3;}
+h1.title{font-size:42px;line-height:1.1;margin-bottom:14px;color:#ffffff;}
 h1.title em{font-style:italic;color:var(--gold-bg);}
-p.dek{font-size:18px;color:#e9d9bb;max-width:640px;}
+p.dek{font-size:18px;color:#e6ecf5;max-width:640px;}
 .rc-row{margin-top:18px;display:flex;flex-wrap:wrap;gap:8px;}
-.pub-date{margin-top:10px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.03em;color:#d8b98a;}
+.pub-date{margin-top:10px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.03em;color:#f3c9a6;}
 .rc-tag{display:inline-block;background:var(--gold-bg);border:1px solid var(--gold);color:var(--maroon);font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.03em;text-transform:uppercase;padding:4px 11px;border-radius:4px;text-decoration:none;}
 .rc-tag:hover{background:var(--gold);color:#fff;}
 
@@ -59,7 +59,7 @@ details.open-q p{margin-top:10px;margin-bottom:0;font-size:14.5px;}
 .tag{font-family:'IBM Plex Mono',monospace;font-size:11px;background:var(--gold-bg);border:1px solid var(--gold);color:var(--ink);padding:3px 9px;}
 
 footer{background:var(--ink);color:var(--paper-2);padding:36px 0 46px;margin-top:20px;}
-footer .sub{color:#a99a85;font-size:13px;margin-top:6px;}
+footer .sub{color:#b9c6da;font-size:13px;margin-top:6px;}
 
 @media(max-width:600px){
   header.masthead{padding:32px 0 26px;}
@@ -78,12 +78,12 @@ footer .sub{color:#a99a85;font-size:13px;margin-top:6px;}
 .tile-inner{position:relative;width:100%;height:100%;transition:transform .5s cubic-bezier(.4,.2,.2,1);transform-style:preserve-3d;cursor:pointer;}
 .tile.flipped .tile-inner{transform:rotateY(180deg);}
 .tile-face{position:absolute;inset:0;backface-visibility:hidden;border-radius:8px;padding:16px;display:flex;flex-direction:column;justify-content:center;overflow-y:auto;}
-.tile-front{background:linear-gradient(135deg,var(--maroon),var(--maroon-2));color:#f4e9d8;text-align:center;border:2px solid var(--gold);}
+.tile-front{background:linear-gradient(135deg,var(--maroon),var(--maroon-2));color:#ffffff;text-align:center;border:2px solid var(--gold);}
 .tile-front .name{font-family:'Playfair Display',serif;font-size:17px;font-weight:700;margin-bottom:6px;}
 .tile-front .role{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.03em;color:var(--gold-bg);line-height:1.5;}
-.tile-front .hint{margin-top:12px;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:#d8b98a;}
+.tile-front .hint{margin-top:12px;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:#f3c9a6;}
 .tile-front .stance{display:inline-block;margin-top:8px;font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.05em;text-transform:uppercase;padding:3px 9px;border-radius:9px;}
-.stance-against{background:#f0d7d7;color:#7a2727;border:1px solid #d69a9a;}
+.stance-against{background:#eef2f7;color:#1c2a40;border:1px solid #2c3e5c;}
 .stance-funded{background:var(--gold-bg);color:var(--maroon);border:1px solid var(--gold);}
 .tile-back{background:var(--paper-2);border:2px solid var(--maroon);transform:rotateY(180deg);font-size:12.5px;color:var(--ink);line-height:1.5;text-align:left;}
 .tile-back .connect-label{font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--maroon);margin-bottom:6px;display:block;}
@@ -105,9 +105,52 @@ footer .sub{color:#a99a85;font-size:13px;margin-top:6px;}
   .giving-amount{text-align:left;min-width:auto;}
 }
 .status-tag{display:inline-block;font-size:11px;font-family:'IBM Plex Mono',monospace;padding:2px 9px;border-radius:10px;margin-left:6px;}
-.status-confirmed{background:#e4ecd9;color:#3d5a2c;border:1px solid #a9c491;}
+.status-confirmed{background:#eef2f7;color:#2c3e5c;border:1px solid #c9d3e1;}
 .status-narrow{background:var(--gold-bg);color:var(--maroon);border:1px solid var(--gold);}
-.status-contradicted{background:#f0d7d7;color:#7a2727;border:1px solid #d69a9a;}
+.status-contradicted{background:#9a521f;color:#ffffff;border:1px solid #9a521f;}
+
+/* ===== Unelected Power standard (slate blue & copper) — header, footer, Where/Who, call number ===== */
+.up-top{background:#1c2a40;color:#b9c6da;font:600 13px 'IBM Plex Mono',monospace;letter-spacing:.06em;text-transform:uppercase}
+.up-top .in{max-width:900px;margin:0 auto;padding:10px 20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.up-top a{color:#e6ecf5;text-decoration:none}
+.up-ww{max-width:900px;margin:26px auto 6px;padding:0 20px}
+.up-where{border:3px solid #2c3e5c;border-radius:10px;overflow:hidden;background:#fff}
+.up-where-h{background:#2c3e5c;color:#fff;padding:12px 18px}
+.up-lbl{font:600 12.5px 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#f3c9a6}
+.up-where-h .pl{font-size:21px;font-weight:700;margin-top:2px}
+.up-who{margin:14px 16px 16px;border:2px solid #9a521f;border-radius:8px}
+.up-who-h{background:#f8ece2;color:#9a521f;padding:6px 12px;font:600 12.5px 'IBM Plex Mono',monospace;letter-spacing:.14em;border-bottom:2px solid #9a521f}
+.up-who ul{list-style:none;margin:0;padding:6px 12px}
+.up-who li{padding:6px 0;border-bottom:1px solid #e3e8ef;font-size:17px;margin:0}
+.up-who li:last-child{border-bottom:none}
+.up-who li b{color:#2c3e5c}
+.up-connect ul{list-style:none;margin:0;padding:0}
+.up-connect li{border:1px solid #c9d3e1;border-left:5px solid #9a521f;background:#fff;padding:10px 14px;margin:0 0 10px;font-size:17px}
+.up-connect li a{font-weight:700;color:#2c3e5c}
+.up-connect li span{display:block;color:#4a5466;font-size:15.5px;margin-top:2px}
+.up-sources details{border:1px solid #c9d3e1;background:#eef2f7;padding:12px 16px}
+.up-sources summary{cursor:pointer;font:600 15px 'IBM Plex Mono',monospace;color:#2c3e5c}
+.up-sources li{margin:8px 0;font-size:16px}
+.up-foot{background:#1c2a40;color:#b9c6da;margin-top:30px;padding:28px 0 36px;font-size:16px}
+.up-foot .in{max-width:900px;margin:0 auto;padding:0 20px}
+.up-foot a{color:#f3c9a6}
+#up-shelf{border:2px dashed #b9c6da;border-radius:10px;padding:16px 18px;margin-bottom:20px;color:#e6ecf5}
+.up-cn-big{font:600 17px 'IBM Plex Mono',monospace;margin-bottom:12px}
+.up-cn-big b{color:#f3c9a6}
+.up-nav{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+.up-nav-btn{flex:1;min-width:220px;background:#2c3e5c;border:1px solid #4a6185;border-radius:8px;padding:12px 14px;color:#fff;text-decoration:none;font-size:16px}
+.up-nav-btn:last-child{text-align:right}
+.up-nav-btn b{color:#f3c9a6;font-family:'IBM Plex Mono',monospace}
+.up-nav-btn.up-off{opacity:.5}
+.up-list summary{cursor:pointer;font:600 15px 'IBM Plex Mono',monospace;color:#f3c9a6;margin-bottom:6px}
+.up-list ol{list-style:none;margin:8px 0 0;padding:0}
+.up-list li{margin:0;padding:5px 0;border-bottom:1px solid #2f4466}
+.up-list li a{color:#e6ecf5;text-decoration:none}
+.up-list li.up-shelf-head{color:#f3c9a6;font:600 13px 'IBM Plex Mono',monospace;letter-spacing:.1em;padding-top:12px;border-bottom:none}
+.up-list li.up-here a{color:#fff;font-weight:700}
+.up-cn{font-family:'IBM Plex Mono',monospace;color:#f3c9a6;margin-right:6px}
+.up-search{font-size:15px;margin-top:12px}
+.up-sub{font-size:14.5px;margin-top:8px;color:#b9c6da}
 </style>
 <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
 <script>
@@ -117,13 +160,13 @@ footer .sub{color:#a99a85;font-size:13px;margin-top:6px;}
     securityLevel: 'loose',
     flowchart: { htmlLabels: true, useMaxWidth: true, padding: 18 },
     themeVariables: {
-      primaryColor: '#efe6d3',
-      primaryTextColor: '#2a1f14',
-      primaryBorderColor: '#5c1a1a',
-      lineColor: '#a9762c',
-      secondaryColor: '#f0e0c0',
-      secondaryTextColor: '#2a1f14',
-      tertiaryColor: '#f7f1e6',
+      primaryColor: '#eef2f7',
+      primaryTextColor: '#1e2430',
+      primaryBorderColor: '#2c3e5c',
+      lineColor: '#9a521f',
+      secondaryColor: '#f8ece2',
+      secondaryTextColor: '#1e2430',
+      tertiaryColor: '#ffffff',
       fontFamily: 'Verdana, Arial, sans-serif',
       fontSize: '19px'
     }
@@ -132,24 +175,20 @@ footer .sub{color:#a99a85;font-size:13px;margin-top:6px;}
 </head>
 <body>
 
-<div class="topbar">
-  <div class="wrap">
-    <span>The Weber County Hive · Unelected Power</span>
-    <a href="https://weber-county-hive.github.io/-weber-county-hive-index/">Index ↗</a>
-  </div>
-</div>
+<div class="up-top"><div class="in"><span>Utah Hive Politics · Unelected Power</span><span><a href="index.html">← All Unelected Power pages</a> &nbsp;·&nbsp; <a href="https://weber-county-hive.github.io/-weber-county-hive-index/">Hive library ↗</a></span></div></div>
 
 <header class="masthead">
   <div class="wrap">
-    <div class="kicker">Case File · PAC Manager, Committee Director, Planning Commissioner</div>
+    <div class="kicker">Case File · PAC Manager, Committee Director, Planning Commissioner · UP 200.03</div>
     <h1 class="title">Laura <em>Warburton</em></h1>
     <p class="dek">Managed a political action committee, directed a political issues committee, and sat on the very Planning Commission that reviewed the same developers' projects — three roles, one overlapping network, and public statements that only partly match the record.</p>
     <div class="rc-row">
       <a class="rc-tag" href="chris-roybal.html">Cross-reference: Chris Roybal →</a>
     </div>
-    <div class="pub-date">Published Sept. 16, 2026</div>
+    <div class="pub-date">Posted Sept. 16, 2026 · Updated Oct. 27, 2026</div>
   </div>
 </header>
+<div class="up-ww"><div class="up-where"><div class="up-where-h"><div class="up-lbl">WHERE</div><div class="pl">Ogden Valley · Weber County · Ogden</div></div><div class="up-who"><div class="up-who-h">WHO</div><ul><li><b>Laura Warburton</b> — Manager, Utah Forward PAC; Director and CFO, Keep Our Valley Free; Ogden Valley Planning Commissioner, June 2025 to Jan. 26, 2026 (resigned)</li><li><b>Utah Forward PAC</b> — PAC that gave Froerer's campaign $10,000 and paid Politix LLC $7,158.30</li><li><b>Keep Our Valley Free</b> — committee that opposed Ogden Valley's 2024 incorporation; dissolved Nov. 9, 2024</li><li><b>Katrina Gibson</b> — Utah Forward PAC registered agent and CFO; co-owner, Politix LLC</li><li><b>Kerry Gibson</b> — registered lobbyist; former state representative, Weber County commissioner and state agriculture commissioner; co-owner, Politix LLC and Xalisco</li><li><b>Chris Roybal</b> — President, Northern Utah Economic Alliance; co-manager of Utah Forward PAC</li><li><b>John Lewis</b> — developer (Eden Crossing, Wolf Creek Resort); former Ogden Valley Planning Commission chair; gave to Utah Forward PAC and Keep Our Valley Free</li><li><b>Shane Dunleavy</b> — developer; co-owner, Wolf Creek Resort Holdings; gave Utah Forward PAC $5,000 in 2022</li><li><b>Gage Froerer</b> — Weber County Commissioner; MIDA board member; his campaign received $10,000 from Utah Forward PAC</li><li><b>Sharon Bolos</b> — Weber County Commissioner, Seat B; received $5,915 from Utah Forward PAC</li><li><b>Ben Nadolski</b> — Ogden mayor; Utah Forward PAC gave his 2023 campaign $5,000; Ogden City hired Kerry Gibson as its lobbyist</li></ul></div></div></div>
 
 <div class="wrap">
 
@@ -200,7 +239,7 @@ footer .sub{color:#a99a85;font-size:13px;margin-top:6px;}
             <li>Resignation tied to a DNR post delayed by a probe (no charges)</li>
             <li>UDAF Commissioner 2019-20; lost 2020 congressional primary</li>
             <li>Probe became a Supreme Court records case (McKitrick v. Gibson, 2021)</li>
-            <li>Lobbies for Wolf Creek Management (Lewis) and Ogden City</li>
+            <li>Lobbies for Wolf Creek Management (Lewis) and Ogden City; 2026 lobbyist register also lists Plain City and Morgan County</li>
             <li>Co-owns Politix LLC and Xalisco; married to Katrina</li>
           </ul>
         </div>
@@ -270,8 +309,8 @@ footer .sub{color:#a99a85;font-size:13px;margin-top:6px;}
     <div class="diagram-block wide">
       <pre class="mermaid">
 graph TD
-    classDef center fill:#f0e0c0,stroke:#a9762c,stroke-width:2px,color:#2a1f14;
-    classDef shared fill:#efe6d3,stroke:#5c1a1a,stroke-width:1px,color:#2a1f14;
+    classDef center fill:#f8ece2,stroke:#9a521f,stroke-width:2px,color:#1e2430;
+    classDef shared fill:#eef2f7,stroke:#2c3e5c,stroke-width:1px,color:#1e2430;
     Froerer["Gage Froerer<br/>Weber Co. Commissioner"]:::shared
     Warburton["Laura Warburton<br/>OVPC · KOVF · UFP"]:::center
     KGibson["Katrina Gibson<br/>UFP Registered Agent/CFO"]:::shared
@@ -307,8 +346,8 @@ graph TD
     <div class="diagram-block wide">
       <pre class="mermaid">
 graph LR
-    classDef center fill:#f0e0c0,stroke:#a9762c,stroke-width:2px,color:#2a1f14;
-    classDef shared fill:#efe6d3,stroke:#5c1a1a,stroke-width:1px,color:#2a1f14;
+    classDef center fill:#f8ece2,stroke:#9a521f,stroke-width:2px,color:#1e2430;
+    classDef shared fill:#eef2f7,stroke:#2c3e5c,stroke-width:1px,color:#1e2430;
     Froerer["Froerer"]:::shared -->|took $10,000 from| UFP(("Utah Forward PAC")):::center
     UFP -->|managed by| Warburton["Warburton"]:::center
     UFP -->|registered agent| Gibson["K. Gibson"]:::shared
@@ -319,7 +358,7 @@ graph LR
     Warburton -->|voted on his project| Lewis
     Froerer -->|voted to approve| Lewis
       </pre>
-      <div class="diagram-caption">The same six people, redrawn to show the closed loop</div>
+      <div class="diagram-caption">The same six people, redrawn to show how the money and roles connect</div>
     </div>
   </section>
 
@@ -355,6 +394,9 @@ graph LR
     </div>
     <div class="callout">
       <strong>Ben Nadolski's 2023 mayoral campaign.</strong> Utah Forward PAC gave Nadolski's campaign $5,000. Katrina Gibson — the PAC's own CFO — also signed that campaign's finance disclosure as "Secretary of Committee." The campaign paid Xalisco, co-owned by Kerry Gibson, $3,187.50. After winning, Nadolski hired Kerry Gibson as Ogden City's registered lobbyist (Jan. 2024).
+    </div>
+    <div class="callout">
+      <strong>Kerry Gibson's lobbying business: Legislative Solutions.</strong> "Legislative Solutions" is a registered business name (DBA 12881811-0151, filed June 2, 2022) owned by Kerry Gibson and NRAE Solutions LLC, per the <a href="https://businessregistration.utah.gov/EntitySearch/OnlineEntitySearch">Utah business registry</a>. On the Utah lobbyist register, NRAE Solutions and Legislative Solutions list the same Ogden address. On the 2026 lobbyist register, Kerry Gibson's clients include Ogden City, Plain City and Morgan County. <a href="https://transparent.utah.gov/">Transparent Utah</a> shows Morgan County paid Legislative Solutions $225,000. Plain City's posted 2025 consulting agreement names Legislative Solutions at $3,500 a month. (Business registry and lobbyist register checked Oct. 27, 2026.)
     </div>
     <div class="giving-chart">
       <div class="giving-source">Utah Forward PAC</div>
@@ -491,33 +533,34 @@ graph LR
     </details>
   </section>
 
-  <section>
+<section class="up-connect"><h2>Connecting stories</h2><ul><li><a href="chris-roybal.html">Chris Roybal (UP 200.01)</a><span>Co-manager of Utah Forward PAC with Katrina Gibson and Warburton; the PAC's registered address is his.</span></li><li><a href="ogden-ice-unelected-enforcement.html">The Ogden Officer &amp; The ICE Agent (UP 200.04)</a><span>Mayor Ben Nadolski, whose 2023 campaign Utah Forward PAC gave $5,000 and whose city hired Kerry Gibson as its lobbyist.</span></li><li><a href="falcon-hill-roy.html">Falcon Hill and Roy (UP 200.02)</a><span>MIDA's Falcon Hill project area. Commissioner Froerer, whose campaign Utah Forward PAC gave $10,000, sits on the MIDA board.</span></li><li><a href="dan-hemmert.html">Dan Hemmert (UP 100.02)</a><span>Executive director of MIDA, the state board where Commissioner Froerer holds a seat.</span></li><li><a href="layton-shuffle.html">The Layton Shuffle (UP 300.02)</a><span>Northern Utah Economic Alliance, where Froerer and Roybal sit with Davis County's Bob Stevenson.</span></li></ul></section>
+
+  <section class="up-sources">
     <h2>Sources</h2>
     <details class="open-q">
-      <summary>View all sources</summary>
+      <summary>Sources — click to open (with links)</summary>
       <ul>
-        <li>Keep Our Valley Free (KOVF) campaign finance reports, Convention through Year End, 2024 (disclosures.utah.gov)</li>
-        <li>Utah Forward PAC campaign finance reports, 2022 Primary through 2026 Primary (disclosures.utah.gov)</li>
-        <li>Ogden Valley Planning Commission approved meeting minutes, 2022, 4/29/25, 6/24/25, 9/23/25, 12/2/25 (webercountyutah.gov)</li>
+        <li><a href="https://disclosures.utah.gov/">Keep Our Valley Free (KOVF) campaign finance reports, Convention through Year End, 2024 (disclosures.utah.gov)</a></li>
+        <li><a href="https://disclosures.utah.gov/">Utah Forward PAC campaign finance reports, 2022 Primary through 2026 Primary (disclosures.utah.gov)</a></li>
+        <li><a href="https://www.webercountyutah.gov/">Ogden Valley Planning Commission approved meeting minutes, 2022, 4/29/25, 6/24/25, 9/23/25, 12/2/25 (webercountyutah.gov)</a></li>
         <li>KSL.com, "This is not fear-mongering...," Tim Vandenack, Sept. 21, 2025</li>
         <li>KSL.com, "Nasty and dirty," Nov. 1, 2025</li>
-        <li>Utah Division of Corporations entity records: The Kier Corporation, Kier Girls LLC, Kier Development LLC, Kier Dynasty LLC, Kier Construction Corporation, Wampler Family WCRH LLC</li>
+        <li><a href="https://businessregistration.utah.gov/EntitySearch/OnlineEntitySearch">Utah Division of Corporations entity records: The Kier Corporation, Kier Girls LLC, Kier Development LLC, Kier Dynasty LLC, Kier Construction Corporation, Wampler Family WCRH LLC</a></li>
         <li>Weber County Assessor parcel records (Warburton)</li>
         <li>Utah Investigative Journalism Project, "Former Weber County Commissioner Kerry Gibson loses battle to keep investigations private," Cathy McKitrick</li>
-        <li>Ben Nadolski 2023 mayoral campaign finance disclosure (disclosures.utah.gov)</li>
+        <li><a href="https://disclosures.utah.gov/">Ben Nadolski 2023 mayoral campaign finance disclosure (disclosures.utah.gov)</a></li>
         <li>Laura M. Warburton, public Facebook post, Ogden Valley Citizens Public Group, Sept. 2026</li>
+        <li><a href="https://businessregistration.utah.gov/EntitySearch/OnlineEntitySearch">Utah business registry — "Legislative Solutions," DBA 12881811-0151 (filed 6/2/2022; owners Kerry Gibson and NRAE Solutions LLC)</a>, checked Oct. 27, 2026</li>
+        <li>Utah lobbyist register, 2026 (Kerry Gibson clients; NRAE Solutions and Legislative Solutions address), pulled Oct. 27, 2026</li>
+        <li><a href="https://transparent.utah.gov/">Transparent Utah — Morgan County payments to Legislative Solutions ($225,000)</a></li>
+        <li>Plain City, posted 2025 consulting agreement with Legislative Solutions ($3,500 a month)</li>
       </ul>
     </details>
   </section>
 
 </div>
 
-<footer>
-  <div class="wrap">
-    <div>THE WEBER COUNTY HIVE · UNELECTED POWER</div>
-    <div class="sub">Independent accountability journalism. Public records only. We report; you decide.</div>
-  </div>
-</footer>
+<footer class="up-foot"><div class="in"><div id="up-shelf"></div><div><b>Utah Hive Politics · Unelected Power</b>, from the publisher of The Weber County Hive.</div><div class="up-sub">Public records only. We report public records. You decide. <a href="https://webercountyhive.substack.com/">webercountyhive.substack.com</a></div></div></footer><script src="unelected-power-data.js?v=4"></script><script src="up-shelf.js?v=1"></script>
 
 <script>
 document.querySelectorAll('.tile').forEach(function(tile){

@@ -6,14 +6,15 @@
 <title>Matt Brower — The Board Seat That Never Came Up | Unelected Power</title>
 <style>
   :root{
-    --maroon:#6E1F2B;
-    --maroon-dark:#4E1620;
-    --paper:#F3ECE0;
-    --paper-dim:#E9DFCE;
-    --void:#181210;
-    --ink:#241A16;
-    --gold:#B08A3E;
-    --line:rgba(36,26,22,0.18);
+    --maroon:#2c3e5c;
+    --maroon-dark:#1c2a40;
+    --paper:#ffffff;
+    --paper-dim:#eef2f7;
+    --void:#1c2a40;
+    --ink:#1e2430;
+    --gold:#9a521f;
+    --gold-lt:#f3c9a6;
+    --line:rgba(30,36,48,0.18);
   }
   *{box-sizing:border-box;}
   body{
@@ -29,14 +30,14 @@
     background:var(--void);
     color:var(--paper);
     padding:56px 0 40px;
-    border-bottom:6px solid var(--maroon);
+    border-bottom:5px solid var(--gold);
   }
   header.masthead .wrap{max-width:760px;}
   .case-label{
     font-family:"Helvetica Neue",Arial,sans-serif;
     font-size:13px;
     letter-spacing:0.04em;
-    color:var(--gold);
+    color:var(--gold-lt);
     margin-bottom:14px;
   }
   h1{
@@ -47,7 +48,7 @@
   }
   .dek{
     font-size:1.15rem;
-    color:#D9CFC2;
+    color:#e6ecf5;
     margin:0;
     max-width:60ch;
   }
@@ -55,7 +56,7 @@
     margin-top:24px;
     font-family:"Helvetica Neue",Arial,sans-serif;
     font-size:13px;
-    color:#A99A8C;
+    color:#b9c6da;
   }
 
   .plain{
@@ -152,40 +153,33 @@
     font-style:normal;
     font-family:"Helvetica Neue",Arial,sans-serif;
     font-size:12px;
-    color:var(--gold);
+    color:var(--gold-lt);
   }
 
-  details{
+  main details{
     background:var(--paper-dim);
     border:1px solid var(--line);
     padding:14px 18px;
     margin-bottom:12px;
     border-radius:2px;
   }
-  summary{
+  main summary{
     cursor:pointer;
     font-family:"Helvetica Neue",Arial,sans-serif;
     font-weight:700;
     font-size:0.9rem;
     color:var(--maroon-dark);
   }
-  details p{margin-top:12px;}
+  main details p{margin-top:12px;}
 
   .support-note{
     border:1px dashed var(--line);
     padding:14px 18px;
     font-size:0.9rem;
-    color:#5C4E44;
+    color:#4a5466;
   }
 
-  footer{
-    background:var(--void);
-    color:#A99A8C;
-    padding:36px 0;
-    font-family:"Helvetica Neue",Arial,sans-serif;
-    font-size:12px;
-  }
-  footer a{color:var(--gold);}
+  .pub-date{margin-top:10px;font-family:'IBM Plex Mono',monospace;font-size:13px;color:#f3c9a6;}
 
   .board-grid{
     display:grid;
@@ -222,7 +216,7 @@
     font-family:"Helvetica Neue",Arial,sans-serif;
     font-size:11px;
     letter-spacing:0.05em;
-    color:var(--gold);
+    color:var(--gold-lt);
     margin-bottom:8px;
   }
   .flip-front .name{font-size:1.15rem;font-weight:700;line-height:1.2;}
@@ -230,7 +224,7 @@
     margin-top:auto;
     font-family:"Helvetica Neue",Arial,sans-serif;
     font-size:10px;
-    color:#A99A8C;
+    color:#b9c6da;
   }
   .flip-back{
     background:var(--paper-dim);
@@ -241,18 +235,64 @@
     line-height:1.45;
   }
   .flip-back strong{color:var(--maroon-dark);}
+
+/* ===== Unelected Power standard (slate blue & copper) — header, footer, Where/Who, call number ===== */
+.up-top{background:#1c2a40;color:#b9c6da;font:600 13px 'IBM Plex Mono',monospace;letter-spacing:.06em;text-transform:uppercase}
+.up-top .in{max-width:900px;margin:0 auto;padding:10px 20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.up-top a{color:#e6ecf5;text-decoration:none}
+.up-ww{max-width:900px;margin:26px auto 6px;padding:0 20px}
+.up-where{border:3px solid #2c3e5c;border-radius:10px;overflow:hidden;background:#fff}
+.up-where-h{background:#2c3e5c;color:#fff;padding:12px 18px}
+.up-lbl{font:600 12.5px 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#f3c9a6}
+.up-where-h .pl{font-size:21px;font-weight:700;margin-top:2px}
+.up-who{margin:14px 16px 16px;border:2px solid #9a521f;border-radius:8px}
+.up-who-h{background:#f8ece2;color:#9a521f;padding:6px 12px;font:600 12.5px 'IBM Plex Mono',monospace;letter-spacing:.14em;border-bottom:2px solid #9a521f}
+.up-who ul{list-style:none;margin:0;padding:6px 12px}
+.up-who li{padding:6px 0;border-bottom:1px solid #e3e8ef;font-size:17px;margin:0}
+.up-who li:last-child{border-bottom:none}
+.up-who li b{color:#2c3e5c}
+.up-connect ul{list-style:none;margin:0;padding:0}
+.up-connect li{border:1px solid #c9d3e1;border-left:5px solid #9a521f;background:#fff;padding:10px 14px;margin:0 0 10px;font-size:17px}
+.up-connect li a{font-weight:700;color:#2c3e5c}
+.up-connect li span{display:block;color:#4a5466;font-size:15.5px;margin-top:2px}
+.up-sources details{border:1px solid #c9d3e1;background:#eef2f7;padding:12px 16px}
+.up-sources summary{cursor:pointer;font:600 15px 'IBM Plex Mono',monospace;color:#2c3e5c}
+.up-sources li{margin:8px 0;font-size:16px}
+.up-foot{background:#1c2a40;color:#b9c6da;margin-top:30px;padding:28px 0 36px;font-size:16px}
+.up-foot .in{max-width:900px;margin:0 auto;padding:0 20px}
+.up-foot a{color:#f3c9a6}
+#up-shelf{border:2px dashed #b9c6da;border-radius:10px;padding:16px 18px;margin-bottom:20px;color:#e6ecf5}
+.up-cn-big{font:600 17px 'IBM Plex Mono',monospace;margin-bottom:12px}
+.up-cn-big b{color:#f3c9a6}
+.up-nav{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+.up-nav-btn{flex:1;min-width:220px;background:#2c3e5c;border:1px solid #4a6185;border-radius:8px;padding:12px 14px;color:#fff;text-decoration:none;font-size:16px}
+.up-nav-btn:last-child{text-align:right}
+.up-nav-btn b{color:#f3c9a6;font-family:'IBM Plex Mono',monospace}
+.up-nav-btn.up-off{opacity:.5}
+.up-list summary{cursor:pointer;font:600 15px 'IBM Plex Mono',monospace;color:#f3c9a6;margin-bottom:6px}
+.up-list ol{list-style:none;margin:8px 0 0;padding:0}
+.up-list li{margin:0;padding:5px 0;border-bottom:1px solid #2f4466}
+.up-list li a{color:#e6ecf5;text-decoration:none}
+.up-list li.up-shelf-head{color:#f3c9a6;font:600 13px 'IBM Plex Mono',monospace;letter-spacing:.1em;padding-top:12px;border-bottom:none}
+.up-list li.up-here a{color:#fff;font-weight:700}
+.up-cn{font-family:'IBM Plex Mono',monospace;color:#f3c9a6;margin-right:6px}
+.up-search{font-size:15px;margin-top:12px}
+.up-sub{font-size:14.5px;margin-top:8px;color:#b9c6da}
 </style>
 </head>
 <body>
+<div class="up-top"><div class="in"><span>Utah Hive Politics · Unelected Power</span><span><a href="index.html">← All Unelected Power pages</a> &nbsp;·&nbsp; <a href="https://weber-county-hive.github.io/-weber-county-hive-index/">Hive library ↗</a></span></div></div>
 
 <header class="masthead">
   <div class="wrap">
-    <div class="case-label">UNELECTED POWER — CASE FILE</div>
+    <div class="case-label">UNELECTED POWER — CASE FILE · UP 400.03</div>
     <h1>The Board Seat That Never Came Up</h1>
     <p class="dek">Heber City's top administrator sits on the board of the nonprofit his own office pays. Here's the paper trail — and the plain version, first.</p>
     <div class="byline">The Weber County Hive</div>
+    <div class="pub-date">Posted Sept. 2, 2026 · Updated Oct. 27, 2026</div>
   </div>
 </header>
+<div class="up-ww"><div class="up-where"><div class="up-where-h"><div class="up-lbl">WHERE</div><div class="pl">Heber City Hall · Heber City Main Street · Heber City · Wasatch County</div></div><div class="up-who"><div class="up-who-h">WHO</div><ul><li><b>Matt Brower</b> — Heber City Manager since 2018, appointed by the City Council; CAMS board member since 2019; the only City signatory on the CAMS contract</li><li><b>Community Alliance for Main Street (CAMS)</b> — Heber City nonprofit with a $39,900-a-year City contract for downtown events</li><li><b>Heber City Council</b> — approved the CAMS agreement 5–0 (Jan. 20, 2026), ratified it again (April 21, 2026), renewed Brower's contract 4–2 (April 14, 2026)</li><li><b>Tom Stone</b> — CAMS Chair / President</li><li><b>Jeff Bradshaw</b> — CAMS Treasurer</li><li><b>Dallin Koecher</b> — CAMS board member; Heber Valley Chamber/CVB executive director</li><li><b>Ryan Fritzsche</b> — CAMS board member (City staff reports)</li><li><b>Kelsey Berg</b> — CAMS board member (City staff reports)</li><li><b>Erik Rowland</b> — CAMS board member; Wasatch County Council Chair (Seat C)</li><li><b>Nicole Ferguson</b> — CAMS board member (City staff reports)</li><li><b>Rachel Kahler</b> — CAMS Executive Director, its one paid employee</li><li><b>Utah State Auditor</b> — received a complaint about Brower's CAMS seat and the City's procurement process</li><li><b>Bridget Whiting</b> — resident who submitted the April 14, 2026 "Petition of No Confidence"</li></ul></div></div></div>
 
 <div class="plain">
   <div class="wrap">
@@ -263,10 +303,10 @@
       <li>Brower's own office gave CAMS a city contract worth about $39,900 a year, for three years — nearly $120,000 total.</li>
       <li>CAMS's board — with Brower on it — voted to approve that deal on January 13, 2026. The City Council approved it a week later, on January 20, with Brower's staff report recommending it.</li>
       <li>When it came time to sign the final contract, there was no line for the Mayor. Only Brower signed for the City — even though the contract's own wording says the Mayor should.</li>
-      <li>Someone filed a complaint with the Utah State Auditor. The City had to redo part of the paperwork to make the process look proper.</li>
+      <li>Someone filed a complaint with the Utah State Auditor. The City had to redo part of the paperwork: it re-noticed the CAMS agreement as a "sole source" procurement, and the City Council ratified the agreement a second time on April 21, 2026.</li>
       <li>Hundreds of Heber Valley residents signed a petition asking the City Council not to renew Brower's contract. The Council renewed it anyway, 4–2.</li>
     </ol>
-    <div class="headline-claim">The man who runs the city gave nearly $120,000 in public money to a group he sits on the board of — and no one outside that arrangement signed off on it.</div>
+    <div class="headline-claim">The man who runs the city negotiated nearly $120,000 in public money for a group he sits on the board of — and the City Council approved it 5–0 the same night its own minutes recorded &ldquo;no conflicts disclosed.&rdquo;</div>
   </div>
 </div>
 
@@ -276,7 +316,7 @@
     <h2>Who is Matt Brower?</h2>
     <p>Matt Brower has been Heber City Manager since 2018, appointed — not elected — by the City Council. City Managers in Utah's council-manager form of government run daily operations: staff, budget, contracts, and what makes it onto the Council's own agenda.</p>
     <p>Before Heber, Brower held city manager posts in Lincoln, California (2015–18), Ocala, Florida (2008–14), and Santa Clara, Utah (2000–08). He describes himself as having "23 years" of city management experience.</p>
-    <div class="fact"><strong>Also on the record:</strong> Brower is a director of the Red White & Blue Festival Inc. (since 2023) and has sat on CAMS's board since 2019 — years before the city contract in question.</div>
+    <div class="fact"><strong>Also on the record:</strong> Brower is listed as a director of the Red White & Blue Festival Inc. (state filing shows the entity formed June 19, 2024; OpenCorporates lists a 2023 date) and has sat on CAMS's board since 2019 — years before the city contract in question.</div>
   </section>
 
   <section>
@@ -461,13 +501,30 @@
     <p>The Sid Ostergaard conflict-of-interest claim, the Park Record/Lincoln CA contradiction claim, what the $347,465.54 CAMS expense actually bought, and whether CAMS's board ever formally treated the City contract as a "self-dealing transaction" under its own bylaws — none of these are resolved by any document obtained so far. They are documented here as claims and open questions, not established facts.</p>
   </section>
 
+  <section class="up-connect"><h2>Connecting stories</h2><ul><li><a href="community-alliance-main-street.html">Community Alliance for Main Street (UP 400.01)</a><span>The nonprofit whose board Brower sits on and whose City contract he signed — its board, money and oversight in full.</span></li><li><a href="dallin-koecher.html">Dallin Koecher (UP 400.02)</a><span>Fellow CAMS board member; also on the Red White &amp; Blue Festival board, as Brower is.</span></li><li><a href="ryan-starks.html">Ryan Starks (UP 100.08)</a><span>Former Heber Valley Chamber executive director who also sat on the CAMS board, per his case file.</span></li></ul></section>
+
+  <section class="up-sources" id="sources">
+    <h2>Sources</h2>
+    <details>
+      <summary>Sources — click to open (with links)</summary>
+      <p>The Weber County Hive — Unelected Power. Sourced from Heber City Council staff reports and minutes (Jan. 6, 20, and April 21, 2026), the CAMS Professional Services Agreement, CAMS bylaws and financial statements, a public petition, and public comment emails, all public records.</p>
+      <ul>
+        <li>Heber City Council staff reports and minutes, Jan. 6, Jan. 20, and April 21, 2026</li>
+        <li>CAMS Professional Services Agreement with Heber City (signed; City signature block: Matt Brower, City Manager)</li>
+        <li>CAMS bylaws, signed 2023</li>
+        <li>CAMS financial statements, 2024–2025</li>
+        <li>"Petition of No Confidence," submitted April 14, 2026 by Bridget Whiting</li>
+        <li>Public comment emails to the Heber City Council, week of April 14, 2026 (Kelli Gomez, Tracy Taylor, Larry Saylor)</li>
+        <li><a href="https://businessregistration.utah.gov/EntitySearch/OnlineEntitySearch">Utah Division of Corporations — Red White &amp; Blue Festival Inc. entity record (formed June 19, 2024)</a></li>
+        <li><a href="https://opencorporates.com/">OpenCorporates — Red White &amp; Blue Festival Inc. officer record (lists a 2023 date)</a></li>
+        <li>Full index: <a href="https://weber-county-hive.github.io/-weber-county-hive-index/">weber-county-hive.github.io</a></li>
+      </ul>
+    </details>
+  </section>
+
 </main>
 
-<footer>
-  <div class="wrap">
-    The Weber County Hive — Unelected Power. Sourced from Heber City Council staff reports and minutes (Jan. 6, 20, and April 21, 2026), the CAMS Professional Services Agreement, CAMS bylaws and financial statements, a public petition, and public comment emails, all public records. Full index: <a href="https://weber-county-hive.github.io/-weber-county-hive-index/">weber-county-hive.github.io</a>
-  </div>
-</footer>
+<footer class="up-foot"><div class="in"><div id="up-shelf"></div><div><b>Utah Hive Politics · Unelected Power</b>, from the publisher of The Weber County Hive.</div><div class="up-sub">Public records only. We report public records. You decide. <a href="https://webercountyhive.substack.com/">webercountyhive.substack.com</a></div></div></footer><script src="unelected-power-data.js?v=4"></script><script src="up-shelf.js?v=1"></script>
 
 <script data-goatcounter="https://weberhive.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>

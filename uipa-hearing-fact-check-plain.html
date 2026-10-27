@@ -27,16 +27,6 @@
   body{margin:0;background:var(--page);color:var(--ink);font-family:"Newsreader",Georgia,"Iowan Old Style",serif;line-height:1.55;}
   a{color:var(--copper);}
 
-  .hb-bar{background:#0d0b0a;border-bottom:1px solid #3a2f1c;padding:10px 20px;}
-  .hb-bar a{display:flex;align-items:center;gap:12px;max-width:1100px;margin:0 auto;text-decoration:none;}
-  .hb-bar img{width:52px;height:52px;border-radius:4px;display:block;flex:none;}
-  .hb-name{font-family:'Cinzel','Trajan Pro',Georgia,serif;color:#d4af37;font-size:16px;letter-spacing:.14em;text-transform:uppercase;line-height:1.2;display:block;}
-  .hb-sub{font-family:Georgia,serif;font-style:italic;color:#b8956a;font-size:12.5px;letter-spacing:.02em;display:block;margin-top:2px;}
-  .hb-foot{background:#0d0b0a;color:#b8956a;text-align:center;padding:26px 20px 30px;font-family:Georgia,serif;}
-  .hb-foot img{width:52px;height:52px;display:block;margin:0 auto 10px;}
-  .hb-foot .hb-name{font-size:14px;}
-  .hb-foot .hb-tag{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#8a7650;margin-top:8px;display:block;}
-  @media(max-width:600px){.hb-bar{padding:8px 16px}.hb-bar img{width:38px;height:38px}.hb-name{font-size:13px}.hb-sub{font-size:11.5px}}
 
   .topband{background:var(--slate-deep);color:var(--on-slate);padding:10px 24px;font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace;font-size:.72rem;letter-spacing:.06em;display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;}
   .topband a{color:var(--on-slate);text-decoration:none;border-bottom:1px solid rgba(230,236,245,.4);}
@@ -86,7 +76,7 @@
   .note{background:var(--box);border:1px dashed var(--rule);padding:14px 18px;font-size:.96rem;color:var(--ink-soft);margin:0 0 20px}
   .callout{background:var(--box);border-left:4px solid var(--slate);padding:16px 20px;margin:18px 0;font-size:.98rem;}
   .callout strong{color:var(--slate-deep);}
-  .estimate{background:#fff8e6;border:2px solid var(--part);padding:14px 18px;margin:16px 0;font-size:.98rem;}
+  .estimate{background:#f8ece2;border:2px solid var(--part);padding:14px 18px;margin:16px 0;font-size:.98rem;}
   .estimate b{color:var(--part);}
 
   table.money{width:100%;border-collapse:collapse;background:#fff;font-size:.95rem;margin-bottom:10px}
@@ -183,22 +173,64 @@
     .case-title{font-size:1.8rem}
     .topband{padding:10px 16px}
   }
+
+/* ===== Unelected Power standard (slate blue & copper) — header, footer, Where/Who, call number ===== */
+.up-top{background:#1c2a40;color:#b9c6da;font:600 13px 'IBM Plex Mono',monospace;letter-spacing:.06em;text-transform:uppercase}
+.up-top .in{max-width:900px;margin:0 auto;padding:10px 20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.up-top a{color:#e6ecf5;text-decoration:none}
+.up-ww{max-width:900px;margin:26px auto 6px;padding:0 20px}
+.up-where{border:3px solid #2c3e5c;border-radius:10px;overflow:hidden;background:#fff}
+.up-where-h{background:#2c3e5c;color:#fff;padding:12px 18px}
+.up-lbl{font:600 12.5px 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#f3c9a6}
+.up-where-h .pl{font-size:21px;font-weight:700;margin-top:2px}
+.up-who{margin:14px 16px 16px;border:2px solid #9a521f;border-radius:8px}
+.up-who-h{background:#f8ece2;color:#9a521f;padding:6px 12px;font:600 12.5px 'IBM Plex Mono',monospace;letter-spacing:.14em;border-bottom:2px solid #9a521f}
+.up-who ul{list-style:none;margin:0;padding:6px 12px}
+.up-who li{padding:6px 0;border-bottom:1px solid #e3e8ef;font-size:17px;margin:0}
+.up-who li:last-child{border-bottom:none}
+.up-who li b{color:#2c3e5c}
+.up-connect ul{list-style:none;margin:0;padding:0}
+.up-connect li{border:1px solid #c9d3e1;border-left:5px solid #9a521f;background:#fff;padding:10px 14px;margin:0 0 10px;font-size:17px}
+.up-connect li a{font-weight:700;color:#2c3e5c}
+.up-connect li span{display:block;color:#4a5466;font-size:15.5px;margin-top:2px}
+.up-sources details{border:1px solid #c9d3e1;background:#eef2f7;padding:12px 16px}
+.up-sources summary{cursor:pointer;font:600 15px 'IBM Plex Mono',monospace;color:#2c3e5c}
+.up-sources li{margin:8px 0;font-size:16px}
+.up-foot{background:#1c2a40;color:#b9c6da;margin-top:30px;padding:28px 0 36px;font-size:16px}
+.up-foot .in{max-width:900px;margin:0 auto;padding:0 20px}
+.up-foot a{color:#f3c9a6}
+#up-shelf{border:2px dashed #b9c6da;border-radius:10px;padding:16px 18px;margin-bottom:20px;color:#e6ecf5}
+.up-cn-big{font:600 17px 'IBM Plex Mono',monospace;margin-bottom:12px}
+.up-cn-big b{color:#f3c9a6}
+.up-nav{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+.up-nav-btn{flex:1;min-width:220px;background:#2c3e5c;border:1px solid #4a6185;border-radius:8px;padding:12px 14px;color:#fff;text-decoration:none;font-size:16px}
+.up-nav-btn:last-child{text-align:right}
+.up-nav-btn b{color:#f3c9a6;font-family:'IBM Plex Mono',monospace}
+.up-nav-btn.up-off{opacity:.5}
+.up-list summary{cursor:pointer;font:600 15px 'IBM Plex Mono',monospace;color:#f3c9a6;margin-bottom:6px}
+.up-list ol{list-style:none;margin:8px 0 0;padding:0}
+.up-list li{margin:0;padding:5px 0;border-bottom:1px solid #2f4466}
+.up-list li a{color:#e6ecf5;text-decoration:none}
+.up-list li.up-shelf-head{color:#f3c9a6;font:600 13px 'IBM Plex Mono',monospace;letter-spacing:.1em;padding-top:12px;border-bottom:none}
+.up-list li.up-here a{color:#fff;font-weight:700}
+.up-cn{font-family:'IBM Plex Mono',monospace;color:#f3c9a6;margin-right:6px}
+.up-search{font-size:15px;margin-top:12px}
+.up-sub{font-size:14.5px;margin-top:8px;color:#b9c6da}
+  .up-connect h2,.up-sources h2{font-size:1.5rem;margin:0 0 18px;border-bottom:2px solid var(--slate);padding-bottom:10px;color:var(--slate-deep);}
+  .up-sources ul{max-width:none;padding-left:20px;color:var(--ink-soft);}
+  .up-connect ul,.up-who ul{max-width:none;}
 </style>
 <link rel="icon" type="image/png" href="hive-bee.png">
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-<div class="hb-bar"><a href="https://webercountyhive.substack.com/" target="_blank" rel="noopener"><img src="uhp-badge.png" alt="Utah Hive Politics logo"><span><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span></span></a></div>
-<div class="topband">
-  <span>THE WEBER COUNTY HIVE — UNELECTED POWER</span>
-  <span><a href="index.html">← All Unelected Power files</a> &nbsp; <a href="https://weber-county-hive.github.io/-weber-county-hive-index/">Hive index ↗</a></span>
-</div>
+<div class="up-top"><div class="in"><span>Utah Hive Politics · Unelected Power</span><span><a href="index.html">← All Unelected Power pages</a> &nbsp;·&nbsp; <a href="https://weber-county-hive.github.io/-weber-county-hive-index/">Hive library ↗</a></span></div></div>
 <header class="case-header"><div class="case-wrap">
-<p class="case-eyebrow">IN PLAIN WORDS · HEARING CHECK · OCT. 21, 2026</p>
+<p class="case-eyebrow">IN PLAIN WORDS · HEARING CHECK · OCT. 21, 2026 · UP 100.05</p>
 <h1 class="case-title">The Inland Port Told Lawmakers Its Side. What Do Its Own Records Say?</h1>
 <p class="case-sub">The short, simple version of the Hive's fact check.</p>
-<p class="pub-date">Posted Oct. 21, 2026 &middot; Updated Oct. 21, 2026</p>
+<p class="pub-date">Posted Oct. 21, 2026 &middot; Updated Oct. 27, 2026</p>
 </div></header>
+<div class="up-ww"><div class="up-where"><div class="up-where-h"><div class="up-lbl">WHERE</div><div class="pl">Statewide (16 areas) · West Weber · Golden Spike · Tooele Valley</div></div><div class="up-who"><div class="up-who-h">WHO</div><ul><li><b>Utah Inland Port Authority (UIPA)</b> — State agency with an appointed board</li><li><b>Ben Hart</b> — UIPA's leader (Executive Director); did most of the talking</li><li><b>Ariane Gibson</b> — UIPA's money officer (CFO)</li><li><b>Economic Development and Workforce Services Interim Committee</b> — The group of lawmakers UIPA spoke to on Oct. 21, 2026</li><li><b>Rep. David Shallenberger</b> — The lawmaker who asked the questions</li></ul></div></div></div>
 <main>
 <div class="hs-plain">Want every detail and source? <a class="hs-btn" href="uipa-hearing-fact-check.html">Read the full case file</a></div>
 <details class="hs-pages"><summary>Unelected Power pages (tap to open)</summary><ol>
@@ -224,7 +256,7 @@
 <section><h2 class="section-head">What it is</h2>
 <p>The Utah Inland Port Authority, called UIPA, is a state agency. Its board is <b>appointed, not elected</b>. It works in 16 areas around Utah.</p>
 <p>When land in those areas is built on, property taxes go up. UIPA keeps <b>75%</b> of that new tax money for 25 years. The board can add 15 more years. The county, schools and other local groups get the other <b>25%</b>.</p>
-<p>On Oct. 21, 2026, UIPA's leaders spoke to a group of lawmakers. The Hive recorded it and checked what they said.</p></section>
+<p>On Oct. 21, 2026, UIPA's leaders spoke to a group of lawmakers: the Legislature's Economic Development and Workforce Services Interim Committee. Rep. David Shallenberger asked the questions. The Hive recorded it and checked what they said.</p></section>
 
 <div class="hs-fig chart"><h3>UIPA's share from three areas</h3><p class="sub">UIPA's own plans, 25 years. The copper part is the Hive's estimate if the board adds 15 years. It could be higher.</p>
 <div class="bars">
@@ -254,14 +286,20 @@
 <section><h2 class="section-head">Why it matters to you</h2>
 <p>Lawmakers make choices based on what agencies tell them. When the spoken numbers don't match the agency's own papers, it's worth asking which one they used.</p>
 <p>The full case file checks 27 claims, one by one, and lists who to ask about them.</p></section>
+<section class="up-connect"><h2>Connecting stories</h2><ul><li><a href="uipa-hearing-fact-check.html">The Inland Port at the Legislature (UP 100.04)</a><span>The full case file: all 27 claims, sources, a map and questions to ask.</span></li><li><a href="edcutah.html">EDCUtah (UP 100.03)</a><span>UIPA's leader, Ben Hart, sits on its board.</span></li><li><a href="ryan-starks.html">Ryan Starks (UP 100.08)</a><span>Used to be UIPA's vice chair. Now runs EDCUtah.</span></li></ul></section>
+<section class="up-sources"><h2>Sources</h2><details class="sources-block"><summary>Sources — click to open (with links)</summary><ul>
+<li>The Weber County Hive, recording of the Oct. 21, 2026 committee hearing; checked against the committee's official video and captions</li>
+<li>West Weber, Golden Spike and Tooele Valley project area plans, budget tables (<a href="https://inlandportauthority.utah.gov/">inlandportauthority.utah.gov</a>)</li>
+<li><a href="https://inlandportauthority.utah.gov/all-news/uipa-salt-lake-city-partnership-to-add-officers-serving-west-side-industrial-area/">UIPA, partnership to add officers on Salt Lake City's west side (Apr. 28, 2026)</a></li>
+<li><a href="https://www.utahbusiness.com/press-releases/2026/09/09/uipa-approves-incentive-a1-lithium-castle-country-project-area/">UIPA, incentive for A1 Lithium, Castle Country Project Area (Sept. 9, 2026)</a></li>
+<li><a href="https://webercountyhive-coder.github.io/UIPA/uipa-tooele-zenith.html">Tooele Valley case file</a> (the $4.875 million Zenith loan)</li>
+<li><a href="https://www.ksl.com/article/news/business/a-game-changer-delta-to-open-new-48000-square-foot-cargo-facility-in-utah/51399651">KSL, Delta cargo facility (Nov. 3, 2025)</a></li>
+<li><a href="https://le.utah.gov/interim/2026/pdf/00001737.pdf">UIPA loan letters to the Executive Appropriations Committee (Feb. 9, 2026)</a> (PCC Land loan)</li>
+<li>Every source, with links, is in the <a href="uipa-hearing-fact-check.html#sources">full case file</a>.</li>
+</ul></details></section>
 <div class="hs-plain">Ready for the details? <a class="hs-btn" href="uipa-hearing-fact-check.html">Read the full case file</a> It has every claim, the sources, a map and questions to ask.</div>
 </main>
-<footer>
-  THE WEBER COUNTY HIVE · INDEPENDENT · ACCOUNTABILITY · JOURNALISM<br>
-  Unelected Power. Public records only. We report; you decide.<br>
-  <a href="https://webercountyhive.substack.com">webercountyhive.substack.com</a>
-</footer>
-<div class="hb-foot"><img src="hive-bee.png" alt=""><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span><span class="hb-tag">Independent · Accountability · Journalism</span></div>
+<footer class="up-foot"><div class="in"><div id="up-shelf"></div><div><b>Utah Hive Politics · Unelected Power</b>, from the publisher of The Weber County Hive.</div><div class="up-sub">Public records only. We report public records. You decide. <a href="https://webercountyhive.substack.com/">webercountyhive.substack.com</a></div></div></footer><script src="unelected-power-data.js?v=4"></script><script src="up-shelf.js?v=1"></script>
 <script data-goatcounter="https://weberhive.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

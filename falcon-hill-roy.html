@@ -20,7 +20,7 @@
     --rule:#c9d3e1;
     --on-slate:#e6ecf5;
     --on-slate-soft:#b9c6da;
-    --ok:#1d6b3a; --part:#8a5a00; --no:#9b1c1c; --unk:#4a5568;
+    --ok:#2c3e5c; --part:#9a521f; --no:#9a521f; --unk:#4a5568;
   }
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;font-size:112.5%;}
@@ -31,8 +31,8 @@
   .hb-bar a{display:flex;align-items:center;gap:12px;max-width:1100px;margin:0 auto;text-decoration:none;}
   .hb-bar img{width:52px;height:52px;border-radius:4px;display:block;flex:none;}
   .hb-name{font-family:'Cinzel','Trajan Pro',Georgia,serif;color:#d4af37;font-size:16px;letter-spacing:.14em;text-transform:uppercase;line-height:1.2;display:block;}
-  .hb-sub{font-family:Georgia,serif;font-style:italic;color:#b8956a;font-size:12.5px;letter-spacing:.02em;display:block;margin-top:2px;}
-  .hb-foot{background:#0d0b0a;color:#b8956a;text-align:center;padding:26px 20px 30px;font-family:Georgia,serif;}
+  .hb-sub{font-family:Georgia,serif;font-style:italic;color:#9a521f;font-size:12.5px;letter-spacing:.02em;display:block;margin-top:2px;}
+  .hb-foot{background:#0d0b0a;color:#9a521f;text-align:center;padding:26px 20px 30px;font-family:Georgia,serif;}
   .hb-foot img{width:52px;height:52px;display:block;margin:0 auto 10px;}
   .hb-foot .hb-name{font-size:14px;}
   .hb-foot .hb-tag{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#8a7650;margin-top:8px;display:block;}
@@ -44,13 +44,13 @@
   header.case-header{background:var(--slate);color:#fff;padding:56px 24px 40px;position:relative;overflow:hidden;border-bottom:5px solid var(--copper-bright);}
   header.case-header::after{content:"";position:absolute;right:-60px;top:-60px;width:260px;height:260px;border:1px solid rgba(230,236,245,.15);border-radius:50%;}
   .case-wrap{max-width:880px;margin:0 auto;position:relative;}
-  .case-eyebrow{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.78rem;letter-spacing:.08em;color:#f0b98c;margin:0 0 14px;}
+  .case-eyebrow{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.78rem;letter-spacing:.08em;color:#f3c9a6;margin:0 0 14px;}
   .case-title{font-size:2.4rem;line-height:1.14;margin:0 0 10px;font-weight:600;max-width:22ch;}
-  .case-title em{color:#f0b98c;}
+  .case-title em{color:#f3c9a6;}
   .case-sub{font-size:1.12rem;color:var(--on-slate);font-style:italic;margin:0 0 24px;max-width:58ch;}
   .meta-row{display:flex;flex-wrap:wrap;gap:10px;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.74rem;}
   .meta-pill{border:1px solid rgba(230,236,245,.35);padding:6px 12px;border-radius:2px;color:var(--on-slate);}
-  .pub-date{margin-top:14px;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.76rem;letter-spacing:.03em;color:#f0b98c;}
+  .pub-date{margin-top:14px;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.76rem;letter-spacing:.03em;color:#f3c9a6;}
 
   main{max-width:880px;margin:0 auto;padding:44px 24px 90px;}
   section{margin-bottom:52px;}
@@ -71,14 +71,14 @@
 
   .figure-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule);margin:0 0 30px;}
   .figure-cell{background:var(--slate);color:#fff;padding:22px 18px;text-align:center;}
-  .figure-cell .num{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:1.7rem;font-weight:700;color:#f0b98c;display:block;margin-bottom:6px;}
+  .figure-cell .num{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:1.7rem;font-weight:700;color:#f3c9a6;display:block;margin-bottom:6px;}
   .figure-cell .cap{font-size:.84rem;color:var(--on-slate);}
   @media (max-width:640px){.figure-grid{grid-template-columns:1fr;}}
 
   .note{background:var(--box);border:1px dashed var(--rule);padding:14px 18px;font-size:.96rem;color:var(--ink-soft);margin:0 0 20px}
   .callout{background:var(--box);border-left:4px solid var(--slate);padding:16px 20px;margin:18px 0;font-size:.98rem;}
   .callout strong{color:var(--slate-deep);}
-  .estimate{background:#fff8e6;border:2px solid var(--part);padding:14px 18px;margin:16px 0;font-size:.98rem;}
+  .estimate{background:#f8ece2;border:2px solid var(--part);padding:14px 18px;margin:16px 0;font-size:.98rem;}
   .estimate b{color:var(--part);}
   .split{background:#fff;border:1px solid var(--rule);border-left:6px solid var(--part);padding:14px 18px;margin:14px 0;font-size:.98rem;}
   .split .tag{display:inline-block;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.7rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;padding:3px 9px;border:2px solid;margin:0 6px 6px 0;background:#fff;}
@@ -117,7 +117,7 @@
   .fbox .fh{font-weight:700;font-size:1.2rem;margin-bottom:6px;color:var(--slate-deep);}
   .fbox.pub{border-color:#2f6f8f;} .fbox.pub .fh{color:#2f6f8f;}
   .fbox.co{border-color:var(--copper-bright);} .fbox.co .fh{color:var(--copper);}
-  .fbox.main{background:var(--slate);color:#fff;border-color:var(--slate);} .fbox.main .fh{color:#f0b98c;font-size:1.5rem;}
+  .fbox.main{background:var(--slate);color:#fff;border-color:var(--slate);} .fbox.main .fh{color:#f3c9a6;font-size:1.5rem;}
   .arrow{text-align:center;font-size:30px;color:var(--copper-bright);margin:10px 0;line-height:1.2;}
   .arrow span{display:block;font-family:Arial,sans-serif;font-size:1rem;font-weight:700;color:var(--ink-soft);}
   .diagram-caption{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.7rem;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-soft);margin-top:12px;text-align:center;}
@@ -164,28 +164,68 @@
   .sources-block ol{margin:0 0 16px;padding-left:20px;font-size:.92rem;color:var(--ink-soft);max-width:none}
   .sources-block li{margin-bottom:10px;}
 
-  footer{background:var(--slate-deep);color:var(--on-slate-soft);padding:32px 24px;text-align:center;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.76rem;letter-spacing:.04em;}
-  footer a{color:#f0b98c;}
+  .old-footer{background:var(--slate-deep);color:var(--on-slate-soft);padding:32px 24px;text-align:center;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.76rem;letter-spacing:.04em;}
+  .old-footer a{color:#f3c9a6;}
   @media(max-width:700px){
     main{padding:34px 16px 80px}
     header.case-header{padding:40px 16px 30px}
     .case-title{font-size:1.8rem}
     .topband{padding:10px 16px}
   }
+
+/* ===== Unelected Power standard (slate blue & copper) — header, footer, Where/Who, call number ===== */
+.up-top{background:#1c2a40;color:#b9c6da;font:600 13px 'IBM Plex Mono',monospace;letter-spacing:.06em;text-transform:uppercase}
+.up-top .in{max-width:900px;margin:0 auto;padding:10px 20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.up-top a{color:#e6ecf5;text-decoration:none}
+.up-ww{max-width:900px;margin:26px auto 6px;padding:0 20px}
+.up-where{border:3px solid #2c3e5c;border-radius:10px;overflow:hidden;background:#fff}
+.up-where-h{background:#2c3e5c;color:#fff;padding:12px 18px}
+.up-lbl{font:600 12.5px 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#f3c9a6}
+.up-where-h .pl{font-size:21px;font-weight:700;margin-top:2px}
+.up-who{margin:14px 16px 16px;border:2px solid #9a521f;border-radius:8px}
+.up-who-h{background:#f8ece2;color:#9a521f;padding:6px 12px;font:600 12.5px 'IBM Plex Mono',monospace;letter-spacing:.14em;border-bottom:2px solid #9a521f}
+.up-who ul{list-style:none;margin:0;padding:6px 12px}
+.up-who li{padding:6px 0;border-bottom:1px solid #e3e8ef;font-size:17px;margin:0}
+.up-who li:last-child{border-bottom:none}
+.up-who li b{color:#2c3e5c}
+.up-connect ul{list-style:none;margin:0;padding:0}
+.up-connect li{border:1px solid #c9d3e1;border-left:5px solid #9a521f;background:#fff;padding:10px 14px;margin:0 0 10px;font-size:17px}
+.up-connect li a{font-weight:700;color:#2c3e5c}
+.up-connect li span{display:block;color:#4a5466;font-size:15.5px;margin-top:2px}
+.up-sources details{border:1px solid #c9d3e1;background:#eef2f7;padding:12px 16px}
+.up-sources summary{cursor:pointer;font:600 15px 'IBM Plex Mono',monospace;color:#2c3e5c}
+.up-sources li{margin:8px 0;font-size:16px}
+.up-foot{background:#1c2a40;color:#b9c6da;margin-top:30px;padding:28px 0 36px;font-size:16px}
+.up-foot .in{max-width:900px;margin:0 auto;padding:0 20px}
+.up-foot a{color:#f3c9a6}
+#up-shelf{border:2px dashed #b9c6da;border-radius:10px;padding:16px 18px;margin-bottom:20px;color:#e6ecf5}
+.up-cn-big{font:600 17px 'IBM Plex Mono',monospace;margin-bottom:12px}
+.up-cn-big b{color:#f3c9a6}
+.up-nav{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+.up-nav-btn{flex:1;min-width:220px;background:#2c3e5c;border:1px solid #4a6185;border-radius:8px;padding:12px 14px;color:#fff;text-decoration:none;font-size:16px}
+.up-nav-btn:last-child{text-align:right}
+.up-nav-btn b{color:#f3c9a6;font-family:'IBM Plex Mono',monospace}
+.up-nav-btn.up-off{opacity:.5}
+.up-list summary{cursor:pointer;font:600 15px 'IBM Plex Mono',monospace;color:#f3c9a6;margin-bottom:6px}
+.up-list ol{list-style:none;margin:8px 0 0;padding:0}
+.up-list li{margin:0;padding:5px 0;border-bottom:1px solid #2f4466}
+.up-list li a{color:#e6ecf5;text-decoration:none}
+.up-list li.up-shelf-head{color:#f3c9a6;font:600 13px 'IBM Plex Mono',monospace;letter-spacing:.1em;padding-top:12px;border-bottom:none}
+.up-list li.up-here a{color:#fff;font-weight:700}
+.up-cn{font-family:'IBM Plex Mono',monospace;color:#f3c9a6;margin-right:6px}
+.up-search{font-size:15px;margin-top:12px}
+.up-sub{font-size:14.5px;margin-top:8px;color:#b9c6da}
+.up-who ul,.up-connect ul{max-width:none}
 </style>
 <link rel="icon" type="image/png" href="hive-bee.png">
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 </head>
 <body>
-<div class="hb-bar"><a href="https://webercountyhive.substack.com/" target="_blank" rel="noopener"><img src="uhp-badge.png" alt="Utah Hive Politics logo"><span><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span></span></a></div>
-<div class="topband">
-  <span>THE WEBER COUNTY HIVE — UNELECTED POWER</span>
-  <span><a href="index.html">← All Unelected Power files</a> &nbsp; <a href="https://weber-county-hive.github.io/-weber-county-hive-index/">Hive index ↗</a></span>
-</div>
+<div class="up-top"><div class="in"><span>Utah Hive Politics · Unelected Power</span><span><a href="index.html">← All Unelected Power pages</a> &nbsp;·&nbsp; <a href="https://weber-county-hive.github.io/-weber-county-hive-index/">Hive library ↗</a></span></div></div>
 <header class="case-header">
   <div class="case-wrap">
-    <p class="case-eyebrow">CASE FILE · ORGANIZATION · MIDA PROJECT AREA · ROY, WEBER COUNTY</p>
+    <p class="case-eyebrow">CASE FILE · ORGANIZATION · MIDA PROJECT AREA · ROY, WEBER COUNTY · UP 200.02</p>
     <h1 class="case-title">Falcon Hill: <em>a state tax zone inside Roy.</em></h1>
     <p class="case-sub">Northrop Grumman's Roy Innovation Center sits in MIDA's Falcon Hill Project Area, where an appointed state board collects the property tax from new buildings. MIDA's own resolution names Roy City as a government that levies property tax inside the area. Here is what MIDA's records show about the money, next to Roy's own tax votes and its separate 1900 Southeast tax-increment area.</p>
     <div class="meta-row">
@@ -193,9 +233,10 @@
       <span class="meta-pill">Project area: Falcon Hill, created 2008</span>
       <span class="meta-pill">Board: appointed, not elected</span>
     </div>
-    <p class="pub-date">Posted Oct. 27, 2026 &middot; Updated Oct. 27, 2026</p>
+    <p class="pub-date">Posted Oct. 27, 2026 · Updated Oct. 27, 2026</p>
   </div>
 </header>
+<div class="up-ww"><div class="up-where"><div class="up-where-h"><div class="up-lbl">WHERE</div><div class="pl">Falcon Hill Project Area at Hill Air Force Base · Roy · Riverdale · Sunset · Clearfield · Weber County · Davis County</div></div><div class="up-who"><div class="up-who-h">WHO</div><ul><li><b>MIDA</b> — Military Installation Development Authority; appointed state board that collects Falcon Hill's property tax</li><li><b>J. Stuart Adams</b> — MIDA board chair; signed Resolution 2025-18</li><li><b>Sen. Jerry Stevenson</b> — MIDA board vice chair; primary sponsor of several bills expanding MIDA's powers</li><li><b>Dan Hemmert</b> — MIDA Executive Director; presented to legislators Oct. 21, 2026</li><li><b>Mike Ostermiller</b> — MIDA board member since 2008</li><li><b>Gage Froerer</b> — Weber County Commission Chair on Roy's 1900 Southeast agreement; holds the county's MIDA seat</li><li><b>Sunset Ridge Development Partners</b> — Woodbury Corporation and Hunt Companies joint venture developing Falcon Hill</li><li><b>Taylor Woodbury</b> — CEO, Woodbury Construction; gives Falcon Hill updates at MIDA board meetings</li><li><b>Northrop Grumman</b> — tenant; Roy Innovation Center, Sentinel ICBM program headquarters</li><li><b>Falcon Hill Development Review Committee</b> — seven appointed members who review building plans</li><li><b>Roy City Council and Roy Redevelopment Agency</b> — set Roy's tax rate; run the 1900 Southeast area</li><li><b>Matt Andrews</b> — Roy City Manager</li><li><b>Weber School District</b> — largest share of 1900 Southeast tax increment, an estimated $14.3 million</li></ul></div></div></div>
 <main>
 
 <section class="hs-short"><h2>The short version</h2><ul>
@@ -491,7 +532,9 @@ flowchart TD
 <p class="hs-updates">Posted Oct. 27, 2026. Built from MIDA's own resolutions, budgets and reports to legislators, Roy City and Weber County records, and news coverage, plus Hive research from August through October 2026. Records checked but not used: a Pleasant View CRA (not in Roy), a Weber County CRA policy and a Weber County flagship CRA agreement. All figures in charts are MIDA's or Roy's; totals and percentages are the Hive's math and are labeled.</p>
 </section>
 
-<section id="sources"><details class="sources-block"><summary>Sources</summary><ol>
+<section class="up-connect"><h2 class="section-head">Connecting stories</h2><ul><li><a href="dan-hemmert.html">Dan Hemmert (UP 100.02)</a><span>MIDA's executive director; presented MIDA's overview to legislators on Oct. 21, 2026.</span></li><li><a href="mike-ostermiller.html">Mike Ostermiller (UP 100.07)</a><span>MIDA board member since 2008.</span></li><li><a href="uipa-hearing-fact-check.html">The Inland Port at the Legislature (UP 100.04)</a><span>The Inland Port presented to the same legislative committee on Oct. 21, 2026.</span></li><li><a href="chris-roybal.html">Chris Roybal (UP 200.01)</a><span>Gage Froerer, who signed Roy's 1900 Southeast agreement as Commission Chair and holds the county's MIDA seat, received $10,000 from Utah Forward PAC.</span></li><li><a href="jed-stevenson.html">Jed Stevenson (UP 300.01)</a><span>Son of Sen. Jerry Stevenson, MIDA's board vice chair.</span></li></ul></section>
+
+<section id="sources" class="up-sources"><h2 class="section-head">Sources</h2><details><summary>Sources — click to open (with links)</summary><ol>
 <li><a href="https://www.utah.gov/pmn/files/1352399.pdf" target="_blank" rel="noopener">MIDA Resolution 2025-18, distribution to the Falcon Hill Project Area's local government partners (Nov. 17, 2025)</a> (read through a text pull)</li>
 <li><a href="https://www.utah.gov/pmn/files/1137725.pdf" target="_blank" rel="noopener">MIDA General Fund Budgets, board meeting June 11, 2024, including "Project Area 5 Year Projection – Falcon Hill"</a> (read through a text pull)</li>
 <li><a href="https://le.utah.gov/interim/2023/pdf/00003890.pdf" target="_blank" rel="noopener">MIDA, report to legislators (Sept. 18, 2023): Falcon Hill return on investment, bonds, tax increment received, legislative appropriations</a> (read through a text pull)</li>
@@ -499,9 +542,9 @@ flowchart TD
 <li><a href="https://www.utah.gov/pmn/files/1492137.pdf" target="_blank" rel="noopener">MIDA board materials, Sept. 18, 2026, Falcon Hill Aerospace Research Park update</a> (read through a text pull)</li>
 <li><a href="https://www.utah.gov/pmn/files/1422735.pdf" target="_blank" rel="noopener">MIDA board agenda, April 24, 2026, including Resolution 2026-05 (Falcon Hill 2017 bonds satisfied)</a></li>
 <li><a href="https://le.utah.gov/interim/2022/pdf/00003567.pdf" target="_blank" rel="noopener">MIDA, report to legislators (Sept. 20, 2022), Roy Innovation Center at Falcon Hill</a></li>
-<li>MIDA budget filing, fiscal year ended June 30, 2026 (utah.gov/pmn/files/1453631.pdf), Falcon Hill expenditure line (in the Hive's MIDA money-flow research)</li>
-<li>MIDA, Falcon Hill Project Area web page and "Measuring Results &amp; Strategic Impacts, Falcon Hill Q1 2026" (midaut.org), text as captured by the Hive Sept. 23, 2026</li>
-<li>Falcon Hill Project Area Plans, adopted December 2008 and June 2021 (midaut.org)</li>
+<li><a href="https://www.utah.gov/pmn/files/1453631.pdf" target="_blank" rel="noopener">MIDA budget filing, fiscal year ended June 30, 2026 (utah.gov/pmn/files/1453631.pdf)</a>, Falcon Hill expenditure line (in the Hive's MIDA money-flow research)</li>
+<li>MIDA, Falcon Hill Project Area web page and "Measuring Results &amp; Strategic Impacts, Falcon Hill Q1 2026" (<a href="https://midaut.org/">midaut.org</a>), text as captured by the Hive Sept. 23, 2026</li>
+<li>Falcon Hill Project Area Plans, adopted December 2008 and June 2021 (<a href="https://midaut.org/">midaut.org</a>)</li>
 <li><a href="https://www.utah.gov/pmn/sitemap/notice/1012841.html" target="_blank" rel="noopener">Roy City, Truth in Taxation hearing notice (Aug. 19, 2025)</a></li>
 <li><a href="https://www.utah.gov/pmn/files/1341699.pdf" target="_blank" rel="noopener">Roy City, referendum petition information and arguments for and against the 2025 increase (Oct. 27, 2025)</a></li>
 <li><a href="https://www.ksl.com/article/news/utah/new-guidelines-behind-denial-of-35-tax-hikes-may-be-focus-of-lawmakers-in-2026/51386211" target="_blank" rel="noopener">KSL, "New guidelines behind denial of 35 tax hikes may be focus of lawmakers in 2026" (Oct. 6, 2025)</a></li>
@@ -515,18 +558,13 @@ flowchart TD
 <li><a href="https://www.standard.net/news/2026/jul/14/ground-broken-on-northrop-grummans-legacy-building-to-support-sentinel-icbm-program/" target="_blank" rel="noopener">Standard-Examiner, Legacy Building groundbreaking (July 14, 2026)</a></li>
 <li><a href="https://www.tradeandindustrydev.com/region/utah/news/ut-northrop-grumman-adds-sixth-building-roy-36106" target="_blank" rel="noopener">Trade &amp; Industry Development, sixth building and 2019 groundbreaking history (July 21, 2026)</a></li>
 <li><a href="https://slenterprise.com/index.php/news/3064-up-to-2-500-jobs-coming-to-defense-installation-at-hafb" target="_blank" rel="noopener">The Enterprise, Roy Innovation Center location along Hill's border with Roy (2019)</a></li>
-<li>J. Stuart Adams, 2026 state officeholder conflict of interest disclosure (disclosures.utah.gov), as filed in the Hive's Adams research</li>
+<li>J. Stuart Adams, 2026 state officeholder conflict of interest disclosure (<a href="https://disclosures.utah.gov/">disclosures.utah.gov</a>), as filed in the Hive's Adams research</li>
 <li>Falcon Hill Development Review Committee roster, from the Hive's <a href="https://weber-county-hive.github.io/committees/weberhivecommitteemidaprojectareas.html">MIDA project areas page</a></li>
 <li>Utah Code 63H-1-503, municipal services revenue (as quoted in Resolution 2025-18)</li>
 </ol>
 </details></section>
 </main>
-<footer>
-  THE WEBER COUNTY HIVE · INDEPENDENT · ACCOUNTABILITY · JOURNALISM<br>
-  Unelected Power. Public records only. We report; you decide.<br>
-  <a href="https://webercountyhive.substack.com">webercountyhive.substack.com</a>
-</footer>
-<div class="hb-foot"><img src="hive-bee.png" alt=""><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span><span class="hb-tag">Independent · Accountability · Journalism</span></div>
+<footer class="up-foot"><div class="in"><div id="up-shelf"></div><div><b>Utah Hive Politics · Unelected Power</b>, from the publisher of The Weber County Hive.</div><div class="up-sub">Public records only. We report public records. You decide. <a href="https://webercountyhive.substack.com/">webercountyhive.substack.com</a></div></div></footer><script src="unelected-power-data.js?v=4"></script><script src="up-shelf.js?v=1"></script>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>

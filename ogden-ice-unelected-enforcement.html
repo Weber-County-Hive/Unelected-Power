@@ -9,13 +9,13 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.1/mermaid.min.js"></script>
 <style>
   :root{
-    --maroon:#6E1F2B;
-    --maroon-dark:#4A1420;
-    --paper:#F3ECE0;
-    --void:#181210;
-    --gold:#B8956A;
-    --ink:#2A2019;
-    --line: rgba(24,18,16,0.18);
+    --maroon:#2c3e5c;
+    --maroon-dark:#1c2a40;
+    --paper:#ffffff;
+    --void:#1c2a40;
+    --gold:#9a521f;
+    --ink:#1e2430;
+    --line: rgba(28,42,64,0.18);
   }
   *{box-sizing:border-box;}
   body{
@@ -29,18 +29,19 @@
   .wrap{max-width:880px;margin:0 auto;padding:0 24px;}
 
   header.masthead{
-    background:var(--void);
+    background:linear-gradient(135deg,#2c3e5c,#3a5078);
     color:var(--paper);
     padding:56px 0 44px;
-    border-bottom:6px solid var(--maroon);
+    border-bottom:6px solid #9a521f;
   }
+  .pub-date{margin-top:10px;font-size:13px;letter-spacing:.03em;color:#f3c9a6;font-family:'IBM Plex Mono',monospace;}
   header.masthead .wrap{max-width:880px;margin:0 auto;padding:0 24px;}
   .eyebrow{
     font-family: Georgia, serif;
     letter-spacing:.18em;
     text-transform:uppercase;
     font-size:13px;
-    color:var(--gold);
+    color:#f3c9a6;
     margin-bottom:14px;
   }
   h1.title{
@@ -49,17 +50,17 @@
     font-size:44px;
     line-height:1.12;
     margin:0 0 18px;
-    color:#F7F1E6;
+    color:#ffffff;
   }
   p.dek{
     font-size:19px;
-    color:#D9CBB8;
+    color:#e6ecf5;
     max-width:640px;
     margin:0 0 22px;
   }
   .byline{
     font-size:13px;
-    color:#9C8A76;
+    color:#b9c6da;
     letter-spacing:.03em;
   }
 
@@ -93,7 +94,7 @@
     display:block;
     margin-top:6px;
     font-size:12px;
-    color:#7A6A56;
+    color:#4a5466;
     font-style:italic;
   }
 
@@ -101,7 +102,7 @@
   .full-text{display:block;}
   .simple-text{
     display:none;
-    background:#FFF9EC;
+    background:#f8ece2;
     border-left:4px solid var(--gold);
     padding:14px 18px;
     border-radius:4px;
@@ -114,7 +115,7 @@
     letter-spacing:.1em;
     text-transform:uppercase;
     font-weight:700;
-    color:#8A6C36;
+    color:#9a521f;
     margin-bottom:6px;
   }
   body.simple-mode .full-text{display:none;}
@@ -161,8 +162,8 @@
     position:relative;
     transition:box-shadow .15s ease, transform .15s ease;
   }
-  .chain-card:hover{box-shadow:0 6px 18px rgba(24,18,16,0.12);transform:translateY(-2px);}
-  .chain-card.elected{border-top:5px solid #3A6E4A;}
+  .chain-card:hover{box-shadow:0 6px 18px rgba(28,42,64,0.12);transform:translateY(-2px);}
+  .chain-card.elected{border-top:5px solid #2f6f8f;}
   .chain-card.appointed{border-top:5px solid var(--gold);}
   .chain-card.federal{border-top:5px solid var(--maroon);}
   .chain-tag{
@@ -172,11 +173,11 @@
     font-weight:700;
     margin-bottom:8px;
   }
-  .chain-card.elected .chain-tag{color:#3A6E4A;}
-  .chain-card.appointed .chain-tag{color:#8A6C36;}
+  .chain-card.elected .chain-tag{color:#2f6f8f;}
+  .chain-card.appointed .chain-tag{color:#9a521f;}
   .chain-card.federal .chain-tag{color:var(--maroon);}
   .chain-name{font-family:'Playfair Display',serif;font-weight:700;font-size:17px;margin-bottom:6px;}
-  .chain-desc{font-size:14px;color:#544838;margin:0;}
+  .chain-desc{font-size:14px;color:#4a5466;margin:0;}
   .chain-desc.simple-text{font-size:14px;margin:0;}
 
   /* quote blocks */
@@ -195,7 +196,7 @@
     font-style:normal;
     font-size:13px;
     letter-spacing:.03em;
-    color:#7A6A56;
+    color:#4a5466;
   }
 
   /* comparison table */
@@ -222,7 +223,7 @@
     font-family:'Playfair Display',serif;
     font-weight:600;
   }
-  table.compare tr:nth-child(even) td{background:#FAF6EE;}
+  table.compare tr:nth-child(even) td{background:#eef2f7;}
 
   /* collapsible sources */
   details.sources{
@@ -264,9 +265,9 @@
     letter-spacing:.08em;
     text-transform:uppercase;
     font-weight:700;
-    color:#8A3A2A;
-    background:#F3DED4;
-    border:1px solid #C98868;
+    color:#9a521f;
+    background:#f8ece2;
+    border:1px solid #9a521f;
     border-radius:3px;
     padding:2px 8px;
     margin-left:8px;
@@ -290,9 +291,10 @@
   .timeline-body{flex:1;font-size:15px;}
   .timeline-body .simple-text{font-size:15px;margin-bottom:0;}
 
-  footer{
+  .footer-note-kept{margin-top:18px;font-style:italic;font-size:15px;color:#4a5466;}
+  .old-footer{
     background:var(--void);
-    color:#9C8A76;
+    color:#b9c6da;
     padding:34px 0;
     font-size:13px;
     text-align:center;
@@ -307,7 +309,7 @@
 
   /* analogy card */
   .analogy{
-    background:#FAF6EE;
+    background:#eef2f7;
     border:1px solid var(--gold);
     border-left:5px solid var(--gold);
     border-radius:4px;
@@ -319,7 +321,7 @@
     letter-spacing:.12em;
     text-transform:uppercase;
     font-weight:700;
-    color:#8A6C36;
+    color:#9a521f;
     margin-bottom:10px;
   }
   .analogy p{margin-bottom:12px;}
@@ -337,7 +339,7 @@
   }
   .diagram-caption{
     font-size:14px;
-    color:#7A6A56;
+    color:#4a5466;
     font-style:italic;
     margin-bottom:14px;
   }
@@ -374,31 +376,77 @@
     padding:18px 20px;
     transition:box-shadow .15s ease, transform .15s ease;
   }
-  .split-card:hover{box-shadow:0 6px 18px rgba(24,18,16,0.1);transform:translateY(-2px);}
-  .split-card.ok{background:#E4EFE7;border:1px solid #9EC6AC;}
-  .split-card.risk{background:#F3DED4;border:1px solid #C98868;}
+  .split-card:hover{box-shadow:0 6px 18px rgba(28,42,64,0.1);transform:translateY(-2px);}
+  .split-card.ok{background:#eef2f7;border:1px solid #c9d3e1;}
+  .split-card.risk{background:#f8ece2;border:1px solid #9a521f;}
   .split-title{
     font-family:'Playfair Display',serif;
     font-weight:700;
     font-size:16px;
     margin-bottom:8px;
   }
-  .split-card.ok .split-title{color:#1F3D28;}
-  .split-card.risk .split-title{color:#4A1420;}
+  .split-card.ok .split-title{color:#1c2a40;}
+  .split-card.risk .split-title{color:#1c2a40;}
   .split-card p{font-size:14.5px;margin-bottom:0;}
   .split-card .simple-text{font-size:14.5px;}
+
+/* ===== Unelected Power standard (slate blue & copper) — header, footer, Where/Who, call number ===== */
+.up-top{background:#1c2a40;color:#b9c6da;font:600 13px 'IBM Plex Mono',monospace;letter-spacing:.06em;text-transform:uppercase}
+.up-top .in{max-width:900px;margin:0 auto;padding:10px 20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.up-top a{color:#e6ecf5;text-decoration:none}
+.up-ww{max-width:900px;margin:26px auto 6px;padding:0 20px}
+.up-where{border:3px solid #2c3e5c;border-radius:10px;overflow:hidden;background:#fff}
+.up-where-h{background:#2c3e5c;color:#fff;padding:12px 18px}
+.up-lbl{font:600 12.5px 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#f3c9a6}
+.up-where-h .pl{font-size:21px;font-weight:700;margin-top:2px}
+.up-who{margin:14px 16px 16px;border:2px solid #9a521f;border-radius:8px}
+.up-who-h{background:#f8ece2;color:#9a521f;padding:6px 12px;font:600 12.5px 'IBM Plex Mono',monospace;letter-spacing:.14em;border-bottom:2px solid #9a521f}
+.up-who ul{list-style:none;margin:0;padding:6px 12px}
+.up-who li{padding:6px 0;border-bottom:1px solid #e3e8ef;font-size:17px;margin:0}
+.up-who li:last-child{border-bottom:none}
+.up-who li b{color:#2c3e5c}
+.up-connect ul{list-style:none;margin:0;padding:0}
+.up-connect li{border:1px solid #c9d3e1;border-left:5px solid #9a521f;background:#fff;padding:10px 14px;margin:0 0 10px;font-size:17px}
+.up-connect li a{font-weight:700;color:#2c3e5c}
+.up-connect li span{display:block;color:#4a5466;font-size:15.5px;margin-top:2px}
+.up-sources details{border:1px solid #c9d3e1;background:#eef2f7;padding:12px 16px}
+.up-sources summary{cursor:pointer;font:600 15px 'IBM Plex Mono',monospace;color:#2c3e5c}
+.up-sources li{margin:8px 0;font-size:16px}
+.up-foot{background:#1c2a40;color:#b9c6da;margin-top:30px;padding:28px 0 36px;font-size:16px}
+.up-foot .in{max-width:900px;margin:0 auto;padding:0 20px}
+.up-foot a{color:#f3c9a6}
+#up-shelf{border:2px dashed #b9c6da;border-radius:10px;padding:16px 18px;margin-bottom:20px;color:#e6ecf5}
+.up-cn-big{font:600 17px 'IBM Plex Mono',monospace;margin-bottom:12px}
+.up-cn-big b{color:#f3c9a6}
+.up-nav{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+.up-nav-btn{flex:1;min-width:220px;background:#2c3e5c;border:1px solid #4a6185;border-radius:8px;padding:12px 14px;color:#fff;text-decoration:none;font-size:16px}
+.up-nav-btn:last-child{text-align:right}
+.up-nav-btn b{color:#f3c9a6;font-family:'IBM Plex Mono',monospace}
+.up-nav-btn.up-off{opacity:.5}
+.up-list summary{cursor:pointer;font:600 15px 'IBM Plex Mono',monospace;color:#f3c9a6;margin-bottom:6px}
+.up-list ol{list-style:none;margin:8px 0 0;padding:0}
+.up-list li{margin:0;padding:5px 0;border-bottom:1px solid #2f4466}
+.up-list li a{color:#e6ecf5;text-decoration:none}
+.up-list li.up-shelf-head{color:#f3c9a6;font:600 13px 'IBM Plex Mono',monospace;letter-spacing:.1em;padding-top:12px;border-bottom:none}
+.up-list li.up-here a{color:#fff;font-weight:700}
+.up-cn{font-family:'IBM Plex Mono',monospace;color:#f3c9a6;margin-right:6px}
+.up-search{font-size:15px;margin-top:12px}
+.up-sub{font-size:14.5px;margin-top:8px;color:#b9c6da}
 </style>
 </head>
 <body>
+<div class="up-top"><div class="in"><span>Utah Hive Politics · Unelected Power</span><span><a href="index.html">← All Unelected Power pages</a> &nbsp;·&nbsp; <a href="https://weber-county-hive.github.io/-weber-county-hive-index/">Hive library ↗</a></span></div></div>
 
 <header class="masthead">
   <div class="wrap">
-    <div class="eyebrow">Unelected Power &middot; Case File</div>
+    <div class="eyebrow">Unelected Power &middot; Case File &middot; UP 200.04</div>
     <h1 class="title">The Officer Who Wasn't Elected, The Agent Who Never Will Be</h1>
     <p class="dek">On Aug. 25, 2026, an Ogden man was detained by ICE while a city police officer stood by. The mayor and council who answer to voters spent the next three weeks explaining a decision neither of them made &mdash; because the people who made it don't answer to Ogden voters at all.</p>
     <div class="byline">The Weber County Hive &middot; Public records only &middot; No comment requested</div>
+    <div class="pub-date">Posted Sept. 17, 2026 · Updated Oct. 27, 2026</div>
   </div>
 </header>
+<div class="up-ww"><div class="up-where"><div class="up-where-h"><div class="up-lbl">WHERE</div><div class="pl">22nd St. and Porter Ave., Ogden · Ogden City · Weber County · Utah</div></div><div class="up-who"><div class="up-who-h">WHO</div><ul><li><b>The Ogden officer on scene</b> — sworn Ogden Police Department employee; not elected</li><li><b>The ICE agent</b> — federal; answers to the U.S. Department of Homeland Security, not to Ogden or Utah</li><li><b>"Jonathan"</b> — the man detained by ICE on Aug. 25, 2026; his immigration status is disputed</li><li><b>Mayor Ben Nadolski</b> — elected; appoints the police chief</li><li><b>Police Chief Jake Sube</b> — appointed by the mayor; writes and interprets the department's policy manual</li><li><b>Councilman Kevin Lundell</b> — Ogden City Council; filmed part of the encounter</li><li><b>Councilwoman Alicia Washington</b> — Ogden City Council; called for a full review of the incident and policy</li><li><b>Weber County Sheriff Arbon</b> — elected; signed a 287(g) agreement with ICE</li><li><b>Rep. Trevor Lee</b> — sponsor of H.B. 571 (2026), which did not pass</li></ul></div></div></div>
 
 <div class="mode-bar">
   <button id="simpleToggle" onclick="toggleSimple()">🎈 Explain It Simply</button>
@@ -579,20 +627,20 @@ graph TD
     B -- "Yes &mdash; blocks cooperation" --> C["Illegal<br/>Violates &sect;76-14-205<br/>(existing law, in force)"]
     B -- "No &mdash; stays silent or<br/>affirms current practice" --> D["Legal<br/>Nothing requires more"]
     D --> E{"Would HB571 have<br/>changed this?"}
-    E -- "Yes &mdash; it would have<br/>REQUIRED active help,<br/>not just banned restriction" --> F["HB571's 'best efforts' mandate<br/>+ AG lawsuits / fines / injunctions<br/>Died 3/6/2026<br/>struck in House Rules Committee"]
+    E -- "Yes &mdash; it would have<br/>REQUIRED active help,<br/>not just banned restriction" --> F["HB571's 'best efforts' mandate<br/>+ AG lawsuits / fines / injunctions<br/>Died 3/6/2026<br/>sat in House Rules Committee, no hearing;<br/>enacting clause struck at session end"]
     F -.->|"never took effect"| D
 
-    style C fill:#F3DED4,stroke:#8A3A2A,stroke-width:2px,color:#4A1420
-    style D fill:#E4EFE7,stroke:#3A6E4A,stroke-width:2px,color:#1F3D28
-    style F fill:#EDE7D8,stroke:#B8956A,stroke-width:2px,color:#4A3A28,stroke-dasharray: 5 5
-    style A fill:#F3ECE0,stroke:#6E1F2B,color:#2A2019
-    style B fill:#fff,stroke:#6E1F2B,color:#2A2019
-    style E fill:#fff,stroke:#6E1F2B,color:#2A2019
+    style C fill:#f8ece2,stroke:#9a521f,stroke-width:2px,color:#1c2a40
+    style D fill:#eef2f7,stroke:#2f6f8f,stroke-width:2px,color:#1c2a40
+    style F fill:#ffffff,stroke:#6b7689,stroke-width:2px,color:#1e2430,stroke-dasharray: 5 5
+    style A fill:#ffffff,stroke:#2c3e5c,color:#1e2430
+    style B fill:#fff,stroke:#2c3e5c,color:#1e2430
+    style E fill:#fff,stroke:#2c3e5c,color:#1e2430
       </pre>
       <div class="legend">
-        <div class="legend-item"><div class="swatch" style="background:#E4EFE7;border:1px solid #3A6E4A;"></div>Currently in force</div>
-        <div class="legend-item"><div class="swatch" style="background:#F3DED4;border:1px solid #8A3A2A;"></div>Would be illegal to try</div>
-        <div class="legend-item"><div class="swatch" style="background:#EDE7D8;border:1px dashed #B8956A;"></div>Proposed, never became law</div>
+        <div class="legend-item"><div class="swatch" style="background:#eef2f7;border:1px solid #2f6f8f;"></div>Currently in force</div>
+        <div class="legend-item"><div class="swatch" style="background:#f8ece2;border:1px solid #9a521f;"></div>Would be illegal to try</div>
+        <div class="legend-item"><div class="swatch" style="background:#ffffff;border:1px dashed #6b7689;"></div>Proposed, never became law</div>
       </div>
     </div>
 
@@ -605,7 +653,7 @@ graph TD
       </div>
       <div class="split-card risk">
         <div class="split-title">Legal exposure</div>
-        <p class="full-text">The city adopting a formal written policy, ordinance, or directive telling officers to never cooperate with ICE &mdash; the kind of blanket ban the council's original resolution language edged toward. That would violate the existing &sect;76-14-205 floor, regardless of whether HB571's specific penalty scheme ever became law.</p>
+        <p class="full-text">The city adopting a formal written policy, ordinance, or directive telling officers to never cooperate with ICE &mdash; the kind of blanket ban the council's original resolution language edged toward. That would violate the existing &sect;76-14-205 floor, regardless of whether HB571's specific penalties (attorney general lawsuits, court injunctions and civil fines up to $5,000 against individual officials) ever became law.</p>
         <p class="simple-text">The whole city writing down "we will never help ICE" as an official rule = against the law.</p>
       </div>
     </div>
@@ -672,8 +720,11 @@ graph TD
 
 <section>
   <div class="wrap">
+<section class="up-connect"><h2 class="section-title">Connecting stories</h2><ul><li><a href="laura-warburton.html">Laura Warburton (UP 200.03)</a><span>Utah Forward PAC gave Mayor Nadolski's 2023 campaign $5,000; Ogden City later hired lobbyist Kerry Gibson.</span></li><li><a href="chris-roybal.html">Chris Roybal (UP 200.01)</a><span>Co-manager of Utah Forward PAC, the PAC that gave Nadolski's 2023 mayoral campaign $5,000.</span></li><li><a href="layton-shuffle.html">The Layton Shuffle (UP 300.02)</a><span>Rep. Trevor Lee, H.B. 571's sponsor, lost his 2026 House District 16 primary.</span></li></ul></section>
+    <div class="up-sources">
+    <h2 class="section-title">Sources</h2>
     <details class="sources">
-      <summary>Full sourcing for this case file</summary>
+      <summary>Sources — click to open (with links)</summary>
       <ul>
         <li>KSL, "Ogden police speak out after ICE arrest" (Aug. 26, 2026)</li>
         <li>KUTV, "Ogden police say video circulating of ICE arrest 'does not provide full context'"</li>
@@ -685,31 +736,28 @@ graph TD
         <li>Standard-Examiner, "Policy perspective: Ogden mayor, police chief discuss demand related to ICE activity" (Sept. 17, 2026)</li>
         <li>Univision/KUTH, "Polic&iacute;a de Ogden se pronuncia sobre v&iacute;deo viral de detenci&oacute;n de ICE"</li>
         <li>Officer's body-worn camera footage, as posted by OPD and independently reviewed by the Hive</li>
-        <li>Ogden City Council approved minutes: Feb. 3, 2026; Feb. 17, 2026; June 2, 2026 (ogdencity.gov, City Recorder's Office)</li>
+        <li><a href="https://www.ogdencity.gov/">Ogden City Council approved minutes: Feb. 3, 2026; Feb. 17, 2026; June 2, 2026 (ogdencity.gov, City Recorder's Office)</a></li>
         <li>Ogden City Council Sept. 1, 2026 meeting packet/agenda (approved minutes not yet posted as of this writing)</li>
         <li>KSL, "Ogden council members pursuing measure to quell jitters over immigration crackdown" (Jan. 2026)</li>
         <li>KSL, "Ogden officials pause moves to craft measure meant to quell immigration jitters" (Feb. 18, 2026)</li>
         <li>KSL, "Ogden on ICE" reporting via The Ogdenite (March 2026), on withdrawal of the "Affirming Community Trust Through Public Safety" resolution</li>
-        <li>Utah Code &sect;76-14-205, current codification, le.utah.gov</li>
-        <li>H.B. 571, "Immigrant Amendments," 2026 General Session &mdash; full introduced text and official bill status page, le.utah.gov (Last Action 3/6/2026: enacting clause struck, filed as a bill not passed, no committee hearing in either chamber)</li>
+        <li><a href="https://le.utah.gov/">Utah Code &sect;76-14-205, current codification, le.utah.gov</a></li>
+        <li><a href="https://le.utah.gov/~2026/bills/static/HB0571.html">H.B. 571, "Immigrant Amendments," 2026 General Session &mdash; full introduced text and official bill status page, le.utah.gov</a> (official status, checked Oct. 27, 2026: introduced Feb. 17, 2026 and sent to the House Rules Committee; enacting clause struck by the Clerk of the House at 11:59 p.m. on March 6, 2026, the last night of the session, and filed as a bill not passed; no committee hearing in either chamber)</li>
         <li>KSL, "Several immigration bills focus of continued debate as end of Utah legislative session looms" (identifying HB571 as "likely dead")</li>
-        <li>ACLU of Utah, 2026 Legislative Report, HB571 summary</li>
+        <li><a href="https://www.acluutah.org/?p=24808">ACLU of Utah, 2026 Legislative Report, HB571 summary</a></li>
         <li>American Immigration Council, legal fact sheet on ICE/CBP statutory authority and limits on traffic stops</li>
         <li>KUER, "Here's how much Weber County is billing ICE for deputies' help with immigration" and "What to know about how Weber County's partnership with ICE works" (Weber County Sheriff's 287(g) agreement, separate from OPD)</li>
       </ul>
     </details>
+    </div>
+    <p class="footer-note-kept">Public records and on-the-record statements only. No comment was requested from any party named here.</p>
   </div>
 </section>
 
-<footer>
-  <div class="wrap">
-    <div>The Weber County Hive &middot; <a href="https://webercountyhive.substack.com">webercountyhive.substack.com</a></div>
-    <div class="footer-note">Public records and on-the-record statements only. No comment was requested from any party named here.</div>
-  </div>
-</footer>
+<footer class="up-foot"><div class="in"><div id="up-shelf"></div><div><b>Utah Hive Politics · Unelected Power</b>, from the publisher of The Weber County Hive.</div><div class="up-sub">Public records only. We report public records. You decide. <a href="https://webercountyhive.substack.com/">webercountyhive.substack.com</a></div></div></footer><script src="unelected-power-data.js?v=4"></script><script src="up-shelf.js?v=1"></script>
 
 <script>
-  mermaid.initialize({ startOnLoad: true, theme: 'base', themeVariables: { fontFamily: 'Georgia, serif' } });
+  mermaid.initialize({ startOnLoad: true, theme: 'base', themeVariables: { fontFamily: 'Georgia, serif', primaryColor: '#eef2f7', primaryTextColor: '#1e2430', primaryBorderColor: '#2c3e5c', lineColor: '#9a521f', secondaryColor: '#f8ece2', tertiaryColor: '#ffffff' } });
 
   function toggleSimple(){
     document.body.classList.toggle('simple-mode');
