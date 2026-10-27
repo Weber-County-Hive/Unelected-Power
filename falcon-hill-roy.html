@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Falcon Hill and Roy | Unelected Power | Utah Hive Politics</title>
+<meta name="description" content="MIDA's Falcon Hill Project Area, home of Northrop Grumman's Roy Innovation Center, collects property tax inside Roy City. What MIDA's own records show about the money, and how it sits next to Roy's own tax votes and its 1900 Southeast tax-increment area.">
+<style>
+  :root{
+    --slate:#2c3e5c;
+    --slate-deep:#1c2a40;
+    --page:#ffffff;
+    --box:#eef2f7;
+    --box-2:#e2e8f1;
+    --ink:#1e2430;
+    --ink-soft:#4a5466;
+    --copper:#9a521f;
+    --copper-bright:#b5652b;
+    --copper-bg:#f8ece2;
+    --rule:#c9d3e1;
+    --on-slate:#e6ecf5;
+    --on-slate-soft:#b9c6da;
+    --ok:#1d6b3a; --part:#8a5a00; --no:#9b1c1c; --unk:#4a5568;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;font-size:112.5%;}
+  body{margin:0;background:var(--page);color:var(--ink);font-family:"Newsreader",Georgia,"Iowan Old Style",serif;line-height:1.55;}
+  a{color:var(--copper);}
+
+  .hb-bar{background:#0d0b0a;border-bottom:1px solid #3a2f1c;padding:10px 20px;}
+  .hb-bar a{display:flex;align-items:center;gap:12px;max-width:1100px;margin:0 auto;text-decoration:none;}
+  .hb-bar img{width:52px;height:52px;border-radius:4px;display:block;flex:none;}
+  .hb-name{font-family:'Cinzel','Trajan Pro',Georgia,serif;color:#d4af37;font-size:16px;letter-spacing:.14em;text-transform:uppercase;line-height:1.2;display:block;}
+  .hb-sub{font-family:Georgia,serif;font-style:italic;color:#b8956a;font-size:12.5px;letter-spacing:.02em;display:block;margin-top:2px;}
+  .hb-foot{background:#0d0b0a;color:#b8956a;text-align:center;padding:26px 20px 30px;font-family:Georgia,serif;}
+  .hb-foot img{width:52px;height:52px;display:block;margin:0 auto 10px;}
+  .hb-foot .hb-name{font-size:14px;}
+  .hb-foot .hb-tag{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#8a7650;margin-top:8px;display:block;}
+  @media(max-width:600px){.hb-bar{padding:8px 16px}.hb-bar img{width:38px;height:38px}.hb-name{font-size:13px}.hb-sub{font-size:11.5px}}
+
+  .topband{background:var(--slate-deep);color:var(--on-slate);padding:10px 24px;font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace;font-size:.72rem;letter-spacing:.06em;display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;}
+  .topband a{color:var(--on-slate);text-decoration:none;border-bottom:1px solid rgba(230,236,245,.4);}
+
+  header.case-header{background:var(--slate);color:#fff;padding:56px 24px 40px;position:relative;overflow:hidden;border-bottom:5px solid var(--copper-bright);}
+  header.case-header::after{content:"";position:absolute;right:-60px;top:-60px;width:260px;height:260px;border:1px solid rgba(230,236,245,.15);border-radius:50%;}
+  .case-wrap{max-width:880px;margin:0 auto;position:relative;}
+  .case-eyebrow{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.78rem;letter-spacing:.08em;color:#f0b98c;margin:0 0 14px;}
+  .case-title{font-size:2.4rem;line-height:1.14;margin:0 0 10px;font-weight:600;max-width:22ch;}
+  .case-title em{color:#f0b98c;}
+  .case-sub{font-size:1.12rem;color:var(--on-slate);font-style:italic;margin:0 0 24px;max-width:58ch;}
+  .meta-row{display:flex;flex-wrap:wrap;gap:10px;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.74rem;}
+  .meta-pill{border:1px solid rgba(230,236,245,.35);padding:6px 12px;border-radius:2px;color:var(--on-slate);}
+  .pub-date{margin-top:14px;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.76rem;letter-spacing:.03em;color:#f0b98c;}
+
+  main{max-width:880px;margin:0 auto;padding:44px 24px 90px;}
+  section{margin-bottom:52px;}
+  h2.section-head{font-size:1.5rem;margin:0 0 18px;border-bottom:2px solid var(--slate);padding-bottom:10px;color:var(--slate-deep);}
+  h3{color:var(--slate-deep);}
+  p{margin:0 0 16px;max-width:68ch;}
+  ul{max-width:68ch;}
+  li{margin-bottom:6px;}
+  .lede{font-size:1.12rem;color:var(--ink-soft);}
+
+  .hs-short{background:var(--box);border:1px solid var(--rule);border-left:6px solid var(--copper-bright);padding:18px 22px;margin:0 0 30px}
+  .hs-short h2{font-size:1.2rem;margin:0 0 10px;border:0;padding:0;color:var(--slate-deep)}
+  .hs-short ul{margin:0;padding-left:20px}
+  .hs-short li{margin-bottom:8px}
+  .hs-toc{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 26px}
+  .hs-toc a{font-family:Arial,sans-serif;font-size:.82rem;padding:7px 12px;border:1px solid var(--rule);background:var(--box);color:var(--ink);text-decoration:none;border-radius:999px}
+  .hs-toc a:hover{border-color:var(--copper)}
+
+  .figure-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule);margin:0 0 30px;}
+  .figure-cell{background:var(--slate);color:#fff;padding:22px 18px;text-align:center;}
+  .figure-cell .num{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:1.7rem;font-weight:700;color:#f0b98c;display:block;margin-bottom:6px;}
+  .figure-cell .cap{font-size:.84rem;color:var(--on-slate);}
+  @media (max-width:640px){.figure-grid{grid-template-columns:1fr;}}
+
+  .note{background:var(--box);border:1px dashed var(--rule);padding:14px 18px;font-size:.96rem;color:var(--ink-soft);margin:0 0 20px}
+  .callout{background:var(--box);border-left:4px solid var(--slate);padding:16px 20px;margin:18px 0;font-size:.98rem;}
+  .callout strong{color:var(--slate-deep);}
+  .estimate{background:#fff8e6;border:2px solid var(--part);padding:14px 18px;margin:16px 0;font-size:.98rem;}
+  .estimate b{color:var(--part);}
+  .split{background:#fff;border:1px solid var(--rule);border-left:6px solid var(--part);padding:14px 18px;margin:14px 0;font-size:.98rem;}
+  .split .tag{display:inline-block;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.7rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;padding:3px 9px;border:2px solid;margin:0 6px 6px 0;background:#fff;}
+  .split .tag.ok{color:var(--ok);border-color:var(--ok);}
+  .split .tag.part{color:var(--part);border-color:var(--part);}
+
+  table.money{width:100%;border-collapse:collapse;background:#fff;font-size:.95rem;margin-bottom:10px}
+  table.money th,table.money td{border:1px solid var(--rule);padding:10px 12px;text-align:left;vertical-align:top}
+  table.money th{background:var(--slate);color:#fff;font-family:Arial,sans-serif;font-size:.82rem}
+  table.money td.n{text-align:right;font-family:Arial,sans-serif;font-weight:bold;white-space:nowrap}
+  table.money tr.total td{font-weight:700;background:var(--box-2)}
+  .tbl-wrap{overflow-x:auto;}
+  .tsrc{font-size:.86rem;color:var(--ink-soft);font-style:italic;margin:4px 0 18px;}
+
+  details.gl{border:1px solid var(--rule);background:#fff;margin-bottom:8px;padding:12px 16px;}
+  details.gl summary{font-weight:700;cursor:pointer;color:var(--slate-deep);}
+  details.gl p{margin:8px 0 0;font-size:.98rem;}
+
+  .chart{background:#fff;border:1px solid var(--rule);padding:18px 20px;margin:18px 0;}
+  .chart h3{font-size:1.2rem;margin:0 0 6px;}
+  .chart .sub{font-family:Arial,sans-serif;font-size:.88rem;color:var(--ink-soft);margin-bottom:12px;}
+  .chart .src{font-size:.84rem;color:var(--ink-soft);font-style:italic;margin-top:10px;}
+  .hbar{margin-bottom:14px;}
+  .hbar .lbl{font-family:Arial,sans-serif;font-size:1rem;font-weight:700;margin-bottom:4px;line-height:1.3;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;}
+  .hbar .lbl span{font-weight:400;color:var(--ink-soft);}
+  .hbar .track{height:30px;background:var(--box);border:1px solid var(--rule);}
+  .hbar .fill{height:100%;background:var(--slate);}
+  .hbar.hl .fill{background:var(--copper-bright);}
+  .hbar.est .fill{background:repeating-linear-gradient(45deg,var(--slate) 0 10px,#4f6488 10px 20px);}
+
+  .flow{background:var(--box);border:1px solid var(--rule);padding:22px 18px;margin:18px 0;}
+  .flow-row{display:grid;grid-template-columns:1fr;gap:14px;max-width:560px;margin:0 auto;}
+  .flow-row.three{grid-template-columns:repeat(3,minmax(0,1fr));max-width:860px;}
+  .flow-row.two{grid-template-columns:repeat(2,minmax(0,1fr));max-width:760px;}
+  .fbox{background:#fff;border:3px solid var(--slate);border-radius:8px;padding:16px 18px;font-size:1.02rem;line-height:1.45;text-align:center;}
+  .fbox .fh{font-weight:700;font-size:1.2rem;margin-bottom:6px;color:var(--slate-deep);}
+  .fbox.pub{border-color:#2f6f8f;} .fbox.pub .fh{color:#2f6f8f;}
+  .fbox.co{border-color:var(--copper-bright);} .fbox.co .fh{color:var(--copper);}
+  .fbox.main{background:var(--slate);color:#fff;border-color:var(--slate);} .fbox.main .fh{color:#f0b98c;font-size:1.5rem;}
+  .arrow{text-align:center;font-size:30px;color:var(--copper-bright);margin:10px 0;line-height:1.2;}
+  .arrow span{display:block;font-family:Arial,sans-serif;font-size:1rem;font-weight:700;color:var(--ink-soft);}
+  .diagram-caption{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.7rem;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-soft);margin-top:12px;text-align:center;}
+  @media(max-width:700px){.flow-row.three,.flow-row.two{grid-template-columns:1fr;}}
+
+  .mermaid-wrap{background:#fff;border:1px solid var(--rule);padding:14px;margin:18px 0;text-align:center;overflow-x:auto;}
+  .mermaid-wrap pre.mermaid{margin:0;background:transparent;font-size:1rem;}
+
+  #map{height:480px;border:1px solid var(--rule);margin:14px 0;}
+
+  .ask-list{list-style:none;margin:0;padding:0;max-width:none}
+  .ask-list li{background:var(--box);border-left:4px solid var(--copper-bright);padding:14px 18px;margin-bottom:10px;font-size:.98rem;}
+  .ask-list li strong{color:var(--copper);}
+
+  .tl{list-style:none;margin:0;padding:0;border-left:4px solid var(--copper-bright)}
+  .tl li{position:relative;padding:0 0 18px 22px;font-size:1rem}
+  .tl li::before{content:"";position:absolute;left:-11px;top:4px;width:14px;height:14px;border-radius:50%;background:#fff;border:4px solid var(--copper-bright)}
+  .tl li b{display:block;font-family:Arial,sans-serif;font-size:.9rem;color:var(--copper)}
+  .tl li.roy::before{border-color:var(--slate);}
+  .tl li.roy b{color:var(--slate);}
+  .tl-key{display:flex;gap:18px;flex-wrap:wrap;font-family:Arial,sans-serif;font-size:.9rem;margin:0 0 14px;}
+  .tl-key span::before{content:"";display:inline-block;width:14px;height:14px;border-radius:50%;border:4px solid var(--copper-bright);margin-right:6px;vertical-align:-3px;}
+  .tl-key span.r::before{border-color:var(--slate);}
+  .hs-updates{font-family:Arial,sans-serif;font-size:.85rem;color:var(--ink-soft);margin-top:14px}
+
+  .hs-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+  .hs-cards a{display:block;background:var(--box);border:1px solid var(--rule);border-top:5px solid var(--copper-bright);padding:14px 16px;text-decoration:none;color:var(--ink)}
+  .hs-cards a b{display:block;margin-bottom:4px}
+  .hs-cards a span{font-size:.88rem;color:var(--ink-soft)}
+  .hs-flips{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+  .hs-flip{text-align:left;background:var(--box);border:1px solid var(--rule);border-top:5px solid var(--slate);padding:14px 16px;cursor:pointer;font:inherit;color:var(--ink);min-height:96px}
+  .hs-flip .ft{font-weight:bold;font-size:1.05rem}
+  .hs-flip .fh{font-family:Arial,sans-serif;font-size:.75rem;color:var(--ink-soft);margin-top:6px}
+  .hs-flip .fd{display:none;margin-top:8px;font-size:.95rem}
+  .hs-flip[aria-expanded="true"] .fd{display:block}
+  .hs-flip[aria-expanded="true"] .fh{display:none}
+  .hs-counter{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+  .hs-counter div{background:var(--slate);color:#fff;padding:14px;text-align:center}
+  .hs-counter .n{font-family:Arial,sans-serif;font-size:1.8rem;font-weight:bold}
+  .hs-counter .l{font-size:.82rem}
+
+  .sources-block{background:transparent;border:none;border-top:2px solid var(--slate);padding:0;margin-top:8px}
+  .sources-block summary{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.85rem;letter-spacing:.04em;color:var(--ink);padding:14px 0;cursor:pointer}
+  .sources-block ol{margin:0 0 16px;padding-left:20px;font-size:.92rem;color:var(--ink-soft);max-width:none}
+  .sources-block li{margin-bottom:10px;}
+
+  footer{background:var(--slate-deep);color:var(--on-slate-soft);padding:32px 24px;text-align:center;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.76rem;letter-spacing:.04em;}
+  footer a{color:#f0b98c;}
+  @media(max-width:700px){
+    main{padding:34px 16px 80px}
+    header.case-header{padding:40px 16px 30px}
+    .case-title{font-size:1.8rem}
+    .topband{padding:10px 16px}
+  }
+</style>
+<link rel="icon" type="image/png" href="hive-bee.png">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
+<body>
+<div class="hb-bar"><a href="https://webercountyhive.substack.com/" target="_blank" rel="noopener"><img src="uhp-badge.png" alt="Utah Hive Politics logo"><span><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span></span></a></div>
+<div class="topband">
+  <span>THE WEBER COUNTY HIVE — UNELECTED POWER</span>
+  <span><a href="index.html">← All Unelected Power files</a> &nbsp; <a href="https://weber-county-hive.github.io/-weber-county-hive-index/">Hive index ↗</a></span>
+</div>
+<header class="case-header">
+  <div class="case-wrap">
+    <p class="case-eyebrow">CASE FILE · ORGANIZATION · MIDA PROJECT AREA · ROY, WEBER COUNTY</p>
+    <h1 class="case-title">Falcon Hill: <em>a state tax zone inside Roy.</em></h1>
+    <p class="case-sub">Northrop Grumman's Roy Innovation Center sits in MIDA's Falcon Hill Project Area, where an appointed state board collects the property tax from new buildings. MIDA's own resolution names Roy City as a government that levies property tax inside the area. Here is what MIDA's records show about the money, next to Roy's own tax votes and its separate 1900 Southeast tax-increment area.</p>
+    <div class="meta-row">
+      <span class="meta-pill">Authority: Military Installation Development Authority (MIDA)</span>
+      <span class="meta-pill">Project area: Falcon Hill, created 2008</span>
+      <span class="meta-pill">Board: appointed, not elected</span>
+    </div>
+    <p class="pub-date">Posted Oct. 27, 2026 &middot; Updated Oct. 27, 2026</p>
+  </div>
+</header>
+<main>
+
+<section class="hs-short"><h2>The short version</h2><ul>
+<li>MIDA's Falcon Hill Project Area is about 550 acres of federal ground at Hill Air Force Base, leased for private development. <b>MIDA's Resolution 2025-18 says Roy City levies a property tax inside it</b>, along with Davis County, Weber County, Clearfield, Riverdale and Sunset.</li>
+<li>In MIDA's June 2024 projection for FY2025, Falcon Hill buildings would produce about <b>$4.6 million</b> in property tax. MIDA projected sharing <b>$801,320</b> of it (17.4%) with local taxing entities and keeping the rest for infrastructure, incentives, debt, municipal services and its own administration.</li>
+<li>In November 2025, MIDA voted to give <b>$50,000 each</b> to the six local governments, Roy included, from leftover municipal services money. MIDA's Falcon Hill page puts FY2025 revenue at about <b>$8.9 million</b>.</li>
+<li>MIDA's 2023 report to legislators also listed <b>$49.3 million</b> in state appropriations for Falcon Hill-area projects, including $31.7 million for the North Gate (5600 South) interchange.</li>
+<li>Separately, Roy's own redevelopment agency has a <b>67.5-acre "1900 Southeast" area</b> where six taxing entities agreed to send <b>70% of new property tax for 20 years</b>, an estimated <b>$24.9 million</b>. Collection must start by Dec. 31, 2026.</li>
+<li>Roy's 27.96% tax increase in 2025 was denied by the State Tax Commission on a notice rule. In August 2026 the council approved about 34.3%. Roy said both were for employee pay. <b>No record found ties Roy's tax votes to Falcon Hill.</b> The two are shown side by side here so readers can see both.</li>
+</ul></section>
+
+<nav class="hs-toc" aria-label="On this page"><a href="#start">Start here</a><a href="#inside">Is it inside Roy?</a><a href="#money">The money</a><a href="#flow">How the money moves</a><a href="#state">State money</a><a href="#roy">Roy's own side</a><a href="#cra">Roy's 1900 Southeast area</a><a href="#map-sec">Map</a><a href="#timeline">Timeline</a><a href="#numbers">Numbers that don't match</a><a href="#people">People</a><a href="#weigh">Weighing it</a><a href="#open">Open questions</a><a href="#ask">Questions to ask</a><a href="#updates">Updates</a><a href="#related">Connected Hive work</a><a href="#words">Words to know</a><a href="#behind">Behind this piece</a><a href="#sources">Sources</a></nav>
+
+<div class="figure-grid">
+  <div class="figure-cell"><span class="num">$4.6M</span><span class="cap">Falcon Hill property tax, FY2025 (MIDA's June 2024 projection)</span></div>
+  <div class="figure-cell"><span class="num">17.4%</span><span class="cap">of it projected to be shared with local taxing entities</span></div>
+  <div class="figure-cell"><span class="num">$50,000</span><span class="cap">MIDA's FY2025-26 payment to Roy City, one of six partners</span></div>
+</div>
+
+<div class="note"><b>How this file started:</b> A reader question about tax-increment zones in Roy led back to Hive research from August and September 2026 that placed the Roy Innovation Center inside Falcon Hill. This page adds MIDA's own resolutions, budgets and reports to legislators, plus Roy City and Weber County records. Every figure is labeled with the document it came from. When MIDA's own documents give different numbers, both are shown.</div>
+
+<section><h2 class="section-head" id="start">Start here: what Falcon Hill is</h2>
+<p class="lede">The Military Installation Development Authority (MIDA) is a state authority the Legislature created in 2007. Its board is appointed, not elected.</p>
+<p>MIDA's first project area was Falcon Hill, adopted in December 2008. It covers federal land at Hill Air Force Base that the Air Force leases out under an "enhanced use lease" (EUL). In 2009, MIDA and the Air Force partnered with <b>Sunset Ridge Development Partners</b>, a joint venture of Woodbury Corporation and Hunt Companies, to develop it.</p>
+<p>Private buildings on the leased land pay property tax. Inside a MIDA project area, MIDA collects that tax and decides how it is used: on roads, utilities and buildings in the area, on incentives, on debt, on city-type services, on its own administration, and on a share passed back to local taxing entities. MIDA can also use part of the area's revenue as "municipal services revenue" and must split any leftover equally among the cities and counties that levy property tax there (Utah Code 63H-1-503).</p>
+<p>The best-known tenant is <b>Northrop Grumman's Roy Innovation Center</b>, the headquarters campus for the Air Force's Sentinel intercontinental ballistic missile program. Ground was broken in August 2019. A sixth building, the "Legacy Building," broke ground July 14, 2026, with completion set for 2028.</p>
+<p>The words used here, like "project area," "EUL" and "tax increment," are explained in <a href="#words">Words to know</a>.</p>
+</section>
+
+<section><h2 class="section-head" id="inside">Is Falcon Hill inside Roy?</h2>
+<p>Yes. MIDA said so itself. In <b>Resolution 2025-18</b>, adopted Nov. 17, 2025 and signed by MIDA Chair J. Stuart Adams, MIDA's board wrote that Davis County, Weber County, Clearfield City, Riverdale City, Roy City and Sunset City "each ... levy a property tax within the Falcon Hill Project Area." Under state law, that is what makes a city eligible for a share of leftover municipal services money, and Roy was paid on that basis.</p>
+<p>Other records agree. A 2019 news report placed the Roy Innovation Center just south of the Hill Aerospace Museum, along Hill's border with Roy. Northrop Grumman datelines its own releases "ROY, Utah." MIDA's Sept. 18, 2026 board slides list a "Roy Innovation Expansion" in planning.</p>
+<div class="callout"><strong>A wording note for anyone citing older pages:</strong> MIDA's web page has described the area as "touching" Roy and, more recently, as "adjacent to" Roy. Resolution 2025-18 is the more exact record, because it states that Roy levies property tax inside the area.</div>
+</section>
+
+<section id="money"><h2 class="section-head">The money, from MIDA's own records</h2>
+<p>MIDA has reported Falcon Hill's money several different ways in different documents. Each is shown with its source and date. They measure different things, so they are not added together.</p>
+
+<div class="chart">
+  <h3>Where Falcon Hill's property tax was projected to go, FY2025</h3>
+  <div class="sub">MIDA's own 5-year projection, presented to its board June 11, 2024. Total: $4,605,378 ($3,121,060 from the Weber County side, $1,484,318 from the Davis County side). Projected, not actual.</div>
+  <div class="hbar"><div class="lbl">Infrastructure or public improvements <span>$1,702,111 · 37.0%</span></div><div class="track"><div class="fill" style="width:37.0%"></div></div></div>
+  <div class="hbar"><div class="lbl">MIDA administrative <span>$863,508 · 18.7%</span></div><div class="track"><div class="fill" style="width:18.7%"></div></div></div>
+  <div class="hbar hl"><div class="lbl">Shared with local taxing entities <span>$801,320 · 17.4%</span></div><div class="track"><div class="fill" style="width:17.4%"></div></div></div>
+  <div class="hbar"><div class="lbl">Development incentives <span>$459,078 · 10.0%</span></div><div class="track"><div class="fill" style="width:10.0%"></div></div></div>
+  <div class="hbar"><div class="lbl">Tax increment financing (debt) <span>$429,336 · 9.3%</span></div><div class="track"><div class="fill" style="width:9.3%"></div></div></div>
+  <div class="hbar"><div class="lbl">Municipal services <span>$350,025 · 7.6%</span></div><div class="track"><div class="fill" style="width:7.6%"></div></div></div>
+  <div class="src">Source: MIDA General Fund Budgets, MIDA Board Meeting, June 11, 2024, "Project Area 5 Year Projection – Falcon Hill." Percentages are the Hive's math from MIDA's figures. The same table projects the total rising to $5,289,130 by FY2029.</div>
+</div>
+
+<div class="chart">
+  <h3>Falcon Hill property tax MIDA received, by year</h3>
+  <div class="sub">MIDA's report to legislators, Sept. 18, 2023 ("Tax Increment Received"). 2024 was MIDA's estimate. FY2025 is from the June 2024 projection above, a different document.</div>
+  <div class="hbar"><div class="lbl">2022 <span>$1,571,885</span></div><div class="track"><div class="fill" style="width:34.1%"></div></div></div>
+  <div class="hbar"><div class="lbl">2023 <span>$2,840,933</span></div><div class="track"><div class="fill" style="width:61.7%"></div></div></div>
+  <div class="hbar est"><div class="lbl">2024 (MIDA estimate) <span>$3,690,900</span></div><div class="track"><div class="fill" style="width:80.1%"></div></div></div>
+  <div class="hbar est"><div class="lbl">FY2025 (projection) <span>$4,605,378</span></div><div class="track"><div class="fill" style="width:100%"></div></div></div>
+  <div class="src">Striped bars are estimates or projections, not amounts received. Bars are drawn to the same scale.</div>
+</div>
+
+<div class="tbl-wrap">
+<table class="money">
+  <thead><tr><th>What MIDA reported</th><th>Amount</th><th>Where it comes from</th></tr></thead>
+  <tbody>
+    <tr><td>Falcon Hill revenue, FY2025</td><td class="n">~$8.9M</td><td>MIDA Falcon Hill web page. Counts all revenue, not only property tax.</td></tr>
+    <tr><td>Falcon Hill spending, FY2025 actual</td><td class="n">$5,574,453</td><td>MIDA budget filing, fiscal year ending June 30, 2026</td></tr>
+    <tr><td>Falcon Hill spending, current year / proposed</td><td class="n">$31.1M / $29.4M</td><td>Same filing ($31,135,628 and $29,423,359)</td></tr>
+    <tr><td>Growth in taxable value, 2014–2023</td><td class="n">$431,980,118</td><td>MIDA report to legislators, Sept. 18, 2023</td></tr>
+    <tr><td>Leftover municipal services money shared, FY2025-26</td><td class="n">$300,000</td><td>Resolution 2025-18: $50,000 each to six governments</td></tr>
+    <tr><td>Contribution to the Hill Aerospace Museum</td><td class="n">$300,000</td><td>MIDA presentation to legislators, Oct. 21, 2026 (web page: over three years)</td></tr>
+    <tr><td>Environmental cleanup at Falcon Hill</td><td class="n">$3.5M</td><td>MIDA presentation to legislators, Oct. 21, 2026</td></tr>
+    <tr><td>Payment in kind (PIK) value to the Air Force</td><td class="n">nearly $20M</td><td>MIDA "Measuring Results" report, Falcon Hill Q1 2026</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="tsrc">The 2023 report also listed two 2017 Falcon Hill bonds: $2,750,000 in special assessment bonds (balance $2,080,000 in 2023) and $3,625,000 in C-PACE financing (balance $2,658,000). On April 24, 2026, MIDA's board adopted Resolution 2026-05 declaring the 2017 Falcon Hill special assessment bonds satisfied and releasing the liens on Building 1575 (Cazador) and Building J (Redhawk).</p>
+</section>
+
+<section id="flow"><h2 class="section-head">How the money moves</h2>
+<div class="flow">
+  <div class="flow-row">
+    <div class="fbox pub"><div class="fh">Private buildings at Falcon Hill</div>Northrop Grumman's Roy Innovation Center, offices, hotel, retail on leased Air Force land</div>
+  </div>
+  <div class="arrow">▼ <span>property tax (about $4.6M projected for FY2025)</span></div>
+  <div class="flow-row">
+    <div class="fbox main"><div class="fh">MIDA</div>Appointed board<br><span style="font-size:.92rem;">Decides how Falcon Hill's property tax is used</span></div>
+  </div>
+  <div class="arrow">▼ <span>where MIDA projected it would go</span></div>
+  <div class="flow-row three">
+    <div class="fbox"><div class="fh">Projects</div>Infrastructure $1.70M<br>Incentives $459K<br>Debt $429K</div>
+    <div class="fbox"><div class="fh">MIDA itself</div>Administration $864K<br>Municipal services $350K</div>
+    <div class="fbox co"><div class="fh">Local taxing entities</div>Shared share $801K<br>Plus $50K each to 6 governments in FY2025-26 (Roy included)</div>
+  </div>
+  <div class="diagram-caption">FY2025 figures from MIDA's June 11, 2024 projection; the $50,000 payments from Resolution 2025-18.</div>
+</div>
+</section>
+
+<section id="state"><h2 class="section-head">State money that went to Falcon Hill</h2>
+<p>MIDA's Sept. 18, 2023 report to legislators listed $71,194,600 in legislative appropriations for MIDA projects from FY2021-22 through FY2023-24. These rows are at or tied to Falcon Hill:</p>
+<div class="tbl-wrap">
+<table class="money">
+  <thead><tr><th>Project, as MIDA listed it</th><th>FY21-22</th><th>FY22-23</th><th>FY23-24</th><th>Total</th></tr></thead>
+  <tbody>
+    <tr><td>North Gate (5600 Interchange)</td><td class="n">$28,476,000</td><td class="n">$1,040,000</td><td class="n">$2,152,500</td><td class="n">$31,668,500</td></tr>
+    <tr><td>Hill AFB Museum</td><td class="n">$12,480,000</td><td class="n">$3,120,000</td><td class="n">—</td><td class="n">$15,600,000</td></tr>
+    <tr><td>Sparrowhawk (Weber State)</td><td class="n">$2,071,100</td><td class="n">—</td><td class="n">—</td><td class="n">$2,071,100</td></tr>
+    <tr class="total"><td>These three rows</td><td class="n"></td><td class="n"></td><td class="n"></td><td class="n">$49,339,600</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="tsrc">Source: MIDA, report to legislators, Sept. 18, 2023, "Legislative Appropriations." The total of the three rows is the Hive's math. The Sparrowhawk row is included because it appears in MIDA's table; its exact location was not confirmed.</p>
+<div class="callout"><strong>Two statements, both from MIDA.</strong> MIDA's Oct. 21, 2026 slides to legislators say MIDA "doesn't tap into State of Utah coffers" and that project-area revenue supports its operations and infrastructure. MIDA's 2023 slides list the legislative appropriations above. The first statement may refer to MIDA's operating budget; the second is money the Legislature appropriated for projects. Readers can compare the two.</div>
+</section>
+
+<section id="roy"><h2 class="section-head">Roy's own side: two tax votes</h2>
+<p>Roy City sets its own property tax rate. Its last two requests went like this:</p>
+<ul>
+  <li><b>2025:</b> Roy proposed raising its property tax revenue 27.96%, or $1,423,978 a year. On a $432,000 home, the city portion would have gone from $384.44 to $492.54, up $108.10 a year. The council approved it after an Aug. 19, 2025 hearing. Residents filed a referendum petition on Aug. 25. In September, the <b>State Tax Commission denied</b> it, along with 34 other entities' increases, because Roy had not posted details of other proposed Weber County tax increases, a new requirement under S.B. 202 (2025) and S.B. 29 (2024). City Manager Matt Andrews said the Tax Commission's checklist did not list that requirement.</li>
+  <li><b>2026:</b> Roy proposed 55.45%, or $2,807,745. After a nearly four-hour hearing on Aug. 11, 2026, the council approved a smaller increase of about 34.3% on a 4-1 vote. Council members Diane Wilson, Jason Sphar, Alexis Jackson and Janel Hulbert voted yes; Bryon Saxton voted no. The city's packet lists $1,751,100 at 34.29%; the Standard-Examiner reported $1,749,050 after a vote removing council cost-of-living raises.</li>
+</ul>
+<p>Roy's stated reason both years was employee pay and keeping staff. In its 2025 ballot argument, the city said 80 full-time employees had left in three years and that it had cut operating expenses 7.5% in the 2025 budget. Opponents argued for smaller increases or cuts.</p>
+<div class="split">
+  <span class="tag ok">Documented</span> Roy levies property tax inside Falcon Hill (Resolution 2025-18). Roy received $50,000 from MIDA for FY2025-26. Roy raised taxes in 2026 after its 2025 increase was denied.<br>
+  <span class="tag part">Not established</span> How much of Falcon Hill's property tax comes from parcels inside Roy, what share Roy would have collected without the project area, and whether that would have changed Roy's budget. No record found connects Roy's tax votes to Falcon Hill, and Roy has not said they are connected.
+</div>
+</section>
+
+<section id="cra"><h2 class="section-head">Roy's own tax-increment area: 1900 Southeast</h2>
+<p>Separate from MIDA, Roy's redevelopment agency created the <b>Amended 1900 Southeast Community Reinvestment Project Area</b>, 67.52 acres in Roy bounded roughly by Riverdale Road, Interstate 15, 1900 West and 5600 South. The 2023 interlocal agreement with Weber County describes it as "vacant and underutilized land" planned for mixed-use residential and commercial development. When the agreement was drafted, the agency had no developer agreement yet.</p>
+<div class="tbl-wrap">
+<table class="money">
+  <thead><tr><th>Taxing entity</th><th>Share of new property tax</th><th>Years</th><th>Estimated amount</th></tr></thead>
+  <tbody>
+    <tr><td>Weber School District</td><td>70%</td><td>20</td><td class="n">$14,314,304</td></tr>
+    <tr><td>Weber County</td><td>70%</td><td>20</td><td class="n">$4,989,498</td></tr>
+    <tr><td>Roy City</td><td>70%</td><td>20</td><td class="n">$3,852,453</td></tr>
+    <tr><td>North Davis Sewer District</td><td>70%</td><td>20</td><td class="n">$1,214,925</td></tr>
+    <tr><td>Weber Basin Water Conservancy District</td><td>70%</td><td>20</td><td class="n">$433,531</td></tr>
+    <tr><td>Roy Water Conservancy District</td><td>70%</td><td>20</td><td class="n">$114,224</td></tr>
+    <tr class="total"><td>All six</td><td></td><td></td><td class="n">$24,918,935</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="tsrc">Source: Roy Redevelopment Agency, Notice of Interlocal Agreements (Utah Public Notice Website). The total is the Hive's math. Weber County's agreement caps its share at $4,991,735.</p>
+<ul>
+  <li><b>Base year:</b> 2022, with a base taxable value estimated at $49,210,014. Taxing entities keep collecting on that frozen value.</li>
+  <li><b>What it produces now:</b> $484,227 a year in property tax for all taxing entities. At the end of the period the agreement projects about $1,617,984 a year.</li>
+  <li><b>Deadline:</b> the agency must trigger collection by <b>Dec. 31, 2026</b>, with the first payment in 2027. If it does not, Weber County may extend the deadline or end its agreement.</li>
+  <li><b>Who prepared the plan:</b> Urban &amp; Main Consulting. Weber County's signature block names Gage Froerer as Commission Chair.</li>
+  <li><b>Public notice:</b> the agency published notice of the agreements, opening a 30-day window for anyone to contest them, as Utah law requires.</li>
+</ul>
+<div class="note">This area is Roy's own, not MIDA's. It sits near Falcon Hill's north gate at 5600 South, but no record ties the two together.</div>
+</section>
+
+<section id="diagram"><h2 class="section-head">Two tax-increment zones touching Roy</h2>
+<div class="mermaid-wrap">
+<pre class="mermaid">
+flowchart TD
+  T["Roy taxpayers and businesses"]:::pub
+  T --> F["Falcon Hill Project Area<br/>run by MIDA, appointed board<br/>about 550 acres of leased Air Force land"]:::mida
+  T --> C["1900 Southeast area<br/>run by Roy's redevelopment agency<br/>67.5 acres in Roy"]:::roy
+  F --> F1["Property tax from new buildings goes to MIDA<br/>about $4.6M projected for FY2025"]:::mida
+  F1 --> F2["Roy got $50,000 in FY2025-26<br/>as one of 6 partners"]:::pub
+  C --> C1["70% of new property tax for 20 years<br/>about $24.9M estimated, 6 entities"]:::roy
+  C1 --> C2["Collection must start<br/>by Dec. 31, 2026"]:::pub
+  classDef mida fill:#2c3e5c,stroke:#1c2a40,color:#ffffff;
+  classDef roy fill:#f8ece2,stroke:#b5652b,stroke-width:3px,color:#1e2430;
+  classDef pub fill:#eef2f7,stroke:#2c3e5c,stroke-width:2px,color:#1e2430;
+</pre>
+</div>
+<p class="tsrc">Sources: MIDA Resolution 2025-18; MIDA June 11, 2024 budget projection; Roy Redevelopment Agency notice and interlocal agreement.</p>
+</section>
+
+<section id="map-sec"><h2 class="section-head">Map</h2>
+<div id="map" role="region" aria-label="Map of Falcon Hill, the Roy Innovation Center, Roy's 1900 Southeast area and the six local partners"></div>
+<p style="font-size:.92rem;color:var(--ink-soft);">Pins are approximate, placed at the described area or the city, not at parcels. Copper pins: Falcon Hill and the Roy Innovation Center. Slate pins: the six local governments MIDA names as partners. Open pin: Roy's 1900 Southeast area. Tap a pin for details. MIDA's project area plans on midaut.org include the official boundary maps.</p>
+</section>
+
+<section id="timeline"><h2 class="section-head">Timeline</h2>
+<div class="tl-key"><span>Falcon Hill / MIDA</span><span class="r">Roy City</span></div>
+<ul class="tl">
+  <li><b>2007</b>The Legislature creates MIDA.</li>
+  <li><b>December 2008</b>MIDA adopts the Falcon Hill Project Area Plan.</li>
+  <li><b>2009</b>MIDA, the Air Force and Sunset Ridge Development Partners (Woodbury and Hunt) partner on the lease area.</li>
+  <li><b>2017</b>Falcon Hill special assessment bonds ($2.75M) and C-PACE financing ($3.625M) issued.</li>
+  <li><b>August 2019</b>Ground broken on Northrop Grumman's Roy Innovation Center.</li>
+  <li><b>June 2021</b>MIDA adopts an updated Falcon Hill Project Area Plan.</li>
+  <li><b>FY2021-24</b>Legislature appropriates $49.3M for the North Gate interchange, the Hill AFB Museum and Sparrowhawk, per MIDA.</li>
+  <li class="roy"><b>2023</b>Roy's redevelopment agency and Weber County sign the 1900 Southeast interlocal agreement (base year 2022).</li>
+  <li><b>June 11, 2024</b>MIDA's budget projects Falcon Hill's FY2025 property tax at $4.6M.</li>
+  <li class="roy"><b>Aug. 19, 2025</b>Roy council approves a 27.96% increase after its hearing.</li>
+  <li class="roy"><b>September 2025</b>State Tax Commission denies Roy's increase on a notice rule.</li>
+  <li><b>Nov. 17, 2025</b>MIDA Resolution 2025-18: $50,000 each to the six Falcon Hill partners, Roy included.</li>
+  <li><b>April 24, 2026</b>MIDA Resolution 2026-05 declares the 2017 Falcon Hill special assessment bonds satisfied.</li>
+  <li><b>July 14, 2026</b>Northrop Grumman breaks ground on the Legacy Building, its sixth at the Roy Innovation Center.</li>
+  <li class="roy"><b>Aug. 11, 2026</b>Roy council approves about a 34.3% increase, 4-1.</li>
+  <li><b>Sept. 18, 2026</b>MIDA board slides list a "Roy Innovation Expansion" in planning: a 275,000-square-foot office building on 16.9 acres, targeted for the second quarter of 2028.</li>
+  <li><b>Oct. 21, 2026</b>MIDA Executive Director Dan Hemmert presents to the Legislature's Economic Development and Workforce Services Interim Committee.</li>
+  <li class="roy"><b>Dec. 31, 2026</b>Deadline for Roy's agency to trigger 1900 Southeast collection.</li>
+</ul>
+</section>
+
+<section id="numbers"><h2 class="section-head">Numbers that don't match</h2>
+<p>These differences are between MIDA's and Northrop Grumman's own documents. None is shown as wrong; they may measure different things or come from different dates.</p>
+<details class="gl"><summary>Acreage: 525 or 550?</summary><p>MIDA's earlier page and earlier Hive pages: about 525 acres. MIDA's current page and Sept. 18, 2026 slides: about 550 acres.</p></details>
+<details class="gl"><summary>Square feet leased: 1.3 million or 1.5 million?</summary><p>MIDA's Sept. 18, 2026 board slides: 1.3 million square feet complete, 100% leased. MIDA's Oct. 21, 2026 slides to legislators and its Q1 2026 report: 1.5 million square feet fully leased.</p></details>
+<details class="gl"><summary>Roy Innovation Center: how many people?</summary><p>MIDA's page: capacity for more than 6,000 employees. Northrop Grumman's July 2026 release: capacity for more than 5,000. Standard-Examiner: upwards of 5,200. MIDA's Q1 2026 report counts about 6,000 as "new job growth" for all of Falcon Hill.</p></details>
+<details class="gl"><summary>Building 1573: 750 or 800 people?</summary><p>MIDA's Sept. 18, 2026 slides: an estimated 750-plus seats moved from the old 1200-series buildings. MIDA's Q1 2026 report: up to 800 personnel.</p></details>
+<details class="gl"><summary>Falcon Hill's money: $4.6M or $8.9M?</summary><p>The $4.6M is MIDA's projected property tax allocation for FY2025. The $8.9M on MIDA's web page is described as all FY2025 revenue for the project area. They are different measures.</p></details>
+</section>
+
+<section id="people"><h2 class="section-head">People connected to the record</h2>
+<ul>
+  <li><b>J. Stuart Adams</b>: MIDA board chair; signed Resolution 2025-18. His own 2026 state disclosure lists two Roy entities, Roy Medical Building LLC and Roy Medical Center LLC.
+    <div class="split" style="margin-top:8px"><span class="tag ok">Documented</span> Both Roy entities are on his own form.<br><span class="tag part">Not checked</span> Where their property sits, and whether any of it is near or inside Falcon Hill. Nothing here suggests it is.</div></li>
+  <li><b><a href="https://weber-county-hive.github.io/utah-senators/jerry-stevenson.html">Sen. Jerry Stevenson</a></b>: MIDA board vice chair; primary sponsor of several bills expanding MIDA's powers.</li>
+  <li><b><a href="dan-hemmert.html">Dan Hemmert</a></b>: MIDA Executive Director; presented MIDA's overview to legislators on Oct. 21, 2026.</li>
+  <li><b><a href="mike-ostermiller.html">Mike Ostermiller</a></b>: MIDA board member since 2008.</li>
+  <li><b>Gage Froerer</b>: Weber County Commission Chair in the signature block of Roy's 1900 Southeast agreement; in Hive files as the Weber County commissioner holding the county's MIDA seat.</li>
+  <li><b>Taylor Woodbury</b>: CEO of Woodbury Construction; gives Falcon Hill updates for Sunset Ridge Development Partners at MIDA board meetings and attended the July 2026 Legacy Building groundbreaking.</li>
+  <li><b>Falcon Hill Development Review Committee</b>: Ariana Farber, Michael Eggett, Rick Grover, Brad McIlrath, Jeff Oyler, Steven Parkinson and Hope Thompson. DRC members are not required to file a disclosure at any budget size.</li>
+  <li><b>Matt Andrews</b>: Roy City Manager; explained the 2025 denial.</li>
+  <li><b>Roy City Council</b>: Diane Wilson, Jason Sphar, Alexis Jackson and Janel Hulbert (yes) and Bryon Saxton (no) on the Aug. 11, 2026 increase.</li>
+</ul>
+</section>
+
+<section id="weigh"><h2 class="section-head">Weighing it: transparency, money and the public</h2>
+<ul>
+  <li><b>What was done in the open:</b> MIDA's resolutions, budgets and reports to legislators are posted on the Utah Public Notice Website and le.utah.gov. Roy held hearings both years and posted its notices; its 2025 increase failed on one missing posting, not for lack of a hearing. Roy's agency published notice of its 1900 Southeast agreements.</li>
+  <li><b>What is hard to find:</b> No posted record found breaks Falcon Hill's property tax down by city, so Roy residents can't see how much comes from inside Roy. MIDA reports the money in several different ways across documents.</li>
+  <li><b>Money back to the public:</b> MIDA projected sharing 17.4% of Falcon Hill's FY2025 property tax with local taxing entities, plus the $300,000 split six ways. It also paid off and released the 2017 assessment bonds and lists $3.5 million in environmental cleanup.</li>
+  <li><b>Who decides:</b> MIDA's board and Falcon Hill's DRC are appointed. Roy's council is elected and answered to residents at two hearings and a referendum petition.</li>
+</ul>
+</section>
+
+<section id="open"><h2 class="section-head">Open questions</h2>
+<details class="gl"><summary>How much of Falcon Hill's property tax comes from inside Roy?</summary><p>Not in any posted record found. MIDA's projection splits it only by county.</p></details>
+<details class="gl"><summary>Is the "Roy Innovation Expansion" the same building as Northrop's Legacy Building?</summary><p>Both are described in 2026 with 2028 completion dates. The records don't say whether they are the same project.</p></details>
+<details class="gl"><summary>Has Roy's agency triggered 1900 Southeast collection, and is there a developer agreement now?</summary><p>Not found yet. The deadline is Dec. 31, 2026.</p></details>
+<details class="gl"><summary>Where are Adams's two Roy entities' properties?</summary><p>Not yet checked against Weber County parcel records.</p></details>
+<details class="gl"><summary>Did MIDA pay a FY2026-27 municipal services distribution?</summary><p>Resolution 2025-18 says MIDA will do a similar calculation in future years, subject to available revenue and board approval.</p></details>
+</section>
+
+<section id="ask"><h2 class="section-head">Questions to ask, and whom to ask</h2>
+<ul class="ask-list">
+  <li><strong>MIDA board:</strong> How much of Falcon Hill's property tax comes from parcels inside Roy, and will you post that breakdown each year?</li>
+  <li><strong>MIDA board:</strong> Your 2026 slides say MIDA doesn't tap state coffers, and your 2023 slides list $49.3 million in state appropriations for Falcon Hill-area projects. How should the public read the two together?</li>
+  <li><strong>Roy City Council:</strong> Where did the $50,000 from MIDA go in Roy's budget, and what city services does Roy provide inside Falcon Hill?</li>
+  <li><strong>Roy Redevelopment Agency (the City Council):</strong> Will you trigger the 1900 Southeast area by Dec. 31, 2026, and with which developer?</li>
+  <li><strong>Weber School District board:</strong> The 1900 Southeast agreement sends an estimated $14.3 million of the district's share over 20 years to Roy's agency. What did the board weigh in agreeing?</li>
+  <li><strong>Your state legislators:</strong> Should MIDA have to report project-area property tax by city, the way city redevelopment agencies report by taxing entity?</li>
+</ul>
+</section>
+
+<section><h2 class="section-head" id="updates">Updates since this was posted</h2>
+<ul class="tl"><li><b>Oct. 27, 2026</b>This page posted.</li></ul>
+<p class="hs-updates">New updates will be added here with their dates. Earlier entries are not changed.</p>
+</section>
+
+<section><h2 class="section-head" id="related">Connected Hive work</h2>
+<div class="hs-cards">
+<a href="https://weber-county-hive.github.io/committees/weberhivecommitteemidaprojectareas.html"><b>MIDA's eight project areas</b><span>Committees: every MIDA project area, its spending and who decides</span></a>
+<a href="https://weber-county-hive.github.io/committees/weber-hive-committee-mida-board.html"><b>The MIDA board</b><span>Committees: who sits on MIDA's board and its districts</span></a>
+<a href="https://weber-county-hive.github.io/committees/weber-hive-committee-mida-disclosures.html"><b>MIDA disclosures</b><span>Committees: what MIDA's board members disclosed</span></a>
+<a href="dan-hemmert.html"><b>Dan Hemmert</b><span>Unelected Power: MIDA's executive director</span></a>
+<a href="mike-ostermiller.html"><b>Mike Ostermiller</b><span>Unelected Power: MIDA board member since 2008</span></a>
+<a href="https://weber-county-hive.github.io/utah-senators/jerry-stevenson.html"><b>Sen. Jerry Stevenson</b><span>Senators: MIDA vice chair and sponsor of MIDA bills</span></a>
+<a href="uipa-hearing-fact-check.html"><b>The Inland Port at the Legislature</b><span>Unelected Power: the Inland Port also presented to legislators on Oct. 21, 2026</span></a>
+</div>
+</section>
+
+<section><h2 class="section-head" id="words">Words to know</h2>
+<p>Tap a card to see what it means.</p>
+<div class="hs-flips">
+<button class="hs-flip" aria-expanded="false"><div class="ft">MIDA</div><div class="fh">Tap to see</div><div class="fd">The Military Installation Development Authority, a state authority created in 2007 with its own land use, development and financing powers in its project areas. Its board is appointed.</div></button>
+<button class="hs-flip" aria-expanded="false"><div class="ft">Project area</div><div class="fh">Tap to see</div><div class="fd">The land where MIDA collects property tax and has its powers. Each has its own plan. Falcon Hill was MIDA's first.</div></button>
+<button class="hs-flip" aria-expanded="false"><div class="ft">Enhanced use lease (EUL)</div><div class="fh">Tap to see</div><div class="fd">An arrangement that lets the Air Force lease base land to private developers. Falcon Hill sits on this kind of leased land.</div></button>
+<button class="hs-flip" aria-expanded="false"><div class="ft">Tax increment</div><div class="fh">Tap to see</div><div class="fd">The new property tax that comes from growth above a "base year" value. Instead of flowing to the usual taxing entities, some or all of it goes to the agency running the area.</div></button>
+<button class="hs-flip" aria-expanded="false"><div class="ft">Municipal services revenue</div><div class="fh">Tap to see</div><div class="fd">Money MIDA uses for city-type services in a project area. State law says leftover amounts are split equally among the cities and counties that levy property tax in the area.</div></button>
+<button class="hs-flip" aria-expanded="false"><div class="ft">Payment in kind (PIK)</div><div class="fh">Tap to see</div><div class="fd">Value the Air Force receives instead of cash rent under the lease, such as new buildings and gates.</div></button>
+<button class="hs-flip" aria-expanded="false"><div class="ft">CRA</div><div class="fh">Tap to see</div><div class="fd">A community reinvestment area, run by a city's redevelopment agency. Taxing entities agree to send it part of the new property tax for a set number of years, like Roy's 1900 Southeast area.</div></button>
+<button class="hs-flip" aria-expanded="false"><div class="ft">DRC</div><div class="fh">Tap to see</div><div class="fd">A development review committee. Falcon Hill's has seven appointed members who review building plans in the area.</div></button>
+</div>
+</section>
+
+<section><h2 class="section-head" id="behind">Behind this piece</h2>
+<div class="hs-counter">
+  <div><div class="n">16</div><div class="l">records read</div></div>
+  <div><div class="n">~70</div><div class="l">figures and line items checked (estimate)</div></div>
+  <div><div class="n">3</div><div class="l">records checked but not used</div></div>
+  <div><div class="n">~30</div><div class="l">searches run (estimate)</div></div>
+</div>
+<p class="hs-updates">Posted Oct. 27, 2026. Built from MIDA's own resolutions, budgets and reports to legislators, Roy City and Weber County records, and news coverage, plus Hive research from August through October 2026. Records checked but not used: a Pleasant View CRA (not in Roy), a Weber County CRA policy and a Weber County flagship CRA agreement. All figures in charts are MIDA's or Roy's; totals and percentages are the Hive's math and are labeled.</p>
+</section>
+
+<section id="sources"><details class="sources-block"><summary>Sources</summary><ol>
+<li><a href="https://www.utah.gov/pmn/files/1352399.pdf" target="_blank" rel="noopener">MIDA Resolution 2025-18, distribution to the Falcon Hill Project Area's local government partners (Nov. 17, 2025)</a> (read through a text pull)</li>
+<li><a href="https://www.utah.gov/pmn/files/1137725.pdf" target="_blank" rel="noopener">MIDA General Fund Budgets, board meeting June 11, 2024, including "Project Area 5 Year Projection – Falcon Hill"</a> (read through a text pull)</li>
+<li><a href="https://le.utah.gov/interim/2023/pdf/00003890.pdf" target="_blank" rel="noopener">MIDA, report to legislators (Sept. 18, 2023): Falcon Hill return on investment, bonds, tax increment received, legislative appropriations</a> (read through a text pull)</li>
+<li><a href="https://le.utah.gov/interim/2026/pdf/00003846.pdf" target="_blank" rel="noopener">MIDA, "An Overview of MIDA's Statutory Operations," Economic Development and Workforce Services Interim Committee (Oct. 21, 2026), Dan Hemmert</a> (read through a text pull)</li>
+<li><a href="https://www.utah.gov/pmn/files/1492137.pdf" target="_blank" rel="noopener">MIDA board materials, Sept. 18, 2026, Falcon Hill Aerospace Research Park update</a> (read through a text pull)</li>
+<li><a href="https://www.utah.gov/pmn/files/1422735.pdf" target="_blank" rel="noopener">MIDA board agenda, April 24, 2026, including Resolution 2026-05 (Falcon Hill 2017 bonds satisfied)</a></li>
+<li><a href="https://le.utah.gov/interim/2022/pdf/00003567.pdf" target="_blank" rel="noopener">MIDA, report to legislators (Sept. 20, 2022), Roy Innovation Center at Falcon Hill</a></li>
+<li>MIDA budget filing, fiscal year ended June 30, 2026 (utah.gov/pmn/files/1453631.pdf), Falcon Hill expenditure line (in the Hive's MIDA money-flow research)</li>
+<li>MIDA, Falcon Hill Project Area web page and "Measuring Results &amp; Strategic Impacts, Falcon Hill Q1 2026" (midaut.org), text as captured by the Hive Sept. 23, 2026</li>
+<li>Falcon Hill Project Area Plans, adopted December 2008 and June 2021 (midaut.org)</li>
+<li><a href="https://www.utah.gov/pmn/sitemap/notice/1012841.html" target="_blank" rel="noopener">Roy City, Truth in Taxation hearing notice (Aug. 19, 2025)</a></li>
+<li><a href="https://www.utah.gov/pmn/files/1341699.pdf" target="_blank" rel="noopener">Roy City, referendum petition information and arguments for and against the 2025 increase (Oct. 27, 2025)</a></li>
+<li><a href="https://www.ksl.com/article/news/utah/new-guidelines-behind-denial-of-35-tax-hikes-may-be-focus-of-lawmakers-in-2026/51386211" target="_blank" rel="noopener">KSL, "New guidelines behind denial of 35 tax hikes may be focus of lawmakers in 2026" (Oct. 6, 2025)</a></li>
+<li><a href="https://www.utah.gov/pmn/files/1470877.pdf" target="_blank" rel="noopener">Roy City Council agenda packet, Aug. 11, 2026, property tax impact schedules</a></li>
+<li><a href="https://www.utah.gov/pmn/files/1483123.pdf" target="_blank" rel="noopener">Roy City Council minutes, Aug. 11, 2026</a></li>
+<li><a href="https://www.standard.net/news/local/2026/aug/12/what-could-have-changed-one-roy-city-council-members-mind-on-tax-increase/" target="_blank" rel="noopener">Standard-Examiner, "What could have changed one Roy City Council member's mind on tax increase?" (Aug. 12, 2026)</a></li>
+<li><a href="https://www.standard.net/news/2026/may/02/roy-city-considers-55-45-property-tax-increase/" target="_blank" rel="noopener">Standard-Examiner, "Roy City considers 55.45% property tax increase" (May 2, 2026)</a></li>
+<li><a href="https://www.utah.gov/pmn/files/1074913.pdf" target="_blank" rel="noopener">Redevelopment Agency of Roy, Notice of Interlocal Agreements, 1900 Southeast Community Reinvestment Project Area</a></li>
+<li><a href="https://www.webercountyutah.gov/commission/documents/uploads/Roy%20cra.pdf" target="_blank" rel="noopener">Interlocal Cooperation Agreement, Roy City Redevelopment Agency and Weber County, Amended 1900 Southeast CRA (2023)</a></li>
+<li><a href="https://investor.northropgrumman.com/node/44181" target="_blank" rel="noopener">Northrop Grumman, groundbreaking at the Roy Innovation Center (July 14, 2026)</a></li>
+<li><a href="https://www.standard.net/news/2026/jul/14/ground-broken-on-northrop-grummans-legacy-building-to-support-sentinel-icbm-program/" target="_blank" rel="noopener">Standard-Examiner, Legacy Building groundbreaking (July 14, 2026)</a></li>
+<li><a href="https://www.tradeandindustrydev.com/region/utah/news/ut-northrop-grumman-adds-sixth-building-roy-36106" target="_blank" rel="noopener">Trade &amp; Industry Development, sixth building and 2019 groundbreaking history (July 21, 2026)</a></li>
+<li><a href="https://slenterprise.com/index.php/news/3064-up-to-2-500-jobs-coming-to-defense-installation-at-hafb" target="_blank" rel="noopener">The Enterprise, Roy Innovation Center location along Hill's border with Roy (2019)</a></li>
+<li>J. Stuart Adams, 2026 state officeholder conflict of interest disclosure (disclosures.utah.gov), as filed in the Hive's Adams research</li>
+<li>Falcon Hill Development Review Committee roster, from the Hive's <a href="https://weber-county-hive.github.io/committees/weberhivecommitteemidaprojectareas.html">MIDA project areas page</a></li>
+<li>Utah Code 63H-1-503, municipal services revenue (as quoted in Resolution 2025-18)</li>
+</ol>
+</details></section>
+</main>
+<footer>
+  THE WEBER COUNTY HIVE · INDEPENDENT · ACCOUNTABILITY · JOURNALISM<br>
+  Unelected Power. Public records only. We report; you decide.<br>
+  <a href="https://webercountyhive.substack.com">webercountyhive.substack.com</a>
+</footer>
+<div class="hb-foot"><img src="hive-bee.png" alt=""><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span><span class="hb-tag">Independent · Accountability · Journalism</span></div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>
+(function(){
+  if(window.mermaid){
+    mermaid.initialize({startOnLoad:true,theme:'base',securityLevel:'loose',
+      themeVariables:{fontSize:'20px',fontFamily:'Georgia, serif',lineColor:'#b5652b'},
+      flowchart:{useMaxWidth:true,nodeSpacing:40,rankSpacing:50,htmlLabels:true}});
+  }
+})();
+(function(){
+  if(!window.L) return;
+  var map=L.map('map',{scrollWheelZoom:false}).setView([41.145,-112.01],12);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:18,attribution:'&copy; OpenStreetMap'}).addTo(map);
+  var pins=[
+    ['Falcon Hill Project Area (MIDA)',41.148,-112.002,'c','About 550 acres of leased Air Force land along Hill AFB\'s west side. Property tax from new buildings goes to MIDA: about $4.6M projected for FY2025.'],
+    ['Roy Innovation Center (Northrop Grumman)',41.157,-112.012,'c','Sentinel ICBM program headquarters campus, inside Falcon Hill along Hill\'s border with Roy. Sixth building broke ground July 14, 2026.'],
+    ['North Gate / 5600 South interchange',41.162,-112.016,'c','$31.7M in state appropriations FY2021-24, per MIDA.'],
+    ['Roy City',41.170,-112.035,'s','Levies property tax inside Falcon Hill (MIDA Resolution 2025-18). Got $50,000 for FY2025-26.'],
+    ['Riverdale City',41.177,-111.995,'s','Falcon Hill partner. Got $50,000 for FY2025-26.'],
+    ['Sunset City',41.136,-112.031,'s','Falcon Hill partner. Got $50,000 for FY2025-26.'],
+    ['Clearfield City',41.110,-112.026,'s','Falcon Hill partner. Got $50,000 for FY2025-26.'],
+    ['Weber County and Davis County',41.124,-111.973,'s','Both counties are Falcon Hill partners and got $50,000 each for FY2025-26. Pin placed at Hill AFB, which spans the county line.'],
+    ['Roy 1900 Southeast area (Roy RDA)',41.168,-112.022,'o','67.5 acres, Riverdale Rd / I-15 / 1900 W / 5600 S. 70% of new property tax for 20 years, about $24.9M estimated. Not part of Falcon Hill.']
+  ];
+  pins.forEach(function(p){
+    var c=p[3]==='c'?'#b5652b':'#2c3e5c';
+    L.circleMarker([p[1],p[2]],{radius:12,color:c,fillColor:p[3]==='o'?'#ffffff':c,fillOpacity:p[3]==='o'?1:.85,weight:p[3]==='o'?4:2})
+     .addTo(map).bindPopup('<b>'+p[0]+'</b><br>'+p[4]+'<br><i>Approximate location</i>');
+  });
+})();
+(function(){
+  [].slice.call(document.querySelectorAll('.hs-flip')).forEach(function(b){
+    b.addEventListener('click',function(){b.setAttribute('aria-expanded',b.getAttribute('aria-expanded')==='true'?'false':'true');});
+  });
+})();
+</script>
+<script data-goatcounter="https://weberhive.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
