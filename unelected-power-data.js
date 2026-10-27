@@ -13,6 +13,15 @@
 
 const UNELECTED_POWER_PROFILES = [
   {
+    slug: "falcon-hill-roy",
+    name: "Falcon Hill and Roy",
+    roleTag: "Organization · MIDA Falcon Hill Project Area · Roy City",
+    summary: "MIDA's Falcon Hill Project Area, home of Northrop Grumman's Roy Innovation Center, collects property tax inside Roy City. What MIDA's own records show about the money, and how it sits next to Roy's own tax votes and its 1900 Southeast tax-increment area.",
+    tags: ["MIDA", "Falcon Hill", "Roy City", "Tax Increment", "Northrop Grumman", "Hill AFB"],
+    dateAdded: "2026-10-27",
+    dateUpdated: "2026-10-27"
+  },
+  {
     slug: "uipa-hearing-fact-check",
     name: "The Inland Port at the Legislature",
     roleTag: "Organization · Utah Inland Port Authority · Hearing Check",
@@ -115,10 +124,10 @@ const UNELECTED_POWER_PROFILES = [
     slug: "dan-hemmert",
     name: "Dan Hemmert",
     roleTag: "Executive Director, MIDA · Former State Senator",
-    summary: "Resigned from the state Senate to run the same economic development office Ryan Starks would later lead, then spent three years as a private lobbyist for developers — including Dakota Pacific Real Estate and MIDA itself — before becoming MIDA's own Executive Director. He terminated most of that client list in January 2026, keeping only clients with direct MIDA jurisdiction.",
+    summary: "Resigned from the state Senate to run the same economic development office Ryan Starks would later lead, then spent three years as a private lobbyist for developers — including Dakota Pacific Real Estate and MIDA itself — before becoming MIDA's own Executive Director. The state lobbyist register shows most of his registrations, including MIDA, ending Aug. 3, 2026, and lists other lobbyists who picked up several of his clients.",
     tags: ["MIDA", "GOEO", "Election Hive", "Lincoln Hill PAC", "LH Capital", "Regulatory Sandbox", "Dakota Pacific"],
     dateAdded: "2026-09-16",
-    dateUpdated: "2026-09-16"
+    dateUpdated: "2026-10-27"
   },
   {
     slug: "utah-rising",
