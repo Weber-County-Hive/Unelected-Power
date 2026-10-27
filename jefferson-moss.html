@@ -7,10 +7,10 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
 :root{
-  --paper:#f7f1e6; --paper-2:#efe6d3; --ink:#2a1f14; --ink-soft:#63594a;
-  --maroon:#5c1a1a; --maroon-2:#7a2424;
-  --gold:#a9762c; --gold-bg:#f0e0c0;
-  --line:#ddccaa;
+  --paper:#ffffff; --paper-2:#eef2f7; --ink:#1e2430; --ink-soft:#4a5466;
+  --maroon:#2c3e5c; --maroon-2:#3a5078;
+  --gold:#9a521f; --gold-bg:#f8ece2;
+  --line:#c9d3e1;
 }
 *{box-sizing:border-box;margin:0;padding:0;}
 body{background:var(--paper);color:var(--ink);font-family:'Source Sans 3',sans-serif;line-height:1.65;font-size:16px;}
@@ -23,14 +23,14 @@ h1,h2,h3{font-family:'Playfair Display',serif;color:var(--ink);}
 .topbar a{color:var(--gold-bg);text-decoration:none;opacity:.85;}
 .topbar a:hover{opacity:1;text-decoration:underline;}
 
-header.masthead{background:linear-gradient(135deg,var(--maroon),var(--maroon-2));color:#f4e9d8;padding:40px 0 32px;border-bottom:5px solid var(--gold);}
+header.masthead{background:linear-gradient(135deg,var(--maroon),var(--maroon-2));color:#ffffff;padding:40px 0 32px;border-bottom:5px solid var(--gold);}
 header.masthead .wrap{max-width:860px;margin:0 auto;padding:0 24px;}
 .kicker{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-bg);opacity:.8;margin-bottom:14px;}
-h1.title{font-size:42px;line-height:1.1;margin-bottom:14px;color:#fbf3e3;}
+h1.title{font-size:42px;line-height:1.1;margin-bottom:14px;color:#ffffff;}
 h1.title em{font-style:italic;color:var(--gold-bg);}
-p.dek{font-size:18px;color:#e9d9bb;max-width:640px;}
+p.dek{font-size:18px;color:#e6ecf5;max-width:640px;}
 .rc-row{margin-top:18px;display:flex;flex-wrap:wrap;gap:8px;}
-.pub-date{margin-top:10px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.03em;color:#d8b98a;}
+.pub-date{margin-top:10px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.03em;color:#f3c9a6;}
 .rc-tag{display:inline-block;background:var(--gold-bg);border:1px solid var(--gold);color:var(--maroon);font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.03em;text-transform:uppercase;padding:4px 11px;border-radius:4px;text-decoration:none;}
 .rc-tag:hover{background:var(--gold);color:#fff;}
 
@@ -59,7 +59,7 @@ details.open-q p{margin-top:10px;margin-bottom:0;font-size:14.5px;}
 .tag{font-family:'IBM Plex Mono',monospace;font-size:11px;background:var(--gold-bg);border:1px solid var(--gold);color:var(--ink);padding:3px 9px;}
 
 footer{background:var(--ink);color:var(--paper-2);padding:36px 0 46px;margin-top:20px;}
-footer .sub{color:#a99a85;font-size:13px;margin-top:6px;}
+footer .sub{color:#b9c6da;font-size:13px;margin-top:6px;}
 
 @media(max-width:600px){
   header.masthead{padding:32px 0 26px;}
@@ -88,10 +88,10 @@ footer .sub{color:#a99a85;font-size:13px;margin-top:6px;}
 .tile-inner{position:relative;width:100%;height:100%;transition:transform .5s cubic-bezier(.4,.2,.2,1);transform-style:preserve-3d;cursor:pointer;}
 .tile.flipped .tile-inner{transform:rotateY(180deg);}
 .tile-face{position:absolute;inset:0;backface-visibility:hidden;border-radius:8px;padding:16px;display:flex;flex-direction:column;justify-content:center;}
-.tile-front{background:linear-gradient(135deg,var(--maroon),var(--maroon-2));color:#f4e9d8;text-align:center;border:2px solid var(--gold);}
+.tile-front{background:linear-gradient(135deg,var(--maroon),var(--maroon-2));color:#ffffff;text-align:center;border:2px solid var(--gold);}
 .tile-front .name{font-family:'Playfair Display',serif;font-size:17px;font-weight:700;margin-bottom:6px;}
 .tile-front .role{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.03em;color:var(--gold-bg);line-height:1.5;}
-.tile-front .hint{margin-top:12px;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:#d8b98a;}
+.tile-front .hint{margin-top:12px;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:#f3c9a6;}
 .tile-back{background:var(--paper-2);border:2px solid var(--maroon);transform:rotateY(180deg);font-size:12.5px;color:var(--ink);line-height:1.5;}
 .tile-back .connect-label{font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--maroon);margin-bottom:6px;display:block;}
 @media(max-width:700px){ .tile-grid{grid-template-columns:repeat(2,1fr);} }
@@ -109,6 +109,49 @@ footer .sub{color:#a99a85;font-size:13px;margin-top:6px;}
   .giving-chart{flex-direction:column;}
   .giving-amount{text-align:left;min-width:auto;}
 }
+
+/* ===== Unelected Power standard (slate blue & copper) — header, footer, Where/Who, call number ===== */
+.up-top{background:#1c2a40;color:#b9c6da;font:600 13px 'IBM Plex Mono',monospace;letter-spacing:.06em;text-transform:uppercase}
+.up-top .in{max-width:900px;margin:0 auto;padding:10px 20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.up-top a{color:#e6ecf5;text-decoration:none}
+.up-ww{max-width:900px;margin:26px auto 6px;padding:0 20px}
+.up-where{border:3px solid #2c3e5c;border-radius:10px;overflow:hidden;background:#fff}
+.up-where-h{background:#2c3e5c;color:#fff;padding:12px 18px}
+.up-lbl{font:600 12.5px 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#f3c9a6}
+.up-where-h .pl{font-size:21px;font-weight:700;margin-top:2px}
+.up-who{margin:14px 16px 16px;border:2px solid #9a521f;border-radius:8px}
+.up-who-h{background:#f8ece2;color:#9a521f;padding:6px 12px;font:600 12.5px 'IBM Plex Mono',monospace;letter-spacing:.14em;border-bottom:2px solid #9a521f}
+.up-who ul{list-style:none;margin:0;padding:6px 12px}
+.up-who li{padding:6px 0;border-bottom:1px solid #e3e8ef;font-size:17px;margin:0}
+.up-who li:last-child{border-bottom:none}
+.up-who li b{color:#2c3e5c}
+.up-connect ul{list-style:none;margin:0;padding:0}
+.up-connect li{border:1px solid #c9d3e1;border-left:5px solid #9a521f;background:#fff;padding:10px 14px;margin:0 0 10px;font-size:17px}
+.up-connect li a{font-weight:700;color:#2c3e5c}
+.up-connect li span{display:block;color:#4a5466;font-size:15.5px;margin-top:2px}
+.up-sources details{border:1px solid #c9d3e1;background:#eef2f7;padding:12px 16px}
+.up-sources summary{cursor:pointer;font:600 15px 'IBM Plex Mono',monospace;color:#2c3e5c}
+.up-sources li{margin:8px 0;font-size:16px}
+.up-foot{background:#1c2a40;color:#b9c6da;margin-top:30px;padding:28px 0 36px;font-size:16px}
+.up-foot .in{max-width:900px;margin:0 auto;padding:0 20px}
+.up-foot a{color:#f3c9a6}
+#up-shelf{border:2px dashed #b9c6da;border-radius:10px;padding:16px 18px;margin-bottom:20px;color:#e6ecf5}
+.up-cn-big{font:600 17px 'IBM Plex Mono',monospace;margin-bottom:12px}
+.up-cn-big b{color:#f3c9a6}
+.up-nav{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+.up-nav-btn{flex:1;min-width:220px;background:#2c3e5c;border:1px solid #4a6185;border-radius:8px;padding:12px 14px;color:#fff;text-decoration:none;font-size:16px}
+.up-nav-btn:last-child{text-align:right}
+.up-nav-btn b{color:#f3c9a6;font-family:'IBM Plex Mono',monospace}
+.up-nav-btn.up-off{opacity:.5}
+.up-list summary{cursor:pointer;font:600 15px 'IBM Plex Mono',monospace;color:#f3c9a6;margin-bottom:6px}
+.up-list ol{list-style:none;margin:8px 0 0;padding:0}
+.up-list li{margin:0;padding:5px 0;border-bottom:1px solid #2f4466}
+.up-list li a{color:#e6ecf5;text-decoration:none}
+.up-list li.up-shelf-head{color:#f3c9a6;font:600 13px 'IBM Plex Mono',monospace;letter-spacing:.1em;padding-top:12px;border-bottom:none}
+.up-list li.up-here a{color:#fff;font-weight:700}
+.up-cn{font-family:'IBM Plex Mono',monospace;color:#f3c9a6;margin-right:6px}
+.up-search{font-size:15px;margin-top:12px}
+.up-sub{font-size:14.5px;margin-top:8px;color:#b9c6da}
 </style>
 <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
 <script>
@@ -118,13 +161,13 @@ footer .sub{color:#a99a85;font-size:13px;margin-top:6px;}
     securityLevel: 'loose',
     flowchart: { htmlLabels: true, useMaxWidth: true, padding: 18 },
     themeVariables: {
-      primaryColor: '#efe6d3',
-      primaryTextColor: '#2a1f14',
-      primaryBorderColor: '#5c1a1a',
-      lineColor: '#a9762c',
-      secondaryColor: '#f0e0c0',
-      secondaryTextColor: '#2a1f14',
-      tertiaryColor: '#f7f1e6',
+      primaryColor: '#eef2f7',
+      primaryTextColor: '#1e2430',
+      primaryBorderColor: '#2c3e5c',
+      lineColor: '#9a521f',
+      secondaryColor: '#f8ece2',
+      secondaryTextColor: '#1e2430',
+      tertiaryColor: '#ffffff',
       fontFamily: 'Verdana, Arial, sans-serif',
       fontSize: '19px'
     }
@@ -133,24 +176,20 @@ footer .sub{color:#a99a85;font-size:13px;margin-top:6px;}
 </head>
 <body>
 
-<div class="topbar">
-  <div class="wrap">
-    <span>The Weber County Hive · Unelected Power</span>
-    <a href="https://weber-county-hive.github.io/-weber-county-hive-index/">Index ↗</a>
-  </div>
-</div>
+<div class="up-top"><div class="in"><span>Utah Hive Politics · Unelected Power</span><span><a href="index.html">← All Unelected Power pages</a> &nbsp;·&nbsp; <a href="https://weber-county-hive.github.io/-weber-county-hive-index/">Hive library ↗</a></span></div></div>
 
 <header class="masthead">
   <div class="wrap">
-    <div class="kicker">Case File · Elected, Then Appointed</div>
+    <div class="kicker">Case File · Elected, Then Appointed · UP 100.06</div>
     <h1 class="title">Jefferson <em>Moss</em></h1>
     <p class="dek">Resigned as Utah House Majority Leader to become the state's top economic development official — a position that also carries a board seat overseeing a facility he directs, and a seat on the board of a $40 million fund he founded.</p>
     <div class="rc-row">
       <a class="rc-tag" href="ryan-starks.html">Cross-reference: Ryan Starks →</a>
     </div>
-    <div class="pub-date">Published Sept. 14, 2026</div>
+    <div class="pub-date">Posted Sept. 14, 2026 · Updated Oct. 27, 2026</div>
   </div>
 </header>
+<div class="up-ww"><div class="up-where"><div class="up-where-h"><div class="up-lbl">WHERE</div><div class="pl">Statewide (GO Utah) · Point of the Mountain State Land Authority · Nucleus Institute / Convergence Hall · MIDA</div></div><div class="up-who"><div class="up-who-h">WHO</div><ul><li><b>Jefferson Moss</b> — Executive Director, Governor's Office of Economic Opportunity (GO Utah), since June 2, 2025; former Utah House Majority Leader (resigned May 2025)</li><li><b>Governor's Office of Economic Opportunity (GO Utah, formerly GOED)</b> — The state office he leads; subject of legislative audit Report 2026-18</li><li><b>Nucleus Institute / Utah Innovation Fund</b> — Institute he leads; manages the fund he is listed as founding; exempted from GRAMA and open-meetings law by H.B. 530 (2025)</li><li><b>Point of the Mountain State Land Authority</b> — State land board he sits on; voted on Convergence Hall, a Nucleus Institute facility</li><li><b>Ryan Starks</b> — His GOEO predecessor, now EDCUtah president; shares the BioHive board and NUEA advisory roster with him</li><li><b>EDCUtah</b> — Private recruiter; Moss sits on its voting board; signed a partnership agreement with GO Utah March 27, 2026</li><li><b>MIDA</b> — Military Installation Development Authority; Moss holds its non-voting board seat since Nov. 2025</li><li><b>Rep. Val Peterson</b> — Nucleus Institute board chair; UVU vice president</li><li><b>Sen. Kirk Cullimore</b> — Senate floor sponsor of H.B. 530; Nucleus Institute board member</li><li><b>Jordan Teuscher</b> — Point of the Mountain board co-chair; received $6,750 from Moss's campaign committee or a PAC it funds</li><li><b>Douglas Fiefia</b> — Primary sponsor of AI bills HB 286 and HB 438; received $771.15 from Moss's committee</li><li><b>Rep. Candice Pierucci and Anthony Loubet</b> — Each received $4,250 from Moss's campaign committee, 2018-2026</li></ul></div></div></div>
 
 <div class="wrap">
 
@@ -225,12 +264,16 @@ footer .sub{color:#a99a85;font-size:13px;margin-top:6px;}
         <div class="tile-face tile-front"><div class="name">UVU Foundation</div><div class="role">COO / Associate VP<br>Institutional Advancement</div><div class="hint">Tap to flip</div></div>
         <div class="tile-face tile-back"><span class="connect-label">Detail</span>UVU's own Jan-March 2021 endowment report lists Moss as COO of the UVU Foundation and AVP of Institutional Advancement — held concurrently with his HD-2 legislative seat (2017-2023). Explains the "UVU Endowment" line on his MIDA disclosure form.</div>
       </div></div>
+      <div class="tile"><div class="tile-inner">
+        <div class="tile-face tile-front"><div class="name">EDCUtah</div><div class="role">Voting Board Member<br>(GO Utah seat)</div><div class="hint">Tap to flip</div></div>
+        <div class="tile-face tile-back"><span class="connect-label">Detail</span>Listed on EDCUtah's board page (read Oct. 7, 2026). EDCUtah is now led by <a href="ryan-starks.html">Ryan Starks</a>. GO Utah and EDCUtah signed a partnership agreement March 27, 2026.</div>
+      </div></div>
     </div>
     <div class="diagram-block wide">
       <pre class="mermaid">
 graph LR
-    classDef center fill:#f0e0c0,stroke:#a9762c,stroke-width:2px,color:#2a1f14;
-    classDef shared fill:#efe6d3,stroke:#5c1a1a,stroke-width:1px,color:#2a1f14;
+    classDef center fill:#f8ece2,stroke:#9a521f,stroke-width:2px,color:#1e2430;
+    classDef shared fill:#eef2f7,stroke:#2c3e5c,stroke-width:1px,color:#1e2430;
     JM["Jefferson Moss<br/>GOEO"]:::center --- BH["BioHive<br/>board"]:::shared
     RS["Ryan Starks<br/>EDCUtah"]:::center --- BH
     JM --- NU["Northern Utah<br/>Economic Alliance<br/>advisory roster"]:::shared
@@ -253,6 +296,12 @@ graph LR
     </div>
     <div class="diagram-caption">Elected office through current, concurrent roles</div>
     <div class="callout">Moss succeeded <a href="ryan-starks.html">Ryan Starks</a> in three separate positions when Starks left GOEO in May 2025: the GOEO Executive Director role itself, MIDA's non-voting board seat, and the Inland Port Authority's Incentives Subcommittee. Full detail on that succession is in Starks' own case file.</div>
+  </section>
+
+  <section>
+    <h2>GO Utah's 2026 audit and the EDCUtah agreement</h2>
+    <p>The Office of the Legislative Auditor General's Report No. 2026-18 (Sept. 15, 2026) is a performance audit of the Governor's Office of Economic Opportunity (GO Utah, formerly GOED). Moss, as executive director, responded for the office. In a response dated Aug. 21, 2026, he accepted all 6 of the audit's recommendations. The audit credits the office's new leadership with hiring a Chief Compliance Officer and ending the <a href="utah-rising.html">Utah Rising</a> contract.</p>
+    <p><strong>March 27, 2026:</strong> GO Utah and EDCUtah signed a memorandum of understanding. GO Utah "leads strategy and positioning"; EDCUtah handles corporate recruitment, research and marketing to site selectors. GO Utah's director, Jefferson Moss, and Starks are both quoted. Moss also holds a seat on EDCUtah's voting board, according to EDCUtah's own board page (read Oct. 7, 2026). See the <a href="edcutah.html">EDCUtah file (UP 100.03)</a>.</p>
   </section>
 
   <section>
@@ -306,8 +355,8 @@ graph LR
     <div class="diagram-block wide">
       <pre class="mermaid">
 graph TD
-    classDef past fill:#efe6d3,stroke:#5c1a1a,stroke-width:1px,color:#2a1f14;
-    classDef now fill:#f0e0c0,stroke:#a9762c,stroke-width:2px,color:#2a1f14;
+    classDef past fill:#eef2f7,stroke:#2c3e5c,stroke-width:1px,color:#1e2430;
+    classDef now fill:#f8ece2,stroke:#9a521f,stroke-width:2px,color:#1e2430;
     A["2017 &amp; 2019-2020<br/>Moss serves on House<br/>Retirement &amp; Independent<br/>Entities Committee"]:::past --> B["2025<br/>H.B. 530 removes the<br/>predecessor entity's reporting<br/>requirement to that committee"]:::past
     B --> C["2025 - present<br/>Moss leads the Nucleus Institute,<br/>the entity no longer<br/>reporting to that committee"]:::now
       </pre>
@@ -328,8 +377,8 @@ graph TD
     <div class="diagram-block wide">
       <pre class="mermaid">
 graph TD
-    classDef ev fill:#efe6d3,stroke:#5c1a1a,stroke-width:1px,color:#2a1f14;
-    classDef absent fill:#f0e0c0,stroke:#a9762c,stroke-width:2px,color:#2a1f14;
+    classDef ev fill:#eef2f7,stroke:#2c3e5c,stroke-width:1px,color:#1e2430;
+    classDef absent fill:#f8ece2,stroke:#9a521f,stroke-width:2px,color:#1e2430;
     A["Feb. 11, 2026<br/>Lot line adjustment approved<br/>Moss present, no recusal recorded"]:::ev --> B["Mar. 12, 2026<br/>Moss seconds infrastructure motion"]:::ev
     B --> C["Apr. 8, 2026<br/>Convergence Hall removed from Phase 1<br/>Moss listed absent"]:::absent
     C --> D["May 13, 2026<br/>Design authority delegated to ED<br/>Wilson raises concern; motion passes"]:::ev
@@ -341,7 +390,7 @@ graph TD
   <section>
     <h2>Campaign giving to a fellow board member</h2>
     <p>Jordan Teuscher, who co-chairs the Point of the Mountain State Land Authority board alongside Moss, has received $6,750 from Moss's campaign committee since 2018 (no payments found before 2020): $250 direct on Aug. 26, 2020; $250 direct on Dec. 13, 2021; $500 direct on Aug. 8, 2022 and $250 direct on Sept. 18, 2022; $1,000 to Conservative Millennials PAC (an entity Teuscher's own campaign committee also funds) in 2023 and a second $1,000 to the same PAC in Aug. 2024; $2,500 direct in September 2024; and $1,000 direct on Jan. 14, 2026 — about four weeks before the Feb. 11, 2026 board vote on Convergence Hall's footprint.</p>
-    <p>Moss's committee has also given Douglas Fiefia $771.15 across two payments — $250 on Dec. 18, 2023 and $521.15 on April 30, 2024. Fiefia chief-sponsored HB 286 (AI Transparency) and HB 438 (a companion chatbot-safety bill), both directly relevant to Moss's current role co-chairing the Pro-Human AI Task Force.</p>
+    <p>Moss's committee has also given Douglas Fiefia $771.15 across two payments — $250 on Dec. 18, 2023 and $521.15 on April 30, 2024. Fiefia was the primary sponsor of HB 286 (AI Transparency) and HB 438 (a companion chatbot-safety bill), both directly relevant to Moss's current role co-chairing the Pro-Human AI Task Force.</p>
     <p>Anthony Loubet has received more payments from Moss's campaign committee than any other recipient — ten, across 2018-2026 (no payments found before 2020), totaling $4,250. Rep. Candice Pierucci, whose campaign committee is registered under the name "Pierucci, Darlene," has received nine payments across the same 2018-2026 window, also totaling $4,250.</p>
     <div class="giving-chart">
       <div class="giving-source">Jefferson Moss<br>campaign committee</div>
@@ -431,10 +480,12 @@ graph TD
     </details>
   </section>
 
-  <section>
+<section class="up-connect"><h2>Connecting stories</h2><ul><li><a href="ryan-starks.html">Ryan Starks (UP 100.08)</a><span>His GOEO predecessor; Moss succeeded him in three positions, and the two share the BioHive board and NUEA advisory roster.</span></li><li><a href="edcutah.html">EDCUtah (UP 100.03)</a><span>Moss sits on its voting board and GO Utah signed a partnership agreement with it March 27, 2026.</span></li><li><a href="utah-rising.html">Utah Rising (UP 100.10)</a><span>The audit credits GO Utah's new leadership with ending the Utah Rising contract.</span></li><li><a href="dan-hemmert.html">Dan Hemmert (UP 100.02)</a><span>Executive director of MIDA, where Moss holds the non-voting board seat.</span></li><li><a href="uipa-hearing-fact-check.html">The Inland Port at the Legislature (UP 100.04)</a><span>Moss succeeded Starks on the Inland Port Authority's Incentives Subcommittee.</span></li><li><a href="chris-roybal.html">Chris Roybal (UP 200.01)</a><span>President of the Northern Utah Economic Alliance, whose advisory roster lists Moss.</span></li></ul></section>
+
+  <section class="up-sources">
     <h2>Sources</h2>
     <details class="open-q">
-      <summary>View all sources</summary>
+      <summary>Sources — click to open (with links)</summary>
       <ul>
         <li><a href="https://utahnewsdispatch.com/2025/05/09/utah-house-majority-leader-resigns-to-take-economic-development-leadership-appointment/">Utah News Dispatch, "Utah House majority leader resigns to take economic development leadership appointment," May 9, 2025</a></li>
         <li><a href="https://governor.utah.gov/press/gov-cox-appoints-jefferson-moss-as-new-executive-director-of-governors-office-of-economic-opportunity/">Governor's Office press release, "Gov. Cox appoints Jefferson Moss as new executive director of GOEO," May 9, 2025</a></li>
@@ -443,7 +494,7 @@ graph TD
         <li>Nucleus Institute "Partners" page (nucleusutah.org)</li>
         <li>Nucleus Institute, "State of Innovation 2026" report, presented April 30, 2026</li>
         <li>Nucleus Fund "Our Team" page (nucleusfundutah.com)</li>
-        <li>H.B. 530 (2025), enrolled text, introduced text, 1st Substitute, and House Committee Amendment (le.utah.gov)</li>
+        <li><a href="https://le.utah.gov/~2025/bills/static/HB0530.html">H.B. 530 (2025), enrolled text, introduced text, 1st Substitute, and House Committee Amendment (le.utah.gov)</a></li>
         <li>Point of the Mountain State Land Authority board meeting minutes, Feb. 11, Mar. 12, Apr. 8, and May 13, 2026</li>
         <li><a href="https://disclosures.utah.gov/">Jefferson Moss campaign finance filings, 2022-2026 (disclosures.utah.gov)</a></li>
         <li><a href="https://disclosures.utah.gov/">Candice Pierucci campaign committee filings (disclosures.utah.gov)</a></li>
@@ -455,23 +506,21 @@ graph TD
         <li>BioHive "Our Amazing Board" and "HiveCast" episode pages (biohive.com)</li>
         <li>Ballotpedia and Wikipedia, "Val Peterson (Utah politician)" and "Kirk Cullimore Jr."</li>
         <li>Northern Utah Economic Alliance "About Us" page (nuea.org)</li>
-        <li>Utah Division of Corporations officer records, via OpenCorporates</li>
-        <li>Utah House Republican Election Committee PAC, Statement of Organization (disclosures.utah.gov)</li>
-        <li>Utah House Republican Election Committee PAC, Division of Corporations entity record (businessregistration.utah.gov)</li>
+        <li><a href="https://businessregistration.utah.gov/EntitySearch/OnlineEntitySearch">Utah Division of Corporations officer records</a>, via OpenCorporates</li>
+        <li><a href="https://disclosures.utah.gov/">Utah House Republican Election Committee PAC, Statement of Organization (disclosures.utah.gov)</a></li>
+        <li><a href="https://businessregistration.utah.gov/EntitySearch/OnlineEntitySearch">Utah House Republican Election Committee PAC, Division of Corporations entity record (businessregistration.utah.gov)</a></li>
         <li>Wikipedia, "Jefferson Moss" (dates of House service and Majority Leader tenure)</li>
         <li>Ballotpedia, "Jefferson Moss" (election history, committee assignments, sponsored legislation, campaign finance totals)</li>
+        <li><a href="https://olag.utah.gov">Office of the Legislative Auditor General</a>, Report No. 2026-18, "A Systemic Performance Audit of the Governor's Office of Economic Development: A Review of Oversight and Outcomes," Sept. 15, 2026 (including the office's response, dated Aug. 21, 2026)</li>
+        <li><a href="https://www.utahbusiness.com/press-releases/2026/03/27/governor-office-economic-opportunity-economic-development-corporation-utah-mou/">Utah Business, GO Utah–EDCUtah MOU, March 27, 2026</a></li>
+        <li>EDCUtah, Board page, edcutah.org/about/board, read Oct. 7, 2026</li>
       </ul>
     </details>
   </section>
 
 </div>
 
-<footer>
-  <div class="wrap">
-    <div>THE WEBER COUNTY HIVE · UNELECTED POWER</div>
-    <div class="sub">Independent accountability journalism. Public records only. We report; you decide.</div>
-  </div>
-</footer>
+<footer class="up-foot"><div class="in"><div id="up-shelf"></div><div><b>Utah Hive Politics · Unelected Power</b>, from the publisher of The Weber County Hive.</div><div class="up-sub">Public records only. We report public records. You decide. <a href="https://webercountyhive.substack.com/">webercountyhive.substack.com</a></div></div></footer><script src="unelected-power-data.js?v=4"></script><script src="up-shelf.js?v=1"></script>
 
 <script>
 document.querySelectorAll('.tile').forEach(function(tile){

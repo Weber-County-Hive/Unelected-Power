@@ -7,10 +7,10 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
 :root{
-  --paper:#f7f1e6; --paper-2:#efe6d3; --ink:#2a1f14; --ink-soft:#63594a;
-  --maroon:#5c1a1a; --maroon-2:#7a2424;
-  --gold:#a9762c; --gold-bg:#f0e0c0;
-  --line:#ddccaa;
+  --paper:#ffffff; --paper-2:#eef2f7; --ink:#1e2430; --ink-soft:#4a5466;
+  --maroon:#2c3e5c; --maroon-2:#3a5078;
+  --gold:#9a521f; --gold-bg:#f8ece2;
+  --line:#c9d3e1;
 }
 *{box-sizing:border-box;margin:0;padding:0;}
 body{background:var(--paper);color:var(--ink);font-family:'Source Sans 3',sans-serif;line-height:1.65;font-size:16px;}
@@ -23,14 +23,14 @@ h1,h2,h3{font-family:'Playfair Display',serif;color:var(--ink);}
 .topbar a{color:var(--gold-bg);text-decoration:none;opacity:.85;}
 .topbar a:hover{opacity:1;text-decoration:underline;}
 
-header.masthead{background:linear-gradient(135deg,var(--maroon),var(--maroon-2));color:#f4e9d8;padding:40px 0 32px;border-bottom:5px solid var(--gold);}
+header.masthead{background:linear-gradient(135deg,var(--maroon),var(--maroon-2));color:#ffffff;padding:40px 0 32px;border-bottom:5px solid var(--gold);}
 header.masthead .wrap{max-width:860px;margin:0 auto;padding:0 24px;}
 .kicker{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-bg);opacity:.8;margin-bottom:14px;}
-h1.title{font-size:42px;line-height:1.1;margin-bottom:14px;color:#fbf3e3;}
+h1.title{font-size:42px;line-height:1.1;margin-bottom:14px;color:#ffffff;}
 h1.title em{font-style:italic;color:var(--gold-bg);}
-p.dek{font-size:18px;color:#e9d9bb;max-width:640px;}
+p.dek{font-size:18px;color:#e6ecf5;max-width:640px;}
 .rc-row{margin-top:18px;display:flex;flex-wrap:wrap;gap:8px;}
-.pub-date{margin-top:10px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.03em;color:#d8b98a;}
+.pub-date{margin-top:10px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.03em;color:#f3c9a6;}
 .rc-tag{display:inline-block;background:var(--gold-bg);border:1px solid var(--gold);color:var(--maroon);font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.03em;text-transform:uppercase;padding:4px 11px;border-radius:4px;text-decoration:none;}
 .rc-tag:hover{background:var(--gold);color:#fff;}
 
@@ -64,7 +64,7 @@ details.open-q p{margin-top:10px;margin-bottom:0;font-size:14.5px;}
 .ask-list li strong{color:var(--maroon);}
 
 footer{background:var(--ink);color:var(--paper-2);padding:36px 0 46px;margin-top:20px;}
-footer .sub{color:#a99a85;font-size:13px;margin-top:6px;}
+footer .sub{color:#b9c6da;font-size:13px;margin-top:6px;}
 
 @media(max-width:600px){
   header.masthead{padding:32px 0 26px;}
@@ -77,6 +77,49 @@ footer .sub{color:#a99a85;font-size:13px;margin-top:6px;}
 .diagram-block.wide{width:calc(100vw - 24px);max-width:1100px;position:relative;left:50%;transform:translateX(-50%);padding:28px;}
 .diagram-block.wide svg{min-width:100%;}
 .diagram-caption{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-soft);margin-top:10px;text-align:center;}
+
+/* ===== Unelected Power standard (slate blue & copper) — header, footer, Where/Who, call number ===== */
+.up-top{background:#1c2a40;color:#b9c6da;font:600 13px 'IBM Plex Mono',monospace;letter-spacing:.06em;text-transform:uppercase}
+.up-top .in{max-width:900px;margin:0 auto;padding:10px 20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.up-top a{color:#e6ecf5;text-decoration:none}
+.up-ww{max-width:900px;margin:26px auto 6px;padding:0 20px}
+.up-where{border:3px solid #2c3e5c;border-radius:10px;overflow:hidden;background:#fff}
+.up-where-h{background:#2c3e5c;color:#fff;padding:12px 18px}
+.up-lbl{font:600 12.5px 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#f3c9a6}
+.up-where-h .pl{font-size:21px;font-weight:700;margin-top:2px}
+.up-who{margin:14px 16px 16px;border:2px solid #9a521f;border-radius:8px}
+.up-who-h{background:#f8ece2;color:#9a521f;padding:6px 12px;font:600 12.5px 'IBM Plex Mono',monospace;letter-spacing:.14em;border-bottom:2px solid #9a521f}
+.up-who ul{list-style:none;margin:0;padding:6px 12px}
+.up-who li{padding:6px 0;border-bottom:1px solid #e3e8ef;font-size:17px;margin:0}
+.up-who li:last-child{border-bottom:none}
+.up-who li b{color:#2c3e5c}
+.up-connect ul{list-style:none;margin:0;padding:0}
+.up-connect li{border:1px solid #c9d3e1;border-left:5px solid #9a521f;background:#fff;padding:10px 14px;margin:0 0 10px;font-size:17px}
+.up-connect li a{font-weight:700;color:#2c3e5c}
+.up-connect li span{display:block;color:#4a5466;font-size:15.5px;margin-top:2px}
+.up-sources details{border:1px solid #c9d3e1;background:#eef2f7;padding:12px 16px}
+.up-sources summary{cursor:pointer;font:600 15px 'IBM Plex Mono',monospace;color:#2c3e5c}
+.up-sources li{margin:8px 0;font-size:16px}
+.up-foot{background:#1c2a40;color:#b9c6da;margin-top:30px;padding:28px 0 36px;font-size:16px}
+.up-foot .in{max-width:900px;margin:0 auto;padding:0 20px}
+.up-foot a{color:#f3c9a6}
+#up-shelf{border:2px dashed #b9c6da;border-radius:10px;padding:16px 18px;margin-bottom:20px;color:#e6ecf5}
+.up-cn-big{font:600 17px 'IBM Plex Mono',monospace;margin-bottom:12px}
+.up-cn-big b{color:#f3c9a6}
+.up-nav{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+.up-nav-btn{flex:1;min-width:220px;background:#2c3e5c;border:1px solid #4a6185;border-radius:8px;padding:12px 14px;color:#fff;text-decoration:none;font-size:16px}
+.up-nav-btn:last-child{text-align:right}
+.up-nav-btn b{color:#f3c9a6;font-family:'IBM Plex Mono',monospace}
+.up-nav-btn.up-off{opacity:.5}
+.up-list summary{cursor:pointer;font:600 15px 'IBM Plex Mono',monospace;color:#f3c9a6;margin-bottom:6px}
+.up-list ol{list-style:none;margin:8px 0 0;padding:0}
+.up-list li{margin:0;padding:5px 0;border-bottom:1px solid #2f4466}
+.up-list li a{color:#e6ecf5;text-decoration:none}
+.up-list li.up-shelf-head{color:#f3c9a6;font:600 13px 'IBM Plex Mono',monospace;letter-spacing:.1em;padding-top:12px;border-bottom:none}
+.up-list li.up-here a{color:#fff;font-weight:700}
+.up-cn{font-family:'IBM Plex Mono',monospace;color:#f3c9a6;margin-right:6px}
+.up-search{font-size:15px;margin-top:12px}
+.up-sub{font-size:14.5px;margin-top:8px;color:#b9c6da}
 </style>
 <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
 <script>
@@ -86,13 +129,13 @@ footer .sub{color:#a99a85;font-size:13px;margin-top:6px;}
     securityLevel: 'loose',
     flowchart: { htmlLabels: true, useMaxWidth: true, padding: 18 },
     themeVariables: {
-      primaryColor: '#efe6d3',
-      primaryTextColor: '#2a1f14',
-      primaryBorderColor: '#5c1a1a',
-      lineColor: '#a9762c',
-      secondaryColor: '#f0e0c0',
-      secondaryTextColor: '#2a1f14',
-      tertiaryColor: '#f7f1e6',
+      primaryColor: '#eef2f7',
+      primaryTextColor: '#1e2430',
+      primaryBorderColor: '#2c3e5c',
+      lineColor: '#9a521f',
+      secondaryColor: '#f8ece2',
+      secondaryTextColor: '#1e2430',
+      tertiaryColor: '#ffffff',
       fontFamily: 'Verdana, Arial, sans-serif',
       fontSize: '19px'
     }
@@ -101,16 +144,11 @@ footer .sub{color:#a99a85;font-size:13px;margin-top:6px;}
 </head>
 <body>
 
-<div class="topbar">
-  <div class="wrap">
-    <span>The Weber County Hive · Unelected Power</span>
-    <a href="https://weber-county-hive.github.io/-weber-county-hive-index/">Index ↗</a>
-  </div>
-</div>
+<div class="up-top"><div class="in"><span>Utah Hive Politics · Unelected Power</span><span><a href="index.html">← All Unelected Power pages</a> &nbsp;·&nbsp; <a href="https://weber-county-hive.github.io/-weber-county-hive-index/">Hive library ↗</a></span></div></div>
 
 <header class="masthead">
   <div class="wrap">
-    <div class="kicker">Case File · Organization</div>
+    <div class="kicker">Case File · Organization · UP 100.10</div>
     <h1 class="title">Utah <em>Rising</em></h1>
     <p class="dek">A $3.2 million taxpayer grant went to a business-led economic initiative whose own committees include the state office that approved the grant — and a company run by the approving director's brother.</p>
     <div class="rc-row">
@@ -118,9 +156,10 @@ footer .sub{color:#a99a85;font-size:13px;margin-top:6px;}
       <a class="rc-tag" href="dan-hemmert.html">Cross-reference: Dan Hemmert →</a>
       <a class="rc-tag" href="edcutah.html">Cross-reference: EDCUtah →</a>
     </div>
-    <div class="pub-date">Published Sep 16, 2026 &middot; Updated Sep 16, 2026</div>
+    <div class="pub-date">Posted Sept. 16, 2026 · Updated Oct. 27, 2026</div>
   </div>
 </header>
+<div class="up-ww"><div class="up-where"><div class="up-where-h"><div class="up-lbl">WHERE</div><div class="pl">The Point (Salt Lake/Utah County line) · Inland Port · Utah City (Utah Lake) · Falcon Hill (Hill Air Force Base) · Downtown Salt Lake City district · Statewide: Utah Chamber and Salt Lake Chamber initiative, Utah Legislature</div></div><div class="up-who"><div class="up-who-h">WHO</div><ul><li><b>Utah Rising</b> — business-led statewide economic strategy of the Utah Chamber and Salt Lake Chamber</li><li><b>Salt Lake Chamber Foundation</b> — named recipient of the $3.2 million state grant approved April 29, 2025 and canceled July 2025</li><li><b>Ryan Starks</b> — GOEO executive director who approved the grant; then moved to lead EDCUtah</li><li><b>Governor's Office of Economic Opportunity (GOEO)</b> — approved the grant; listed on both the Steering and Technical Committees</li><li><b>Steve Starks</b> — Ryan Starks' brother; CEO of The Larry H. Miller Company, a Steering Committee member</li><li><b>Spencer P. Eccles</b> — chair of the Steering Committee</li><li><b>Derek Miller</b> — President & CEO of the Utah Chamber; quoted extensively on Utah Rising materials</li><li><b>Jefferson Moss</b> — GOED executive director; on the May 19, 2026 Axios Live panel with Miller</li><li><b>EDCUtah</b> — Technical Committee member; the organization Starks moved to lead</li><li><b>Steve Waldrip</b> — Governor's Housing Coordinator, a Technical Committee seat</li><li><b>Gardner Group and Christian K. Gardner</b> — Steering Committee member; Christian Gardner tied through GBP PCC LLC to the Weber Bend Zone/West Weber PID network</li><li><b>Miles Hansen and Jonathan Freedman</b> — World Trade Center Utah CEOs who held UIPA board seats</li><li><b>Sen. Scott Sandall, Sen. Evan Vickers, Rep. Doug Owens, Rep. Karen Peterson</b> — named the Chamber's 2026 "Free Enterprise Champion" legislators</li></ul></div></div></div>
 
 <div class="wrap">
 
@@ -174,8 +213,8 @@ footer .sub{color:#a99a85;font-size:13px;margin-top:6px;}
       <pre class="mermaid">
 %%{init: {'flowchart': {'useMaxWidth': false, 'nodeSpacing': 50, 'rankSpacing': 80}, 'themeVariables': {'fontSize': '24px'}}}%%
 graph LR
-    classDef center fill:#f0e0c0,stroke:#a9762c,stroke-width:2px,color:#2a1f14;
-    classDef org fill:#efe6d3,stroke:#5c1a1a,stroke-width:1px,color:#2a1f14;
+    classDef center fill:#f8ece2,stroke:#9a521f,stroke-width:2px,color:#1e2430;
+    classDef org fill:#eef2f7,stroke:#2c3e5c,stroke-width:1px,color:#1e2430;
     RS["Ryan Starks<br/>GOEO Executive Director<br/>approved the $3.2M grant"]:::center -->|"grant, 4/29/2025"| UR["Utah Rising"]:::org
     GOEO["Governor's Office of<br/>Economic Opportunity"]:::org -->|"Steering + Technical<br/>Committee member"| UR
     LHM["The Larry H. Miller Company<br/>CEO: Steve Starks"]:::org -->|"Steering Committee member"| UR
@@ -292,26 +331,28 @@ graph LR
     </ul>
   </section>
 
-  <section>
+<section class="up-connect"><h2>Connecting stories</h2><ul><li><a href="ryan-starks.html">Ryan Starks (UP 100.08)</a><span>Approved the $3.2 million grant, then moved to lead EDCUtah.</span></li><li><a href="edcutah.html">EDCUtah (UP 100.03)</a><span>Sits on Utah Rising's Technical Committee; part of the Salt Lake Chamber.</span></li><li><a href="jefferson-moss.html">Jefferson Moss (UP 100.06)</a><span>Starks' successor at GOEO, which canceled the grant in July 2025.</span></li><li><a href="steve-waldrip.html">Steve Waldrip (UP 100.09)</a><span>The Governor's Housing Coordinator seat on the Technical Committee.</span></li><li><a href="dan-hemmert.html">Dan Hemmert (UP 100.02)</a><span>The Point ties to his Colmena Group/Lance Bullen network; World Trade Center Utah naming question.</span></li><li><a href="falcon-hill-roy.html">Falcon Hill and Roy (UP 200.02)</a><span>Falcon Hill is one of Utah Rising's four named "generational real estate investments."</span></li></ul></section>
+
+  <section class="up-sources">
     <h2>Sources</h2>
     <details class="open-q">
-      <summary>View all sources</summary>
+      <summary>Sources — click to open (with links)</summary>
       <ul>
         <li>Utah Chamber / Salt Lake Chamber, "Utah Rising: A Free Enterprise Vision for Utah's Economy" (official initiative page, including Vision, Mission, focus-area goals, and signature projects)</li>
         <li>Utah Chamber / Salt Lake Chamber, Utah Rising Steering Committee, Technical Committee, and Local &amp; Regional Chambers of Commerce Committee rosters (official initiative page)</li>
-        <li>Utah Rising, "Recent News" and "Videos" listings (utahrising.com), confirming activity through the 2026 legislative session</li>
-        <li>Utah Rising, "Opportunities &amp; Challenges" page (utahrising.com)</li>
+        <li>Utah Rising, "Recent News" and "Videos" listings (<a href="https://utahrising.com">utahrising.com</a>), confirming activity through the 2026 legislative session</li>
+        <li>Utah Rising, "Opportunities &amp; Challenges" page (<a href="https://utahrising.com">utahrising.com</a>)</li>
         <li>Utah Chamber, "Utah Chamber Empowers Businesses with an Action Plan for Continued Economic Success," press release, August 5, 2026</li>
-        <li>Utah Chamber, "Legislative Scorecard 2026" page (utchamber.com/legislative-scorecard/)</li>
-        <li>Utah Chamber, "Legislative Priorities" / 2026 Public Policy Guide page (utchamber.com/legislative-priorities/)</li>
-        <li>Utah Chamber, "2026 Bill Tracker" (utchamber.com/bill-tracker/) — partial review only, list confirmed incomplete/truncated</li>
+        <li>Utah Chamber, "Legislative Scorecard 2026" page (<a href="https://utchamber.com/legislative-scorecard/">utchamber.com/legislative-scorecard/</a>)</li>
+        <li>Utah Chamber, "Legislative Priorities" / 2026 Public Policy Guide page (<a href="https://utchamber.com/legislative-priorities/">utchamber.com/legislative-priorities/</a>)</li>
+        <li>Utah Chamber, "2026 Bill Tracker" (<a href="https://utchamber.com/bill-tracker/">utchamber.com/bill-tracker/</a>) — partial review only, list confirmed incomplete/truncated</li>
         <li>"Utah Chamber honors 2026 Free Enterprise Champions," Utah Business, June 18, 2026</li>
         <li>Utah Rising, "Advocacy in Action: Utah Rising Priorities Take Center Stage in the 2026 Legislative Session" (utahrising.com), citing an "April 2024" launch date</li>
         <li>Erin Alberty and Megan Morrone, "Axios Live: Utah is 'leading the country economically,' state Rep. Dailey-Provost says," Axios Salt Lake City, May 21, 2026</li>
         <li>"Utah governor prioritizes economic development for AI revolution," Deseret News, August 1, 2025</li>
         <li>Deseret News author archive, Derek B. Miller — confirms a co-authored opinion piece with Christian Gardner and A. Scott Anderson</li>
         <li>Bryan Schott, "Last act: Utah economic chief approved $3.2M grant for future employer's parent organization," Utah Political Watch, Sept. 3, 2025 (updated Dec. 2, 2025)</li>
-        <li>Office of the Legislative Auditor General, Report No. 2026-18, "A Systemic Performance Audit of the Governor's Office of Economic Development," Sept. 15, 2026 (independent confirmation of the grant's termination)</li>
+        <li><a href="https://olag.utah.gov">Office of the Legislative Auditor General</a>, Report No. 2026-18, "A Systemic Performance Audit of the Governor's Office of Economic Development," Sept. 15, 2026 (independent confirmation of the grant's termination)</li>
         <li>Cross-references: <a href="ryan-starks.html">Ryan Starks</a> case file (this project), <a href="dan-hemmert.html">Dan Hemmert</a> case file (this project)</li>
       </ul>
     </details>
@@ -319,12 +360,7 @@ graph LR
 
 </div>
 
-<footer>
-  <div class="wrap">
-    <div>THE WEBER COUNTY HIVE · UNELECTED POWER</div>
-    <div class="sub">Independent accountability journalism. Public records only. We report; you decide.</div>
-  </div>
-</footer>
+<footer class="up-foot"><div class="in"><div id="up-shelf"></div><div><b>Utah Hive Politics · Unelected Power</b>, from the publisher of The Weber County Hive.</div><div class="up-sub">Public records only. We report public records. You decide. <a href="https://webercountyhive.substack.com/">webercountyhive.substack.com</a></div></div></footer><script src="unelected-power-data.js?v=4"></script><script src="up-shelf.js?v=1"></script>
 
 <script data-goatcounter="https://weberhive.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>

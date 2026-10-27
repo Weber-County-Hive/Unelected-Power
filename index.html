@@ -3,342 +3,157 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Unelected Power — The Weber County Hive</title>
+<title>Unelected Power | Utah Hive Politics</title>
+<meta name="description" content="Utah officials and organizations that hold power without being elected, shelved by place. Every page listed, with its call number.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@600;700&family=Source+Sans+3:wght@400;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --paper:#F3ECE0;
-    --paper-dim:#E9E0D0;
-    --void:#181210;
-    --void-2:#241A17;
-    --maroon:#6E1F2B;
-    --maroon-dim:#8C3B44;
-    --ink:#211714;
-    --ink-soft:#4A3B35;
-    --line:#C9BBA4;
-    --gold:#B4863C;
-    --max:900px;
+    --slate:#2c3e5c; --slate-deep:#1c2a40; --page:#ffffff; --box:#eef2f7;
+    --ink:#1e2430; --ink-soft:#4a5466; --copper:#9a521f; --copper-bright:#b5652b;
+    --copper-bg:#f8ece2; --rule:#c9d3e1; --on-slate:#e6ecf5; --on-slate-soft:#b9c6da;
+    --max:980px;
   }
-  *{box-sizing:border-box;}
-  body{
-    margin:0;
-    background:var(--paper);
-    color:var(--ink);
-    font-family:'Source Sans 3',sans-serif;
-    font-size:17px;
-    line-height:1.62;
-  }
-  ::selection{background:var(--maroon);color:var(--paper);}
-  a{color:var(--maroon);}
-  a:hover{color:var(--maroon-dim);}
-  h1,h2,h3{font-family:'Playfair Display',serif;font-weight:600;color:var(--ink);margin:0;}
-  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px;}
-  .mono{font-family:'IBM Plex Mono',monospace;}
-
-  .topbar{
-    background:var(--void);
-    color:var(--paper-dim);
-    padding:12px 24px;
-    font-family:'IBM Plex Mono',monospace;
-    font-size:12px;
-    letter-spacing:.08em;
-    text-transform:uppercase;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    flex-wrap:wrap;
-    gap:8px;
-  }
-  .topbar a{color:var(--paper-dim);text-decoration:none;opacity:.8;}
-  .topbar a:hover{opacity:1;color:#fff;}
-
-  header.masthead{
-    padding:72px 24px 40px;
-    border-bottom:3px solid var(--void);
-    max-width:var(--max);
-    margin:0 auto;
-  }
-  .eyebrow{
-    font-family:'IBM Plex Mono',monospace;
-    font-size:13px;
-    letter-spacing:.12em;
-    text-transform:uppercase;
-    color:var(--maroon);
-    margin-bottom:18px;
-    display:flex;
-    align-items:center;
-    gap:10px;
-  }
-  .eyebrow::before{content:"";width:28px;height:2px;background:var(--maroon);display:inline-block;}
-  h1.title{
-    font-size:clamp(34px,5.8vw,58px);
-    line-height:1.06;
-    letter-spacing:-0.01em;
-    max-width:760px;
-  }
-  h1.title em{font-style:italic;color:var(--maroon);}
-  .dek{
-    font-size:19px;
-    color:var(--ink-soft);
-    max-width:680px;
-    margin-top:20px;
-    line-height:1.5;
-  }
-
-  /* Search */
-  .search-bar{
-    max-width:var(--max);
-    margin:0 auto;
-    padding:32px 24px 0;
-  }
-  .search-bar input{
-    width:100%;
-    max-width:420px;
-    padding:12px 16px;
-    font-family:'Source Sans 3',sans-serif;
-    font-size:15px;
-    border:1px solid var(--line);
-    background:#fff;
-    color:var(--ink);
-    outline:none;
-  }
-  .search-bar input:focus{border-color:var(--maroon);}
-  .search-bar input::placeholder{color:var(--ink-soft);opacity:.7;}
-  .search-count{
-    font-family:'IBM Plex Mono',monospace;
-    font-size:12px;
-    color:var(--ink-soft);
-    margin-top:10px;
-  }
-
-  .roster{
-    max-width:var(--max);
-    margin:0 auto;
-    padding:32px 24px 80px;
-    display:grid;
-    grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
-    gap:24px;
-  }
-  .card{
-    background:#fff;
-    border:1px solid var(--line);
-    border-left:4px solid var(--maroon);
-    padding:26px 26px 24px;
-    display:flex;
-    flex-direction:column;
-    text-decoration:none;
-    color:var(--ink);
-    transition:transform .15s ease, box-shadow .15s ease;
-  }
-  .card:hover{
-    transform:translateY(-2px);
-    box-shadow:0 8px 24px rgba(24,18,16,.10);
-  }
-  .card .role-tag{
-    font-family:'IBM Plex Mono',monospace;
-    font-size:11px;
-    letter-spacing:.1em;
-    text-transform:uppercase;
-    color:var(--maroon);
-    margin-bottom:10px;
-  }
-  .card h2{
-    font-size:23px;
-    line-height:1.15;
-    margin-bottom:10px;
-    color:var(--ink);
-  }
-  .card p.summary{
-    font-size:14.5px;
-    color:var(--ink-soft);
-    line-height:1.5;
-    margin:0 0 16px;
-    flex-grow:1;
-  }
-  .card .meta-row{
-    display:flex;
-    justify-content:space-between;
-    align-items:flex-end;
-    margin-top:auto;
-  }
-  .card .read{
-    font-family:'IBM Plex Mono',monospace;
-    font-size:12px;
-    letter-spacing:.05em;
-    text-transform:uppercase;
-    color:var(--maroon);
-  }
-  .card .dates{
-    text-align:right;
-  }
-  .card .published{
-    font-family:'IBM Plex Mono',monospace;
-    font-size:10.5px;
-    color:var(--ink-soft);
-    opacity:.75;
-    display:block;
-  }
-  .card .updated{
-    font-family:'IBM Plex Mono',monospace;
-    font-size:10.5px;
-    color:var(--ink-soft);
-    opacity:.75;
-    display:block;
-    margin-top:2px;
-  }
-  .card .tags{
-    display:flex;
-    flex-wrap:wrap;
-    gap:6px;
-    margin-top:14px;
-    margin-bottom:14px;
-  }
-  .card .tag{
-    font-family:'IBM Plex Mono',monospace;
-    font-size:10.5px;
-    background:var(--paper-dim);
-    border:1px solid var(--line);
-    padding:3px 8px;
-    color:var(--ink-soft);
-  }
-
-  .placeholder-card{
-    border:1px dashed var(--line);
-    background:transparent;
-    padding:26px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    color:var(--ink-soft);
-    font-family:'IBM Plex Mono',monospace;
-    font-size:12.5px;
-    letter-spacing:.03em;
-    min-height:160px;
-  }
-
-  .no-results{
-    max-width:var(--max);
-    margin:0 auto;
-    padding:0 24px 60px;
-    font-family:'IBM Plex Mono',monospace;
-    font-size:13px;
-    color:var(--ink-soft);
-    display:none;
-  }
-
-  footer.site-footer{
-    background:var(--void);
-    color:var(--paper-dim);
-    padding:40px 24px 50px;
-  }
-  footer.site-footer .wrap{display:flex;flex-direction:column;gap:14px;}
-  footer.site-footer h3{color:#fff;font-size:20px;}
-  footer.site-footer p{color:#B8A899;font-size:14px;max-width:560px;line-height:1.6;margin:0;}
-  footer.site-footer .links{display:flex;gap:22px;flex-wrap:wrap;margin-top:8px;}
-  footer.site-footer a{color:var(--gold);text-decoration:none;font-family:'IBM Plex Mono',monospace;font-size:12.5px;letter-spacing:.03em;}
-  footer.site-footer a:hover{color:#fff;}
-
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--page);color:var(--ink);font-family:'Source Sans 3',sans-serif;font-size:19px;line-height:1.55}
+  a{color:var(--slate)}
+  .mono{font-family:'IBM Plex Mono',monospace}
+  .topbar{background:var(--slate-deep);color:var(--on-slate-soft);padding:12px 20px;font:600 13px 'IBM Plex Mono',monospace;letter-spacing:.06em;text-transform:uppercase;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+  .topbar a{color:var(--on-slate);text-decoration:none}
+  header{background:var(--slate);color:#fff;padding:48px 20px 40px}
+  header .wrap,main .wrap{max-width:var(--max);margin:0 auto}
+  .eyebrow{font:600 14px 'IBM Plex Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:#f3c9a6}
+  h1{font-family:'Source Serif 4',serif;font-size:clamp(38px,6vw,58px);line-height:1.05;margin:12px 0 14px}
+  .dek{font-size:20px;color:var(--on-slate);max-width:720px;margin:0}
+  .dates-line{font:500 14px 'IBM Plex Mono',monospace;color:var(--on-slate-soft);margin-top:16px}
+  main{padding:28px 20px 60px;background:#fff}
+  .where{background:#fff}
+  .how{background:var(--copper-bg);border-left:6px solid var(--copper);padding:16px 20px;margin:0 0 26px;font-size:18px}
+  .how b{color:var(--copper)}
+  .search{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:8px}
+  .search input{flex:1;min-width:240px;padding:14px 16px;font-size:19px;border:2px solid var(--rule);border-radius:6px}
+  .search input:focus{outline:none;border-color:var(--slate)}
+  .count{font:500 14px 'IBM Plex Mono',monospace;color:var(--ink-soft);margin-bottom:22px}
+  .jump{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 26px}
+  .jump a{font:600 15px 'IBM Plex Mono',monospace;text-decoration:none;background:var(--box);border:1px solid var(--rule);padding:8px 12px;border-radius:6px;color:var(--slate)}
+  /* WHERE box on top, WHO box under it */
+  .where{border:3px solid var(--slate);border-radius:10px;margin:0 0 30px;overflow:hidden}
+  .where-head{background:var(--slate);color:#fff;padding:16px 20px;display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:6px}
+  .where-head .label{font:600 13px 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#f3c9a6}
+  .where-head h2{font-family:'Source Serif 4',serif;font-size:30px;margin:2px 0 0}
+  .where-head .shelfno{font:600 16px 'IBM Plex Mono',monospace;color:var(--on-slate)}
+  .where-note{padding:12px 20px;background:var(--box);font-size:17px;color:var(--ink-soft);border-bottom:1px solid var(--rule)}
+  .who{margin:16px 20px 20px;border:2px solid var(--copper);border-radius:8px}
+  .who-head{background:var(--copper-bg);padding:8px 14px;font:600 13px 'IBM Plex Mono',monospace;letter-spacing:.14em;color:var(--copper);border-bottom:2px solid var(--copper)}
+  .who ol{list-style:none;margin:0;padding:0}
+  .who li{border-bottom:1px solid var(--rule)}
+  .who li:last-child{border-bottom:none}
+  .who a.item{display:grid;grid-template-columns:132px 1fr;gap:4px 16px;padding:14px 14px;text-decoration:none;color:var(--ink)}
+  .who a.item:hover{background:var(--box)}
+  .cn{font:600 16px 'IBM Plex Mono',monospace;color:var(--copper);padding-top:3px}
+  .nm{font-weight:700;font-size:21px;color:var(--slate);line-height:1.25}
+  .rl{grid-column:2;font-size:16px;color:var(--ink-soft)}
+  .fn{grid-column:2;font:500 13.5px 'IBM Plex Mono',monospace;color:var(--ink-soft)}
+  .fn span{color:var(--copper)}
+  .none{display:none;font-size:18px;color:var(--ink-soft);padding:10px 0}
+  footer{background:var(--slate-deep);color:var(--on-slate-soft);padding:30px 20px 40px;font-size:16px}
+  footer .wrap{max-width:var(--max);margin:0 auto}
+  footer a{color:#f3c9a6}
+  .callbox{border:2px dashed var(--on-slate-soft);border-radius:8px;padding:12px 16px;margin-bottom:18px;font:500 15px 'IBM Plex Mono',monospace;color:var(--on-slate)}
   @media(max-width:600px){
-    header.masthead{padding:48px 18px 32px;}
-    .search-bar{padding:24px 18px 0;}
-    .roster{padding:24px 18px 60px;}
+    body{font-size:18px}
+    .who a.item{grid-template-columns:1fr}
+    .rl,.fn{grid-column:1}
+    .where-head h2{font-size:25px}
   }
 </style>
 </head>
 <body>
 
 <div class="topbar">
-  <span>The Weber County Hive · Unelected Power</span>
-  <a href="https://webercountyhive.substack.com/" target="_blank" rel="noopener">webercountyhive.substack.com ↗</a>
+  <span>Utah Hive Politics · Unelected Power</span>
+  <a href="https://weber-county-hive.github.io/-weber-county-hive-index/">Hive library (all repos) ↗</a>
 </div>
 
-<header class="masthead">
-  <div class="eyebrow">Appointed Officials</div>
-  <h1 class="title">Unelected <em>Power</em></h1>
-  <p class="dek">Utah government runs on more than the officials voters put on the ballot. This series tracks people who hold appointed positions — who appointed them, when, and, where it applies, how they got there from an elected seat. One profile per person, built exclusively from primary documents.</p>
+<header>
+  <div class="wrap">
+    <div class="eyebrow">Case files · shelved by place</div>
+    <h1>Unelected Power</h1>
+    <p class="dek">People and organizations that shape Utah decisions without being on a ballot: who appointed or hired them, what authority they hold, and how they got there. Built from public records only.</p>
+    <div class="dates-line">Posted Aug. 28, 2026 · Updated Oct. 27, 2026</div>
+  </div>
 </header>
 
-<div class="search-bar">
-  <input type="text" id="profileSearch" placeholder="Search by name, role, or tag…" autocomplete="off">
-  <div class="search-count mono" id="searchCount"></div>
-</div>
-
-<div class="roster" id="roster"></div>
-<div class="no-results" id="noResults">No profiles match that search.</div>
-
-<footer class="site-footer">
+<main>
   <div class="wrap">
-    <h3>The Weber County Hive · Unelected Power</h3>
-    <p>An accountability journalism series covering Utah officials who hold appointed rather than elected positions — how they got the appointment, what authority it carries, and how they've used it. Built exclusively from primary documents.</p>
-    <div class="links">
-      <a href="https://webercountyhive.substack.com/" target="_blank" rel="noopener">webercountyhive.substack.com ↗</a>
+    <div class="how"><b>How this shelf works:</b> each big box is a <b>place</b> (where the power is used). Inside it, the box underneath lists <b>who</b>: every page about that place, with nothing hidden. Every page has a <b>call number</b> (like UP 200.02). It's printed at the bottom of that page, and you can type it in the search.</div>
+
+    <div class="search">
+      <input id="q" type="search" placeholder="Search a name, place, topic, or call number (UP 200.02)" aria-label="Search this shelf">
     </div>
+    <div class="count" id="count"></div>
+
+    <nav class="jump" id="jump" aria-label="Jump to a place"></nav>
+
+    <div id="shelves"></div>
+    <div class="none" id="none">Nothing on this shelf matches that search.</div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="callbox">This shelf: <b>UP</b> = Unelected Power · UP 100 Statewide · UP 200 Weber County · UP 300 Davis County · UP 400 Wasatch County</div>
+    <p>Utah Hive Politics, from the publisher of The Weber County Hive. We report public records. You decide. <a href="https://webercountyhive.substack.com/">webercountyhive.substack.com</a></p>
   </div>
 </footer>
 
-<script src="unelected-power-data.js?v=3"></script>
+<script src="unelected-power-data.js?v=4"></script>
 <script>
-  const roster = document.getElementById('roster');
-  const searchInput = document.getElementById('profileSearch');
-  const searchCount = document.getElementById('searchCount');
-  const noResults = document.getElementById('noResults');
+  const SHELVES = [
+    {no:"100", place:"Statewide", note:"State boards, the Governor's office, and statewide groups whose decisions reach every county."},
+    {no:"200", place:"Weber County", note:"Ogden, Roy, Ogden Valley and the rest of Weber County."},
+    {no:"300", place:"Davis County", note:"Layton, South Weber, Kaysville and the rest of Davis County."},
+    {no:"400", place:"Wasatch County", note:"Heber City and the rest of Wasatch County."}
+  ];
+  const fmt = iso => iso ? new Date(iso+'T00:00:00').toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}) : '';
+  const all = UNELECTED_POWER_PROFILES.slice().sort((a,b)=>a.callNumber.localeCompare(b.callNumber,undefined,{numeric:true}));
+  const esc = s => String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 
-  function formatDate(iso) {
-    if (!iso) return '';
-    const d = new Date(iso + 'T00:00:00');
-    return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+  function item(p){
+    const upd = p.dateUpdated && p.dateUpdated!==p.dateAdded ? ' · Updated '+fmt(p.dateUpdated) : '';
+    return `<li><a class="item" href="${p.slug}.html">
+      <div class="cn">${p.callNumber}</div>
+      <div class="nm">${esc(p.name)}</div>
+      <div class="rl">${esc(p.roleTag)}</div>
+      <div class="fn"><span>${p.slug}.html</span> · Posted ${fmt(p.dateAdded)}${upd}</div>
+    </a></li>`;
   }
 
-  function datesHTML(p) {
-    const published = `<span class="published">Published ${formatDate(p.dateAdded)}</span>`;
-    const updated = (p.dateUpdated && p.dateUpdated !== p.dateAdded)
-      ? `<span class="updated">Updated ${formatDate(p.dateUpdated)}</span>`
-      : '';
-    return `<div class="dates">${published}${updated}</div>`;
-  }
-
-  function cardHTML(p) {
-    const tags = p.tags.map(t => `<span class="tag">${t}</span>`).join('');
-    return `
-      <a class="card" href="${p.slug}.html">
-        <div class="role-tag">${p.roleTag}</div>
-        <h2>${p.name}</h2>
-        <p class="summary">${p.summary}</p>
-        <div class="tags">${tags}</div>
-        <div class="meta-row">
-          <div class="read">Read profile →</div>
-          ${datesHTML(p)}
-        </div>
-      </a>`;
-  }
-
-  function render(list) {
-    roster.innerHTML = list.map(cardHTML).join('') +
-      '<div class="placeholder-card">More appointed-official profiles coming</div>';
-    noResults.style.display = list.length === 0 ? 'block' : 'none';
-    roster.style.display = list.length === 0 ? 'none' : 'grid';
-    searchCount.textContent = list.length === UNELECTED_POWER_PROFILES.length
-      ? `${list.length} profiles`
-      : `${list.length} of ${UNELECTED_POWER_PROFILES.length} profiles`;
-  }
-
-  function doSearch(q) {
-    q = q.trim().toLowerCase();
-    if (!q) return render(UNELECTED_POWER_PROFILES);
-    const filtered = UNELECTED_POWER_PROFILES.filter(p => {
-      const haystack = [p.name, p.roleTag, p.summary, ...p.tags].join(' ').toLowerCase();
-      return haystack.includes(q);
+  function render(q){
+    q = (q||'').trim().toLowerCase().replace(/\s+/g,' ');
+    let shown = 0, html = '', jump = '';
+    SHELVES.forEach(s=>{
+      const list = all.filter(p=>p.shelf===s.no && (!q || [p.callNumber,p.name,p.roleTag,p.summary,s.place,p.slug,...p.tags].join(' ').toLowerCase().includes(q)));
+      if(!list.length) return;
+      shown += list.length;
+      jump += `<a href="#shelf-${s.no}">UP ${s.no} · ${s.place}</a>`;
+      html += `<section class="where" id="shelf-${s.no}">
+        <div class="where-head"><div><div class="label">WHERE</div><h2>${s.place}</h2></div><div class="shelfno">Shelf UP ${s.no}</div></div>
+        <div class="where-note">${s.note}</div>
+        <div class="who"><div class="who-head">WHO · ${list.length} page${list.length>1?'s':''}</div><ol>${list.map(item).join('')}</ol></div>
+      </section>`;
     });
-    render(filtered);
+    document.getElementById('shelves').innerHTML = html;
+    document.getElementById('jump').innerHTML = jump;
+    document.getElementById('none').style.display = shown ? 'none' : 'block';
+    document.getElementById('count').textContent = q ? `${shown} of ${all.length} pages match` : `${all.length} pages on this shelf`;
   }
-
-  searchInput.addEventListener('input', e => doSearch(e.target.value));
-  render(UNELECTED_POWER_PROFILES);
+  const qi = document.getElementById('q');
+  qi.addEventListener('input', e=>render(e.target.value));
+  const fromUrl = new URLSearchParams(location.search).get('q'); if(fromUrl){qi.value=fromUrl;}
+  render(qi.value);
 </script>
-
 <script data-goatcounter="https://weberhive.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

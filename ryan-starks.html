@@ -7,10 +7,10 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
 :root{
-  --paper:#f7f1e6; --paper-2:#efe6d3; --ink:#2a1f14; --ink-soft:#63594a;
-  --maroon:#5c1a1a; --maroon-2:#7a2424;
-  --gold:#a9762c; --gold-bg:#f0e0c0;
-  --line:#ddccaa;
+  --paper:#ffffff; --paper-2:#eef2f7; --ink:#1e2430; --ink-soft:#4a5466;
+  --maroon:#2c3e5c; --maroon-2:#3a5078;
+  --gold:#9a521f; --gold-bg:#f8ece2;
+  --line:#c9d3e1;
 }
 *{box-sizing:border-box;margin:0;padding:0;}
 body{background:var(--paper);color:var(--ink);font-family:'Source Sans 3',sans-serif;line-height:1.65;font-size:16px;}
@@ -23,14 +23,14 @@ h1,h2,h3{font-family:'Playfair Display',serif;color:var(--ink);}
 .topbar a{color:var(--gold-bg);text-decoration:none;opacity:.85;}
 .topbar a:hover{opacity:1;text-decoration:underline;}
 
-header.masthead{background:linear-gradient(135deg,var(--maroon),var(--maroon-2));color:#f4e9d8;padding:40px 0 32px;border-bottom:5px solid var(--gold);}
+header.masthead{background:linear-gradient(135deg,var(--maroon),var(--maroon-2));color:#ffffff;padding:40px 0 32px;border-bottom:5px solid var(--gold);}
 header.masthead .wrap{max-width:860px;margin:0 auto;padding:0 24px;}
 .kicker{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-bg);opacity:.8;margin-bottom:14px;}
-h1.title{font-size:42px;line-height:1.1;margin-bottom:14px;color:#fbf3e3;}
+h1.title{font-size:42px;line-height:1.1;margin-bottom:14px;color:#ffffff;}
 h1.title em{font-style:italic;color:var(--gold-bg);}
-p.dek{font-size:18px;color:#e9d9bb;max-width:640px;}
+p.dek{font-size:18px;color:#e6ecf5;max-width:640px;}
 .rc-row{margin-top:18px;display:flex;flex-wrap:wrap;gap:8px;}
-.pub-date{margin-top:10px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.03em;color:#d8b98a;}
+.pub-date{margin-top:10px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.03em;color:#f3c9a6;}
 .rc-tag{display:inline-block;background:var(--gold-bg);border:1px solid var(--gold);color:var(--maroon);font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.03em;text-transform:uppercase;padding:4px 11px;border-radius:4px;text-decoration:none;}
 .rc-tag:hover{background:var(--gold);color:#fff;}
 
@@ -59,7 +59,7 @@ details.open-q p{margin-top:10px;margin-bottom:0;font-size:14.5px;}
 .tag{font-family:'IBM Plex Mono',monospace;font-size:11px;background:var(--gold-bg);border:1px solid var(--gold);color:var(--ink);padding:3px 9px;}
 
 footer{background:var(--ink);color:var(--paper-2);padding:36px 0 46px;margin-top:20px;}
-footer .sub{color:#a99a85;font-size:13px;margin-top:6px;}
+footer .sub{color:#b9c6da;font-size:13px;margin-top:6px;}
 
 @media(max-width:600px){
   header.masthead{padding:32px 0 26px;}
@@ -89,6 +89,49 @@ footer .sub{color:#a99a85;font-size:13px;margin-top:6px;}
   font-size:14.5px;
 }
 .ask-list li strong{color:var(--maroon);}
+
+/* ===== Unelected Power standard (slate blue & copper) — header, footer, Where/Who, call number ===== */
+.up-top{background:#1c2a40;color:#b9c6da;font:600 13px 'IBM Plex Mono',monospace;letter-spacing:.06em;text-transform:uppercase}
+.up-top .in{max-width:900px;margin:0 auto;padding:10px 20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.up-top a{color:#e6ecf5;text-decoration:none}
+.up-ww{max-width:900px;margin:26px auto 6px;padding:0 20px}
+.up-where{border:3px solid #2c3e5c;border-radius:10px;overflow:hidden;background:#fff}
+.up-where-h{background:#2c3e5c;color:#fff;padding:12px 18px}
+.up-lbl{font:600 12.5px 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#f3c9a6}
+.up-where-h .pl{font-size:21px;font-weight:700;margin-top:2px}
+.up-who{margin:14px 16px 16px;border:2px solid #9a521f;border-radius:8px}
+.up-who-h{background:#f8ece2;color:#9a521f;padding:6px 12px;font:600 12.5px 'IBM Plex Mono',monospace;letter-spacing:.14em;border-bottom:2px solid #9a521f}
+.up-who ul{list-style:none;margin:0;padding:6px 12px}
+.up-who li{padding:6px 0;border-bottom:1px solid #e3e8ef;font-size:17px;margin:0}
+.up-who li:last-child{border-bottom:none}
+.up-who li b{color:#2c3e5c}
+.up-connect ul{list-style:none;margin:0;padding:0}
+.up-connect li{border:1px solid #c9d3e1;border-left:5px solid #9a521f;background:#fff;padding:10px 14px;margin:0 0 10px;font-size:17px}
+.up-connect li a{font-weight:700;color:#2c3e5c}
+.up-connect li span{display:block;color:#4a5466;font-size:15.5px;margin-top:2px}
+.up-sources details{border:1px solid #c9d3e1;background:#eef2f7;padding:12px 16px}
+.up-sources summary{cursor:pointer;font:600 15px 'IBM Plex Mono',monospace;color:#2c3e5c}
+.up-sources li{margin:8px 0;font-size:16px}
+.up-foot{background:#1c2a40;color:#b9c6da;margin-top:30px;padding:28px 0 36px;font-size:16px}
+.up-foot .in{max-width:900px;margin:0 auto;padding:0 20px}
+.up-foot a{color:#f3c9a6}
+#up-shelf{border:2px dashed #b9c6da;border-radius:10px;padding:16px 18px;margin-bottom:20px;color:#e6ecf5}
+.up-cn-big{font:600 17px 'IBM Plex Mono',monospace;margin-bottom:12px}
+.up-cn-big b{color:#f3c9a6}
+.up-nav{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+.up-nav-btn{flex:1;min-width:220px;background:#2c3e5c;border:1px solid #4a6185;border-radius:8px;padding:12px 14px;color:#fff;text-decoration:none;font-size:16px}
+.up-nav-btn:last-child{text-align:right}
+.up-nav-btn b{color:#f3c9a6;font-family:'IBM Plex Mono',monospace}
+.up-nav-btn.up-off{opacity:.5}
+.up-list summary{cursor:pointer;font:600 15px 'IBM Plex Mono',monospace;color:#f3c9a6;margin-bottom:6px}
+.up-list ol{list-style:none;margin:8px 0 0;padding:0}
+.up-list li{margin:0;padding:5px 0;border-bottom:1px solid #2f4466}
+.up-list li a{color:#e6ecf5;text-decoration:none}
+.up-list li.up-shelf-head{color:#f3c9a6;font:600 13px 'IBM Plex Mono',monospace;letter-spacing:.1em;padding-top:12px;border-bottom:none}
+.up-list li.up-here a{color:#fff;font-weight:700}
+.up-cn{font-family:'IBM Plex Mono',monospace;color:#f3c9a6;margin-right:6px}
+.up-search{font-size:15px;margin-top:12px}
+.up-sub{font-size:14.5px;margin-top:8px;color:#b9c6da}
 </style>
 <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
 <script>
@@ -98,13 +141,13 @@ footer .sub{color:#a99a85;font-size:13px;margin-top:6px;}
     securityLevel: 'loose',
     flowchart: { htmlLabels: true, useMaxWidth: true, padding: 18 },
     themeVariables: {
-      primaryColor: '#efe6d3',
-      primaryTextColor: '#2a1f14',
-      primaryBorderColor: '#5c1a1a',
-      lineColor: '#a9762c',
-      secondaryColor: '#f0e0c0',
-      secondaryTextColor: '#2a1f14',
-      tertiaryColor: '#f7f1e6',
+      primaryColor: '#eef2f7',
+      primaryTextColor: '#1e2430',
+      primaryBorderColor: '#2c3e5c',
+      lineColor: '#9a521f',
+      secondaryColor: '#f8ece2',
+      secondaryTextColor: '#1e2430',
+      tertiaryColor: '#ffffff',
       fontFamily: 'Verdana, Arial, sans-serif',
       fontSize: '19px'
     }
@@ -113,16 +156,11 @@ footer .sub{color:#a99a85;font-size:13px;margin-top:6px;}
 </head>
 <body>
 
-<div class="topbar">
-  <div class="wrap">
-    <span>The Weber County Hive · Unelected Power</span>
-    <a href="https://weber-county-hive.github.io/-weber-county-hive-index/">Index ↗</a>
-  </div>
-</div>
+<div class="up-top"><div class="in"><span>Utah Hive Politics · Unelected Power</span><span><a href="index.html">← All Unelected Power pages</a> &nbsp;·&nbsp; <a href="https://weber-county-hive.github.io/-weber-county-hive-index/">Hive library ↗</a></span></div></div>
 
 <header class="masthead">
   <div class="wrap">
-    <div class="kicker">Case File · Never Elected</div>
+    <div class="kicker">Case File · Never Elected · UP 100.08</div>
     <h1 class="title">Ryan <em>Starks</em></h1>
     <p class="dek">Ran the state's economic development office, then moved to lead its private-sector counterpart under the same Chamber that received a $3.2 million grant he approved three days before announcing the move. A 2026 state audit later found the office's oversight problems ran wider than that one deal.</p>
     <div class="rc-row">
@@ -131,9 +169,10 @@ footer .sub{color:#a99a85;font-size:13px;margin-top:6px;}
       <a class="rc-tag" href="utah-rising.html">Cross-reference: Utah Rising →</a>
       <a class="rc-tag" href="edcutah.html">Cross-reference: EDCUtah →</a>
     </div>
-    <div class="pub-date">Published Sept. 14, 2026 · Updated Sept. 16, 2026</div>
+    <div class="pub-date">Posted Sept. 14, 2026 · Updated Oct. 27, 2026</div>
   </div>
 </header>
+<div class="up-ww"><div class="up-where"><div class="up-where-h"><div class="up-lbl">WHERE</div><div class="pl">Heber City and Wasatch County · Salt Lake City (EDCUtah, Salt Lake Chamber) · Statewide: GOEO, MIDA, Utah Inland Port Authority</div></div><div class="up-who"><div class="up-who-h">WHO</div><ul><li><b>Ryan Starks</b> — EDCUtah President & Executive Director since May 2025; GOEO executive director, Jan. 2023 to May 2025; never elected</li><li><b>Gov. Spencer Cox</b> — appointed him GOEO executive director in January 2023</li><li><b>Governor's Office of Economic Opportunity (GOEO / GOED)</b> — state office he ran; approved the $3.2 million Utah Rising grant on April 29, 2025</li><li><b>EDCUtah and the Salt Lake Chamber</b> — his employer since May 2025; the Chamber's Foundation was the grant recipient</li><li><b>Jefferson Moss</b> — his GOEO successor; canceled the grant and took his MIDA, UIPA subcommittee and GOEO seats</li><li><b>Steve Starks</b> — his brother; CEO, Larry H. Miller Company; vice chair, 2034 Olympic organizing committee</li><li><b>Aaron Starks</b> — his brother; President & CEO, 47G, which signed an MOU with GOEO in Jan. 2025</li><li><b>Gage Froerer, Bob Stevenson and Chris Roybal</b> — NUEA co-chairs and NUEA President</li><li><b>Dallin Koecher and Matt Brower</b> — held seats on the same Wasatch Open Lands Board and CAMS</li><li><b>Office of the Legislative Auditor General</b> — Report 2026-18 on GOED oversight, FY2023-2025</li></ul></div></div></div>
 
 <div class="wrap">
 
@@ -158,10 +197,10 @@ footer .sub{color:#a99a85;font-size:13px;margin-top:6px;}
       <pre class="mermaid">
 %%{init: {'flowchart': {'useMaxWidth': false, 'nodeSpacing': 40, 'rankSpacing': 60}, 'themeVariables': {'fontSize': '26px'}}}%%
 graph TD
-    classDef local fill:#efe6d3,stroke:#5c1a1a,stroke-width:1px,color:#2a1f14;
-    classDef state fill:#f0e0c0,stroke:#a9762c,stroke-width:2px,color:#2a1f14;
-    classDef center fill:#f0e0c0,stroke:#a9762c,stroke-width:2px,color:#2a1f14;
-    classDef proj fill:#efe6d3,stroke:#7a2424,stroke-width:1px,color:#2a1f14;
+    classDef local fill:#eef2f7,stroke:#2c3e5c,stroke-width:1px,color:#1e2430;
+    classDef state fill:#f8ece2,stroke:#9a521f,stroke-width:2px,color:#1e2430;
+    classDef center fill:#f8ece2,stroke:#9a521f,stroke-width:2px,color:#1e2430;
+    classDef proj fill:#eef2f7,stroke:#3a5078,stroke-width:1px,color:#1e2430;
 
     RS["Ryan Starks<br/>Heber Valley Chamber / Wasatch County<br/>2011-2019"]:::center
 
@@ -185,13 +224,13 @@ graph TD
       </pre>
       <div class="diagram-caption">Eight years, nine seats and one project, Heber Valley era</div>
     </div>
-    <div class="callout">Starks' own WOLB and CAMS seats predate two other Unelected Power case files built on those same boards: <a href="dallin-koecher.html">Dallin Koecher</a> (Wasatch Open Lands Board, Heber Valley Chamber/CVB executive director) and <a href="matt-brower.html">Matt Brower</a> (Heber City Manager, CAMS self-dealing contract). All three men held seats on the same two local bodies at different points across roughly the last 15 years.</div>
+    <div class="callout">Starks' own WOLB and CAMS seats predate two other Unelected Power case files built on those same boards: <a href="dallin-koecher.html">Dallin Koecher</a> (Wasatch Open Lands Board, Heber Valley Chamber/CVB executive director) and <a href="matt-brower.html">Matt Brower</a> (Heber City Manager, who negotiated the sole-source City contract with CAMS while sitting on its board). All three men held seats on the same two local bodies at different points across roughly the last 15 years.</div>
     <p>In 2019, the state recruited him to run its rural economic development programs. He became GOEO's managing director of operations, later growth and innovation, then its executive director in Jan. 2023, then EDCUtah's Executive Director starting May 19, 2025.</p>
     <div class="diagram-block">
       <pre class="mermaid">
 graph TD
-    classDef stop fill:#efe6d3,stroke:#5c1a1a,stroke-width:1px,color:#2a1f14;
-    classDef now fill:#f0e0c0,stroke:#a9762c,stroke-width:2px,color:#2a1f14;
+    classDef stop fill:#eef2f7,stroke:#2c3e5c,stroke-width:1px,color:#1e2430;
+    classDef now fill:#f8ece2,stroke:#9a521f,stroke-width:2px,color:#1e2430;
     A["Weber State · Ecuador mission · GAO<br/>Gov's Office of Planning &amp; Budget"]:::stop --> B["Heber Valley Chamber / Wasatch County<br/>Nov. 2011 - Nov. 2019"]:::stop
     B --> C["GOED / GOEO Managing Director<br/>2019-2023"]:::stop
     C --> D["GOEO Executive Director<br/>Jan. 2023 - May 2025"]:::stop
@@ -213,8 +252,8 @@ graph TD
     <div class="diagram-block">
       <pre class="mermaid">
 graph LR
-    classDef past fill:#efe6d3,stroke:#5c1a1a,stroke-width:1px,color:#2a1f14;
-    classDef center fill:#f0e0c0,stroke:#a9762c,stroke-width:2px,color:#2a1f14;
+    classDef past fill:#eef2f7,stroke:#2c3e5c,stroke-width:1px,color:#1e2430;
+    classDef center fill:#f8ece2,stroke:#9a521f,stroke-width:2px,color:#1e2430;
     RS["Ryan Starks"]:::center --> MIDA["MIDA<br/>2022-2025"]:::past
     RS --> IPA["Inland Port Authority<br/>Vice Chair, 2024-2025"]:::past
     RS --> TB["Tourism Board<br/>2016-2020"]:::past
@@ -234,8 +273,8 @@ graph LR
     <div class="diagram-block">
       <pre class="mermaid">
 graph TD
-    classDef ev fill:#efe6d3,stroke:#5c1a1a,stroke-width:1px,color:#2a1f14;
-    classDef last fill:#f0e0c0,stroke:#a9762c,stroke-width:2px,color:#2a1f14;
+    classDef ev fill:#eef2f7,stroke:#2c3e5c,stroke-width:1px,color:#1e2430;
+    classDef last fill:#f8ece2,stroke:#9a521f,stroke-width:2px,color:#1e2430;
     A["Apr. 29, 2025<br/>IAA grant approved, $3.2M/10-yr"]:::ev --> B["May 2, 2025<br/>Starks announces GOEO departure"]:::ev
     B --> C["May 6, 2025<br/>Grant contract signed"]:::ev
     C --> D["May 7, 2025<br/>EDCUtah announces Starks as new ED"]:::ev
@@ -287,8 +326,8 @@ graph TD
     <div class="diagram-block">
       <pre class="mermaid">
 graph TD
-    classDef fam fill:#efe6d3,stroke:#5c1a1a,stroke-width:1px,color:#2a1f14;
-    classDef center fill:#f0e0c0,stroke:#a9762c,stroke-width:2px,color:#2a1f14;
+    classDef fam fill:#eef2f7,stroke:#2c3e5c,stroke-width:1px,color:#1e2430;
+    classDef center fill:#f8ece2,stroke:#9a521f,stroke-width:2px,color:#1e2430;
     RS["Ryan Starks<br/>EDCUtah"]:::center -->|brother| SS["Steve Starks<br/>CEO, Larry H. Miller Co.<br/>VC, 2034 Olympics Committee"]:::fam
     RS -->|brother| AS["Aaron Starks<br/>President &amp; CEO, 47G"]:::fam
     RS -. "MOU, Jan. 2025" .-> AS
@@ -363,34 +402,36 @@ graph TD
     </ul>
   </section>
 
-  <section>
+<section class="up-connect"><h2>Connecting stories</h2><ul><li><a href="jefferson-moss.html">Jefferson Moss (UP 100.06)</a><span>His GOEO successor, who canceled the Utah Rising grant and took three of his seats.</span></li><li><a href="utah-rising.html">Utah Rising (UP 100.10)</a><span>The Chamber initiative that received the $3.2 million grant he approved.</span></li><li><a href="edcutah.html">EDCUtah (UP 100.03)</a><span>The organization he has led since May 2025.</span></li><li><a href="dan-hemmert.html">Dan Hemmert (UP 100.02)</a><span>Led the same state economic development office before him.</span></li><li><a href="dallin-koecher.html">Dallin Koecher (UP 400.02)</a><span>Wasatch Open Lands Board and Heber Valley Chamber/CVB, the same bodies Starks served on.</span></li><li><a href="matt-brower.html">Matt Brower (UP 400.03)</a><span>Heber City Manager on CAMS, a board Starks also sat on.</span></li></ul></section>
+
+  <section class="up-sources">
     <h2>Sources</h2>
     <details class="open-q">
-      <summary>View all sources</summary>
+      <summary>Sources — click to open (with links)</summary>
       <ul>
-        <li>Ryan Starks campaign contribution records, 2019-2026 (disclosures.utah.gov)</li>
-        <li>BioHive "Our Amazing Board" page (biohive.com)</li>
-        <li>Northern Utah Economic Alliance "About Us" page (nuea.org)</li>
+        <li><a href="https://disclosures.utah.gov/">Ryan Starks campaign contribution records, 2019-2026 (disclosures.utah.gov)</a></li>
+        <li>BioHive "Our Amazing Board" page (<a href="https://biohive.com">biohive.com</a>)</li>
+        <li>Northern Utah Economic Alliance "About Us" page (<a href="https://nuea.org">nuea.org</a>)</li>
         <li>"Wasatch High School student professional development program celebrates 10 years," Park Record, May 2026</li>
         <li>Bryan Schott, "Last act: Utah economic chief approved $3.2M grant for future employer's parent organization," Utah Political Watch, Sept. 3, 2025 (updated Dec. 2, 2025)</li>
         <li>Utah Chamber / Salt Lake Chamber, "Utah Rising: A Free Enterprise Vision for Utah's Economy" (official initiative page)</li>
         <li>Utah Chamber / Salt Lake Chamber, Utah Rising Steering Committee, Technical Committee, and Local &amp; Regional Chambers of Commerce Committee rosters (official initiative page)</li>
         <li>Utah Chamber, "Utah Chamber Empowers Businesses with an Action Plan for Continued Economic Success," press release, August 5, 2026 (Steering Committee chair correction, launch date)</li>
-        <li>Office of the Legislative Auditor General, Report No. 2026-18, "A Systemic Performance Audit of the Governor's Office of Economic Development: A Review of Oversight and Outcomes," Sept. 15, 2026</li>
+        <li><a href="https://olag.utah.gov">Office of the Legislative Auditor General</a>, Report No. 2026-18, "A Systemic Performance Audit of the Governor's Office of Economic Development: A Review of Oversight and Outcomes," Sept. 15, 2026 (Hive summary: <a href="https://weber-county-hive.github.io/audits/weber-hive-goed-audit-2026-18.html">The 2026 GOED Audit</a>)</li>
         <li>Brigham Tomco, "The face of Utah's economic growth," Deseret News, June 18, 2025</li>
         <li>EDCUtah, "EDCUtah Announces Ryan Starks as New Executive Director," May 2025</li>
         <li>Ryan Starks Announces Departure from Heber Valley Chamber, Heber Valley Radio, Oct. 4, 2019 (by Rachel Kahler)</li>
         <li>Governor's Office press release, Jan. 12, 2023 (GOEO Executive Director appointment)</li>
-        <li>business.utah.gov departure announcement, May 2, 2025</li>
-        <li>Utah Inland Port Authority board announcements and 2025 draft meeting minutes</li>
+        <li><a href="https://business.utah.gov/">business.utah.gov</a> departure announcement, May 2, 2025</li>
+        <li><a href="https://inlandportauthority.utah.gov/">Utah Inland Port Authority</a> board announcements and 2025 draft meeting minutes</li>
         <li>MIDA Resolution 2025-17, Nov. 17, 2025 board meeting (Jefferson Moss succession)</li>
-        <li>MIDA team page (midaut.org)</li>
+        <li>MIDA team page (<a href="https://midaut.org/">midaut.org</a>)</li>
         <li>Utah Senate confirmation records, May 2020 (Board of Tourism Development)</li>
-        <li>Economic Development Corp of Utah and Economic Development Corp of Utah Foundation, Form 990 filings (ProPublica Nonprofit Explorer)</li>
-        <li>Utah Division of Corporations — RGX Strategies, LLC and EDCUtah Foundation entity records (OpenCorporates)</li>
+        <li>Economic Development Corp of Utah and Economic Development Corp of Utah Foundation, Form 990 filings (<a href="https://projects.propublica.org/nonprofits/">ProPublica Nonprofit Explorer</a>)</li>
+        <li><a href="https://businessregistration.utah.gov/EntitySearch/OnlineEntitySearch">Utah Division of Corporations</a> — RGX Strategies, LLC and EDCUtah Foundation entity records (OpenCorporates)</li>
         <li>RGX Strategies LinkedIn company page</li>
         <li>EDCUtah news releases: Karman Space and Defense (Project Raider, Apr. 9, 2026), Trigg Minerals/ATAA (Project Lucy, May 14, 2026)</li>
-        <li>47G corporate registry (OpenCorporates) and 47g.org board/team pages</li>
+        <li>47G corporate registry (OpenCorporates) and <a href="https://47g.org">47g.org</a> board/team pages</li>
         <li>Ryan Starks, LinkedIn profile and posts</li>
       </ul>
     </details>
@@ -398,12 +439,7 @@ graph TD
 
 </div>
 
-<footer>
-  <div class="wrap">
-    <div>THE WEBER COUNTY HIVE · UNELECTED POWER</div>
-    <div class="sub">Independent accountability journalism. Public records only. We report; you decide.</div>
-  </div>
-</footer>
+<footer class="up-foot"><div class="in"><div id="up-shelf"></div><div><b>Utah Hive Politics · Unelected Power</b>, from the publisher of The Weber County Hive.</div><div class="up-sub">Public records only. We report public records. You decide. <a href="https://webercountyhive.substack.com/">webercountyhive.substack.com</a></div></div></footer><script src="unelected-power-data.js?v=4"></script><script src="up-shelf.js?v=1"></script>
 
 <script data-goatcounter="https://weberhive.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>

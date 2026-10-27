@@ -9,16 +9,16 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --paper:#F3ECE0;
-    --paper-dim:#E9E0D0;
-    --void:#181210;
-    --void-2:#241A17;
-    --maroon:#6E1F2B;
-    --maroon-dim:#8C3B44;
-    --ink:#211714;
-    --ink-soft:#4A3B35;
-    --line:#C9BBA4;
-    --gold:#B4863C;
+    --paper:#ffffff;
+    --paper-dim:#eef2f7;
+    --void:#1c2a40;
+    --void-2:#2c3e5c;
+    --maroon:#2c3e5c;
+    --maroon-dim:#3a5078;
+    --ink:#1e2430;
+    --ink-soft:#4a5466;
+    --line:#c9d3e1;
+    --gold:#f3c9a6;
     --max:820px;
   }
   *{box-sizing:border-box;}
@@ -184,7 +184,7 @@
 
   nav.jump{
     position:sticky; top:0; z-index:50;
-    background:rgba(243,236,224,.94);
+    background:rgba(255,255,255,.94);
     backdrop-filter:blur(6px);
     border-bottom:1px solid var(--line);
     overflow-x:auto;
@@ -265,7 +265,7 @@
   .void-stat .cap{
     font-family:'IBM Plex Mono',monospace;
     font-size:12px;
-    color:#C9BBAE;
+    color:#b9c6da;
     margin-top:6px;
     line-height:1.35;
   }
@@ -414,7 +414,7 @@
     border-color:var(--void);
   }
   .chain-step.highlight .chain-who{color:var(--gold);}
-  .chain-step.highlight .chain-what{color:#E9E0D0;}
+  .chain-step.highlight .chain-what{color:#eef2f7;}
   .chain-num{
     font-family:'Fraunces',serif;
     font-weight:600;
@@ -471,7 +471,7 @@
   }
   footer.site-footer .wrap{display:flex;flex-direction:column;gap:14px;}
   footer.site-footer h3{color:#fff;font-size:20px;}
-  footer.site-footer p{color:#B8A899;font-size:14px;max-width:520px;line-height:1.6;margin:0;}
+  footer.site-footer p{color:#b9c6da;font-size:14px;max-width:520px;line-height:1.6;margin:0;}
   footer.site-footer .links{display:flex;gap:22px;flex-wrap:wrap;margin-top:8px;}
   footer.site-footer a{color:var(--gold);text-decoration:none;font-family:'IBM Plex Mono',monospace;font-size:12.5px;letter-spacing:.03em;}
   footer.site-footer a:hover{color:#fff;}
@@ -515,23 +515,71 @@
   details.sources .sources-body{padding-top:10px;}
   details.full-sources{margin-top:8px;}
   details.full-sources .sources-body > *{margin-bottom:0;}
+  .pub-date{margin-top:8px;font-family:'IBM Plex Mono',monospace;font-size:12.5px;letter-spacing:.04em;color:#9a521f;}
+  .up-ww,.up-connect,.up-sources{font-size:17px;}
+  .up-connect h2,.up-sources h2{margin-bottom:16px;}
+  .connective{max-width:var(--max);margin:0 auto;padding:30px 24px 0;}
+  section.up-connect{max-width:var(--max);margin:0 auto;padding:22px 24px 8px;}
+  section.up-connect h2{font-size:clamp(24px,3.6vw,32px);}
+
+/* ===== Unelected Power standard (slate blue & copper) — header, footer, Where/Who, call number ===== */
+.up-top{background:#1c2a40;color:#b9c6da;font:600 13px 'IBM Plex Mono',monospace;letter-spacing:.06em;text-transform:uppercase}
+.up-top .in{max-width:900px;margin:0 auto;padding:10px 20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.up-top a{color:#e6ecf5;text-decoration:none}
+.up-ww{max-width:900px;margin:26px auto 6px;padding:0 20px}
+.up-where{border:3px solid #2c3e5c;border-radius:10px;overflow:hidden;background:#fff}
+.up-where-h{background:#2c3e5c;color:#fff;padding:12px 18px}
+.up-lbl{font:600 12.5px 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#f3c9a6}
+.up-where-h .pl{font-size:21px;font-weight:700;margin-top:2px}
+.up-who{margin:14px 16px 16px;border:2px solid #9a521f;border-radius:8px}
+.up-who-h{background:#f8ece2;color:#9a521f;padding:6px 12px;font:600 12.5px 'IBM Plex Mono',monospace;letter-spacing:.14em;border-bottom:2px solid #9a521f}
+.up-who ul{list-style:none;margin:0;padding:6px 12px}
+.up-who li{padding:6px 0;border-bottom:1px solid #e3e8ef;font-size:17px;margin:0}
+.up-who li:last-child{border-bottom:none}
+.up-who li b{color:#2c3e5c}
+.up-connect ul{list-style:none;margin:0;padding:0}
+.up-connect li{border:1px solid #c9d3e1;border-left:5px solid #9a521f;background:#fff;padding:10px 14px;margin:0 0 10px;font-size:17px}
+.up-connect li a{font-weight:700;color:#2c3e5c}
+.up-connect li span{display:block;color:#4a5466;font-size:15.5px;margin-top:2px}
+.up-sources details{border:1px solid #c9d3e1;background:#eef2f7;padding:12px 16px}
+.up-sources summary{cursor:pointer;font:600 15px 'IBM Plex Mono',monospace;color:#2c3e5c}
+.up-sources li{margin:8px 0;font-size:16px}
+.up-foot{background:#1c2a40;color:#b9c6da;margin-top:30px;padding:28px 0 36px;font-size:16px}
+.up-foot .in{max-width:900px;margin:0 auto;padding:0 20px}
+.up-foot a{color:#f3c9a6}
+#up-shelf{border:2px dashed #b9c6da;border-radius:10px;padding:16px 18px;margin-bottom:20px;color:#e6ecf5}
+.up-cn-big{font:600 17px 'IBM Plex Mono',monospace;margin-bottom:12px}
+.up-cn-big b{color:#f3c9a6}
+.up-nav{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+.up-nav-btn{flex:1;min-width:220px;background:#2c3e5c;border:1px solid #4a6185;border-radius:8px;padding:12px 14px;color:#fff;text-decoration:none;font-size:16px}
+.up-nav-btn:last-child{text-align:right}
+.up-nav-btn b{color:#f3c9a6;font-family:'IBM Plex Mono',monospace}
+.up-nav-btn.up-off{opacity:.5}
+.up-list summary{cursor:pointer;font:600 15px 'IBM Plex Mono',monospace;color:#f3c9a6;margin-bottom:6px}
+.up-list ol{list-style:none;margin:8px 0 0;padding:0}
+.up-list li{margin:0;padding:5px 0;border-bottom:1px solid #2f4466}
+.up-list li a{color:#e6ecf5;text-decoration:none}
+.up-list li.up-shelf-head{color:#f3c9a6;font:600 13px 'IBM Plex Mono',monospace;letter-spacing:.1em;padding-top:12px;border-bottom:none}
+.up-list li.up-here a{color:#fff;font-weight:700}
+.up-cn{font-family:'IBM Plex Mono',monospace;color:#f3c9a6;margin-right:6px}
+.up-search{font-size:15px;margin-top:12px}
+.up-sub{font-size:14.5px;margin-top:8px;color:#b9c6da}
 </style>
 </head>
 <body>
 
-<div class="topbar">
-  <span>The Weber County Hive · Unelected Power</span>
-  <a href="https://weber-county-hive.github.io/-weber-county-hive-index/">← Weber County Hive</a>
-</div>
+<div class="up-top"><div class="in"><span>Utah Hive Politics · Unelected Power</span><span><a href="index.html">← All Unelected Power pages</a> &nbsp;·&nbsp; <a href="https://weber-county-hive.github.io/-weber-county-hive-index/">Hive library ↗</a></span></div></div>
 
 <header class="masthead">
   <div class="wrap">
-    <div class="eyebrow">Unelected Power · Governor's Office</div>
+    <div class="eyebrow">Unelected Power · Governor's Office · UP 100.09</div>
     <h1 class="title">Two Terms Elected. Then <em>Appointed</em> — No Vote Required.</h1>
     <p class="dek">Steve Waldrip served two terms in the Utah House before Gov. Spencer Cox appointed him Senior Advisor for Housing Strategy and Innovation in December 2023. In July 2026, a new law made him state housing coordinator and put him in charge of Utah's entire Division of Housing and Community Development — a codified title, not just an advisor role, and one no voter confirmed. Seven weeks later, he used that authority to tell a city council that a county's funding was "at risk, meaning none" — a power the statutes governing that funding don't appear to give him.</p>
     <div class="byline">THE WEBER COUNTY HIVE · webercountyhive.substack.com</div>
+    <div class="pub-date">Posted Aug. 28, 2026 · Updated Oct. 27, 2026</div>
   </div>
 </header>
+<div class="up-ww"><div class="up-where"><div class="up-where-h"><div class="up-lbl">WHERE</div><div class="pl">Wasatch County · Summit County · Heber City · Statewide (Governor's Office, Division of Housing and Community Development)</div></div><div class="up-who"><div class="up-who-h">WHO</div><ul><li><b>Steve Waldrip</b> — Former two-term Utah House member; Gov. Cox's Senior Advisor for Housing Strategy and Innovation (Dec. 2023); state housing coordinator under H.B. 68 (July 2026); chair, Private Activity Bond Review Board</li><li><b>Gov. Spencer Cox</b> — Appointed Waldrip; Waldrip said the Aug. 18, 2026 funding message came from him</li><li><b>Division of Housing and Community Development</b> — Created by H.B. 68 (2026) inside the Governor's Office of Economic Opportunity; Waldrip leads it</li><li><b>Private Activity Bond Review Board</b> — Allocates the state's federal tax-exempt bond capacity; Waldrip chairs it</li><li><b>Utah Housing Corporation</b> — Board Waldrip sits on; its single-family allocation grew to $200,655,856.80</li><li><b>Heber City Council</b> — Where Waldrip made the Aug. 18, 2026 remarks; Councilor Yvonne Barney responded on the record</li><li><b>Wasatch County</b> — Manager Dustin Grabau and Councilmember Erik Rowland responded; county rejected the 144-unit SITLA proposal; passed Resolution 26-11 on Sept. 2, 2026</li><li><b>Summit County</b> — Manager Shayne Scott and Councilor Canice Harte responded</li><li><b>Greg Whitehead (Philo Ventures)</b> — Designated sponsor of the Wasatch Highlands preliminary-municipality application</li><li><b>UDOT</b> — The agency that administers B&amp;C road funds under Utah Admin. Code R926-3</li><li><b>Annette McRae</b> — Forward Party SD-20 candidate; filed public-records requests about the funding remarks</li><li><b>State Auditor Tina Cannon</b> — Testified on PID risks, Aug. 19, 2026</li><li><b>Dan Waldrip</b> — Only related person on the Rocky Mountain Homes Fund III Form D/A; any relationship to Steve Waldrip not established</li></ul></div></div></div>
 
 <div class="glossary">
   <div class="wrap">
@@ -653,13 +701,13 @@
 
   <div class="def-inline"><strong>A fourth seat</strong> — Waldrip also chairs the Private Activity Bond Review Board, Utah's tax-exempt bonding authority under the federal Tax Act of 1986. The board splits the state's federal volume cap into five accounts — single family, multifamily, manufacturing, exempt facilities, and student loans. At the start of 2026 those five accounts totaled roughly $473 million combined. He inherited the chairmanship sometime between January and April 2026 — the board's prior chair, Casey Cameron, was still listed as chair as of the January 2026 meeting.</div>
 
-  <div class="def-inline"><strong>Worth noting</strong> — the same bill that expanded his authority also repealed the Utah Commission on Housing Affordability, a board he'd previously sat on. As a legislator, Waldrip had chief-sponsored a 2022 bill extending that commission's life; four years later, with him now running the division that absorbs many of its functions, the commission itself was eliminated.</div>
+  <div class="def-inline"><strong>Worth noting</strong> — the same bill that expanded his authority also repealed the Utah Commission on Housing Affordability, a board he'd previously sat on. As a legislator, Waldrip had been the primary sponsor of a 2022 bill extending that commission's life; four years later, with him now running the division that absorbs many of its functions, the commission itself was eliminated.</div>
 
   <div class="def-inline"><strong>Also worth noting</strong> — appointment to advisory and board roles by a sitting governor is legal and common practice in Utah. What follows is the documented record of what Waldrip has done with the authority those appointments carry.</div>
 
   <div class="def-inline"><strong>A paperwork note</strong> — both the Governor's own staff bio page and the Commission's own roster page still list Waldrip as a current member of the Commission on Housing Affordability, months after HB68 repealed it. The state's own Public Notice Website has already updated that body's listing to read "(Repealed)." The repeal is real; some of the state's own pages just haven't caught up with it yet.</div>
 
-  <p>His own legislative record connects to that board seat with more than a coincidence of subject matter: H.B. 462 (2022), which Waldrip chief-sponsored as a state representative, amended Utah Code §35A-8-2105 — the volume-cap allotment-account provision. At the board's own April 8, 2026 meeting, under his chairmanship, a motion explicitly cited "State Statute Section 35A-8-2105 (5)" as the authority for transferring unallocated volume cap between accounts. He amended the section in 2022; the board he now chairs is on record invoking it by name in 2026.</p>
+  <p>His own legislative record connects to that board seat with more than a coincidence of subject matter: H.B. 462 (2022), for which Waldrip was the primary sponsor as a state representative, amended Utah Code §35A-8-2105 — the volume-cap allotment-account provision. At the board's own April 8, 2026 meeting, under his chairmanship, a motion explicitly cited "State Statute Section 35A-8-2105 (5)" as the authority for transferring unallocated volume cap between accounts. He amended the section in 2022; the board he now chairs is on record invoking it by name in 2026.</p>
   <p>The single-family allocation kept growing under his chairmanship: at the July 8, 2026 meeting, the board approved a further $2,000,999.70 addition to the Utah Housing Corporation's allocation — bringing the total to $200,655,856.80, on a unanimous vote.</p>
 </section>
 
@@ -723,6 +771,8 @@
         <li><span class="date">2024–2026</span><span class="desc">Wasatch and Summit counties organize opposition to SB 258's "preliminary municipality" program; Wasatch County denies a SITLA-linked development agreement.</span></li>
         <li><span class="date">AUG. 18, 2026</span><span class="desc">Waldrip tells Heber City Council the counties' funding is "at risk, meaning none," naming B&amp;C road funds as suspended.</span></li>
         <li><span class="date">AUG. 21, 2026</span><span class="desc">Park Record publishes the remarks; Wasatch County Manager Dustin Grabau calls it "a one-sided conversation" and says the county was not aware of "any public discourse that conveys the county is defying state law."</span></li>
+        <li><span class="date">AUG. 28, 2026</span><span class="desc">Meeting after which Wasatch County said there would be "no negative impacts to state funding" (Utah News Dispatch, Sept. 21, 2026).</span></li>
+        <li><span class="date">SEPT. 2, 2026</span><span class="desc">Wasatch County passes Resolution 26-11.</span></li>
       </div>
     </div>
 
@@ -734,7 +784,7 @@
         <blockquote>"There's a very specific reason why we've established the density and the zoning that it is. They don't like it, they go to the state and go try and get what they want."</blockquote>
         <div class="doc-source">Grace Doerfler, KPCW, Aug. 26, 2026. Rowland called the conflict a "miscommunication" and said the county isn't breaking any laws: "That was not what we were saying at all. This is what we're trying to accomplish, and let's try and come up with a solution together."</div>
       </div>
-      <p>The counties had already tried the legislative route before turning to public opposition. Morgan County Rep. Tiara Auxier sponsored a 2026 bill that would have given counties a seat at the table in the preliminary-municipality incorporation process; it died in the Senate. The year before, Wasatch County's own Rep. Mike Kohler made a separate, also unsuccessful attempt to reform the program. Two legislative fixes, two consecutive sessions, both failed — before any of the funding-threat controversy began.</p>
+      <p>The counties had already tried the legislative route before turning to public opposition. Morgan County Rep. Tiara Auxier sponsored a 2026 bill that would have given counties a seat at the table in the preliminary-municipality incorporation process; it died in the Senate. The year before, Wasatch County's own Rep. Mike Kohler made a separate, also unsuccessful attempt to reform the program. Two legislative fixes, two consecutive sessions, both failed — before Waldrip told Heber City Council on Aug. 18, 2026 that Wasatch County's funding was "at risk, meaning none."</p>
     </div>
 
     <div id="m3-t4" class="tab-panel">
@@ -755,10 +805,16 @@
     </div>
 
     <div id="m3-t5" class="tab-panel">
-      <p>What isn't established by any of this reporting is which of three things actually happened: whether Waldrip was announcing an administrative decision Cox had made, conveying a warning Cox specifically authorized in those terms, or escalating the governor's general position using his own language. No outlet — and no document reviewed for this piece — has Cox's own account of what he asked Waldrip to say. What's documented is the public statement itself, attributed to Waldrip, and the state's unbroken silence since.</p>
-      <p>Someone is actively trying to get that answer through the records themselves. Annette McRae, a Forward Party candidate for the Senate seat covering Wasatch and Summit counties, wrote in a Park Record op-ed that she'd filed public-records requests "seeking communications, directives and documents involving the threatened funding" and asked that relevant records be preserved. On her own campaign page, she describes a more granular effort — GRAMA requests to the Governor's Office, UDOT, the Utah Trust Lands Administration, and the state's housing division, filed Aug. 22 — and says UDOT closed its request five days later with a "no responsive records" determination, telling her such records "would be held by local governments" and that UDOT "would only have been involved at a very high level if the need had occurred." That specific exchange comes from McRae's own account, not the underlying agency correspondence, and hasn't been independently verified here. If accurate, it means that as of UDOT's search, no written suspension directive, B&amp;C-fund action, or supporting legal analysis was found — not that no threat was authorized or that no discussions occurred elsewhere. McRae has since challenged the response and asked UDOT to specify which custodians and systems were searched.</p>
+      <p>What isn't established by any of this reporting is which of three things actually happened: whether Waldrip was announcing an administrative decision Cox had made, conveying a warning Cox specifically authorized in those terms, or escalating the governor's general position using his own language. No outlet — and no document reviewed for this piece — has Cox's own account of what he asked Waldrip to say. What's documented is the public statement itself, attributed to Waldrip, and the state's silence in the days after (through Aug. 28, 2026; see "What happened next" below).</p>
+      <p>Someone is actively trying to get that answer through the records themselves. Annette McRae, a Forward Party candidate for the Senate seat covering Wasatch and Summit counties, wrote in a Park Record op-ed that she'd filed public-records requests "seeking communications, directives and documents involving the threatened funding" and asked that relevant records be preserved. On her own campaign page, she describes a more granular effort — GRAMA requests to the Governor's Office, UDOT, the Utah Trust Lands Administration, and the state's housing division, filed Aug. 22 — and says UDOT closed its request five days later with a "no responsive records" determination, telling her such records "would be held by local governments" and that UDOT "would only have been involved at a very high level if the need had occurred." That specific exchange comes from McRae's own account, not the underlying agency correspondence, and hasn't been independently verified here. If accurate, it means that as of UDOT's search, no written suspension directive, B&amp;C-fund action, or supporting legal analysis was found — not that the governor did not authorize the "at risk, meaning none" message or that no discussions occurred elsewhere. McRae has since challenged the response and asked UDOT to specify which custodians and systems were searched.</p>
       <p>McRae's account also points to a new records trail worth naming, even unconfirmed: she says Heber City Attorney Mark Smedley told her Waldrip's Aug. 18 appearance had been arranged through the city's affordable-housing consultant — meaning any scheduling, invitation, or advance-materials correspondence might sit with that consultant rather than in ordinary city staff email. None of this — the UDOT determination, the consultant lead, or the Governor's Office's own delayed and twice-redirected response to McRae's request — has been confirmed against the underlying correspondence itself. It's a procedural account from one requester, not the paper trail.</p>
     </div>
+  </div>
+
+  <div class="doc-card">
+    <div class="doc-tag">What happened next — Aug. 28 to Sept. 2, 2026</div>
+    <p style="margin:0 0 10px;">After an Aug. 28, 2026 meeting, Wasatch County said there would be "no negative impacts to state funding," Utah News Dispatch reported on Sept. 21, 2026. Waldrip said he was "grateful we're moving forward in partnership." Wasatch County passed Resolution 26-11 on Sept. 2, 2026.</p>
+    <div class="doc-source">Utah News Dispatch, Sept. 21, 2026.</div>
   </div>
 </section>
 
@@ -788,7 +844,7 @@
 <section class="section">
   <h2>Before the message, a defense of PIDs</h2>
   <p class="lead">Per the Weber County Hive's own listening notes on the recording, Waldrip's funding remarks came directly after his official housing presentation — during which he defended Public Infrastructure Districts (PIDs) as a financing tool, arguing there are only two paths to building housing, "cost before or cost after," and that disclosures around PIDs need to be better.</p>
-  <p>The sequence, per those notes: affordable-housing presentation → defense of PIDs → an explicit request to relay a message → the funding remarks referencing the counties' post, the Governor's instruction, and the "not the direct target" framing. It places the state's senior housing adviser on record defending the same financing model documented elsewhere in this newsroom's reporting on rising Ogden Valley property tax and PID burdens, in the same appearance where he delivered the funding threat above.</p>
+  <p>The sequence, per those notes: affordable-housing presentation → defense of PIDs → an explicit request to relay a message → the funding remarks referencing the counties' post, the Governor's instruction, and the "not the direct target" framing. It places the state's senior housing adviser on record defending the same financing model documented elsewhere in this newsroom's reporting on rising Ogden Valley property tax and PID burdens, in the same appearance where he told the council Wasatch County's funding was "at risk, meaning none" and named B&amp;C road funds as suspended.</p>
 
   <div class="tabset">
     <div class="tab-buttons">
@@ -818,27 +874,27 @@
       <div class="diagram-panel">
         <div class="diagram-tag">Cumulative PID charge on a $500,000 home, at the statutory max rate — flat, no appreciation</div>
         <svg class="svg-chart" viewBox="0 0 700 320" xmlns="http://www.w3.org/2000/svg">
-          <line x1="70" y1="20" x2="70" y2="260" stroke="#C9BBA4" stroke-width="1"/>
-          <line x1="70" y1="260" x2="670" y2="260" stroke="#C9BBA4" stroke-width="1"/>
-          <line x1="70" y1="200" x2="670" y2="200" stroke="#C9BBA4" stroke-width="1" stroke-dasharray="3,4"/>
-          <line x1="70" y1="140" x2="670" y2="140" stroke="#C9BBA4" stroke-width="1" stroke-dasharray="3,4"/>
-          <line x1="70" y1="80" x2="670" y2="80" stroke="#C9BBA4" stroke-width="1" stroke-dasharray="3,4"/>
-          <text x="60" y="264" font-size="11" fill="#4A3B35" text-anchor="end">$0</text>
-          <text x="60" y="204" font-size="11" fill="#4A3B35" text-anchor="end">$41K</text>
-          <text x="60" y="144" font-size="11" fill="#4A3B35" text-anchor="end">$82K</text>
-          <text x="60" y="84" font-size="11" fill="#4A3B35" text-anchor="end">$124K</text>
-          <polyline points="70,260 220,200 370,140 520,80 670,20" fill="none" stroke="#6E1F2B" stroke-width="3"/>
-          <polygon points="70,260 220,200 370,140 520,80 670,20 670,260" fill="#6E1F2B" fill-opacity="0.08"/>
-          <circle cx="70" cy="260" r="4" fill="#6E1F2B"/>
-          <circle cx="220" cy="200" r="4" fill="#6E1F2B"/>
-          <circle cx="370" cy="140" r="4" fill="#6E1F2B"/>
-          <circle cx="520" cy="80" r="4" fill="#6E1F2B"/>
-          <circle cx="670" cy="20" r="5" fill="#6E1F2B"/>
-          <text x="70" y="282" font-size="11" fill="#4A3B35" text-anchor="middle">Yr 0</text>
-          <text x="220" y="282" font-size="11" fill="#4A3B35" text-anchor="middle">Yr 10</text>
-          <text x="370" y="282" font-size="11" fill="#4A3B35" text-anchor="middle">Yr 20</text>
-          <text x="520" y="282" font-size="11" fill="#4A3B35" text-anchor="middle">Yr 30</text>
-          <text x="670" y="14" font-size="13" font-weight="600" fill="#6E1F2B" text-anchor="end">Yr 40: $165,000</text>
+          <line x1="70" y1="20" x2="70" y2="260" stroke="#c9d3e1" stroke-width="1"/>
+          <line x1="70" y1="260" x2="670" y2="260" stroke="#c9d3e1" stroke-width="1"/>
+          <line x1="70" y1="200" x2="670" y2="200" stroke="#c9d3e1" stroke-width="1" stroke-dasharray="3,4"/>
+          <line x1="70" y1="140" x2="670" y2="140" stroke="#c9d3e1" stroke-width="1" stroke-dasharray="3,4"/>
+          <line x1="70" y1="80" x2="670" y2="80" stroke="#c9d3e1" stroke-width="1" stroke-dasharray="3,4"/>
+          <text x="60" y="264" font-size="11" fill="#4a5466" text-anchor="end">$0</text>
+          <text x="60" y="204" font-size="11" fill="#4a5466" text-anchor="end">$41K</text>
+          <text x="60" y="144" font-size="11" fill="#4a5466" text-anchor="end">$82K</text>
+          <text x="60" y="84" font-size="11" fill="#4a5466" text-anchor="end">$124K</text>
+          <polyline points="70,260 220,200 370,140 520,80 670,20" fill="none" stroke="#2c3e5c" stroke-width="3"/>
+          <polygon points="70,260 220,200 370,140 520,80 670,20 670,260" fill="#2c3e5c" fill-opacity="0.08"/>
+          <circle cx="70" cy="260" r="4" fill="#2c3e5c"/>
+          <circle cx="220" cy="200" r="4" fill="#2c3e5c"/>
+          <circle cx="370" cy="140" r="4" fill="#2c3e5c"/>
+          <circle cx="520" cy="80" r="4" fill="#2c3e5c"/>
+          <circle cx="670" cy="20" r="5" fill="#2c3e5c"/>
+          <text x="70" y="282" font-size="11" fill="#4a5466" text-anchor="middle">Yr 0</text>
+          <text x="220" y="282" font-size="11" fill="#4a5466" text-anchor="middle">Yr 10</text>
+          <text x="370" y="282" font-size="11" fill="#4a5466" text-anchor="middle">Yr 20</text>
+          <text x="520" y="282" font-size="11" fill="#4a5466" text-anchor="middle">Yr 30</text>
+          <text x="670" y="14" font-size="13" font-weight="600" fill="#2c3e5c" text-anchor="end">Yr 40: $165,000</text>
         </svg>
         <div class="diagram-caption">$4,125/year added to the tax bill (15 mills on a $275,000 taxable value), held flat for the full 40-year assessment term — the same figures documented in the paragraph above.</div>
       </div>
@@ -846,11 +902,11 @@
       <div class="diagram-panel">
         <div class="diagram-tag">What a buyer would need to break even, vs. the largest discount claimed anywhere in this record</div>
         <svg class="svg-chart" viewBox="0 0 700 200" xmlns="http://www.w3.org/2000/svg">
-          <text x="20" y="38" font-size="13" fill="#211714" font-weight="600">Break-even discount needed</text>
-          <rect x="20" y="48" width="660" height="34" fill="#181210"/>
-          <text x="640" y="70" font-size="14" font-weight="600" fill="#B4863C" text-anchor="end">$165,000</text>
-          <text x="20" y="118" font-size="13" fill="#211714" font-weight="600">Largest discount claimed (The Highlands, developer's own pitch)</text>
-          <rect x="20" y="128" width="160" height="34" fill="#6E1F2B" fill-opacity="0.85"/>
+          <text x="20" y="38" font-size="13" fill="#1e2430" font-weight="600">Break-even discount needed</text>
+          <rect x="20" y="48" width="660" height="34" fill="#1c2a40"/>
+          <text x="640" y="70" font-size="14" font-weight="600" fill="#f3c9a6" text-anchor="end">$165,000</text>
+          <text x="20" y="118" font-size="13" fill="#1e2430" font-weight="600">Largest discount claimed (The Highlands, developer's own pitch)</text>
+          <rect x="20" y="128" width="160" height="34" fill="#2c3e5c" fill-opacity="0.85"/>
           <text x="150" y="150" font-size="14" font-weight="600" fill="#fff" text-anchor="end">$40,000</text>
         </svg>
         <div class="diagram-caption">$125,000 short of break-even, using the single largest PID discount figure found anywhere in the reporting for this piece — and that figure is the developer's own claim, not an independently verified number.</div>
@@ -998,62 +1054,58 @@
 
   <p>County officials have raised specific process complaints, not just a general objection to growth. Interim Councilor Mike Murphy called the law's affordable-housing requirement "a joke," saying the feasibility study behind each application "has no, I think, objective criteria or threshold other than they just have to prove financial feasibility." Councilor Colleen Bonner pushed for water, sewer, traffic, and fire-access studies to be required parts of that review; they aren't. Councilor Luke Searle put the core objection plainly: "Affordable housing looks different in the Wasatch Back than it does everywhere else... trying to give this one-size-fits-all doesn't work." And after Bear Canyon's rejection — the one 2026 application that failed on its own technical merits — Grabau described the broader tool itself as something that "usurp[s]" the local balance of power, adding of one small-town fight specifically: "What you're seeing in Wallsburg is their community. They want control of the people who live there and want control of what their community looks like and what the local government does."</p>
 
-  <p>Twice in two consecutive legislative sessions, county-side reform efforts reached the Senate floor and failed — HB540 in 2025, HB510 in 2026, the latter by a single vote. Both would have given counties more say before a preliminary municipality gets approved; neither passed intact. The funding-threat episode above happened five months after the second attempt died.</p>
+  <p>Twice in two consecutive legislative sessions, county-side reform efforts reached the Senate floor and failed — HB540 in 2025, HB510 in 2026, the latter by a single vote. Both would have given counties more say before a preliminary municipality gets approved; neither passed intact. Waldrip's Aug. 18, 2026 statement that the county's funding was "at risk, meaning none" came five months after the second attempt died.</p>
 </section>
 
 <div class="connective">
   <p>Full source documents for this profile are listed below.</p>
+  <p>Unelected Power: profiles of Utah officials who hold appointed positions — how they got there, what authority the role carries, and how they've used it. Built exclusively from primary documents.</p>
 </div>
 
-<section class="section" style="padding-top:0;">
-  <details class="sources full-sources">
-  <summary>Full Source List</summary>
-  <div class="sources-body">
-    Heber City Council staff report and agenda, Aug. 18, 2026 meeting (Tony Kohler, Community Development Dept.) — official Waldrip biography and board listing.<br><br>
-    Steve Waldrip for House District 8 campaign site (electstevewaldrip.com), "About Steve" — his own stated professional background, incl. NAIOP Utah board membership (2004-2013) and presidency (2010-2011).<br><br>
-    Governor's Office press release, Dec. 5, 2023, "Gov. Cox appoints Steve Waldrip as new Senior Advisor for Housing Strategy and Innovation" — confirms he chaired the Commission on Housing Affordability at time of appointment. American Planning Association Utah, speaker bio (apautah.org) — confirms independent real estate consulting/development work from 2013 onward. Wikipedia, "Steve Waldrip" — "private real estate firm" characterization.<br><br>
-    Park Record, "Adviser invokes governor in threatening to cut state funding from Wasatch County over development decisions," Aug. 21, 2026.<br><br>
-    Park Record, "Governor's goon?" (op-ed by Annette McRae, SD-20 candidate), Aug. 26, 2026 — confirms public-records requests were filed; additional detail on those requests (UDOT's response, the Smedley/consultant lead) comes from McRae's own campaign page and is not independently verified here.<br><br>
-    KUTV (Megan Brugger), Aug. 28, 2026 — independent coverage; Cox's office and Waldrip both declined to respond to interview/comment requests.<br><br>
-    TownLift (Rebecca Brenner), Aug. 28, 2026 — Summit County's first on-record response; Cox's office and UDOT both declined to respond to comment requests.<br><br>
-    KPCW (Grace Doerfler) — "Counties who openly declare war," Aug. 21, 2026 (first outlet to report the Governor's office declined to respond); "Wasatch County leaders seek peace with governor's office," Aug. 26, 2026 (Councilmember Erik Rowland); "Wasatch County rejects proposal for 144 units on state land above Heber," Aug. 18, 2026 (confirms same-developer link to Wasatch Highlands).<br><br>
-    Senate Government Operations &amp; Political Subdivisions Committee minutes, Feb. 27, 2025, Utah State Legislature (le.utah.gov) — HB37 testimony.<br><br>
-    Utah Code §72-2-107, §72-2-108; Utah Admin. Code R926-3 — B&amp;C road fund statutes.<br><br>
-    H.B. 68 (2026), Utah State Legislature (<a href="https://le.utah.gov/~2026/bills/static/HB0068.html" target="_blank" rel="noopener">le.utah.gov</a>) — bill text and effective-date sections, incl. 5th Substitute bill text confirming the state housing coordinator position requires Senate advice and consent.<br><br>
-    Governor's Office press release, July 1, 2026, "Utah launches Division of Housing and Community Development to accelerate homebuilding" (<a href="https://governor.utah.gov/press/utah-launches-division-of-housing-and-community-development-to-accelerate-homebuilding/" target="_blank" rel="noopener">governor.utah.gov</a>).<br><br>
-    H.B. 36 2nd Substitute (2022) and H.B. 462 (2022), Utah State Legislature — Commission on Housing Affordability Amendments and Utah Housing Affordability Amendments.<br><br>
-    Herald Journal (hjnews.com), "New program helps families get homes in rising market," Nov. 2021 — Rocky Mountain Homes Fund origin.<br><br>
-    Intermountain Healthcare announcement, "Two Utah Nonprofit Organizations Team Up to Assist with Utah Housing," Aug. 2021.<br><br>
-    SEC EDGAR, Rocky Mountain Homes Fund III, L3C, Form D/A, filed 5/8/2024 (accession 000197681424000001).<br><br>
-    Building Salt Lake, "Governor's first housing czar aims to create 35,000 new starter homes," Jan. 2024.<br><br>
-    Private Activity Bond Program page, <a href="https://housing.utah.gov/community-development/pab/" target="_blank" rel="noopener">housing.utah.gov</a> — board roster and 2023-2026 volume cap account totals.<br><br>
-    Private Activity Bond Program meeting notice, Jan. 14, 2026 (Utah Public Notice Website, <a href="https://www.utah.gov/pmn/sitemap/notice/1047709.html" target="_blank" rel="noopener">utah.gov/pmn</a>) — Casey Cameron listed as Chair.<br><br>
-    Full minutes, Private Activity Bond Program board meeting, April 8, 2026, approved 7/8/2026 (<a href="https://www.utah.gov/pmn/sitemap/notice/1069261.html" target="_blank" rel="noopener">utah.gov/pmn</a>) — Waldrip's first meeting as Chair; §35A-8-2105(5) transfer motion.<br><br>
-    Pending minutes, Private Activity Bond Program board meeting, July 8, 2026 (<a href="https://www.utah.gov/pmn/sitemap/notice/1092715.html" target="_blank" rel="noopener">utah.gov/pmn</a>) — confirmed $2,000,999.70 additional allocation; HCD's DWS-to-GOEO transition update.<br><br>
-    Official Heber City CivicClerk meeting recording, Aug. 18, 2026 (hebercityut.portal.civicclerk.com/event/535/overview).<br><br>
-    S.B. 164 (2021), H.B. 37 (2025), H.B. 540 (2025), and H.B. 510 (2026) — full bill text, committee reports, and floor vote records, Utah State Legislature (le.utah.gov).<br><br>
-    Park Record (Clara Hatcher), "Wasatch County leaders want Utah legislators to understand how preliminary municipalities weigh heavy on local government," June 5, 2026, and "State rejects Bear Canyon for incorporation," July 22, 2026.<br><br>
-    KPCW, "Bankruptcy in Summit County looms over growing debate about popular development tool," Dec. 16, 2025; "Summit County golf resort bankruptcy ignites debate over development financing," April 21, 2026; "Why Utah auditor worries about developers bonding for infrastructure," March 20, 2026; "Popular Utah development financing tool draws SEC attention" (Connor Thomas), Aug. 25, 2026; "Wohali's new owners to pay debts to Coalville, sewer contractor" (Connor Thomas), Aug. 7, 2026; "Owner: Wohali needs $6M to successfully restructure during bankruptcy," Sept. 11, 2025; "Trustee to oversee northern Summit County golf course bankruptcy," Sept. 24, 2025; "Coalville says new investor in Wohali to restructure resort's finances, debt," July 30, 2025; "Bankrupt Coalville resort gets loan to pay off infrastructure debt," Dec. 8, 2025. Office of the Utah State Auditor, Auditor Alert 2025-05, March 19, 2026, and statewide PID bond total ($5,267,000,000) told directly to the Weber County Hive by the Auditor's office, Aug. 7, 2026. Park Record, "Wohali files for bankruptcy with debt totaling more than $13 million," Aug. 11, 2025, and "Federal judge authorizes $4 million loan to prevent Wohali foreclosure," Dec. 16, 2025. FOGOLF, "Utah luxury golf course community Wohali is bankrupt and headed for sale," Jan. 6, 2026.<br><br>
-    Eric Peterson, Utah Investigative Journalism Project/KSL.com, "Critics say Utah law gives unelected developers too much taxing power," and "Hidden developers' tax is zapping Utah homebuyers for billions," both April 28, 2026.<br><br>
-    Utah Inland Port Authority, Public Infrastructure District informational page (inlandportauthority.utah.gov/pid/). Utah Code §17B-2a-1209 (15-mill PID rate cap). H.B. 507 (2026), Utah State Legislature.<br><br>
-    Herriman Journal, "The new form of local government that could double your property taxes," Jan. 28, 2020.<br><br>
-    KPCW (Grace Doerfler), "Heber leaders hesitant to let Highlands developer levy special tax," June 18, 2026 — a separate Heber City development (The Highlands, D.R. Horton) from the Wasatch Highlands preliminary municipality covered above; cited here only for its PID cost debate.<br><br>
-    Utah State Auditor testimony, Political Subdivisions/Rules Review committee hearing, Jan. 15, 2026 (via Citizen Portal) — PID assessment costs "recovered via an additional property tax line for up to 40 years." Utah Code §59-2-103 — 45% residential property tax exemption on taxable value.
-  </div>
+<section class="up-connect"><h2>Connecting stories</h2><ul><li><a href="jefferson-moss.html">Jefferson Moss (UP 100.06)</a><span>Executive director of the Governor's Office of Economic Opportunity, where H.B. 68 placed the division Waldrip now leads.</span></li><li><a href="chris-kyler.html">Chris Kyler (UP 100.01)</a><span>CEO of the Utah Association of Realtors, whose representative spoke for HB37 alongside Waldrip; SITLA, whose land sits beside Wasatch Highlands, is one of his lobbying clients.</span></li><li><a href="uipa-hearing-fact-check.html">The Inland Port at the Legislature (UP 100.04)</a><span>UIPA's own PID materials and H.B. 507 (2026), both quoted in this page's PID section.</span></li><li><a href="matt-brower.html">Matt Brower (UP 400.03)</a><span>Heber City Manager; Waldrip's Aug. 18, 2026 remarks were made to the Heber City Council.</span></li></ul></section>
+
+<section class="section up-sources" style="padding-top:0;">
+  <h2>Sources</h2>
+  <details class="open-q">
+    <summary>Sources — click to open (with links)</summary>
+    <ul>
+        <li>Heber City Council staff report and agenda, Aug. 18, 2026 meeting (Tony Kohler, Community Development Dept.) — official Waldrip biography and board listing.</li>
+        <li>Steve Waldrip for House District 8 campaign site (electstevewaldrip.com), "About Steve" — his own stated professional background, incl. NAIOP Utah board membership (2004-2013) and presidency (2010-2011).</li>
+        <li>Governor's Office press release, Dec. 5, 2023, "Gov. Cox appoints Steve Waldrip as new Senior Advisor for Housing Strategy and Innovation" — confirms he chaired the Commission on Housing Affordability at time of appointment. American Planning Association Utah, speaker bio (apautah.org) — confirms independent real estate consulting/development work from 2013 onward. Wikipedia, "Steve Waldrip" — "private real estate firm" characterization.</li>
+        <li>Park Record, "Adviser invokes governor in threatening to cut state funding from Wasatch County over development decisions," Aug. 21, 2026.</li>
+        <li>Park Record, "Governor's goon?" (op-ed by Annette McRae, SD-20 candidate), Aug. 26, 2026 — confirms public-records requests were filed; additional detail on those requests (UDOT's response, the Smedley/consultant lead) comes from McRae's own campaign page and is not independently verified here.</li>
+        <li>KUTV (Megan Brugger), Aug. 28, 2026 — independent coverage; Cox's office and Waldrip both declined to respond to interview/comment requests.</li>
+        <li>TownLift (Rebecca Brenner), Aug. 28, 2026 — Summit County's first on-record response; Cox's office and UDOT both declined to respond to comment requests.</li>
+        <li>KPCW (Grace Doerfler) — "Counties who openly declare war," Aug. 21, 2026 (first outlet to report the Governor's office declined to respond); "Wasatch County leaders seek peace with governor's office," Aug. 26, 2026 (Councilmember Erik Rowland); "Wasatch County rejects proposal for 144 units on state land above Heber," Aug. 18, 2026 (confirms same-developer link to Wasatch Highlands).</li>
+        <li>Senate Government Operations &amp; Political Subdivisions Committee minutes, Feb. 27, 2025, Utah State Legislature (le.utah.gov) — HB37 testimony. <a href="https://le.utah.gov/~2025/bills/static/HB0037.html">H.B. 37 (2025) bill page</a>.</li>
+        <li>Utah Code §72-2-107, §72-2-108; Utah Admin. Code R926-3 — B&amp;C road fund statutes.</li>
+        <li>H.B. 68 (2026), Utah State Legislature (<a href="https://le.utah.gov/~2026/bills/static/HB0068.html" target="_blank" rel="noopener">le.utah.gov</a>) — bill text and effective-date sections, incl. 5th Substitute bill text confirming the state housing coordinator position requires Senate advice and consent.</li>
+        <li>Governor's Office press release, July 1, 2026, "Utah launches Division of Housing and Community Development to accelerate homebuilding" (<a href="https://governor.utah.gov/press/utah-launches-division-of-housing-and-community-development-to-accelerate-homebuilding/" target="_blank" rel="noopener">governor.utah.gov</a>).</li>
+        <li><a href="https://le.utah.gov/~2022/bills/static/HB0036.html">H.B. 36 2nd Substitute (2022)</a> and <a href="https://le.utah.gov/~2022/bills/static/HB0462.html">H.B. 462 (2022)</a>, Utah State Legislature — Commission on Housing Affordability Amendments and Utah Housing Affordability Amendments.</li>
+        <li>Herald Journal (hjnews.com), "New program helps families get homes in rising market," Nov. 2021 — Rocky Mountain Homes Fund origin.</li>
+        <li>Intermountain Healthcare announcement, "Two Utah Nonprofit Organizations Team Up to Assist with Utah Housing," Aug. 2021.</li>
+        <li>SEC EDGAR, Rocky Mountain Homes Fund III, L3C, Form D/A, filed 5/8/2024 (accession 000197681424000001).</li>
+        <li>Building Salt Lake, "Governor's first housing czar aims to create 35,000 new starter homes," Jan. 2024.</li>
+        <li>Private Activity Bond Program page, <a href="https://housing.utah.gov/community-development/pab/" target="_blank" rel="noopener">housing.utah.gov</a> — board roster and 2023-2026 volume cap account totals.</li>
+        <li>Private Activity Bond Program meeting notice, Jan. 14, 2026 (Utah Public Notice Website, <a href="https://www.utah.gov/pmn/sitemap/notice/1047709.html" target="_blank" rel="noopener">utah.gov/pmn</a>) — Casey Cameron listed as Chair.</li>
+        <li>Full minutes, Private Activity Bond Program board meeting, April 8, 2026, approved 7/8/2026 (<a href="https://www.utah.gov/pmn/sitemap/notice/1069261.html" target="_blank" rel="noopener">utah.gov/pmn</a>) — Waldrip's first meeting as Chair; §35A-8-2105(5) transfer motion.</li>
+        <li>Pending minutes, Private Activity Bond Program board meeting, July 8, 2026 (<a href="https://www.utah.gov/pmn/sitemap/notice/1092715.html" target="_blank" rel="noopener">utah.gov/pmn</a>) — confirmed $2,000,999.70 additional allocation; HCD's DWS-to-GOEO transition update.</li>
+        <li><a href="https://hebercityut.portal.civicclerk.com/event/535/overview">Official Heber City CivicClerk meeting recording, Aug. 18, 2026 (hebercityut.portal.civicclerk.com/event/535/overview)</a>.</li>
+        <li><a href="https://le.utah.gov/~2021/bills/static/SB0164.html">S.B. 164 (2021)</a>, <a href="https://le.utah.gov/~2025/bills/static/HB0037.html">H.B. 37 (2025)</a>, <a href="https://le.utah.gov/~2025/bills/static/HB0540.html">H.B. 540 (2025)</a>, and <a href="https://le.utah.gov/~2026/bills/static/HB0510.html">H.B. 510 (2026)</a> — full bill text, committee reports, and floor vote records, Utah State Legislature (le.utah.gov).</li>
+        <li>Park Record (Clara Hatcher), "Wasatch County leaders want Utah legislators to understand how preliminary municipalities weigh heavy on local government," June 5, 2026, and "State rejects Bear Canyon for incorporation," July 22, 2026.</li>
+        <li>KPCW, "Bankruptcy in Summit County looms over growing debate about popular development tool," Dec. 16, 2025; "Summit County golf resort bankruptcy ignites debate over development financing," April 21, 2026; "Why Utah auditor worries about developers bonding for infrastructure," March 20, 2026; "Popular Utah development financing tool draws SEC attention" (Connor Thomas), Aug. 25, 2026; "Wohali's new owners to pay debts to Coalville, sewer contractor" (Connor Thomas), Aug. 7, 2026; "Owner: Wohali needs $6M to successfully restructure during bankruptcy," Sept. 11, 2025; "Trustee to oversee northern Summit County golf course bankruptcy," Sept. 24, 2025; "Coalville says new investor in Wohali to restructure resort's finances, debt," July 30, 2025; "Bankrupt Coalville resort gets loan to pay off infrastructure debt," Dec. 8, 2025. Office of the Utah State Auditor, Auditor Alert 2025-05, March 19, 2026, and statewide PID bond total ($5,267,000,000) told directly to the Weber County Hive by the Auditor's office, Aug. 7, 2026. Park Record, "Wohali files for bankruptcy with debt totaling more than $13 million," Aug. 11, 2025, and "Federal judge authorizes $4 million loan to prevent Wohali foreclosure," Dec. 16, 2025. FOGOLF, "Utah luxury golf course community Wohali is bankrupt and headed for sale," Jan. 6, 2026.</li>
+        <li>Eric Peterson, Utah Investigative Journalism Project/KSL.com, "Critics say Utah law gives unelected developers too much taxing power," and "Hidden developers' tax is zapping Utah homebuyers for billions," both April 28, 2026.</li>
+        <li><a href="https://inlandportauthority.utah.gov/pid/">Utah Inland Port Authority, Public Infrastructure District informational page (inlandportauthority.utah.gov/pid/)</a>. Utah Code §17B-2a-1209 (15-mill PID rate cap). <a href="https://le.utah.gov/~2026/bills/static/HB0507.html">H.B. 507 (2026), Utah State Legislature</a>.</li>
+        <li>Herriman Journal, "The new form of local government that could double your property taxes," Jan. 28, 2020.</li>
+        <li>KPCW (Grace Doerfler), "Heber leaders hesitant to let Highlands developer levy special tax," June 18, 2026 — a separate Heber City development (The Highlands, D.R. Horton) from the Wasatch Highlands preliminary municipality covered above; cited here only for its PID cost debate.</li>
+        <li>Utah State Auditor testimony, Political Subdivisions/Rules Review committee hearing, Jan. 15, 2026 (via Citizen Portal) — PID assessment costs "recovered via an additional property tax line for up to 40 years." Utah Code §59-2-103 — 45% residential property tax exemption on taxable value.</li>
+        <li>Utah News Dispatch, Sept. 21, 2026 — Wasatch County: "no negative impacts to state funding" after the Aug. 28, 2026 meeting; Waldrip quote; Wasatch County Resolution 26-11 (Sept. 2, 2026).</li>
+    </ul>
   </details>
   <p style="margin-top:20px;"><a href="https://weber-county-hive.github.io/-weber-county-hive-index/" class="mono" style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.05em;text-transform:uppercase;">← Back to Weber County Hive</a></p>
 </section>
 
-<footer class="site-footer">
-  <div class="wrap">
-    <h3>The Weber County Hive · Unelected Power</h3>
-    <p>Profiles of Utah officials who hold appointed positions — how they got there, what authority the role carries, and how they've used it. Built exclusively from primary documents.</p>
-    <div class="links">
-      <a href="https://weber-county-hive.github.io/-weber-county-hive-index/">Weber County Hive — all coverage</a>
-      <a href="https://webercountyhive.substack.com/" target="_blank" rel="noopener">webercountyhive.substack.com ↗</a>
-    </div>
-  </div>
-</footer>
+<footer class="up-foot"><div class="in"><div id="up-shelf"></div><div><b>Utah Hive Politics · Unelected Power</b>, from the publisher of The Weber County Hive.</div><div class="up-sub">Public records only. We report public records. You decide. <a href="https://webercountyhive.substack.com/">webercountyhive.substack.com</a></div></div></footer><script src="unelected-power-data.js?v=4"></script><script src="up-shelf.js?v=1"></script>
 
 <script>
   document.querySelectorAll('[data-scroll-to]').forEach(function(btn){

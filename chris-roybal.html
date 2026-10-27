@@ -7,10 +7,10 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
 :root{
-  --paper:#f7f1e6; --paper-2:#efe6d3; --ink:#2a1f14; --ink-soft:#63594a;
-  --maroon:#5c1a1a; --maroon-2:#7a2424;
-  --gold:#a9762c; --gold-bg:#f0e0c0;
-  --line:#ddccaa;
+  --paper:#ffffff; --paper-2:#eef2f7; --ink:#1e2430; --ink-soft:#4a5466;
+  --maroon:#2c3e5c; --maroon-2:#3a5078;
+  --gold:#9a521f; --gold-bg:#f8ece2;
+  --line:#c9d3e1;
 }
 *{box-sizing:border-box;margin:0;padding:0;}
 body{background:var(--paper);color:var(--ink);font-family:'Source Sans 3',sans-serif;line-height:1.65;font-size:16px;}
@@ -23,16 +23,16 @@ h1,h2,h3{font-family:'Playfair Display',serif;color:var(--ink);}
 .topbar a{color:var(--gold-bg);text-decoration:none;opacity:.85;}
 .topbar a:hover{opacity:1;text-decoration:underline;}
 
-header.masthead{background:linear-gradient(135deg,var(--maroon),var(--maroon-2));color:#f4e9d8;padding:40px 0 32px;border-bottom:5px solid var(--gold);}
+header.masthead{background:linear-gradient(135deg,var(--maroon),var(--maroon-2));color:#ffffff;padding:40px 0 32px;border-bottom:5px solid var(--gold);}
 header.masthead .wrap{max-width:860px;margin:0 auto;padding:0 24px;}
 .kicker{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-bg);opacity:.8;margin-bottom:14px;}
-h1.title{font-size:42px;line-height:1.1;margin-bottom:14px;color:#fbf3e3;}
+h1.title{font-size:42px;line-height:1.1;margin-bottom:14px;color:#ffffff;}
 h1.title em{font-style:italic;color:var(--gold-bg);}
-p.dek{font-size:18px;color:#e9d9bb;max-width:640px;}
+p.dek{font-size:18px;color:#e6ecf5;max-width:640px;}
 .rc-row{margin-top:18px;display:flex;flex-wrap:wrap;gap:8px;}
 .rc-tag{display:inline-block;background:var(--gold-bg);border:1px solid var(--gold);color:var(--maroon);font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.03em;text-transform:uppercase;padding:4px 11px;border-radius:4px;text-decoration:none;}
 .rc-tag:hover{background:var(--gold);color:#fff;}
-.pub-date{margin-top:10px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.03em;color:#d8b98a;}
+.pub-date{margin-top:10px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.03em;color:#f3c9a6;}
 
 .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin:36px 0;}
 .stat{background:var(--paper-2);padding:20px;text-align:center;}
@@ -59,7 +59,7 @@ details.open-q p{margin-top:10px;margin-bottom:0;font-size:14.5px;}
 .tag{font-family:'IBM Plex Mono',monospace;font-size:11px;background:var(--gold-bg);border:1px solid var(--gold);color:var(--ink);padding:3px 9px;}
 
 footer{background:var(--ink);color:var(--paper-2);padding:36px 0 46px;margin-top:20px;}
-footer .sub{color:#a99a85;font-size:13px;margin-top:6px;}
+footer .sub{color:#b9c6da;font-size:13px;margin-top:6px;}
 
 @media(max-width:600px){
   header.masthead{padding:32px 0 26px;}
@@ -87,10 +87,10 @@ footer .sub{color:#a99a85;font-size:13px;margin-top:6px;}
 .tile-inner{position:relative;width:100%;height:100%;transition:transform .5s cubic-bezier(.4,.2,.2,1);transform-style:preserve-3d;cursor:pointer;}
 .tile.flipped .tile-inner{transform:rotateY(180deg);}
 .tile-face{position:absolute;inset:0;backface-visibility:hidden;border-radius:8px;padding:16px;display:flex;flex-direction:column;justify-content:center;}
-.tile-front{background:linear-gradient(135deg,var(--maroon),var(--maroon-2));color:#f4e9d8;text-align:center;border:2px solid var(--gold);}
+.tile-front{background:linear-gradient(135deg,var(--maroon),var(--maroon-2));color:#ffffff;text-align:center;border:2px solid var(--gold);}
 .tile-front .name{font-family:'Playfair Display',serif;font-size:17px;font-weight:700;margin-bottom:6px;}
 .tile-front .role{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.03em;color:var(--gold-bg);line-height:1.5;}
-.tile-front .hint{margin-top:12px;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:#d8b98a;}
+.tile-front .hint{margin-top:12px;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:#f3c9a6;}
 .tile-back{background:var(--paper-2);border:2px solid var(--maroon);transform:rotateY(180deg);font-size:12.5px;color:var(--ink);line-height:1.5;}
 .tile-back .connect-label{font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--maroon);margin-bottom:6px;display:block;}
 @media(max-width:700px){ .tile-grid{grid-template-columns:repeat(2,1fr);} }
@@ -105,6 +105,51 @@ footer .sub{color:#a99a85;font-size:13px;margin-top:6px;}
 .giving-recipient{background:var(--paper-2);border:1px solid var(--maroon);border-radius:6px;padding:12px 16px;font-size:15px;flex:1;}
 .giving-recipient .sub{display:block;font-size:12.5px;color:var(--ink-soft);margin-top:3px;}
 @media(max-width:600px){ .giving-chart{flex-direction:column;} .giving-amount{text-align:left;min-width:auto;} }
+
+/* ===== Unelected Power standard (slate blue & copper) — header, footer, Where/Who, call number ===== */
+.up-top{background:#1c2a40;color:#b9c6da;font:600 13px 'IBM Plex Mono',monospace;letter-spacing:.06em;text-transform:uppercase}
+.up-top .in{max-width:900px;margin:0 auto;padding:10px 20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.up-top a{color:#e6ecf5;text-decoration:none}
+.up-ww{max-width:900px;margin:26px auto 6px;padding:0 20px}
+.up-where{border:3px solid #2c3e5c;border-radius:10px;overflow:hidden;background:#fff}
+.up-where-h{background:#2c3e5c;color:#fff;padding:12px 18px}
+.up-lbl{font:600 12.5px 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#f3c9a6}
+.up-where-h .pl{font-size:21px;font-weight:700;margin-top:2px}
+.up-who{margin:14px 16px 16px;border:2px solid #9a521f;border-radius:8px}
+.up-who-h{background:#f8ece2;color:#9a521f;padding:6px 12px;font:600 12.5px 'IBM Plex Mono',monospace;letter-spacing:.14em;border-bottom:2px solid #9a521f}
+.up-who ul{list-style:none;margin:0;padding:6px 12px}
+.up-who li{padding:6px 0;border-bottom:1px solid #e3e8ef;font-size:17px;margin:0}
+.up-who li:last-child{border-bottom:none}
+.up-who li b{color:#2c3e5c}
+.up-connect ul{list-style:none;margin:0;padding:0}
+.up-connect li{border:1px solid #c9d3e1;border-left:5px solid #9a521f;background:#fff;padding:10px 14px;margin:0 0 10px;font-size:17px}
+.up-connect li a{font-weight:700;color:#2c3e5c}
+.up-connect li span{display:block;color:#4a5466;font-size:15.5px;margin-top:2px}
+.up-sources details{border:1px solid #c9d3e1;background:#eef2f7;padding:12px 16px}
+.up-sources summary{cursor:pointer;font:600 15px 'IBM Plex Mono',monospace;color:#2c3e5c}
+.up-sources li{margin:8px 0;font-size:16px}
+.up-foot{background:#1c2a40;color:#b9c6da;margin-top:30px;padding:28px 0 36px;font-size:16px}
+.up-foot .in{max-width:900px;margin:0 auto;padding:0 20px}
+.up-foot a{color:#f3c9a6}
+#up-shelf{border:2px dashed #b9c6da;border-radius:10px;padding:16px 18px;margin-bottom:20px;color:#e6ecf5}
+.up-cn-big{font:600 17px 'IBM Plex Mono',monospace;margin-bottom:12px}
+.up-cn-big b{color:#f3c9a6}
+.up-nav{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+.up-nav-btn{flex:1;min-width:220px;background:#2c3e5c;border:1px solid #4a6185;border-radius:8px;padding:12px 14px;color:#fff;text-decoration:none;font-size:16px}
+.up-nav-btn:last-child{text-align:right}
+.up-nav-btn b{color:#f3c9a6;font-family:'IBM Plex Mono',monospace}
+.up-nav-btn.up-off{opacity:.5}
+.up-list summary{cursor:pointer;font:600 15px 'IBM Plex Mono',monospace;color:#f3c9a6;margin-bottom:6px}
+.up-list ol{list-style:none;margin:8px 0 0;padding:0}
+.up-list li{margin:0;padding:5px 0;border-bottom:1px solid #2f4466}
+.up-list li a{color:#e6ecf5;text-decoration:none}
+.up-list li.up-shelf-head{color:#f3c9a6;font:600 13px 'IBM Plex Mono',monospace;letter-spacing:.1em;padding-top:12px;border-bottom:none}
+.up-list li.up-here a{color:#fff;font-weight:700}
+.up-cn{font-family:'IBM Plex Mono',monospace;color:#f3c9a6;margin-right:6px}
+.up-search{font-size:15px;margin-top:12px}
+.up-sub{font-size:14.5px;margin-top:8px;color:#b9c6da}
+
+@media(max-width:700px){table.data,table.dim-table{display:block;overflow-x:auto;max-width:100%}}
 </style>
 <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
 <script>
@@ -114,13 +159,13 @@ footer .sub{color:#a99a85;font-size:13px;margin-top:6px;}
     securityLevel: 'loose',
     flowchart: { htmlLabels: true, useMaxWidth: true, padding: 18 },
     themeVariables: {
-      primaryColor: '#efe6d3',
-      primaryTextColor: '#2a1f14',
-      primaryBorderColor: '#5c1a1a',
-      lineColor: '#a9762c',
-      secondaryColor: '#f0e0c0',
-      secondaryTextColor: '#2a1f14',
-      tertiaryColor: '#f7f1e6',
+      primaryColor: '#eef2f7',
+      primaryTextColor: '#1e2430',
+      primaryBorderColor: '#2c3e5c',
+      lineColor: '#9a521f',
+      secondaryColor: '#f8ece2',
+      secondaryTextColor: '#1e2430',
+      tertiaryColor: '#ffffff',
       fontFamily: 'Verdana, Arial, sans-serif',
       fontSize: '19px'
     }
@@ -129,24 +174,20 @@ footer .sub{color:#a99a85;font-size:13px;margin-top:6px;}
 </head>
 <body>
 
-<div class="topbar">
-  <div class="wrap">
-    <span>The Weber County Hive · Unelected Power</span>
-    <a href="https://weber-county-hive.github.io/-weber-county-hive-index/">Index ↗</a>
-  </div>
-</div>
+<div class="up-top"><div class="in"><span>Utah Hive Politics · Unelected Power</span><span><a href="index.html">← All Unelected Power pages</a> &nbsp;·&nbsp; <a href="https://weber-county-hive.github.io/-weber-county-hive-index/">Hive library ↗</a></span></div></div>
 
 <header class="masthead">
   <div class="wrap">
-    <div class="kicker">Case File · Never Elected</div>
+    <div class="kicker">Case File · Never Elected · UP 200.01</div>
     <h1 class="title">Chris <em>Roybal</em></h1>
     <p class="dek">President of the Northern Utah Economic Alliance and a member of a political action committee that has paid a sitting Weber County Commissioner $10,000 since 2022 — a PAC whose registered agent and manager are two other named individuals, not Roybal.</p>
     <div class="rc-row">
       <a class="rc-tag" href="ryan-starks.html">Cross-reference: Ryan Starks →</a>
     </div>
-    <div class="pub-date">Published Sept. 14, 2026</div>
+    <div class="pub-date">Posted Sept. 14, 2026 · Updated Oct. 27, 2026</div>
   </div>
 </header>
+<div class="up-ww"><div class="up-where"><div class="up-where-h"><div class="up-lbl">WHERE</div><div class="pl">Weber County · West Weber · Ogden Valley · Northern Utah</div></div><div class="up-who"><div class="up-who-h">WHO</div><ul><li><b>Chris Roybal</b> — President, Northern Utah Economic Alliance; member, Utah Forward PAC LLC</li><li><b>MIDA</b> — Military Installation Development Authority, the state board Froerer sits on</li><li><b>Utah Forward PAC</b> — PAC that paid Commissioner Froerer $10,000 since 2022</li><li><b>Katrina Gibson</b> — PAC registered agent; married to lobbyist Kerry Gibson</li><li><b>Laura Warburton</b> — PAC manager; Keep Our Valley Free</li><li><b>Gage Froerer</b> — Weber County Commissioner; MIDA board member (governor appointment); received $10,000 from the PAC</li><li><b>Speaker Mike Schultz</b> — largest identified PAC donor ($12,000); voting UIPA board member until Dec. 8, 2023</li></ul></div></div></div>
 
 <div class="wrap">
 
@@ -176,15 +217,15 @@ footer .sub{color:#a99a85;font-size:13px;margin-top:6px;}
     <div class="tile-grid">
       <div class="tile"><div class="tile-inner">
         <div class="tile-face tile-front"><div class="name">Katrina Gibson</div><div class="role">Registered Agent</div><div class="hint">Tap to flip</div></div>
-        <div class="tile-face tile-back"><span class="connect-label">Detail</span>5454 W 1150 S, Ogden. Married to Kerry Gibson, a registered Utah lobbyist.</div>
+        <div class="tile-face tile-back"><span class="connect-label">Detail</span>Ogden. Married to Kerry Gibson, a registered Utah lobbyist.</div>
       </div></div>
       <div class="tile"><div class="tile-inner">
         <div class="tile-face tile-front"><div class="name">Laura Warburton</div><div class="role">Manager</div><div class="hint">Tap to flip</div></div>
-        <div class="tile-face tile-back"><span class="connect-label">Detail</span>7328 E 1450 N, Huntsville. Also Director/CFO of Keep Our Valley Free — a group the PAC itself paid $4,927.20.</div>
+        <div class="tile-face tile-back"><span class="connect-label">Detail</span>Huntsville. Also Director/CFO of Keep Our Valley Free — a group the PAC itself paid $4,927.20.</div>
       </div></div>
       <div class="tile"><div class="tile-inner">
         <div class="tile-face tile-front"><div class="name">Chris Roybal</div><div class="role">Member</div><div class="hint">Tap to flip</div></div>
-        <div class="tile-face tile-back"><span class="connect-label">Detail</span>1267 W 1875 N, Farmington. President of NUEA; also a $1,000 personal donor to the PAC in 2022.</div>
+        <div class="tile-face tile-back"><span class="connect-label">Detail</span>Farmington. President of NUEA; also a $1,000 personal donor to the PAC in 2022.</div>
       </div></div>
     </div>
     <div class="diagram-caption">The PAC's own principal address: 4700 W 12th St, Ogden — distinct from any one member's own address</div>
@@ -207,7 +248,7 @@ footer .sub{color:#a99a85;font-size:13px;margin-top:6px;}
       <summary>Utah Forward PAC's own raw transaction export shows 22 contributions — click to collapse</summary>
       <table class="data">
         <tr><th>Date</th><th>Donor</th><th>Amount</th><th>Note</th></tr>
-      <tr><td>4/17/2022</td><td>Atlee Wampler</td><td>$5,000</td><td>Miami, FL</td></tr>
+      <tr><td>4/17/2022</td><td>Atlee Wampler</td><td>$5,000</td><td>Miami, FL — father of Ogden Valley City Mayor Janet Wampler (elected Nov. 2025); this gift came 3½ years before she ran</td></tr>
       <tr><td>4/17/2022</td><td>Joe Buchanan</td><td>$5,000</td><td>Miami, FL</td></tr>
       <tr><td>4/19/2022</td><td>John Lewis</td><td>$5,000</td><td>Eden, UT — the Eden Crossing developer, separate case file</td></tr>
       <tr><td>4/19/2022</td><td>Shane Dunleavy</td><td>$5,000</td><td>Personal, separate from Rincon Financial below</td></tr>
@@ -276,7 +317,7 @@ footer .sub{color:#a99a85;font-size:13px;margin-top:6px;}
       </table>
     </details>
     <p style="font-size:13.5px;color:var(--ink-soft);">The remaining difference from the PAC's $92,268 total spending (above) is routine administrative expenses — bank fees, annual corporate renewal fees, and a small number of non-political vendor payments (signage, supplies) not itemized in this table.</p>
-    <div class="callout"><strong>Utah Forward PAC gave $4,927.20 to Keep Our Valley Free</strong> — the organized opposition to Ogden Valley's 2024 incorporation vote, which commissioned a competing Utah Foundation feasibility study warning the new city could face funding shortfalls. Keep Our Valley Free's own PIC registration lists Laura Warburton as Director and CFO/Treasurer, at 7328 E 1450 N, Huntsville — the same address and the same person listed as Utah Forward PAC's own Manager. Bruce Warburton, likely her husband, is listed as a second officer at the same address.</div>
+    <div class="callout"><strong>Utah Forward PAC gave $4,927.20 to Keep Our Valley Free</strong> — the organized opposition to Ogden Valley's 2024 incorporation vote, which commissioned a competing Utah Foundation feasibility study warning the new city could face funding shortfalls. Keep Our Valley Free's own PIC registration lists Laura Warburton as Director and CFO/Treasurer — the same person, at the same Huntsville home address, listed as Utah Forward PAC's own Manager. The address is confirmed in multiple places: <a href="https://disclosures.utah.gov/">Keep Our Valley Free's PIC registration and Utah Forward PAC's filings (disclosures.utah.gov)</a> and <a href="https://businessregistration.utah.gov/EntitySearch/OnlineEntitySearch">Utah Forward PAC LLC's state business record (search "Utah Forward PAC")</a>. One of the PAC's 2022 donors, Atlee Wampler ($5,000), is the father of Janet Wampler, who was elected the new city's first mayor in November 2025. His gift was made in April 2022, before the PAC's payments to Keep Our Valley Free; the PAC's filings do not tie any one donor's money to any one payment. Bruce Warburton, likely her husband, is listed as a second officer at the same address.</div>
     <div class="giving-chart">
       <div class="giving-source">Laura Warburton</div>
       <div class="giving-targets">
@@ -293,7 +334,7 @@ footer .sub{color:#a99a85;font-size:13px;margin-top:6px;}
       </div>
     </div>
     <div class="diagram-caption">Same person, both sides of the payment</div>
-    <div class="callout"><strong>Politix received $7,158.30 across two 2025 payments</strong> — the largest confirmed vendor relationship in the PAC's spending. Kerry Gibson, husband of the PAC's registered agent Katrina Gibson, has separately been identified as connected to a company by this name; that ownership connection has not been independently confirmed in this file.</div>
+    <div class="callout"><strong>Politix received $7,158.30 across two 2025 payments</strong> — the largest confirmed vendor relationship in the PAC's spending. Politix LLC is co-owned by Katrina Gibson, the PAC's own registered agent and CFO, and her husband Kerry Gibson (see the <a href="laura-warburton.html">Laura Warburton file, UP 200.03</a>). The PAC paid a company its own officer's household owns, for polling and consultation on Weber County municipal elections.</div>
   </section>
 
   <section>
@@ -303,7 +344,7 @@ footer .sub{color:#a99a85;font-size:13px;margin-top:6px;}
   <section>
     <h2>Payments to Commissioner Froerer</h2>
     <p>Utah Forward PAC paid Weber County Commissioner Gage Froerer $5,000 on 7/11/2022 and $5,000 on 5/4/2023, both listed with the purpose "Political Support" — $10,000 total. Froerer separately serves as Weber County's Co-Chair on NUEA's Advisory Board, the organization Roybal leads.</p>
-    <p>Froerer also holds a gubernatorial appointment to the Military Installation Development Authority (MIDA) board, drawn from among Weber County's sitting commissioners. MIDA's confirmed Weber County project, the Falcon Hill Aerospace Research Park at Hill Air Force Base, is separate from the West Weber Inland Port project area referenced below.</p>
+    <p>Froerer also holds a gubernatorial appointment to the Military Installation Development Authority (MIDA) board, drawn from among Weber County's sitting commissioners. The Salt Lake Tribune (May 6, 2026) lists him as a current voting member; MIDA board members are unpaid, per the same report. MIDA's confirmed Weber County project, the Falcon Hill Aerospace Research Park at Hill Air Force Base, is separate from the West Weber Inland Port project area referenced below.</p>
   </section>
 
   <section>
@@ -311,6 +352,8 @@ footer .sub{color:#a99a85;font-size:13px;margin-top:6px;}
     <p>Several of Utah Forward PAC's donors have documented business interests in the West Weber area, where infrastructure financing (including a sewer lift station, a $5 million UIPA loan, and a public infrastructure district bond) has been approved by Weber County in recent years. Nilson &amp; Company operates active residential developments in Weber County, including Orchards at JDC Ranch and The Grove at JDC Ranch in Plain City. Rincon Financial is a corporate vehicle for developer Shane Dunleavy. R&amp;O Construction separately paid Froerer $1,000 directly in 2018, in addition to its $5,000 to Utah Forward PAC in 2022.</p>
     <div class="callout">Northern Wasatch Association of Realtors (NWAR) — a separate organization from NUEA — paid Froerer $5,000 four times between 2018 and 2022, for $20,000 total. NWAR's CEO throughout that period, Mike Ostermiller, has served on MIDA's board since 2008.</div>
     <p>Roybal has also served as a public proponent of the West Weber development itself, appearing alongside Froerer and Weber County Economic Development Director Stephanie Sage Russell to promote it — including as a potential Utah Inland Port Authority satellite site. Russell herself previously worked at NUEA before joining the county.</p>
+    <p>The Utah Inland Port Authority's draft minutes for its May 20, 2024 board meeting, where the board adopted the West Weber County Inland Port Project Area Plan, list Roybal among the people in attendance; Russell presented the county's plan at that meeting. Neither Roybal nor Froerer is listed among the board members present.</p>
+    <p>Speaker Mike Schultz did sit on the UIPA board. UIPA's approved minutes list him as a voting board member in October 2022 and October 2023, when he moved and seconded motions. UIPA announced on Dec. 8, 2023 that he was leaving the board, effective immediately. That means he was on the board in July and August 2023, when Weber County first proposed a West Weber project area and asked UIPA to adopt one. He was gone 10 days before UIPA staff asked the county, on Dec. 18, 2023, to expand the area to about 9,000 acres, and before the board adopted the West Weber plan in May 2024. The UIPA minutes we read do not show him voting on West Weber.</p>
   </section>
 
   <section>
@@ -341,22 +384,30 @@ footer .sub{color:#a99a85;font-size:13px;margin-top:6px;}
     </details>
   </section>
 
-  <section>
+<section class="up-connect"><h2>Connecting stories</h2><ul><li><a href="dan-hemmert.html">Dan Hemmert (UP 100.02)</a><span>Executive director of MIDA, the state board where Commissioner Froerer holds a seat.</span></li><li><a href="laura-warburton.html">Laura Warburton (UP 200.03)</a><span>Manager of Utah Forward PAC and director of Keep Our Valley Free, which the PAC paid $4,927.20.</span></li><li><a href="ryan-starks.html">Ryan Starks (UP 100.08)</a><span>EDCUtah, the organization Roybal says he once led as CEO.</span></li><li><a href="edcutah.html">EDCUtah (UP 100.03)</a><span>Private recruiter with public investors; Roybal is named in its network.</span></li><li><a href="falcon-hill-roy.html">Falcon Hill and Roy (UP 200.02)</a><span>MIDA's Falcon Hill project area in Weber County. Commissioner Froerer, who received $10,000 from Utah Forward PAC, sits on the MIDA board.</span></li></ul></section>
+
+  <section class="up-sources">
     <h2>Sources</h2>
     <details class="open-q">
-      <summary>View all sources</summary>
+      <summary>Sources — click to open (with links)</summary>
       <ul>
-        <li>Utah Forward PAC full raw transaction export (DEX), 2022-2026, disclosures.utah.gov</li>
-        <li>Gage Froerer campaign finance filings, 2018 and 2022-2023 (disclosures.utah.gov)</li>
+        <li><a href="https://disclosures.utah.gov/">Utah Forward PAC full raw transaction export (DEX), 2022-2026, disclosures.utah.gov</a></li>
+        <li><a href="https://disclosures.utah.gov/">Gage Froerer campaign finance filings, 2018 and 2022-2023 (disclosures.utah.gov)</a></li>
         <li>Northern Utah Economic Alliance Advisory Board listing</li>
         <li>47g.org industry partner directory</li>
-        <li>Utah Division of Corporations — Building Construction Partners LLC and Utah Forward PAC LLC entity records</li>
-        <li>OpenCorporates — Chris Roybal officer records (Northern Utah Economic Alliance, Utah Forward PAC LLC, Wasatch Avian Education Society)</li>
+        <li><a href="https://businessregistration.utah.gov/EntitySearch/OnlineEntitySearch">Utah Division of Corporations — Building Construction Partners LLC and Utah Forward PAC LLC entity records</a></li>
+        <li><a href="https://opencorporates.com/officers?q=Chris+Roybal&jurisdiction_code=us_ut">OpenCorporates — Chris Roybal officer records</a> (Northern Utah Economic Alliance, Utah Forward PAC LLC, Wasatch Avian Education Society)</li>
         <li>"Registered Lobbyist and Political Action Committee Fund Overlapping Races," The Weber County Hive (Substack)</li>
+        <li><a href="https://inlandportauthority.utah.gov/wp-content/uploads/Oct-18-UIPA-Board-Meeting-Approved-Minutes.pdf">Utah Inland Port Authority, approved board minutes, Oct. 18, 2022</a> (Schultz voting board member)</li>
+        <li><a href="https://inlandportauthority.utah.gov/wp-content/uploads/APPROVED-October-4-2023-UIPA-Board-Meeting-Minutes.pdf">Utah Inland Port Authority, approved board minutes, Oct. 4, 2023</a> (Schultz voting board member)</li>
+        <li><a href="https://inlandportauthority.utah.gov/2023/12/08/uipa-announces-departure-of-key-board-members-schultz-and-hansen">UIPA, "UIPA Announces Departure of Key Board Members, Schultz and Hansen" (Dec. 8, 2023)</a></li>
+        <li><a href="https://www.ksl.com/article/news/business/miles-hansen-mike-schultz-stepping-down-from-utah-inland-port-authority-board-of-directors/50813736">KSL, "Miles Hansen, Mike Schultz stepping down from Utah Inland Port Authority board of directors" (Dec. 8, 2023)</a></li>
+        <li><a href="https://inlandportauthority.utah.gov/wp-content/uploads/DRAFT-May-20-2024-UIPA-Board-Meeting-Minutes.pdf">Utah Inland Port Authority, draft board meeting minutes, May 20, 2024</a> (attendance list; West Weber project area adoption)</li>
         <li>Weber County Commission records on West Weber Inland Port infrastructure financing</li>
-        <li>"Growth in Utah: Ogden Valley, Spring Lake incorporation proposals go to voters in November," Deseret News, Aug. 24, 2024</li>
-        <li>keepourvalleyfree.com</li>
-        <li>Keep Our Valley Free PIC registration filing (Lt. Governor's Office)</li>
+        <li><a href="https://www.deseret.com/utah/2024/08/24/ogden-valley-spring-lake-incorporation-proposals-go-to-voters-in-november/">"Growth in Utah: Ogden Valley, Spring Lake incorporation proposals go to voters in November," Deseret News, Aug. 24, 2024</a></li>
+        <li><a href="https://www.ksl.com/article/51407913/janet-wampler-mayor-elect-of-new-ogden-valley-city-has-a-very-very-long-to-do-list">"Janet Wampler, mayor-elect of new Ogden Valley city, has a 'very, very long' to-do list," KSL/Deseret News, Nov. 22, 2025</a></li>
+        <li><a href="https://keepourvalleyfree.com">keepourvalleyfree.com</a></li>
+        <li><a href="https://disclosures.utah.gov/">Keep Our Valley Free PIC registration filing (Lt. Governor's Office)</a></li>
         <li>Chris Roybal LinkedIn profile</li>
         <li>Cross-reference: <a class="rc-tag" href="ryan-starks.html">Ryan Starks →</a>, this repo</li>
       </ul>
@@ -365,12 +416,7 @@ footer .sub{color:#a99a85;font-size:13px;margin-top:6px;}
 
 </div>
 
-<footer>
-  <div class="wrap">
-    <div>THE WEBER COUNTY HIVE · UNELECTED POWER</div>
-    <div class="sub">Independent accountability journalism. Public records only. We report; you decide.</div>
-  </div>
-</footer>
+<footer class="up-foot"><div class="in"><div id="up-shelf"></div><div><b>Utah Hive Politics · Unelected Power</b>, from the publisher of The Weber County Hive.</div><div class="up-sub">Public records only. We report public records. You decide. <a href="https://webercountyhive.substack.com/">webercountyhive.substack.com</a></div></div></footer><script src="unelected-power-data.js?v=4"></script><script src="up-shelf.js?v=1"></script>
 
 <script>
 document.querySelectorAll('.tile').forEach(function(tile){

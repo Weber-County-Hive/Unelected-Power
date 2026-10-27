@@ -7,10 +7,10 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
 :root{
-  --paper:#f7f1e6; --paper-2:#efe6d3; --ink:#2a1f14; --ink-soft:#63594a;
-  --maroon:#5c1a1a; --maroon-2:#7a2424;
-  --gold:#a9762c; --gold-bg:#f0e0c0;
-  --line:#ddccaa;
+  --paper:#ffffff; --paper-2:#eef2f7; --ink:#1e2430; --ink-soft:#4a5466;
+  --maroon:#2c3e5c; --maroon-2:#3a5078;
+  --gold:#9a521f; --gold-bg:#f8ece2;
+  --line:#c9d3e1;
 }
 *{box-sizing:border-box;margin:0;padding:0;}
 body{background:var(--paper);color:var(--ink);font-family:'Source Sans 3',sans-serif;line-height:1.65;font-size:16px;}
@@ -23,14 +23,14 @@ h1,h2,h3{font-family:'Playfair Display',serif;color:var(--ink);}
 .topbar a{color:var(--gold-bg);text-decoration:none;opacity:.85;}
 .topbar a:hover{opacity:1;text-decoration:underline;}
 
-header.masthead{background:linear-gradient(135deg,var(--maroon),var(--maroon-2));color:#f4e9d8;padding:40px 0 32px;border-bottom:5px solid var(--gold);}
+header.masthead{background:linear-gradient(135deg,var(--maroon),var(--maroon-2));color:#ffffff;padding:40px 0 32px;border-bottom:5px solid var(--gold);}
 header.masthead .wrap{max-width:860px;margin:0 auto;padding:0 24px;}
 .kicker{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-bg);opacity:.8;margin-bottom:14px;}
-h1.title{font-size:42px;line-height:1.1;margin-bottom:14px;color:#fbf3e3;}
+h1.title{font-size:42px;line-height:1.1;margin-bottom:14px;color:#ffffff;}
 h1.title em{font-style:italic;color:var(--gold-bg);}
-p.dek{font-size:18px;color:#e9d9bb;max-width:640px;}
+p.dek{font-size:18px;color:#e6ecf5;max-width:640px;}
 .rc-row{margin-top:18px;display:flex;flex-wrap:wrap;gap:8px;}
-.pub-date{margin-top:10px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.03em;color:#d8b98a;}
+.pub-date{margin-top:10px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.03em;color:#f3c9a6;}
 .rc-tag{display:inline-block;background:var(--gold-bg);border:1px solid var(--gold);color:var(--maroon);font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.03em;text-transform:uppercase;padding:4px 11px;border-radius:4px;text-decoration:none;}
 .rc-tag:hover{background:var(--gold);color:#fff;}
 
@@ -59,7 +59,7 @@ details.open-q p{margin-top:10px;margin-bottom:0;font-size:14.5px;}
 .tag{font-family:'IBM Plex Mono',monospace;font-size:11px;background:var(--gold-bg);border:1px solid var(--gold);color:var(--ink);padding:3px 9px;}
 
 footer{background:var(--ink);color:var(--paper-2);padding:36px 0 46px;margin-top:20px;}
-footer .sub{color:#a99a85;font-size:13px;margin-top:6px;}
+footer .sub{color:#b9c6da;font-size:13px;margin-top:6px;}
 
 @media(max-width:600px){
   header.masthead{padding:32px 0 26px;}
@@ -89,6 +89,49 @@ footer .sub{color:#a99a85;font-size:13px;margin-top:6px;}
   font-size:14.5px;
 }
 .ask-list li strong{color:var(--maroon);}
+
+/* ===== Unelected Power standard (slate blue & copper) — header, footer, Where/Who, call number ===== */
+.up-top{background:#1c2a40;color:#b9c6da;font:600 13px 'IBM Plex Mono',monospace;letter-spacing:.06em;text-transform:uppercase}
+.up-top .in{max-width:900px;margin:0 auto;padding:10px 20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.up-top a{color:#e6ecf5;text-decoration:none}
+.up-ww{max-width:900px;margin:26px auto 6px;padding:0 20px}
+.up-where{border:3px solid #2c3e5c;border-radius:10px;overflow:hidden;background:#fff}
+.up-where-h{background:#2c3e5c;color:#fff;padding:12px 18px}
+.up-lbl{font:600 12.5px 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#f3c9a6}
+.up-where-h .pl{font-size:21px;font-weight:700;margin-top:2px}
+.up-who{margin:14px 16px 16px;border:2px solid #9a521f;border-radius:8px}
+.up-who-h{background:#f8ece2;color:#9a521f;padding:6px 12px;font:600 12.5px 'IBM Plex Mono',monospace;letter-spacing:.14em;border-bottom:2px solid #9a521f}
+.up-who ul{list-style:none;margin:0;padding:6px 12px}
+.up-who li{padding:6px 0;border-bottom:1px solid #e3e8ef;font-size:17px;margin:0}
+.up-who li:last-child{border-bottom:none}
+.up-who li b{color:#2c3e5c}
+.up-connect ul{list-style:none;margin:0;padding:0}
+.up-connect li{border:1px solid #c9d3e1;border-left:5px solid #9a521f;background:#fff;padding:10px 14px;margin:0 0 10px;font-size:17px}
+.up-connect li a{font-weight:700;color:#2c3e5c}
+.up-connect li span{display:block;color:#4a5466;font-size:15.5px;margin-top:2px}
+.up-sources details{border:1px solid #c9d3e1;background:#eef2f7;padding:12px 16px}
+.up-sources summary{cursor:pointer;font:600 15px 'IBM Plex Mono',monospace;color:#2c3e5c}
+.up-sources li{margin:8px 0;font-size:16px}
+.up-foot{background:#1c2a40;color:#b9c6da;margin-top:30px;padding:28px 0 36px;font-size:16px}
+.up-foot .in{max-width:900px;margin:0 auto;padding:0 20px}
+.up-foot a{color:#f3c9a6}
+#up-shelf{border:2px dashed #b9c6da;border-radius:10px;padding:16px 18px;margin-bottom:20px;color:#e6ecf5}
+.up-cn-big{font:600 17px 'IBM Plex Mono',monospace;margin-bottom:12px}
+.up-cn-big b{color:#f3c9a6}
+.up-nav{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+.up-nav-btn{flex:1;min-width:220px;background:#2c3e5c;border:1px solid #4a6185;border-radius:8px;padding:12px 14px;color:#fff;text-decoration:none;font-size:16px}
+.up-nav-btn:last-child{text-align:right}
+.up-nav-btn b{color:#f3c9a6;font-family:'IBM Plex Mono',monospace}
+.up-nav-btn.up-off{opacity:.5}
+.up-list summary{cursor:pointer;font:600 15px 'IBM Plex Mono',monospace;color:#f3c9a6;margin-bottom:6px}
+.up-list ol{list-style:none;margin:8px 0 0;padding:0}
+.up-list li{margin:0;padding:5px 0;border-bottom:1px solid #2f4466}
+.up-list li a{color:#e6ecf5;text-decoration:none}
+.up-list li.up-shelf-head{color:#f3c9a6;font:600 13px 'IBM Plex Mono',monospace;letter-spacing:.1em;padding-top:12px;border-bottom:none}
+.up-list li.up-here a{color:#fff;font-weight:700}
+.up-cn{font-family:'IBM Plex Mono',monospace;color:#f3c9a6;margin-right:6px}
+.up-search{font-size:15px;margin-top:12px}
+.up-sub{font-size:14.5px;margin-top:8px;color:#b9c6da}
 </style>
 <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
 <script>
@@ -98,13 +141,13 @@ footer .sub{color:#a99a85;font-size:13px;margin-top:6px;}
     securityLevel: 'loose',
     flowchart: { htmlLabels: true, useMaxWidth: true, padding: 18 },
     themeVariables: {
-      primaryColor: '#efe6d3',
-      primaryTextColor: '#2a1f14',
-      primaryBorderColor: '#5c1a1a',
-      lineColor: '#a9762c',
-      secondaryColor: '#f0e0c0',
-      secondaryTextColor: '#2a1f14',
-      tertiaryColor: '#f7f1e6',
+      primaryColor: '#eef2f7',
+      primaryTextColor: '#1e2430',
+      primaryBorderColor: '#2c3e5c',
+      lineColor: '#9a521f',
+      secondaryColor: '#f8ece2',
+      secondaryTextColor: '#1e2430',
+      tertiaryColor: '#ffffff',
       fontFamily: 'Verdana, Arial, sans-serif',
       fontSize: '19px'
     }
@@ -113,25 +156,21 @@ footer .sub{color:#a99a85;font-size:13px;margin-top:6px;}
 </head>
 <body>
 
-<div class="topbar">
-  <div class="wrap">
-    <span>The Weber County Hive · Unelected Power</span>
-    <a href="https://weber-county-hive.github.io/-weber-county-hive-index/">Index ↗</a>
-  </div>
-</div>
+<div class="up-top"><div class="in"><span>Utah Hive Politics · Unelected Power</span><span><a href="index.html">← All Unelected Power pages</a> &nbsp;·&nbsp; <a href="https://weber-county-hive.github.io/-weber-county-hive-index/">Hive library ↗</a></span></div></div>
 
 <header class="masthead">
   <div class="wrap">
-    <div class="kicker">Case File · Never Elected</div>
+    <div class="kicker">Case File · Never Elected · UP 100.02</div>
     <h1 class="title">Dan <em>Hemmert</em></h1>
     <p class="dek">Resigned from the state Senate to run the same economic development office Ryan Starks would later lead — then became a lobbyist for the developers that office regulates, before taking the top job at another state authority whose reach covers his former clients.</p>
     <div class="rc-row">
       <a class="rc-tag" href="ryan-starks.html">Cross-reference: Ryan Starks →</a>
       <a class="rc-tag" href="jefferson-moss.html">Cross-reference: Jefferson Moss →</a>
     </div>
-    <div class="pub-date">Published Sept. 16, 2026 · Updated Oct. 27, 2026</div>
+    <div class="pub-date">Posted Sept. 16, 2026 · Updated Oct. 27, 2026</div>
   </div>
 </header>
+<div class="up-ww"><div class="up-where"><div class="up-where-h"><div class="up-lbl">WHERE</div><div class="pl">Mayflower project area (Wasatch County) · Tremonton · Perry · Utah County (former Senate District 14) · Statewide: MIDA, UIPA, GOEO, the Legislature</div></div><div class="up-who"><div class="up-who-h">WHO</div><ul><li><b>Dan Hemmert</b> — MIDA Executive Director (start reported Aug. 1, 2026); former state senator (District 14), GOEO executive director and registered lobbyist (Hemmco)</li><li><b>Military Installation Development Authority (MIDA)</b> — state authority Hemmert lobbied for (2023 to Aug. 3, 2026) and now runs</li><li><b>Ryan Starks and Jefferson Moss</b> — later led the same state economic development office (GOEO)</li><li><b>Attorney General Derek Brown</b> — his own disclosure form lists a Member position in LH Capital, LLC, where Hemmert is the only listed principal</li><li><b>Speaker Mike Schultz and Senate President Stuart Adams</b> — Schultz co-sponsored the 2020 bill creating the Public Health and Economic Emergency Commission with Hemmert; Adams pushed for the commission</li><li><b>Victoria Miller and Lance Bullen</b> — $5,600 donors to Hemmert's 2020 Senate campaign, tied to Dakota Pacific and Colmena Group</li><li><b>Lincoln Shurtz and David Stewart</b> — lobbyists whose firms (Lincoln Hill Partners, Legislative Executive Consulting) are listed as Hemmert's principals</li><li><b>Miles Hansen</b> — World Trade Center Utah CEO and 2023 UIPA board chair</li><li><b>Tremonton City and Perry City</b> — city clients that paid Hemmco</li><li><b>Rep. Dunnigan</b> — called MIDA's website-only public notice "not adequate" at the Oct. 21, 2026 hearing</li></ul></div></div></div>
 
 <div class="wrap">
 
@@ -144,14 +183,14 @@ footer .sub{color:#a99a85;font-size:13px;margin-top:6px;}
   <section>
     <h2>Four stages, one office</h2>
     <p>Dan Hemmert's career traces a path that has since become familiar at the top of Utah's economic development office: elected official, then agency director, then private-sector operator with business before the same state, then director of another state authority. He left the state Senate in January 2021 — he had represented Senate District 14 in Utah County (parts of Alpine, Highland, Cedar Hills, American Fork, Pleasant Grove, Lindon and Orem) since his 2016 appointment, and the Senate majority caucus had elected him Majority Whip for the 2021–22 Legislature — to become Gov. Spencer Cox's first executive director of the Governor's Office of Economic Opportunity (GOEO), a role he held for roughly a year before returning to the private sector.</p>
-    <p class="correction" style="font-size:.95em;border-left:4px solid #a9762c;padding:8px 12px;background:rgba(169,118,44,.08)"><strong>Correction, Oct. 27, 2026:</strong> An earlier version of this page said Hemmert represented "District 13/24." He represented Senate District 14 in Utah County from 2016 to January 2021 (Utah Senate leadership page; Daily Herald, Dec. 30, 2020). A reader pointed this out.</p>
+    <p class="correction" style="font-size:.95em;border-left:4px solid #9a521f;padding:8px 12px;background:#f8ece2"><strong>Correction, Oct. 27, 2026:</strong> An earlier version of this page said Hemmert represented "District 13/24." He represented Senate District 14 in Utah County from 2016 to January 2021 (Utah Senate leadership page; Daily Herald, Dec. 30, 2020). A reader pointed this out.</p>
     <p>From 2023 to August 2026, Hemmert built a private lobbying practice with a client list weighted heavily toward developers and companies with direct interests before the state agencies he used to help run — Dakota Pacific Real Estate, Alterra Mountain Company, the Utah Association of REALTORS, Lincoln Property Company, Union Pacific Railroad, Zions Bancorporation, Sanofi US, and, notably, the Military Installation Development Authority (MIDA) itself. The state lobbyist register shows most of those registrations, including MIDA, ending on Aug. 3, 2026; MIDA's board appointed him Executive Director, with his start reported as Aug. 1, 2026.</p>
     <div class="diagram-block wide">
       <pre class="mermaid">
 %%{init: {'flowchart': {'useMaxWidth': false, 'nodeSpacing': 50, 'rankSpacing': 70}, 'themeVariables': {'fontSize': '26px'}}}%%
 graph TD
-    classDef stop fill:#efe6d3,stroke:#5c1a1a,stroke-width:1px,color:#2a1f14;
-    classDef now fill:#f0e0c0,stroke:#a9762c,stroke-width:2px,color:#2a1f14;
+    classDef stop fill:#eef2f7,stroke:#2c3e5c,stroke-width:1px,color:#1e2430;
+    classDef now fill:#f8ece2,stroke:#9a521f,stroke-width:2px,color:#1e2430;
     A["Utah State Senate<br/>Senate District 14<br/>Utah County, 2016-2021"]:::stop --> B["GOEO Executive Director<br/>2021-2022, appointed by Cox"]:::stop
     B --> C["Private lobbyist<br/>2023-Aug. 2026<br/>Dakota Pacific, Alterra, MIDA &amp; others"]:::stop
     C --> D["MIDA Executive Director<br/>Aug. 2026-present"]:::now
@@ -192,7 +231,9 @@ graph TD
       <li><strong>Ended Aug. 3, 2026 (almost all the rest):</strong> including MIDA itself, Dakota Pacific Real Estate, Intermountain Power Agency, Kane Creek Preservation and Development, Union Pacific Railroad, Zions Bancorporation, Sanofi US, Salt Lake County, Utah County, Tooele County, UTOPIA and Moab City.</li>
     </ul>
     <p>His business listing, Hemmco LLC (registered Jan. 10, 2023), shows no end date on the register. Two lobbying firms are also listed as his principals from 2023 to Aug. 3, 2026: <strong>Legislative Executive Consulting</strong> (lobbyist David Stewart's firm) and <strong>Lincoln Hill Partners</strong> (lobbyist Lincoln Shurtz's firm).</p>
-    <p class="correction" style="font-size:.95em;border-left:4px solid #a9762c;padding:8px 12px;background:rgba(169,118,44,.08)"><strong>Correction, Oct. 27, 2026:</strong> An earlier version of this page said that on Jan. 13, 2026 Hemmert terminated most of his client list, keeping only clients with direct MIDA jurisdiction. The state lobbyist register shows he ended 7 registrations and added 15 that day, and that most of the rest, including MIDA, ended Aug. 3, 2026. The page now follows the register.</p>
+    <p>Utah's <a href="https://businessregistration.utah.gov/EntitySearch/OnlineEntitySearch">business registry</a> shows the "Lincoln Hill Partners" business name (DBA 12108082-0151) was filed by Fides LLC, whose Manager is Lincoln Shurtz. Fides LLC is also the name on the $80,000 donation to Lincoln Hill PAC on May 23, 2024, noted in the Business entities table below.</p>
+    <p><strong>What two city clients paid.</strong> <a href="https://transparent.utah.gov/">Transparent Utah</a> shows Tremonton City paid Hemmco $365,000 from FY2023 through FY2027, including $15,000 in FY2027. Perry City also hired Hemmco: the city council approved the hire 4-0 in 2023, and Perry's Resolution 2024-08 set the pay at $8,000 a month, for work including the city's gun range expansion. Both cities are on the lobbyist register list above.</p>
+    <p class="correction" style="font-size:.95em;border-left:4px solid #9a521f;padding:8px 12px;background:#f8ece2"><strong>Correction, Oct. 27, 2026:</strong> An earlier version of this page said that on Jan. 13, 2026 Hemmert terminated most of his client list, keeping only clients with direct MIDA jurisdiction. The state lobbyist register shows he ended 7 registrations and added 15 that day, and that most of the rest, including MIDA, ended Aug. 3, 2026. The page now follows the register.</p>
     <h3>Who registered for his clients</h3>
     <p>The same register shows other lobbyists registering for several of Hemmert's clients in 2026. Registering for the same client shows the lobbyists worked for that client. It does not by itself show an agreement between them.</p>
     <table class="data">
@@ -203,6 +244,19 @@ graph TD
       <tr><td>Joel Ferry (Utah Public Solutions)</td><td>Sept. 14, 2026, after Hemmert's registrations ended</td><td>Union Pacific Railroad, Utah Medical Association</td></tr>
     </table>
     <p>Casey Hill has been registered for Dakota Pacific Real Estate since 2021 and still is. Lincoln Shurtz and Chase Everton are still registered for Kane Creek. The register shows no new lobbyist since December 2025 for Dakota Pacific, Alterra, Motorola, Intermountain Power, First American, Walker Development or Salt Lake City.</p>
+  </section>
+
+  <section>
+    <h2>Oct. 21, 2026: Hemmert before the Legislature's Economic Development and Workforce Services Interim Committee</h2>
+    <p>As MIDA's Executive Director, Hemmert presented to the Legislature's Economic Development and Workforce Services Interim Committee on Oct. 21, 2026. The committee posted two handouts for the item: <a href="https://le.utah.gov/interim/2026/pdf/00003845.pdf">handout 00003845 (PDF)</a> and <a href="https://le.utah.gov/interim/2026/pdf/00003846.pdf">handout 00003846 (PDF)</a>. What was said:</p>
+    <ul>
+      <li><strong>MIDA's role in Mayflower:</strong> "We kind of just act as the RDA for the county."</li>
+      <li><strong>Stratos:</strong> Hemmert said the Stratos project was done "at the direct request of the federal military leadership," with announcements expected "in the next 3 to 6 months."</li>
+      <li><strong>Public notice:</strong> Rep. Dunnigan called website-only public notice "not adequate." Hemmert said a local notice rule "might be a great modification."</li>
+      <li><strong>"But-for" analysis:</strong> Hemmert said he knew of no "but-for" analysis for the Wasatch project area.</li>
+      <li><strong>MIDA's size:</strong> 13 employees and 8 project areas, 3 of them active.</li>
+    </ul>
+    <div class="callout">Quotes from the Hive's recording of the hearing; checked against the committee's official video before publishing.</div>
   </section>
 
   <section>
@@ -217,8 +271,8 @@ graph TD
       <pre class="mermaid">
 %%{init: {'flowchart': {'useMaxWidth': false, 'nodeSpacing': 50, 'rankSpacing': 90}, 'themeVariables': {'fontSize': '26px'}}}%%
 graph LR
-    classDef donor fill:#efe6d3,stroke:#5c1a1a,stroke-width:1px,color:#2a1f14;
-    classDef center fill:#f0e0c0,stroke:#a9762c,stroke-width:2px,color:#2a1f14;
+    classDef donor fill:#eef2f7,stroke:#2c3e5c,stroke-width:1px,color:#1e2430;
+    classDef center fill:#f8ece2,stroke:#9a521f,stroke-width:2px,color:#1e2430;
     VM["Victoria Miller<br/>2020 donor, $5,600"]:::donor --> DH["Dan Hemmert"]:::center
     LB["Lance Bullen<br/>2020 donor, $5,600"]:::donor --> DH
     DH --> DP["Dakota Pacific Real Estate<br/>lobbying client, 2023-2026<br/>'core MIDA developer'"]:::donor
@@ -230,7 +284,7 @@ graph LR
 
   <section>
     <h2>A personal business tie to the sitting Attorney General</h2>
-    <p>Utah Division of Corporations records (Entity #12262272-0160, formed April 20, 2021, active, renewed March 30, 2026, next renewal due April 30, 2027) list Daniel Hemmert as LH Capital, LLC's registered agent and its only listed principal — Manager, at 1115 E 965 N, Orem. OpenCorporates' own record of the entity's officer history shows the same pattern going back further: Hemmert has held every officer position the entity has ever had — agent, registered agent, and now manager — with no other person ever listed, active or inactive. LH Capital is classified under NAICS code 52599 ("Other Financial Vehicles") and UN ISIC code 6430 ("Trusts, funds and similar financial entities"), consistent with a personal investment vehicle rather than an operating business. Attorney General Derek Brown's own official financial disclosure form separately lists LH Capital, LLC as an entity where Brown holds a Member position. Utah's LLC filing requirements don't require every member to be named on the state record, so Brown's absence from LH Capital's own filing isn't a contradiction — but the membership tie is currently sourced entirely to Brown's own disclosure, not corroborated by LH Capital's corporate registration itself.</p>
+    <p>Utah Division of Corporations records (Entity #12262272-0160, formed April 20, 2021, active, renewed March 30, 2026, next renewal due April 30, 2027) list Daniel Hemmert as LH Capital, LLC's registered agent and its only listed principal — Manager, at an Orem address. OpenCorporates' own record of the entity's officer history shows the same pattern going back further: Hemmert has held every officer position the entity has ever had — agent, registered agent, and now manager — with no other person ever listed, active or inactive. LH Capital is classified under NAICS code 52599 ("Other Financial Vehicles") and UN ISIC code 6430 ("Trusts, funds and similar financial entities"), consistent with a personal investment vehicle rather than an operating business. Attorney General Derek Brown's own official financial disclosure form separately lists LH Capital, LLC as an entity where Brown holds a Member position. Utah's LLC filing requirements don't require every member to be named on the state record, so Brown's absence from LH Capital's own filing isn't a contradiction — but the membership tie is currently sourced entirely to Brown's own disclosure, not corroborated by LH Capital's corporate registration itself.</p>
     <p>Hemmert was previously a named partner at Election Hive LLC, a campaign infrastructure firm whose registered address — 136 S Main St, Suite A200, Salt Lake City — matches the address used by Derek Brown's own Attorney General campaign committee. Hemmert's profile was removed from Election Hive's site around the time of his MIDA appointment. Election Hive has separately been documented in this project's reporting as paying more than $114,000 to Brown's campaign and more than $186,000 to Gov. Cox in 2025, and its client list includes a wide swath of sitting Utah legislators.</p>
     <div class="callout">Not yet verified: what LH Capital's financial-vehicle classification actually holds or invests in, whether it has any state-related business, and when Brown became a member relative to Hemmert's MIDA appointment. Also worth noting: the membership tie rests on Brown's own disclosure alone — LH Capital's state filing and its full OpenCorporates officer history name no member besides Hemmert.</div>
   </section>
@@ -239,7 +293,7 @@ graph LR
     <h2>Business entities</h2>
     <table class="data">
       <tr><th>Entity</th><th>Status</th><th>Note</th></tr>
-      <tr><td>HEMMCO, LLC</td><td>Active (formed 3/31/2014, renewed 3/30/2026)</td><td>Registered agent/sole Manager: Hemmert, 1115 E 965 N, Orem. Donated $5,000 to Lincoln Hill PAC on 5/23/2024 — the same day Fides LLC donated $80,000, six days before Lincoln Hill PAC donated $5,000 to Derek Brown's AG campaign</td></tr>
+      <tr><td>HEMMCO, LLC</td><td>Active (formed 3/31/2014, renewed 3/30/2026)</td><td>Registered agent/sole Manager: Hemmert, Orem. Donated $5,000 to Lincoln Hill PAC on 5/23/2024 — the same day Fides LLC donated $80,000, six days before Lincoln Hill PAC donated $5,000 to Derek Brown's AG campaign</td></tr>
       <tr><td>RHRD, LLC</td><td>Active</td><td>Formed 3/31/2014, same day as HEMMCO, which was its original registered agent/Manager. Co-founding Manager: FISHCO, LLC (Ryan Fish). Is itself the sole registered agent/Manager of BizDevOps Consulting, LLC</td></tr>
       <tr><td>BizDevOps Consulting, LLC</td><td>Active</td><td>Received $62,500 from the taxpayer-funded nonprofit Utah Workforce Housing Advocacy (UWHA) in Oct.-Nov. 2024 — a payment omitted from UWHA's year-end final spending report to GOEO despite appearing in an earlier interim report</td></tr>
       <tr><td>LH Capital, LLC</td><td>Active (Entity #12262272-0160, formed 4/20/2021, renewed 3/30/2026, next due 4/30/2027)</td><td>Only listed principal is Hemmert (Manager); see Attorney General connection above</td></tr>
@@ -257,11 +311,11 @@ graph LR
     <h2>Nonprofit and director roles</h2>
     <table class="data">
       <tr><th>Organization</th><th>Role &amp; dates</th><th>Note</th></tr>
-      <tr><td>Utah World Trade Center Corporation</td><td>Director, since 10/24/2005 (now inactive)</td><td>60 E South Temple, Suite 300, Salt Lake City. This is World Trade Center Utah — the organization Miles Hansen, 2023 UIPA Board Chair, leads as CEO. Hemmert also served on the Inland Port Authority Board starting April 2022</td></tr>
+      <tr><td>Utah World Trade Center Corporation</td><td>Director, since 10/24/2005 (now inactive)</td><td>60 E South Temple, Suite 300, Salt Lake City. This is World Trade Center Utah — the organization Miles Hansen, 2023 UIPA Board Chair, leads as CEO. Hemmert also served on the Inland Port Authority Board starting April 2022. <a href="https://inlandportauthority.utah.gov/wp-content/uploads/Oct-18-UIPA-Board-Meeting-Approved-Minutes.pdf">UIPA's approved minutes for Oct. 18, 2022</a> list Hemmert among the board members present; he seconded a motion at that meeting</td></tr>
       <tr><td>ALL IN FOR UTAH</td><td>Director, since 1/27/2023</td><td>6905 S 1300 E #224, Cottonwood Heights. A separate PAC filing tracked elsewhere in this research, "All In For Utah PAC" (formed 4/17/2026), lists Hemmert as Treasurer alongside Owen Fuller as Chair — whether this 2023 nonprofit registration and the 2026 PAC are the same organization under different filings, or two distinct entities sharing a name, is not yet resolved</td></tr>
       <tr><td>UAC Housing Foundation</td><td>Director &amp; incorporator, 8/14/2024–11/21/2025 (now inactive)</td><td>Not yet researched — worth checking against the existing Utah Workforce Housing Advocacy (UWHA) research for any overlap in funding, personnel, or purpose</td></tr>
       <tr><td>Geothermal Impact Alliance</td><td>Director, since 5/5/2025</td><td>Not yet researched</td></tr>
-      <tr><td>Liberty pipeline inc</td><td>Agent, incorporator &amp; president, since 3/11/2026 (Idaho nonprofit)</td><td>Filed under "Dan W Hemmert"/"Dan William Hemmert." A Whitepages record for "Daniel W Hemmert" lists his address as 1115 E 965 N, Orem — matching every confirmed Utah entity — and his work as "Partner at Hemmco, LLC," his own consulting firm. Strong corroborating evidence this is the same person, though not a primary-source confirmation</td></tr>
+      <tr><td>Liberty pipeline inc</td><td>Agent, incorporator &amp; president, since 3/11/2026 (Idaho nonprofit)</td><td>Filed under "Dan W Hemmert"/"Dan William Hemmert." A Whitepages record for "Daniel W Hemmert" lists his address as the same Orem home address used on every confirmed Utah entity — an address confirmed in multiple places: the <a href="https://businessregistration.utah.gov/EntitySearch/OnlineEntitySearch">Utah business registry</a> records for HEMMCO, LLC and LH Capital, LLC — and his work as "Partner at Hemmco, LLC," his own consulting firm. Strong corroborating evidence this is the same person, though not a primary-source confirmation</td></tr>
       <tr><td>Liberty Town Canal Company</td><td>Agent, then president, since 4/30/2012 (Idaho nonprofit)</td><td>Ovid, Idaho address, same officer name pattern as Liberty pipeline inc above. See identity note on that row</td></tr>
     </table>
     <div class="callout">The Utah World Trade Center Corporation seat connects Hemmert directly to Miles Hansen, who chaired UIPA's board during the same period Hemmert served on it — a tie worth weighing alongside the already-documented UIPA/Golden Spike research elsewhere in this project.</div>
@@ -308,7 +362,7 @@ graph LR
     </details>
     <details class="open-q">
       <summary>Are the Idaho entities (Liberty pipeline inc, Liberty Town Canal Company) the same Dan Hemmert?</summary>
-      <p>Likely yes. Both are registered at 4795 Lanark Rd, Ovid, Idaho — a different address from the Utah entities — and Liberty pipeline inc names its officer as "Dan W Hemmert"/"Dan William Hemmert," a middle name absent from the Utah filings. A Whitepages record for "Daniel W Hemmert," however, lists his address as 1115 E 965 N, Orem — matching every confirmed Utah entity — and his work as "Partner at Hemmco, LLC," his own firm. That address-and-employer match is strong corroborating evidence this is the same person, though Whitepages is a data aggregator rather than a primary government record. A minor supporting detail: a 2010 USU hydrology thesis on the Bear River Basin lists a water right for "Hemmert Hot Spring" (priority date 1898) in the Bear Lake National Wildlife Refuge area — the same stretch of Bear Lake County, Idaho as Ovid. A named landmark carrying the family name in that exact area, dating back over a century, is consistent with a long-standing family presence there, though this is a place-name detail from 1898, not proof of the current entities' ownership.</p>
+      <p>Likely yes. Both are registered at the same address in Ovid, Idaho — a different address from the Utah entities — and Liberty pipeline inc names its officer as "Dan W Hemmert"/"Dan William Hemmert," a middle name absent from the Utah filings. A Whitepages record for "Daniel W Hemmert," however, lists his address as the same Orem home address used on every confirmed Utah entity (confirmed in multiple places: the <a href="https://businessregistration.utah.gov/EntitySearch/OnlineEntitySearch">Utah business registry</a> records for HEMMCO, LLC and LH Capital, LLC) — and his work as "Partner at Hemmco, LLC," his own firm. That address-and-employer match is strong corroborating evidence this is the same person, though Whitepages is a data aggregator rather than a primary government record. A minor supporting detail: a 2010 USU hydrology thesis on the Bear River Basin lists a water right for "Hemmert Hot Spring" (priority date 1898) in the Bear Lake National Wildlife Refuge area — the same stretch of Bear Lake County, Idaho as Ovid. A named landmark carrying the family name in that exact area, dating back over a century, is consistent with a long-standing family presence there, though this is a place-name detail from 1898, not proof of the current entities' ownership.</p>
     </details>
     <details class="open-q">
       <summary>What are the Geothermal Impact Alliance and Liberty pipeline inc?</summary>
@@ -331,42 +385,46 @@ graph LR
     </ul>
   </section>
 
-  <section>
+<section class="up-connect"><h2>Connecting stories</h2><ul><li><a href="ryan-starks.html">Ryan Starks (UP 100.08)</a><span>Ran the same state economic development office (GOEO) from 2023 to 2025.</span></li><li><a href="jefferson-moss.html">Jefferson Moss (UP 100.06)</a><span>Runs that office today; the third of its directors in this series.</span></li><li><a href="mike-ostermiller.html">Mike Ostermiller (UP 100.07)</a><span>MIDA board member since 2008; Hemmert is now MIDA's Executive Director.</span></li><li><a href="falcon-hill-roy.html">Falcon Hill and Roy (UP 200.02)</a><span>MIDA's Falcon Hill project area; that page also notes Hemmert's Oct. 21, 2026 presentation.</span></li><li><a href="utah-rising.html">Utah Rising (UP 100.10)</a><span>Names The Point, tied to his 2020 donor Lance Bullen's Colmena Group, and lists World Trade Center Utah.</span></li><li><a href="edcutah.html">EDCUtah (UP 100.03)</a><span>Lance Bullen, a $5,600 donor to Hemmert's 2020 campaign, sits on the EDCUtah board.</span></li></ul></section>
+
+  <section class="up-sources">
     <h2>Sources</h2>
     <details class="open-q">
-      <summary>View all sources</summary>
+      <summary>Sources — click to open (with links)</summary>
       <ul>
         <li><a href="https://lobbyist.utah.gov/Search/LobbyistByPrincipal" target="_blank" rel="noopener">Utah Lt. Governor's Office, lobbyist register, "Lobbyist lookup by Principal Organization"</a> — Hemmert, Stewart, Shurtz, Lusty, Ferry and Hill registrations (read Oct. 27, 2026)</li>
         <li><a href="https://webercountyhive-coder.github.io/Data-Centers/data-center-industry-money.html" target="_blank" rel="noopener">The Weber County Hive, Data-Centers: industry money</a> — MIDA Resolution 2026-12; start reported as Aug. 1, 2026</li>
         <li><a href="https://senate.utah.gov/?p=288" target="_blank" rel="noopener">Utah Senate, "Utah Senate's Majority Leadership Team for the 64th Legislature"</a> — Sen. Dan Hemmert (R, District 14), Majority Whip</li>
         <li><a href="https://www.heraldextra.com/news/2020/dec/30/republican-mike-kennedy-wins-special-election-for-open-senate-district-seat/" target="_blank" rel="noopener">Daily Herald, Dec. 30, 2020</a> — Senate District 14 (parts of Alpine, Highland, Cedar Hills, American Fork, Pleasant Grove, Lindon, Orem); Mike Kennedy chosen to replace Hemmert</li>
-        <li>Utah lobbyist registration records, disclosures.utah.gov — Hemmco/Dan Hemmert client roster</li>
-        <li>Utah campaign finance disclosures, 2020 Hemmert Senate campaign donor records</li>
-        <li>Utah Division of Corporations entity records (OpenCorporates) — HEMMCO LLC, HEMMCCO Inc., RHRD LLC, BizDevOps Consulting LLC, LH Capital LLC, Indie Development LLC, ETNA Capitale LLC, DD BYU Homes LLC, CRONUT BOYS LLC</li>
+        <li><a href="https://disclosures.utah.gov/">Utah lobbyist registration records, disclosures.utah.gov</a> — Hemmco/Dan Hemmert client roster</li>
+        <li><a href="https://disclosures.utah.gov/">Utah campaign finance disclosures, 2020 Hemmert Senate campaign donor records</a></li>
+        <li><a href="https://businessregistration.utah.gov/EntitySearch/OnlineEntitySearch">Utah Division of Corporations entity records</a> (OpenCorporates) — HEMMCO LLC, HEMMCCO Inc., RHRD LLC, BizDevOps Consulting LLC, LH Capital LLC, Indie Development LLC, ETNA Capitale LLC, DD BYU Homes LLC, CRONUT BOYS LLC</li>
         <li>OpenCorporates officer search, "Dan Hemmert" — full officer history across Utah, Idaho, and Ohio entities, including Hemm Co., Vinyx Systems Inc., Utah World Trade Center Corporation, ALL IN FOR UTAH, UAC Housing Foundation, Geothermal Impact Alliance, and Liberty pipeline inc</li>
         <li>Utah Department of Commerce, 2019 Annual Report — Regulatory Sandbox legislation (Hemmert/Roberts, signed by Gov. Gary Herbert)</li>
         <li>Lisa Song and Mollie Simon, "Politicians and Business Interests Pushed Health Officials Aside to Control Reopening. Then Cases Exploded," ProPublica, July 21, 2020 (clarified July 22, 2020)</li>
         <li>Derek Brown, Attorney General official financial disclosure form — LH Capital, LLC membership</li>
         <li>Election Hive LLC entity records and client testimonial page</li>
-        <li>Lincoln Hill PAC donation records, disclosures.utah.gov</li>
+        <li><a href="https://disclosures.utah.gov/">Lincoln Hill PAC donation records, disclosures.utah.gov</a></li>
         <li>Utah Workforce Housing Advocacy (UWHA) interim and year-end spending reports to GOEO</li>
         <li>Hemmco "Indicative Clients" list</li>
         <li>Facility listing, Meta Eagle Mountain data center campus</li>
         <li>gathergov.com, secondary source re: Eagle Mountain lobbying engagement (unverified, flagged as such)</li>
         <li>Governor's Office appointment announcements — GOEO Executive Director (2021), MIDA Executive Director</li>
-        <li>Cross-reference: [[ryan-starks-edcutah]] and [[goed-audit-2026-18]] research, Weber County Hive internal files</li>
+        <li>Cross-reference: <a href="ryan-starks.html">Ryan Starks (UP 100.08)</a> and <a href="https://weber-county-hive.github.io/audits/weber-hive-goed-audit-2026-18.html">The 2026 GOED Audit (Report 2026-18)</a>, Weber County Hive research files</li>
+        <li><a href="https://le.utah.gov/interim/2026/pdf/00003845.pdf">Economic Development and Workforce Services Interim Committee, handout 00003845</a> and <a href="https://le.utah.gov/interim/2026/pdf/00003846.pdf">handout 00003846</a>, Oct. 21, 2026 (MIDA)</li>
+        <li>The Weber County Hive's recording of the Oct. 21, 2026 Economic Development and Workforce Services Interim Committee hearing, checked against the committee's official video</li>
+        <li><a href="https://inlandportauthority.utah.gov/wp-content/uploads/Oct-18-UIPA-Board-Meeting-Approved-Minutes.pdf">Utah Inland Port Authority, approved board minutes, Oct. 18, 2022</a> (Hemmert among board members present; seconded a motion)</li>
+        <li>Utah lobbyist register, pulled Oct. 27, 2026 (Tremonton City, Perry City, Lincoln Hill Partners)</li>
+        <li><a href="https://transparent.utah.gov/">Transparent Utah</a> — Tremonton City payments to Hemmco, FY2023–FY2027</li>
+        <li>Perry City Council vote (2023) and Perry City Resolution 2024-08 (Hemmco, $8,000 a month)</li>
+        <li><a href="https://businessregistration.utah.gov/EntitySearch/OnlineEntitySearch">Utah business registry</a> — "Lincoln Hill Partners" business name, DBA 12108082-0151, filed by Fides LLC (Manager: Lincoln Shurtz)</li>
       </ul>
     </details>
   </section>
 
 </div>
 
-<footer>
-  <div class="wrap">
-    <div>THE WEBER COUNTY HIVE · UNELECTED POWER</div>
-    <div class="sub">Independent accountability journalism. Public records only. We report; you decide.</div>
-  </div>
-</footer>
+<footer class="up-foot"><div class="in"><div id="up-shelf"></div><div><b>Utah Hive Politics · Unelected Power</b>, from the publisher of The Weber County Hive.</div><div class="up-sub">Public records only. We report public records. You decide. <a href="https://webercountyhive.substack.com/">webercountyhive.substack.com</a></div></div></footer><script src="unelected-power-data.js?v=4"></script><script src="up-shelf.js?v=1"></script>
 
 <script data-goatcounter="https://weberhive.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>

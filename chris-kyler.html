@@ -7,10 +7,10 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
 :root{
-  --paper:#f7f1e6; --paper-2:#efe6d3; --ink:#2a1f14; --ink-soft:#63594a;
-  --maroon:#5c1a1a; --maroon-2:#7a2424;
-  --gold:#a9762c; --gold-bg:#f0e0c0;
-  --line:#ddccaa;
+  --paper:#ffffff; --paper-2:#eef2f7; --ink:#1e2430; --ink-soft:#4a5466;
+  --maroon:#2c3e5c; --maroon-2:#3a5078;
+  --gold:#9a521f; --gold-bg:#f8ece2;
+  --line:#c9d3e1;
 }
 *{box-sizing:border-box;margin:0;padding:0;}
 body{background:var(--paper);color:var(--ink);font-family:'Source Sans 3',sans-serif;line-height:1.65;font-size:16px;}
@@ -23,12 +23,13 @@ h1,h2,h3{font-family:'Playfair Display',serif;color:var(--ink);}
 .topbar a{color:var(--gold-bg);text-decoration:none;opacity:.85;}
 .topbar a:hover{opacity:1;text-decoration:underline;}
 
-header.masthead{background:linear-gradient(135deg,var(--maroon),var(--maroon-2));color:#f4e9d8;padding:40px 0 32px;border-bottom:5px solid var(--gold);}
+header.masthead{background:linear-gradient(135deg,var(--maroon),var(--maroon-2));color:#ffffff;padding:40px 0 32px;border-bottom:5px solid var(--gold);}
 header.masthead .wrap{max-width:860px;margin:0 auto;padding:0 24px;}
 .kicker{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-bg);opacity:.8;margin-bottom:14px;}
-h1.title{font-size:42px;line-height:1.1;margin-bottom:14px;color:#fbf3e3;}
+h1.title{font-size:42px;line-height:1.1;margin-bottom:14px;color:#ffffff;}
 h1.title em{font-style:italic;color:var(--gold-bg);}
-p.dek{font-size:18px;color:#e9d9bb;max-width:640px;}
+p.dek{font-size:18px;color:#e6ecf5;max-width:640px;}
+.pub-date{margin-top:10px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.03em;color:#f3c9a6;}
 
 .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin:36px 0;}
 .stat{background:var(--paper-2);padding:20px;text-align:center;}
@@ -55,31 +56,71 @@ details.open-q p{margin-top:10px;margin-bottom:0;font-size:14.5px;}
 .tag{font-family:'IBM Plex Mono',monospace;font-size:11px;background:var(--gold-bg);border:1px solid var(--gold);color:var(--ink);padding:3px 9px;}
 
 footer{background:var(--ink);color:var(--paper-2);padding:36px 0 46px;margin-top:20px;}
-footer .sub{color:#a99a85;font-size:13px;margin-top:6px;}
+footer .sub{color:#b9c6da;font-size:13px;margin-top:6px;}
 
 @media(max-width:600px){
   header.masthead{padding:32px 0 26px;}
   h1.title{font-size:30px;}
   .stats{grid-template-columns:1fr;}
 }
+
+/* ===== Unelected Power standard (slate blue & copper) — header, footer, Where/Who, call number ===== */
+.up-top{background:#1c2a40;color:#b9c6da;font:600 13px 'IBM Plex Mono',monospace;letter-spacing:.06em;text-transform:uppercase}
+.up-top .in{max-width:900px;margin:0 auto;padding:10px 20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.up-top a{color:#e6ecf5;text-decoration:none}
+.up-ww{max-width:900px;margin:26px auto 6px;padding:0 20px}
+.up-where{border:3px solid #2c3e5c;border-radius:10px;overflow:hidden;background:#fff}
+.up-where-h{background:#2c3e5c;color:#fff;padding:12px 18px}
+.up-lbl{font:600 12.5px 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#f3c9a6}
+.up-where-h .pl{font-size:21px;font-weight:700;margin-top:2px}
+.up-who{margin:14px 16px 16px;border:2px solid #9a521f;border-radius:8px}
+.up-who-h{background:#f8ece2;color:#9a521f;padding:6px 12px;font:600 12.5px 'IBM Plex Mono',monospace;letter-spacing:.14em;border-bottom:2px solid #9a521f}
+.up-who ul{list-style:none;margin:0;padding:6px 12px}
+.up-who li{padding:6px 0;border-bottom:1px solid #e3e8ef;font-size:17px;margin:0}
+.up-who li:last-child{border-bottom:none}
+.up-who li b{color:#2c3e5c}
+.up-connect ul{list-style:none;margin:0;padding:0}
+.up-connect li{border:1px solid #c9d3e1;border-left:5px solid #9a521f;background:#fff;padding:10px 14px;margin:0 0 10px;font-size:17px}
+.up-connect li a{font-weight:700;color:#2c3e5c}
+.up-connect li span{display:block;color:#4a5466;font-size:15.5px;margin-top:2px}
+.up-sources details{border:1px solid #c9d3e1;background:#eef2f7;padding:12px 16px}
+.up-sources summary{cursor:pointer;font:600 15px 'IBM Plex Mono',monospace;color:#2c3e5c}
+.up-sources li{margin:8px 0;font-size:16px}
+.up-foot{background:#1c2a40;color:#b9c6da;margin-top:30px;padding:28px 0 36px;font-size:16px}
+.up-foot .in{max-width:900px;margin:0 auto;padding:0 20px}
+.up-foot a{color:#f3c9a6}
+#up-shelf{border:2px dashed #b9c6da;border-radius:10px;padding:16px 18px;margin-bottom:20px;color:#e6ecf5}
+.up-cn-big{font:600 17px 'IBM Plex Mono',monospace;margin-bottom:12px}
+.up-cn-big b{color:#f3c9a6}
+.up-nav{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+.up-nav-btn{flex:1;min-width:220px;background:#2c3e5c;border:1px solid #4a6185;border-radius:8px;padding:12px 14px;color:#fff;text-decoration:none;font-size:16px}
+.up-nav-btn:last-child{text-align:right}
+.up-nav-btn b{color:#f3c9a6;font-family:'IBM Plex Mono',monospace}
+.up-nav-btn.up-off{opacity:.5}
+.up-list summary{cursor:pointer;font:600 15px 'IBM Plex Mono',monospace;color:#f3c9a6;margin-bottom:6px}
+.up-list ol{list-style:none;margin:8px 0 0;padding:0}
+.up-list li{margin:0;padding:5px 0;border-bottom:1px solid #2f4466}
+.up-list li a{color:#e6ecf5;text-decoration:none}
+.up-list li.up-shelf-head{color:#f3c9a6;font:600 13px 'IBM Plex Mono',monospace;letter-spacing:.1em;padding-top:12px;border-bottom:none}
+.up-list li.up-here a{color:#fff;font-weight:700}
+.up-cn{font-family:'IBM Plex Mono',monospace;color:#f3c9a6;margin-right:6px}
+.up-search{font-size:15px;margin-top:12px}
+.up-sub{font-size:14.5px;margin-top:8px;color:#b9c6da}
 </style>
 </head>
 <body>
 
-<div class="topbar">
-  <div class="wrap">
-    <span>The Weber County Hive · Unelected Power</span>
-    <a href="https://weber-county-hive.github.io/-weber-county-hive-index/">Index ↗</a>
-  </div>
-</div>
+<div class="up-top"><div class="in"><span>Utah Hive Politics · Unelected Power</span><span><a href="index.html">← All Unelected Power pages</a> &nbsp;·&nbsp; <a href="https://weber-county-hive.github.io/-weber-county-hive-index/">Hive library ↗</a></span></div></div>
 
 <header class="masthead">
   <div class="wrap">
-    <div class="kicker">Case File · Never Elected</div>
+    <div class="kicker">Case File · Never Elected · UP 100.01</div>
     <h1 class="title">Chris <em>Kyler</em></h1>
     <p class="dek">CEO of the Utah Association of Realtors — and, through the same firm, a registered lobbyist for the association he runs, plus roughly 30 other paying clients, including a state land agency.</p>
+    <div class="pub-date">Posted Aug. 31, 2026 · Updated Oct. 27, 2026</div>
   </div>
 </header>
+<div class="up-ww"><div class="up-where"><div class="up-where-h"><div class="up-lbl">WHERE</div><div class="pl">Utah State Legislature · Statewide · Sandy (UAR offices)</div></div><div class="up-who"><div class="up-who-h">WHO</div><ul><li><b>Chris Kyler</b> — CEO, Utah Association of Realtors; partner at KKOS; registered Utah lobbyist since December 2012</li><li><b>Utah Association of Realtors (UAR)</b> — Statewide Realtors' trade group; his employer and also one of his lobbying clients</li><li><b>Kyler Kohler Ostermiller &amp; Sorensen, LLP (KKOS)</b> — Government-affairs firm that carries his name</li><li><b>Mike Ostermiller</b> — Fellow KKOS partner; CEO, Northern Wasatch Association of Realtors; MIDA board member since 2008</li><li><b>School and Institutional Trust Lands Administration (SITLA)</b> — State land agency; his lobbying client since Jan. 2025</li><li><b>Northern Wasatch Association of Realtors</b> — Co-defendant with Kyler and Ostermiller in <em>Bates v. Utah Association of Realtors MLS</em> (2013), dismissed</li></ul></div></div></div>
 
 <div class="wrap">
 
@@ -118,7 +159,7 @@ footer .sub{color:#a99a85;font-size:13px;margin-top:6px;}
 
   <section>
     <h2>The Kyler-Ostermiller team</h2>
-    <p>Kyler isn't lobbying alone. Fellow KKOS partner Mike Ostermiller — CEO of the Northern Wasatch Association of Realtors and a Military Installation Development Authority (MIDA) board member since 2008 — registers and drops several of the same clients on nearly identical dates: Blue Castle Holdings (2014-2016), Sutherland Institute (2020-), Critical Infrastructure Materials Coalition (2019-), the Utah Inland Port Authority (2022), and Libertas Institute, among others. The matching dates indicate a coordinated lobbying operation, not two lobbyists who happen to work at the same firm.</p>
+    <p>Kyler isn't lobbying alone. Fellow KKOS partner Mike Ostermiller — CEO of the Northern Wasatch Association of Realtors and a Military Installation Development Authority (MIDA) board member since 2008 — registers and drops several of the same clients on nearly identical dates: Blue Castle Holdings (2014-2016), Sutherland Institute (2020-), Critical Infrastructure Materials Coalition (2019-), the Utah Inland Port Authority (2022), and Libertas Institute, among others. The register shows the two KKOS partners adding and dropping these same clients on matching dates, which goes beyond two lobbyists who happen to work at the same firm.</p>
     <p>A Feb. 12, 2012 Deseret News column by veteran political columnists Frank Pignanelli and LaVarr Webb named the two directly: <em>"Under the leadership of Chris Kyler and Michael Ostermiller, the Realtors often prevail."</em> The description of their partnership and legislative reach is not new — it was already public, mainstream knowledge 14 years before this file was compiled.</p>
     <p>Both men were also named as co-defendants, along with the Northern Wasatch Association of Realtors, in <em>Bates v. Utah Association of Realtors MLS</em> (Utah Court of Appeals, 2013). The case was dismissed on statute-of-limitations grounds and never reached the merits.</p>
   </section>
@@ -135,19 +176,25 @@ footer .sub{color:#a99a85;font-size:13px;margin-top:6px;}
     </details>
   </section>
 
-  <section>
+<section class="up-connect"><h2>Connecting stories</h2><ul><li><a href="mike-ostermiller.html">Mike Ostermiller (UP 100.07)</a><span>Fellow KKOS partner who registers and drops several of the same lobbying clients on nearly identical dates.</span></li><li><a href="dan-hemmert.html">Dan Hemmert (UP 100.02)</a><span>Executive director of MIDA, the state board where KKOS partner Mike Ostermiller has sat since 2008.</span></li><li><a href="uipa-hearing-fact-check.html">The Inland Port at the Legislature (UP 100.04)</a><span>The Utah Inland Port Authority, a 2022 lobbying client registered by Kyler and Ostermiller on matching dates.</span></li></ul></section>
+
+  <section class="up-sources">
     <h2>Sources</h2>
-    <p>UAR 2024 Form 990 (ProPublica Nonprofit Explorer). Utah lobbyist registration and full client history, current filing and 2012-2026 history (lobbyist.utah.gov / disclosures.utah.gov). Utah Division of Corporations — UAR entity record (#707115-0140) and KKOS entity record (#7372792-0170). <em>Bates v. Utah Association of Realtors MLS</em>, Utah Court of Appeals (2013). Frank Pignanelli &amp; LaVarr Webb, "The powerhouses who influence the legislative process," Deseret News, Feb. 12, 2012.</p>
+    <details class="open-q">
+      <summary>Sources — click to open (with links)</summary>
+      <ul>
+        <li><a href="https://projects.propublica.org/nonprofits/">UAR 2024 Form 990 (ProPublica Nonprofit Explorer)</a></li>
+        <li>Utah lobbyist registration and full client history, current filing and 2012-2026 history (<a href="https://lobbyist.utah.gov/">lobbyist.utah.gov</a> / <a href="https://disclosures.utah.gov/">disclosures.utah.gov</a>)</li>
+        <li><a href="https://businessregistration.utah.gov/EntitySearch/OnlineEntitySearch">Utah Division of Corporations — UAR entity record (#707115-0140) and KKOS entity record (#7372792-0170)</a></li>
+        <li><em>Bates v. Utah Association of Realtors MLS</em>, Utah Court of Appeals (2013)</li>
+        <li>Frank Pignanelli &amp; LaVarr Webb, "The powerhouses who influence the legislative process," Deseret News, Feb. 12, 2012</li>
+      </ul>
+    </details>
   </section>
 
 </div>
 
-<footer>
-  <div class="wrap">
-    <div>THE WEBER COUNTY HIVE · UNELECTED POWER</div>
-    <div class="sub">Independent accountability journalism. Public records only. We report; you decide.</div>
-  </div>
-</footer>
+<footer class="up-foot"><div class="in"><div id="up-shelf"></div><div><b>Utah Hive Politics · Unelected Power</b>, from the publisher of The Weber County Hive.</div><div class="up-sub">Public records only. We report public records. You decide. <a href="https://webercountyhive.substack.com/">webercountyhive.substack.com</a></div></div></footer><script src="unelected-power-data.js?v=4"></script><script src="up-shelf.js?v=1"></script>
 
 <script data-goatcounter="https://weberhive.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
