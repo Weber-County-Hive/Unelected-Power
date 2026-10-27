@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Laura Warburton, in Plain Words | Unelected Power | Utah Hive Politics</title>
+<meta name="description" content="The short, simple version: three roles Laura Warburton held in Ogden Valley, and what the money and voting records show.">
+<style>
+  :root{
+    --slate:#2c3e5c;
+    --slate-deep:#1c2a40;
+    --page:#ffffff;
+    --box:#eef2f7;
+    --box-2:#e2e8f1;
+    --ink:#1e2430;
+    --ink-soft:#4a5466;
+    --copper:#9a521f;
+    --copper-bright:#b5652b;
+    --copper-bg:#f8ece2;
+    --rule:#c9d3e1;
+    --on-slate:#e6ecf5;
+    --on-slate-soft:#b9c6da;
+    --ok:#1d6b3a; --part:#8a5a00; --no:#9b1c1c; --unk:#4a5568;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;font-size:112.5%;}
+  body{margin:0;background:var(--page);color:var(--ink);font-family:"Newsreader",Georgia,"Iowan Old Style",serif;line-height:1.55;}
+  a{color:var(--copper);}
+
+
+  .topband{background:var(--slate-deep);color:var(--on-slate);padding:10px 24px;font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace;font-size:.72rem;letter-spacing:.06em;display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;}
+  .topband a{color:var(--on-slate);text-decoration:none;border-bottom:1px solid rgba(230,236,245,.4);}
+
+  header.case-header{background:var(--slate);color:#fff;padding:56px 24px 40px;position:relative;overflow:hidden;border-bottom:5px solid var(--copper-bright);}
+  header.case-header::after{content:"";position:absolute;right:-60px;top:-60px;width:260px;height:260px;border:1px solid rgba(230,236,245,.15);border-radius:50%;}
+  .case-wrap{max-width:880px;margin:0 auto;position:relative;}
+  .case-eyebrow{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.78rem;letter-spacing:.08em;color:#f0b98c;margin:0 0 14px;}
+  .case-title{font-size:2.4rem;line-height:1.14;margin:0 0 10px;font-weight:600;max-width:22ch;}
+  .case-title em{color:#f0b98c;}
+  .case-sub{font-size:1.12rem;color:var(--on-slate);font-style:italic;margin:0 0 24px;max-width:58ch;}
+  .meta-row{display:flex;flex-wrap:wrap;gap:10px;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.74rem;}
+  .meta-pill{border:1px solid rgba(230,236,245,.35);padding:6px 12px;border-radius:2px;color:var(--on-slate);}
+  .pub-date{margin-top:14px;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.76rem;letter-spacing:.03em;color:#f0b98c;}
+
+  main{max-width:880px;margin:0 auto;padding:44px 24px 90px;}
+  section{margin-bottom:52px;}
+  h2.section-head{font-size:1.5rem;margin:0 0 18px;border-bottom:2px solid var(--slate);padding-bottom:10px;color:var(--slate-deep);}
+  h3{color:var(--slate-deep);}
+  p{margin:0 0 16px;max-width:68ch;}
+  ul{max-width:68ch;}
+  .lede{font-size:1.12rem;color:var(--ink-soft);}
+
+  .hs-short{background:var(--box);border:1px solid var(--rule);border-left:6px solid var(--copper-bright);padding:18px 22px;margin:0 0 30px}
+  .hs-short h2{font-size:1.2rem;margin:0 0 10px;border:0;padding:0;color:var(--slate-deep)}
+  .hs-short ul{margin:0;padding-left:20px}
+  .hs-short li{margin-bottom:8px}
+  .hs-toc{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 26px}
+  .hs-toc a{font-family:Arial,sans-serif;font-size:.82rem;padding:7px 12px;border:1px solid var(--rule);background:var(--box);color:var(--ink);text-decoration:none;border-radius:999px}
+  .hs-toc a:hover{border-color:var(--copper)}
+  .hs-plain{display:flex;flex-wrap:wrap;align-items:center;gap:12px;background:var(--copper-bg);border:1px dashed var(--copper);padding:14px 18px;margin:0 0 26px;font-size:1rem}
+  .hs-btn{display:inline-block;background:var(--copper);color:#fff !important;text-decoration:none;font-family:Arial,sans-serif;font-weight:bold;padding:10px 16px;border-radius:6px}
+  .hs-pages{background:var(--box);border:1px solid var(--rule);padding:14px 18px;margin:0 0 30px}
+  .hs-pages summary{font-family:Arial,sans-serif;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);cursor:pointer}
+  .hs-pages ol{margin:10px 0 0;padding-left:22px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:4px 18px}
+  .hs-pages li{font-size:.95rem;line-height:1.35}
+  .hs-pages li.cur{font-weight:bold}
+  .hs-pages li.cur a{color:var(--ink);text-decoration:none}
+  .hs-pages small{display:block;font-size:.8rem;color:var(--ink-soft);font-weight:normal}
+
+  .figure-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule);margin:0 0 30px;}
+  .figure-cell{background:var(--slate);color:#fff;padding:22px 18px;text-align:center;}
+  .figure-cell .num{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:1.7rem;font-weight:700;color:#f0b98c;display:block;margin-bottom:6px;}
+  .figure-cell .cap{font-size:.84rem;color:var(--on-slate);}
+  @media (max-width:640px){.figure-grid{grid-template-columns:1fr;}}
+
+  .note{background:var(--box);border:1px dashed var(--rule);padding:14px 18px;font-size:.96rem;color:var(--ink-soft);margin:0 0 20px}
+  .callout{background:var(--box);border-left:4px solid var(--slate);padding:16px 20px;margin:18px 0;font-size:.98rem;}
+  .callout strong{color:var(--slate-deep);}
+  .estimate{background:#f8ece2;border:2px solid var(--part);padding:14px 18px;margin:16px 0;font-size:.98rem;}
+  .estimate b{color:var(--part);}
+
+  table.money{width:100%;border-collapse:collapse;background:#fff;font-size:.95rem;margin-bottom:10px}
+  table.money th,table.money td{border:1px solid var(--rule);padding:10px 12px;text-align:left;vertical-align:top}
+  table.money th{background:var(--slate);color:#fff;font-family:Arial,sans-serif;font-size:.82rem}
+  table.money td.n{text-align:right;font-family:Arial,sans-serif;font-weight:bold;white-space:nowrap}
+  table.money tr.total td{font-weight:700;background:var(--box-2)}
+  .tbl-wrap{overflow-x:auto;}
+
+  details.gl{border:1px solid var(--rule);background:#fff;margin-bottom:8px;padding:12px 16px;}
+  details.gl summary{font-weight:700;cursor:pointer;color:var(--slate-deep);}
+  details.gl p{margin:8px 0 0;font-size:.98rem;}
+
+  .legend-v{display:flex;flex-wrap:wrap;gap:8px 16px;margin:8px 0 14px;}
+  .filters{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 18px;}
+  .filters button{font:inherit;font-family:Arial,sans-serif;font-size:.95rem;font-weight:600;border:2px solid var(--slate);background:#fff;color:var(--slate);padding:7px 14px;border-radius:999px;cursor:pointer;min-height:44px;}
+  .filters button[aria-pressed="true"]{background:var(--slate);color:#fff;}
+  .claim{background:#fff;border:1px solid var(--rule);border-left:6px solid var(--unk);padding:16px 18px;margin-bottom:14px;}
+  .claim.ok{border-left-color:var(--ok);} .claim.part{border-left-color:var(--part);} .claim.no{border-left-color:var(--no);} .claim.unk{border-left-color:var(--unk);}
+  .claim .said{font-size:1.2rem;line-height:1.35;margin-bottom:6px;font-weight:600;}
+  .claim .who{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.72rem;color:var(--ink-soft);margin-bottom:10px;}
+  .claim p{font-size:1rem;margin-bottom:8px;}
+  .claim ul{margin:0 0 8px;padding-left:20px;}
+  .claim .src{font-size:.86rem;color:var(--ink-soft);font-style:italic;margin:6px 0 0;}
+  .v{display:inline-block;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.72rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;padding:3px 9px;border:2px solid;margin-bottom:8px;background:#fff;}
+  .v.ok{color:var(--ok);border-color:var(--ok);} .v.part{color:var(--part);border-color:var(--part);}
+  .v.no{color:var(--no);border-color:var(--no);} .v.unk{color:var(--unk);border-color:var(--unk);}
+  .grp{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--copper);margin:26px 0 10px;}
+
+  .chart{background:#fff;border:1px solid var(--rule);padding:18px 20px;margin:18px 0;}
+  .chart h3{font-size:1.2rem;margin:0 0 6px;}
+  .chart .sub{font-family:Arial,sans-serif;font-size:.88rem;color:var(--ink-soft);margin-bottom:10px;}
+  .chart .src{font-size:.84rem;color:var(--ink-soft);font-style:italic;margin-top:10px;}
+  .bar-row{margin-bottom:16px;}
+  .bar-row .lbl{font-family:Arial,sans-serif;font-size:1rem;font-weight:700;margin-bottom:4px;line-height:1.3;}
+  .bar-track{display:flex;height:42px;background:var(--box);border:1px solid var(--rule);}
+  .bar-track div{display:flex;align-items:center;justify-content:flex-start;padding-left:6px;color:#fff;font-family:Arial,sans-serif;font-weight:700;font-size:.9rem;white-space:nowrap;overflow:hidden;}
+  .b25{background:var(--slate);} .b40{background:var(--copper-bright);color:#fff !important;}
+  .legend{display:flex;gap:18px;flex-wrap:wrap;font-family:Arial,sans-serif;font-size:.92rem;margin-top:6px;}
+  .legend span::before{content:"";display:inline-block;width:18px;height:18px;margin-right:6px;vertical-align:-3px;}
+  .legend .l25::before{background:var(--slate);} .legend .l40::before{background:var(--copper-bright);}
+
+  .flow{background:var(--box);border:1px solid var(--rule);padding:22px 18px;margin:18px 0;}
+  .flow-row{display:grid;grid-template-columns:1fr;gap:14px;max-width:560px;margin:0 auto;}
+  .flow-row.three{grid-template-columns:repeat(3,minmax(0,1fr));max-width:860px;}
+  .fbox{background:#fff;border:3px solid var(--slate);border-radius:8px;padding:16px 18px;font-size:1.02rem;line-height:1.45;text-align:center;}
+  .fbox .fh{font-weight:700;font-size:1.2rem;margin-bottom:6px;color:var(--slate-deep);}
+  .fbox.pub{border-color:#2f6f8f;} .fbox.pub .fh{color:#2f6f8f;}
+  .fbox.co{border-color:var(--copper-bright);} .fbox.co .fh{color:var(--copper);}
+  .fbox.main{background:var(--slate);color:#fff;border-color:var(--slate);} .fbox.main .fh{color:#f0b98c;font-size:1.5rem;}
+  .arrow{text-align:center;font-size:30px;color:var(--copper-bright);margin:10px 0;line-height:1.2;}
+  .arrow span{display:block;font-family:Arial,sans-serif;font-size:1rem;font-weight:700;color:var(--ink-soft);}
+  .diagram-caption{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.7rem;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-soft);margin-top:12px;text-align:center;}
+  @media(max-width:700px){.flow-row.three{grid-template-columns:1fr;}}
+
+  #map{height:460px;border:1px solid var(--rule);margin:14px 0;}
+
+  .ask-list{list-style:none;margin:0;padding:0;max-width:none}
+  .ask-list li{background:var(--box);border-left:4px solid var(--copper-bright);padding:14px 18px;margin-bottom:10px;font-size:.98rem;}
+  .ask-list li strong{color:var(--copper);}
+
+  .tl{list-style:none;margin:0;padding:0;border-left:4px solid var(--copper-bright)}
+  .tl li{position:relative;padding:0 0 18px 22px;font-size:1rem}
+  .tl li::before{content:"";position:absolute;left:-11px;top:4px;width:14px;height:14px;border-radius:50%;background:#fff;border:4px solid var(--copper-bright)}
+  .tl li b{display:block;font-family:Arial,sans-serif;font-size:.9rem;color:var(--copper)}
+  .hs-updates{font-family:Arial,sans-serif;font-size:.85rem;color:var(--ink-soft);margin-top:14px}
+
+  .hs-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+  .hs-cards a{display:block;background:var(--box);border:1px solid var(--rule);border-top:5px solid var(--copper-bright);padding:14px 16px;text-decoration:none;color:var(--ink)}
+  .hs-cards a b{display:block;margin-bottom:4px}
+  .hs-cards a span{font-size:.88rem;color:var(--ink-soft)}
+  .hs-flips{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+  .hs-flip{text-align:left;background:var(--box);border:1px solid var(--rule);border-top:5px solid var(--slate);padding:14px 16px;cursor:pointer;font:inherit;color:var(--ink);min-height:96px}
+  .hs-flip .ft{font-weight:bold;font-size:1.05rem}
+  .hs-flip .fh{font-family:Arial,sans-serif;font-size:.75rem;color:var(--ink-soft);margin-top:6px}
+  .hs-flip .fd{display:none;margin-top:8px;font-size:.95rem}
+  .hs-flip[aria-expanded="true"] .fd{display:block}
+  .hs-flip[aria-expanded="true"] .fh{display:none}
+  .hs-counter{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+  .hs-counter div{background:var(--slate);color:#fff;padding:14px;text-align:center}
+  .hs-counter .n{font-family:Arial,sans-serif;font-size:1.8rem;font-weight:bold}
+  .hs-counter .l{font-size:.82rem}
+
+  .sources-block{background:transparent;border:none;border-top:2px solid var(--slate);padding:0;margin-top:8px}
+  .sources-block summary{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.85rem;letter-spacing:.04em;color:var(--ink);padding:14px 0;cursor:pointer}
+  .sources-block ol{margin:0 0 16px;padding-left:20px;font-size:.92rem;color:var(--ink-soft);max-width:none}
+  .sources-block li{margin-bottom:10px;}
+
+  footer{background:var(--slate-deep);color:var(--on-slate-soft);padding:32px 24px;text-align:center;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.76rem;letter-spacing:.04em;}
+  footer a{color:#f0b98c;}
+  @media(max-width:700px){
+    main{padding:34px 16px 80px}
+    header.case-header{padding:40px 16px 30px}
+    .case-title{font-size:1.8rem}
+    .topband{padding:10px 16px}
+  }
+
+/* ===== Unelected Power standard (slate blue & copper) — header, footer, Where/Who, call number ===== */
+.up-top{background:#1c2a40;color:#b9c6da;font:600 13px 'IBM Plex Mono',monospace;letter-spacing:.06em;text-transform:uppercase}
+.up-top .in{max-width:900px;margin:0 auto;padding:10px 20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.up-top a{color:#e6ecf5;text-decoration:none}
+.up-ww{max-width:900px;margin:26px auto 6px;padding:0 20px}
+.up-where{border:3px solid #2c3e5c;border-radius:10px;overflow:hidden;background:#fff}
+.up-where-h{background:#2c3e5c;color:#fff;padding:12px 18px}
+.up-lbl{font:600 12.5px 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#f3c9a6}
+.up-where-h .pl{font-size:21px;font-weight:700;margin-top:2px}
+.up-who{margin:14px 16px 16px;border:2px solid #9a521f;border-radius:8px}
+.up-who-h{background:#f8ece2;color:#9a521f;padding:6px 12px;font:600 12.5px 'IBM Plex Mono',monospace;letter-spacing:.14em;border-bottom:2px solid #9a521f}
+.up-who ul{list-style:none;margin:0;padding:6px 12px}
+.up-who li{padding:6px 0;border-bottom:1px solid #e3e8ef;font-size:17px;margin:0}
+.up-who li:last-child{border-bottom:none}
+.up-who li b{color:#2c3e5c}
+.up-connect ul{list-style:none;margin:0;padding:0}
+.up-connect li{border:1px solid #c9d3e1;border-left:5px solid #9a521f;background:#fff;padding:10px 14px;margin:0 0 10px;font-size:17px}
+.up-connect li a{font-weight:700;color:#2c3e5c}
+.up-connect li span{display:block;color:#4a5466;font-size:15.5px;margin-top:2px}
+.up-sources details{border:1px solid #c9d3e1;background:#eef2f7;padding:12px 16px}
+.up-sources summary{cursor:pointer;font:600 15px 'IBM Plex Mono',monospace;color:#2c3e5c}
+.up-sources li{margin:8px 0;font-size:16px}
+.up-foot{background:#1c2a40;color:#b9c6da;margin-top:30px;padding:28px 0 36px;font-size:16px}
+.up-foot .in{max-width:900px;margin:0 auto;padding:0 20px}
+.up-foot a{color:#f3c9a6}
+#up-shelf{border:2px dashed #b9c6da;border-radius:10px;padding:16px 18px;margin-bottom:20px;color:#e6ecf5}
+.up-cn-big{font:600 17px 'IBM Plex Mono',monospace;margin-bottom:12px}
+.up-cn-big b{color:#f3c9a6}
+.up-nav{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+.up-nav-btn{flex:1;min-width:220px;background:#2c3e5c;border:1px solid #4a6185;border-radius:8px;padding:12px 14px;color:#fff;text-decoration:none;font-size:16px}
+.up-nav-btn:last-child{text-align:right}
+.up-nav-btn b{color:#f3c9a6;font-family:'IBM Plex Mono',monospace}
+.up-nav-btn.up-off{opacity:.5}
+.up-list summary{cursor:pointer;font:600 15px 'IBM Plex Mono',monospace;color:#f3c9a6;margin-bottom:6px}
+.up-list ol{list-style:none;margin:8px 0 0;padding:0}
+.up-list li{margin:0;padding:5px 0;border-bottom:1px solid #2f4466}
+.up-list li a{color:#e6ecf5;text-decoration:none}
+.up-list li.up-shelf-head{color:#f3c9a6;font:600 13px 'IBM Plex Mono',monospace;letter-spacing:.1em;padding-top:12px;border-bottom:none}
+.up-list li.up-here a{color:#fff;font-weight:700}
+.up-cn{font-family:'IBM Plex Mono',monospace;color:#f3c9a6;margin-right:6px}
+.up-search{font-size:15px;margin-top:12px}
+.up-sub{font-size:14.5px;margin-top:8px;color:#b9c6da}
+  .up-connect h2,.up-sources h2{font-size:1.5rem;margin:0 0 18px;border-bottom:2px solid var(--slate);padding-bottom:10px;color:var(--slate-deep);}
+  .up-sources ul{max-width:none;padding-left:20px;color:var(--ink-soft);}
+  .up-connect ul,.up-who ul{max-width:none;}
+
+/* Utah Hive Politics branding bars (top and bottom) */
+.hb-bar{background:#0d0b0a;border-bottom:1px solid #3a2f1c;padding:10px 20px;}
+.hb-bar a{display:flex;align-items:center;gap:12px;max-width:1100px;margin:0 auto;text-decoration:none;}
+.hb-bar img{width:52px;height:52px;border-radius:4px;display:block;flex:none;}
+.hb-name{font-family:'Cinzel','Trajan Pro',Georgia,serif;color:#d4af37;font-size:16px;letter-spacing:.14em;text-transform:uppercase;line-height:1.2;display:block;}
+.hb-sub{font-family:Georgia,serif;font-style:italic;color:#b8956a;font-size:12.5px;letter-spacing:.02em;display:block;margin-top:2px;}
+.hb-foot{background:#0d0b0a;color:#b8956a;text-align:center;padding:26px 20px 30px;font-family:Georgia,serif;}
+.hb-foot img{width:52px;height:52px;display:block;margin:0 auto 10px;}
+.hb-foot .hb-name{font-size:14px;}
+.hb-foot .hb-tag{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#8a7650;margin-top:8px;display:block;}
+@media(max-width:600px){.hb-bar{padding:8px 16px}.hb-bar img{width:38px;height:38px}.hb-name{font-size:13px}.hb-sub{font-size:11.5px}}
+
+.hb-line-top{display:block;font-family:Georgia,serif;color:#e8d9b5;font-size:13px;margin-top:4px}
+.hb-line{max-width:720px;margin:14px auto 0;color:#e8d9b5;font-size:15.5px;line-height:1.5}
+.hb-tips{margin:16px 0 4px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.hb-btn{display:inline-block;border:2px solid #d4af37;background:#d4af37;color:#0d0b0a;font:700 15px Georgia,serif;padding:10px 18px;border-radius:6px;text-decoration:none}
+.hb-btn2{background:transparent;color:#d4af37}
+.hb-small{font-size:12.5px;color:#8a7650;margin:6px 0 0}
+@media(max-width:600px){.hb-line-top{font-size:11.5px}}
+</style>
+<link rel="icon" type="image/png" href="hive-bee.png">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="hb-bar"><a href="https://webercountyhive.substack.com/" target="_blank" rel="noopener"><img src="uhp-badge.png" alt="Utah Hive Politics logo"><span><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span><span class="hb-line-top">The people's publication. We investigate what's best for the public as a whole, not any party or special interest.</span></span></a></div>
+<div class="up-top"><div class="in"><span><a href="index.html">← All Unelected Power pages</a> &nbsp;·&nbsp; <a href="https://weber-county-hive.github.io/-weber-county-hive-index/">Hive library ↗</a></span></div></div>
+<header class="case-header"><div class="case-wrap">
+<p class="case-eyebrow">Plain words · UP 200.03</p>
+<h1 class="case-title">Laura Warburton, in plain words</h1>
+<p class="case-sub">The short, simple version of the Hive's case file.</p>
+<p class="pub-date">Posted Oct. 27, 2026</p>
+</div></header>
+<div class="up-ww"><div class="up-where"><div class="up-where-h"><div class="up-lbl">WHERE</div><div class="pl">Ogden Valley · Weber County · Ogden</div></div><div class="up-who"><div class="up-who-h">WHO</div><ul><li><b>Laura Warburton</b> — Managed Utah Forward PAC; directed Keep Our Valley Free; Ogden Valley planning commissioner, June 2025 to Jan. 26, 2026</li><li><b>Utah Forward PAC</b> — Political action committee that gives to local campaigns</li><li><b>Katrina and Kerry Gibson</b> — The PAC's registered agent and CFO, and her husband, a registered lobbyist</li><li><b>John Lewis and Shane Dunleavy</b> — Developers; gave to the PAC in 2022</li></ul></div></div></div>
+<main>
+<div class="hs-plain">Want every detail and source? <a class="hs-btn" href="laura-warburton.html">Read the full case file</a></div>
+<details class="hs-pages"><summary>Unelected Power pages (tap to open)</summary><ol>
+<li><a href="index.html">Unelected Power roster</a><small>Every case file, searchable</small></li>
+<li><a href="uipa-hearing-fact-check.html">The Inland Port at the Legislature</a><small>Hearing claims checked against the record</small></li>
+<li><a href="uipa-hearing-fact-check-plain.html">The Inland Port hearing, in plain words</a><small>The short, simple version</small></li>
+<li><a href="steve-waldrip.html">Steve Waldrip</a><small>Governor's Office · State Housing Coordinator</small></li>
+<li><a href="mike-ostermiller.html">Mike Ostermiller</a><small>MIDA Board · CEO, Northern Wasatch Realtors</small></li>
+<li><a href="chris-kyler.html">Chris Kyler</a><small>CEO, Utah Association of Realtors</small></li>
+<li><a href="dallin-koecher.html">Dallin Koecher</a><small>Wasatch Open Lands Board · Heber Valley Chamber</small></li>
+<li><a href="matt-brower.html">Matt Brower</a><small>Heber City Manager · Hired, Not Elected</small></li>
+<li><a href="ryan-starks.html">Ryan Starks</a><small>EDCUtah · Former GOEO Director</small></li>
+<li><a href="chris-roybal.html">Chris Roybal</a><small>President, Northern Utah Economic Alliance</small></li>
+<li><a href="laura-warburton.html">Laura Warburton</a><small>Utah Forward PAC · Keep Our Valley Free</small></li>
+<li class="cur"><a href="laura-warburton-plain.html">Laura Warburton, in plain words</a><small>The short, simple version</small></li>
+<li><a href="jefferson-moss.html">Jefferson Moss</a><small>GOEO · Former House Majority Leader</small></li>
+<li><a href="community-alliance-main-street.html">Community Alliance for Main Street</a><small>Organization · Sole-Source City Contract</small></li>
+<li><a href="dan-hemmert.html">Dan Hemmert</a><small>Executive Director, MIDA · Former State Senator</small></li>
+<li><a href="utah-rising.html">Utah Rising</a><small>Organization · Chamber-Led Economic Initiative</small></li>
+<li><a href="edcutah.html">EDCUtah</a><small>Organization · Private Business Recruiter</small></li>
+<li><a href="ogden-ice-unelected-enforcement.html">The Ogden Officer &amp; The ICE Agent</a><small>Ogden PD · Federal ICE Agent</small></li>
+<li><a href="jed-stevenson.html">Jed Stevenson</a><small>Academica West · One West Construction</small></li>
+</ol></details>
+<section><h2 class="section-head">What this is</h2>
+<p>Laura Warburton has <b>never held elected office</b>. She is known as the founder of Live Hannah's Hope and as an opponent of Ogden Valley City's 2024 incorporation.</p>
+<p>The records show three roles that touch the same small group of developers and officials. She <b>managed</b> a political action committee, Utah Forward PAC. She <b>directed</b> Keep Our Valley Free, the committee that opposed incorporation. And she was <b>appointed</b> to the new city's Planning Commission.</p>
+</section>
+
+<section><h2 class="section-head">Who's involved</h2>
+<ul><li><b>Laura Warburton</b>: Ogden Valley planning commissioner from June 2025 until she resigned Jan. 26, 2026.</li><li><b>Utah Forward PAC</b>: a political action committee that has taken developer money and given to county campaigns since 2022.</li><li><b>Keep Our Valley Free</b>: the committee that opposed incorporation. It dissolved Nov. 9, 2024.</li><li><b>Katrina Gibson</b>: the PAC's registered agent and CFO. She co-owns Politix LLC.</li><li><b>Kerry Gibson</b>: registered lobbyist and Katrina's husband. He co-owns Politix LLC.</li><li><b>Chris Roybal</b>: co-manager of Utah Forward PAC.</li><li><b>John Lewis and Shane Dunleavy</b>: developers and co-owners of Wolf Creek Resort Holdings.</li><li><b>Gage Froerer</b>: Weber County Commissioner and MIDA board member.</li></ul>
+</section>
+
+<section><h2 class="section-head">What the records show</h2>
+<p><b>Money in:</b> In April 2022, John Lewis and Shane Dunleavy each gave Utah Forward PAC <b>$5,000</b>. Rincon Financial, linked to Dunleavy, gave <b>$10,000</b>. The PAC's largest single donor was Nilson &amp; Company Inc, with $20,000 on 5/18/22.</p>
+<p><b>Money out:</b> The PAC gave Gage Froerer's campaign <b>$10,000</b> in 2022-23, Ben Nadolski's 2023 Ogden mayoral campaign $5,000, Weber County Commissioner Sharon Bolos $5,915 combined, and Keep Our Valley Free $2,427.20.</p>
+<p><b>Paying its own officers' company:</b> In 2025 the PAC paid Politix LLC <b>$7,158.30</b> for polling and consultation. Politix is co-owned by Katrina Gibson, the PAC's own CFO, and her husband Kerry Gibson.</p>
+<p><b>Eden Crossing:</b> In late 2023, the Planning Commission recommended denying a rezone for Eden Crossing, a John Lewis project, 5-2. The Weber County Commission, chaired by Froerer, approved it 2-1. On Sept. 23, 2025, Warburton, by then on the Planning Commission, seconded and voted yes (6-1) on Eden Crossing's expansion. Lewis presented in person.</p>
+<p><b>Kerry Gibson's lobbying:</b> After Ben Nadolski won in 2023, Ogden City hired Kerry Gibson as its lobbyist (Jan. 2024). His 2026 lobbyist clients also include Plain City and Morgan County. Transparent Utah shows Morgan County paid his business, Legislative Solutions, <b>$225,000</b>. Plain City's 2025 agreement pays it $3,500 a month.</p>
+<p><b>What she said, and what the record shows:</b> In September 2026 Warburton posted that she has never had business dealings with Lewis. No contract with him is documented, but two committees she ran took money from Lewis's network. She said she and Lewis served on the Planning Commission at the same time; the meeting record shows his time ended about three years before she was appointed. Her statement that she owns only the five acres where she lives matches county records.</p>
+</section>
+
+<section><h2 class="section-head">What isn't known yet</h2>
+<ul><li>Which Weber County races the PAC's December 2025 polling covered. It spent $12,000 that month with In The Field and Politix LLC.</li><li>What the four contribution entries deleted from the PAC's 2025 reports were.</li><li>Who "Joe Buchanan" is. He gave the PAC $5,000 from a Miami, Fla., address on 4/17/2022.</li></ul>
+</section>
+
+<section class="up-connect"><h2>Connecting stories</h2><ul><li><a href="laura-warburton.html">Laura Warburton (UP 200.03)</a><span>The full case file: flip tiles, money charts, timeline and every source.</span></li><li><a href="chris-roybal.html">Chris Roybal (UP 200.01)</a><span>Co-manager of Utah Forward PAC.</span></li><li><a href="ogden-ice-unelected-enforcement.html">The Ogden Officer &amp; The ICE Agent (UP 200.04)</a><span>Mayor Ben Nadolski, whose 2023 campaign the PAC gave $5,000 and whose city hired Kerry Gibson.</span></li></ul></section>
+<section class="up-sources"><h2>Sources</h2><details class="sources-block"><summary>Sources — click to open (with links)</summary><ul>
+<li>Utah Forward PAC and Keep Our Valley Free campaign finance reports (<a href="https://disclosures.utah.gov/">disclosures.utah.gov</a>)</li>
+<li>Ogden Valley Planning Commission approved minutes (<a href="https://www.webercountyutah.gov/">webercountyutah.gov</a>)</li>
+<li><a href="https://businessregistration.utah.gov/EntitySearch/OnlineEntitySearch">Utah business registry</a> and the 2026 Utah lobbyist register (Legislative Solutions, Kerry Gibson clients)</li>
+<li><a href="https://transparent.utah.gov/">Transparent Utah</a>, Morgan County payments to Legislative Solutions</li>
+<li>Every source, with links, is in the <a href="laura-warburton.html">full case file</a>.</li>
+</ul></details></section>
+<div class="hs-plain">Want the full details? <a class="hs-btn" href="laura-warburton.html">Read the full case file →</a></div>
+</main>
+<footer class="up-foot"><div class="in"><div id="up-shelf"></div><div class="up-sub">Public records only. We report public records. You decide.</div></div></footer><script src="unelected-power-data.js?v=4"></script><script src="up-shelf.js?v=4"></script>
+
+<div class="hb-foot"><img src="hive-bee.png" alt=""><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span><span class="hb-tag">Independent · Accountability · Journalism</span><p class="hb-line">The Weber County Hive and Utah Hive Politics: the people's publication. We investigate what's best for the public as a whole, not for any party or special interest group.</p><p class="hb-tips"><a class="hb-btn" href="https://weber-county-hive.github.io/-weber-county-hive-index/tips.html#send">Send a tip</a><a class="hb-btn hb-btn2" href="https://weber-county-hive.github.io/-weber-county-hive-index/tips.html">Tips we checked</a><a class="hb-btn hb-btn2" href="https://weber-county-hive.github.io/-weber-county-hive-index/tips.html#send">See a mistake? Tell us</a></p><p class="hb-small">We never name tipsters. When we correct a page, the fix and its date are shown on the page.</p><p class="hb-small"><a href="https://webercountyhive.substack.com/" style="color:#d4af37">webercountyhive.substack.com</a></p></div>
+<script data-goatcounter="https://weberhive.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
