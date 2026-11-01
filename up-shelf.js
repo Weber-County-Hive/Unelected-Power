@@ -92,3 +92,34 @@
     "@media print{.up-tools,.up-totop{display:none}}";
   document.head.appendChild(st);
 })();
+
+/* Hive library link-up (added Nov. 1, 2026): reads the one shared shelf list
+   in the Hive library, so a call number from ANY repo typed in this page's
+   search box opens the right repo. New repos are added to that list only. */
+(function () {
+  var LIST_URL = "https://weber-county-hive.github.io/-weber-county-hive-index/hive-shelves.js";
+  var OWN = "UP";
+  function ready(fn) {
+    if (window.HIVE_SHELVES) return fn();
+    var s = document.createElement("script"); s.src = LIST_URL + "?v=1"; s.onload = fn; document.head.appendChild(s);
+  }
+  function routeFor(q) {
+    var m = String(q || "").trim().toUpperCase().match(/^([A-Z]{1,5})\s*(\d{3}(?:\.\d{1,2})?)$/);
+    if (!m || m[1] === OWN || !window.HIVE_SHELVES) return null;
+    var hit = window.HIVE_SHELVES.filter(function (s) { return s.prefix === m[1]; })[0];
+    return hit ? hit.url + "?q=" + encodeURIComponent(m[1] + " " + m[2]) : null;
+  }
+  ready(function () {
+    var form = document.querySelector("form.up-find");
+    if (form) form.addEventListener("submit", function (e) {
+      var url = routeFor(form.querySelector("input").value);
+      if (url) { e.preventDefault(); location.href = url; }
+    });
+    var note = document.querySelector(".up-search");
+    if (note && window.HIVE_SHELVES) {
+      note.innerHTML += " Call numbers from every shelf work here: " + window.HIVE_SHELVES.map(function (s) {
+        return '<a href="' + s.url + '"><b>' + s.prefix + "</b> = " + s.name + "</a>";
+      }).join(" · ") + ".";
+    }
+  });
+})();
