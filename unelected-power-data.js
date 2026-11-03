@@ -59,6 +59,28 @@ const UNELECTED_POWER_PROFILES = [
     dateUpdated: "2026-10-27"
   },
   {
+    slug: "mida-hearing-fact-check",
+    shelf: "100",
+    callNumber: "UP 100.11",
+    name: "MIDA at the Legislature",
+    roleTag: "Organization · Military Installation Development Authority · Hearing Check",
+    summary: "MIDA's executive director answered a legislative committee's questions on Oct. 21, 2026. Each of 32 statements is checked against state law, MIDA's own budgets and presentations, and its county agreements. Most line up; MIDA's own 2023 presentation lists $71,194,600 in legislative appropriations after it said it gets \"zero state money,\" and the State Auditor's page says it \"does not audit MIDA.\"",
+    tags: ["MIDA", "Dan Hemmert", "Stratos", "Falcon Hill", "Mayflower", "Box Elder County", "Wasatch County", "State Auditor", "Tax Increment"],
+    dateAdded: "2026-11-02",
+    dateUpdated: "2026-11-02"
+  },
+  {
+    slug: "mida-hearing-fact-check-plain",
+    shelf: "100",
+    callNumber: "UP 100.12",
+    name: "MIDA at the Legislature, in Plain Words",
+    roleTag: "Plain words · Military Installation Development Authority · Hearing Check",
+    summary: "The short, plain-language version of the MIDA hearing check: what MIDA told lawmakers on Oct. 21, 2026, and what its own records show.",
+    tags: ["MIDA", "Plain Words", "Stratos", "Box Elder County"],
+    dateAdded: "2026-11-02",
+    dateUpdated: "2026-11-02"
+  },
+  {
     slug: "steve-waldrip",
     shelf: "100",
     callNumber: "UP 100.09",
