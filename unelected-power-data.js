@@ -15,6 +15,28 @@
 
 const UNELECTED_POWER_PROFILES = [
   {
+    slug: "utgop-state-indicia",
+    shelf: "100",
+    callNumber: "UP 100.13",
+    name: "The State Party Indicia",
+    roleTag: "Organization · Utah Republican Party · Postage Permit",
+    summary: "The Utah Republican Party's manual lets candidates mail on the party's nonprofit postage permit if they donate the postage plus about 10%. USPS rules say the party must pay its own postage without reimbursement from candidates. The 2026 records show candidate money going in and party postage going out in the same weeks.",
+    tags: ["Utah Republican Party", "USPS", "Nonprofit Postage", "Jim Alvey", "Doug Fiefia", "Robert Axson", "Campaign Finance"],
+    dateAdded: "2026-11-05",
+    dateUpdated: "2026-11-05"
+  },
+  {
+    slug: "utgop-state-indicia-plain",
+    shelf: "100",
+    callNumber: "UP 100.14",
+    name: "The State Party Indicia, in Plain Words",
+    roleTag: "Plain words · Utah Republican Party · Postage Permit",
+    summary: "The short, plain-language version: how Utah Republican candidates can mail on the party's postage permit, what the Postal Service's rules say, and what the 2026 records show.",
+    tags: ["Utah Republican Party", "Plain Words", "USPS"],
+    dateAdded: "2026-11-05",
+    dateUpdated: "2026-11-05"
+  },
+  {
     slug: "layton-shuffle",
     shelf: "300",
     callNumber: "UP 300.02",

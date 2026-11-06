@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The State Party Indicia, in Plain Words | Unelected Power | Utah Hive Politics</title>
+<meta name="description" content="The plain-words version: how Utah Republican candidates can mail on the party's postage permit, what the Postal Service's rules say, and what the 2026 records show.">
+<style>
+  :root{
+    --slate:#2c3e5c;
+    --slate-deep:#1c2a40;
+    --page:#ffffff;
+    --box:#eef2f7;
+    --box-2:#e2e8f1;
+    --ink:#1e2430;
+    --ink-soft:#4a5466;
+    --copper:#9a521f;
+    --copper-bright:#b5652b;
+    --copper-bg:#f8ece2;
+    --rule:#c9d3e1;
+    --on-slate:#e6ecf5;
+    --on-slate-soft:#b9c6da;
+    --ok:#1d6b3a; --part:#8a5a00; --no:#9b1c1c; --unk:#4a5568;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;font-size:112.5%;}
+  body{margin:0;background:var(--page);color:var(--ink);font-family:"Newsreader",Georgia,"Iowan Old Style",serif;line-height:1.55;}
+  a{color:var(--copper);}
+
+
+  .topband{background:var(--slate-deep);color:var(--on-slate);padding:10px 24px;font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace;font-size:.72rem;letter-spacing:.06em;display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;}
+  .topband a{color:var(--on-slate);text-decoration:none;border-bottom:1px solid rgba(230,236,245,.4);}
+
+  header.case-header{background:var(--slate);color:#fff;padding:56px 24px 40px;position:relative;overflow:hidden;border-bottom:5px solid var(--copper-bright);}
+  header.case-header::after{content:"";position:absolute;right:-60px;top:-60px;width:260px;height:260px;border:1px solid rgba(230,236,245,.15);border-radius:50%;}
+  .case-wrap{max-width:880px;margin:0 auto;position:relative;}
+  .case-eyebrow{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.78rem;letter-spacing:.08em;color:#f0b98c;margin:0 0 14px;}
+  .case-title{font-size:2.4rem;line-height:1.14;margin:0 0 10px;font-weight:600;max-width:22ch;}
+  .case-title em{color:#f0b98c;}
+  .case-sub{font-size:1.12rem;color:var(--on-slate);font-style:italic;margin:0 0 24px;max-width:58ch;}
+  .meta-row{display:flex;flex-wrap:wrap;gap:10px;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.74rem;}
+  .meta-pill{border:1px solid rgba(230,236,245,.35);padding:6px 12px;border-radius:2px;color:var(--on-slate);}
+  .pub-date{margin-top:14px;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.76rem;letter-spacing:.03em;color:#f0b98c;}
+
+  main{max-width:880px;margin:0 auto;padding:44px 24px 90px;}
+  section{margin-bottom:52px;}
+  h2.section-head{font-size:1.5rem;margin:0 0 18px;border-bottom:2px solid var(--slate);padding-bottom:10px;color:var(--slate-deep);}
+  h3{color:var(--slate-deep);}
+  p{margin:0 0 16px;max-width:68ch;}
+  ul{max-width:68ch;}
+  .lede{font-size:1.12rem;color:var(--ink-soft);}
+
+  .hs-short{background:var(--box);border:1px solid var(--rule);border-left:6px solid var(--copper-bright);padding:18px 22px;margin:0 0 30px}
+  .hs-short h2{font-size:1.2rem;margin:0 0 10px;border:0;padding:0;color:var(--slate-deep)}
+  .hs-short ul{margin:0;padding-left:20px}
+  .hs-short li{margin-bottom:8px}
+  .hs-toc{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 26px}
+  .hs-toc a{font-family:Arial,sans-serif;font-size:.82rem;padding:7px 12px;border:1px solid var(--rule);background:var(--box);color:var(--ink);text-decoration:none;border-radius:999px}
+  .hs-toc a:hover{border-color:var(--copper)}
+  .hs-plain{display:flex;flex-wrap:wrap;align-items:center;gap:12px;background:var(--copper-bg);border:1px dashed var(--copper);padding:14px 18px;margin:0 0 26px;font-size:1rem}
+  .hs-btn{display:inline-block;background:var(--copper);color:#fff !important;text-decoration:none;font-family:Arial,sans-serif;font-weight:bold;padding:10px 16px;border-radius:6px}
+  .hs-pages{background:var(--box);border:1px solid var(--rule);padding:14px 18px;margin:0 0 30px}
+  .hs-pages summary{font-family:Arial,sans-serif;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);cursor:pointer}
+  .hs-pages ol{margin:10px 0 0;padding-left:22px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:4px 18px}
+  .hs-pages li{font-size:.95rem;line-height:1.35}
+  .hs-pages li.cur{font-weight:bold}
+  .hs-pages li.cur a{color:var(--ink);text-decoration:none}
+  .hs-pages small{display:block;font-size:.8rem;color:var(--ink-soft);font-weight:normal}
+
+  .figure-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule);margin:0 0 30px;}
+  .figure-cell{background:var(--slate);color:#fff;padding:22px 18px;text-align:center;}
+  .figure-cell .num{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:1.7rem;font-weight:700;color:#f0b98c;display:block;margin-bottom:6px;}
+  .figure-cell .cap{font-size:.84rem;color:var(--on-slate);}
+  @media (max-width:640px){.figure-grid{grid-template-columns:1fr;}}
+
+  .note{background:var(--box);border:1px dashed var(--rule);padding:14px 18px;font-size:.96rem;color:var(--ink-soft);margin:0 0 20px}
+  .callout{background:var(--box);border-left:4px solid var(--slate);padding:16px 20px;margin:18px 0;font-size:.98rem;}
+  .callout strong{color:var(--slate-deep);}
+  .estimate{background:#f8ece2;border:2px solid var(--part);padding:14px 18px;margin:16px 0;font-size:.98rem;}
+  .estimate b{color:var(--part);}
+
+  table.money{width:100%;border-collapse:collapse;background:#fff;font-size:.95rem;margin-bottom:10px}
+  table.money th,table.money td{border:1px solid var(--rule);padding:10px 12px;text-align:left;vertical-align:top}
+  table.money th{background:var(--slate);color:#fff;font-family:Arial,sans-serif;font-size:.82rem}
+  table.money td.n{text-align:right;font-family:Arial,sans-serif;font-weight:bold;white-space:nowrap}
+  table.money tr.total td{font-weight:700;background:var(--box-2)}
+  .tbl-wrap{overflow-x:auto;}
+
+  details.gl{border:1px solid var(--rule);background:#fff;margin-bottom:8px;padding:12px 16px;}
+  details.gl summary{font-weight:700;cursor:pointer;color:var(--slate-deep);}
+  details.gl p{margin:8px 0 0;font-size:.98rem;}
+
+  .legend-v{display:flex;flex-wrap:wrap;gap:8px 16px;margin:8px 0 14px;}
+  .filters{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 18px;}
+  .filters button{font:inherit;font-family:Arial,sans-serif;font-size:.95rem;font-weight:600;border:2px solid var(--slate);background:#fff;color:var(--slate);padding:7px 14px;border-radius:999px;cursor:pointer;min-height:44px;}
+  .filters button[aria-pressed="true"]{background:var(--slate);color:#fff;}
+  .claim{background:#fff;border:1px solid var(--rule);border-left:6px solid var(--unk);padding:16px 18px;margin-bottom:14px;}
+  .claim.ok{border-left-color:var(--ok);} .claim.part{border-left-color:var(--part);} .claim.no{border-left-color:var(--no);} .claim.unk{border-left-color:var(--unk);}
+  .claim .said{font-size:1.2rem;line-height:1.35;margin-bottom:6px;font-weight:600;}
+  .claim .who{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.72rem;color:var(--ink-soft);margin-bottom:10px;}
+  .claim p{font-size:1rem;margin-bottom:8px;}
+  .claim ul{margin:0 0 8px;padding-left:20px;}
+  .claim .src{font-size:.86rem;color:var(--ink-soft);font-style:italic;margin:6px 0 0;}
+  .v{display:inline-block;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.72rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;padding:3px 9px;border:2px solid;margin-bottom:8px;background:#fff;}
+  .v.ok{color:var(--ok);border-color:var(--ok);} .v.part{color:var(--part);border-color:var(--part);}
+  .v.no{color:var(--no);border-color:var(--no);} .v.unk{color:var(--unk);border-color:var(--unk);}
+  .grp{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--copper);margin:26px 0 10px;}
+
+  .chart{background:#fff;border:1px solid var(--rule);padding:18px 20px;margin:18px 0;}
+  .chart h3{font-size:1.2rem;margin:0 0 6px;}
+  .chart .sub{font-family:Arial,sans-serif;font-size:.88rem;color:var(--ink-soft);margin-bottom:10px;}
+  .chart .src{font-size:.84rem;color:var(--ink-soft);font-style:italic;margin-top:10px;}
+  .bar-row{margin-bottom:16px;}
+  .bar-row .lbl{font-family:Arial,sans-serif;font-size:1rem;font-weight:700;margin-bottom:4px;line-height:1.3;}
+  .bar-track{display:flex;height:42px;background:var(--box);border:1px solid var(--rule);}
+  .bar-track div{display:flex;align-items:center;justify-content:flex-start;padding-left:6px;color:#fff;font-family:Arial,sans-serif;font-weight:700;font-size:.9rem;white-space:nowrap;overflow:hidden;}
+  .b25{background:var(--slate);} .b40{background:var(--copper-bright);color:#fff !important;}
+  .legend{display:flex;gap:18px;flex-wrap:wrap;font-family:Arial,sans-serif;font-size:.92rem;margin-top:6px;}
+  .legend span::before{content:"";display:inline-block;width:18px;height:18px;margin-right:6px;vertical-align:-3px;}
+  .legend .l25::before{background:var(--slate);} .legend .l40::before{background:var(--copper-bright);}
+
+  .flow{background:var(--box);border:1px solid var(--rule);padding:22px 18px;margin:18px 0;}
+  .flow-row{display:grid;grid-template-columns:1fr;gap:14px;max-width:560px;margin:0 auto;}
+  .flow-row.three{grid-template-columns:repeat(3,minmax(0,1fr));max-width:860px;}
+  .fbox{background:#fff;border:3px solid var(--slate);border-radius:8px;padding:16px 18px;font-size:1.02rem;line-height:1.45;text-align:center;}
+  .fbox .fh{font-weight:700;font-size:1.2rem;margin-bottom:6px;color:var(--slate-deep);}
+  .fbox.pub{border-color:#2f6f8f;} .fbox.pub .fh{color:#2f6f8f;}
+  .fbox.co{border-color:var(--copper-bright);} .fbox.co .fh{color:var(--copper);}
+  .fbox.main{background:var(--slate);color:#fff;border-color:var(--slate);} .fbox.main .fh{color:#f0b98c;font-size:1.5rem;}
+  .arrow{text-align:center;font-size:30px;color:var(--copper-bright);margin:10px 0;line-height:1.2;}
+  .arrow span{display:block;font-family:Arial,sans-serif;font-size:1rem;font-weight:700;color:var(--ink-soft);}
+  .diagram-caption{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.7rem;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-soft);margin-top:12px;text-align:center;}
+  @media(max-width:700px){.flow-row.three{grid-template-columns:1fr;}}
+
+  #map{height:460px;border:1px solid var(--rule);margin:14px 0;}
+
+  .ask-list{list-style:none;margin:0;padding:0;max-width:none}
+  .ask-list li{background:var(--box);border-left:4px solid var(--copper-bright);padding:14px 18px;margin-bottom:10px;font-size:.98rem;}
+  .ask-list li strong{color:var(--copper);}
+
+  .tl{list-style:none;margin:0;padding:0;border-left:4px solid var(--copper-bright)}
+  .tl li{position:relative;padding:0 0 18px 22px;font-size:1rem}
+  .tl li::before{content:"";position:absolute;left:-11px;top:4px;width:14px;height:14px;border-radius:50%;background:#fff;border:4px solid var(--copper-bright)}
+  .tl li b{display:block;font-family:Arial,sans-serif;font-size:.9rem;color:var(--copper)}
+  .hs-updates{font-family:Arial,sans-serif;font-size:.85rem;color:var(--ink-soft);margin-top:14px}
+
+  .hs-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+  .hs-cards a{display:block;background:var(--box);border:1px solid var(--rule);border-top:5px solid var(--copper-bright);padding:14px 16px;text-decoration:none;color:var(--ink)}
+  .hs-cards a b{display:block;margin-bottom:4px}
+  .hs-cards a span{font-size:.88rem;color:var(--ink-soft)}
+  .hs-flips{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+  .hs-flip{text-align:left;background:var(--box);border:1px solid var(--rule);border-top:5px solid var(--slate);padding:14px 16px;cursor:pointer;font:inherit;color:var(--ink);min-height:96px}
+  .hs-flip .ft{font-weight:bold;font-size:1.05rem}
+  .hs-flip .fh{font-family:Arial,sans-serif;font-size:.75rem;color:var(--ink-soft);margin-top:6px}
+  .hs-flip .fd{display:none;margin-top:8px;font-size:.95rem}
+  .hs-flip[aria-expanded="true"] .fd{display:block}
+  .hs-flip[aria-expanded="true"] .fh{display:none}
+  .hs-counter{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+  .hs-counter div{background:var(--slate);color:#fff;padding:14px;text-align:center}
+  .hs-counter .n{font-family:Arial,sans-serif;font-size:1.8rem;font-weight:bold}
+  .hs-counter .l{font-size:.82rem}
+
+  .sources-block{background:transparent;border:none;border-top:2px solid var(--slate);padding:0;margin-top:8px}
+  .sources-block summary{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.85rem;letter-spacing:.04em;color:var(--ink);padding:14px 0;cursor:pointer}
+  .sources-block ol{margin:0 0 16px;padding-left:20px;font-size:.92rem;color:var(--ink-soft);max-width:none}
+  .sources-block li{margin-bottom:10px;}
+
+  footer{background:var(--slate-deep);color:var(--on-slate-soft);padding:32px 24px;text-align:center;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.76rem;letter-spacing:.04em;}
+  footer a{color:#f0b98c;}
+  @media(max-width:700px){
+    main{padding:34px 16px 80px}
+    header.case-header{padding:40px 16px 30px}
+    .case-title{font-size:1.8rem}
+    .topband{padding:10px 16px}
+  }
+
+/* ===== Unelected Power standard (slate blue & copper) — header, footer, Where/Who, call number ===== */
+.up-top{background:#1c2a40;color:#b9c6da;font:600 13px 'IBM Plex Mono',monospace;letter-spacing:.06em;text-transform:uppercase}
+.up-top .in{max-width:900px;margin:0 auto;padding:10px 20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.up-top a{color:#e6ecf5;text-decoration:none}
+.up-ww{max-width:900px;margin:26px auto 6px;padding:0 20px}
+.up-where{border:3px solid #2c3e5c;border-radius:10px;overflow:hidden;background:#fff}
+.up-where-h{background:#2c3e5c;color:#fff;padding:12px 18px}
+.up-lbl{font:600 12.5px 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#f3c9a6}
+.up-where-h .pl{font-size:21px;font-weight:700;margin-top:2px}
+.up-who{margin:14px 16px 16px;border:2px solid #9a521f;border-radius:8px}
+.up-who-h{background:#f8ece2;color:#9a521f;padding:6px 12px;font:600 12.5px 'IBM Plex Mono',monospace;letter-spacing:.14em;border-bottom:2px solid #9a521f}
+.up-who ul{list-style:none;margin:0;padding:6px 12px}
+.up-who li{padding:6px 0;border-bottom:1px solid #e3e8ef;font-size:17px;margin:0}
+.up-who li:last-child{border-bottom:none}
+.up-who li b{color:#2c3e5c}
+.up-connect ul{list-style:none;margin:0;padding:0}
+.up-connect li{border:1px solid #c9d3e1;border-left:5px solid #9a521f;background:#fff;padding:10px 14px;margin:0 0 10px;font-size:17px}
+.up-connect li a{font-weight:700;color:#2c3e5c}
+.up-connect li span{display:block;color:#4a5466;font-size:15.5px;margin-top:2px}
+.up-sources details{border:1px solid #c9d3e1;background:#eef2f7;padding:12px 16px}
+.up-sources summary{cursor:pointer;font:600 15px 'IBM Plex Mono',monospace;color:#2c3e5c}
+.up-sources li{margin:8px 0;font-size:16px}
+.up-foot{background:#1c2a40;color:#b9c6da;margin-top:30px;padding:28px 0 36px;font-size:16px}
+.up-foot .in{max-width:900px;margin:0 auto;padding:0 20px}
+.up-foot a{color:#f3c9a6}
+#up-shelf{border:2px dashed #b9c6da;border-radius:10px;padding:16px 18px;margin-bottom:20px;color:#e6ecf5}
+.up-cn-big{font:600 17px 'IBM Plex Mono',monospace;margin-bottom:12px}
+.up-cn-big b{color:#f3c9a6}
+.up-nav{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+.up-nav-btn{flex:1;min-width:220px;background:#2c3e5c;border:1px solid #4a6185;border-radius:8px;padding:12px 14px;color:#fff;text-decoration:none;font-size:16px}
+.up-nav-btn:last-child{text-align:right}
+.up-nav-btn b{color:#f3c9a6;font-family:'IBM Plex Mono',monospace}
+.up-nav-btn.up-off{opacity:.5}
+.up-list summary{cursor:pointer;font:600 15px 'IBM Plex Mono',monospace;color:#f3c9a6;margin-bottom:6px}
+.up-list ol{list-style:none;margin:8px 0 0;padding:0}
+.up-list li{margin:0;padding:5px 0;border-bottom:1px solid #2f4466}
+.up-list li a{color:#e6ecf5;text-decoration:none}
+.up-list li.up-shelf-head{color:#f3c9a6;font:600 13px 'IBM Plex Mono',monospace;letter-spacing:.1em;padding-top:12px;border-bottom:none}
+.up-list li.up-here a{color:#fff;font-weight:700}
+.up-cn{font-family:'IBM Plex Mono',monospace;color:#f3c9a6;margin-right:6px}
+.up-search{font-size:15px;margin-top:12px}
+.up-sub{font-size:14.5px;margin-top:8px;color:#b9c6da}
+  .up-connect h2,.up-sources h2{font-size:1.5rem;margin:0 0 18px;border-bottom:2px solid var(--slate);padding-bottom:10px;color:var(--slate-deep);}
+  .up-sources ul{max-width:none;padding-left:20px;color:var(--ink-soft);}
+  .up-connect ul,.up-who ul{max-width:none;}
+
+/* Utah Hive Politics branding bars (top and bottom) */
+.hb-bar{background:#0d0b0a;border-bottom:1px solid #3a2f1c;padding:10px 20px;}
+.hb-bar a{display:flex;align-items:center;gap:12px;max-width:1100px;margin:0 auto;text-decoration:none;}
+.hb-bar img{width:52px;height:52px;border-radius:4px;display:block;flex:none;}
+.hb-name{font-family:'Cinzel','Trajan Pro',Georgia,serif;color:#d4af37;font-size:16px;letter-spacing:.14em;text-transform:uppercase;line-height:1.2;display:block;}
+.hb-sub{font-family:Georgia,serif;font-style:italic;color:#b8956a;font-size:12.5px;letter-spacing:.02em;display:block;margin-top:2px;}
+.hb-foot{background:#0d0b0a;color:#b8956a;text-align:center;padding:26px 20px 30px;font-family:Georgia,serif;}
+.hb-foot img{width:52px;height:52px;display:block;margin:0 auto 10px;}
+.hb-foot .hb-name{font-size:14px;}
+.hb-foot .hb-tag{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#8a7650;margin-top:8px;display:block;}
+@media(max-width:600px){.hb-bar{padding:8px 16px}.hb-bar img{width:38px;height:38px}.hb-name{font-size:13px}.hb-sub{font-size:11.5px}}
+
+.hb-line-top{display:block;font-family:Georgia,serif;color:#e8d9b5;font-size:13px;margin-top:4px}
+.hb-line{max-width:720px;margin:14px auto 0;color:#e8d9b5;font-size:15.5px;line-height:1.5}
+.hb-tips{margin:16px 0 4px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.hb-btn{display:inline-block;border:2px solid #d4af37;background:#d4af37;color:#0d0b0a;font:700 15px Georgia,serif;padding:10px 18px;border-radius:6px;text-decoration:none}
+.hb-btn2{background:transparent;color:#d4af37}
+.hb-small{font-size:12.5px;color:#8a7650;margin:6px 0 0}
+@media(max-width:600px){.hb-line-top{font-size:11.5px}}
+
+/* Round 2: short version + questions to ask */
+.up-short{max-width:900px;margin:24px auto 6px;padding:18px 22px;background:#f8ece2;border-left:6px solid #9a521f;border-radius:6px}
+.up-short h2{margin:0 0 8px;font-size:24px;color:#2c3e5c;border:0;padding:0}
+.up-short ul{margin:0;padding-left:22px}
+.up-short li{font-size:18.5px;margin:6px 0}
+.up-short-more{margin:10px 0 0}
+.up-short-more a{font-weight:700;color:#9a521f}
+.up-ask{max-width:900px;margin:26px auto;padding:0 20px}
+.wrap .up-ask{padding:0;margin:26px 0}
+.up-ask ul{margin:0;padding-left:22px}
+.up-ask li{font-size:18px;margin:10px 0}
+p.added,div.added{background:#f8ece2;border-left:3px solid #b5652b;padding:8px 12px;font-size:.97rem;margin:8px 0}
+div.added ul{margin:6px 0 0;padding-left:20px}
+@media(max-width:940px){.up-short{margin-left:16px;margin-right:16px}}
+</style>
+
+<style>
+  .bar-val{font-family:Arial,sans-serif;font-weight:700;font-size:1rem;margin-top:4px;font-variant-numeric:tabular-nums;}
+  .bar-track div{min-width:4px}
+  .bpac{background:#2f6f8f;} .busps{background:var(--copper-bright);}
+  .legend .lpac::before{background:#2f6f8f;} .legend .lusps::before{background:var(--copper-bright);}
+  .chart-grp{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;color:var(--copper);margin:18px 0 10px;}
+  table.money tr.hl td{background:var(--copper-bg);}
+  table.money td{font-variant-numeric:tabular-nums}
+  .fit-yes{color:var(--ok);font-weight:700} .fit-no{color:var(--no);font-weight:700}
+  .quote{border-left:4px solid var(--slate);background:var(--box);padding:12px 18px;margin:12px 0;font-size:1.02rem}
+  .side2{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin:14px 0}
+  .side2 > div{background:var(--box);border:1px solid var(--rule);border-top:5px solid var(--slate);padding:14px 18px;min-width:0}
+  .side2 h3{margin:0 0 8px;font-size:1.15rem}
+  .side2 ul{margin:0;padding-left:20px}
+  .conv-track{position:relative;height:42px;background:var(--box);border:1px solid var(--rule)}
+  .conv-fill{height:100%;display:flex;align-items:center;padding-left:8px;color:#fff;font-family:Arial,sans-serif;font-weight:700;font-size:.95rem;white-space:nowrap}
+  .conv-line{position:absolute;top:-6px;bottom:-6px;left:60%;border-left:3px dashed var(--no)}
+  .conv-key{font-family:Arial,sans-serif;font-size:.92rem;color:var(--no);font-weight:700;margin:4px 0 14px}
+  .checked{background:#fff;border:2px solid var(--slate);padding:16px 20px;margin:0 0 30px}
+  .checked h2{font-size:1.2rem;margin:0 0 10px;border:0;padding:0;color:var(--slate-deep)}
+  .checked ul{margin:0;padding-left:20px;max-width:none}
+  .checked li{margin-bottom:6px;font-size:.98rem}
+  .paths{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin:16px 0}
+  .path{background:var(--box);border:1px solid var(--rule);padding:16px;min-width:0}
+  .path h3{margin:0 0 4px;font-size:1.15rem}
+  .path .tag{font-family:Arial,sans-serif;font-size:.85rem;font-weight:700;margin-bottom:10px}
+  .path .tag.seen{color:var(--ok)} .path .tag.q{color:var(--part)}
+  .path .fbox{margin:0 auto;max-width:300px}
+  .path .arrow{margin:6px 0}
+  .bigq{background:var(--copper-bg);border:2px solid var(--copper);padding:16px 20px;margin:16px 0;font-size:1.05rem}
+</style>
+
+<link rel="icon" type="image/png" href="hive-bee.png">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="hb-bar"><a href="https://webercountyhive.substack.com/" target="_blank" rel="noopener"><img src="uhp-badge.png" alt="Utah Hive Politics logo"><span><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span><span class="hb-line-top">The people's publication. We investigate what's best for the public as a whole, not any party or special interest.</span></span></a></div>
+<div class="up-top"><div class="in"><span><a href="index.html">← All Unelected Power pages</a> &nbsp;·&nbsp; <a href="https://weber-county-hive.github.io/-weber-county-hive-index/">Hive library ↗</a></span></div></div>
+<header class="case-header">
+  <div class="case-wrap">
+    <p class="case-eyebrow">PLAIN WORDS · POSTAGE PERMIT · 2026 · UP 100.14</p>
+    <h1 class="case-title">The party's postage permit, <em>in plain words.</em></h1>
+    <p class="case-sub">The short version of the State Party Indicia case file.</p>
+    <p class="pub-date">Posted Nov. 5, 2026 &middot; Updated Nov. 5, 2026</p>
+  </div>
+</header>
+<main>
+<div class="hs-plain">Want every number and source? <a class="hs-btn" href="utgop-state-indicia.html">Read the full case file</a></div>
+
+<section><h2 class="section-head">The stamp deal</h2>
+<p>Mailing letters costs money. The Post Office gives some groups a <b>cheaper price</b>. A state political party is one of them.</p>
+<p>The Post Office has a rule about that cheap price. <b>The party can use it only for the party's own mail.</b> It can't let someone else use it, and it has to pay for the stamps itself.</p>
+</section>
+
+<section><h2 class="section-head">What the party's rule book says</h2>
+<p>The Utah Republican Party has a rule book. One page says candidates can use the party's cheap price. Here is how it works:</p>
+<div class="flow">
+  <div class="flow-row"><div class="fbox"><div class="fh">1. The candidate</div>Pays a printer to print the mailers.</div></div>
+  <div class="arrow">↓<span>gives the party the stamp money, plus about 10% more</span></div>
+  <div class="flow-row"><div class="fbox main"><div class="fh">2. The party</div>Says yes, mail it with our cheap price.</div></div>
+  <div class="arrow">↓<span>the Post Office takes the stamp money from the party</span></div>
+  <div class="flow-row"><div class="fbox"><div class="fh">3. The Post Office</div>Sends the mailers to voters.</div></div>
+</div>
+<div class="callout"><strong>An example.</strong> Say the stamps for a candidate's mailer cost $1,000. The candidate gives the party about <b>$1,100</b>. The party mails it at its cheap price.</div>
+</section>
+
+<section><h2 class="section-head">Two rules side by side</h2>
+<div class="side2">
+<div><h3>The Post Office's rule</h3><ul><li>The cheap price is for the party's own mail.</li><li>The party pays for its stamps.</li><li>The candidate does not pay the party back for them.</li></ul></div>
+<div><h3>The party's rule book</h3><ul><li>Candidates can use the cheap price.</li><li>The candidate gives the party the stamp money.</li><li>Plus about 10% more.</li></ul></div>
+</div>
+</section>
+
+<section><h2 class="section-head">What the records show</h2>
+<p>Candidates have to report the money they spend. So does the party. In 2026:</p>
+<ul>
+<li>Republican candidates and groups reported paying the party <b>$441,267.67</b>.</li>
+<li>The party reported paying the Post Office <b>$305,345.98</b>.</li>
+<li>Most of it happened right before the June primary and right before the November election.</li>
+</ul>
+<div class="chart">
+<h3>The party's payments to the Post Office</h3>
+<div class="bar-row"><div class="lbl">Jan 2026</div><div class="bar-track"></div><div class="bar-val">none</div></div>
+<div class="bar-row"><div class="lbl">Feb 2026</div><div class="bar-track"><div class="busps" style="width:1.2%"></div></div><div class="bar-val">$1,794.80</div></div>
+<div class="bar-row"><div class="lbl">Mar 2026</div><div class="bar-track"></div><div class="bar-val">none</div></div>
+<div class="bar-row"><div class="lbl">Apr 2026</div><div class="bar-track"></div><div class="bar-val">none</div></div>
+<div class="bar-row"><div class="lbl">May 2026</div><div class="bar-track"><div class="busps" style="width:19.3%"></div></div><div class="bar-val">$28,908.52</div></div>
+<div class="bar-row"><div class="lbl">Jun 2026 (primary June 23)</div><div class="bar-track"><div class="busps" style="width:86.3%"></div></div><div class="bar-val">$129,521.27</div></div>
+<div class="bar-row"><div class="lbl">Jul 2026</div><div class="bar-track"></div><div class="bar-val">none</div></div>
+<div class="bar-row"><div class="lbl">Aug 2026</div><div class="bar-track"><div class="busps" style="width:0.1%"></div></div><div class="bar-val">$134.71</div></div>
+<div class="bar-row"><div class="lbl">Sep 2026</div><div class="bar-track"><div class="busps" style="width:2.2%"></div></div><div class="bar-val">$3,361.73</div></div>
+<div class="bar-row"><div class="lbl">Oct 2026 (ballots mailed mid-October)</div><div class="bar-track"><div class="busps" style="width:94.4%"></div></div><div class="bar-val">$141,624.95</div></div>
+</div>
+<ul>
+<li>One candidate's report names the deal: Rep. Doug Fiefia paid <b>"Utah Republican Party State Indicia"</b> $12,444. "Indicia" is the word for the printed stamp box on bulk mail.</li>
+<li>Rep. Jim Alvey of Weber County paid <b>"State Inicia"</b> $10,210. No business by that name could be found. "Inicia" is one letter off "Indicia."</li>
+<li>No report uses the word "postage."</li>
+<li>The Utah Democratic Party reported no payments to the Post Office in 2026.</li>
+</ul>
+</section>
+
+<section><h2 class="section-head">A question: money through a helper company</h2>
+<p>The rule book also says the party works with certain printing and mailing companies that "know the process." Their names are blacked out.</p>
+<p>Here is why that matters. If a candidate pays a <b>helper company</b>, and the helper company pays the party, then:</p>
+<ul>
+<li>The candidate's report only shows the helper company.</li>
+<li>The party's report only shows the helper company.</li>
+<li>Nobody reading the reports can see the candidate used the party's cheap price.</li>
+</ul>
+<p>One campaign helper company, <b>Tactical Campaigns</b>, gave the party <b>$49,185</b> in the first half of 2026. Candidates and groups paid it <b>$118,501.77</b>. <b>The records don't say</b> whether any of that money was for stamps. That is a question, not a finding.</p>
+</section>
+
+<section><h2 class="section-head">What we don't know</h2>
+<p>We can't tell from the records whether the extra 10% was charged, or which payments were for stamps. The Post Office decides whether a mailing followed its rules. No Post Office decision about 2026 was found.</p>
+</section>
+
+<section><h2 class="section-head">Questions you can ask</h2>
+<ul class="ask-list">
+<li><strong>The Lieutenant Governor's elections office:</strong> When a candidate uses the party's cheap stamp price, should that be reported as a gift from the party?</li>
+<li><strong>Your Republican State Central Committee members:</strong> When was this page of the rule book approved, and which mailing companies are on its list?</li>
+</ul>
+</section>
+</main>
+<footer class="up-foot"><div class="in"><div id="up-shelf"></div></div></footer><script src="unelected-power-data.js?v=4"></script><script src="up-shelf.js?v=4"></script>
+
+<div class="hb-foot"><img src="hive-bee.png" alt=""><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span><span class="hb-tag">Independent · Accountability · Journalism</span><p class="hb-line">The Weber County Hive and Utah Hive Politics: the people's publication. We investigate what's best for the public as a whole, not for any party or special interest group. We report public records. You decide.</p><p class="hb-tips"><a class="hb-btn" href="https://weber-county-hive.github.io/-weber-county-hive-index/tips.html#send">Send a tip</a><a class="hb-btn hb-btn2" href="https://weber-county-hive.github.io/-weber-county-hive-index/tips.html">Tips we checked</a><a class="hb-btn hb-btn2" href="https://weber-county-hive.github.io/-weber-county-hive-index/tips.html#send">See a mistake? Tell us</a></p><p class="hb-small">We never name tipsters. When we correct a page, the fix and its date are shown on the page.</p><p class="hb-small"><a href="index.html" style="color:#d4af37">Unelected Power shelf</a> · <a href="https://weber-county-hive.github.io/-weber-county-hive-index/" style="color:#d4af37">Master Index (Hive library)</a> · <a href="https://webercountyhive.substack.com/" style="color:#d4af37">Read on Substack</a></p></div>
+<script data-goatcounter="https://weberhive.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
