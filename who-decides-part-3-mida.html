@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Who Decides, Part 3: MIDA | Unelected Power | Utah Hive Politics</title>
+<meta name="description" content="Who Decides, Part 3: the Military Installation Development Authority (MIDA). Who sits on its board, every bill that changed its powers from 2007 to 2026 with sponsors and votes, how each change grades for the public, and the 2027 bills to watch.">
+<style>
+  :root{
+    --slate:#2c3e5c;
+    --slate-deep:#1c2a40;
+    --page:#ffffff;
+    --box:#eef2f7;
+    --box-2:#e2e8f1;
+    --ink:#1e2430;
+    --ink-soft:#4a5466;
+    --copper:#9a521f;
+    --copper-bright:#b5652b;
+    --copper-bg:#f8ece2;
+    --rule:#c9d3e1;
+    --on-slate:#e6ecf5;
+    --on-slate-soft:#b9c6da;
+    --ok:#1d6b3a; --part:#8a5a00; --no:#9b1c1c; --unk:#4a5568;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;font-size:112.5%;}
+  body{margin:0;background:var(--page);color:var(--ink);font-family:"Newsreader",Georgia,"Iowan Old Style",serif;line-height:1.55;}
+  a{color:var(--copper);}
+
+
+  .topband{background:var(--slate-deep);color:var(--on-slate);padding:10px 24px;font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace;font-size:.72rem;letter-spacing:.06em;display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;}
+  .topband a{color:var(--on-slate);text-decoration:none;border-bottom:1px solid rgba(230,236,245,.4);}
+
+  header.case-header{background:var(--slate);color:#fff;padding:56px 24px 40px;position:relative;overflow:hidden;border-bottom:5px solid var(--copper-bright);}
+  header.case-header::after{content:"";position:absolute;right:-60px;top:-60px;width:260px;height:260px;border:1px solid rgba(230,236,245,.15);border-radius:50%;}
+  .case-wrap{max-width:880px;margin:0 auto;position:relative;}
+  .case-eyebrow{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.78rem;letter-spacing:.08em;color:#f0b98c;margin:0 0 14px;}
+  .case-title{font-size:2.4rem;line-height:1.14;margin:0 0 10px;font-weight:600;max-width:22ch;}
+  .case-title em{color:#f0b98c;}
+  .case-sub{font-size:1.12rem;color:var(--on-slate);font-style:italic;margin:0 0 24px;max-width:58ch;}
+  .meta-row{display:flex;flex-wrap:wrap;gap:10px;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.74rem;}
+  .meta-pill{border:1px solid rgba(230,236,245,.35);padding:6px 12px;border-radius:2px;color:var(--on-slate);}
+  .pub-date{margin-top:14px;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.76rem;letter-spacing:.03em;color:#f0b98c;}
+
+  main{max-width:880px;margin:0 auto;padding:44px 24px 90px;}
+  section{margin-bottom:52px;}
+  h2.section-head{font-size:1.5rem;margin:0 0 18px;border-bottom:2px solid var(--slate);padding-bottom:10px;color:var(--slate-deep);}
+  h3{color:var(--slate-deep);}
+  p{margin:0 0 16px;max-width:68ch;}
+  ul{max-width:68ch;}
+  .lede{font-size:1.12rem;color:var(--ink-soft);}
+
+  .hs-short{background:var(--box);border:1px solid var(--rule);border-left:6px solid var(--copper-bright);padding:18px 22px;margin:0 0 30px}
+  .hs-short h2{font-size:1.2rem;margin:0 0 10px;border:0;padding:0;color:var(--slate-deep)}
+  .hs-short ul{margin:0;padding-left:20px}
+  .hs-short li{margin-bottom:8px}
+  .hs-toc{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 26px}
+  .hs-toc a{font-family:Arial,sans-serif;font-size:.82rem;padding:7px 12px;border:1px solid var(--rule);background:var(--box);color:var(--ink);text-decoration:none;border-radius:999px}
+  .hs-toc a:hover{border-color:var(--copper)}
+  .hs-plain{display:flex;flex-wrap:wrap;align-items:center;gap:12px;background:var(--copper-bg);border:1px dashed var(--copper);padding:14px 18px;margin:0 0 26px;font-size:1rem}
+  .hs-btn{display:inline-block;background:var(--copper);color:#fff !important;text-decoration:none;font-family:Arial,sans-serif;font-weight:bold;padding:10px 16px;border-radius:6px}
+  .hs-pages{background:var(--box);border:1px solid var(--rule);padding:14px 18px;margin:0 0 30px}
+  .hs-pages summary{font-family:Arial,sans-serif;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);cursor:pointer}
+  .hs-pages ol{margin:10px 0 0;padding-left:22px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:4px 18px}
+  .hs-pages li{font-size:.95rem;line-height:1.35}
+  .hs-pages li.cur{font-weight:bold}
+  .hs-pages li.cur a{color:var(--ink);text-decoration:none}
+  .hs-pages small{display:block;font-size:.8rem;color:var(--ink-soft);font-weight:normal}
+
+  .figure-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule);margin:0 0 30px;}
+  .figure-cell{background:var(--slate);color:#fff;padding:22px 18px;text-align:center;}
+  .figure-cell .num{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:1.7rem;font-weight:700;color:#f0b98c;display:block;margin-bottom:6px;}
+  .figure-cell .cap{font-size:.84rem;color:var(--on-slate);}
+  @media (max-width:640px){.figure-grid{grid-template-columns:1fr;}}
+
+  .note{background:var(--box);border:1px dashed var(--rule);padding:14px 18px;font-size:.96rem;color:var(--ink-soft);margin:0 0 20px}
+  .callout{background:var(--box);border-left:4px solid var(--slate);padding:16px 20px;margin:18px 0;font-size:.98rem;}
+  .callout strong{color:var(--slate-deep);}
+  .estimate{background:#f8ece2;border:2px solid var(--part);padding:14px 18px;margin:16px 0;font-size:.98rem;}
+  .estimate b{color:var(--part);}
+
+  table.money{width:100%;border-collapse:collapse;background:#fff;font-size:.95rem;margin-bottom:10px}
+  table.money th,table.money td{border:1px solid var(--rule);padding:10px 12px;text-align:left;vertical-align:top}
+  table.money th{background:var(--slate);color:#fff;font-family:Arial,sans-serif;font-size:.82rem}
+  table.money td.n{text-align:right;font-family:Arial,sans-serif;font-weight:bold;white-space:nowrap}
+  table.money tr.total td{font-weight:700;background:var(--box-2)}
+  .tbl-wrap{overflow-x:auto;}
+
+  details.gl{border:1px solid var(--rule);background:#fff;margin-bottom:8px;padding:12px 16px;}
+  details.gl summary{font-weight:700;cursor:pointer;color:var(--slate-deep);}
+  details.gl p{margin:8px 0 0;font-size:.98rem;}
+
+  .legend-v{display:flex;flex-wrap:wrap;gap:8px 16px;margin:8px 0 14px;}
+  .filters{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 18px;}
+  .filters button{font:inherit;font-family:Arial,sans-serif;font-size:.95rem;font-weight:600;border:2px solid var(--slate);background:#fff;color:var(--slate);padding:7px 14px;border-radius:999px;cursor:pointer;min-height:44px;}
+  .filters button[aria-pressed="true"]{background:var(--slate);color:#fff;}
+  .claim{background:#fff;border:1px solid var(--rule);border-left:6px solid var(--unk);padding:16px 18px;margin-bottom:14px;}
+  .claim.ok{border-left-color:var(--ok);} .claim.part{border-left-color:var(--part);} .claim.no{border-left-color:var(--no);} .claim.unk{border-left-color:var(--unk);}
+  .claim .said{font-size:1.2rem;line-height:1.35;margin-bottom:6px;font-weight:600;}
+  .claim .who{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.72rem;color:var(--ink-soft);margin-bottom:10px;}
+  .claim p{font-size:1rem;margin-bottom:8px;}
+  .claim ul{margin:0 0 8px;padding-left:20px;}
+  .claim .src{font-size:.86rem;color:var(--ink-soft);font-style:italic;margin:6px 0 0;}
+  .v{display:inline-block;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.72rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;padding:3px 9px;border:2px solid;margin-bottom:8px;background:#fff;}
+  .v.ok{color:var(--ok);border-color:var(--ok);} .v.part{color:var(--part);border-color:var(--part);}
+  .v.no{color:var(--no);border-color:var(--no);} .v.unk{color:var(--unk);border-color:var(--unk);}
+  .grp{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--copper);margin:26px 0 10px;}
+
+  .chart{background:#fff;border:1px solid var(--rule);padding:18px 20px;margin:18px 0;}
+  .chart h3{font-size:1.2rem;margin:0 0 6px;}
+  .chart .sub{font-family:Arial,sans-serif;font-size:.88rem;color:var(--ink-soft);margin-bottom:10px;}
+  .chart .src{font-size:.84rem;color:var(--ink-soft);font-style:italic;margin-top:10px;}
+  .bar-row{margin-bottom:16px;}
+  .bar-row .lbl{font-family:Arial,sans-serif;font-size:1rem;font-weight:700;margin-bottom:4px;line-height:1.3;}
+  .bar-track{display:flex;height:42px;background:var(--box);border:1px solid var(--rule);}
+  .bar-track div{display:flex;align-items:center;justify-content:flex-start;padding-left:6px;color:#fff;font-family:Arial,sans-serif;font-weight:700;font-size:.9rem;white-space:nowrap;overflow:hidden;}
+  .b25{background:var(--slate);} .b40{background:var(--copper-bright);color:#fff !important;}
+  .legend{display:flex;gap:18px;flex-wrap:wrap;font-family:Arial,sans-serif;font-size:.92rem;margin-top:6px;}
+  .legend span::before{content:"";display:inline-block;width:18px;height:18px;margin-right:6px;vertical-align:-3px;}
+  .legend .l25::before{background:var(--slate);} .legend .l40::before{background:var(--copper-bright);}
+
+  .flow{background:var(--box);border:1px solid var(--rule);padding:22px 18px;margin:18px 0;}
+  .flow-row{display:grid;grid-template-columns:1fr;gap:14px;max-width:560px;margin:0 auto;}
+  .flow-row.three{grid-template-columns:repeat(3,minmax(0,1fr));max-width:860px;}
+  .fbox{background:#fff;border:3px solid var(--slate);border-radius:8px;padding:16px 18px;font-size:1.02rem;line-height:1.45;text-align:center;}
+  .fbox .fh{font-weight:700;font-size:1.2rem;margin-bottom:6px;color:var(--slate-deep);}
+  .fbox.pub{border-color:#2f6f8f;} .fbox.pub .fh{color:#2f6f8f;}
+  .fbox.co{border-color:var(--copper-bright);} .fbox.co .fh{color:var(--copper);}
+  .fbox.main{background:var(--slate);color:#fff;border-color:var(--slate);} .fbox.main .fh{color:#f0b98c;font-size:1.5rem;}
+  .arrow{text-align:center;font-size:30px;color:var(--copper-bright);margin:10px 0;line-height:1.2;}
+  .arrow span{display:block;font-family:Arial,sans-serif;font-size:1rem;font-weight:700;color:var(--ink-soft);}
+  .diagram-caption{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.7rem;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-soft);margin-top:12px;text-align:center;}
+  @media(max-width:700px){.flow-row.three{grid-template-columns:1fr;}}
+
+  #map{height:460px;border:1px solid var(--rule);margin:14px 0;}
+
+  .ask-list{list-style:none;margin:0;padding:0;max-width:none}
+  .ask-list li{background:var(--box);border-left:4px solid var(--copper-bright);padding:14px 18px;margin-bottom:10px;font-size:.98rem;}
+  .ask-list li strong{color:var(--copper);}
+
+  .tl{list-style:none;margin:0;padding:0;border-left:4px solid var(--copper-bright)}
+  .tl li{position:relative;padding:0 0 18px 22px;font-size:1rem}
+  .tl li::before{content:"";position:absolute;left:-11px;top:4px;width:14px;height:14px;border-radius:50%;background:#fff;border:4px solid var(--copper-bright)}
+  .tl li b{display:block;font-family:Arial,sans-serif;font-size:.9rem;color:var(--copper)}
+  .hs-updates{font-family:Arial,sans-serif;font-size:.85rem;color:var(--ink-soft);margin-top:14px}
+
+  .hs-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+  .hs-cards a{display:block;background:var(--box);border:1px solid var(--rule);border-top:5px solid var(--copper-bright);padding:14px 16px;text-decoration:none;color:var(--ink)}
+  .hs-cards a b{display:block;margin-bottom:4px}
+  .hs-cards a span{font-size:.88rem;color:var(--ink-soft)}
+  .hs-flips{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+  .hs-flip{text-align:left;background:var(--box);border:1px solid var(--rule);border-top:5px solid var(--slate);padding:14px 16px;cursor:pointer;font:inherit;color:var(--ink);min-height:96px}
+  .hs-flip .ft{font-weight:bold;font-size:1.05rem}
+  .hs-flip .fh{font-family:Arial,sans-serif;font-size:.75rem;color:var(--ink-soft);margin-top:6px}
+  .hs-flip .fd{display:none;margin-top:8px;font-size:.95rem}
+  .hs-flip[aria-expanded="true"] .fd{display:block}
+  .hs-flip[aria-expanded="true"] .fh{display:none}
+  .hs-counter{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+  .hs-counter div{background:var(--slate);color:#fff;padding:14px;text-align:center}
+  .hs-counter .n{font-family:Arial,sans-serif;font-size:1.8rem;font-weight:bold}
+  .hs-counter .l{font-size:.82rem}
+
+  .sources-block{background:transparent;border:none;border-top:2px solid var(--slate);padding:0;margin-top:8px}
+  .sources-block summary{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.85rem;letter-spacing:.04em;color:var(--ink);padding:14px 0;cursor:pointer}
+  .sources-block ol{margin:0 0 16px;padding-left:20px;font-size:.92rem;color:var(--ink-soft);max-width:none}
+  .sources-block li{margin-bottom:10px;}
+
+  footer{background:var(--slate-deep);color:var(--on-slate-soft);padding:32px 24px;text-align:center;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.76rem;letter-spacing:.04em;}
+  footer a{color:#f0b98c;}
+  @media(max-width:700px){
+    main{padding:34px 16px 80px}
+    header.case-header{padding:40px 16px 30px}
+    .case-title{font-size:1.8rem}
+    .topband{padding:10px 16px}
+  }
+
+/* ===== Unelected Power standard (slate blue & copper) — header, footer, Where/Who, call number ===== */
+.up-top{background:#1c2a40;color:#b9c6da;font:600 13px 'IBM Plex Mono',monospace;letter-spacing:.06em;text-transform:uppercase}
+.up-top .in{max-width:900px;margin:0 auto;padding:10px 20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.up-top a{color:#e6ecf5;text-decoration:none}
+.up-ww{max-width:900px;margin:26px auto 6px;padding:0 20px}
+.up-where{border:3px solid #2c3e5c;border-radius:10px;overflow:hidden;background:#fff}
+.up-where-h{background:#2c3e5c;color:#fff;padding:12px 18px}
+.up-lbl{font:600 12.5px 'IBM Plex Mono',monospace;letter-spacing:.14em;color:#f3c9a6}
+.up-where-h .pl{font-size:21px;font-weight:700;margin-top:2px}
+.up-who{margin:14px 16px 16px;border:2px solid #9a521f;border-radius:8px}
+.up-who-h{background:#f8ece2;color:#9a521f;padding:6px 12px;font:600 12.5px 'IBM Plex Mono',monospace;letter-spacing:.14em;border-bottom:2px solid #9a521f}
+.up-who ul{list-style:none;margin:0;padding:6px 12px}
+.up-who li{padding:6px 0;border-bottom:1px solid #e3e8ef;font-size:17px;margin:0}
+.up-who li:last-child{border-bottom:none}
+.up-who li b{color:#2c3e5c}
+.up-connect ul{list-style:none;margin:0;padding:0}
+.up-connect li{border:1px solid #c9d3e1;border-left:5px solid #9a521f;background:#fff;padding:10px 14px;margin:0 0 10px;font-size:17px}
+.up-connect li a{font-weight:700;color:#2c3e5c}
+.up-connect li span{display:block;color:#4a5466;font-size:15.5px;margin-top:2px}
+.up-sources details{border:1px solid #c9d3e1;background:#eef2f7;padding:12px 16px}
+.up-sources summary{cursor:pointer;font:600 15px 'IBM Plex Mono',monospace;color:#2c3e5c}
+.up-sources li{margin:8px 0;font-size:16px}
+.up-foot{background:#1c2a40;color:#b9c6da;margin-top:30px;padding:28px 0 36px;font-size:16px}
+.up-foot .in{max-width:900px;margin:0 auto;padding:0 20px}
+.up-foot a{color:#f3c9a6}
+#up-shelf{border:2px dashed #b9c6da;border-radius:10px;padding:16px 18px;margin-bottom:20px;color:#e6ecf5}
+.up-cn-big{font:600 17px 'IBM Plex Mono',monospace;margin-bottom:12px}
+.up-cn-big b{color:#f3c9a6}
+.up-nav{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+.up-nav-btn{flex:1;min-width:220px;background:#2c3e5c;border:1px solid #4a6185;border-radius:8px;padding:12px 14px;color:#fff;text-decoration:none;font-size:16px}
+.up-nav-btn:last-child{text-align:right}
+.up-nav-btn b{color:#f3c9a6;font-family:'IBM Plex Mono',monospace}
+.up-nav-btn.up-off{opacity:.5}
+.up-list summary{cursor:pointer;font:600 15px 'IBM Plex Mono',monospace;color:#f3c9a6;margin-bottom:6px}
+.up-list ol{list-style:none;margin:8px 0 0;padding:0}
+.up-list li{margin:0;padding:5px 0;border-bottom:1px solid #2f4466}
+.up-list li a{color:#e6ecf5;text-decoration:none}
+.up-list li.up-shelf-head{color:#f3c9a6;font:600 13px 'IBM Plex Mono',monospace;letter-spacing:.1em;padding-top:12px;border-bottom:none}
+.up-list li.up-here a{color:#fff;font-weight:700}
+.up-cn{font-family:'IBM Plex Mono',monospace;color:#f3c9a6;margin-right:6px}
+.up-search{font-size:15px;margin-top:12px}
+.up-sub{font-size:14.5px;margin-top:8px;color:#b9c6da}
+  .up-connect h2,.up-sources h2{font-size:1.5rem;margin:0 0 18px;border-bottom:2px solid var(--slate);padding-bottom:10px;color:var(--slate-deep);}
+  .up-sources ul{max-width:none;padding-left:20px;color:var(--ink-soft);}
+  .up-connect ul,.up-who ul{max-width:none;}
+
+/* Utah Hive Politics branding bars (top and bottom) */
+.hb-bar{background:#0d0b0a;border-bottom:1px solid #3a2f1c;padding:10px 20px;}
+.hb-bar a{display:flex;align-items:center;gap:12px;max-width:1100px;margin:0 auto;text-decoration:none;}
+.hb-bar img{width:52px;height:52px;border-radius:4px;display:block;flex:none;}
+.hb-name{font-family:'Cinzel','Trajan Pro',Georgia,serif;color:#d4af37;font-size:16px;letter-spacing:.14em;text-transform:uppercase;line-height:1.2;display:block;}
+.hb-sub{font-family:Georgia,serif;font-style:italic;color:#b8956a;font-size:12.5px;letter-spacing:.02em;display:block;margin-top:2px;}
+.hb-foot{background:#0d0b0a;color:#b8956a;text-align:center;padding:26px 20px 30px;font-family:Georgia,serif;}
+.hb-foot img{width:52px;height:52px;display:block;margin:0 auto 10px;}
+.hb-foot .hb-name{font-size:14px;}
+.hb-foot .hb-tag{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#8a7650;margin-top:8px;display:block;}
+@media(max-width:600px){.hb-bar{padding:8px 16px}.hb-bar img{width:38px;height:38px}.hb-name{font-size:13px}.hb-sub{font-size:11.5px}}
+
+.hb-line-top{display:block;font-family:Georgia,serif;color:#e8d9b5;font-size:13px;margin-top:4px}
+.hb-line{max-width:720px;margin:14px auto 0;color:#e8d9b5;font-size:15.5px;line-height:1.5}
+.hb-tips{margin:16px 0 4px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.hb-btn{display:inline-block;border:2px solid #d4af37;background:#d4af37;color:#0d0b0a;font:700 15px Georgia,serif;padding:10px 18px;border-radius:6px;text-decoration:none}
+.hb-btn2{background:transparent;color:#d4af37}
+.hb-small{font-size:12.5px;color:#8a7650;margin:6px 0 0}
+@media(max-width:600px){.hb-line-top{font-size:11.5px}}
+
+/* Round 2: short version + questions to ask */
+.up-short{max-width:900px;margin:24px auto 6px;padding:18px 22px;background:#f8ece2;border-left:6px solid #9a521f;border-radius:6px}
+.up-short h2{margin:0 0 8px;font-size:24px;color:#2c3e5c;border:0;padding:0}
+.up-short ul{margin:0;padding-left:22px}
+.up-short li{font-size:18.5px;margin:6px 0}
+.up-short-more{margin:10px 0 0}
+.up-short-more a{font-weight:700;color:#9a521f}
+.up-ask{max-width:900px;margin:26px auto;padding:0 20px}
+.wrap .up-ask{padding:0;margin:26px 0}
+.up-ask ul{margin:0;padding-left:22px}
+.up-ask li{font-size:18px;margin:10px 0}
+@media(max-width:940px){.up-short{margin-left:16px;margin-right:16px}}
+.claim p.added{background:#f8ece2;border-left:3px solid #b5652b;padding:6px 10px;font-size:.97rem}
+
+.hs-parts{background:#F2F5FA;border:2px solid #1D4ED8;border-radius:6px;padding:14px 16px;margin:0 0 24px;font-family:Arial,sans-serif}
+.hs-parts .lab{font-size:.85rem;letter-spacing:.06em;text-transform:uppercase;font-weight:bold;color:#14213D;margin:0 0 8px}
+.hs-parts ol{margin:0 0 10px;padding-left:24px;font-size:1rem;line-height:1.45}
+.hs-parts li.cur{font-weight:bold}
+.hs-parts .nav{display:flex;flex-wrap:wrap;gap:10px}
+.hs-parts .nav a{display:inline-block;background:#1D4ED8;color:#fff;text-decoration:none;font-weight:bold;padding:10px 16px;border-radius:5px;font-size:1rem}
+.score{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:14px 0}
+.score div{border:2px solid #c9d3e3;border-radius:6px;padding:12px;text-align:center;background:#fff}
+.score .n{font-size:2.1rem;font-weight:700;line-height:1.1}
+.score .l{font-size:1rem}
+.bill .meta{font-size:1rem;margin:4px 0 6px}
+.bill .votes{font-family:Arial,sans-serif;font-size:.98rem;background:#f4f6fa;border-radius:4px;padding:6px 8px;display:inline-block;margin:4px 0}
+.rub{display:inline-block;font-family:Arial,sans-serif;font-size:.85rem;border:1px solid #9aa7bd;border-radius:12px;padding:2px 9px;margin:2px 4px 2px 0}
+.dnu{border:3px solid #b5652b;border-radius:6px;padding:12px 14px;background:#fff7ef;margin:14px 0}
+</style>
+
+<link rel="icon" type="image/png" href="hive-bee.png">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="hb-bar"><a href="https://webercountyhive.substack.com/" target="_blank" rel="noopener"><img src="hive-bee.png" alt="The Weber County Hive bee seal"><span><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span><span class="hb-line-top">The people's publication. We investigate what's best for the public as a whole, not any party or special interest.</span></span></a></div>
+<div class="up-top"><div class="in"><span><a href="index.html">← All Unelected Power pages</a> &nbsp;·&nbsp; <a href="https://weber-county-hive.github.io/-weber-county-hive-index/">Hive library ↗</a></span></div></div>
+<header class="case-header">
+  <div class="case-wrap">
+    <p class="case-eyebrow">CASE FILE · WHO DECIDES SERIES · PART 3 · UP 100.15</p>
+    <h1 class="case-title">Who Decides, Part 3: MIDA. <em>Who writes its rules, and who checks it.</em></h1>
+    <p class="case-sub">The Military Installation Development Authority (MIDA) is a state authority run by an appointed board. Here is who sits on it, every bill that changed its powers from 2007 to 2026 with its sponsors and votes, how each change grades for the public, and the 2027 bills to watch.</p>
+    <div class="meta-row">
+      <span class="meta-pill">Agency: Military Installation Development Authority</span>
+      <span class="meta-pill">Board: 7 voting members, appointed</span>
+      <span class="meta-pill">Bills checked: 22 passed, 2 died</span>
+    </div>
+    <p class="pub-date">Posted Nov. 18, 2026 &middot; Updated Nov. 18, 2026</p>
+  </div>
+</header>
+<div class="up-ww"><div class="up-where"><div class="up-where-h"><div class="up-lbl">WHERE</div><div class="pl">Statewide · 8 project areas, including Falcon Hill (Hill Air Force Base), the Mayflower area (Wasatch County), Sundance (Utah County) and Stratos (Box Elder County)</div></div><div class="up-who"><div class="up-who-h">WHO</div><ul>
+<li><b>MIDA board</b> — 7 voting members: the governor appoints 5, the Senate president 1 and the House speaker 1 (Utah Code 63H-1-302)</li>
+<li><b>Sen. Jerry Stevenson</b> — MIDA board member; primary sponsor of 15 of the MIDA bills below (2010–2026)</li>
+<li><b>Sen. Stuart Adams</b> — MIDA board member and chair; Senate president until January 2027</li>
+<li><b>Dan Hemmert</b> — MIDA executive director since Aug. 1, 2026</li>
+<li><b>The Legislature</b> — writes MIDA's powers; 2 MIDA bill requests are filed for 2027</li>
+<li><b>Gov. Spencer Cox</b> — appoints 5 board members; called for "major reform" of MIDA in August 2026</li>
+<li><b>Box Elder County Commission</b> — gave the consent the law requires for the Stratos project area, May 4, 2026</li>
+</ul></div></div></div>
+<main>
+<div class="hs-plain">New to this? <a class="hs-btn" href="who-decides-part-3-mida-plain.html">Read it in plain words</a> About 500 words, with two pictures.</div>
+
+<nav class="hs-parts" aria-label="Parts of this series"><p class="lab">Who Decides series · Part 3 of 8</p><ol>
+<li><a href="https://weber-county-hive.github.io/pac/who-decides-part-1-campaign-money.html">Campaign money and the caucus PACs</a></li>
+<li><a href="https://weber-county-hive.github.io/Transparency/who-decides-part-2-courts.html">The courts</a></li>
+<li class="cur">MIDA (this page)</li><li>The Inland Port (coming)</li><li>Point of the Mountain (coming)</li><li>Utah Lake Authority (coming)</li><li>PIDs, CRAs and tax increment (coming)</li><li>Side by side: every bill, graded (coming)</li></ol>
+<div class="nav"><a href="https://weber-county-hive.github.io/Transparency/who-decides-part-2-courts.html">&larr; Part 2: The courts</a></div></nav>
+
+<section class="hs-short" id="short"><h2>The short version</h2><ul>
+<li>MIDA was created in 2007 to develop land at and near Utah's military bases. Its board is <b>appointed, not elected</b>. In its project areas, county and city land use laws and ordinances <b>don't apply</b> (Utah Code 63H-1-202).</li>
+<li>From 2007 to 2026, <b>22 bills that changed MIDA passed</b>. <b>Sen. Jerry Stevenson</b>, who sits on MIDA's board, was the primary sponsor of <b>15</b> of them, in 15 of the 17 sessions from 2010 to 2026.</li>
+<li>Some changes removed public steps, and they are still law. MIDA may set up its own board to hear records appeals instead of the state's records office (2021). MIDA doesn't have to physically post notice (2022). MIDA's board can add 15 more years to its tax share if it finds "significant benefit" (2019).</li>
+<li>Some changes added public steps. Owners' valuation notices must show the payment to MIDA (2024). MIDA must now disclose before tax increment deals and bonds, and report every year (2026, S.B. 206).</li>
+<li>Most MIDA bills passed by wide margins. The 2025 bill was the closest: <b>38-27</b> in the House.</li>
+<li>For 2027, Sen. Brady Brammer and Rep. Casey Snider have filed MIDA bill requests ("Amendments" and "Limitations"). No text is posted yet.</li>
+</ul><p class="up-short-more"><a href="who-decides-part-3-mida-plain.html">Read the plain-words version →</a></p></section>
+
+<nav class="hs-toc" aria-label="On this page"><a href="#start">What MIDA is</a><a href="#players">Who decides</a><a href="#bills">Every bill, graded</a><a href="#scorecard">How it measures up</a><a href="#flow">How the money moves</a><a href="#right">What went right</a><a href="#y2026">2026: Stratos and the reform push</a><a href="#y2027">2027 to watch</a><a href="#map-sec">Map</a><a href="#people">People</a><a href="#notshown">What the records don't show</a><a href="#ask">Questions to ask</a><a href="#updates">Updates</a><a href="#related">Connected Hive work</a><a href="#words">Words to know</a><a href="#behind">Behind this piece</a><a href="#sources">Sources</a></nav>
+
+<details class="hs-pages"><summary>Unelected Power pages (tap to open)</summary><ol>
+<li><a href="index.html">Unelected Power roster</a><small>Every case file, searchable</small></li>
+<li class="cur"><a href="who-decides-part-3-mida.html">Who Decides, Part 3: MIDA</a><small>Every MIDA bill, 2007–2026, graded</small></li>
+<li><a href="who-decides-part-3-mida-plain.html">Who Decides, Part 3, in plain words</a><small>The short, simple version</small></li>
+<li><a href="mida-hearing-fact-check.html">MIDA at the Legislature</a><small>Hearing claims checked against the record</small></li>
+<li><a href="mida-hearing-fact-check-plain.html">The MIDA hearing, in plain words</a><small>The short, simple version</small></li>
+<li><a href="uipa-hearing-fact-check.html">The Inland Port at the Legislature</a><small>Hearing claims checked against the record</small></li>
+<li><a href="uipa-hearing-fact-check-plain.html">The Inland Port hearing, in plain words</a><small>The short, simple version</small></li>
+<li><a href="falcon-hill-roy.html">Falcon Hill and Roy</a><small>MIDA Falcon Hill Project Area · Roy City</small></li>
+<li><a href="steve-waldrip.html">Steve Waldrip</a><small>Governor's Office · State Housing Coordinator</small></li>
+<li><a href="mike-ostermiller.html">Mike Ostermiller</a><small>MIDA Board · CEO, Northern Wasatch Realtors</small></li>
+<li><a href="chris-kyler.html">Chris Kyler</a><small>CEO, Utah Association of Realtors</small></li>
+<li><a href="dallin-koecher.html">Dallin Koecher</a><small>Wasatch Open Lands Board · Heber Valley Chamber</small></li>
+<li><a href="matt-brower.html">Matt Brower</a><small>Heber City Manager · Hired, Not Elected</small></li>
+<li><a href="ryan-starks.html">Ryan Starks</a><small>EDCUtah · Former GOEO Director</small></li>
+<li><a href="chris-roybal.html">Chris Roybal</a><small>President, Northern Utah Economic Alliance</small></li>
+<li><a href="laura-warburton.html">Laura Warburton</a><small>Utah Forward PAC · Keep Our Valley Free</small></li>
+<li><a href="jefferson-moss.html">Jefferson Moss</a><small>GOEO · Former House Majority Leader</small></li>
+<li><a href="community-alliance-main-street.html">Community Alliance for Main Street</a><small>Organization · Sole-Source City Contract</small></li>
+<li><a href="dan-hemmert.html">Dan Hemmert</a><small>Executive Director, MIDA · Former State Senator</small></li>
+<li><a href="utah-rising.html">Utah Rising</a><small>Organization · Chamber-Led Economic Initiative</small></li>
+<li><a href="edcutah.html">EDCUtah</a><small>Organization · Private Business Recruiter</small></li>
+<li><a href="ogden-ice-unelected-enforcement.html">The Ogden Officer &amp; The ICE Agent</a><small>Ogden PD · Federal ICE Agent</small></li>
+<li><a href="jed-stevenson.html">Jed Stevenson</a><small>Academica West · One West Construction</small></li>
+<li><a href="layton-shuffle.html">The Layton Shuffle</a><small>Six seats in Layton, South Weber and Davis County</small></li>
+</ol></details>
+
+<section><h2 class="section-head" id="start">Start here: what MIDA is</h2>
+<p class="lede">The Legislature created the Military Installation Development Authority in 2007 (S.B. 232). Its first job was Falcon Hill, a business park on Hill Air Force Base land.</p>
+<p>Inside a MIDA "project area," MIDA acts as the local government for land use. It keeps <b>up to 75%</b> of the new property tax that comes from growth, for <b>25 years</b> per parcel, and its board can add <b>15 more years</b>. It can levy some taxes a city would normally levy, like an energy tax and an accommodations tax. Before MIDA can include land, the county or city must vote to consent, and the landowner must consent (63H-1-401).</p>
+<p>The words used here, like "tax increment" and "project area," are explained in <a href="#words">Words to know</a>.</p>
+</section>
+
+<section id="players"><h2 class="section-head">Who decides: the board and who appoints it</h2>
+<div class="flow">
+  <div class="flow-row three">
+    <div class="fbox pub"><div class="fh">Governor</div>Appoints 5: one who supports military efforts, three mayors or council members from places near a project area, and one from a state agency that works on military issues</div>
+    <div class="fbox pub"><div class="fh">Senate president</div>Appoints 1</div>
+    <div class="fbox pub"><div class="fh">House speaker</div>Appoints 1</div>
+  </div>
+  <div class="arrow">▼ <span>each member serves "at the pleasure of" whoever appointed them</span></div>
+  <div class="flow-row">
+    <div class="fbox main"><div class="fh">MIDA board: 7 voting members</div>Stuart Adams · Mark Shepherd · Jerry Stevenson · Gary Harter · Erik Rowland · Mike Ostermiller · Gage Froerer<br><span style="font-size:.95rem;">Non-voting: Lance Soffe (MIDA's site, Nov. 18, 2026; it listed Jefferson Moss on Nov. 4)</span></div>
+  </div>
+  <div class="arrow">▼ <span>the board hires the staff and creates the PID boards</span></div>
+  <div class="flow-row three">
+    <div class="fbox"><div class="fh">Staff</div>Executive Director Dan Hemmert (since Aug. 1, 2026)</div>
+    <div class="fbox co"><div class="fh">5 PID boards</div>Gary Harter and Mike Ostermiller sit on all five; Erik Rowland on three</div>
+    <div class="fbox"><div class="fh">Review committees</div>Falcon Hill and Mayflower; Stratos under Box Elder's agreement</div>
+  </div>
+  <div class="diagram-caption">From Utah Code 63H-1-302 and midaut.org/board-members (read Nov. 18, 2026). Which leader appointed which member is not shown on state records, so it is not shown here.</div>
+</div>
+<p><b>What changes in 2027:</b> Sen. Evan Vickers becomes Senate president in January (KUER, Nov. 6, 2026), so the Senate president's seat on MIDA's board is his to fill. Sen. Adams lost his June 2026 primary. Whether he stays on the board was not in the records we read.</p>
+<p><b>Disclosure:</b> MIDA's board page says PID board members don't have to file a conflict-of-interest disclosure if the district's yearly budget is under $10 million (Utah Code 67-16-3(16)), and review committee members don't file at all.</p>
+</section>
+
+<section id="bills"><h2 class="section-head">Every MIDA bill, 2007–2026, graded</h2>
+<p>These are all 20 passed bills with MIDA in the title (counting 2008's "Development Around Military Installations" and 2026's "Development Authority Modifications"), two more 2026 bills that also changed MIDA, and two that died. Each card shows what the bill did (from the enrolled bill), its sponsors, the final votes from the Legislature's records, and a first-look grade on the Hive's rubric: is it good for the public, on <b>transparency</b>, <b>financial accountability</b> and <b>environmental impact</b>? Use the buttons to show one grade at a time.</p>
+<div class="legend-v">
+  <span class="v ok">Helps</span>
+  <span class="v part">Mixed, or a Bill-Tracker letter</span>
+  <span class="v no">Hurts</span>
+  <span class="v unk">Neutral, or needs a further look</span>
+</div>
+<div class="filters" role="group" aria-label="Filter bills by grade">
+  <button data-f="all" aria-pressed="true">All</button>
+  <button data-f="no" aria-pressed="false">Hurts</button>
+  <button data-f="part" aria-pressed="false">Mixed / letter</button>
+  <button data-f="unk" aria-pressed="false">Neutral / further look</button>
+  <button data-f="died" aria-pressed="false">Died</button>
+</div>
+<div id="claims">
+<div class="grp">Bills that passed (22)</div>
+<div class="claim bill part" data-v="part">
+  <div class="said">2007 · <a href="https://le.utah.gov/~2007/bills/sbillenr/SB0232.pdf" target="_blank" rel="noopener">S.B. 232</a></div>
+  <div class="meta">Primary sponsor: <b>Sen. Sheldon Killpack</b> · Other chamber: Rep. Brad Dee</div>
+  <span class="v part">Mixed</span>
+  <p>Created MIDA: an appointed board that can develop military land, keep tax increment and issue bonds. MIDA was made <b>exempt from land use laws</b>. It also set budget, audit and report rules.</p>
+  <div class="votes">Final votes (yes-no-absent): Senate 26-0-3 · House 67-0-8</div>
+  <div><span class="rub">Transparency +</span><span class="rub">Local say −</span></div>
+</div>
+<div class="claim bill unk" data-v="unk">
+  <div class="said">2008 · <a href="https://le.utah.gov/~2008/bills/sbillenr/SB0264.pdf" target="_blank" rel="noopener">S.B. 264</a></div>
+  <div class="meta">Primary sponsor: <b>Sen. Sheldon Killpack</b> · Other chamber: Rep. Brad Dee</div>
+  <span class="v unk">Neutral</span>
+  <p>Let MIDA contract with cities for services, act under federal contracts and amend a project area plan.</p>
+  <div class="votes">Final votes (yes-no-absent): House 70-0-5</div>
+  <div></div>
+</div>
+<div class="claim bill no" data-v="no">
+  <div class="said">2009 · <a href="https://le.utah.gov/~2009/bills/sbillenr/SB0056.pdf" target="_blank" rel="noopener">S.B. 56</a></div>
+  <div class="meta">Primary sponsor: <b>Sen. Sheldon Killpack</b> · Other chamber: Rep. Brad Dee</div>
+  <span class="v no">Hurts</span>
+  <p>Gave MIDA <b>exclusive police power</b> in a project area and widened its exemption from land use rules to <b>all county and city ordinances</b>, including health, business license and franchise. MIDA could levy energy, telecom and transient room taxes. Cities can't annex its land without its consent. It must give notice when a project area is set up.</p>
+  <div class="votes">Final votes (yes-no-absent): House 69-0-6 · Senate agreed 24-0-5</div>
+  <div><span class="rub">Local say −</span><span class="rub">Transparency + (notice)</span></div>
+</div>
+<div class="claim bill part" data-v="part">
+  <div class="said">2009 · <a href="https://le.utah.gov/~2009/bills/sbillenr/SB0216.pdf" target="_blank" rel="noopener">S.B. 216</a></div>
+  <div class="meta">Primary sponsor: <b>Sen. Mark Madsen</b> · Other chamber: Rep. Brad Dee</div>
+  <span class="v part">Mixed</span>
+  <p>A project area may include private land, <b>with the owner's consent</b>.</p>
+  <div class="votes">Final votes (yes-no-absent): House 49-23-3</div>
+  <div><span class="rub">Local say −</span><span class="rub">Owner consent +</span></div>
+</div>
+<div class="claim bill part" data-v="part">
+  <div class="said">2010 · <a href="https://le.utah.gov/~2010/bills/sbillenr/SB0124.pdf" target="_blank" rel="noopener">S.B. 124</a></div>
+  <div class="meta">Primary sponsor: <b>Sen. Jerry Stevenson</b> · Other chamber: Rep. Brad Dee</div>
+  <span class="v part">Mixed</span>
+  <p>Added a resort communities tax. Land that doesn't touch military land can be included. Changed notice rules and made MIDA's money nonlapsing.</p>
+  <div class="votes">Final votes (yes-no-absent): Senate 28-0-1 · House 62-9-4</div>
+  <div><span class="rub">Financial accountability −</span></div>
+</div>
+<div class="claim bill no" data-v="no">
+  <div class="said">2011 · <a href="https://le.utah.gov/~2011/bills/sbillenr/SB0293.pdf" target="_blank" rel="noopener">S.B. 293</a></div>
+  <div class="meta">Primary sponsor: <b>Sen. Jerry Stevenson</b> · Other chamber: Rep. Brad Dee</div>
+  <span class="v no">Hurts</span>
+  <p>MIDA can petition to annex land as if it were the only private owner. <b>County permission is not needed</b> if all the land is inside a city.</p>
+  <div class="votes">Final votes (yes-no-absent): Senate 28-0-1 · House 64-2-9</div>
+  <div><span class="rub">Local say −</span></div>
+</div>
+<div class="claim bill unk" data-v="unk">
+  <div class="said">2012 · <a href="https://le.utah.gov/~2012/bills/sbillenr/SB0049.pdf" target="_blank" rel="noopener">S.B. 49</a></div>
+  <div class="meta">Primary sponsor: <b>Sen. Jerry Stevenson</b> · Other chamber: Rep. Brad Dee</div>
+  <span class="v unk">Needs a further look</span>
+  <p>Allowed federal law enforcement contracts. MIDA money may pay for a <b>passenger ropeway outside</b> a project area in some cases.</p>
+  <div class="votes">Final votes (yes-no-absent): Senate 27-0-2 · House 68-3-4</div>
+  <div><span class="rub">Financial accountability ?</span></div>
+</div>
+<div class="claim bill part" data-v="part">
+  <div class="said">2013 · <a href="https://le.utah.gov/~2013/bills/hbillenr/HB0325.pdf" target="_blank" rel="noopener">H.B. 325</a></div>
+  <div class="meta">Primary sponsor: <b>Rep. Brad Dee</b> · Other chamber: Sen. Jerry Stevenson (Senate sponsor)</div>
+  <span class="v part">Mixed</span>
+  <p>Created the <b>MIDA energy tax</b>, which may be spent <b>outside</b> the project area that raised it. Changed board rules.</p>
+  <div class="votes">Final votes (yes-no-absent): House 70-0-5 · Senate 23-3-3</div>
+  <div><span class="rub">Financial accountability −</span></div>
+</div>
+<div class="claim bill unk" data-v="unk">
+  <div class="said">2014 · <a href="https://le.utah.gov/~2014/bills/sbillenr/SB0045.pdf" target="_blank" rel="noopener">S.B. 45</a></div>
+  <div class="meta">Primary sponsor: <b>Sen. Jerry Stevenson</b> · Other chamber: Rep. Brad Dee</div>
+  <span class="v unk">Neutral</span>
+  <p>A certificate of occupancy issued by MIDA decides when new buildings start paying property tax. Definitions changed.</p>
+  <div class="votes">Final votes (yes-no-absent): Senate 23-4-2 · House 72-0-3</div>
+  <div></div>
+</div>
+<div class="claim bill unk" data-v="unk">
+  <div class="said">2015 · <a href="https://le.utah.gov/~2015/bills/sbillenr/SB0274.pdf" target="_blank" rel="noopener">S.B. 274</a></div>
+  <div class="meta">Primary sponsor: <b>Sen. Jerry Stevenson</b> · Other chamber: Rep. Brad Dee</div>
+  <span class="v unk">Needs a further look</span>
+  <p>Condominium rules, and changes to the notice for MIDA's budget hearing.</p>
+  <div class="votes">Final votes (yes-no-absent): Senate 26-0-3 · House 61-0-14</div>
+  <div><span class="rub">Transparency ?</span></div>
+</div>
+<div class="claim bill part" data-v="part">
+  <div class="said">2017 · <a href="https://le.utah.gov/~2017/bills/sbillenr/SB0178.pdf" target="_blank" rel="noopener">S.B. 178</a></div>
+  <div class="meta">Primary sponsor: <b>Sen. Jerry Stevenson</b> · Other chamber: Rep. Brad Wilson</div>
+  <span class="v part">Mixed</span>
+  <p>MIDA may develop land "associated with" a project area. MIDA can borrow from the Transportation Infrastructure Loan Fund.</p>
+  <div class="votes">Final votes (yes-no-absent): Senate 28-0-1 · House 72-0-3 · Senate agreed 26-0-3</div>
+  <div><span class="rub">Local say −</span></div>
+</div>
+<div class="claim bill part" data-v="part">
+  <div class="said">2018 · <a href="https://le.utah.gov/~2018/bills/sbillenr/SB0240.pdf" target="_blank" rel="noopener">S.B. 240</a></div>
+  <div class="meta">Primary sponsor: <b>Sen. Jerry Stevenson</b> · Other chamber: Rep. Val Peterson</div>
+  <span class="v part">Mixed</span>
+  <p>Created the <b>MIDA accommodations tax</b>. Owners of undeveloped private land in a project area pay MIDA <b>1.2% a year</b> of the value above the base. Board changes.</p>
+  <div class="votes">Final votes (yes-no-absent): Senate 27-0-2 · House 71-0-4 · Senate agreed 27-0-2</div>
+  <div><span class="rub">Financial accountability −</span></div>
+</div>
+<div class="claim bill no" data-v="no">
+  <div class="said">2019 · <a href="https://le.utah.gov/~2019/bills/sbillenr/SB0269.pdf" target="_blank" rel="noopener">S.B. 269</a></div>
+  <div class="meta">Primary sponsor: <b>Sen. Jerry Stevenson</b> · Other chamber: Rep. Val Peterson</div>
+  <span class="v no">Hurts</span>
+  <p>MIDA's board can add <b>15 more years</b> of its 75% share if the board finds "significant benefit." A court challenge to a project area plan must be filed <b>within 30 days</b>. Challenges to project areas created before Dec. 1, 2018 are <b>barred</b>.</p>
+  <div class="votes">Final votes (yes-no-absent): Senate 29-0-0 · House 67-0-8</div>
+  <div><span class="rub">Financial accountability −</span><span class="rub">Public's say −</span></div>
+</div>
+<div class="claim bill part" data-v="part">
+  <div class="said">2020 · <a href="https://le.utah.gov/~2020/bills/sbillenr/SB0192.pdf" target="_blank" rel="noopener">S.B. 192</a></div>
+  <div class="meta">Primary sponsor: <b>Sen. Jerry Stevenson</b> · Other chamber: Rep. Val Peterson</div>
+  <span class="v part">Mixed</span>
+  <p>MIDA can create <b>public infrastructure districts (PIDs) by its own resolution</b>, with the landowners' consent. The PID's board is set by its governing document. MIDA can treat an improved part of a parcel as a separate parcel for its tax share.</p>
+  <div class="votes">Final votes (yes-no-absent): Senate 25-0-4 · House 59-12-4 · Senate agreed 27-0-2</div>
+  <div><span class="rub">Financial accountability −</span><span class="rub">Owner consent +</span></div>
+</div>
+<div class="claim bill no" data-v="no">
+  <div class="said">2021 · <a href="https://le.utah.gov/~2021/bills/sbillenr/SB0233.pdf" target="_blank" rel="noopener">S.B. 233</a></div>
+  <div class="meta">Primary sponsor: <b>Sen. Jerry Stevenson</b> · Other chamber: Rep. Val Peterson</div>
+  <span class="v no">Hurts</span>
+  <p>Records appeals can go to a <b>MIDA appeals board</b> (including the Senate president's and House speaker's appointees) instead of the state's records office. Records MIDA keeps as a public-private "facilitator" are <b>protected</b>. MIDA <b>may benefit</b> from deals it facilitates. Board meetings online need <b>no anchor location</b>. MIDA's PIDs can levy a property tax for upkeep. (Utah Code 63H-1-202(7)-(10), still law.)</p>
+  <div class="votes">Final votes (yes-no-absent): Senate 27-0-2 · House 67-1-7</div>
+  <div><span class="rub">Transparency −</span></div>
+</div>
+<div class="claim bill no" data-v="no">
+  <div class="said">2022 · <a href="https://le.utah.gov/~2022/bills/sbillenr/SB0232.pdf" target="_blank" rel="noopener">S.B. 232</a></div>
+  <div class="meta">Primary sponsor: <b>Sen. Jerry Stevenson</b> · Other chamber: Rep. Val Peterson</div>
+  <span class="v no">Hurts</span>
+  <p>MIDA is <b>not required to physically post notice</b>. A landowner who consents to joining a project area <b>can't take it back</b>. Unpaid annual payments are collected like property tax.</p>
+  <div class="votes">Final votes (yes-no-absent): Senate 27-0-2 · House 70-0-5 · Senate agreed 27-0-2</div>
+  <div><span class="rub">Transparency −</span></div>
+</div>
+<div class="claim bill unk" data-v="unk">
+  <div class="said">2023 · <a href="https://le.utah.gov/~2023/bills/sbillenr/SB0020.pdf" target="_blank" rel="noopener">S.B. 20</a></div>
+  <div class="meta">Primary sponsor: <b>Sen. Jerry Stevenson</b> · Other chamber: Rep. Val Peterson</div>
+  <span class="v unk">Needs a further look</span>
+  <p>Government owners of land in a project area get <b>immunity from claims</b> over contamination that happened before they owned it.</p>
+  <div class="votes">Final votes (yes-no-absent): Senate 26-0-3 · House 70-0-5</div>
+  <div><span class="rub">Environment ?</span></div>
+</div>
+<div class="claim bill part" data-v="part">
+  <div class="said">2024 · <a href="https://weber-county-hive.github.io/Bill-Tracker/weber-hive-sb169.html" target="_blank" rel="noopener">S.B. 169</a></div>
+  <div class="meta">Primary sponsor: <b>Sen. Jerry Stevenson</b> · Other chamber: Rep. Val Peterson</div>
+  <span class="v part">Mixed</span>
+  <p>An additional resort sales tax. MIDA's <b>subsidiaries</b> also don't have to physically post notice. County valuation notices must <b>show the payment to MIDA</b>. MIDA may share revenue with a school district. Bill-Tracker case file: <a href="https://weber-county-hive.github.io/Bill-Tracker/weber-hive-sb169.html">The Backfill</a>.</p>
+  <div class="votes">Final votes (yes-no-absent): Senate 20-4-5 · House 65-2-8 · Senate agreed 20-3-6</div>
+  <div><span class="rub">Transparency + and −</span></div>
+</div>
+<div class="claim bill unk" data-v="unk">
+  <div class="said">2025 · <a href="https://le.utah.gov/Session/2025/bills/enrolled/SB0316.pdf" target="_blank" rel="noopener">S.B. 316</a></div>
+  <div class="meta">Primary sponsor: <b>Sen. Jerry Stevenson</b> · Other chamber: Rep. Val Peterson</div>
+  <span class="v unk">Needs a further look</span>
+  <p>MIDA may make agreements with the state that use revenue from a project area <b>outside</b> that area, <b>if the project area is on state land or state armory board land</b> (63H-1-201(3)(z)). A PID that MIDA creates can be its subsidiary.</p>
+  <div class="votes">Final votes (yes-no-absent): Senate 19-5-5 · House 38-27-10 · Senate agreed 22-5-2</div>
+  <div><span class="rub">Financial accountability ?</span></div>
+</div>
+<div class="claim bill part" data-v="part">
+  <div class="said">2026 · <a href="https://le.utah.gov/Session/2026/bills/enrolled/SB0278.pdf" target="_blank" rel="noopener">S.B. 278</a></div>
+  <div class="meta">Primary sponsor: <b>Sen. Jerry Stevenson</b> · Other chamber: Rep. Jordan Teuscher</div>
+  <span class="v part">Mixed</span>
+  <p>A PID created by a development authority like MIDA must have a board mostly appointed by that authority. Such a PID can issue bonds once and refinance once. (The bill is mostly about the Point of the Mountain authority.)</p>
+  <div class="votes">Final votes (yes-no-absent): Senate 25-3-1 · House 54-8-13 · Senate agreed 27-1-1</div>
+  <div><span class="rub">Financial accountability +</span><span class="rub">Local say −</span></div>
+</div>
+<div class="claim bill part" data-v="part">
+  <div class="said">2026 · <a href="https://weber-county-hive.github.io/Bill-Tracker/weber-hive-sb206.html" target="_blank" rel="noopener">S.B. 206</a></div>
+  <div class="meta">Primary sponsor: <b>Sen. Wayne Harper</b> · Other chamber: Rep. R. Neil Walter</div>
+  <span class="v part">C (Bill-Tracker)</span>
+  <p>MIDA, the Inland Port, Point of the Mountain and the Fairpark district must <b>disclose before</b> they sign a tax increment deal or approve a bond, and <b>report every year</b> to a new statewide program. Bill-Tracker case file: <a href="https://weber-county-hive.github.io/Bill-Tracker/weber-hive-sb206.html">S.B. 206</a>.</p>
+  <div class="votes">Final votes (yes-no-absent): Senate 25-0-4 · House 64-1-10 · Senate agreed 26-0-3</div>
+  <div><span class="rub">Transparency +</span></div>
+</div>
+<div class="claim bill part" data-v="part">
+  <div class="said">2026 · <a href="https://weber-county-hive.github.io/Bill-Tracker/weber-hive-hb475.html" target="_blank" rel="noopener">H.B. 475</a></div>
+  <div class="meta">Primary sponsor: <b>Rep. Calvin Roberts</b> · Other chamber: Sen. Kirk Cullimore</div>
+  <span class="v part">D (Bill-Tracker)</span>
+  <p>Renamed the governor's economic office and created an Economic Development Council with seats for MIDA and others. Bill-Tracker case file: <a href="https://weber-county-hive.github.io/Bill-Tracker/weber-hive-hb475.html">H.B. 475</a>.</p>
+  <div class="votes">Final votes (yes-no-absent): House 61-4-10 · Senate 27-2</div>
+  <div><span class="rub">Local say −</span></div>
+</div>
+<div class="grp">Bills that died (2)</div>
+<div class="claim bill unk" data-v="died">
+  <div class="said">2025 · <a href="https://weber-county-hive.github.io/Bill-Tracker/weber-hive-sb337.html" target="_blank" rel="noopener">S.B. 337</a> (died)</div>
+  <div class="meta">Primary sponsor: <b>Sen. Kirk Cullimore</b></div>
+  <span class="v unk">Bill-Tracker page, no letter grade</span>
+  <p>Would have created a Beehive Development Agency to coordinate MIDA, the Inland Port and other authorities. Passed a Senate committee 3-2-1, then died without a Senate floor vote.</p>
+</div>
+<div class="claim bill unk" data-v="died">
+  <div class="said">2026 · <a href="https://le.utah.gov/~2026/bills/static/HB0461.html" target="_blank" rel="noopener">H.B. 461</a> (died)</div>
+  <div class="meta">Primary sponsor: <b>Rep. Raymond Ward</b></div>
+  <span class="v unk">Would have helped (transparency)</span>
+  <p>Would have required MIDA, the Inland Port, Point of the Mountain, the Fairpark district and the convention center zones to post tax increment data online. Filed without a vote.</p>
+</div>
+</div>
+<p style="font-size:.95rem;color:var(--ink-soft);">Grades with a letter (C, D) come from the Hive's Bill-Tracker case files and are kept as published. "First look" grades can change when a bill gets a full case file. Votes are yes-no-absent, from the Legislature's bill status pages.</p>
+</section>
+
+<section id="scorecard"><h2 class="section-head">How it measures up</h2>
+<div class="score">
+  <div><div class="n">5</div><div class="l">Hurts</div></div>
+  <div><div class="n">9</div><div class="l">Mixed</div></div>
+  <div><div class="n">2</div><div class="l">Neutral</div></div>
+  <div><div class="n">4</div><div class="l">Need a further look</div></div>
+  <div><div class="n">2</div><div class="l">Bill-Tracker letter (C, D)</div></div>
+</div>
+<ul>
+<li><b>Transparency.</b> 2021 and 2022 each removed a public step that is still law: MIDA may hear records appeals on its own appeals board instead of the state's records office, and MIDA doesn't have to physically post notice. 2024 added one (the payment shows on valuation notices) and extended the posting exemption to subsidiaries. 2026 S.B. 206 added disclosure and yearly reports.</li>
+<li><b>Financial accountability.</b> Whether to add the 15 extra years (2019) is decided by MIDA's own board. MIDA's PIDs (2020) can take on bond debt with the landowners' consent; like other PIDs in Utah, they don't need a public vote. MIDA's own 2023 presentation to the Legislature lists $71,194,600 in legislative appropriations for projects, FY2022–2024, while its 2026 slides say it "doesn't tap into State of Utah coffers" (see <a href="mida-hearing-fact-check.html">the MIDA hearing check</a>).</li>
+<li><b>Environmental impact.</b> The 2023 contamination immunity, and the Stratos plan's water and power use, need a further look before a grade.</li>
+<li><b>Local say.</b> Since 2009 MIDA has been exempt from all county and city ordinances in its areas, not only land use. Since 2011, a county doesn't have to consent when all the land is inside a city. Since 2022, an owner's consent can't be taken back.</li>
+</ul>
+</section>
+
+<section id="flow"><h2 class="section-head">How the money moves</h2>
+<div class="flow">
+  <div class="flow-row"><div class="fbox pub"><div class="fh">Local taxing entities</div>County, school district and others keep the tax on the base value and at least 25% of the growth</div></div>
+  <div class="arrow">▼ <span>up to 75% of new property tax growth · 25 years per parcel (2007) · plus 15 if the board decides (2019)</span></div>
+  <div class="flow-row"><div class="fbox main"><div class="fh">MIDA</div>Also: energy tax (2013), accommodations tax (2018), resort taxes (2010, 2024), 1.2% yearly payment on undeveloped private land (2018)</div></div>
+  <div class="arrow">▼ <span>where the law lets it go</span></div>
+  <div class="flow-row three">
+    <div class="fbox"><div class="fh">Inside the area</div>Infrastructure and development</div>
+    <div class="fbox co"><div class="fh">Outside the area</div>Energy tax money (2013); revenue from areas on state or armory board land, by agreement with the state (2025)</div>
+    <div class="fbox"><div class="fh">MIDA's PIDs</div>Bonds and their own property tax levies (2020, 2021)</div>
+  </div>
+  <div class="diagram-caption">From Utah Code 63H-1-201, 203 to 205, 501 and 502, and the bills listed above. Not a complete list.</div>
+</div>
+</section>
+
+<section id="right"><h2 class="section-head">What went right (from the records)</h2>
+<ul>
+<li><b>Consent is still required.</b> A county or city must vote yes and owners must agree before land goes in a project area (63H-1-401). Box Elder County voted to consent on May 4, 2026.</li>
+<li><b>Audits and reports.</b> A yearly report and an outside audit have been required since 2007 (63H-1-703 to 705). MIDA says its audits were clean. The State Auditor launched a public MIDA information page on May 28, 2026; the office says it "does not audit MIDA."</li>
+<li><b>Elected members on taxes.</b> A new tax or rate increase needs a majority of the board's elected members (63H-1-203).</li>
+<li><b>New reporting.</b> 2024 put the payment to MIDA on owners' valuation notices; 2026 S.B. 206 added disclosure and yearly reporting.</li>
+<li><b>Military land.</b> MIDA's own slides list 5 of its 8 project areas as mostly government or military land.</li>
+</ul>
+</section>
+
+<section id="y2026"><h2 class="section-head">2026: Stratos and the reform push</h2>
+<ul class="tl">
+<li><b>April 24, 2026</b>MIDA's board adopted the Stratos project area plan in Box Elder County, ten days before the county's consent vote (see the <a href="mida-hearing-fact-check.html">MIDA hearing check</a>).</li>
+<li><b>May 4, 2026</b>Box Elder County Commission voted to consent.</li>
+<li><b>Aug. 20, 2026</b>Gov. Cox: "I think we need major reform when it comes to MIDA, and I will be pushing for that reform again" (Utah News Dispatch, Aug. 21).</li>
+<li><b>Aug. 21 and Oct. 2, 2026</b>Utah News Dispatch reported MIDA officials had paused Stratos; O'Leary Digital's CEO told KSL on Oct. 2 that "the project is not on hold." We found no MIDA board vote to pause.</li>
+<li><b>Oct. 21, 2026</b>MIDA answered a legislative committee's questions; the Hive checked 32 of its statements (<a href="mida-hearing-fact-check.html">MIDA at the Legislature</a>).</li>
+<li><b>Nov. 10, 2026</b>House Speaker Mike Schultz told the Deseret News editorial board, "MIDA should never be doing data centers."</li>
+<li><b>Nov. 18, 2026</b>At the same committee, Rep. Paul Cutler presented the data center working group's 2027 goals: data center proposals, "including those from state economic development authorities (MIDA, UIPA, etc)," must go through "the same transparent process," and local governments keep the decision.</li>
+</ul>
+</section>
+
+<section id="y2027"><h2 class="section-head">2027 to watch</h2>
+<p>The 2027 session starts Jan. 19. These requests are on the Legislature's 2027 list as of Nov. 18. They are titles only, with no bill text yet, so they can't be graded. The Hive checks the list every day and will add each bill when its text is posted.</p>
+<ul>
+<li><b>Military Installation Development Authority Amendments</b> — Sen. Brady Brammer</li>
+<li><b>Military Installation Development Authority Limitations</b> — Rep. Casey Snider (House majority leader in 2027)</li>
+<li><b>Data Center Siting and Incentive Amendments</b> — Rep. Paul Cutler</li>
+<li><b>Data Center Water and Energy Use</b> — Rep. Emily Buss</li>
+<li><b>Large Data Center Amendments</b> — Economic Development and Workforce Services Interim Committee</li>
+<li><b>Tax Increment Amendments</b> — Sen. Kathleen Riebe</li>
+<li><b>Independent Entities Amendments</b> — committee bill</li>
+</ul>
+<p>Rep. Jason Thompson told the Herald Journal (Aug. 14, 2026) he is drafting a bill to keep MIDA projects within 5 miles of a military installation. It was not on the public request list as of Nov. 18. Gov. Cox said on Nov. 9, "We're working on a bill right now with the Legislature that would put many of those restrictions into place" (Deseret News).</p>
+</section>
+
+<section id="map-sec"><h2 class="section-head">Map: MIDA's project areas</h2>
+<div id="map" role="region" aria-label="Map of MIDA project areas"></div>
+<p style="font-size:.92rem;color:var(--ink-soft);">Pins are approximate, placed at the base, town or county, not the parcel. Blue: active. Copper: pre-development or inactive (MIDA's Oct. 21, 2026 slides). Tap a pin for details.</p>
+</section>
+
+<section id="people"><h2 class="section-head">People connected to the record</h2>
+<ul>
+<li><b><a href="https://weber-county-hive.github.io/utah-senators/jerry-stevenson.html">Sen. Jerry Stevenson</a></b>: MIDA board member (the Hive's earlier pages list him as vice chair, on the board since 2008). Primary sponsor of 15 of the 22 passed bills above and Senate sponsor of a 16th. MIDA's law does not bar a legislator from serving on its board (Utah Code 63H-1-302). This page does not review his conflict-of-interest filings.</li>
+<li><b>Sen. Stuart Adams</b>: MIDA board chair and Senate president until January 2027. Signed the Stratos resolution as chair. See <a href="https://weber-county-hive.github.io/committees/weber-hive-committee-mida-board.html">The Seats That Move</a>.</li>
+<li><b>Sen. Sheldon Killpack</b> and <b>Rep. Brad Dee</b>: sponsors of the 2007 bill that created MIDA and the early changes.</li>
+<li><b>Rep. Val Peterson</b>: House sponsor of the MIDA bills from 2018 to 2025.</li>
+<li><b><a href="dan-hemmert.html">Dan Hemmert</a></b>: MIDA executive director since Aug. 1, 2026; former state senator.</li>
+<li><b><a href="mike-ostermiller.html">Mike Ostermiller</a></b>: MIDA board member; on all five MIDA PID boards.</li>
+<li><b>Gage Froerer</b>: Weber County commissioner on MIDA's board.</li>
+<li><b><a href="jefferson-moss.html">Jefferson Moss</a></b>: listed as MIDA's non-voting member until at least Nov. 4, 2026; the site now lists Lance Soffe.</li>
+<li><b>Sen. Brady Brammer</b> and <b>Rep. Casey Snider</b>: 2027 MIDA bill requests.</li>
+<li><b>Gov. Spencer Cox</b>: appoints 5 board members; called for reform.</li>
+</ul>
+</section>
+
+<section id="notshown"><h2 class="section-head">What the records don't show</h2>
+<div class="dnu"><b>Left out on purpose.</b> An earlier Hive research note said the 2025 bill (S.B. 316) let MIDA control its own environmental reviews. The enrolled bill has no environmental review language, so it is not on this page. The same note said Stratos money could be spent at Hill Air Force Base. The 2025 law allows that kind of agreement only for project areas on state land or state armory board land, and we did not find a record showing Stratos is one, so that is not on this page either.</div>
+<ul>
+<li>Which leader appointed which board member.</li>
+<li>Whether MIDA has ever used the extra 15 years for a project area.</li>
+<li>Whether MIDA's records appeals board has ever heard an appeal.</li>
+<li>Whether the board ever voted to pause Stratos.</li>
+<li>Whether MIDA received state money in FY2026 or FY2027.</li>
+</ul>
+</section>
+
+<section id="ask"><h2 class="section-head">Questions to ask, and who to ask</h2>
+<ul class="ask-list">
+<li><strong>Senate president (from January 2027):</strong> Who will you appoint to MIDA's board? Will the seat go to a sitting legislator?</li>
+<li><strong>Your state legislators:</strong> Will the 2027 MIDA bills change the 2021 records appeals board, the 2022 posting exemption, or the board's power to add 15 years?</li>
+<li><strong>MIDA's records officer:</strong> How many records appeals has MIDA's appeals board heard, and how were they decided?</li>
+<li><strong>MIDA, or the State Auditor's MIDA page:</strong> Has MIDA used the extra 15 years for any project area?</li>
+<li><strong>Legislative Fiscal Analyst:</strong> What revenue could MIDA move outside a project area under the 2025 law, and for which areas?</li>
+<li><strong>MIDA board (minutes on utah.gov/pmn):</strong> Did the board vote to pause Stratos?</li>
+</ul>
+</section>
+
+<section><h2 class="section-head" id="updates">Updates since this was posted</h2>
+<ul class="tl"><li><b>Nov. 18, 2026</b>This page posted. Every bill's sponsors and votes were read from the Legislature's records on Nov. 18; the board list was read from midaut.org the same day.</li></ul>
+<p class="hs-updates">New updates will be added here with their dates. Earlier entries are not changed.</p>
+</section>
+
+<section><h2 class="section-head" id="related">Connected Hive work</h2>
+<div class="hs-cards">
+<a href="mida-hearing-fact-check.html"><b>MIDA at the Legislature</b><span>Unelected Power: 32 of MIDA's Oct. 21, 2026 statements, checked</span></a>
+<a href="https://weber-county-hive.github.io/Bill-Tracker/weber-hive-sb233.html"><b>The Foundation (S.B. 233, 2021)</b><span>Bill-Tracker: the records and meetings exceptions</span></a>
+<a href="https://weber-county-hive.github.io/Bill-Tracker/weber-hive-sb169.html"><b>The Backfill (S.B. 169, 2024)</b><span>Bill-Tracker: the 2024 MIDA tax bill</span></a>
+<a href="https://weber-county-hive.github.io/Bill-Tracker/weber-hive-sb206.html"><b>S.B. 206 (2026)</b><span>Bill-Tracker: Utah's first tax increment ledger</span></a>
+<a href="falcon-hill-roy.html"><b>Falcon Hill and Roy</b><span>Unelected Power: MIDA's first project area</span></a>
+<a href="dan-hemmert.html"><b>Dan Hemmert</b><span>Unelected Power: MIDA's executive director</span></a>
+</div>
+</section>
+
+<section><h2 class="section-head" id="words">Words to know</h2>
+<p>Tap a card to see what it means.</p>
+<div class="hs-flips">
+<button class="hs-flip" aria-expanded="false"><div class="ft">Tax increment</div><div class="fh">Tap to see</div><div class="fd">New property tax above a frozen base year, mostly from new buildings. In MIDA's areas, MIDA keeps up to 75% of it.</div></button>
+<button class="hs-flip" aria-expanded="false"><div class="ft">Project area</div><div class="fh">Tap to see</div><div class="fd">The land where MIDA collects tax increment and acts as the land use authority. MIDA lists 8.</div></button>
+<button class="hs-flip" aria-expanded="false"><div class="ft">PID</div><div class="fh">Tap to see</div><div class="fd">A public infrastructure district. It can borrow with bonds and charge its own property tax to pay them back. MIDA has five.</div></button>
+<button class="hs-flip" aria-expanded="false"><div class="ft">Primary sponsor</div><div class="fh">Tap to see</div><div class="fd">The legislator who carries a bill in the chamber where it starts. The sponsor in the other chamber is listed beside it.</div></button>
+<button class="hs-flip" aria-expanded="false"><div class="ft">Enrolled bill</div><div class="fh">Tap to see</div><div class="fd">The final text that passed both chambers. This page describes each bill from its enrolled copy.</div></button>
+<button class="hs-flip" aria-expanded="false"><div class="ft">GRAMA</div><div class="fh">Tap to see</div><div class="fd">Utah's public records law. It applies to MIDA, with the exceptions written into MIDA's own law in 2021.</div></button>
+<button class="hs-flip" aria-expanded="false"><div class="ft">Anchor location</div><div class="fh">Tap to see</div><div class="fd">A physical place where the public can attend an online public meeting. MIDA's board isn't required to have one.</div></button>
+<button class="hs-flip" aria-expanded="false"><div class="ft">Yes-no-absent</div><div class="fh">Tap to see</div><div class="fd">How the Legislature records a vote. 67-0-8 means 67 yes, 0 no and 8 absent or not voting.</div></button>
+</div>
+</section>
+
+<section><h2 class="section-head" id="behind">Behind this piece</h2>
+<div class="hs-counter">
+  <div><div class="n">24</div><div class="l">bills read, 2007–2026 (22 passed, 2 died)</div></div>
+  <div><div class="n">22</div><div class="l">bill status pages checked for sponsors and votes</div></div>
+  <div><div class="n">1</div><div class="l">MIDA chapter of Utah Code read section by section</div></div>
+  <div><div class="n">2</div><div class="l">claims from earlier research left out after the bill text didn't support them</div></div>
+</div>
+<p class="hs-updates">Posted Nov. 18, 2026. Built from the Legislature's passed-bill lists, bill status pages and enrolled bills, Utah Code Title 63H Chapter 1, MIDA's board page, and the Hive's earlier MIDA reporting.</p>
+</section>
+
+<section class="up-connect"><h2>Connecting stories</h2><ul>
+<li><a href="who-decides-part-3-mida-plain.html">Who Decides, Part 3, in plain words (UP 100.16)</a><span>The short, plain-language companion to this page.</span></li>
+<li><a href="mida-hearing-fact-check.html">MIDA at the Legislature (UP 100.11)</a><span>What MIDA told lawmakers on Oct. 21, 2026, checked against the records.</span></li>
+<li><a href="dan-hemmert.html">Dan Hemmert (UP 100.02)</a><span>MIDA's executive director.</span></li>
+<li><a href="mike-ostermiller.html">Mike Ostermiller (UP 100.07)</a><span>MIDA board member and PID board member.</span></li>
+<li><a href="falcon-hill-roy.html">Falcon Hill and Roy (UP 200.02)</a><span>MIDA's first project area.</span></li>
+</ul></section>
+<section id="sources" class="up-sources"><h2>Sources</h2><details class="sources-block"><summary>Sources — click to open (with links)</summary><ul>
+<li><a href="https://le.utah.gov/xcode/Title63H/Chapter1/C63H-1_1800010118000101.pdf" target="_blank" rel="noopener">Utah Code Title 63H, Chapter 1 (MIDA Act), whole chapter</a>: sections 102, 201, 202, 203 to 205, 302, 401, 403, 501, 502, 703 to 705 (read Nov. 18, 2026)</li>
+<li><a href="https://le.utah.gov/asp/passedbills/passedbills.asp?session=2026GS" target="_blank" rel="noopener">Utah Legislature, passed bills lists, 2007–2026</a> (used to find every MIDA bill and its chapter number)</li>
+<li><a href="https://le.utah.gov/~2007/bills/sbillenr/SB0232.pdf" target="_blank" rel="noopener">S.B. 232 (2007), enrolled bill or case file</a>; votes from the Legislature's bill status page</li><li><a href="https://le.utah.gov/~2008/bills/sbillenr/SB0264.pdf" target="_blank" rel="noopener">S.B. 264 (2008), enrolled bill or case file</a>; votes from the Legislature's bill status page</li><li><a href="https://le.utah.gov/~2009/bills/sbillenr/SB0056.pdf" target="_blank" rel="noopener">S.B. 56 (2009), enrolled bill or case file</a>; votes from the Legislature's bill status page</li><li><a href="https://le.utah.gov/~2009/bills/sbillenr/SB0216.pdf" target="_blank" rel="noopener">S.B. 216 (2009), enrolled bill or case file</a>; votes from the Legislature's bill status page</li><li><a href="https://le.utah.gov/~2010/bills/sbillenr/SB0124.pdf" target="_blank" rel="noopener">S.B. 124 (2010), enrolled bill or case file</a>; votes from the Legislature's bill status page</li><li><a href="https://le.utah.gov/~2011/bills/sbillenr/SB0293.pdf" target="_blank" rel="noopener">S.B. 293 (2011), enrolled bill or case file</a>; votes from the Legislature's bill status page</li><li><a href="https://le.utah.gov/~2012/bills/sbillenr/SB0049.pdf" target="_blank" rel="noopener">S.B. 49 (2012), enrolled bill or case file</a>; votes from the Legislature's bill status page</li><li><a href="https://le.utah.gov/~2013/bills/hbillenr/HB0325.pdf" target="_blank" rel="noopener">H.B. 325 (2013), enrolled bill or case file</a>; votes from the Legislature's bill status page</li><li><a href="https://le.utah.gov/~2014/bills/sbillenr/SB0045.pdf" target="_blank" rel="noopener">S.B. 45 (2014), enrolled bill or case file</a>; votes from the Legislature's bill status page</li><li><a href="https://le.utah.gov/~2015/bills/sbillenr/SB0274.pdf" target="_blank" rel="noopener">S.B. 274 (2015), enrolled bill or case file</a>; votes from the Legislature's bill status page</li><li><a href="https://le.utah.gov/~2017/bills/sbillenr/SB0178.pdf" target="_blank" rel="noopener">S.B. 178 (2017), enrolled bill or case file</a>; votes from the Legislature's bill status page</li><li><a href="https://le.utah.gov/~2018/bills/sbillenr/SB0240.pdf" target="_blank" rel="noopener">S.B. 240 (2018), enrolled bill or case file</a>; votes from the Legislature's bill status page</li><li><a href="https://le.utah.gov/~2019/bills/sbillenr/SB0269.pdf" target="_blank" rel="noopener">S.B. 269 (2019), enrolled bill or case file</a>; votes from the Legislature's bill status page</li><li><a href="https://le.utah.gov/~2020/bills/sbillenr/SB0192.pdf" target="_blank" rel="noopener">S.B. 192 (2020), enrolled bill or case file</a>; votes from the Legislature's bill status page</li><li><a href="https://le.utah.gov/~2021/bills/sbillenr/SB0233.pdf" target="_blank" rel="noopener">S.B. 233 (2021), enrolled bill or case file</a>; votes from the Legislature's bill status page</li><li><a href="https://le.utah.gov/~2022/bills/sbillenr/SB0232.pdf" target="_blank" rel="noopener">S.B. 232 (2022), enrolled bill or case file</a>; votes from the Legislature's bill status page</li><li><a href="https://le.utah.gov/~2023/bills/sbillenr/SB0020.pdf" target="_blank" rel="noopener">S.B. 20 (2023), enrolled bill or case file</a>; votes from the Legislature's bill status page</li><li><a href="https://weber-county-hive.github.io/Bill-Tracker/weber-hive-sb169.html" target="_blank" rel="noopener">S.B. 169 (2024), enrolled bill or case file</a>; votes from the Legislature's bill status page</li><li><a href="https://le.utah.gov/Session/2025/bills/enrolled/SB0316.pdf" target="_blank" rel="noopener">S.B. 316 (2025), enrolled bill or case file</a>; votes from the Legislature's bill status page</li><li><a href="https://le.utah.gov/Session/2026/bills/enrolled/SB0278.pdf" target="_blank" rel="noopener">S.B. 278 (2026), enrolled bill or case file</a>; votes from the Legislature's bill status page</li><li><a href="https://weber-county-hive.github.io/Bill-Tracker/weber-hive-sb206.html" target="_blank" rel="noopener">S.B. 206 (2026), enrolled bill or case file</a>; votes from the Legislature's bill status page</li><li><a href="https://weber-county-hive.github.io/Bill-Tracker/weber-hive-hb475.html" target="_blank" rel="noopener">H.B. 475 (2026), enrolled bill or case file</a>; votes from the Legislature's bill status page</li>
+<li><a href="https://le.utah.gov/DynaBill/svotes.jsp?sessionid=2024GS&amp;voteid=1490&amp;house=S" target="_blank" rel="noopener">Senate roll call, S.B. 169, Feb. 26, 2024</a></li>
+<li><a href="https://le.utah.gov/~2025/bills/static/SB0337.html" target="_blank" rel="noopener">S.B. 337 (2025) status</a>; <a href="https://le.utah.gov/~2026/bills/static/HB0461.html" target="_blank" rel="noopener">H.B. 461 (2026) status</a></li>
+<li><a href="https://www.midaut.org/board-members" target="_blank" rel="noopener">MIDA, Board Members page</a> (read Nov. 4 and Nov. 18, 2026)</li>
+<li><a href="https://le.utah.gov/interim/2026/pdf/00003845.pdf" target="_blank" rel="noopener">Legislative staff, "Military Installation Development Authority," Oct. 21, 2026</a></li>
+<li><a href="https://le.utah.gov/interim/2026/pdf/00003846.pdf" target="_blank" rel="noopener">MIDA presentation to the Economic Development and Workforce Services Interim Committee, Oct. 21, 2026</a></li>
+<li><a href="https://le.utah.gov/interim/2023/pdf/00003890.pdf" target="_blank" rel="noopener">MIDA presentation to the Legislature, Sept. 18, 2023 ("Legislative Appropriations" table)</a></li>
+<li><a href="https://le.utah.gov/interim/2026/pdf/00004171.pdf" target="_blank" rel="noopener">Rep. Paul Cutler, Data Center Working Group policy goals, Nov. 18, 2026</a></li>
+<li><a href="https://le.utah.gov/bills/billSearch.jsp?sess=2027GS&amp;sub=all" target="_blank" rel="noopener">Utah Legislature, 2027 bills and requests</a> (read Nov. 18, 2026)</li>
+<li><a href="https://transparent.utah.gov/mida/" target="_blank" rel="noopener">Office of the State Auditor, MIDA page</a>; <a href="https://storage.googleapis.com/wp-media-osa/c1078211-transparent_mida_press_release.pdf" target="_blank" rel="noopener">release, May 28, 2026</a></li>
+<li><a href="https://townlift.com/2026/08/after-data-center-debacle-gov-cox-says-mida-has-had-mission-creep-and-needs-major-reform/" target="_blank" rel="noopener">Utah News Dispatch (via TownLift), Aug. 21, 2026, Gov. Cox on MIDA reform</a></li>
+<li><a href="https://www.deseret.com/utah/2026/10/02/box-elder-county-data-center-plans-quietly-edging-ahead-though-debate-has-died-down/" target="_blank" rel="noopener">KSL/Deseret News, Oct. 2, 2026, Stratos "not on hold"</a></li>
+<li><a href="https://www.deseret.com/politics/2026/11/10/where-midterm-votes-left-data-center-developers/" target="_blank" rel="noopener">Deseret News, Nov. 10, 2026, Speaker Schultz and Gov. Cox on MIDA and data centers</a></li>
+<li><a href="https://www.hjnews.com/tremonton/news/lawmaker-seeks-to-limit-mida-after-data-center-controversy/article_03ec1175-41a5-49f3-b55e-666cedd2d9e2.html" target="_blank" rel="noopener">Herald Journal, Aug. 14, 2026, Rep. Jason Thompson's MIDA bill</a></li>
+<li><a href="https://www.abc4.com/news/politics/mida-executive-director-stratos-project/amp/" target="_blank" rel="noopener">ABC4, July 1, 2026, Hemmert named executive director</a></li>
+<li>KUER, Nov. 6, 2026, 2027 legislative leadership (Sen. Evan Vickers, Senate president)</li>
+<li><a href="mida-hearing-fact-check.html">The Hive, MIDA at the Legislature (UP 100.11)</a></li>
+</ul></details></section>
+</main>
+<footer class="up-foot"><div class="in"><div id="up-shelf"></div></div></footer><script src="unelected-power-data.js?v=6"></script><script src="up-shelf.js?v=4"></script>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+(function(){
+  if(!window.L) return;
+  var map=L.map('map').setView([40.9,-112.2],7);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:18,attribution:'&copy; OpenStreetMap'}).addTo(map);
+  var pins=[
+    ['Falcon Hill (Hill Air Force Base)',41.12,-111.97,0,'Active. MIDA\'s first project area (2007 law).'],
+    ['Military Recreation Facility / Mayflower (Wasatch County)',40.62,-111.43,0,'Active. Deer Valley East Village area; five MIDA PIDs.'],
+    ['Mountain Veteran Program (Sundance, Utah County)',40.39,-111.58,0,'Active.'],
+    ['Stratos (Box Elder County)',41.75,-112.45,1,'Pre-development. Pin placed in the county, not at the site. MIDA adopted the plan April 24, 2026; the county consented May 4.'],
+    ['Tooele Army Depot',40.53,-112.33,1,'Pre-development. Created Dec. 16, 2025 (KPCW).'],
+    ['Dugway Proving Ground',40.19,-112.94,1,'Pre-development.'],
+    ['Utah National Guard sites (statewide)',40.43,-111.93,1,'Pre-development. About 26 Guard sites around the state; pin at Camp Williams.'],
+    ['Utah Data Center (Camp Williams area)',40.46,-111.97,1,'Inactive.'],
+    ['Utah State Capitol',40.777,-111.888,0,'Where the Legislature writes MIDA\'s powers.']
+  ];
+  pins.forEach(function(p){
+    L.circleMarker([p[1],p[2]],{radius:11,color:p[3]?'#b5652b':'#2c3e5c',fillColor:p[3]?'#b5652b':'#2c3e5c',fillOpacity:.85,weight:2})
+     .addTo(map).bindPopup('<b>'+p[0]+'</b><br>'+p[4]+'<br><i>Approximate location</i>');
+  });
+})();
+(function(){
+  var btns=[].slice.call(document.querySelectorAll('.filters button'));
+  var cards=[].slice.call(document.querySelectorAll('#claims .claim'));
+  var grps=[].slice.call(document.querySelectorAll('#claims .grp'));
+  btns.forEach(function(b){b.addEventListener('click',function(){
+    var f=b.getAttribute('data-f');
+    btns.forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false');});
+    cards.forEach(function(c){c.style.display=(f==='all'||c.getAttribute('data-v')===f)?'':'none';});
+    grps.forEach(function(g){
+      var n=g.nextElementSibling, any=false;
+      while(n && !n.classList.contains('grp')){ if(n.style.display!=='none') any=true; n=n.nextElementSibling; }
+      g.style.display=any?'':'none';
+    });
+  });});
+})();
+document.querySelectorAll('.hs-flip').forEach(function(f){f.addEventListener('click',function(){f.setAttribute('aria-expanded',f.getAttribute('aria-expanded')==='true'?'false':'true');});});
+</script>
+
+<div class="hb-foot"><img src="hive-bee.png" alt=""><span class="hb-name">Utah Hive Politics</span><span class="hb-sub">from the publisher of The Weber County Hive</span><span class="hb-tag">Independent · Accountability · Journalism</span><p class="hb-line">The Weber County Hive and Utah Hive Politics: the people's publication. We investigate what's best for the public as a whole, not for any party or special interest group. We report public records. You decide.</p><p class="hb-tips"><a class="hb-btn" href="https://weber-county-hive.github.io/-weber-county-hive-index/tips.html#send">Send a tip</a><a class="hb-btn hb-btn2" href="https://weber-county-hive.github.io/-weber-county-hive-index/tips.html">Tips we checked</a><a class="hb-btn hb-btn2" href="https://weber-county-hive.github.io/-weber-county-hive-index/tips.html#send">See a mistake? Tell us</a></p><p class="hb-small">We never name tipsters. When we correct a page, the fix and its date are shown on the page.</p><p class="hb-small"><a href="index.html" style="color:#d4af37">Unelected Power shelf</a> · <a href="https://weber-county-hive.github.io/-weber-county-hive-index/" style="color:#d4af37">Master Index (Hive library)</a> · <a href="https://webercountyhive.substack.com/" style="color:#d4af37">Read on Substack</a></p></div>
+<script data-goatcounter="https://weberhive.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

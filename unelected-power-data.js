@@ -15,6 +15,28 @@
 
 const UNELECTED_POWER_PROFILES = [
   {
+    slug: "who-decides-part-3-mida",
+    shelf: "100",
+    callNumber: "UP 100.15",
+    name: "Who Decides, Part 3: MIDA",
+    roleTag: "Who Decides series · Military Installation Development Authority · Every Bill, Graded",
+    summary: "Who sits on MIDA's appointed board, and every bill that changed its powers from 2007 to 2026, with sponsors, votes and a grade for the public. Sen. Jerry Stevenson, who sits on MIDA's board, was the primary sponsor of 15 of the 22. Plus the 2027 MIDA bill requests to watch.",
+    tags: ["Who Decides", "MIDA", "Jerry Stevenson", "Stuart Adams", "Stratos", "Tax Increment", "Transparency", "2027 Bills"],
+    dateAdded: "2026-11-18",
+    dateUpdated: "2026-11-18"
+  },
+  {
+    slug: "who-decides-part-3-mida-plain",
+    shelf: "100",
+    callNumber: "UP 100.16",
+    name: "Who Decides, Part 3: MIDA, in Plain Words",
+    roleTag: "Plain words · Who Decides series · MIDA",
+    summary: "The short, simple version: who runs MIDA, who writes its rules, and how 22 changes from 2007 to 2026 grade for the public.",
+    tags: ["Who Decides", "MIDA", "Plain Words"],
+    dateAdded: "2026-11-18",
+    dateUpdated: "2026-11-18"
+  },
+  {
     slug: "utgop-state-indicia",
     shelf: "100",
     callNumber: "UP 100.13",
